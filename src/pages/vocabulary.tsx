@@ -12,7 +12,7 @@ interface VocabularyItem {
   meaning: string;
   category: string;
   tags: string[];
-  lesson?: string;
+  type?: string;
 }
 
 const vocabularyData: VocabularyItem[] = vocabularyYamlData.vocabulary;
@@ -150,14 +150,21 @@ export default function Vocabulary(): React.JSX.Element {
                   </div>
                   <div className={styles.meaning}>{item.meaning}</div>
                   <div className={styles.meta}>
-                    <span className={styles.category}>{item.category}</span>
-                    {item.lesson && (
-                      <span className={styles.lesson}>Lesson: {item.lesson}</span>
-                    )}
+                    <span className={styles.category}>{item.type || 'unknown'}</span>
                   </div>
                   <div className={styles.tags}>
                     {item.tags.map(tag => (
-                      <span key={tag} className={styles.tag}>{tag}</span>
+                      <a 
+                        key={tag} 
+                        href={`/docs/lessons/vocabulary/${tag}`}
+                        className={styles.tag}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          window.location.href = `/docs/lessons/vocabulary/${tag}`;
+                        }}
+                      >
+                        {tag}
+                      </a>
                     ))}
                   </div>
                 </div>

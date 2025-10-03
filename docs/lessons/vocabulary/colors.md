@@ -13,28 +13,33 @@ Learning colors is essential for describing objects and expressing preferences i
 
 ### Primary Colors
 
-| Hiragana | Kanji | Romaji | English | Example |
-|----------|-------|--------|---------|---------|
-| あか | 赤 | aka | red | あかい (akai) - red (adjective) |
-| あお | 青 | ao | blue | あおい (aoi) - blue (adjective) |
-| きいろ | 黄色 | kiiro | yellow | きいろい (kiiroi) - yellow (adjective) |
+| Hiragana | Kanji | Romaji | English | Type |
+|----------|-------|--------|---------|------|
+| あか | 赤 | aka | red | い-adjective |
+| あお | 青 | ao | blue | い-adjective |
+| きいろ | 黄色 | kiiro | yellow | い-adjective |
+
+**Examples:**
+- あかい (akai) - red (adjective)
+- あおい (aoi) - blue (adjective)  
+- きいろい (kiiroi) - yellow (adjective)
 
 ### Secondary Colors
 
-| Hiragana | Kanji | Romaji | English | Example |
-|----------|-------|--------|---------|---------|
-| みどり | 緑 | midori | green | みどりの (midori no) - green (adjective) |
-| むらさき | 紫 | murasaki | purple | むらさきの (murasaki no) - purple (adjective) |
-| だいだい | 橙 | daidai | orange | だいだいいろの (daidaiiro no) - orange (adjective) |
+| Hiragana | Kanji | Romaji | English | Type |
+|----------|-------|--------|---------|------|
+| みどり | 緑 | midori | green | の-adjective |
+| むらさき | 紫 | murasaki | purple | の-adjective |
+| だいだい | 橙 | daidai | orange | の-adjective |
 
 ### Neutral Colors
 
-| Hiragana | Kanji | Romaji | English | Example |
-|----------|-------|--------|---------|---------|
-| しろ | 白 | shiro | white | しろい (shiroi) - white (adjective) |
-| くろ | 黒 | kuro | black | くろい (kuroi) - black (adjective) |
-| はいいろ | 灰色 | haiiro | gray | はいいろの (haiiro no) - gray (adjective) |
-| ちゃいろ | 茶色 | chairo | brown | ちゃいろの (chairo no) - brown (adjective) |
+| Hiragana | Kanji | Romaji | English | Type |
+|----------|-------|--------|---------|------|
+| しろ | 白 | shiro | white | い-adjective |
+| くろ | 黒 | kuro | black | い-adjective |
+| はいいろ | 灰色 | haiiro | gray | の-adjective |
+| ちゃいろ | 茶色 | chairo | brown | の-adjective |
 
 ## Color Adjectives
 
@@ -177,23 +182,14 @@ Answer these questions:
 | ゆき | 雪 | yuki | snow | noun |
 | ほん | 本 | hon | book | noun |
 | はな | 花 | hana | flower | noun |
+| うすいあか | - | usui aka | light red | い-adjective |
+| うすいあお | - | usui ao | light blue | い-adjective |
+| うすいみどり | - | usui midori | light green | の-adjective |
+| こいあか | - | koi aka | dark red | い-adjective |
+| こいあお | - | koi ao | dark blue | い-adjective |
+| こいみどり | - | koi midori | dark green | の-adjective |
 
-## Next Steps
 
-After mastering basic colors:
-
-1. **Learn more descriptive colors**: Light, dark, bright, dull
-2. **Practice with objects**: Describe the colors of everyday items
-3. **Learn color idioms**: Japanese expressions using colors
-4. **Study traditional colors**: Explore Japan's rich color tradition
-
-## Tips for Learning Colors
-
-1. **Associate with objects**: Link colors to familiar items
-2. **Practice daily**: Use colors when describing things around you
-3. **Learn both forms**: Master both い-adjectives and の-adjectives
-4. **Use flashcards**: Create cards with color words and examples
-5. **Practice with pictures**: Describe colors in photos or illustrations
 
 Remember: Colors are everywhere! Practice by describing the colors of objects you see throughout your day.
 

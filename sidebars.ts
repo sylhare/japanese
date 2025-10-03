@@ -30,13 +30,14 @@ const sidebars: SidebarsConfig = {
         'lessons/grammar/conjugation',
       ],
     },
-    {
-      type: 'category',
-      label: 'Vocabulary',
-      items: [
-        'lessons/vocabulary/colors',
-      ],
-    },
+        {
+          type: 'category',
+          label: 'Vocabulary',
+          items: [
+            'lessons/vocabulary/colors',
+            'lessons/vocabulary/tastes',
+          ],
+        },
   ],
 
   // Reference sidebar

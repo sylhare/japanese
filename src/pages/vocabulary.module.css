@@ -131,11 +131,6 @@
   font-weight: 500;
 }
 
-.lesson {
-  color: var(--ifm-color-emphasis-600);
-  font-style: italic;
-}
-
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -149,6 +144,16 @@
   border-radius: 12px;
   font-size: 0.8rem;
   border: 1px solid var(--ifm-color-emphasis-200);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.tag:hover {
+  background: var(--ifm-color-primary);
+  color: white;
+  border-color: var(--ifm-color-primary);
+  text-decoration: none;
 }
 
 .noResults {

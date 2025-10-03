@@ -1,143 +1,540 @@
 vocabulary:
-  - id: '1'
-    hiragana: 'あい'
-    kanji: '愛'
-    romaji: 'ai'
-    meaning: 'love'
-    category: 'emotions'
-    tags: ['basic', 'emotion']
-    lesson: 'family'
-  - id: '2'
-    hiragana: 'いえ'
-    kanji: '家'
-    romaji: 'ie'
-    meaning: 'house, home'
-    category: 'places'
-    tags: ['basic', 'place']
-    lesson: 'family'
-  - id: '3'
-    hiragana: 'うえ'
-    kanji: '上'
-    romaji: 'ue'
-    meaning: 'up, above'
-    category: 'directions'
-    tags: ['basic', 'direction']
-    lesson: 'directions'
-  - id: '4'
-    hiragana: 'えい'
-    kanji: '映'
-    romaji: 'ei'
-    meaning: 'yes'
-    category: 'responses'
-    tags: ['basic', 'response']
-    lesson: 'basics'
-  - id: '5'
-    hiragana: 'おお'
-    kanji: '大'
-    romaji: 'oo'
-    meaning: 'big, large'
-    category: 'adjectives'
-    tags: ['basic', 'adjective']
-    lesson: 'adjectives'
-  - id: '6'
-    hiragana: 'かお'
-    kanji: '顔'
-    romaji: 'kao'
-    meaning: 'face'
-    category: 'body'
-    tags: ['basic', 'body']
-    lesson: 'body'
-  - id: '7'
-    hiragana: 'きく'
-    kanji: '聞く'
-    romaji: 'kiku'
-    meaning: 'to listen, to hear'
-    category: 'verbs'
-    tags: ['basic', 'verb']
-    lesson: 'verbs'
-  - id: '8'
-    hiragana: 'くる'
-    kanji: '来る'
-    romaji: 'kuru'
-    meaning: 'to come'
-    category: 'verbs'
-    tags: ['basic', 'verb', 'irregular']
-    lesson: 'verbs'
-  - id: '9'
-    hiragana: 'けい'
-    kanji: '系'
-    romaji: 'kei'
-    meaning: 'system, lineage'
-    category: 'abstract'
-    tags: ['intermediate', 'abstract']
-    lesson: 'systems'
-  - id: '10'
-    hiragana: 'こい'
-    kanji: '恋'
-    romaji: 'koi'
-    meaning: 'romantic love'
-    category: 'emotions'
-    tags: ['intermediate', 'emotion']
-    lesson: 'emotions'
-  - id: '11'
-    hiragana: 'さくら'
-    kanji: '桜'
-    romaji: 'sakura'
-    meaning: 'cherry blossom'
-    category: 'nature'
-    tags: ['intermediate', 'nature', 'seasonal']
-    lesson: 'nature'
-  - id: '12'
-    hiragana: 'しろ'
-    kanji: '白'
-    romaji: 'shiro'
-    meaning: 'white'
-    category: 'colors'
-    tags: ['basic', 'color']
-    lesson: 'colors'
-  - id: '13'
-    katakana: 'コーヒー'
-    romaji: 'koohii'
-    meaning: 'coffee'
-    category: 'food'
-    tags: ['basic', 'food', 'drink']
-    lesson: 'food'
-  - id: '14'
-    katakana: 'ピザ'
-    romaji: 'piza'
-    meaning: 'pizza'
-    category: 'food'
-    tags: ['basic', 'food']
-    lesson: 'food'
-  - id: '15'
-    hiragana: 'みどり'
-    kanji: '緑'
-    romaji: 'midori'
-    meaning: 'green'
-    category: 'colors'
-    tags: ['basic', 'color']
-    lesson: 'colors'
-
+  - id: colors_2
+    hiragana: あか
+    kanji: 赤
+    romaji: aka
+    meaning: red
+    category: vocabulary
+    tags:
+      - colors
+    type: い-adjective
+  - id: colors_3
+    hiragana: あお
+    kanji: 青
+    romaji: ao
+    meaning: blue
+    category: vocabulary
+    tags:
+      - colors
+    type: い-adjective
+  - id: colors_4
+    hiragana: きいろ
+    kanji: 黄色
+    romaji: kiiro
+    meaning: yellow
+    category: vocabulary
+    tags:
+      - colors
+    type: い-adjective
+  - id: colors_5
+    hiragana: みどり
+    kanji: 緑
+    romaji: midori
+    meaning: green
+    category: vocabulary
+    tags:
+      - colors
+    type: の-adjective
+  - id: colors_6
+    hiragana: むらさき
+    kanji: 紫
+    romaji: murasaki
+    meaning: purple
+    category: vocabulary
+    tags:
+      - colors
+    type: の-adjective
+  - id: colors_7
+    hiragana: しろ
+    kanji: 白
+    romaji: shiro
+    meaning: white
+    category: vocabulary
+    tags:
+      - colors
+    type: い-adjective
+  - id: colors_8
+    hiragana: くろ
+    kanji: 黒
+    romaji: kuro
+    meaning: black
+    category: vocabulary
+    tags:
+      - colors
+    type: い-adjective
+  - id: colors_9
+    hiragana: はいいろ
+    kanji: 灰色
+    romaji: haiiro
+    meaning: gray
+    category: vocabulary
+    tags:
+      - colors
+    type: の-adjective
+  - id: colors_10
+    hiragana: ちゃいろ
+    kanji: 茶色
+    romaji: chairo
+    meaning: brown
+    category: vocabulary
+    tags:
+      - colors
+    type: の-adjective
+  - id: colors_11
+    hiragana: りんご
+    kanji: 林檎
+    romaji: ringo
+    meaning: apple
+    category: vocabulary
+    tags:
+      - colors
+    type: noun
+  - id: colors_12
+    hiragana: そら
+    kanji: 空
+    romaji: sora
+    meaning: sky
+    category: vocabulary
+    tags:
+      - colors
+    type: noun
+  - id: colors_13
+    hiragana: ゆき
+    kanji: 雪
+    romaji: yuki
+    meaning: snow
+    category: vocabulary
+    tags:
+      - colors
+    type: noun
+  - id: colors_14
+    hiragana: ほん
+    kanji: 本
+    romaji: hon
+    meaning: book
+    category: vocabulary
+    tags:
+      - colors
+    type: noun
+  - id: colors_15
+    hiragana: はな
+    kanji: 花
+    romaji: hana
+    meaning: flower
+    category: vocabulary
+    tags:
+      - colors
+    type: noun
+  - id: colors_4
+    hiragana: だいだい
+    kanji: 橙
+    romaji: daidai
+    meaning: orange
+    category: vocabulary
+    tags:
+      - colors
+    type: の-adjective
+  - id: grammarparticles_2
+    hiragana: は
+    romaji: wa
+    meaning: topic marker
+    category: vocabulary
+    tags:
+      - grammar-particles
+    type: particle
+  - id: grammarparticles_3
+    hiragana: が
+    romaji: ga
+    meaning: subject marker
+    category: vocabulary
+    tags:
+      - grammar-particles
+    type: particle
+  - id: grammarparticles_4
+    hiragana: を
+    romaji: wo
+    meaning: object marker
+    category: vocabulary
+    tags:
+      - grammar-particles
+    type: particle
+  - id: grammarparticles_5
+    hiragana: に
+    romaji: ni
+    meaning: to, at, in
+    category: vocabulary
+    tags:
+      - grammar-particles
+    type: particle
+  - id: grammarparticles_6
+    hiragana: で
+    romaji: de
+    meaning: at, by, with
+    category: vocabulary
+    tags:
+      - grammar-particles
+    type: particle
+  - id: grammarparticles_7
+    hiragana: へ
+    romaji: e
+    meaning: to, toward
+    category: vocabulary
+    tags:
+      - grammar-particles
+    type: particle
+  - id: grammarparticles_8
+    hiragana: そして
+    romaji: soshite
+    meaning: and then
+    category: vocabulary
+    tags:
+      - grammar-particles
+    type: conjunction
+  - id: grammarparticles_9
+    hiragana: でも
+    romaji: demo
+    meaning: but, however
+    category: vocabulary
+    tags:
+      - grammar-particles
+    type: conjunction
+  - id: grammarparticles_10
+    hiragana: だから
+    romaji: dakara
+    meaning: so, therefore
+    category: vocabulary
+    tags:
+      - grammar-particles
+    type: conjunction
+  - id: grammarparticles_11
+    hiragana: または
+    romaji: matawa
+    meaning: or
+    category: vocabulary
+    tags:
+      - grammar-particles
+    type: conjunction
+  - id: grammarparticles_12
+    hiragana: これ
+    romaji: kore
+    meaning: this (near speaker)
+    category: vocabulary
+    tags:
+      - grammar-particles
+    type: pronoun
+  - id: grammarparticles_13
+    hiragana: それ
+    romaji: sore
+    meaning: that (near listener)
+    category: vocabulary
+    tags:
+      - grammar-particles
+    type: pronoun
+  - id: grammarparticles_14
+    hiragana: あれ
+    romaji: are
+    meaning: that (far from both)
+    category: vocabulary
+    tags:
+      - grammar-particles
+    type: pronoun
+  - id: grammarparticles_15
+    hiragana: わたし
+    kanji: 私
+    romaji: watashi
+    meaning: I, me
+    category: vocabulary
+    tags:
+      - grammar-particles
+    type: pronoun
+  - id: grammarparticles_16
+    hiragana: あなた
+    romaji: anata
+    meaning: you
+    category: vocabulary
+    tags:
+      - grammar-particles
+    type: pronoun
+  - id: grammarparticles_17
+    hiragana: ああ
+    romaji: aa
+    meaning: oh, ah
+    category: vocabulary
+    tags:
+      - grammar-particles
+    type: interjection
+  - id: grammarparticles_18
+    hiragana: ええ
+    romaji: ee
+    meaning: yes, uh-huh
+    category: vocabulary
+    tags:
+      - grammar-particles
+    type: interjection
+  - id: grammarparticles_19
+    hiragana: うん
+    romaji: un
+    meaning: yeah, uh-huh
+    category: vocabulary
+    tags:
+      - grammar-particles
+    type: interjection
+  - id: grammarparticles_20
+    hiragana: いいえ
+    romaji: iie
+    meaning: 'no'
+    category: vocabulary
+    tags:
+      - grammar-particles
+    type: interjection
+  - id: tastes_2
+    hiragana: あまい
+    kanji: 甘い
+    romaji: amai
+    meaning: sweet
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_3
+    hiragana: からい
+    kanji: 辛い
+    romaji: karai
+    meaning: spicy, hot
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_4
+    hiragana: にがい
+    kanji: 苦い
+    romaji: nigai
+    meaning: bitter
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_5
+    hiragana: すっぱい
+    kanji: 酸っぱい
+    romaji: suppai
+    meaning: sour
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_6
+    hiragana: しおからい
+    kanji: 塩辛い
+    romaji: shiokarai
+    meaning: salty
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_7
+    hiragana: おいしい
+    kanji: 美味しい
+    romaji: oishii
+    meaning: delicious
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_8
+    hiragana: うまい
+    kanji: 旨い
+    romaji: umai
+    meaning: delicious (casual)
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_9
+    hiragana: まずい
+    kanji: 不味い
+    romaji: mazui
+    meaning: bad-tasting
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_10
+    hiragana: やわらかい
+    kanji: 柔らかい
+    romaji: yawarakai
+    meaning: soft, tender
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_11
+    hiragana: かたい
+    kanji: 硬い
+    romaji: katai
+    meaning: hard, firm
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_12
+    hiragana: ケーキ
+    romaji: keeki
+    meaning: cake
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_13
+    hiragana: カレー
+    romaji: karee
+    meaning: curry
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_14
+    hiragana: コーヒー
+    romaji: koohii
+    meaning: coffee
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_15
+    hiragana: レモン
+    romaji: remon
+    meaning: lemon
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_16
+    hiragana: スープ
+    romaji: suupu
+    meaning: soup
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_18
+    hiragana: ピザ
+    romaji: piza
+    meaning: pizza
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_19
+    hiragana: チョコレート
+    romaji: chokoreeto
+    meaning: chocolate
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_20
+    hiragana: 果物
+    kanji: くだもの
+    romaji: kudamono
+    meaning: fruit
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_21
+    hiragana: 料理
+    kanji: りょうり
+    romaji: ryouri
+    meaning: dish, cooking
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_22
+    hiragana: 食べ物
+    kanji: たべもの
+    romaji: tabemono
+    meaning: food
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_23
+    hiragana: 薬
+    kanji: くすり
+    romaji: kusuri
+    meaning: medicine
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_24
+    hiragana: 味
+    kanji: あじ
+    romaji: aji
+    meaning: taste, flavor
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: colors_16
+    hiragana: うすいあか
+    romaji: usui aka
+    meaning: light red
+    category: vocabulary
+    tags:
+      - colors
+    type: い-adjective
+  - id: colors_17
+    hiragana: うすいあお
+    romaji: usui ao
+    meaning: light blue
+    category: vocabulary
+    tags:
+      - colors
+    type: い-adjective
+  - id: colors_18
+    hiragana: うすいみどり
+    romaji: usui midori
+    meaning: light green
+    category: vocabulary
+    tags:
+      - colors
+    type: の-adjective
+  - id: colors_19
+    hiragana: こいあか
+    romaji: koi aka
+    meaning: dark red
+    category: vocabulary
+    tags:
+      - colors
+    type: い-adjective
+  - id: colors_20
+    hiragana: こいあお
+    romaji: koi ao
+    meaning: dark blue
+    category: vocabulary
+    tags:
+      - colors
+    type: い-adjective
+  - id: colors_21
+    hiragana: こいみどり
+    romaji: koi midori
+    meaning: dark green
+    category: vocabulary
+    tags:
+      - colors
+    type: の-adjective
 categories:
-  - 'all'
-  - 'emotions'
-  - 'places'
-  - 'directions'
-  - 'responses'
-  - 'adjectives'
-  - 'body'
-  - 'verbs'
-  - 'abstract'
-  - 'nature'
-  - 'colors'
-  - 'food'
-
+  - all
+  - vocabulary
 sortOptions:
-  - value: 'hiragana'
-    label: 'Hiragana (A-Z)'
-  - value: 'romaji'
-    label: 'Romaji (A-Z)'
-  - value: 'meaning'
-    label: 'Meaning (A-Z)'
-  - value: 'category'
-    label: 'Category'
+  - value: hiragana
+    label: Hiragana (A-Z)
+  - value: romaji
+    label: Romaji (A-Z)
+  - value: meaning
+    label: Meaning (A-Z)
+  - value: category
+    label: Category
