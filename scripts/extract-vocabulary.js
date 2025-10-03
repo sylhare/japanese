@@ -8,38 +8,43 @@ const yaml = require('js-yaml');
 const LESSONS_DIR = path.join(__dirname, '../docs/lessons');
 const VOCABULARY_FILE = path.join(__dirname, '../src/data/vocabulary.yaml');
 
-// Vocabulary table regex patterns
-const VOCAB_TABLE_REGEX = /## Vocabulary from This Lesson[\s\S]*?(\|.*\|[\s\S]*?)(?=\n##|\n## Next Steps|\n## Tips|\n## Remember|$)/;
+// Generic regex patterns for finding vocabulary tables
 const ROW_REGEX = /^\|(.+?)\|(.+?)\|(.+?)\|(.+?)\|(.+?)\|$/gm;
 
-// Alternative patterns for different table formats
-const BASIC_VOCAB_REGEX = /## Basic Colors[\s\S]*?(\|.*\|[\s\S]*?)(?=\n##|$)/;
-const SECONDARY_VOCAB_REGEX = /## Secondary Colors[\s\S]*?(\|.*\|[\s\S]*?)(?=\n##|$)/;
-const NEUTRAL_VOCAB_REGEX = /## Neutral Colors[\s\S]*?(\|.*\|[\s\S]*?)(?=\n##|$)/;
+// Generic pattern to find any table with vocabulary structure
+// Looks for tables with Hiragana, Kanji, Romaji, English, Type columns
+const VOCAB_TABLE_PATTERN = /## [^#\n]+[\s\S]*?(\|.*?Hiragana.*?\|[\s\S]*?)(?=\n##|\n## Next Steps|\n## Tips|\n## Remember|$)/gi;
 
 // Extract vocabulary from a single lesson file
 function extractVocabularyFromFile(filePath) {
   const content = fs.readFileSync(filePath, 'utf8');
   const vocabulary = [];
   
-  // Try different table patterns
-  const patterns = [
-    VOCAB_TABLE_REGEX,
-    BASIC_VOCAB_REGEX,
-    SECONDARY_VOCAB_REGEX,
-    NEUTRAL_VOCAB_REGEX
-  ];
-  
-  for (const pattern of patterns) {
-    const match = content.match(pattern);
-    if (match) {
-      const tableContent = match[1];
+  // Find all tables that look like vocabulary tables
+  let match;
+  while ((match = VOCAB_TABLE_PATTERN.exec(content)) !== null) {
+    const tableContent = match[1];
+    
+    // Check if this table has the expected vocabulary structure
+    if (isVocabularyTable(tableContent)) {
       const extracted = extractFromTable(tableContent, filePath);
       vocabulary.push(...extracted);
     }
   }
   
   return vocabulary;
+}
+
+// Check if a table content looks like a vocabulary table
+function isVocabularyTable(tableContent) {
+  // Look for the expected header structure with flexible column names
+  // Must have Hiragana, Romaji, English, and Type columns (Kanji is optional)
+  const hasHiragana = /Hiragana/i.test(tableContent);
+  const hasRomaji = /Romaji/i.test(tableContent);
+  const hasEnglish = /English/i.test(tableContent);
+  const hasType = /Type/i.test(tableContent);
+  
+  return hasHiragana && hasRomaji && hasEnglish && hasType;
 }
 
 // Extract vocabulary from a table content

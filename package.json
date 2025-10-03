@@ -15,7 +15,12 @@
     "typecheck": "tsc",
     "extract-vocabulary": "node scripts/extract-vocabulary.js",
     "prebuild": "npm run extract-vocabulary",
-    "prestart": "npm run extract-vocabulary"
+    "prestart": "npm run extract-vocabulary",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@docusaurus/core": "3.9.1",
