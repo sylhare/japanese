@@ -2,46 +2,79 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Welcome to Japanese Lessons
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Learn Japanese through structured lessons, interactive vocabulary, and comprehensive reference materials.
 
 ## Getting Started
 
-Get started by **creating a new site**.
+This site is designed to help you learn Japanese systematically, from basic hiragana to advanced grammar concepts.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+### What You'll Find Here
 
-### What you'll need
+- **📚 Structured Lessons**: Step-by-step learning path from beginner to intermediate
+- **🔍 Interactive Vocabulary**: Searchable database with 66+ vocabulary items
+- **📖 Quick Reference**: Kana charts, grammar guides, and conjugation tables
+- **🏷️ Organized Content**: Easy navigation with categories and tags
 
-- [Node.js](https://nodejs.org/en/download/) version 20.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+## Learning Path
 
-## Generate a new site
+### 1. Start with the Basics
+- [Introduction to Japanese](./lessons/intro.md) - Overview of the language
+- [Hiragana Basics](./lessons/hiragana-basics.md) - Learn the first writing system
+- [Hiragana Chart](./reference/hiragana-chart.md) - Complete reference table
 
-Generate a new Docusaurus site using the **classic template**.
+### 2. Build Your Vocabulary
+- [Colors](./lessons/vocabulary/colors.md) - Learn color vocabulary
+- [Tastes](./lessons/vocabulary/tastes.md) - Food and flavor words
+- [Grammar Particles](./lessons/vocabulary/grammar-particles.md) - Essential particles
 
-The classic template will automatically be added to your project after you run the command:
+### 3. Master Grammar
+- [Verb Conjugation](./lessons/grammar/conjugation.md) - Learn how to conjugate verbs
+- [Particle Guide](./reference/particle-guide.md) - Complete particle reference
+- [Verb Conjugation Reference](./reference/verb-conjugation.md) - Detailed conjugation tables
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+### 4. Practice and Review
+- [Vocabulary Page](/vocabulary) - Interactive vocabulary search and practice
+- Use the search function to find specific topics
+- Review lessons regularly to reinforce learning
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+## Features
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+### Interactive Vocabulary System
+- **Search**: Find words by hiragana, kanji, romaji, or English meaning
+- **Filter**: Browse by category, tags, or writing system
+- **Sort**: Organize by hiragana, romaji, meaning, or category
+- **Practice**: Use vocabulary in context with example sentences
 
-## Start your site
+### Quick Reference Materials
+- **Kana Charts**: Complete hiragana and katakana reference
+- **Grammar Guides**: Particle usage and verb conjugation
+- **Conjugation Tables**: Quick lookup for all verb forms
 
-Run the development server:
+### Learning Tools
+- **Tagged Content**: Find related lessons and vocabulary easily
+- **Categorized Organization**: Logical grouping of learning materials
+- **Search Integration**: Built-in search across all content
+- **Responsive Design**: Learn on any device
 
-```bash
-cd my-website
-npm run start
-```
+## Tips for Success
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+1. **Practice Regularly**: Consistent daily practice is more effective than long study sessions
+2. **Use the Vocabulary System**: The interactive vocabulary page helps reinforce learning
+3. **Follow the Learning Path**: Start with basics and build up systematically
+4. **Review Often**: Regular review helps move information from short-term to long-term memory
+5. **Practice Writing**: Use the kana charts to practice writing hiragana and katakana
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+## Getting Help
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+- Use the search function to find specific topics
+- Check the vocabulary page for word meanings and usage
+- Review the reference materials for quick lookups
+- Follow the structured learning path for systematic progress
+
+---
+
+**Ready to start learning?** Begin with the [Introduction to Japanese](./lessons/intro.md) lesson!
+
+頑張ってください！(Ganbatte kudasai - Good luck!)

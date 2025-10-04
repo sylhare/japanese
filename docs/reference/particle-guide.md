@@ -274,6 +274,6 @@ Particles are small words that indicate the grammatical relationship between wor
 
 ## Related Topics
 
-- [Basic Grammar Lesson](../lessons/grammar/particles.md)
+- [Verb Conjugation Lesson](../lessons/grammar/conjugation.md)
 - [Verb Conjugation Reference](./verb-conjugation.md)
-- [Sentence Structure Lesson](../lessons/grammar/sentence-structure.md)
+- [Colors Vocabulary](../lessons/vocabulary/colors.md)

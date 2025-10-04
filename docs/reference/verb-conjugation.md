@@ -152,4 +152,4 @@ Convert to past tense:
 
 - [Basic Conjugation Lesson](../lessons/grammar/conjugation.md)
 - [Particle Guide](./particle-guide.md)
-- [Verb Forms Lesson](../lessons/grammar/verb-forms.md)
+- [Colors Vocabulary](../lessons/vocabulary/colors.md)
