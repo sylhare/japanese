@@ -15,14 +15,14 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-japanese-lessons.example.com',
+  url: 'https://sylhare.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/japanese/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'syl', // Usually your GitHub org/user name.
+  organizationName: 'sylhare', // Usually your GitHub org/user name.
   projectName: 'japanese', // Usually your repo name.
 
   onBrokenLinks: 'warn',
@@ -44,7 +44,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/sylhare/japanese/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -55,7 +55,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/sylhare/japanese/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -136,28 +136,32 @@ const config: Config = {
           ],
         },
         {
-          title: 'Community',
+          title: 'Resources',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Vocabulary System',
+              to: '/vocabulary',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'Hiragana Chart',
+              to: '/docs/reference/hiragana-chart',
             },
             {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'Katakana Chart',
+              to: '/docs/reference/katakana-chart',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'Development',
           items: [
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'GitHub Repository',
+              href: 'https://github.com/sylhare/japanese',
+            },
+            {
+              label: 'Development Docs',
+              href: 'https://github.com/sylhare/japanese/tree/main/.github/docs',
             },
           ],
         },

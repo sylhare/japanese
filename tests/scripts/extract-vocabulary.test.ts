@@ -2,30 +2,36 @@ import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import fs from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';
-import { extractVocabularyFromFile, scanAllLessons, mergeVocabulary } from '../scripts/extract-vocabulary.js';
+import { extractVocabularyFromFile, scanAllLessons, mergeVocabulary } from '../../scripts/extract-vocabulary.js';
 import {
   createTestVocabularyItem,
   createTestVocabularyData,
   createExtractVocabularyDuplicateTestData,
   createCategoryMergeTestData,
   createSortOptionsTestData,
+  createDuplicateTestData,
+  createPartialDuplicateTestData,
+  createIdempotentTestData,
+  createEmptyTestData,
+  createMissingFieldsTestData,
+  createCaseInsensitiveTestData,
+  createDifferentMeaningTestData,
+  createDifferentHiraganaTestData,
   type VocabularyItem,
   type VocabularyData
-} from './test-utils.js';
+} from '../test-utils.js';
 
 describe('Vocabulary Extraction', () => {
-  const fixturesDir = path.join(__dirname, '__fixtures__');
+  const fixturesDir = path.join(__dirname, '../__fixtures__/extract-vocabulary');
   const testVocabularyFile = path.join(__dirname, 'test-vocabulary.yaml');
 
   beforeEach(() => {
-    // Clean up any existing test files
     if (fs.existsSync(testVocabularyFile)) {
       fs.unlinkSync(testVocabularyFile);
     }
   });
 
   afterEach(() => {
-    // Clean up test files
     if (fs.existsSync(testVocabularyFile)) {
       fs.unlinkSync(testVocabularyFile);
     }
@@ -36,9 +42,8 @@ describe('Vocabulary Extraction', () => {
       const filePath = path.join(fixturesDir, 'basic-colors.md');
       const vocabulary = extractVocabularyFromFile(filePath);
 
-      expect(vocabulary).toHaveLength(5); // 3 from Basic Colors + 2 from Vocabulary from This Lesson
+      expect(vocabulary).toHaveLength(5);
 
-      // Check that we have the expected vocabulary items
       const hiraganaList = vocabulary.map(item => item.hiragana);
       expect(hiraganaList).toContain('あか');
       expect(hiraganaList).toContain('あお');
@@ -46,7 +51,6 @@ describe('Vocabulary Extraction', () => {
       expect(hiraganaList).toContain('みどり');
       expect(hiraganaList).toContain('しろ');
 
-      // Check specific item
       const akaItem = vocabulary.find(item => item.hiragana === 'あか');
       expect(akaItem).toMatchObject({
         hiragana: 'あか',
@@ -58,7 +62,6 @@ describe('Vocabulary Extraction', () => {
         tags: ['basic-colors']
       });
 
-      // Check that all items have required fields
       vocabulary.forEach(item => {
         expect(item).toHaveProperty('id');
         expect(item).toHaveProperty('hiragana');
@@ -74,16 +77,14 @@ describe('Vocabulary Extraction', () => {
       const filePath = path.join(fixturesDir, 'tastes.md');
       const vocabulary = extractVocabularyFromFile(filePath);
 
-      expect(vocabulary).toHaveLength(4); // 2 from Basic Tastes + 2 from Vocabulary from This Lesson
+      expect(vocabulary).toHaveLength(4);
 
-      // Check that we have the expected vocabulary items
       const hiraganaList = vocabulary.map(item => item.hiragana);
       expect(hiraganaList).toContain('あまい');
       expect(hiraganaList).toContain('からい');
       expect(hiraganaList).toContain('にがい');
       expect(hiraganaList).toContain('すっぱい');
 
-      // Check for taste vocabulary
       const amaiItem = vocabulary.find(item => item.hiragana === 'あまい');
       expect(amaiItem).toMatchObject({
         hiragana: 'あまい',
@@ -98,7 +99,6 @@ describe('Vocabulary Extraction', () => {
       const filePath = path.join(fixturesDir, 'malformed-table.md');
       const vocabulary = extractVocabularyFromFile(filePath);
 
-      // Should extract valid rows and skip empty/separator rows
       expect(vocabulary).toHaveLength(3);
       
       const validItems = vocabulary.filter(item => 
@@ -106,7 +106,6 @@ describe('Vocabulary Extraction', () => {
       );
       expect(validItems).toHaveLength(3);
 
-      // Should not include empty rows
       const emptyItems = vocabulary.filter(item => 
         !item.hiragana || !item.romaji || !item.meaning
       );
@@ -116,13 +115,11 @@ describe('Vocabulary Extraction', () => {
     it('should handle files with no vocabulary tables', () => {
       const emptyFile = path.join(fixturesDir, 'empty-lesson.md');
       
-      // Create an empty lesson file
       fs.writeFileSync(emptyFile, '# Empty Lesson\n\nNo vocabulary here.');
       
       const vocabulary = extractVocabularyFromFile(emptyFile);
       expect(vocabulary).toHaveLength(0);
 
-      // Clean up
       fs.unlinkSync(emptyFile);
     });
   });
@@ -132,15 +129,12 @@ describe('Vocabulary Extraction', () => {
       const { existing, extracted } = createExtractVocabularyDuplicateTestData();
       const merged = mergeVocabulary(existing, extracted);
 
-      // Should have 2 items total (1 existing + 1 new, duplicate removed)
       expect(merged.vocabulary).toHaveLength(2);
       
-      // Should preserve the existing item
       const redItem = merged.vocabulary.find(item => item.hiragana === 'あか');
       expect(redItem?.id).toBe('existing_1');
       expect(redItem?.tags).toContain('existing');
 
-      // Should add the new item
       const blueItem = merged.vocabulary.find(item => item.hiragana === 'あお');
       expect(blueItem).toBeDefined();
       expect(blueItem?.id).toBe('extracted_2');
@@ -164,15 +158,88 @@ describe('Vocabulary Extraction', () => {
     });
   });
 
+  describe('Duplicate Prevention', () => {
+    describe('Content-based deduplication', () => {
+      it('should prevent duplicates with identical hiragana, romaji, and meaning', () => {
+        const { existing, extracted } = createDuplicateTestData();
+        const merged = mergeVocabulary(existing, extracted);
+
+        expect(merged.vocabulary).toHaveLength(1);
+        expect(merged.vocabulary[0].id).toBe('existing_1');
+      });
+
+      it('should prevent duplicates with case-insensitive matching', () => {
+        const { existing, extracted } = createCaseInsensitiveTestData();
+        const merged = mergeVocabulary(existing, extracted);
+
+        expect(merged.vocabulary).toHaveLength(1);
+      });
+
+      it('should allow different words with same hiragana but different meaning', () => {
+        const { existing, extracted } = createDifferentMeaningTestData();
+        const merged = mergeVocabulary(existing, extracted);
+
+        expect(merged.vocabulary).toHaveLength(2);
+      });
+
+      it('should allow same meaning with different hiragana', () => {
+        const { existing, extracted } = createDifferentHiraganaTestData();
+        const merged = mergeVocabulary(existing, extracted);
+
+        expect(merged.vocabulary).toHaveLength(2);
+      });
+    });
+
+    describe('Multiple extraction runs', () => {
+      it('should be idempotent - running extraction multiple times produces same result', () => {
+        const baseVocabulary = createIdempotentTestData();
+
+        const firstMerge = mergeVocabulary(baseVocabulary, baseVocabulary);
+        expect(firstMerge.vocabulary).toHaveLength(2);
+
+        const secondMerge = mergeVocabulary(firstMerge, baseVocabulary);
+        expect(secondMerge.vocabulary).toHaveLength(2);
+        expect(secondMerge.vocabulary).toEqual(firstMerge.vocabulary);
+      });
+
+      it('should handle partial duplicates correctly', () => {
+        const { existing, extracted } = createPartialDuplicateTestData();
+        const merged = mergeVocabulary(existing, extracted);
+
+        expect(merged.vocabulary).toHaveLength(3);
+        
+        expect(merged.vocabulary.find(item => item.id === 'existing_1')).toBeDefined();
+        expect(merged.vocabulary.find(item => item.id === 'existing_2')).toBeDefined();
+        
+        expect(merged.vocabulary.find(item => item.id === 'extracted_2')).toBeDefined();
+      });
+    });
+
+    describe('Edge cases', () => {
+      it('should handle empty vocabulary lists', () => {
+        const empty = createEmptyTestData();
+        const merged = mergeVocabulary(empty, empty);
+        
+        expect(merged.vocabulary).toHaveLength(0);
+        expect(merged.categories).toContain('all');
+      });
+
+      it('should handle vocabulary with missing fields gracefully', () => {
+        const { existing, extracted } = createMissingFieldsTestData();
+        const merged = mergeVocabulary(existing, extracted);
+
+        expect(merged.vocabulary).toHaveLength(2);
+      });
+    });
+  });
+
   describe('scanAllLessons', () => {
     it('should scan all lesson files in a directory', () => {
-      // Create a temporary lessons directory for testing
       const testLessonsDir = path.join(__dirname, 'test-lessons');
       const testVocabDir = path.join(testLessonsDir, 'vocabulary');
       
       fs.mkdirSync(testVocabDir, { recursive: true });
       
-      // Copy fixture files to test directory
       fs.copyFileSync(
         path.join(fixturesDir, 'basic-colors.md'),
         path.join(testVocabDir, 'basic-colors.md')
@@ -182,10 +249,8 @@ describe('Vocabulary Extraction', () => {
         path.join(testVocabDir, 'tastes.md')
       );
 
-      // Create a modified version of scanAllLessons that uses our test directory
-      const { scanAllLessons: originalScanAllLessons } = require('../scripts/extract-vocabulary.js');
+      const { scanAllLessons: originalScanAllLessons } = require('../../scripts/extract-vocabulary.js');
       
-      // Mock the LESSONS_DIR by creating a custom scan function
       function scanTestLessons(): VocabularyData {
         const vocabulary: VocabularyItem[] = [];
         const categories = new Set(['all']);
@@ -209,7 +274,6 @@ describe('Vocabulary Extraction', () => {
               const lessonVocabulary = extractVocabularyFromFile(filePath);
               vocabulary.push(...lessonVocabulary);
               
-              // Collect categories
               lessonVocabulary.forEach(item => {
                 categories.add(item.category);
               });
@@ -229,11 +293,10 @@ describe('Vocabulary Extraction', () => {
       try {
         const result = scanTestLessons();
         
-        expect(result.vocabulary).toHaveLength(9); // 5 from basic-colors + 4 from tastes
+        expect(result.vocabulary).toHaveLength(9);
         expect(result.categories).toContain('vocabulary');
         expect(result.sortOptions).toHaveLength(4);
       } finally {
-        // Clean up test directory
         fs.rmSync(testLessonsDir, { recursive: true, force: true });
       }
     });
@@ -241,7 +304,6 @@ describe('Vocabulary Extraction', () => {
 
   describe('Integration Tests', () => {
     it('should handle the full extraction workflow', () => {
-      // Create a test vocabulary file
       const testData = createTestVocabularyData([
         createTestVocabularyItem({
           id: 'existing_1',
@@ -261,7 +323,6 @@ describe('Vocabulary Extraction', () => {
 
       fs.writeFileSync(testVocabularyFile, yaml.dump(testData));
 
-      // Test the merge process
       const extracted = createTestVocabularyData([
         createTestVocabularyItem({
           id: 'colors_1',
@@ -282,17 +343,14 @@ describe('Vocabulary Extraction', () => {
     });
 
     it('should validate vocabulary file structure', () => {
-      const vocabularyFile = path.join(__dirname, '../../src/data/vocabulary.yaml');
+      const vocabularyFile = path.join(__dirname, '../../../src/data/vocabulary.yaml');
       
-      // Check if vocabulary file exists
       if (!fs.existsSync(vocabularyFile)) {
-        // Run extraction to create the file
-        const { scanAllLessons, mergeVocabulary } = require('../scripts/extract-vocabulary.js');
+        const { scanAllLessons, mergeVocabulary } = require('../../scripts/extract-vocabulary.js');
         const extracted = scanAllLessons();
         const existing = { vocabulary: [], categories: ['all'], sortOptions: [] };
         const merged = mergeVocabulary(existing, extracted);
         
-        // Create the vocabulary file
         const yaml = require('js-yaml');
         const vocabularyDir = path.dirname(vocabularyFile);
         if (!fs.existsSync(vocabularyDir)) {
@@ -303,7 +361,6 @@ describe('Vocabulary Extraction', () => {
       
       expect(fs.existsSync(vocabularyFile)).toBe(true);
       
-      // Check if it's valid YAML
       const content = fs.readFileSync(vocabularyFile, 'utf8');
       const data = yaml.load(content) as VocabularyData;
       
@@ -316,17 +373,14 @@ describe('Vocabulary Extraction', () => {
     });
 
     it('should have no duplicate vocabulary entries', () => {
-      const vocabularyFile = path.join(__dirname, '../../src/data/vocabulary.yaml');
+      const vocabularyFile = path.join(__dirname, '../../../src/data/vocabulary.yaml');
       
-      // Ensure file exists
       if (!fs.existsSync(vocabularyFile)) {
-        // Run extraction to create the file
-        const { scanAllLessons, mergeVocabulary } = require('../scripts/extract-vocabulary.js');
+        const { scanAllLessons, mergeVocabulary } = require('../../scripts/extract-vocabulary.js');
         const extracted = scanAllLessons();
         const existing = { vocabulary: [], categories: ['all'], sortOptions: [] };
         const merged = mergeVocabulary(existing, extracted);
         
-        // Create the vocabulary file
         const yaml = require('js-yaml');
         const vocabularyDir = path.dirname(vocabularyFile);
         if (!fs.existsSync(vocabularyDir)) {
@@ -360,7 +414,6 @@ describe('Vocabulary Extraction', () => {
       expect(result.categories.length).toBeGreaterThan(0);
       expect(result.sortOptions.length).toBeGreaterThan(0);
       
-      // Check that all vocabulary items have required fields
       result.vocabulary.forEach(item => {
         expect(item).toHaveProperty('id');
         expect(item).toHaveProperty('hiragana');
@@ -373,8 +426,7 @@ describe('Vocabulary Extraction', () => {
     });
 
     it('should work with any section heading', () => {
-      // Create a test file with a custom section heading
-      const testFile = path.join(__dirname, '__fixtures__/custom-section.md');
+      const testFile = path.join(fixturesDir, 'custom-section.md');
       const testContent = `---
 title: Custom Section Test
 ---
@@ -398,7 +450,6 @@ title: Custom Section Test
         expect(vocabulary[0].hiragana).toBe('テスト');
         expect(vocabulary[1].hiragana).toBe('サンプル');
       } finally {
-        // Clean up test file
         if (fs.existsSync(testFile)) {
           fs.unlinkSync(testFile);
         }
