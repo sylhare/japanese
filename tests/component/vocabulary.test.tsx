@@ -11,6 +11,7 @@ vi.mock('../../src/data/vocabulary.yaml', () => ({
 vi.mock('../../src/pages/vocabulary.module.css', () => ({
   default: {}
 }));
+
 import Vocabulary from '../../src/pages/vocabulary';
 
 describe('Vocabulary Component', () => {

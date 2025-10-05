@@ -6,6 +6,7 @@ interface LayoutProps {
   description: string;
 }
 
+/** Mock Layout component for testing */
 export default function Layout({ children, title, description }: LayoutProps) {
   return (
     <div data-testid="layout">

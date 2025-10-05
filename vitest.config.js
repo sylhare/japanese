@@ -17,12 +17,17 @@ export default defineConfig({
         '**/*.test.{js,ts,tsx}',
         '**/*.config.js'
       ]
-    }
+    },
+    mockReset: true,
+    clearMocks: true
   },
   resolve: {
     alias: {
-      '@theme': path.resolve(__dirname, 'src/theme'),
+      '@theme': path.resolve(__dirname, 'tests/__mocks__/@theme'),
       '@docusaurus': path.resolve(__dirname, 'node_modules/@docusaurus')
     }
+  },
+  define: {
+    'process.env.NODE_ENV': '"test"'
   }
 });
