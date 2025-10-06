@@ -36,6 +36,11 @@ const sidebars: SidebarsConfig = {
           items: [
             'lessons/vocabulary/colors',
             'lessons/vocabulary/tastes',
+            'lessons/vocabulary/time',
+            'lessons/vocabulary/numbers',
+            'lessons/vocabulary/family',
+            'lessons/vocabulary/grammar-particles',
+            'lessons/vocabulary/confusing-kanji',
           ],
         },
   ],
