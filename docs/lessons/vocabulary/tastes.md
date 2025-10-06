@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: Tastes and Flavors
+title: 🍽️ Tastes and Flavors
 description: Learn Japanese vocabulary for describing tastes and flavors
 tags: [vocabulary, tastes, flavors, adjectives, food, basic]
 ---

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: Time and Dates
+title: ⏰ Time and Dates
 description: Learn Japanese time-related vocabulary including days, weeks, months, and years
 tags: [vocabulary, time, dates, basic, nouns]
 ---

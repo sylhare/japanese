@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title: Grammar Particles and Conjunctions
+title: 📝 Grammar Particles and Conjunctions
 description: Learn essential Japanese particles and conjunctions
 tags: [vocabulary, grammar, particles, conjunctions, basic]
 ---

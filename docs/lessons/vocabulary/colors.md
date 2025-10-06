@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Colors
+title: 🎨 Colors
 description: Learn Japanese color vocabulary
 tags: [vocabulary, colors, basic, adjectives]
 ---

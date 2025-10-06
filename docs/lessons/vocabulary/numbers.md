@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title: Numbers and Counting
+title: 🔢 Numbers and Counting
 description: Learn Japanese numbers, counting systems, and how to count large numbers
 tags: [vocabulary, numbers, counting, basic, math]
 ---

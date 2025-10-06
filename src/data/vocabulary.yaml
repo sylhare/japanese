@@ -1919,6 +1919,438 @@ vocabulary:
     tags:
       - time
     type: noun
+  - id: confusingkanji_2
+    hiragana: つち
+    kanji: 土
+    romaji: tsuchi
+    meaning: soil/earth
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Shorter middle stroke
+  - id: confusingkanji_3
+    hiragana: し
+    kanji: 士
+    romaji: shi
+    meaning: gentleman/samurai
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Longer middle stroke
+  - id: confusingkanji_3
+    hiragana: かん
+    kanji: 干
+    romaji: kan
+    meaning: to dry
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: verb | Top stroke is flat
+  - id: confusingkanji_2
+    hiragana: み
+    kanji: 未
+    romaji: mi
+    meaning: not yet/un-
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: prefix | Short first, long second
+  - id: confusingkanji_3
+    hiragana: まつ
+    kanji: 末
+    romaji: matsu
+    meaning: end/tip
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Long first, short second
+  - id: confusingkanji_2
+    hiragana: ひ
+    kanji: 日
+    romaji: hi
+    meaning: day/sun
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Center stroke touches both sides
+  - id: confusingkanji_3
+    hiragana: いわく
+    kanji: 曰
+    romaji: iwaku
+    meaning: say/reason
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: verb | Center stroke doesn't touch right side
+  - id: confusingkanji_2
+    hiragana: ひと
+    kanji: 人
+    romaji: hito
+    meaning: person
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Strokes don't connect at top
+  - id: confusingkanji_3
+    hiragana: はい
+    kanji: 入
+    romaji: hairu
+    meaning: enter
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: verb | Strokes connect at top
+  - id: confusingkanji_2
+    hiragana: ちから
+    kanji: 力
+    romaji: chikara
+    meaning: power/strength
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Extra stroke sticking out at top
+  - id: confusingkanji_3
+    hiragana: かたな
+    kanji: 刀
+    romaji: katana
+    meaning: sword
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | No extra stroke at top
+  - id: confusingkanji_2
+    hiragana: いし
+    kanji: 石
+    romaji: ishi
+    meaning: stone
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | No stroke sticking out
+  - id: confusingkanji_3
+    hiragana: みぎ
+    kanji: 右
+    romaji: migi
+    meaning: right
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Stroke sticking out at top
+  - id: confusingkanji_2
+    hiragana: うし
+    kanji: 牛
+    romaji: ushi
+    meaning: cow
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Longer stroke sticking out
+  - id: confusingkanji_3
+    hiragana: ご
+    kanji: 午
+    romaji: go
+    meaning: noon
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Flat top, no sticking out
+  - id: confusingkanji_2
+    hiragana: き
+    kanji: 木
+    romaji: ki
+    meaning: tree
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | No extra stroke at bottom
+  - id: confusingkanji_3
+    hiragana: ほん
+    kanji: 本
+    romaji: hon
+    meaning: book/root
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Extra horizontal stroke at bottom
+  - id: confusingkanji_3
+    hiragana: じ
+    kanji: 自
+    romaji: ji
+    meaning: oneself
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Three strokes inside
+  - id: confusingkanji_2
+    hiragana: おう
+    kanji: 王
+    romaji: ou
+    meaning: king
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | No extra stroke
+  - id: confusingkanji_3
+    hiragana: たま
+    kanji: 玉
+    romaji: tama
+    meaning: gem/jewel
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Extra stroke (dot) added
+  - id: confusingkanji_2
+    hiragana: おお
+    kanji: 大
+    romaji: oo
+    meaning: big
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | No extra stroke
+  - id: confusingkanji_3
+    hiragana: いぬ
+    kanji: 犬
+    romaji: inu
+    meaning: dog
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Extra stroke (dot) added
+  - id: confusingkanji_2
+    hiragana: ほう
+    kanji: 方
+    romaji: hou
+    meaning: direction/method
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Extra stroke on top
+  - id: confusingkanji_2
+    hiragana: みず
+    kanji: 水
+    romaji: mizu
+    meaning: water
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | No extra stroke
+  - id: confusingkanji_3
+    hiragana: こおり
+    kanji: 氷
+    romaji: koori
+    meaning: ice
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Extra stroke (dot) added
+  - id: confusingkanji_2
+    hiragana: ひろ
+    kanji: 拾
+    romaji: hiro
+    meaning: pick up
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: verb | One line under roof
+  - id: confusingkanji_3
+    hiragana: すて
+    kanji: 捨
+    romaji: sute
+    meaning: discard/throw away
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: verb | Two perpendicular lines under roof
+  - id: confusingkanji_2
+    hiragana: あいだ
+    kanji: 間
+    romaji: aida
+    meaning: between/interval
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Sun (日) inside
+  - id: confusingkanji_3
+    hiragana: もん
+    kanji: 問
+    romaji: mon
+    meaning: question
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Mouth (口) inside
+  - id: confusingkanji_2
+    hiragana: いま
+    kanji: 今
+    romaji: ima
+    meaning: now
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Simple top
+  - id: confusingkanji_3
+    hiragana: れい
+    kanji: 令
+    romaji: rei
+    meaning: command/order
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Complex top
+  - id: confusingkanji_2
+    hiragana: おのれ
+    kanji: 己
+    romaji: onore
+    meaning: self/oneself
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Open at top
+  - id: confusingkanji_3
+    hiragana: い
+    kanji: 已
+    romaji: i
+    meaning: already
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: adverb | Partially closed
+  - id: confusingkanji_4
+    hiragana: み
+    kanji: 巳
+    romaji: mi
+    meaning: snake (zodiac)
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Completely closed
+  - id: confusingkanji_2
+    hiragana: かい
+    kanji: 貝
+    romaji: kai
+    meaning: shell/shellfish
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Shell shape
+  - id: confusingkanji_3
+    hiragana: みる
+    kanji: 見
+    romaji: miru
+    meaning: to see
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: verb | Eye on top
+  - id: confusingkanji_2
+    hiragana: め
+    kanji: 目
+    romaji: me
+    meaning: eye
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Simple eye
+  - id: confusingkanji_3
+    hiragana: じ
+    kanji: 自
+    romaji: ji
+    meaning: self
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Eye with line
+  - id: confusingkanji_2
+    hiragana: た
+    kanji: 田
+    romaji: ta
+    meaning: rice field
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Cross in middle
+  - id: confusingkanji_3
+    hiragana: ゆう
+    kanji: 由
+    romaji: yuu
+    meaning: reason/from
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Line up from middle
+  - id: confusingkanji_4
+    hiragana: こう
+    kanji: 甲
+    romaji: kou
+    meaning: first/armor
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Line down from middle
+  - id: confusingkanji_5
+    hiragana: しん
+    kanji: 申
+    romaji: shin
+    meaning: to say/explain
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: verb | Line up and down
+  - id: confusingkanji_2
+    hiragana: とり
+    kanji: 鳥
+    romaji: tori
+    meaning: bird
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Has internal stroke
+  - id: confusingkanji_3
+    hiragana: からす
+    kanji: 烏
+    romaji: karasu
+    meaning: crow
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | No internal stroke
+  - id: confusingkanji_2
+    hiragana: かん
+    kanji: 感
+    romaji: kan
+    meaning: feeling/emotion
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Different top radical
+  - id: confusingkanji_3
+    hiragana: わく
+    kanji: 惑
+    romaji: waku
+    meaning: confusion
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Different top radical
+  - id: confusingkanji_2
+    hiragana: けん
+    kanji: 験
+    romaji: ken
+    meaning: test/verification
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Horse radical (馬)
+  - id: confusingkanji_3
+    hiragana: けん
+    kanji: 検
+    romaji: ken
+    meaning: examination
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun | Tree radical (木)
 categories:
   - all
   - vocabulary
