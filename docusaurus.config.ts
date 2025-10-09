@@ -109,7 +109,7 @@ const config: Config = {
         },
         {to: '/vocabulary', label: 'Vocabulary', position: 'left'},
         {
-          href: 'https://github.com/syl/japanese',
+          href: 'https://github.com/sylhare/japanese',
           label: 'GitHub',
           position: 'right',
         },
