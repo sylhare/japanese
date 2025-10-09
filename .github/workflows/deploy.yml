@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   test:
@@ -36,11 +36,6 @@ jobs:
       - name: Run vocabulary extraction
         run: npm run extract-vocabulary
 
-      - name: Build site
-        run: npm run build
-        env:
-          NODE_ENV: production
-
   deploy:
     needs: test
     runs-on: ubuntu-latest
@@ -63,13 +58,13 @@ jobs:
       - name: Run vocabulary extraction
         run: npm run extract-vocabulary
 
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
       - name: Build site
         run: npm run build
         env:
           NODE_ENV: production
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
