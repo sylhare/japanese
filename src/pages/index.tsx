@@ -3,26 +3,57 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
 
+const mainFeatures = [
+  {
+    title: 'Lessons',
+    icon: '📚',
+    description: 'Structured learning path',
+    link: '/docs/lessons/intro',
+    color: 'primary'
+  },
+  {
+    title: 'References',
+    icon: '📖',
+    description: 'Quick lookup tools',
+    link: '/docs/reference/hiragana-chart',
+    color: 'secondary'
+  },
+  {
+    title: 'Vocabulary',
+    icon: '📝',
+    description: 'Word lists & practice',
+    link: '/docs/lessons/vocabulary/colors',
+    color: 'success'
+  }
+];
+
+function FeatureCard({title, icon, description, link, color}: typeof mainFeatures[0]) {
+  return (
+    <Link to={link} className={styles.featureCard}>
+      <div className={styles.cardIcon}>{icon}</div>
+      <div className={styles.cardContent}>
+        <h3 className={styles.cardTitle}>{title}</h3>
+        <p className={styles.cardDescription}>{description}</p>
+      </div>
+      <div className={styles.cardArrow}>→</div>
+    </Link>
+  );
+}
+
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={styles.heroBanner}>
       <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/lessons/intro">
-            Start Learning Japanese - 日本語を学びましょう 🎌
-          </Link>
+        <div className={styles.heroContent}>
+          <Heading as="h1" className={styles.heroTitle}>
+            {siteConfig.title}
+          </Heading>
+          <p className={styles.heroSubtitle}>Choose your learning path</p>
         </div>
       </div>
     </header>
@@ -36,8 +67,14 @@ export default function Home(): ReactNode {
       title={`${siteConfig.title} - Learn Japanese`}
       description="Comprehensive Japanese learning platform with structured lessons, vocabulary, and grammar references">
       <HomepageHeader />
-      <main>
-        <HomepageFeatures />
+      <main className={styles.mainContent}>
+        <div className="container">
+          <div className={styles.featuresGrid}>
+            {mainFeatures.map((feature) => (
+              <FeatureCard key={feature.title} {...feature} />
+            ))}
+          </div>
+        </div>
       </main>
     </Layout>
   );
