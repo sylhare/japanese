@@ -4,28 +4,23 @@ const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
 
-// Configuration
-const LESSONS_DIR = path.join(__dirname, '../docs/lessons');
+const LESSONS_DIR = process.env.TEST_LESSONS_DIR || path.join(__dirname, '../docs/lessons');
 const VOCABULARY_FILE = path.join(__dirname, '../src/data/vocabulary.yaml');
-
-// Generic regex patterns for finding vocabulary tables
-const ROW_REGEX = /^\|(.+?)\|(.+?)\|(.+?)\|(.+?)\|(.+?)\|$/gm;
-
-// Generic pattern to find any table with vocabulary structure
-// Looks for tables with Hiragana, Kanji, Romaji, English, Type columns
 const VOCAB_TABLE_PATTERN = /## [^#\n]+[\s\S]*?(\|.*?Hiragana.*?\|[\s\S]*?)(?=\n##|\n## Next Steps|\n## Tips|\n## Remember|$)/gi;
 
-// Extract vocabulary from a single lesson file
+/**
+ * Extract vocabulary from a single lesson file.
+ * @param {string} filePath - Path to the lesson file
+ * @returns {Array<Object>} Array of vocabulary items
+ */
 function extractVocabularyFromFile(filePath) {
   const content = fs.readFileSync(filePath, 'utf8');
   const vocabulary = [];
   
-  // Find all tables that look like vocabulary tables
   let match;
   while ((match = VOCAB_TABLE_PATTERN.exec(content)) !== null) {
     const tableContent = match[1];
     
-    // Check if this table has the expected vocabulary structure
     if (isVocabularyTable(tableContent)) {
       const extracted = extractFromTable(tableContent, filePath);
       vocabulary.push(...extracted);
@@ -35,44 +30,124 @@ function extractVocabularyFromFile(filePath) {
   return vocabulary;
 }
 
-// Check if a table content looks like a vocabulary table
+/**
+ * Check if a table content has the expected vocabulary structure.
+ * Must have Hiragana, Romaji, English, and Type columns.
+ * Columns can have emoji prefixes or be in any position.
+ * @param {string} tableContent - The table content to check
+ * @returns {boolean} True if it's a vocabulary table
+ */
 function isVocabularyTable(tableContent) {
-  // Look for the expected header structure with flexible column names
-  // Must have Hiragana, Romaji, English, and Type columns (Kanji is optional)
-  const hasHiragana = /Hiragana/i.test(tableContent);
-  const hasRomaji = /Romaji/i.test(tableContent);
-  const hasEnglish = /English/i.test(tableContent);
-  const hasType = /Type/i.test(tableContent);
+  const lines = tableContent.trim().split('\n');
+  if (lines.length === 0) {
+    return false;
+  }
   
-  return hasHiragana && hasRomaji && hasEnglish && hasType;
+  const headerRow = lines[0];
+  const hasHiragana = /Hiragana/i.test(headerRow);
+  const hasRomaji = /Romaji/i.test(headerRow);
+  const hasEnglish = /English/i.test(headerRow);
+  const hasType = /Type/i.test(headerRow);
+  const hasKanji = /Kanji/i.test(headerRow);
+  
+  return hasHiragana && hasRomaji && hasEnglish;
 }
 
-// Extract vocabulary from a table content
+/**
+ * Parse a table row into an array of cells.
+ * @param {string} row - The row string
+ * @returns {Array<string>} Array of cell contents
+ */
+function parseRow(row) {
+  const cells = row.replace(/^\||\|$/g, '').split('|').map(cell => cell.trim());
+  return cells;
+}
+
+/**
+ * Check if a vocabulary item is a particle and should be filtered out.
+ * @param {string} type - The type field of the vocabulary item
+ * @returns {boolean} True if it's a particle that should be filtered out
+ */
+function isParticle(type) {
+  return type && type.toLowerCase().includes('particle');
+}
+
+/**
+ * Find the index of a column by name (case-insensitive, allows for emoji prefixes).
+ * @param {Array<string>} headerCells - The header row cells
+ * @param {string} columnName - The column name to find
+ * @returns {number} The column index, or -1 if not found
+ */
+function findColumnIndex(headerCells, columnName) {
+  return headerCells.findIndex(cell => {
+    const normalized = cell.toLowerCase();
+    const cleaned = normalized.replace(/^\s*\||\|\s*$/, '').trim();
+    return cleaned.includes(columnName.toLowerCase());
+  });
+}
+
+/**
+ * Extract vocabulary from table content, filtering out particles.
+ * @param {string} tableContent - The table content to extract from
+ * @param {string} filePath - The file path for generating unique IDs
+ * @returns {Array<Object>} Array of vocabulary items
+ */
 function extractFromTable(tableContent, filePath) {
   const vocabulary = [];
-  let rowMatch;
+  const rows = tableContent.trim().split('\n');
+  
+  if (rows.length < 2) {
+    return vocabulary;
+  }
+  
+  const headerRow = rows[0];
+  const headerCells = parseRow(headerRow);
+  
+  const hiraganaIdx = findColumnIndex(headerCells, 'Hiragana');
+  const kanjiIdx = findColumnIndex(headerCells, 'Kanji');
+  const romajiIdx = findColumnIndex(headerCells, 'Romaji');
+  const englishIdx = findColumnIndex(headerCells, 'English');
+  const typeIdx = findColumnIndex(headerCells, 'Type');
+  
+  if (hiraganaIdx === -1 || romajiIdx === -1 || englishIdx === -1) {
+    return vocabulary;
+  }
+  
   let rowIndex = 0;
   
-  while ((rowMatch = ROW_REGEX.exec(tableContent)) !== null) {
-    // Skip header row
-    if (rowIndex === 0) {
+  for (let i = 1; i < rows.length; i++) {
+    const row = rows[i];
+    
+    if (row.match(/^[\s|:-]+$/)) {
+      continue;
+    }
+    
+    const cells = parseRow(row);
+    
+    const hiragana = hiraganaIdx >= 0 && hiraganaIdx < cells.length ? cells[hiraganaIdx].trim() : '';
+    const kanji = kanjiIdx >= 0 && kanjiIdx < cells.length ? cells[kanjiIdx].trim() : '';
+    const romaji = romajiIdx >= 0 && romajiIdx < cells.length ? cells[romajiIdx].trim() : '';
+    const english = englishIdx >= 0 && englishIdx < cells.length ? cells[englishIdx].trim() : '';
+    const type = typeIdx >= 0 && typeIdx < cells.length ? cells[typeIdx].trim() : '';
+    
+    if (!hiragana || !romaji || !english || hiragana.includes('---') || hiragana.match(/Hiragana|Kanji|Romaji|English/i)) {
       rowIndex++;
       continue;
     }
     
-    const [, hiragana, kanji, romaji, english, type] = rowMatch.map(cell => cell.trim());
-    
-    // Skip empty rows or rows that don't look like vocabulary
-    if (!hiragana || !romaji || !english || hiragana.includes('---') || hiragana.includes('Hiragana')) {
+    if (isParticle(type)) {
       rowIndex++;
       continue;
     }
     
-    // Generate unique ID based on file and row
+    if (hiragana.match(/^[\p{Emoji}\s]+$/u)) {
+      rowIndex++;
+      continue;
+    }
+    
     const fileId = path.basename(filePath, '.md').replace(/[^a-zA-Z0-9]/g, '');
     const id = `${fileId}_${rowIndex}`;
     
-    // Determine category based on file path
     let category = 'general';
     if (filePath.includes('/vocabulary/')) {
       const folderName = path.basename(path.dirname(filePath));
@@ -83,7 +158,6 @@ function extractFromTable(tableContent, filePath) {
       category = 'lessons';
     }
     
-    // Determine tags based on lesson name and content
     const tags = [];
     const lessonName = path.basename(filePath, '.md');
     tags.push(lessonName);
@@ -105,7 +179,10 @@ function extractFromTable(tableContent, filePath) {
   return vocabulary;
 }
 
-// Scan all lesson files for vocabulary
+/**
+ * Scan all lesson files for vocabulary.
+ * @returns {Object} Vocabulary data with categories and sort options
+ */
 function scanAllLessons() {
   const vocabulary = [];
   const categories = new Set(['all']);
@@ -117,7 +194,7 @@ function scanAllLessons() {
   ];
   
   function scanDirectory(dir) {
-    const files = fs.readdirSync(dir);
+    const files = fs.readdirSync(dir).sort();
     
     for (const file of files) {
       const filePath = path.join(dir, file);
@@ -129,7 +206,6 @@ function scanAllLessons() {
         const lessonVocabulary = extractVocabularyFromFile(filePath);
         vocabulary.push(...lessonVocabulary);
         
-        // Collect categories
         lessonVocabulary.forEach(item => {
           categories.add(item.category);
         });
@@ -139,6 +215,14 @@ function scanAllLessons() {
   
   scanDirectory(LESSONS_DIR);
   
+  vocabulary.sort((a, b) => {
+    const fileCompare = a.tags[0].localeCompare(b.tags[0]);
+    if (fileCompare !== 0) {
+      return fileCompare;
+    }
+    return a.id.localeCompare(b.id);
+  });
+  
   return {
     vocabulary,
     categories: Array.from(categories).sort(),
@@ -146,7 +230,10 @@ function scanAllLessons() {
   };
 }
 
-// Load existing vocabulary to preserve manually added items
+/**
+ * Load existing vocabulary to preserve manually added items.
+ * @returns {Object} Vocabulary data
+ */
 function loadExistingVocabulary() {
   if (!fs.existsSync(VOCABULARY_FILE)) {
     return { vocabulary: [], categories: ['all'], sortOptions: [] };
@@ -161,12 +248,17 @@ function loadExistingVocabulary() {
   }
 }
 
-// Merge extracted vocabulary with existing vocabulary (idempotent)
+/**
+ * Merge extracted vocabulary with existing vocabulary, filtering out particles.
+ * This function is idempotent - running it multiple times produces the same result.
+ * @param {Object} existing - Existing vocabulary data
+ * @param {Object} extracted - Newly extracted vocabulary data
+ * @returns {Object} Merged vocabulary data
+ */
 function mergeVocabulary(existing, extracted) {
   const existingMap = new Map();
   const extractedMap = new Map();
   
-  // Create maps for both existing and extracted vocabulary
   existing.vocabulary.forEach(item => {
     existingMap.set(item.id, item);
   });
@@ -175,34 +267,51 @@ function mergeVocabulary(existing, extracted) {
     extractedMap.set(item.id, item);
   });
   
-  // Create a map to track vocabulary by content (not just ID) to prevent duplicates
   const contentMap = new Map();
   
-  // Add existing vocabulary first (preserve manually added items)
   existing.vocabulary.forEach(item => {
+    if (isParticle(item.type)) {
+      return;
+    }
     const contentKey = `${item.hiragana}-${item.romaji}-${item.meaning}`.toLowerCase();
     contentMap.set(contentKey, item);
   });
   
-  // Add extracted vocabulary only if it doesn't already exist by content
   extracted.vocabulary.forEach(item => {
+    if (isParticle(item.type)) {
+      return;
+    }
     const contentKey = `${item.hiragana}-${item.romaji}-${item.meaning}`.toLowerCase();
     if (!contentMap.has(contentKey)) {
       contentMap.set(contentKey, item);
     }
   });
   
-  // Merge categories
   const allCategories = new Set([...existing.categories, ...extracted.categories]);
   
+  const mergedVocabulary = Array.from(contentMap.values()).sort((a, b) => {
+    if (a.category !== b.category) {
+      return a.category.localeCompare(b.category);
+    }
+    if (a.hiragana !== b.hiragana) {
+      return a.hiragana.localeCompare(b.hiragana);
+    }
+    if (a.romaji !== b.romaji) {
+      return a.romaji.localeCompare(b.romaji);
+    }
+    return a.meaning.localeCompare(b.meaning);
+  });
+
   return {
-    vocabulary: Array.from(contentMap.values()),
+    vocabulary: mergedVocabulary,
     categories: Array.from(allCategories).sort(),
     sortOptions: existing.sortOptions.length > 0 ? existing.sortOptions : extracted.sortOptions
   };
 }
 
-// Main execution
+/**
+ * Main execution function to extract and merge vocabulary.
+ */
 function main() {
   console.log('🔍 Scanning lesson files for vocabulary...');
   
@@ -220,7 +329,6 @@ function main() {
   }
   console.log(`📖 Total vocabulary items: ${totalItems}`);
   
-  // Only write if there are changes
   const existingContent = yaml.dump(existing, { indent: 2, lineWidth: -1, noRefs: true });
   const newContent = yaml.dump(merged, { indent: 2, lineWidth: -1, noRefs: true });
   

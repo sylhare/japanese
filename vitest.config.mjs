@@ -1,5 +1,9 @@
 import { defineConfig } from 'vitest/config';
-import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname, resolve } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 export default defineConfig({
   test: {
@@ -23,8 +27,8 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@theme': path.resolve(__dirname, 'tests/__mocks__/@theme'),
-      '@docusaurus': path.resolve(__dirname, 'node_modules/@docusaurus')
+      '@theme': resolve(__dirname, 'tests/__mocks__/@theme'),
+      '@docusaurus': resolve(__dirname, 'node_modules/@docusaurus')
     }
   },
   define: {
