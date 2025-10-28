@@ -9,63 +9,55 @@ tags: [vocabulary, tastes, flavors, adjectives, food, basic]
 
 Learning how to describe tastes and flavors is essential for talking about food and expressing preferences in Japanese. This lesson covers the five basic tastes and additional flavor vocabulary.
 
-## The Five Basic Tastes
+## Vocabulary
 
-Japanese has specific words for each of the five basic tastes:
+### Five Basic Tastes
 
-### Sweet (甘い - Amai)
+| | Hiragana | Kanji | Romaji | English | Type |
+|---|---|--------|--------|---------|------|
+| 🍬 | あまい | 甘い | amai | sweet | い-adjective |
+| 🌶️ | からい | 辛い | karai | spicy, hot | い-adjective |
+| ☕ | にがい | 苦い | nigai | bitter | い-adjective |
+| 🍋 | すっぱい | 酸っぱい | suppai | sour | い-adjective |
+| 🧂 | しおからい | 塩辛い | shiokarai | salty | い-adjective |
 
-**あまい** (amai) - sweet, sugary
+### Taste and Texture
 
-- このケーキはあまいです。 (Kono keeki wa amai desu.) - This cake is sweet.
-- あまいものがすきです。 (Amai mono ga suki desu.) - I like sweet things.
+| | Hiragana | Kanji | Romaji | English | Type |
+|---|---|--------|--------|---------|------|
+| 😋 | おいしい | 美味しい | oishii | delicious, tasty | い-adjective |
+| 👍 | うまい | 旨い | umai | delicious (casual) | い-adjective |
+| 😞 | まずい | 不味い | mazui | bad-tasting, awful | い-adjective |
+| 🍞 | やわらかい | 柔らかい | yawarakai | soft, tender | い-adjective |
+| 🥜 | かたい | 硬い | katai | hard, firm | い-adjective |
+| 🥨 | さくさく | - | sakusaku | crispy, crunchy | adverb |
+| 🍡 | ねばねば | - | nebaneba | sticky, gooey | adverb |
 
-### Spicy/Hot (辛い - Karai)
+### Food Items (Examples)
 
-**からい** (karai) - spicy, hot
+| | Hiragana | Kanji | Romaji | English | Type |
+|---|---|--------|--------|---------|------|
+| 🍰 | ケーキ | - | keeki | cake | noun |
+| 🍛 | カレー | - | karee | curry | noun |
+| ☕ | コーヒー | - | koohii | coffee | noun |
+| 🍋 | レモン | - | remon | lemon | noun |
+| 🍲 | スープ | - | suupu | soup | noun |
+| 🍎 | りんご | 林檎 | ringo | apple | noun |
+| 🍕 | ピザ | - | piza | pizza | noun |
+| 🍫 | チョコレート | - | chokoreeto | chocolate | noun |
+| 🍓 | 果物 | くだもの | kudamono | fruit | noun |
+| 🍜 | 料理 | りょうり | ryouri | dish, cooking | noun |
+| 🍱 | 食べ物 | たべもの | tabemono | food | noun |
+| 💊 | 薬 | くすり | kusuri | medicine | noun |
+| 👅 | 味 | あじ | aji | taste, flavor | noun |
 
-- このカレーはからいです。 (Kono karee wa karai desu.) - This curry is spicy.
-- からい食べ物がにがてです。 (Karai tabemono ga nigate desu.) - I'm not good with spicy food.
+### Taste Combinations
 
-### Bitter (苦い - Nigai)
-
-**にがい** (nigai) - bitter
-
-- このコーヒーはにがいです。 (Kono koohii wa nigai desu.) - This coffee is bitter.
-- にがい薬を飲みました。 (Nigai kusuri o nomimashita.) - I took bitter medicine.
-
-### Sour (酸っぱい - Suppai)
-
-**すっぱい** (suppai) - sour, tart
-
-- このレモンはすっぱいです。 (Kono remon wa suppai desu.) - This lemon is sour.
-- すっぱい果物がすきです。 (Suppai kudamono ga suki desu.) - I like sour fruits.
-
-### Salty (塩辛い - Shiokarai)
-
-**しおからい** (shiokarai) - salty
-
-- このスープはしおからいです。 (Kono suupu wa shiokarai desu.) - This soup is salty.
-- しおからい料理がすきです。 (Shiokarai ryouri ga suki desu.) - I like salty dishes.
-
-## Additional Flavor Vocabulary
-
-### Delicious and Tasty
-
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| おいしい | 美味しい | oishii | delicious, tasty | い-adjective |
-| うまい | 旨い | umai | delicious (casual) | い-adjective |
-| まずい | 不味い | mazui | bad-tasting, awful | い-adjective |
-
-### Texture and Quality
-
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| やわらかい | 柔らかい | yawarakai | soft, tender | い-adjective |
-| かたい | 硬い | katai | hard, firm | い-adjective |
-| さくさく | - | sakusaku | crispy, crunchy | adverb |
-| ねばねば | - | nebaneba | sticky, gooey | adverb |
+| | Hiragana | Kanji | Romaji | English | Type |
+|---|---|--------|--------|---------|------|
+| 🍯🌶️ | 甘辛い | 甘辛い | amakarai | sweet and spicy | い-adjective |
+| 🍋🍬 | 酸っぱ甘い | 酸っぱ甘い | suppaamai | sweet and sour | い-adjective |
+| 🍯🍋 | 甘酸っぱい | 甘酸っぱい | amasuppai | sweet and sour (alternative) | い-adjective |
 
 ## Using Taste Adjectives in Sentences
 
@@ -76,8 +68,12 @@ Japanese has specific words for each of the five basic tastes:
 
 #### Examples:
 - このりんごはあまいです。 (Kono ringo wa amai desu.) - This apple is sweet.
+- このケーキはあまいです。 (Kono keeki wa amai desu.) - This cake is sweet.
 - そのピザはからいです。 (Sono piza wa karai desu.) - That pizza is spicy.
+- このカレーはからいです。 (Kono karee wa karai desu.) - This curry is spicy.
 - あのコーヒーはにがいです。 (Ano koohii wa nigai desu.) - That coffee is bitter.
+- このレモンはすっぱいです。 (Kono remon wa suppai desu.) - This lemon is sour.
+- このスープはしおからいです。 (Kono suupu wa shiokarai desu.) - This soup is salty.
 
 ### Expressing Preferences
 
@@ -88,6 +84,9 @@ Japanese has specific words for each of the five basic tastes:
 - あまいものがすきです。 (Amai mono ga suki desu.) - I like sweet things.
 - からいものがきらいです。 (Karai mono ga kirai desu.) - I dislike spicy things.
 - すっぱいものがだいすきです。 (Suppai mono ga daisuki desu.) - I love sour things.
+- からい食べ物がにがてです。 (Karai tabemono ga nigate desu.) - I'm not good with spicy food.
+- すっぱい果物がすきです。 (Suppai kudamono ga suki desu.) - I like sour fruits.
+- しおからい料理がすきです。 (Shiokarai ryouri ga suki desu.) - I like salty dishes.
 
 ### Asking About Taste
 
@@ -97,6 +96,18 @@ Japanese has specific words for each of the five basic tastes:
 **Answer**: これは[味]です。 (Kore wa [aji] desu.)
 **Meaning**: This is [taste].
 
+### Describing Food Quality
+
+**Pattern**: この[食べ物]は[形容詞]です。
+**Meaning**: This [food] is [adjective].
+
+#### Examples:
+- このりょうりはおいしいです。 (Kono ryouri wa oishii desu.) - This dish is delicious.
+- このパンはやわらかいです。 (Kono pan wa yawarakai desu.) - This bread is soft.
+- このせんべいはかたいです。 (Kono senbei wa katai desu.) - This rice cracker is hard.
+- このせんべいはさくさくです。 (Kono senbei wa sakusaku desu.) - This rice cracker is crispy.
+- このおもちはねばねばです。 (Kono omochi wa nebaneba desu.) - This mochi is sticky.
+
 ## Cultural Notes
 
 ### Japanese Food Culture
@@ -105,74 +116,6 @@ Japanese has specific words for each of the five basic tastes:
 - **Balance**: Japanese cuisine emphasizes balancing the five tastes
 - **Seasonal**: Taste preferences often change with seasons
 - **Regional**: Different regions have different taste preferences
-
-### Common Taste Combinations
-
-- **甘辛い** (amakarai) - sweet and spicy
-- **酸っぱ甘い** (suppaamai) - sweet and sour
-- **甘酸っぱい** (amasuppai) - sweet and sour (alternative)
-
-## Practice Exercises
-
-### Exercise 1: Taste Recognition
-Match the Japanese taste word with its English meaning:
-
-1. あまい → ?
-2. からい → ?
-3. にがい → ?
-4. すっぱい → ?
-5. しおからい → ?
-
-### Exercise 2: Sentence Building
-Complete these sentences with the appropriate taste word:
-
-1. このチョコレートは___です。 (This chocolate is sweet.)
-2. そのレモンは___です。 (That lemon is sour.)
-3. あのコーヒーは___です。 (That coffee is bitter.)
-
-### Exercise 3: Preference Expression
-Express your taste preferences:
-
-1. あまいものがすきですか？ (Do you like sweet things?)
-2. からい食べ物はどうですか？ (How about spicy food?)
-3. すっぱい果物はすきですか？ (Do you like sour fruits?)
-
-## Vocabulary from This Lesson
-
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| あまい | 甘い | amai | sweet | い-adjective |
-| からい | 辛い | karai | spicy, hot | い-adjective |
-| にがい | 苦い | nigai | bitter | い-adjective |
-| すっぱい | 酸っぱい | suppai | sour | い-adjective |
-| しおからい | 塩辛い | shiokarai | salty | い-adjective |
-| おいしい | 美味しい | oishii | delicious | い-adjective |
-| うまい | 旨い | umai | delicious (casual) | い-adjective |
-| まずい | 不味い | mazui | bad-tasting | い-adjective |
-| やわらかい | 柔らかい | yawarakai | soft, tender | い-adjective |
-| かたい | 硬い | katai | hard, firm | い-adjective |
-| ケーキ | - | keeki | cake | noun |
-| カレー | - | karee | curry | noun |
-| コーヒー | - | koohii | coffee | noun |
-| レモン | - | remon | lemon | noun |
-| スープ | - | suupu | soup | noun |
-| りんご | 林檎 | ringo | apple | noun |
-| ピザ | - | piza | pizza | noun |
-| チョコレート | - | chokoreeto | chocolate | noun |
-| 果物 | くだもの | kudamono | fruit | noun |
-| 料理 | りょうり | ryouri | dish, cooking | noun |
-| 食べ物 | たべもの | tabemono | food | noun |
-| 薬 | くすり | kusuri | medicine | noun |
-| 味 | あじ | aji | taste, flavor | noun |
-
-## Next Steps
-
-After mastering basic tastes:
-
-1. **Learn cooking vocabulary**: Words for cooking methods and ingredients
-2. **Study food categories**: Different types of Japanese food
-3. **Practice restaurant Japanese**: Ordering food and expressing preferences
-4. **Explore regional cuisine**: Different tastes across Japan
 
 ## Tips for Learning Taste Vocabulary
 

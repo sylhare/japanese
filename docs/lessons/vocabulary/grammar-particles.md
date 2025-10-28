@@ -51,38 +51,3 @@ Pronouns replace nouns in sentences.
 | あれ | - | are | that (far from both) | pronoun |
 | わたし | 私 | watashi | I, me | pronoun |
 | あなた | - | anata | you | pronoun |
-
-## Interjections
-
-Interjections express emotions or reactions.
-
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| ああ | - | aa | oh, ah | interjection |
-| ええ | - | ee | yes, uh-huh | interjection |
-| うん | - | un | yeah, uh-huh | interjection |
-| いいえ | - | iie | no | interjection |
-
-## Vocabulary from This Lesson
-
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| は | - | wa | topic marker | particle |
-| が | - | ga | subject marker | particle |
-| を | - | wo | object marker | particle |
-| に | - | ni | to, at, in | particle |
-| で | - | de | at, by, with | particle |
-| へ | - | e | to, toward | particle |
-| そして | - | soshite | and then | conjunction |
-| でも | - | demo | but, however | conjunction |
-| だから | - | dakara | so, therefore | conjunction |
-| または | - | matawa | or | conjunction |
-| これ | - | kore | this (near speaker) | pronoun |
-| それ | - | sore | that (near listener) | pronoun |
-| あれ | - | are | that (far from both) | pronoun |
-| わたし | 私 | watashi | I, me | pronoun |
-| あなた | - | anata | you | pronoun |
-| ああ | - | aa | oh, ah | interjection |
-| ええ | - | ee | yes, uh-huh | interjection |
-| うん | - | un | yeah, uh-huh | interjection |
-| いいえ | - | iie | no | interjection |
