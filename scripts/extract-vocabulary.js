@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
 
-const LESSONS_DIR = process.env.TEST_LESSONS_DIR || path.join(__dirname, '../docs/lessons');
+const DEFAULT_LESSONS_DIR = path.join(__dirname, '../docs/lessons');
 const VOCABULARY_FILE = path.join(__dirname, '../src/data/vocabulary.yaml');
 const VOCAB_TABLE_PATTERN = /## [^#\n]+[\s\S]*?(\|.*?Hiragana.*?\|[\s\S]*?)(?=\n##|\n## Next Steps|\n## Tips|\n## Remember|$)/gi;
 
@@ -213,7 +213,7 @@ function scanAllLessons() {
     }
   }
   
-  scanDirectory(LESSONS_DIR);
+  scanDirectory(process.env.TEST_LESSONS_DIR || DEFAULT_LESSONS_DIR);
   
   vocabulary.sort((a, b) => {
     const fileCompare = a.tags[0].localeCompare(b.tags[0]);

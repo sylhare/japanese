@@ -28,3 +28,168 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Enhanced Table Styling for Kana Charts */
+.theme-doc-markdown.markdown table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  width: 100%;
+  max-width: none;
+  min-width: 100%;
+  table-layout: fixed;
+  display: table;
+}
+
+/* Force table to break out of container constraints */
+.theme-doc-markdown.markdown table,
+.theme-doc-markdown.markdown table * {
+  box-sizing: border-box;
+}
+
+/* Ensure each column takes equal space */
+.theme-doc-markdown.markdown table col {
+  width: 20%;
+}
+
+.theme-doc-markdown.markdown table colgroup col {
+  width: 20%;
+}
+
+/* Override any Bootstrap or Docusaurus width constraints */
+.theme-doc-markdown.markdown table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 900px;
+}
+
+.theme-doc-markdown.markdown table th {
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
+  color: white;
+  font-weight: 600;
+  padding: 1rem 0.75rem;
+  text-align: center;
+  border: none;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  width: 20%;
+}
+
+.theme-doc-markdown.markdown table td {
+  padding: 1rem 0.75rem;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--ifm-background-color);
+  transition: background-color 0.2s ease;
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 20%;
+}
+
+table tr:nth-child(even) td,
+.markdown table tr:nth-child(even) td,
+.markdown .table-wrapper table tr:nth-child(even) td,
+article table tr:nth-child(even) td,
+.theme-doc-markdown table tr:nth-child(even) td,
+.theme-doc-markdown.markdown table tr:nth-child(even) td,
+main table tr:nth-child(even) td {
+  background-color: rgba(var(--ifm-color-primary-rgb), 0.05) !important;
+}
+
+table tr:hover td,
+.markdown table tr:hover td,
+.markdown .table-wrapper table tr:hover td,
+article table tr:hover td,
+.theme-doc-markdown table tr:hover td,
+.theme-doc-markdown.markdown table tr:hover td,
+main table tr:hover td {
+  background-color: rgba(var(--ifm-color-primary-rgb), 0.1) !important;
+}
+
+/* Dark mode table styling */
+[data-theme='dark'] table td,
+[data-theme='dark'] .markdown table td,
+[data-theme='dark'] .markdown .table-wrapper table td,
+[data-theme='dark'] article table td,
+[data-theme='dark'] .theme-doc-markdown table td,
+[data-theme='dark'] .theme-doc-markdown.markdown table td,
+[data-theme='dark'] main table td {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme='dark'] table tr:nth-child(even) td,
+[data-theme='dark'] .markdown table tr:nth-child(even) td,
+[data-theme='dark'] .markdown .table-wrapper table tr:nth-child(even) td,
+[data-theme='dark'] article table tr:nth-child(even) td,
+[data-theme='dark'] .theme-doc-markdown table tr:nth-child(even) td,
+[data-theme='dark'] .theme-doc-markdown.markdown table tr:nth-child(even) td,
+[data-theme='dark'] main table tr:nth-child(even) td {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+[data-theme='dark'] table tr:hover td,
+[data-theme='dark'] .markdown table tr:hover td,
+[data-theme='dark'] .markdown .table-wrapper table tr:hover td,
+[data-theme='dark'] article table tr:hover td,
+[data-theme='dark'] .theme-doc-markdown table tr:hover td,
+[data-theme='dark'] .theme-doc-markdown.markdown table tr:hover td,
+[data-theme='dark'] main table tr:hover td {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Special styling for kana characters */
+table td:first-child,
+.markdown table td:first-child,
+.markdown .table-wrapper table td:first-child,
+article table td:first-child,
+.theme-doc-markdown table td:first-child,
+.theme-doc-markdown.markdown table td:first-child,
+main table td:first-child {
+  font-weight: 600 !important;
+  color: var(--ifm-color-primary) !important;
+}
+
+table td:not(:first-child),
+.markdown table td:not(:first-child),
+.markdown .table-wrapper table td:not(:first-child),
+article table td:not(:first-child),
+.theme-doc-markdown table td:not(:first-child),
+.theme-doc-markdown.markdown table td:not(:first-child),
+main table td:not(:first-child) {
+  font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif !important;
+}
+
+/* Responsive table styling */
+@media (max-width: 768px) {
+  table,
+  .markdown table,
+  .markdown .table-wrapper table,
+  article table,
+  .theme-doc-markdown table,
+  .theme-doc-markdown.markdown table,
+  main table {
+    font-size: 0.9rem !important;
+  }
+  
+  table th,
+  .markdown table th,
+  .markdown .table-wrapper table th,
+  article table th,
+  .theme-doc-markdown table th,
+  .theme-doc-markdown.markdown table th,
+  main table th,
+  table td,
+  .markdown table td,
+  .markdown .table-wrapper table td,
+  article table td,
+  .theme-doc-markdown table td,
+  .theme-doc-markdown.markdown table td,
+  main table td {
+    padding: 0.75rem 0.5rem !important;
+  }
+}
