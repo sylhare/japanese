@@ -502,7 +502,7 @@ describe('Vocabulary Extraction', () => {
     });
 
     it('should validate vocabulary file structure', () => {
-      const vocabularyFile = path.join(__dirname, '../../../src/data/vocabulary.yaml');
+      const vocabularyFile = path.join(__dirname, '../../src/data/vocabulary.yaml');
       
       expect(fs.existsSync(vocabularyFile)).toBe(true);
       
@@ -518,7 +518,7 @@ describe('Vocabulary Extraction', () => {
     });
 
     it('should have no duplicate vocabulary entries', () => {
-      const vocabularyFile = path.join(__dirname, '../../../src/data/vocabulary.yaml');
+      const vocabularyFile = path.join(__dirname, '../../src/data/vocabulary.yaml');
       
       expect(fs.existsSync(vocabularyFile)).toBe(true);
       
@@ -541,7 +541,7 @@ describe('Vocabulary Extraction', () => {
     });
 
     it('should not have emoji characters in hiragana fields of vocabulary.yaml', () => {
-      const vocabularyFile = path.join(__dirname, '../../../src/data/vocabulary.yaml');
+      const vocabularyFile = path.join(__dirname, '../../src/data/vocabulary.yaml');
       
       expect(fs.existsSync(vocabularyFile)).toBe(true);
       

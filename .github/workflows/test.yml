@@ -26,17 +26,33 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    - name: Install Playwright browsers
-      run: npx playwright install --with-deps
-
-    - name: Run vocabulary extraction tests
-      run: npm run test:run
-
     - name: Run vocabulary extraction
       run: npm run extract-vocabulary
 
+    - name: Verify vocabulary file was created
+      run: |
+        echo "Verifying vocabulary.yaml was created..."
+        if [ -f src/data/vocabulary.yaml ]; then
+          echo "✅ File exists at src/data/vocabulary.yaml"
+          ls -lh src/data/vocabulary.yaml
+          echo "First 10 lines of file:"
+          head -10 src/data/vocabulary.yaml
+        else
+          echo "❌ ERROR: File does not exist at src/data/vocabulary.yaml"
+          echo "Current directory: $(pwd)"
+          echo "Listing src/data directory:"
+          ls -la src/data/ || echo "Directory does not exist"
+          exit 1
+        fi
+
+    - name: Run unit tests
+      run: npm run test:run
+
     - name: Run Docusaurus build test
       run: npm run build
+
+    - name: Install Playwright browsers
+      run: npx playwright install --with-deps
 
     - name: Run Playwright e2e tests
       run: npm run test:e2e
