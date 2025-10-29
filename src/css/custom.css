@@ -91,105 +91,44 @@
   width: 20%;
 }
 
-table tr:nth-child(even) td,
-.markdown table tr:nth-child(even) td,
-.markdown .table-wrapper table tr:nth-child(even) td,
-article table tr:nth-child(even) td,
-.theme-doc-markdown table tr:nth-child(even) td,
-.theme-doc-markdown.markdown table tr:nth-child(even) td,
-main table tr:nth-child(even) td {
-  background-color: rgba(var(--ifm-color-primary-rgb), 0.05) !important;
+.theme-doc-markdown.markdown table tr:nth-child(even) td {
+  background-color: rgba(var(--ifm-color-primary-rgb), 0.05);
 }
 
-table tr:hover td,
-.markdown table tr:hover td,
-.markdown .table-wrapper table tr:hover td,
-article table tr:hover td,
-.theme-doc-markdown table tr:hover td,
-.theme-doc-markdown.markdown table tr:hover td,
-main table tr:hover td {
-  background-color: rgba(var(--ifm-color-primary-rgb), 0.1) !important;
+.theme-doc-markdown.markdown table tr:hover td {
+  background-color: rgba(var(--ifm-color-primary-rgb), 0.1);
 }
 
 /* Dark mode table styling */
-[data-theme='dark'] table td,
-[data-theme='dark'] .markdown table td,
-[data-theme='dark'] .markdown .table-wrapper table td,
-[data-theme='dark'] article table td,
-[data-theme='dark'] .theme-doc-markdown table td,
-[data-theme='dark'] .theme-doc-markdown.markdown table td,
-[data-theme='dark'] main table td {
-  border-color: rgba(255, 255, 255, 0.1) !important;
+[data-theme='dark'] .theme-doc-markdown.markdown table td {
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
-[data-theme='dark'] table tr:nth-child(even) td,
-[data-theme='dark'] .markdown table tr:nth-child(even) td,
-[data-theme='dark'] .markdown .table-wrapper table tr:nth-child(even) td,
-[data-theme='dark'] article table tr:nth-child(even) td,
-[data-theme='dark'] .theme-doc-markdown table tr:nth-child(even) td,
-[data-theme='dark'] .theme-doc-markdown.markdown table tr:nth-child(even) td,
-[data-theme='dark'] main table tr:nth-child(even) td {
-  background-color: rgba(255, 255, 255, 0.05) !important;
+[data-theme='dark'] .theme-doc-markdown.markdown table tr:nth-child(even) td {
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
-[data-theme='dark'] table tr:hover td,
-[data-theme='dark'] .markdown table tr:hover td,
-[data-theme='dark'] .markdown .table-wrapper table tr:hover td,
-[data-theme='dark'] article table tr:hover td,
-[data-theme='dark'] .theme-doc-markdown table tr:hover td,
-[data-theme='dark'] .theme-doc-markdown.markdown table tr:hover td,
-[data-theme='dark'] main table tr:hover td {
-  background-color: rgba(255, 255, 255, 0.1) !important;
+[data-theme='dark'] .theme-doc-markdown.markdown table tr:hover td {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Special styling for kana characters */
-table td:first-child,
-.markdown table td:first-child,
-.markdown .table-wrapper table td:first-child,
-article table td:first-child,
-.theme-doc-markdown table td:first-child,
-.theme-doc-markdown.markdown table td:first-child,
-main table td:first-child {
-  font-weight: 600 !important;
-  color: var(--ifm-color-primary) !important;
+.theme-doc-markdown.markdown table td:first-child {
+  color: var(--ifm-font-color-base);
 }
 
-table td:not(:first-child),
-.markdown table td:not(:first-child),
-.markdown .table-wrapper table td:not(:first-child),
-article table td:not(:first-child),
-.theme-doc-markdown table td:not(:first-child),
-.theme-doc-markdown.markdown table td:not(:first-child),
-main table td:not(:first-child) {
-  font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif !important;
+.theme-doc-markdown.markdown table td:not(:first-child) {
+  font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
 }
 
 /* Responsive table styling */
 @media (max-width: 768px) {
-  table,
-  .markdown table,
-  .markdown .table-wrapper table,
-  article table,
-  .theme-doc-markdown table,
-  .theme-doc-markdown.markdown table,
-  main table {
-    font-size: 0.9rem !important;
+  .theme-doc-markdown.markdown table {
+    font-size: 0.9rem;
   }
   
-  table th,
-  .markdown table th,
-  .markdown .table-wrapper table th,
-  article table th,
-  .theme-doc-markdown table th,
   .theme-doc-markdown.markdown table th,
-  main table th,
-  table td,
-  .markdown table td,
-  .markdown .table-wrapper table td,
-  article table td,
-  .theme-doc-markdown table td,
-  .theme-doc-markdown.markdown table td,
-  main table td {
-    padding: 0.75rem 0.5rem !important;
+  .theme-doc-markdown.markdown table td {
+    padding: 0.75rem 0.5rem;
   }
 }
