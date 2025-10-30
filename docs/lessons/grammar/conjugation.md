@@ -165,6 +165,6 @@ All follow the same pattern:
 
 ## Related Lessons
 
-- [Particle Guide](../../reference/particle-guide.md) - Learn about Japanese particles
-- [Verb Conjugation Reference](../../reference/verb-conjugation.md) - Complete verb conjugation reference
+- [Particle Guide](./particle-guide) - Learn about Japanese particles
+- [Verb Conjugation Reference](./verb-conjugation) - Complete verb conjugation reference
 - [Colors Vocabulary](../vocabulary/colors.md) - Practice with adjective vocabulary

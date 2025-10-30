@@ -27,12 +27,12 @@ This site is designed to help you learn Japanese systematically, from basic hira
 ### 2. Build Your Vocabulary
 - [Colors](./lessons/vocabulary/colors.md) - Learn color vocabulary
 - [Tastes](./lessons/vocabulary/tastes.md) - Food and flavor words
-- [Grammar Particles](./lessons/vocabulary/grammar-particles.md) - Essential particles
+- [Grammar Particles](./lessons/grammar/grammar-particles) - Essential particles
 
 ### 3. Master Grammar
 - [Verb Conjugation](./lessons/grammar/conjugation.md) - Learn how to conjugate verbs
-- [Particle Guide](./reference/particle-guide.md) - Complete particle reference
-- [Verb Conjugation Reference](./reference/verb-conjugation.md) - Detailed conjugation tables
+- [Particle Guide](./lessons/grammar/particle-guide) - Complete particle reference
+- [Verb Conjugation Reference](./lessons/grammar/verb-conjugation) - Detailed conjugation tables
 
 ### 4. Practice and Review
 - [Vocabulary Page](/vocabulary) - Interactive vocabulary search and practice
