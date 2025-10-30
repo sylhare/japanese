@@ -1,4 +1,77 @@
 vocabulary:
+  - id: grammarparticles_4
+    hiragana: あなた
+    romaji: anata
+    meaning: you
+    category: grammar
+    tags:
+      - grammar-particles
+    type: pronoun
+  - id: grammarparticles_2
+    hiragana: あれ
+    romaji: are
+    meaning: that (far from both)
+    category: grammar
+    tags:
+      - grammar-particles
+    type: pronoun
+  - id: grammarparticles_0
+    hiragana: これ
+    romaji: kore
+    meaning: this (near speaker)
+    category: grammar
+    tags:
+      - grammar-particles
+    type: pronoun
+  - id: grammarparticles_0
+    hiragana: そして
+    romaji: soshite
+    meaning: and then
+    category: grammar
+    tags:
+      - grammar-particles
+    type: conjunction
+  - id: grammarparticles_1
+    hiragana: それ
+    romaji: sore
+    meaning: that (near listener)
+    category: grammar
+    tags:
+      - grammar-particles
+    type: pronoun
+  - id: grammarparticles_2
+    hiragana: だから
+    romaji: dakara
+    meaning: so, therefore
+    category: grammar
+    tags:
+      - grammar-particles
+    type: conjunction
+  - id: grammarparticles_1
+    hiragana: でも
+    romaji: demo
+    meaning: but, however
+    category: grammar
+    tags:
+      - grammar-particles
+    type: conjunction
+  - id: grammarparticles_3
+    hiragana: または
+    romaji: matawa
+    meaning: or
+    category: grammar
+    tags:
+      - grammar-particles
+    type: conjunction
+  - id: grammarparticles_3
+    hiragana: わたし
+    kanji: 私
+    romaji: watashi
+    meaning: I, me
+    category: grammar
+    tags:
+      - grammar-particles
+    type: pronoun
   - id: confusingkanji_0
     hiragana: あいだ
     kanji: 間
@@ -53,14 +126,6 @@ vocabulary:
     tags:
       - time
     type: noun
-  - id: grammarparticles_4
-    hiragana: あなた
-    romaji: anata
-    meaning: you
-    category: vocabulary
-    tags:
-      - grammar-particles
-    type: pronoun
   - id: family_5
     hiragana: あに
     kanji: 兄
@@ -88,14 +153,6 @@ vocabulary:
     tags:
       - tastes
     type: い-adjective
-  - id: grammarparticles_2
-    hiragana: あれ
-    romaji: are
-    meaning: that (far from both)
-    category: vocabulary
-    tags:
-      - grammar-particles
-    type: pronoun
   - id: confusingkanji_1
     hiragana: い
     kanji: 已
@@ -134,7 +191,7 @@ vocabulary:
     type: noun
   - id: family_6
     hiragana: いとこ
-    kanji: 従兄弟/従姉妹
+    kanji: 従兄弟
     romaji: itoko
     meaning: cousin
     category: vocabulary
@@ -269,7 +326,7 @@ vocabulary:
     type: noun
   - id: family_4
     hiragana: おじ
-    kanji: 叔父/伯父
+    kanji: 叔父
     romaji: oji
     meaning: uncle
     category: vocabulary
@@ -359,7 +416,7 @@ vocabulary:
     type: noun
   - id: family_5
     hiragana: おば
-    kanji: 叔母/伯母
+    kanji: 叔母
     romaji: oba
     meaning: aunt
     category: vocabulary
@@ -517,6 +574,24 @@ vocabulary:
     category: vocabulary
     tags:
       - time
+    type: noun
+  - id: family_0
+    hiragana: ぎりのあに
+    kanji: 義理の兄
+    romaji: giri no ani
+    meaning: brother-in-law
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_1
+    hiragana: ぎりのあね
+    kanji: 義理の姉
+    romaji: giri no ane
+    meaning: sister-in-law
+    category: vocabulary
+    tags:
+      - family
     type: noun
   - id: time_4
     hiragana: きんようび
@@ -687,14 +762,6 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: grammarparticles_0
-    hiragana: これ
-    romaji: kore
-    meaning: this (near speaker)
-    category: vocabulary
-    tags:
-      - grammar-particles
-    type: pronoun
   - id: time_0
     hiragana: こんしゅう
     kanji: 今週
@@ -811,6 +878,24 @@ vocabulary:
     tags:
       - time
     type: noun
+  - id: family_2
+    hiragana: しゅうと
+    kanji: 舅
+    romaji: shuuto
+    meaning: father-in-law (wife's father)
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_3
+    hiragana: しゅうとめ
+    kanji: 姑
+    romaji: shuutome
+    meaning: mother-in-law (wife's mother)
+    category: vocabulary
+    tags:
+      - family
+    type: noun
   - id: time_11
     hiragana: じゅうにがつ
     kanji: 十二月
@@ -900,14 +985,6 @@ vocabulary:
     tags:
       - time
     type: noun
-  - id: grammarparticles_0
-    hiragana: そして
-    romaji: soshite
-    meaning: and then
-    category: vocabulary
-    tags:
-      - grammar-particles
-    type: conjunction
   - id: family_0
     hiragana: そふ
     kanji: 祖父
@@ -926,14 +1003,6 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: grammarparticles_1
-    hiragana: それ
-    romaji: sore
-    meaning: that (near listener)
-    category: vocabulary
-    tags:
-      - grammar-particles
-    type: pronoun
   - id: confusingkanji_0
     hiragana: た
     kanji: 田
@@ -952,14 +1021,6 @@ vocabulary:
     tags:
       - colors
     type: の-adjective
-  - id: grammarparticles_2
-    hiragana: だから
-    romaji: dakara
-    meaning: so, therefore
-    category: vocabulary
-    tags:
-      - grammar-particles
-    type: conjunction
   - id: confusingkanji_1
     hiragana: たま
     kanji: 玉
@@ -1031,14 +1092,6 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: grammarparticles_1
-    hiragana: でも
-    romaji: demo
-    meaning: but, however
-    category: vocabulary
-    tags:
-      - grammar-particles
-    type: conjunction
   - id: family_3
     hiragana: どくしん
     kanji: 独身
@@ -1316,14 +1369,6 @@ vocabulary:
     tags:
       - tastes
     type: い-adjective
-  - id: grammarparticles_3
-    hiragana: または
-    romaji: matawa
-    meaning: or
-    category: vocabulary
-    tags:
-      - grammar-particles
-    type: conjunction
   - id: confusingkanji_1
     hiragana: まつ
     kanji: 末
@@ -1405,6 +1450,15 @@ vocabulary:
     tags:
       - confusing-kanji
     type: verb
+  - id: family_4
+    hiragana: むこ
+    kanji: 婿
+    romaji: muko
+    meaning: son-in-law
+    category: vocabulary
+    tags:
+      - family
+    type: noun
   - id: family_5
     hiragana: むすこ
     kanji: 息子
@@ -1488,7 +1542,7 @@ vocabulary:
     type: unknown
   - id: family_5
     hiragana: やもめ
-    kanji: 寡婦/寡夫
+    kanji: 寡婦
     romaji: yamome
     meaning: widowed
     category: vocabulary
@@ -1521,6 +1575,15 @@ vocabulary:
     category: vocabulary
     tags:
       - time
+    type: noun
+  - id: family_5
+    hiragana: よめ
+    kanji: 嫁
+    romaji: yome
+    meaning: daughter-in-law
+    category: vocabulary
+    tags:
+      - family
     type: noun
   - id: time_3
     hiragana: よる
@@ -1620,15 +1683,6 @@ vocabulary:
     tags:
       - confusing-kanji
     type: noun
-  - id: grammarparticles_3
-    hiragana: わたし
-    kanji: 私
-    romaji: watashi
-    meaning: I, me
-    category: vocabulary
-    tags:
-      - grammar-particles
-    type: pronoun
   - id: tastes_12
     hiragana: 味
     kanji: あじ
@@ -1703,6 +1757,7 @@ vocabulary:
     type: noun
 categories:
   - all
+  - grammar
   - vocabulary
 sortOptions:
   - value: hiragana
