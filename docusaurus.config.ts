@@ -100,6 +100,9 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
+    googleGtag: {
+      trackingID: 'G-YPX3TXS4S4',
+    },
     colorMode: {
       respectPrefersColorScheme: true,
     },
