@@ -14,27 +14,27 @@ Family is very important in Japanese culture. This lesson covers family members,
 Here's a visual guide to Japanese family relationships:
 
 ```
-         👴 おじいさん (grandfather)  💑  👵 おばあさん (grandmother)
-                |                               |
-                └──────────┬────────────────────┘
+    👴 おじいさん (grandfather)  💑  👵 おばあさん (grandmother)
+            |                               |
+            └───────┬───────────────────────┘
+                    |
+        👨 ちち/おとうさん (father)  💑  👩 はは/おかあさん (mother)
+                    |                  |
+                    └──────┬───────────┘
                            |
-                👨 ちち/おとうさん (father)  💑  👩 はは/おかあさん (mother)
-                           |                  |
-                           └──────┬───────────┘
-                                  |
-        ┌─────────────────────────┼─────────────────────────┐
-        |                         |                         |
-   👨‍🏫 あに/おにいさん      👤 あなた        👨‍🏫 あね/おねえさん
-   (older brother)             (you)              (older sister)
-        |                         |                         |
-        |                    💑 (marries)                   |
-        |                         |                         |
-   🎎 おとうと/おにいさん    🤵/👰 おっと/つま          🎎 いもうと/おねえさん
-   (younger brother)        (husband/wife)        (younger sister)
-                                  |
-                                  |
-                         👦 むすこ (son)
-                         👧 むすめ (daughter)
+        ┌──────────────────┼────────────┬──────────────┬──────────────┐
+        |                  |            |              |              | 
+    👤 あなた          👩‍🏫 あね        🎎 いもうと      👨‍🏫 あに        🎎 おとうと      
+      (you)        older sister   younger sister  older brother  younger brother  
+        |                      
+    💑 (marries)                                   
+        |                                               
+  🤵/👰 おっと/つま                                      
+  (husband/wife)
+        |
+        |
+  👦 むすこ (son)
+👧 むすめ (daughter)
 ```
 
 **Additional relatives:**
@@ -49,16 +49,16 @@ Here's a visual guide to Japanese family relationships:
 | | Hiragana | Kanji | Romaji | English | Type |
 |--|----------|-------|--------|---------|------|
 | 👨‍👩‍👧‍👦 | かぞく | 家族 | kazoku | family | noun |
-| 👨 | ちち | 父 | chichi | father (my) | noun |
-| 👩 | はは | 母 | haha | mother (my) | noun |
-| 👨 | おとうさん | お父さん | otousan | father (polite) | noun |
-| 👩 | おかあさん | お母さん | okaasan | mother (polite) | noun |
-| 👨 | あに | 兄 | ani | older brother (my) | noun |
-| 👩 | あね | 姉 | ane | older sister (my) | noun |
-| 👨 | おとうと | 弟 | otouto | younger brother (my) | noun |
-| 👩 | いもうと | 妹 | imouto | younger sister (my) | noun |
-| 👨 | おにいさん | お兄さん | oniisan | older brother (polite) | noun |
-| 👩 | おねえさん | お姉さん | oneesan | older sister (polite) | noun |
+| 👨 | ちち | 父 | chichi | father | noun |
+| 👩 | はは | 母 | haha | mother | noun |
+| 👨 | おとうさん | お父さん | otousan | father | noun |
+| 👩 | おかあさん | お母さん | okaasan | mother | noun |
+| 👨 | あに | 兄 | ani | older brother | noun |
+| 👩 | あね | 姉 | ane | older sister | noun |
+| 👨 | おとうと | 弟 | otouto | younger brother | noun |
+| 👩 | いもうと | 妹 | imouto | younger sister | noun |
+| 👨 | おにいさん | お兄さん | oniisan | older brother | noun |
+| 👩 | おねえさん | お姉さん | oneesan | older sister | noun |
 
 **Examples:**
 - わたしの かぞくは よにんです (watashi no kazoku wa yonin desu) - My family has four people
@@ -72,35 +72,35 @@ Here's a visual guide to Japanese family relationships:
 Here's a visual guide to extended family and in-law relationships:
 
 ```
-        👴 祖父 (grandfather)                     👴 しゅうと          👵 しゅうとめ
-                |                               (wife's father)      (wife's mother)
-    ┌────────────┴───────┐                           |                 |
-    |                       |                           |────────┬────────|
-    |                     |                           |       |         |
-    |                     |                  👨 ぎりのあに          👩 ぎりのあね
-    |                       |                 (brother-in-law)     (sister-in-law)
-👨 おじ (uncle)          💑 母 (mother)                     |                 |
-👩 おば (aunt)                 |                          └────────┬────────┘
-    |              ┌────────┴───────┬──────────────────────────┐
-    |              |                |                  👤 あなた (you) 👰 つま (wife) 💑 
-👦👧 いとこ   👨 あに              👩 あね           |
-(cousin)   (older brother)      (older sister)          |                |                          |
-                                    |
-                                                                |
-                                                        ┌───────┴──────┐
-                                                        |              |
-            👦 おい (nephew)   👧 めい (niece)         👦 むこ          👧 よめ 
-                                                    (son-in-law)   (daughter-in-law)
+        👴 祖父 (grandfather)                     
+                 |                               
+    ┌────────────┴───────┐                           
+    |                    |                        
+    |                    |                        
+    |                    |                 
+👩 おば (aunt)       💑 母 (mother)                            👴 しゅうと                       👵 しゅうとめ
+👨 おじ (uncle)           |                                 (wife's father)                  (wife's mother)
+    |                    |                                       |─────────────┬────────────────────|
+    |              ┌─────┴───────┬───────────────────┐           |             |                    |
+    |              |             |               👤 あなた  💑  👰 つま    👨 ぎりのあに          👩 ぎりのあね
+👦👧 いとこ   👨 あに          👩 あね              (you)       (wife)      (brother-in-law)     (sister-in-law)
+(cousin)   (older brother)  (older sister)                      |                              
+                   |             |                              |
+                   |             |                              |
+                   |             |                      ┌───────┴──────┐
+                   |             |                      |              |
+            👦 おい (nephew)   👧 めい (niece)        👦 むこ          👧 よめ 
+                                                   (son-in-law)   (daughter-in-law)
 ```
 
 ### Grandparents and Relatives
 
 | | Hiragana | Kanji | Romaji | English | Type |
 |--|----------|-------|--------|---------|------|
-| 👴 | そふ | 祖父 | sofu | grandfather (my) | noun |
-| 👵 | そぼ | 祖母 | sobo | grandmother (my) | noun |
-| 👴 | おじいさん | お爺さん | ojiisan | grandfather (polite) | noun |
-| 👵 | おばあさん | お婆さん | obaasan | grandmother (polite) | noun |
+| 👴 | そふ | 祖父 | sofu | grandfather | noun |
+| 👵 | そぼ | 祖母 | sobo | grandmother | noun |
+| 👴 | おじいさん | お爺さん | ojiisan | grandfather | noun |
+| 👵 | おばあさん | お婆さん | obaasan | grandmother | noun |
 | 👨 | おじ | 叔父 | oji | uncle | noun |
 | 👩 | おば | 叔母 | oba | aunt | noun |
 | 👦👧 | いとこ | 従兄弟 | itoko | cousin | noun |
@@ -129,16 +129,16 @@ Here's a visual guide to extended family and in-law relationships:
 
 | | Hiragana | Kanji | Romaji | English | Type |
 |--|----------|-------|--------|---------|------|
-| 👰 | つま | 妻 | tsuma | wife (my) | noun |
-| 🤵 | おっと | 夫 | otto | husband (my) | noun |
-| 👰 | おくさん | 奥さん | okusan | wife (polite) | noun |
-| 🤵 | ごしゅじん | ご主人 | goshujin | husband (polite) | noun |
+| 👰 | つま | 妻 | tsuma | wife | noun |
+| 🤵 | おっと | 夫 | otto | husband | noun |
+| 👰 | おくさん | 奥さん | okusan | wife | noun |
+| 🤵 | ごしゅじん | ご主人 | goshujin | husband | noun |
 | 👦👧 | こども | 子供 | kodomo | child/children | noun |
-| 👦 | むすこ | 息子 | musuko | son (my) | noun |
-| 👧 | むすめ | 娘 | musume | daughter (my) | noun |
+| 👦 | むすこ | 息子 | musuko | son | noun |
+| 👧 | むすめ | 娘 | musume | daughter | noun |
 | 👦 | ぼうや | 坊や | bouya | boy (young) | noun |
-| 👧 | おじょうさん | お嬢さん | ojou san | daughter (polite) | noun |
-| 👦 | ぼっちゃん | 坊ちゃん | bocchan | son (polite) | noun |
+| 👧 | おじょうさん | お嬢さん | ojou san | daughter | noun |
+| 👦 | ぼっちゃん | 坊ちゃん | bocchan | son | noun |
 
 **Examples:**
 - つまは にほんじんです (tsuma wa nihonjin desu) - My wife is Japanese
@@ -171,7 +171,7 @@ In Japanese, the words you use to describe family members change depending on wh
 
 ### Comparison: My Family vs. Someone Else's Family
 
-| | English | My Family (Humble Form) | Someone Else's Family (Polite Form) |
+| | English | My Family | Someone Else's Family |
 |--|---------|-------------------------|-------------------------------------|
 | 👨‍👩‍👧‍👦 | family | かぞく (kazoku) | ごかぞく (gokazoku) |
 | 👨 | father | ちち (chichi) | おとうさん (otousan) |
