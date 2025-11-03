@@ -16,18 +16,25 @@ const mainFeatures = [
     color: 'primary'
   },
   {
-    title: 'References',
-    icon: '📖',
-    description: 'Quick lookup tools',
-    link: '/docs/reference/hiragana-chart',
-    color: 'secondary'
+    title: 'Grammar',
+    icon: '📘',
+    description: 'Grammar rules & structure',
+    link: '/docs/lessons/grammar',
+    color: 'info'
   },
   {
     title: 'Vocabulary',
     icon: '📝',
     description: 'Word lists & practice',
-    link: '/docs/lessons/vocabulary/colors',
+    link: '/docs/lessons/vocabulary',
     color: 'success'
+  },
+  {
+    title: 'References',
+    icon: '📖',
+    description: 'Quick lookup tools',
+    link: '/docs/reference/hiragana-chart',
+    color: 'secondary'
   }
 ];
 

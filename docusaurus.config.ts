@@ -121,13 +121,13 @@ const config: Config = {
           position: 'left',
           label: 'Lessons',
         },
+        {to: '/vocabulary', label: 'Dictionary', position: 'left'},
         {
           type: 'doc',
           docId: 'reference/index',
           position: 'left',
           label: 'Kana',
         },
-        {to: '/vocabulary', label: 'Vocabulary', position: 'left'},
         {
           href: 'https://github.com/sylhare/japanese',
           label: 'GitHub',

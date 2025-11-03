@@ -131,4 +131,13 @@
   .theme-doc-markdown.markdown table td {
     padding: 0.75rem 0.5rem;
   }
+
+  /* Code blocks with ASCII art on mobile - prevent wrapping and enable horizontal scroll */
+  .theme-doc-markdown.markdown pre,
+  .theme-doc-markdown.markdown code {
+    white-space: pre;
+    overflow-x: auto;
+    word-wrap: normal;
+    word-break: normal;
+  }
 }
