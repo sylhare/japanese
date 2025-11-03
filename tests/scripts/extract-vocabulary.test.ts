@@ -184,6 +184,35 @@ describe('Vocabulary Extraction', () => {
       });
     });
 
+    it('should strip emojis from English translations when extracting vocabulary', () => {
+      const filePath = path.join(fixturesDir, 'emoji-columns.md');
+      const vocabulary = extractVocabularyFromFile(filePath);
+
+      const chichiItem = vocabulary.find(item => item.hiragana === 'ちち');
+      expect(chichiItem).toBeDefined();
+      expect(chichiItem?.meaning).toBe('father');
+      expect(chichiItem?.meaning).not.toContain('👨');
+      
+      const hahaItem = vocabulary.find(item => item.hiragana === 'はは');
+      expect(hahaItem).toBeDefined();
+      expect(hahaItem?.meaning).toBe('mother');
+      expect(hahaItem?.meaning).not.toContain('👩');
+      
+      const ieItem = vocabulary.find(item => item.hiragana === 'いえ');
+      expect(ieItem).toBeDefined();
+      expect(ieItem?.meaning).toBe('house');
+      expect(ieItem?.meaning).not.toContain('🏠');
+      
+      const getsuyoubiItem = vocabulary.find(item => item.hiragana === 'げつようび');
+      expect(getsuyoubiItem).toBeDefined();
+      expect(getsuyoubiItem?.meaning).toBe('Monday');
+      expect(getsuyoubiItem?.meaning).not.toContain('🌙');
+      
+      vocabulary.forEach(item => {
+        expect(item.meaning).not.toMatch(/[\u{1F300}-\u{1F9FF}]|[\u{1F600}-\u{1F64F}]|[\u{2600}-\u{26FF}]|[\u{2700}-\u{27BF}]/u);
+      });
+    });
+
     it('should correctly extract time vocabulary with emoji columns without column misalignment', () => {
       const filePath = path.join(fixturesDir, 'time-with-emojis.md');
       const vocabulary = extractVocabularyFromFile(filePath);
@@ -215,8 +244,18 @@ describe('Vocabulary Extraction', () => {
         type: 'noun'
       });
       
+      // Verify emojis are stripped from meanings
+      expect(kyouItem?.meaning).toBe('today');
+      expect(kyouItem?.meaning).not.toContain('📅');
+      
+      const kinouItem = vocabulary.find(item => item.hiragana === 'きのう');
+      expect(kinouItem?.meaning).toBe('yesterday');
+      expect(kinouItem?.meaning).not.toContain('⬅️');
+      
       vocabulary.forEach(item => {
         expect(item.hiragana).not.toMatch(/[⬅️➡️📅🌙🔥💧🌳⭐🌍☀️]/);
+        // Verify meanings don't contain emojis
+        expect(item.meaning).not.toMatch(/[\u{1F300}-\u{1F9FF}]|[\u{1F600}-\u{1F64F}]|[\u{2600}-\u{26FF}]|[\u{2700}-\u{27BF}]/u);
       });
     });
   });
