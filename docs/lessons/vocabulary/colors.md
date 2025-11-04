@@ -13,12 +13,12 @@ Learning colors is essential for describing objects and expressing preferences i
 
 ### Primary Colors
 
-| | Hiragana | Kanji | Romaji | English | Type |
-|--|----------|-------|--------|---------|------|
-| 🎨 | いろ | 色 | iro | color | noun |
-| 🔴 | あか | 赤 | aka | red | い-adjective |
-| 🔵 | あお | 青 | ao | blue | い-adjective |
-| 🟡 | きいろ | 黄色 | kiiro | yellow | い-adjective |
+| Hiragana | Kanji | Romaji | English | Type |
+|----------|-------|--------|---------|------|
+| いろ | 色 | iro | 🎨 color | noun |
+| あか | 赤 | aka | 🔴 red | い-adjective |
+| あお | 青 | ao | 🔵 blue | い-adjective |
+| きいろ | 黄色 | kiiro | 🟡 yellow | い-adjective |
 
 **Examples:**
 - あかい (akai) - red (adjective)
@@ -27,20 +27,20 @@ Learning colors is essential for describing objects and expressing preferences i
 
 ### Secondary Colors
 
-| | Hiragana | Kanji | Romaji | English | Type |
-|--|----------|-------|--------|---------|------|
-| 🟢 | みどり | 緑 | midori | green | の-adjective |
-| 🟣 | むらさき | 紫 | murasaki | purple | の-adjective |
-| 🟠 | だいだい | 橙 | daidai | orange | の-adjective |
+| Hiragana | Kanji | Romaji | English | Type |
+|----------|-------|--------|---------|------|
+| みどり | 緑 | midori | 🟢 green | の-adjective |
+| むらさき | 紫 | murasaki | 🟣 purple | の-adjective |
+| だいだい | 橙 | daidai | 🟠 orange | の-adjective |
 
 ### Neutral Colors
 
-| | Hiragana | Kanji | Romaji | English | Type |
-|--|----------|-------|--------|---------|------|
-| ⚪ | しろ | 白 | shiro | white | い-adjective |
-| ⚫ | くろ | 黒 | kuro | black | い-adjective |
-| ⬜ | はいいろ | 灰色 | haiiro | gray | の-adjective |
-| 🟤 | ちゃいろ | 茶色 | chairo | brown | の-adjective |
+| Hiragana | Kanji | Romaji | English | Type |
+|----------|-------|--------|---------|------|
+| しろ | 白 | shiro | ⚪ white | い-adjective |
+| くろ | 黒 | kuro | ⚫ black | い-adjective |
+| はいいろ | 灰色 | haiiro | ⬜ gray | の-adjective |
+| ちゃいろ | 茶色 | chairo | 🟤 brown | の-adjective |
 
 ## Color Adjectives: い-Adjectives vs の-Adjectives
 
@@ -173,11 +173,11 @@ To describe dark shades, add **こい** (koi - thick/dark) before the color.
 
 ### Traditional Colors
 
-| | Hiragana | Kanji | Romaji | English | Cultural Significance |
-|--|----------|-------|--------|---------|----------------------|
-| 🩷 | ももいろ | 桃色 | momoiro | peach color | Traditional, feminine |
-| 🟨 | やまぶきいろ | 山吹色 | yamabukiiro | golden yellow | Spring, flowers |
-| 🔴 | べにいろ | 紅 | beniiro | crimson | Traditional red |
+| Hiragana | Kanji | Romaji | English | Cultural Significance |
+|----------|-------|--------|---------|----------------------|
+| ももいろ | 桃色 | momoiro | 🩷 peach color | Traditional, feminine |
+| やまぶきいろ | 山吹色 | yamabukiiro | 🟨 golden yellow | Spring, flowers |
+| べにいろ | 紅 | beniiro | 🔴 crimson | Traditional red |
 
 ## More Usage Examples
 
