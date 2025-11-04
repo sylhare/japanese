@@ -74,25 +74,28 @@ function isParticle(type) {
 
 /**
  * Strip emoji characters from a string.
+ * Uses a whitelist approach: keep only letters (including accented), numbers, spaces, and common punctuation.
+ * Also removes leading numbers with optional spaces (e.g., "8 August" becomes "August").
  * @param {string} text - The text to strip emojis from
  * @returns {string} The text with emojis removed
  */
 function stripEmojis(text) {
   if (!text) return text;
-  // Match emoji Unicode ranges including:
-  // - Emoticons (😀-🙏) U+1F600-U+1F64F
-  // - Symbols & Pictographs (🀀-🿿) U+1F300-U+1F5FF, U+1F900-U+1F9FF
-  // - Miscellaneous Symbols (☀-⛿) U+2600-U+26FF
-  // - Dingbats (✀-➿) U+2700-U+27BF
-  // - Supplemental Symbols U+1F900-U+1F9FF, U+1FA00-U+1FAFF
-  // - Zero Width Joiner (ZWJ) U+200D
-  // - Variation Selector-16 U+FE0F
-  // - Skin tone modifiers U+1F3FB-U+1F3FF
-  // - Regional indicators U+1F1E6-U+1F1FF
-  // - Keycaps U+0023-U+0039 U+FE0F U+20E3
-  // - Number emoji U+0030-U+0039 U+FE0F U+20E3
-  // - Arrows: ⬅️➡️ U+2B05-U+2B07
-  return text.replace(/[\u{1F300}-\u{1F9FF}]|[\u{1F600}-\u{1F64F}]|[\u{1F680}-\u{1F6FF}]|[\u{2600}-\u{26FF}]|[\u{2700}-\u{27BF}]|[\u{1F900}-\u{1F9FF}]|[\u{1F1E0}-\u{1F1FF}]|[\u{200D}]|[\u{FE0F}]|[\u{1F3FB}-\u{1F3FF}]|[\u{1FA00}-\u{1FAFF}]|[\u{2B05}-\u{2B07}]|[\u{203C}]|[\u{2049}]|[\u{2122}]|[\u{2139}]|[\u{2194}-\u{2199}]|[\u{21A9}-\u{21AA}]|[\u{231A}-\u{231B}]|[\u{2328}]|[\u{23CF}]|[\u{23E9}-\u{23F3}]|[\u{23F8}-\u{23FA}]|[\u{24C2}]|[\u{25AA}-\u{25AB}]|[\u{25B6}]|[\u{25C0}]|[\u{25FB}-\u{25FE}]|[\u{2660}]|[\u{2663}]|[\u{2665}-\u{2666}]|[\u{2668}]|[\u{267B}]|[\u{267F}]|[\u{2692}-\u{2697}]|[\u{2699}]|[\u{269B}-\u{269C}]|[\u{26A0}-\u{26A1}]|[\u{26AA}-\u{26AB}]|[\u{26B0}-\u{26B1}]|[\u{26BD}-\u{26BE}]|[\u{26C4}-\u{26C5}]|[\u{26C8}]|[\u{26CE}-\u{26CF}]|[\u{26D1}]|[\u{26D3}-\u{26D4}]|[\u{26E9}-\u{26EA}]|[\u{26F0}-\u{26F5}]|[\u{26F7}-\u{26FA}]|[\u{26FD}]|[\u{2702}]|[\u{2705}]|[\u{2708}-\u{270D}]|[\u{270F}]|[\u{2712}]|[\u{2714}]|[\u{2716}]|[\u{271D}]|[\u{2721}]|[\u{2728}]|[\u{2733}-\u{2734}]|[\u{2744}]|[\u{2747}]|[\u{274C}]|[\u{274E}]|[\u{2753}-\u{2755}]|[\u{2757}]|[\u{2763}-\u{2764}]|[\u{2795}-\u{2797}]|[\u{27A1}]|[\u{27B0}]|[\u{27BF}]|[\u{2934}-\u{2935}]|[\u{2B1B}-\u{2B1C}]|[\u{2B50}]|[\u{2B55}]|[\u{3030}]|[\u{303D}]|[\u{3297}]|[\u{3299}]/gu, '').trim();
+  // Whitelist approach: keep only:
+  // - Letters (including Unicode letters for accents: à, é, ñ, etc.) - \p{L}
+  // - Numbers (0-9) - \p{N}
+  // - Spaces - \s
+  // - Common punctuation: . , - ' ( ) : ; / &
+  // Note: This removes emoji styling characters but keeps base characters (e.g., "8️⃣" -> "8")
+  // because the base digit "8" (U+0038) matches \p{N} and is kept as a valid number
+  text = text.replace(/[^\p{L}\p{N}\s.,'():;/&\-]/gu, '').trim();
+  
+  // Remove leading numbers followed by optional spaces (e.g., "8 August" -> "August")
+  // This is needed because keycap emojis like "8️⃣" have a digit base character that survives
+  // the whitelist filter (the emoji styling is removed, but the digit remains)
+  text = text.replace(/^\p{N}+(\s+)?/u, '');
+  
+  return text.trim();
 }
 
 /**
