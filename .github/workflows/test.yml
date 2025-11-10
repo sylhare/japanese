@@ -1,4 +1,4 @@
-name: Test Vocabulary Extraction and E2E
+name: Test E2E
 
 on:
   push:
