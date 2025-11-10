@@ -2,16 +2,15 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Vocabulary Type Column Visibility', () => {
   test('should hide Type column in colors article tables', async ({ page }) => {
-    await page.goto('/docs/lessons/vocabulary/colors');
+    await page.goto('/japanese/docs/lessons/vocabulary/colors');
     
     await page.waitForLoadState('networkidle');
     
-    const tables = page.locator('.theme-doc-markdown.markdown table');
+    const tables = page.locator('table');
     const tableCount = await tables.count();
     
-    if (tableCount > 0) {
-      await tables.first().waitFor({ state: 'attached', timeout: 10000 });
-    }
+    expect(tableCount).toBeGreaterThan(0);
+    await tables.first().waitFor({ state: 'attached', timeout: 10000 });
     
     for (let i = 0; i < tableCount; i++) {
       const table = tables.nth(i);
@@ -64,9 +63,9 @@ test.describe('Vocabulary Type Column Visibility', () => {
 
   test('should hide Type column in tables across multiple vocabulary articles', async ({ page }) => {
     const articles = [
-      '/docs/lessons/vocabulary/colors',
-      '/docs/lessons/vocabulary/tastes',
-      '/docs/lessons/vocabulary/family',
+      '/japanese/docs/lessons/vocabulary/colors',
+      '/japanese/docs/lessons/vocabulary/tastes',
+      '/japanese/docs/lessons/vocabulary/family',
     ];
     
     for (const articlePath of articles) {
@@ -74,12 +73,11 @@ test.describe('Vocabulary Type Column Visibility', () => {
       
       await page.waitForLoadState('networkidle');
       
-      const tables = page.locator('.theme-doc-markdown.markdown table');
+      const tables = page.locator('table');
       const tableCount = await tables.count();
       
-      if (tableCount > 0) {
-        await tables.first().waitFor({ state: 'attached', timeout: 10000 });
-      }
+      expect(tableCount).toBeGreaterThan(0);
+      await tables.first().waitFor({ state: 'attached', timeout: 10000 });
       
       for (let i = 0; i < tableCount; i++) {
         const table = tables.nth(i);
@@ -99,20 +97,16 @@ test.describe('Vocabulary Type Column Visibility', () => {
   });
 
   test('should not affect tables without Type columns', async ({ page }) => {
-    await page.goto('/docs/lessons/vocabulary/colors');
+    await page.goto('/japanese/docs/lessons/vocabulary/colors');
     
     await page.waitForLoadState('networkidle');
     
-    const tables = page.locator('.theme-doc-markdown.markdown table');
+    const tables = page.locator('table');
     const tableCount = await tables.count();
     
-    if (tableCount > 0) {
-      await tables.first().waitFor({ state: 'attached', timeout: 10000 });
-    }
+    expect(tableCount).toBeGreaterThan(0);
     
-    if (tableCount === 0) {
-      return;
-    }
+    await tables.first().waitFor({ state: 'attached', timeout: 10000 });
     
     let tablesWithoutType = 0;
     

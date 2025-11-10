@@ -113,12 +113,16 @@ test.describe('Vocabulary Search', () => {
     
     const vocabularyLink = page.getByRole('link', { name: /dictionary/i });
     
-    if (await vocabularyLink.count() > 0) {
-      await vocabularyLink.first().click();
-      await expect(page).toHaveURL(/.*vocabulary/);
-    } else {
-      await page.goto('/japanese/vocabulary');
-      await expect(page).toHaveTitle(/Vocabulary.*Japanese Lessons/);
-    }
+    await vocabularyLink.first().click();
+    await expect(page).toHaveURL(/.*vocabulary/);
+    
+    await expect(page).toHaveTitle(/Vocabulary.*Japanese Lessons/);
+    await expect(page.getByRole('heading', { name: 'Japanese Vocabulary' })).toBeVisible();
+    
+    const searchInput = page.getByPlaceholder('Search vocabulary...');
+    await expect(searchInput).toBeVisible();
+    
+    const vocabularyCards = page.locator('[class*="vocabularyCard"]');
+    await expect(vocabularyCards.first()).toBeVisible();
   });
 });
