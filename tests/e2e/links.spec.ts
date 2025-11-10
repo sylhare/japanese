@@ -1,5 +1,19 @@
 import { test, expect } from '@playwright/test';
 
+async function verifyVocabularyPageContent(page: any, expectedContent: string[]) {
+  const mainContent = page.locator('main, article, [role="main"]').first();
+  let pageContent = await mainContent.textContent();
+  
+  if (!pageContent) {
+    pageContent = await page.textContent('body');
+  }
+  
+  expect(pageContent).toBeTruthy();
+  for (const content of expectedContent) {
+    expect(pageContent).toContain(content);
+  }
+}
+
 test.describe('Vocabulary Links Navigation', () => {
   test('should navigate to vocabulary pages from sidebar', async ({ page }) => {
     await page.goto('/docs/lessons/vocabulary/colors');
@@ -13,6 +27,7 @@ test.describe('Vocabulary Links Navigation', () => {
       await familyLink.click();
       await expect(page).toHaveURL(/.*vocabulary\/family/);
       await expect(page.getByRole('heading', { name: /family/i })).toBeVisible();
+      await verifyVocabularyPageContent(page, ['father', 'mother', 'family', 'かぞく']);
     }
     
     const tastesLink = sidebar.getByRole('link', { name: /tastes/i }).first();
@@ -20,6 +35,7 @@ test.describe('Vocabulary Links Navigation', () => {
       await tastesLink.click();
       await expect(page).toHaveURL(/.*vocabulary\/tastes/);
       await expect(page.getByRole('heading', { name: /tastes|flavors/i })).toBeVisible();
+      await verifyVocabularyPageContent(page, ['sweet', 'spicy', 'delicious', 'あまい']);
     }
     
     const colorsLink = sidebar.getByRole('link', { name: /colors/i }).first();
@@ -27,6 +43,7 @@ test.describe('Vocabulary Links Navigation', () => {
       await colorsLink.click();
       await expect(page).toHaveURL(/.*vocabulary\/colors/);
       await expect(page.getByRole('heading', { name: /colors/i })).toBeVisible();
+      await verifyVocabularyPageContent(page, ['red', 'blue', 'yellow', 'あか']);
     }
   });
 
@@ -40,6 +57,7 @@ test.describe('Vocabulary Links Navigation', () => {
       await colorsLink.first().click();
       await expect(page).toHaveURL(/.*vocabulary\/colors/);
       await expect(page.getByRole('heading', { name: /colors/i })).toBeVisible();
+      await verifyVocabularyPageContent(page, ['red', 'blue', 'yellow', 'green', 'あか', 'あお']);
     }
     
     await page.goto('/docs/lessons/vocabulary/');
@@ -51,6 +69,7 @@ test.describe('Vocabulary Links Navigation', () => {
       await tastesLink.first().click();
       await expect(page).toHaveURL(/.*vocabulary\/tastes/);
       await expect(page.getByRole('heading', { name: /tastes|flavors/i })).toBeVisible();
+      await verifyVocabularyPageContent(page, ['sweet', 'spicy', 'delicious', 'あまい', 'からい']);
     }
     
     await page.goto('/docs/lessons/vocabulary/');
@@ -62,6 +81,7 @@ test.describe('Vocabulary Links Navigation', () => {
       await timeLink.first().click();
       await expect(page).toHaveURL(/.*vocabulary\/time/);
       await expect(page.getByRole('heading', { name: /time|dates/i })).toBeVisible();
+      await verifyVocabularyPageContent(page, ['Monday', 'today', 'tomorrow', 'げつようび', 'きょう']);
     }
     
     await page.goto('/docs/lessons/vocabulary/');
@@ -73,6 +93,7 @@ test.describe('Vocabulary Links Navigation', () => {
       await numbersLink.first().click();
       await expect(page).toHaveURL(/.*vocabulary\/numbers/);
       await expect(page.getByRole('heading', { name: /numbers|counting/i })).toBeVisible();
+      await verifyVocabularyPageContent(page, ['one', 'two', 'three', 'いち', 'に', 'さん']);
     }
     
     await page.goto('/docs/lessons/vocabulary/');
@@ -84,6 +105,7 @@ test.describe('Vocabulary Links Navigation', () => {
       await familyLink.first().click();
       await expect(page).toHaveURL(/.*vocabulary\/family/);
       await expect(page.getByRole('heading', { name: /family|relationships/i })).toBeVisible();
+      await verifyVocabularyPageContent(page, ['father', 'mother', 'family', 'かぞく', 'ちち']);
     }
   });
 
@@ -123,6 +145,17 @@ test.describe('Vocabulary Links Navigation', () => {
         
         if (href) {
           expect(href).toMatch(/^\/docs\/lessons/);
+          
+          await link.click();
+          await page.waitForTimeout(500);
+          await expect(page.getByRole('heading').first()).toBeVisible();
+          
+          const pageContent = await page.textContent('main, article, [role="main"]');
+          expect(pageContent).toBeTruthy();
+          expect(pageContent).toMatch(/Hiragana|Kanji|Romaji|English|Type|あ|い|う|え|お/i);
+          
+          await page.goto('/docs/lessons/vocabulary/');
+          await page.waitForTimeout(1000);
         }
       }
     }
@@ -142,6 +175,7 @@ test.describe('Vocabulary Links Navigation', () => {
       await numbersSidebarLink.click();
       await expect(page).toHaveURL(/.*vocabulary\/numbers/);
       await expect(page.getByRole('heading', { name: /numbers|counting/i })).toBeVisible();
+      await verifyVocabularyPageContent(page, ['one', 'two', 'three', 'いち', 'に', 'さん']);
     }
     
     const timeSidebarLink = sidebar.getByRole('link', { name: /time/i }).first();
@@ -149,6 +183,7 @@ test.describe('Vocabulary Links Navigation', () => {
       await timeSidebarLink.click();
       await expect(page).toHaveURL(/.*vocabulary\/time/);
       await expect(page.getByRole('heading', { name: /time|dates/i })).toBeVisible();
+      await verifyVocabularyPageContent(page, ['Monday', 'today', 'tomorrow', 'げつようび', 'きょう']);
     }
   });
 });
