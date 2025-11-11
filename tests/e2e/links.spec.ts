@@ -1,12 +1,5 @@
 import { test, expect } from '@playwright/test';
-
-async function verifyPageIsFound(page: any) {
-  await page.waitForLoadState('networkidle');
-  const pageContent = await page.textContent('body');
-  expect(pageContent).not.toContain('Page Not Found');
-  const article = page.locator('article').first();
-  await expect(article).toBeVisible();
-}
+import { verifyPageIsFound } from './helpers/pageHelper';
 
 test.describe('Vocabulary Sidebar Links', () => {
   test('should navigate to Colors from sidebar', async ({ page }) => {

@@ -1,63 +1,25 @@
 import { test, expect } from '@playwright/test';
+import { 
+  waitForTables, 
+  findTypeColumnIndex, 
+  findTablesWithTypeColumn, 
+  verifyColumnIsHidden 
+} from './helpers/tableHelper';
 
 test.describe('Vocabulary Type Column Visibility', () => {
   test('should hide Type column in colors article tables', async ({ page }) => {
     await page.goto('./docs/lessons/vocabulary/colors');
+    const tables = await waitForTables(page);
     
-    await page.waitForLoadState('networkidle');
+    expect(await tables.count()).toBeGreaterThan(0);
     
-    const tables = page.locator('table');
-    const tableCount = await tables.count();
+    const tableIndicesWithType = await findTablesWithTypeColumn(tables);
+    expect(tableIndicesWithType.length).toBeGreaterThan(0);
     
-    expect(tableCount).toBeGreaterThan(0);
-    await tables.first().waitFor({ state: 'attached', timeout: 10000 });
-    
-    for (let i = 0; i < tableCount; i++) {
-      const table = tables.nth(i);
-      const typeHeader = table.locator('th').filter({ hasText: /^Type$/i });
-      const typeHeaderCount = await typeHeader.count();
-      
-      if (typeHeaderCount > 0) {
-        await expect(typeHeader.first()).toBeHidden();
-        
-        const headerStyle = await typeHeader.first().evaluate((el) => {
-          return window.getComputedStyle(el).display;
-        });
-        expect(headerStyle).toBe('none');
-        
-        const allRows = table.locator('tr');
-        const rowCount = await allRows.count();
-        
-        const headers = table.locator('thead tr th, tr:first-child th');
-        let typeColumnIndex = -1;
-        const headerCount = await headers.count();
-        
-        for (let j = 0; j < headerCount; j++) {
-          const headerText = await headers.nth(j).textContent();
-          if (headerText?.trim().toLowerCase() === 'type') {
-            typeColumnIndex = j;
-            break;
-          }
-        }
-        
-        if (typeColumnIndex !== -1) {
-          for (let rowIndex = 1; rowIndex < rowCount; rowIndex++) {
-            const row = allRows.nth(rowIndex);
-            const cells = row.locator('td, th');
-            const cell = cells.nth(typeColumnIndex);
-            
-            const cellCount = await cell.count();
-            if (cellCount > 0) {
-              await expect(cell).toBeHidden();
-              
-              const cellStyle = await cell.evaluate((el) => {
-                return window.getComputedStyle(el).display;
-              });
-              expect(cellStyle).toBe('none');
-            }
-          }
-        }
-      }
+    for (const tableIndex of tableIndicesWithType) {
+      const table = tables.nth(tableIndex);
+      const typeColumnIndex = await findTypeColumnIndex(table);
+      await verifyColumnIsHidden(table, typeColumnIndex);
     }
   });
 
@@ -70,64 +32,54 @@ test.describe('Vocabulary Type Column Visibility', () => {
     
     for (const articlePath of articles) {
       await page.goto(articlePath);
+      const tables = await waitForTables(page);
       
-      await page.waitForLoadState('networkidle');
+      expect(await tables.count()).toBeGreaterThan(0);
       
-      const tables = page.locator('table');
-      const tableCount = await tables.count();
+      const tableIndicesWithType = await findTablesWithTypeColumn(tables);
+      expect(tableIndicesWithType.length).toBeGreaterThan(0);
       
-      expect(tableCount).toBeGreaterThan(0);
-      await tables.first().waitFor({ state: 'attached', timeout: 10000 });
-      
-      for (let i = 0; i < tableCount; i++) {
-        const table = tables.nth(i);
-        const typeHeader = table.locator('th').filter({ hasText: /^Type$/i });
-        const typeHeaderCount = await typeHeader.count();
+      for (const tableIndex of tableIndicesWithType) {
+        const table = tables.nth(tableIndex);
+        const typeColumnIndex = await findTypeColumnIndex(table);
         
-        if (typeHeaderCount > 0) {
-          await expect(typeHeader.first()).toBeHidden();
-          
-          const headerStyle = await typeHeader.first().evaluate((el) => {
-            return window.getComputedStyle(el).display;
-          });
-          expect(headerStyle).toBe('none');
-        }
+        const headers = table.locator('thead tr th, tr:first-child th');
+        const typeHeader = headers.nth(typeColumnIndex);
+        await expect(typeHeader).toBeHidden();
+        
+        const headerDisplay = await typeHeader.evaluate((el) => window.getComputedStyle(el).display);
+        expect(headerDisplay).toBe('none');
       }
     }
   });
 
   test('should not affect tables without Type columns', async ({ page }) => {
     await page.goto('./docs/lessons/vocabulary/colors');
+    const tables = await waitForTables(page);
     
-    await page.waitForLoadState('networkidle');
+    expect(await tables.count()).toBeGreaterThan(0);
     
-    const tables = page.locator('table');
     const tableCount = await tables.count();
-    
-    expect(tableCount).toBeGreaterThan(0);
-    
-    await tables.first().waitFor({ state: 'attached', timeout: 10000 });
-    
-    let tablesWithoutType = 0;
+    const tablesWithoutType: number[] = [];
     
     for (let i = 0; i < tableCount; i++) {
       const table = tables.nth(i);
-      const typeHeader = table.locator('th').filter({ hasText: /^Type$/i });
-      const typeHeaderCount = await typeHeader.count();
+      const typeColumnIndex = await findTypeColumnIndex(table);
       
-      if (typeHeaderCount === 0) {
-        tablesWithoutType++;
-        await expect(table).toBeVisible();
-        
-        const headers = table.locator('thead tr th, tr:first-child th');
-        const headerCount = await headers.count();
-        expect(headerCount).toBeGreaterThan(0);
-        
-        const firstHeader = headers.first();
-        await expect(firstHeader).toBeVisible();
+      if (typeColumnIndex === -1) {
+        tablesWithoutType.push(i);
       }
     }
     
-    expect(tablesWithoutType).toBeGreaterThan(0);
+    expect(tablesWithoutType.length).toBeGreaterThan(0);
+    
+    for (const tableIndex of tablesWithoutType) {
+      const table = tables.nth(tableIndex);
+      await expect(table).toBeVisible();
+      
+      const headers = table.locator('thead tr th, tr:first-child th');
+      expect(await headers.count()).toBeGreaterThan(0);
+      await expect(headers.first()).toBeVisible();
+    }
   });
 });
