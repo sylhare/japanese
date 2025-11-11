@@ -55,12 +55,10 @@ export async function verifyColumnIsHidden(table: Locator, columnIndex: number) 
   const headers = table.locator('thead tr th, tr:first-child th');
   const typeHeader = headers.nth(columnIndex);
   
-  // Check header is hidden
   await expect(typeHeader).toBeHidden();
   const headerDisplay = await typeHeader.evaluate((el) => window.getComputedStyle(el).display);
   expect(headerDisplay).toBe('none');
   
-  // Check all cells in that column are hidden
   const allRows = table.locator('tr');
   const rowCount = await allRows.count();
   
