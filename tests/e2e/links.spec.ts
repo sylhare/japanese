@@ -10,7 +10,7 @@ async function verifyPageIsFound(page: any) {
 
 test.describe('Vocabulary Sidebar Links', () => {
   test('should navigate to Colors from sidebar', async ({ page }) => {
-    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.goto('./docs/lessons/vocabulary/');
     await page.waitForLoadState('networkidle');
     
     const colorsLink = page.locator('a.menu__link[href$="/vocabulary/colors"]').first();
@@ -21,7 +21,7 @@ test.describe('Vocabulary Sidebar Links', () => {
   });
 
   test('should navigate to Tastes from sidebar', async ({ page }) => {
-    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.goto('./docs/lessons/vocabulary/');
     await page.waitForLoadState('networkidle');
     
     const tastesLink = page.locator('a.menu__link[href$="/vocabulary/tastes"]').first();
@@ -32,7 +32,7 @@ test.describe('Vocabulary Sidebar Links', () => {
   });
 
   test('should navigate to Time from sidebar', async ({ page }) => {
-    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.goto('./docs/lessons/vocabulary/');
     await page.waitForLoadState('networkidle');
     
     const timeLink = page.locator('a.menu__link[href$="/vocabulary/time"]').first();
@@ -43,7 +43,7 @@ test.describe('Vocabulary Sidebar Links', () => {
   });
 
   test('should navigate to Numbers from sidebar', async ({ page }) => {
-    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.goto('./docs/lessons/vocabulary/');
     await page.waitForLoadState('networkidle');
     
     const numbersLink = page.locator('a.menu__link[href$="/vocabulary/numbers"]').first();
@@ -54,7 +54,7 @@ test.describe('Vocabulary Sidebar Links', () => {
   });
 
   test('should navigate to Family from sidebar', async ({ page }) => {
-    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.goto('./docs/lessons/vocabulary/');
     await page.waitForLoadState('networkidle');
     
     const familyLink = page.locator('a.menu__link[href$="/vocabulary/family"]').first();
@@ -65,7 +65,7 @@ test.describe('Vocabulary Sidebar Links', () => {
   });
 
   test('should navigate to Confusing Kanji from sidebar', async ({ page }) => {
-    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.goto('./docs/lessons/vocabulary/');
     await page.waitForLoadState('networkidle');
     
     const kanjiLink = page.locator('a.menu__link[href$="/vocabulary/confusing-kanji"]').first();
@@ -78,7 +78,7 @@ test.describe('Vocabulary Sidebar Links', () => {
 
 test.describe('Vocabulary Landing Page Links (LessonList)', () => {
   test('should navigate to Colors from landing page', async ({ page }) => {
-    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.goto('./docs/lessons/vocabulary/');
     await page.waitForLoadState('networkidle');
     
     const colorsCard = page.locator('a[class*="lessonCard"][href$="/vocabulary/colors"]').first();
@@ -89,7 +89,7 @@ test.describe('Vocabulary Landing Page Links (LessonList)', () => {
   });
 
   test('should navigate to Tastes from landing page', async ({ page }) => {
-    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.goto('./docs/lessons/vocabulary/');
     await page.waitForLoadState('networkidle');
     
     const tastesCard = page.locator('a[class*="lessonCard"][href$="/vocabulary/tastes"]').first();
@@ -100,7 +100,7 @@ test.describe('Vocabulary Landing Page Links (LessonList)', () => {
   });
 
   test('should navigate to Time from landing page', async ({ page }) => {
-    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.goto('./docs/lessons/vocabulary/');
     await page.waitForLoadState('networkidle');
     
     const timeCard = page.locator('a[class*="lessonCard"][href$="/vocabulary/time"]').first();
@@ -111,7 +111,7 @@ test.describe('Vocabulary Landing Page Links (LessonList)', () => {
   });
 
   test('should navigate to Numbers from landing page', async ({ page }) => {
-    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.goto('./docs/lessons/vocabulary/');
     await page.waitForLoadState('networkidle');
     
     const numbersCard = page.locator('a[class*="lessonCard"][href$="/vocabulary/numbers"]').first();
@@ -122,7 +122,7 @@ test.describe('Vocabulary Landing Page Links (LessonList)', () => {
   });
 
   test('should navigate to Family from landing page', async ({ page }) => {
-    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.goto('./docs/lessons/vocabulary/');
     await page.waitForLoadState('networkidle');
     
     const familyCard = page.locator('a[class*="lessonCard"][href$="/vocabulary/family"]').first();
@@ -133,7 +133,7 @@ test.describe('Vocabulary Landing Page Links (LessonList)', () => {
   });
 
   test('should navigate to Confusing Kanji from landing page', async ({ page }) => {
-    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.goto('./docs/lessons/vocabulary/');
     await page.waitForLoadState('networkidle');
     
     const kanjiCard = page.locator('a[class*="lessonCard"][href$="/vocabulary/confusing-kanji"]').first();
@@ -146,7 +146,7 @@ test.describe('Vocabulary Landing Page Links (LessonList)', () => {
 
 test.describe('Vocabulary Search Page', () => {
   test('should display Japanese Vocabulary heading', async ({ page }) => {
-    await page.goto('/japanese/vocabulary');
+    await page.goto('./vocabulary');
     await page.waitForLoadState('networkidle');
     await page.waitForSelector('h1');
     
@@ -155,7 +155,7 @@ test.describe('Vocabulary Search Page', () => {
   });
 
   test('should navigate to Colors from tag', async ({ page }) => {
-    await page.goto('/japanese/vocabulary');
+    await page.goto('./vocabulary');
     await page.waitForLoadState('networkidle');
     await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
     
@@ -167,7 +167,7 @@ test.describe('Vocabulary Search Page', () => {
   });
 
   test('should navigate to Family from tag', async ({ page }) => {
-    await page.goto('/japanese/vocabulary');
+    await page.goto('./vocabulary');
     await page.waitForLoadState('networkidle');
     await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
     
@@ -179,7 +179,7 @@ test.describe('Vocabulary Search Page', () => {
   });
 
   test('should navigate to Tastes from tag', async ({ page }) => {
-    await page.goto('/japanese/vocabulary');
+    await page.goto('./vocabulary');
     await page.waitForLoadState('networkidle');
     await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
     
@@ -191,7 +191,7 @@ test.describe('Vocabulary Search Page', () => {
   });
 
   test('should navigate to Time from tag', async ({ page }) => {
-    await page.goto('/japanese/vocabulary');
+    await page.goto('./vocabulary');
     await page.waitForLoadState('networkidle');
     await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
     
@@ -203,7 +203,7 @@ test.describe('Vocabulary Search Page', () => {
   });
 
   test('should navigate to Numbers from tag', async ({ page }) => {
-    await page.goto('/japanese/vocabulary');
+    await page.goto('./vocabulary');
     await page.waitForLoadState('networkidle');
     await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
     
@@ -217,7 +217,7 @@ test.describe('Vocabulary Search Page', () => {
 
 test.describe('Link Validation', () => {
   test('should have valid href attributes for all vocabulary sidebar links', async ({ page }) => {
-    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.goto('./docs/lessons/vocabulary/');
     await page.waitForLoadState('networkidle');
     
     const vocabularyLinks = page.locator('a.menu__link[href$="/vocabulary/"]');
@@ -234,7 +234,7 @@ test.describe('Link Validation', () => {
   });
 
   test('should have valid href attributes for all vocabulary card links', async ({ page }) => {
-    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.goto('./docs/lessons/vocabulary/');
     await page.waitForLoadState('networkidle');
     
     const cardLinks = page.locator('a[class*="lessonCard"]');
@@ -256,7 +256,7 @@ test.describe('Link Validation', () => {
 test.describe('Expected Failures', () => {
   test('should fail when navigating to non-existent page', async ({ page }) => {
     test.fail();
-    await page.goto('/japanese/docs/lessons/vocabulary/this-page-does-not-exist');
+    await page.goto('./docs/lessons/vocabulary/this-page-does-not-exist');
     await verifyPageIsFound(page);
   });
 });

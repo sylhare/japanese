@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Vocabulary Search', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/japanese/vocabulary');
+    await page.goto('./vocabulary');
   });
 
   test('should display vocabulary page with search functionality', async ({ page }) => {

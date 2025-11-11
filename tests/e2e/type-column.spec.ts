@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Vocabulary Type Column Visibility', () => {
   test('should hide Type column in colors article tables', async ({ page }) => {
-    await page.goto('/japanese/docs/lessons/vocabulary/colors');
+    await page.goto('./docs/lessons/vocabulary/colors');
     
     await page.waitForLoadState('networkidle');
     
@@ -97,7 +97,7 @@ test.describe('Vocabulary Type Column Visibility', () => {
   });
 
   test('should not affect tables without Type columns', async ({ page }) => {
-    await page.goto('/japanese/docs/lessons/vocabulary/colors');
+    await page.goto('./docs/lessons/vocabulary/colors');
     
     await page.waitForLoadState('networkidle');
     
