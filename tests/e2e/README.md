@@ -24,18 +24,6 @@ npm run test:e2e:headed
 npm run test:e2e:debug
 ```
 
-## Test Structure
-
-- `vocabulary-search.spec.ts` - Tests for the vocabulary search functionality
-  - Basic page loading and display
-  - Search by English meaning
-  - Search by hiragana
-  - Search by romaji
-  - Category filtering
-  - Sorting options
-  - No results handling
-  - Vocabulary card structure validation
-
 ## Prerequisites
 
 Before running the tests, make sure:
@@ -49,7 +37,7 @@ Before running the tests, make sure:
 The tests are configured in `playwright.config.ts` in the project root. The configuration includes:
 
 - Test directory: `./tests/e2e`
-- Base URL: `http://localhost:3000`
+- Base URL: `http://localhost:3000/japanese`
 - Browser support: Chrome, Firefox, Safari
 - Automatic dev server startup
 - Retry logic for CI environments

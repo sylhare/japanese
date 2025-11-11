@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import Layout from '@theme/Layout';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import styles from './vocabulary.module.css';
+import styles from './dictionary.module.css';
 import vocabularyYamlData from '../data/vocabulary.yaml';
 
 interface VocabularyItem {
@@ -188,3 +188,4 @@ export default function Vocabulary(): React.JSX.Element {
     </Layout>
   );
 }
+

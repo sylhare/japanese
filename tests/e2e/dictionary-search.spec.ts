@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('Vocabulary Search', () => {
+test.describe('Dictionary Search', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('./vocabulary');
+    await page.goto('./dictionary');
   });
 
   test('should display vocabulary page with search functionality', async ({ page }) => {
@@ -28,7 +28,7 @@ test.describe('Vocabulary Search', () => {
     const vocabularyCards = page.locator('[class*="vocabularyCard"]');
     await expect(vocabularyCards.first()).toBeVisible();
     
-    await expect(page.locator('.meaning_jmVK').filter({ hasText: 'red' }).first()).toBeVisible();
+    await expect(page.locator('[class*="meaning"]').filter({ hasText: 'red' }).first()).toBeVisible();
   });
 
   test('should search for vocabulary by hiragana', async ({ page }) => {
@@ -42,7 +42,7 @@ test.describe('Vocabulary Search', () => {
     const vocabularyCards = page.locator('[class*="vocabularyCard"]');
     await expect(vocabularyCards.first()).toBeVisible();
     
-    await expect(page.locator('.hiragana_naZi').filter({ hasText: 'あか' }).first()).toBeVisible();
+    await expect(page.locator('[class*="hiragana"]').filter({ hasText: 'あか' }).first()).toBeVisible();
   });
 
   test('should search for vocabulary by romaji', async ({ page }) => {
@@ -56,7 +56,7 @@ test.describe('Vocabulary Search', () => {
     const vocabularyCards = page.locator('[class*="vocabularyCard"]');
     await expect(vocabularyCards.first()).toBeVisible();
     
-    await expect(page.locator('.romaji_JbdT').filter({ hasText: 'aka' }).first()).toBeVisible();
+    await expect(page.locator('[class*="romaji"]').filter({ hasText: 'aka' }).first()).toBeVisible();
   });
 
   test('should filter vocabulary by category', async ({ page }) => {
@@ -108,13 +108,13 @@ test.describe('Vocabulary Search', () => {
     await expect(firstCard.locator('[class*="meaning"]')).toBeVisible();
   });
 
-  test('should navigate to vocabulary page from home page', async ({ page }) => {
+  test('should navigate to dictionary page from home page', async ({ page }) => {
     await page.goto('/');
     
-    const vocabularyLink = page.getByRole('link', { name: /dictionary/i });
+    const dictionaryLink = page.getByRole('link', { name: /dictionary/i });
     
-    await vocabularyLink.first().click();
-    await expect(page).toHaveURL(/.*vocabulary/);
+    await dictionaryLink.first().click();
+    await expect(page).toHaveURL(/.*dictionary/);
     
     await expect(page).toHaveTitle(/Vocabulary.*Japanese Lessons/);
     await expect(page.getByRole('heading', { name: 'Japanese Vocabulary' })).toBeVisible();
@@ -126,3 +126,4 @@ test.describe('Vocabulary Search', () => {
     await expect(vocabularyCards.first()).toBeVisible();
   });
 });
+
