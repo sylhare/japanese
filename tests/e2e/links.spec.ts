@@ -8,134 +8,255 @@ async function verifyPageIsFound(page: any) {
   await expect(article).toBeVisible();
 }
 
-test.describe('Vocabulary Links Navigation', () => {
-  test('should navigate to vocabulary pages from sidebar', async ({ page }) => {
-    await page.goto('/docs/lessons/vocabulary/colors');
+test.describe('Vocabulary Sidebar Links', () => {
+  test('should navigate to Colors from sidebar', async ({ page }) => {
+    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.waitForLoadState('networkidle');
     
-    const sidebar = page.locator('nav').first();
-    await expect(sidebar).toBeVisible();
-    
-    const familyLink = sidebar.getByRole('link', { name: /family/i }).first();
-    await familyLink.click();
-    await verifyPageIsFound(page);
-    await expect(page.getByRole('heading', { name: /family/i })).toBeVisible();
-    
-    const tastesLink = sidebar.getByRole('link', { name: /tastes/i }).first();
-    await tastesLink.click();
-    await verifyPageIsFound(page);
-    await expect(page.getByRole('heading', { name: /tastes|flavors/i })).toBeVisible();
-    
-    const colorsLink = sidebar.getByRole('link', { name: /colors/i }).first();
+    const colorsLink = page.locator('a.menu__link[href$="/vocabulary/colors"]').first();
+    await expect(colorsLink).toBeVisible();
     await colorsLink.click();
     await verifyPageIsFound(page);
-    await expect(page.getByRole('heading', { name: /colors/i })).toBeVisible();
+    await expect(page.getByRole('heading', { name: /colors/i }).first()).toBeVisible();
   });
 
-  test('should navigate to vocabulary pages from vocabulary landing page (LessonList)', async ({ page }) => {
-    await page.goto('/docs/lessons/vocabulary/');
-    await page.waitForTimeout(1000);
+  test('should navigate to Tastes from sidebar', async ({ page }) => {
+    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.waitForLoadState('networkidle');
     
-    const colorsLink = page.getByRole('link', { name: /Colors/i }).filter({ hasText: /Colors/i });
-      await expect(colorsLink.first()).toBeVisible();
-      await colorsLink.first().click();
-      await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /colors/i })).toBeVisible();
-
-    
-    await page.goto('/docs/lessons/vocabulary/');
-    await page.waitForTimeout(1000);
-    
-    const tastesLink = page.getByRole('link', { name: /Tastes/i }).filter({ hasText: /Tastes/i });
-      await expect(tastesLink.first()).toBeVisible();
-      await tastesLink.first().click();
-      await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /tastes|flavors/i })).toBeVisible();
-    
-    await page.goto('/docs/lessons/vocabulary/');
-    await page.waitForTimeout(1000);
-    
-    const timeLink = page.getByRole('link').filter({ hasText: /Time and Dates/i });
-    await expect(timeLink.first()).toBeVisible();
-    await timeLink.first().click();
+    const tastesLink = page.locator('a.menu__link[href$="/vocabulary/tastes"]').first();
+    await expect(tastesLink).toBeVisible();
+    await tastesLink.click();
     await verifyPageIsFound(page);
-    await expect(page.getByRole('heading', { name: /time|dates/i })).toBeVisible();
-    
-    await page.goto('/docs/lessons/vocabulary/');
-    await page.waitForTimeout(1000);
-    
-    const numbersLink = page.getByRole('link').filter({ hasText: /Numbers and Counting/i });
-      await expect(numbersLink.first()).toBeVisible();
-      await numbersLink.first().click();
-      await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /numbers|counting/i })).toBeVisible();
-    
-    await page.goto('/docs/lessons/vocabulary/');
-    await page.waitForTimeout(1000);
-    
-    const familyLink = page.getByRole('link').filter({ hasText: /Family and Relationships/i });
-      await expect(familyLink.first()).toBeVisible();
-      await familyLink.first().click();
-      await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /family|relationships/i })).toBeVisible();
+    await expect(page.getByRole('heading', { name: /tastes|flavors/i }).first()).toBeVisible();
   });
 
-  test('should navigate to vocabulary pages from vocabulary search page tags', async ({ page }) => {
-    await page.goto('/vocabulary');
+  test('should navigate to Time from sidebar', async ({ page }) => {
+    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.waitForLoadState('networkidle');
     
-    const heading = page.getByRole('heading', { name: 'Japanese Vocabulary' });
-      await expect(heading).toBeVisible({ timeout: 10000 });
-    
-    const tagLinks = page.locator('[class*="tag"]').filter({ hasText: /colors|family|tastes|time|numbers/i });
-    const firstTagLink = tagLinks.first();
-    await firstTagLink.click();
+    const timeLink = page.locator('a.menu__link[href$="/vocabulary/time"]').first();
+    await expect(timeLink).toBeVisible();
+    await timeLink.click();
     await verifyPageIsFound(page);
-    await expect(page.getByRole('heading').first()).toBeVisible();
+    await expect(page.getByRole('heading', { name: /time|dates/i }).first()).toBeVisible();
   });
 
-  test('should have working links for all vocabulary pages listed in landing page', async ({ page }) => {
-    await page.goto('/docs/lessons/vocabulary/');
-    await page.waitForTimeout(1000);
+  test('should navigate to Numbers from sidebar', async ({ page }) => {
+    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.waitForLoadState('networkidle');
     
-    const lessonLinks = page.getByRole('link').filter({ hasText: /Colors|Tastes|Time|Numbers|Family|Confusing Kanji/i });
-    const linkCount = await lessonLinks.count();
+    const numbersLink = page.locator('a.menu__link[href$="/vocabulary/numbers"]').first();
+    await expect(numbersLink).toBeVisible();
+    await numbersLink.click();
+    await verifyPageIsFound(page);
+    await expect(page.getByRole('heading', { name: /numbers|counting/i }).first()).toBeVisible();
+  });
+
+  test('should navigate to Family from sidebar', async ({ page }) => {
+    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.waitForLoadState('networkidle');
     
-    for (let i = 0; i < Math.min(linkCount, 5); i++) {
-      const link = lessonLinks.nth(i);
+    const familyLink = page.locator('a.menu__link[href$="/vocabulary/family"]').first();
+    await expect(familyLink).toBeVisible();
+    await familyLink.click();
+    await verifyPageIsFound(page);
+    await expect(page.getByRole('heading', { name: /family|relationships/i }).first()).toBeVisible();
+  });
+
+  test('should navigate to Confusing Kanji from sidebar', async ({ page }) => {
+    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.waitForLoadState('networkidle');
+    
+    const kanjiLink = page.locator('a.menu__link[href$="/vocabulary/confusing-kanji"]').first();
+    await expect(kanjiLink).toBeVisible();
+    await kanjiLink.click();
+    await verifyPageIsFound(page);
+    await expect(page.getByRole('heading', { name: /confusing kanji/i }).first()).toBeVisible();
+  });
+});
+
+test.describe('Vocabulary Landing Page Links (LessonList)', () => {
+  test('should navigate to Colors from landing page', async ({ page }) => {
+    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.waitForLoadState('networkidle');
+    
+    const colorsCard = page.locator('a[class*="lessonCard"][href$="/vocabulary/colors"]').first();
+    await expect(colorsCard).toBeVisible();
+    await colorsCard.click();
+    await verifyPageIsFound(page);
+    await expect(page.getByRole('heading', { name: /colors/i }).first()).toBeVisible();
+  });
+
+  test('should navigate to Tastes from landing page', async ({ page }) => {
+    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.waitForLoadState('networkidle');
+    
+    const tastesCard = page.locator('a[class*="lessonCard"][href$="/vocabulary/tastes"]').first();
+    await expect(tastesCard).toBeVisible();
+    await tastesCard.click();
+    await verifyPageIsFound(page);
+    await expect(page.getByRole('heading', { name: /tastes|flavors/i }).first()).toBeVisible();
+  });
+
+  test('should navigate to Time from landing page', async ({ page }) => {
+    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.waitForLoadState('networkidle');
+    
+    const timeCard = page.locator('a[class*="lessonCard"][href$="/vocabulary/time"]').first();
+    await expect(timeCard).toBeVisible();
+    await timeCard.click();
+    await verifyPageIsFound(page);
+    await expect(page.getByRole('heading', { name: /time|dates/i }).first()).toBeVisible();
+  });
+
+  test('should navigate to Numbers from landing page', async ({ page }) => {
+    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.waitForLoadState('networkidle');
+    
+    const numbersCard = page.locator('a[class*="lessonCard"][href$="/vocabulary/numbers"]').first();
+    await expect(numbersCard).toBeVisible();
+    await numbersCard.click();
+    await verifyPageIsFound(page);
+    await expect(page.getByRole('heading', { name: /numbers|counting/i }).first()).toBeVisible();
+  });
+
+  test('should navigate to Family from landing page', async ({ page }) => {
+    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.waitForLoadState('networkidle');
+    
+    const familyCard = page.locator('a[class*="lessonCard"][href$="/vocabulary/family"]').first();
+    await expect(familyCard).toBeVisible();
+    await familyCard.click();
+    await verifyPageIsFound(page);
+    await expect(page.getByRole('heading', { name: /family|relationships/i }).first()).toBeVisible();
+  });
+
+  test('should navigate to Confusing Kanji from landing page', async ({ page }) => {
+    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.waitForLoadState('networkidle');
+    
+    const kanjiCard = page.locator('a[class*="lessonCard"][href$="/vocabulary/confusing-kanji"]').first();
+    await expect(kanjiCard).toBeVisible();
+    await kanjiCard.click();
+    await verifyPageIsFound(page);
+    await expect(page.getByRole('heading', { name: /confusing kanji/i }).first()).toBeVisible();
+  });
+});
+
+test.describe('Vocabulary Search Page', () => {
+  test('should display Japanese Vocabulary heading', async ({ page }) => {
+    await page.goto('/japanese/vocabulary');
+    await page.waitForLoadState('networkidle');
+    await page.waitForSelector('h1');
+    
+    const heading = page.locator('h1').filter({ hasText: 'Japanese Vocabulary' });
+    await expect(heading).toBeVisible({ timeout: 10000 });
+  });
+
+  test('should navigate to Colors from tag', async ({ page }) => {
+    await page.goto('/japanese/vocabulary');
+    await page.waitForLoadState('networkidle');
+    await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
+    
+    const colorsTag = page.locator('a[class*="tag"][href$="/vocabulary/colors"]').first();
+    await expect(colorsTag).toBeVisible({ timeout: 10000 });
+    await colorsTag.click();
+    await verifyPageIsFound(page);
+    await expect(page.getByRole('heading', { name: /colors/i }).first()).toBeVisible();
+  });
+
+  test('should navigate to Family from tag', async ({ page }) => {
+    await page.goto('/japanese/vocabulary');
+    await page.waitForLoadState('networkidle');
+    await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
+    
+    const familyTag = page.locator('a[class*="tag"][href$="/vocabulary/family"]').first();
+    await expect(familyTag).toBeVisible({ timeout: 10000 });
+    await familyTag.click();
+    await verifyPageIsFound(page);
+    await expect(page.getByRole('heading', { name: /family/i }).first()).toBeVisible();
+  });
+
+  test('should navigate to Tastes from tag', async ({ page }) => {
+    await page.goto('/japanese/vocabulary');
+    await page.waitForLoadState('networkidle');
+    await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
+    
+    const tastesTag = page.locator('a[class*="tag"][href$="/vocabulary/tastes"]').first();
+    await expect(tastesTag).toBeVisible({ timeout: 10000 });
+    await tastesTag.click();
+    await verifyPageIsFound(page);
+    await expect(page.getByRole('heading', { name: /tastes/i }).first()).toBeVisible();
+  });
+
+  test('should navigate to Time from tag', async ({ page }) => {
+    await page.goto('/japanese/vocabulary');
+    await page.waitForLoadState('networkidle');
+    await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
+    
+    const timeTag = page.locator('a[class*="tag"][href$="/vocabulary/time"]').first();
+    await expect(timeTag).toBeVisible({ timeout: 10000 });
+    await timeTag.click();
+    await verifyPageIsFound(page);
+    await expect(page.getByRole('heading', { name: /time/i }).first()).toBeVisible();
+  });
+
+  test('should navigate to Numbers from tag', async ({ page }) => {
+    await page.goto('/japanese/vocabulary');
+    await page.waitForLoadState('networkidle');
+    await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
+    
+    const numbersTag = page.locator('a[class*="tag"][href$="/vocabulary/numbers"]').first();
+    await expect(numbersTag).toBeVisible({ timeout: 10000 });
+    await numbersTag.click();
+    await verifyPageIsFound(page);
+    await expect(page.getByRole('heading', { name: /numbers/i }).first()).toBeVisible();
+  });
+});
+
+test.describe('Link Validation', () => {
+  test('should have valid href attributes for all vocabulary sidebar links', async ({ page }) => {
+    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.waitForLoadState('networkidle');
+    
+    const vocabularyLinks = page.locator('a.menu__link[href$="/vocabulary/"]');
+    const linkCount = await vocabularyLinks.count();
+    
+    expect(linkCount).toBeGreaterThan(0);
+    
+    for (let i = 0; i < linkCount; i++) {
+      const link = vocabularyLinks.nth(i);
+      const href = await link.getAttribute('href');
+      expect(href).toBeTruthy();
+      expect(href).toMatch(/vocabulary\//);
+    }
+  });
+
+  test('should have valid href attributes for all vocabulary card links', async ({ page }) => {
+    await page.goto('/japanese/docs/lessons/vocabulary/');
+    await page.waitForLoadState('networkidle');
+    
+    const cardLinks = page.locator('a[class*="lessonCard"]');
+    const linkCount = await cardLinks.count();
+    
+    expect(linkCount).toBeGreaterThan(0);
+    
+    for (let i = 0; i < linkCount; i++) {
+      const link = cardLinks.nth(i);
       await expect(link).toBeVisible();
       
       const href = await link.getAttribute('href');
       expect(href).toBeTruthy();
-      expect(href).toMatch(/^\/docs\/lessons/);
-      
-      await link.click();
-      await verifyPageIsFound(page);
-      await expect(page.getByRole('heading').first()).toBeVisible();
-      
-      await page.goto('/docs/lessons/vocabulary/');
-      await page.waitForTimeout(1000);
+      expect(href).toMatch(/\/(docs\/lessons|japanese\/docs\/lessons)/);
     }
   });
+});
 
-  test('should navigate between vocabulary pages via sidebar', async ({ page }) => {
-    await page.goto('/docs/lessons/vocabulary/colors');
-    
-    const sidebar = page.locator('nav').first();
-    await expect(sidebar).toBeVisible();
-    
-    const numbersSidebarLink = sidebar.getByRole('link', { name: /numbers/i }).first();
-      await numbersSidebarLink.click();
-      await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /numbers|counting/i })).toBeVisible();
-    
-    const timeSidebarLink = sidebar.getByRole('link', { name: /time/i }).first();
-      await timeSidebarLink.click();
-      await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /time|dates/i })).toBeVisible();
-  });
-
+test.describe('Expected Failures', () => {
   test('should fail when navigating to non-existent page', async ({ page }) => {
     test.fail();
-    await page.goto('/docs/lessons/vocabulary/this-page-does-not-exist');
+    await page.goto('/japanese/docs/lessons/vocabulary/this-page-does-not-exist');
     await verifyPageIsFound(page);
   });
 });
