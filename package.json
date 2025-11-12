@@ -25,7 +25,9 @@
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:headed": "playwright test --headed",
-    "test:e2e:debug": "playwright test --debug"
+    "test:e2e:debug": "playwright test --debug",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs --fix"
   },
   "dependencies": {
     "@docusaurus/core": "3.9.1",
@@ -46,7 +48,13 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
+    "@typescript-eslint/eslint-plugin": "^8.46.4",
+    "@typescript-eslint/parser": "^8.46.4",
     "@vitest/ui": "^4.0.6",
+    "eslint": "^9.39.1",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
     "js-yaml": "^4.1.0",
     "jsdom": "^27.0.0",
     "typescript": "^5.9.3",
