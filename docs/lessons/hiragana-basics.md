@@ -22,110 +22,120 @@ Hiragana is a phonetic writing system where each character represents a syllable
 ## The Basic 46 Characters
 
 ### Vowels (あ行 - A Row)
+
 The foundation of all hiragana characters.
 
-| Character | Romaji | Pronunciation | Mnemonic |
-|-----------|--------|---------------|----------|
-| あ | a | "ah" as in "father" | Looks like a person with arms raised saying "ah!" |
-| い | i | "ee" as in "see" | Two vertical lines like the letter "i" |
-| う | u | "oo" as in "moon" | Looks like a person with their mouth open saying "oo" |
-| え | e | "eh" as in "red" | Looks like a person with arms at sides |
-| お | o | "oh" as in "go" | Looks like a person with arms raised in celebration |
+| Character | Romaji | Pronunciation       | Mnemonic                                              |
+|-----------|--------|---------------------|-------------------------------------------------------|
+| あ         | a      | "ah" as in "father" | Looks like a person with arms raised saying "ah!"     |
+| い         | i      | "ee" as in "see"    | Two vertical lines like the letter "i"                |
+| う         | u      | "oo" as in "moon"   | Looks like a person with their mouth open saying "oo" |
+| え         | e      | "eh" as in "red"    | Looks like a person with arms at sides                |
+| お         | o      | "oh" as in "go"     | Looks like a person with arms raised in celebration   |
 
 ### K Series (か行 - Ka Row)
+
 Add "k" sound to each vowel.
 
-| Character | Romaji | Pronunciation | Mnemonic |
-|-----------|--------|---------------|----------|
-| か | ka | "kah" | Looks like a key (ka = key) |
-| き | ki | "kee" | Looks like a key with a long stem |
-| く | ku | "koo" | Looks like a bird's beak |
-| け | ke | "keh" | Looks like a keg |
-| こ | ko | "koh" | Looks like two "k"s back to back |
+| Character | Romaji | Pronunciation | Mnemonic                          |
+|-----------|--------|---------------|-----------------------------------|
+| か         | ka     | "kah"         | Looks like a key (ka = key)       |
+| き         | ki     | "kee"         | Looks like a key with a long stem |
+| く         | ku     | "koo"         | Looks like a bird's beak          |
+| け         | ke     | "keh"         | Looks like a keg                  |
+| こ         | ko     | "koh"         | Looks like two "k"s back to back  |
 
 ### S Series (さ行 - Sa Row)
+
 Add "s" sound to each vowel.
 
-| Character | Romaji | Pronunciation | Mnemonic |
-|-----------|--------|---------------|----------|
-| さ | sa | "sah" | Looks like a sail |
-| し | shi | "shee" | Looks like a smile |
-| す | su | "soo" | Looks like a person hanging |
-| せ | se | "seh" | Looks like a "Z" |
-| そ | so | "soh" | Looks like a "Z" with a tail |
+| Character | Romaji | Pronunciation | Mnemonic                     |
+|-----------|--------|---------------|------------------------------|
+| さ         | sa     | "sah"         | Looks like a sail            |
+| し         | shi    | "shee"        | Looks like a smile           |
+| す         | su     | "soo"         | Looks like a person hanging  |
+| せ         | se     | "seh"         | Looks like a "Z"             |
+| そ         | so     | "soh"         | Looks like a "Z" with a tail |
 
 ### T Series (た行 - Ta Row)
+
 Add "t" sound to each vowel.
 
-| Character | Romaji | Pronunciation | Mnemonic |
-|-----------|--------|---------------|----------|
-| た | ta | "tah" | Looks like a "t" with a cross |
-| ち | chi | "chee" | Looks like a "5" |
-| つ | tsu | "tsoo" | Looks like a tsunami wave |
-| て | te | "teh" | Looks like a "T" |
-| と | to | "toh" | Looks like a "to" with a dot |
+| Character | Romaji | Pronunciation | Mnemonic                      |
+|-----------|--------|---------------|-------------------------------|
+| た         | ta     | "tah"         | Looks like a "t" with a cross |
+| ち         | chi    | "chee"        | Looks like a "5"              |
+| つ         | tsu    | "tsoo"        | Looks like a tsunami wave     |
+| て         | te     | "teh"         | Looks like a "T"              |
+| と         | to     | "toh"         | Looks like a "to" with a dot  |
 
 ### N Series (な行 - Na Row)
+
 Add "n" sound to each vowel.
 
-| Character | Romaji | Pronunciation | Mnemonic |
-|-----------|--------|---------------|----------|
-| な | na | "nah" | Looks like a "n" with a cross |
-| に | ni | "nee" | Looks like a "n" with a tail |
-| ぬ | nu | "noo" | Looks like a "n" with a loop |
-| ね | ne | "neh" | Looks like a "n" with a hook |
-| の | no | "noh" | Looks like a "no" with a circle |
+| Character | Romaji | Pronunciation | Mnemonic                        |
+|-----------|--------|---------------|---------------------------------|
+| な         | na     | "nah"         | Looks like a "n" with a cross   |
+| に         | ni     | "nee"         | Looks like a "n" with a tail    |
+| ぬ         | nu     | "noo"         | Looks like a "n" with a loop    |
+| ね         | ne     | "neh"         | Looks like a "n" with a hook    |
+| の         | no     | "noh"         | Looks like a "no" with a circle |
 
 ### H Series (は行 - Ha Row)
+
 Add "h" sound to each vowel.
 
-| Character | Romaji | Pronunciation | Mnemonic |
-|-----------|--------|---------------|----------|
-| は | ha | "hah" | Looks like a "H" |
-| ひ | hi | "hee" | Looks like a smile |
-| ふ | fu | "foo" | Looks like a "fu" with a tail |
-| へ | he | "heh" | Looks like a "h" |
-| ほ | ho | "hoh" | Looks like a "h" with a cross |
+| Character | Romaji | Pronunciation | Mnemonic                      |
+|-----------|--------|---------------|-------------------------------|
+| は         | ha     | "hah"         | Looks like a "H"              |
+| ひ         | hi     | "hee"         | Looks like a smile            |
+| ふ         | fu     | "foo"         | Looks like a "fu" with a tail |
+| へ         | he     | "heh"         | Looks like a "h"              |
+| ほ         | ho     | "hoh"         | Looks like a "h" with a cross |
 
 ### M Series (ま行 - Ma Row)
+
 Add "m" sound to each vowel.
 
-| Character | Romaji | Pronunciation | Mnemonic |
-|-----------|--------|---------------|----------|
-| ま | ma | "mah" | Looks like a "m" with a cross |
-| み | mi | "mee" | Looks like a "m" with a tail |
-| む | mu | "moo" | Looks like a "m" with a loop |
-| め | me | "meh" | Looks like a "m" with a hook |
-| の | mo | "moh" | Looks like a "m" with a circle |
+| Character | Romaji | Pronunciation | Mnemonic                       |
+|-----------|--------|---------------|--------------------------------|
+| ま         | ma     | "mah"         | Looks like a "m" with a cross  |
+| み         | mi     | "mee"         | Looks like a "m" with a tail   |
+| む         | mu     | "moo"         | Looks like a "m" with a loop   |
+| め         | me     | "meh"         | Looks like a "m" with a hook   |
+| の         | mo     | "moh"         | Looks like a "m" with a circle |
 
 ### Y Series (や行 - Ya Row)
+
 Only three characters in this row.
 
-| Character | Romaji | Pronunciation | Mnemonic |
-|-----------|--------|---------------|----------|
-| や | ya | "yah" | Looks like a "y" with a tail |
-| ゆ | yu | "yoo" | Looks like a "y" with a loop |
-| よ | yo | "yoh" | Looks like a "y" with a circle |
+| Character | Romaji | Pronunciation | Mnemonic                       |
+|-----------|--------|---------------|--------------------------------|
+| や         | ya     | "yah"         | Looks like a "y" with a tail   |
+| ゆ         | yu     | "yoo"         | Looks like a "y" with a loop   |
+| よ         | yo     | "yoh"         | Looks like a "y" with a circle |
 
 ### R Series (ら行 - Ra Row)
+
 Add "r" sound to each vowel.
 
-| Character | Romaji | Pronunciation | Mnemonic |
-|-----------|--------|---------------|----------|
-| ら | ra | "rah" | Looks like a "r" with a tail |
-| り | ri | "ree" | Looks like a "r" with a hook |
-| る | ru | "roo" | Looks like a "r" with a loop |
-| れ | re | "reh" | Looks like a "r" with a cross |
-| ろ | ro | "roh" | Looks like a "r" with a circle |
+| Character | Romaji | Pronunciation | Mnemonic                       |
+|-----------|--------|---------------|--------------------------------|
+| ら         | ra     | "rah"         | Looks like a "r" with a tail   |
+| り         | ri     | "ree"         | Looks like a "r" with a hook   |
+| る         | ru     | "roo"         | Looks like a "r" with a loop   |
+| れ         | re     | "reh"         | Looks like a "r" with a cross  |
+| ろ         | ro     | "roh"         | Looks like a "r" with a circle |
 
 ### W Series (わ行 - Wa Row)
+
 Only three characters in this row.
 
-| Character | Romaji | Pronunciation | Mnemonic |
-|-----------|--------|---------------|----------|
-| わ | wa | "wah" | Looks like a "w" with a tail |
-| を | wo | "woh" | Looks like a "w" with a circle |
-| ん | n | "n" | Looks like a "n" |
+| Character | Romaji | Pronunciation | Mnemonic                       |
+|-----------|--------|---------------|--------------------------------|
+| わ         | wa     | "wah"         | Looks like a "w" with a tail   |
+| を         | wo     | "woh"         | Looks like a "w" with a circle |
+| ん         | n      | "n"           | Looks like a "n"               |
 
 ## Practice Exercises
 
@@ -180,9 +190,9 @@ Create your own practice sheets by writing each character multiple times:
 ## Common Mistakes to Avoid
 
 1. **Confusing similar characters**:
-   - ね (ne) vs れ (re)
-   - ぬ (nu) vs め (me)
-   - は (ha) vs ほ (ho)
+    - ね (ne) vs れ (re)
+    - ぬ (nu) vs め (me)
+    - は (ha) vs ほ (ho)
 
 2. **Incorrect stroke order**: Always follow the proper stroke order
 3. **Mixing up rows**: Remember which character belongs to which row
@@ -219,18 +229,18 @@ After mastering the basic hiragana characters:
 
 ## Vocabulary from This Lesson
 
-| Hiragana | Romaji | Meaning |
-|----------|--------|---------|
-| あい | ai | love |
-| いえ | ie | house |
-| うえ | ue | up, above |
-| えい | ei | yes |
-| おお | oo | big |
-| かお | kao | face |
-| きく | kiku | to listen |
-| くる | kuru | to come |
-| けい | kei | system |
-| こい | koi | romantic love |
+| Hiragana | Romaji | Meaning       |
+|----------|--------|---------------|
+| あい       | ai     | love          |
+| いえ       | ie     | house         |
+| うえ       | ue     | up, above     |
+| えい       | ei     | yes           |
+| おお       | oo     | big           |
+| かお       | kao    | face          |
+| きく       | kiku   | to listen     |
+| くる       | kuru   | to come       |
+| けい       | kei    | system        |
+| こい       | koi    | romantic love |
 
 Remember: Practice makes perfect! Take your time to master each character before moving on to the next row.
 

@@ -11,75 +11,75 @@ A complete reference for katakana characters and their romaji readings. Katakana
 
 ## Complete Katakana Chart
 
-| a | i | u | e | o |
-|----|----|----|----|----|
-| ア | イ | ウ | エ | オ |
-| a | i | u | e | o |
-| カ | キ | ク | ケ | コ |
-| ka | ki | ku | ke | ko |
-| サ | シ | ス | セ | ソ |
-| sa | shi | su | se | so |
-| タ | チ | ツ | テ | ト |
+| a  | i   | u   | e  | o  |
+|----|-----|-----|----|----|
+| ア  | イ   | ウ   | エ  | オ  |
+| a  | i   | u   | e  | o  |
+| カ  | キ   | ク   | ケ  | コ  |
+| ka | ki  | ku  | ke | ko |
+| サ  | シ   | ス   | セ  | ソ  |
+| sa | shi | su  | se | so |
+| タ  | チ   | ツ   | テ  | ト  |
 | ta | chi | tsu | te | to |
-| ナ | ニ | ヌ | ネ | ノ |
-| na | ni | nu | ne | no |
-| ハ | ヒ | フ | ヘ | ホ |
-| ha | hi | fu | he | ho |
-| マ | ミ | ム | メ | モ |
-| ma | mi | mu | me | mo |
-| ヤ | ユ | ヨ |
-| ya | yu | yo |
-| ラ | リ | ル | レ | ロ |
-| ra | ri | ru | re | ro |
-| ワ | ヲ | ン |
-| wa | wo | n |
+| ナ  | ニ   | ヌ   | ネ  | ノ  |
+| na | ni  | nu  | ne | no |
+| ハ  | ヒ   | フ   | ヘ  | ホ  |
+| ha | hi  | fu  | he | ho |
+| マ  | ミ   | ム   | メ  | モ  |
+| ma | mi  | mu  | me | mo |
+| ヤ  | ユ   | ヨ   |
+| ya | yu  | yo  |
+| ラ  | リ   | ル   | レ  | ロ  |
+| ra | ri  | ru  | re | ro |
+| ワ  | ヲ   | ン   |
+| wa | wo  | n   |
 
 ## Voiced Sounds (濁音)
 
-| a | i | u | e | o |
+| a  | i  | u  | e  | o  |
 |----|----|----|----|----|
-| ガ | ギ | グ | ゲ | ゴ |
+| ガ  | ギ  | グ  | ゲ  | ゴ  |
 | ga | gi | gu | ge | go |
-| ザ | ジ | ズ | ゼ | ゾ |
+| ザ  | ジ  | ズ  | ゼ  | ゾ  |
 | za | ji | zu | ze | zo |
-| ダ | ヂ | ヅ | デ | ド |
+| ダ  | ヂ  | ヅ  | デ  | ド  |
 | da | ji | zu | de | do |
-| バ | ビ | ブ | ベ | ボ |
+| バ  | ビ  | ブ  | ベ  | ボ  |
 | ba | bi | bu | be | bo |
 
 ## Half-Voiced Sounds (半濁音)
 
-| a | i | u | e | o |
+| a  | i  | u  | e  | o  |
 |----|----|----|----|----|
-| パ | ピ | プ | ペ | ポ |
+| パ  | ピ  | プ  | ペ  | ポ  |
 | pa | pi | pu | pe | po |
 
 ## Contracted Sounds (拗音)
 
-| a | i | u | e | o |
-|----|----|----|----|----|
-| キャ | キュ | キョ |
+| a   | i   | u   | e | o |
+|-----|-----|-----|---|---|
+| キャ  | キュ  | キョ  |
 | kya | kyu | kyo |
-| シャ | シュ | ショ |
+| シャ  | シュ  | ショ  |
 | sha | shu | sho |
-| チャ | チュ | チョ |
+| チャ  | チュ  | チョ  |
 | cha | chu | cho |
-| ニャ | ニュ | ニョ |
+| ニャ  | ニュ  | ニョ  |
 | nya | nyu | nyo |
-| ヒャ | ヒュ | ヒョ |
+| ヒャ  | ヒュ  | ヒョ  |
 | hya | hyu | hyo |
-| ミャ | ミュ | ミョ |
+| ミャ  | ミュ  | ミョ  |
 | mya | myu | myo |
-| リャ | リュ | リョ |
+| リャ  | リュ  | リョ  |
 | rya | ryu | ryo |
 
 ## Extended Katakana
 
-| a | i | u | e | o |
+| a  | i  | u  | e  | o  |
 |----|----|----|----|----|
-| ヴァ | ヴィ | ヴェ | ヴォ | ヴ |
+| ヴァ | ヴィ | ヴェ | ヴォ | ヴ  |
 | va | vi | ve | vo | vu |
-| ファ | フィ | フェ | フォ | フ |
+| ファ | フィ | フェ | フォ | フ  |
 | fa | fi | fe | fo | fu |
 | ウィ | ウェ | ウォ |
 | wi | we | wo |
@@ -128,9 +128,9 @@ A complete reference for katakana characters and their romaji readings. Katakana
 
 ## Katakana vs Hiragana
 
-| Feature | Hiragana | Katakana |
-|---------|----------|----------|
-| **Usage** | Native Japanese words, particles, verb endings | Foreign words, onomatopoeia, emphasis |
-| **Shape** | More rounded, flowing | More angular, straight lines |
-| **Examples** | あいうえお | アイウエオ |
-| **Common in** | Grammar, native vocabulary | Loanwords, technical terms |
+| Feature       | Hiragana                                       | Katakana                              |
+|---------------|------------------------------------------------|---------------------------------------|
+| **Usage**     | Native Japanese words, particles, verb endings | Foreign words, onomatopoeia, emphasis |
+| **Shape**     | More rounded, flowing                          | More angular, straight lines          |
+| **Examples**  | あいうえお                                          | アイウエオ                                 |
+| **Common in** | Grammar, native vocabulary                     | Loanwords, technical terms            |

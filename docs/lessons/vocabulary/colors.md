@@ -11,23 +11,24 @@ Learning colors is essential for describing objects and expressing preferences i
 
 ## Basic Colors
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| いろ | 色 | iro | 🎨 color | noun |
-| あか | 赤 | aka | 🔴 red | い-adjective |
-| あお | 青 | ao | 🔵 blue | い-adjective |
-| きいろ | 黄色 | kiiro | 🟡 yellow | い-adjective |
-| みどり | 緑 | midori | 🟢 green | の-adjective |
-| むらさき | 紫 | murasaki | 🟣 purple | の-adjective |
-| だいだい | 橙 | daidai | 🟠 orange | の-adjective |
-| しろ | 白 | shiro | ⚪ white | い-adjective |
-| くろ | 黒 | kuro | ⚫ black | い-adjective |
-| はいいろ | 灰色 | haiiro | ⬜ gray | の-adjective |
-| ちゃいろ | 茶色 | chairo | 🟤 brown | の-adjective |
+| Hiragana | Kanji | Romaji   | English   | Type        |
+|----------|-------|----------|-----------|-------------|
+| いろ       | 色     | iro      | 🎨 color  | noun        |
+| あか       | 赤     | aka      | 🔴 red    | い-adjective |
+| あお       | 青     | ao       | 🔵 blue   | い-adjective |
+| きいろ      | 黄色    | kiiro    | 🟡 yellow | い-adjective |
+| みどり      | 緑     | midori   | 🟢 green  | の-adjective |
+| むらさき     | 紫     | murasaki | 🟣 purple | の-adjective |
+| だいだい     | 橙     | daidai   | 🟠 orange | の-adjective |
+| しろ       | 白     | shiro    | ⚪ white   | い-adjective |
+| くろ       | 黒     | kuro     | ⚫ black   | い-adjective |
+| はいいろ     | 灰色    | haiiro   | ⬜ gray    | の-adjective |
+| ちゃいろ     | 茶色    | chairo   | 🟤 brown  | の-adjective |
 
 **Examples:**
+
 - あかい (akai) - red (adjective)
-- あおい (aoi) - blue (adjective)  
+- あおい (aoi) - blue (adjective)
 - きいろい (kiiroi) - yellow (adjective)
 
 ### Color Symbolism in Japan
@@ -60,24 +61,26 @@ Learning colors is essential for describing objects and expressing preferences i
 ### Conjugation Examples
 
 **Rule:**
-- For い-adjectives: Conjugate by changing the final い 
-   - あかい → あかくない, あかかった
-- For の-adjectives: Conjugate by changing です 
-   - みどりです → みどりじゃないです, みどりでした
+
+- For い-adjectives: Conjugate by changing the final い
+    - あかい → あかくない, あかかった
+- For の-adjectives: Conjugate by changing です
+    - みどりです → みどりじゃないです, みどりでした
 
 **Examples:**
+
 - い-adjectives:
-   - あかい → あかくない (not red) → あかくなかった (was not red)
-   - あかい → あかかった (was red)
-   - Present: りんごはあかいです。(The apple is red.)
-   - Negative: りんごはあかくないです。(The apple is not red.)
-   - Past: りんごはあかかったです。(The apple was red.)
-- の-adjectives:  
-   - みどり → みどりじゃない (not green) → みどりじゃなかった (was not green)
-   - みどり → みどりでした (was green)
-   - Present: ほんはみどりです。(The book is green.)
-   - Negative: ほんはみどりじゃないです。(The book is not green.)
-   - Past: ほんはみどりでした。(The book was green.)
+    - あかい → あかくない (not red) → あかくなかった (was not red)
+    - あかい → あかかった (was red)
+    - Present: りんごはあかいです。(The apple is red.)
+    - Negative: りんごはあかくないです。(The apple is not red.)
+    - Past: りんごはあかかったです。(The apple was red.)
+- の-adjectives:
+    - みどり → みどりじゃない (not green) → みどりじゃなかった (was not green)
+    - みどり → みどりでした (was green)
+    - Present: ほんはみどりです。(The book is green.)
+    - Negative: ほんはみどりじゃないです。(The book is not green.)
+    - Past: ほんはみどりでした。(The book was green.)
 
 ### Light Colors (明るい色 - Akarui Iro)
 
@@ -105,9 +108,9 @@ To describe dark shades, add **こい** (koi - thick/dark) before the color.
 
 ### Traditional Colors
 
-| Hiragana | Kanji | Romaji | English | Cultural Significance |
-|----------|-------|--------|---------|----------------------|
-| ももいろ | 桃色 | momoiro | 🩷 peach color | Traditional, feminine |
-| やまぶきいろ | 山吹色 | yamabukiiro | 🟨 golden yellow | Spring, flowers |
-| べにいろ | 紅 | beniiro | 🔴 crimson | Traditional red |
+| Hiragana | Kanji | Romaji      | English          | Cultural Significance |
+|----------|-------|-------------|------------------|-----------------------|
+| ももいろ     | 桃色    | momoiro     | 🩷 peach color   | Traditional, feminine |
+| やまぶきいろ   | 山吹色   | yamabukiiro | 🟨 golden yellow | Spring, flowers       |
+| べにいろ     | 紅     | beniiro     | 🔴 crimson       | Traditional red       |
 

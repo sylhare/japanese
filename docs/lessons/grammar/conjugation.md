@@ -7,7 +7,8 @@ tags: [grammar, verbs, conjugation, 活用]
 
 # Japanese Verb Conjugation
 
-Understanding verb conjugation is essential for Japanese grammar. Japanese verbs are categorized into three groups based on their conjugation patterns.
+Understanding verb conjugation is essential for Japanese grammar. Japanese verbs are categorized into three groups based
+on their conjugation patterns.
 
 ## Verb Groups
 
@@ -26,48 +27,53 @@ Understanding verb conjugation is essential for Japanese grammar. Japanese verbs
 ## Conjugation Patterns
 
 ### Dictionary Form (辞書形)
+
 The base form of the verb, used in dictionaries.
 
-| Group | Example | Reading |
-|-------|---------|---------|
-| Group 1 | 書く | kaku |
-| Group 2 | 食べる | taberu |
-| Group 3 | する | suru |
+| Group   | Example | Reading |
+|---------|---------|---------|
+| Group 1 | 書く      | kaku    |
+| Group 2 | 食べる     | taberu  |
+| Group 3 | する      | suru    |
 
 ### Masu Form (ます形)
+
 Polite form used in formal situations.
 
-| Group | Pattern | Example | Reading |
-|-------|---------|---------|---------|
-| Group 1 | Change う to い + ます | 書く → 書きます | kaku → kakimasu |
-| Group 2 | Remove る + ます | 食べる → 食べます | taberu → tabemasu |
-| Group 3 | する → します | 来る → 来ます | suru → shimasu, kuru → kimasu |
+| Group   | Pattern            | Example    | Reading                       |
+|---------|--------------------|------------|-------------------------------|
+| Group 1 | Change う to い + ます | 書く → 書きます  | kaku → kakimasu               |
+| Group 2 | Remove る + ます      | 食べる → 食べます | taberu → tabemasu             |
+| Group 3 | する → します           | 来る → 来ます   | suru → shimasu, kuru → kimasu |
 
 ### Te Form (て形)
+
 Used for various grammatical constructions.
 
-| Group | Pattern | Example | Reading |
-|-------|---------|---------|---------|
-| Group 1 | Various patterns based on ending | 書く → 書いて | kaku → kaite |
-| Group 2 | Remove る + て | 食べる → 食べて | taberu → tabete |
-| Group 3 | する → して, 来る → 来て | suru → shite, kuru → kite |
+| Group   | Pattern                          | Example                   | Reading         |
+|---------|----------------------------------|---------------------------|-----------------|
+| Group 1 | Various patterns based on ending | 書く → 書いて                  | kaku → kaite    |
+| Group 2 | Remove る + て                     | 食べる → 食べて                 | taberu → tabete |
+| Group 3 | する → して, 来る → 来て                 | suru → shite, kuru → kite |
 
 ### Ta Form (た形)
+
 Past tense form.
 
-| Group | Pattern | Example | Reading |
-|-------|---------|---------|---------|
-| Group 1 | Various patterns based on ending | 書く → 書いた | kaku → kaita |
-| Group 2 | Remove る + た | 食べる → 食べた | taberu → tabeta |
-| Group 3 | する → した, 来る → 来た | suru → shita, kuru → kita |
+| Group   | Pattern                          | Example                   | Reading         |
+|---------|----------------------------------|---------------------------|-----------------|
+| Group 1 | Various patterns based on ending | 書く → 書いた                  | kaku → kaita    |
+| Group 2 | Remove る + た                     | 食べる → 食べた                 | taberu → tabeta |
+| Group 3 | する → した, 来る → 来た                 | suru → shita, kuru → kita |
 
 ### Nai Form (ない形)
+
 Negative form.
 
-| Group | Pattern | Example | Reading |
-|-------|---------|---------|---------|
-| Group 1 | Change う to あ + ない | 書く → 書かない | kaku → kakanai |
-| Group 2 | Remove る + ない | 食べる → 食べない | taberu → tabenai |
+| Group   | Pattern            | Example                     | Reading          |
+|---------|--------------------|-----------------------------|------------------|
+| Group 1 | Change う to あ + ない | 書く → 書かない                   | kaku → kakanai   |
+| Group 2 | Remove る + ない      | 食べる → 食べない                  | taberu → tabenai |
 | Group 3 | する → しない, 来る → 来ない | suru → shinai, kuru → konai |
 
 ## Detailed Conjugation Rules
@@ -119,18 +125,18 @@ All follow the same pattern:
 
 ### Basic Verbs
 
-| Dictionary | Masu | Te | Ta | Nai | Meaning |
-|------------|------|----|----|-----|---------|
-| 行く | 行きます | 行って | 行った | 行かない | to go |
-| 来る | 来ます | 来て | 来た | 来ない | to come |
-| する | します | して | した | しない | to do |
-| 見る | 見ます | 見て | 見た | 見ない | to see |
-| 食べる | 食べます | 食べて | 食べた | 食べない | to eat |
-| 飲む | 飲みます | 飲んで | 飲んだ | 飲まない | to drink |
-| 買う | 買います | 買って | 買った | 買わない | to buy |
-| 売る | 売ります | 売って | 売った | 売らない | to sell |
-| 話す | 話します | 話して | 話した | 話さない | to speak |
-| 聞く | 聞きます | 聞いて | 聞いた | 聞かない | to listen |
+| Dictionary | Masu | Te  | Ta  | Nai  | Meaning   |
+|------------|------|-----|-----|------|-----------|
+| 行く         | 行きます | 行って | 行った | 行かない | to go     |
+| 来る         | 来ます  | 来て  | 来た  | 来ない  | to come   |
+| する         | します  | して  | した  | しない  | to do     |
+| 見る         | 見ます  | 見て  | 見た  | 見ない  | to see    |
+| 食べる        | 食べます | 食べて | 食べた | 食べない | to eat    |
+| 飲む         | 飲みます | 飲んで | 飲んだ | 飲まない | to drink  |
+| 買う         | 買います | 買って | 買った | 買わない | to buy    |
+| 売る         | 売ります | 売って | 売った | 売らない | to sell   |
+| 話す         | 話します | 話して | 話した | 話さない | to speak  |
+| 聞く         | 聞きます | 聞いて | 聞いた | 聞かない | to listen |
 
 ## Practice Exercises
 

@@ -11,66 +11,66 @@ A complete reference for hiragana characters and their romaji readings.
 
 ## Complete Hiragana Chart
 
-| a | i | u | e | o |
-|----|----|----|----|----|
-| あ | い | う | え | お |
-| a | i | u | e | o |
-| か | き | く | け | こ |
-| ka | ki | ku | ke | ko |
-| さ | し | す | せ | そ |
-| sa | shi | su | se | so |
-| た | ち | つ | て | と |
+| a  | i   | u   | e  | o  |
+|----|-----|-----|----|----|
+| あ  | い   | う   | え  | お  |
+| a  | i   | u   | e  | o  |
+| か  | き   | く   | け  | こ  |
+| ka | ki  | ku  | ke | ko |
+| さ  | し   | す   | せ  | そ  |
+| sa | shi | su  | se | so |
+| た  | ち   | つ   | て  | と  |
 | ta | chi | tsu | te | to |
-| な | に | ぬ | ね | の |
-| na | ni | nu | ne | no |
-| は | ひ | ふ | へ | ほ |
-| ha | hi | fu | he | ho |
-| ま | み | む | め | も |
-| ma | mi | mu | me | mo |
-| や | ゆ | よ |
-| ya | yu | yo |
-| ら | り | る | れ | ろ |
-| ra | ri | ru | re | ro |
-| わ | を | ん |
-| wa | wo | n |
+| な  | に   | ぬ   | ね  | の  |
+| na | ni  | nu  | ne | no |
+| は  | ひ   | ふ   | へ  | ほ  |
+| ha | hi  | fu  | he | ho |
+| ま  | み   | む   | め  | も  |
+| ma | mi  | mu  | me | mo |
+| や  | ゆ   | よ   |
+| ya | yu  | yo  |
+| ら  | り   | る   | れ  | ろ  |
+| ra | ri  | ru  | re | ro |
+| わ  | を   | ん   |
+| wa | wo  | n   |
 
 ## Voiced Sounds (濁音)
 
-| a | i | u | e | o |
+| a  | i  | u  | e  | o  |
 |----|----|----|----|----|
-| が | ぎ | ぐ | げ | ご |
+| が  | ぎ  | ぐ  | げ  | ご  |
 | ga | gi | gu | ge | go |
-| ざ | じ | ず | ぜ | ぞ |
+| ざ  | じ  | ず  | ぜ  | ぞ  |
 | za | ji | zu | ze | zo |
-| だ | ぢ | づ | で | ど |
+| だ  | ぢ  | づ  | で  | ど  |
 | da | ji | zu | de | do |
-| ば | び | ぶ | べ | ぼ |
+| ば  | び  | ぶ  | べ  | ぼ  |
 | ba | bi | bu | be | bo |
 
 ## Half-Voiced Sounds (半濁音)
 
-| a | i | u | e | o |
+| a  | i  | u  | e  | o  |
 |----|----|----|----|----|
-| ぱ | ぴ | ぷ | ぺ | ぽ |
+| ぱ  | ぴ  | ぷ  | ぺ  | ぽ  |
 | pa | pi | pu | pe | po |
 
 ## Contracted Sounds (拗音)
 
-| a | i | u | e | o |
-|----|----|----|----|----|
-| きゃ | きゅ | きょ |
+| a   | i   | u   | e | o |
+|-----|-----|-----|---|---|
+| きゃ  | きゅ  | きょ  |
 | kya | kyu | kyo |
-| しゃ | しゅ | しょ |
+| しゃ  | しゅ  | しょ  |
 | sha | shu | sho |
-| ちゃ | ちゅ | ちょ |
+| ちゃ  | ちゅ  | ちょ  |
 | cha | chu | cho |
-| にゃ | にゅ | にょ |
+| にゃ  | にゅ  | にょ  |
 | nya | nyu | nyo |
-| ひゃ | ひゅ | ひょ |
+| ひゃ  | ひゅ  | ひょ  |
 | hya | hyu | hyo |
-| みゃ | みゅ | みょ |
+| みゃ  | みゅ  | みょ  |
 | mya | myu | myo |
-| りゃ | りゅ | りょ |
+| りゃ  | りゅ  | りょ  |
 | rya | ryu | ryo |
 
 ## Tips for Learning Hiragana

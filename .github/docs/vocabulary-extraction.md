@@ -7,6 +7,7 @@ Complete guide for the vocabulary extraction and management system.
 ### For Content Creators
 
 1. **Add vocabulary to lesson files** using this format:
+
 ```markdown
 ## Any Section Name
 
@@ -37,18 +38,18 @@ npm start
 
 **Any section heading works!** The script finds tables with the correct column structure:
 
-| Column | Required | Example | Notes |
-|--------|----------|---------|-------|
-| Hiragana | ✅ Yes | あまい | Cannot be empty |
-| Kanji | ⚠️ Optional | 甘い | Use `-` if no kanji |
-| Romaji | ✅ Yes | amai | Cannot be empty |
-| English | ✅ Yes | sweet | Cannot be empty |
-| Type | ✅ Yes | い-adjective | See valid types below |
+| Column   | Required    | Example     | Notes                 |
+|----------|-------------|-------------|-----------------------|
+| Hiragana | ✅ Yes       | あまい         | Cannot be empty       |
+| Kanji    | ⚠️ Optional | 甘い          | Use `-` if no kanji   |
+| Romaji   | ✅ Yes       | amai        | Cannot be empty       |
+| English  | ✅ Yes       | sweet       | Cannot be empty       |
+| Type     | ✅ Yes       | い-adjective | See valid types below |
 
 ### Valid Type Values
 
 - `い-adjective` - い-adjectives
-- `の-adjective` - の-adjectives  
+- `の-adjective` - の-adjectives
 - `noun` - Regular nouns
 - `verb` - Verbs
 - `adverb` - Adverbs
@@ -61,6 +62,7 @@ npm start
 ## How It Works
 
 The system automatically:
+
 - **Scans** all lesson files in `docs/lessons/`
 - **Extracts** vocabulary from tables with correct structure
 - **Updates** `src/data/vocabulary.yaml`
@@ -107,20 +109,21 @@ sortOptions:
 
 ### Vocabulary Item Fields
 
-| Field | Required | Description | Example |
-|-------|----------|-------------|---------|
-| `id` | ✅ Yes | Unique identifier | `colors_2` |
-| `hiragana` | ✅ Yes | Hiragana reading | `あか` |
-| `kanji` | ⚠️ Optional | Kanji characters | `赤` |
-| `romaji` | ✅ Yes | Romanized pronunciation | `aka` |
-| `meaning` | ✅ Yes | English meaning | `red` |
-| `category` | ✅ Yes | Content category | `vocabulary` |
-| `tags` | ✅ Yes | Lesson-based tags | `['colors']` |
-| `type` | ✅ Yes | Word type | `い-adjective` |
+| Field      | Required    | Description             | Example       |
+|------------|-------------|-------------------------|---------------|
+| `id`       | ✅ Yes       | Unique identifier       | `colors_2`    |
+| `hiragana` | ✅ Yes       | Hiragana reading        | `あか`          |
+| `kanji`    | ⚠️ Optional | Kanji characters        | `赤`           |
+| `romaji`   | ✅ Yes       | Romanized pronunciation | `aka`         |
+| `meaning`  | ✅ Yes       | English meaning         | `red`         |
+| `category` | ✅ Yes       | Content category        | `vocabulary`  |
+| `tags`     | ✅ Yes       | Lesson-based tags       | `['colors']`  |
+| `type`     | ✅ Yes       | Word type               | `い-adjective` |
 
 ### Automatic ID Generation
 
 IDs are generated as `{lesson}_{row_number}`:
+
 - `colors_2` - From colors lesson, row 2
 - `tastes_5` - From tastes lesson, row 5
 - `grammarparticles_3` - From grammar-particles lesson, row 3
@@ -130,6 +133,7 @@ IDs are generated as `{lesson}_{row_number}`:
 ### When to Edit YAML Directly
 
 You can manually edit `src/data/vocabulary.yaml` for:
+
 - **Quick fixes** to existing vocabulary
 - **Bulk changes** to multiple items
 - **Adding vocabulary** not from lesson files
@@ -140,6 +144,7 @@ You can manually edit `src/data/vocabulary.yaml` for:
 ⚠️ **Manual edits will be overwritten** when you run `npm run extract-vocabulary`!
 
 **Best practices:**
+
 1. **Edit lesson files** instead of YAML when possible
 2. **Run extraction** after manual YAML changes
 3. **Test changes** on the vocabulary page
@@ -162,15 +167,18 @@ vocabulary:
 ## Troubleshooting
 
 **Vocabulary not extracted?**
+
 - Check table has exactly 5 columns
 - Verify file is in `docs/lessons/` directory
 - Run `npm run extract-vocabulary` manually
 
 **Duplicate entries?**
+
 - System prevents duplicates by content
 - Check for identical hiragana + romaji + meaning
 
 **Wrong category?**
+
 - Categories based on file path
 - `vocabulary/colors.md` → `colors` category
 
@@ -179,6 +187,7 @@ vocabulary:
 ### Vocabulary Page
 
 Extracted vocabulary automatically appears on `/vocabulary` with:
+
 - **Search functionality** - Search across all fields
 - **Category filtering** - Filter by content categories
 - **Sorting options** - Sort by hiragana, romaji, meaning, or category
@@ -197,6 +206,7 @@ Lesson Files → Extraction Script → vocabulary.yaml → Vocabulary Page
 ### Real-time Updates
 
 The vocabulary page automatically reflects changes when:
+
 1. **Lesson files** are updated with new vocabulary tables
 2. **Extraction script** is run (`npm run extract-vocabulary`)
 3. **YAML file** is updated with new vocabulary data
