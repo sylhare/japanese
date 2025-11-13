@@ -40,11 +40,11 @@ export function loadVocabularyData(): VocabularyData {
 export function findDuplicateIds(items: VocabularyItem[]): string[] {
   const idSet = new Set<string>();
   const duplicates: string[] = [];
-  
+
   items.forEach(item => {
     idSet.has(item.id) ? duplicates.push(item.id) : idSet.add(item.id);
   });
-  
+
   return duplicates;
 }
 

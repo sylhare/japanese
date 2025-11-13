@@ -1,25 +1,25 @@
-import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import yaml from 'js-yaml';
-import { extractVocabularyFromFile, scanAllLessons, mergeVocabulary } from '../../scripts/extract-vocabulary.js';
+import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import { extractVocabularyFromFile, mergeVocabulary, scanAllLessons } from '../../scripts/extract-vocabulary.js';
 import {
-  createTestVocabularyItem,
-  createTestVocabularyData,
-  createExtractVocabularyDuplicateTestData,
-  createCategoryMergeTestData,
-  createSortOptionsTestData,
-  createDuplicateTestData,
-  createPartialDuplicateTestData,
-  createIdempotentTestData,
-  createEmptyTestData,
-  createMissingFieldsTestData,
-  createCaseInsensitiveTestData,
-  createDifferentMeaningTestData,
-  createDifferentHiraganaTestData,
+  type VocabularyData,
   type VocabularyItem,
-  type VocabularyData
+  createCaseInsensitiveTestData,
+  createCategoryMergeTestData,
+  createDifferentHiraganaTestData,
+  createDifferentMeaningTestData,
+  createDuplicateTestData,
+  createEmptyTestData,
+  createExtractVocabularyDuplicateTestData,
+  createIdempotentTestData,
+  createMissingFieldsTestData,
+  createPartialDuplicateTestData,
+  createSortOptionsTestData,
+  createTestVocabularyData,
+  createTestVocabularyItem,
 } from '../test-utils.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -62,7 +62,7 @@ describe('Vocabulary Extraction', () => {
         meaning: 'red',
         type: 'い-adjective',
         category: 'general',
-        tags: ['basic-colors']
+        tags: ['basic-colors'],
       });
 
       vocabulary.forEach(item => {
@@ -94,7 +94,7 @@ describe('Vocabulary Extraction', () => {
         kanji: '甘い',
         romaji: 'amai',
         meaning: 'sweet',
-        type: 'い-adjective'
+        type: 'い-adjective',
       });
     });
 
@@ -103,14 +103,14 @@ describe('Vocabulary Extraction', () => {
       const vocabulary = extractVocabularyFromFile(filePath);
 
       expect(vocabulary).toHaveLength(3);
-      
-      const validItems = vocabulary.filter(item => 
-        item.hiragana && item.romaji && item.meaning
+
+      const validItems = vocabulary.filter(item =>
+        item.hiragana && item.romaji && item.meaning,
       );
       expect(validItems).toHaveLength(3);
 
-      const emptyItems = vocabulary.filter(item => 
-        !item.hiragana || !item.romaji || !item.meaning
+      const emptyItems = vocabulary.filter(item =>
+        !item.hiragana || !item.romaji || !item.meaning,
       );
       expect(emptyItems).toHaveLength(0);
     });
@@ -120,14 +120,14 @@ describe('Vocabulary Extraction', () => {
       const vocabulary = extractVocabularyFromFile(filePath);
 
       expect(vocabulary).toHaveLength(2);
-      
+
       const particles = vocabulary.filter(item => item.type && item.type.toLowerCase().includes('particle'));
       expect(particles).toHaveLength(0);
-      
+
       const soshite = vocabulary.find(item => item.hiragana === 'そして');
       expect(soshite).toBeDefined();
       expect(soshite?.type).toBe('conjunction');
-      
+
       const watashi = vocabulary.find(item => item.hiragana === 'わたし');
       expect(watashi).toBeDefined();
       expect(watashi?.type).toBe('pronoun');
@@ -135,9 +135,9 @@ describe('Vocabulary Extraction', () => {
 
     it('should handle files with no vocabulary tables', () => {
       const emptyFile = path.join(fixturesDir, 'empty-lesson.md');
-      
+
       fs.writeFileSync(emptyFile, '# Empty Lesson\n\nNo vocabulary here.');
-      
+
       const vocabulary = extractVocabularyFromFile(emptyFile);
       expect(vocabulary).toHaveLength(0);
 
@@ -149,19 +149,19 @@ describe('Vocabulary Extraction', () => {
       const vocabulary = extractVocabularyFromFile(filePath);
 
       expect(vocabulary.length).toBeGreaterThan(0);
-      
-      const emojiOnlyItems = vocabulary.filter(item => 
-        item.hiragana.match(/^[\p{Emoji}\s]+$/u)
+
+      const emojiOnlyItems = vocabulary.filter(item =>
+        item.hiragana.match(/^[\p{Emoji}\s]+$/u),
       );
       expect(emojiOnlyItems).toHaveLength(0);
-      
+
       const hiraganaList = vocabulary.map(item => item.hiragana);
       expect(hiraganaList).toContain('ちち');
       expect(hiraganaList).toContain('はは');
       expect(hiraganaList).toContain('いえ');
       expect(hiraganaList).toContain('げつようび');
       expect(hiraganaList).toContain('かようび');
-      
+
       vocabulary.forEach(item => {
         expect(item).toHaveProperty('id');
         expect(item).toHaveProperty('hiragana');
@@ -170,17 +170,17 @@ describe('Vocabulary Extraction', () => {
         expect(item).toHaveProperty('type');
         expect(item).toHaveProperty('category');
         expect(item).toHaveProperty('tags');
-        
+
         expect(item.hiragana).not.toMatch(/^[\p{Emoji}\s]+$/u);
       });
-      
+
       const chichiItem = vocabulary.find(item => item.hiragana === 'ちち');
       expect(chichiItem).toMatchObject({
         hiragana: 'ちち',
         kanji: '父',
         romaji: 'chichi',
         meaning: 'father',
-        type: 'noun'
+        type: 'noun',
       });
     });
 
@@ -192,22 +192,22 @@ describe('Vocabulary Extraction', () => {
       expect(chichiItem).toBeDefined();
       expect(chichiItem?.meaning).toBe('father');
       expect(chichiItem?.meaning).not.toContain('👨');
-      
+
       const hahaItem = vocabulary.find(item => item.hiragana === 'はは');
       expect(hahaItem).toBeDefined();
       expect(hahaItem?.meaning).toBe('mother');
       expect(hahaItem?.meaning).not.toContain('👩');
-      
+
       const ieItem = vocabulary.find(item => item.hiragana === 'いえ');
       expect(ieItem).toBeDefined();
       expect(ieItem?.meaning).toBe('house');
       expect(ieItem?.meaning).not.toContain('🏠');
-      
+
       const getsuyoubiItem = vocabulary.find(item => item.hiragana === 'げつようび');
       expect(getsuyoubiItem).toBeDefined();
       expect(getsuyoubiItem?.meaning).toBe('Monday');
       expect(getsuyoubiItem?.meaning).not.toContain('🌙');
-      
+
       vocabulary.forEach(item => {
         expect(item.meaning).not.toMatch(/[\u{1F300}-\u{1F9FF}]|[\u{1F600}-\u{1F64F}]|[\u{2600}-\u{26FF}]|[\u{2700}-\u{27BF}]/u);
       });
@@ -239,14 +239,14 @@ describe('Vocabulary Extraction', () => {
     it('should correctly extract time vocabulary with emoji columns without column misalignment', () => {
       const filePath = path.join(fixturesDir, 'time-with-emojis.md');
       const vocabulary = extractVocabularyFromFile(filePath);
-      
+
       expect(vocabulary).toHaveLength(7);
-      
-      const emojiInHiragana = vocabulary.filter(item => 
-        item.hiragana && /[📅⬅️➡️]/.test(item.hiragana)
+
+      const emojiInHiragana = vocabulary.filter(item =>
+        item.hiragana && /[📅⬅️➡️]/.test(item.hiragana),
       );
       expect(emojiInHiragana).toHaveLength(0);
-      
+
       const ototoiItem = vocabulary.find(item => item.hiragana === 'おととい');
       expect(ototoiItem).toBeDefined();
       expect(ototoiItem).toMatchObject({
@@ -254,9 +254,9 @@ describe('Vocabulary Extraction', () => {
         kanji: '一昨日',
         romaji: 'ototoi',
         meaning: 'day before yesterday',
-        type: 'noun'
+        type: 'noun',
       });
-      
+
       const kyouItem = vocabulary.find(item => item.hiragana === 'きょう');
       expect(kyouItem).toBeDefined();
       expect(kyouItem).toMatchObject({
@@ -264,16 +264,16 @@ describe('Vocabulary Extraction', () => {
         kanji: '今日',
         romaji: 'kyou',
         meaning: 'today',
-        type: 'noun'
+        type: 'noun',
       });
 
       expect(kyouItem?.meaning).toBe('today');
       expect(kyouItem?.meaning).not.toContain('📅');
-      
+
       const kinouItem = vocabulary.find(item => item.hiragana === 'きのう');
       expect(kinouItem?.meaning).toBe('yesterday');
       expect(kinouItem?.meaning).not.toContain('⬅️');
-      
+
       vocabulary.forEach(item => {
         expect(item.hiragana).not.toMatch(/[⬅️➡️📅🌙🔥💧🌳⭐🌍☀️]/);
         expect(item.meaning).not.toMatch(/[\u{1F300}-\u{1F9FF}]|[\u{1F600}-\u{1F64F}]|[\u{2600}-\u{26FF}]|[\u{2700}-\u{27BF}]/u);
@@ -288,9 +288,9 @@ describe('Vocabulary Extraction', () => {
 
       const ids = vocabulary.map(item => item.id);
       const uniqueIds = new Set(ids);
-      
+
       expect(uniqueIds.size).toBe(ids.length);
-      
+
       const idParts = ids.map(id => {
         const parts = id.split('_');
         const prefix = parts.slice(0, -1).join('_');
@@ -327,7 +327,7 @@ describe('Vocabulary Extraction', () => {
       const merged = mergeVocabulary(existing, extracted);
 
       expect(merged.vocabulary).toHaveLength(2);
-      
+
       const redItem = merged.vocabulary.find(item => item.hiragana === 'あか');
       expect(redItem?.id).toBe('existing_0');
       expect(redItem?.tags).toContain('existing');
@@ -340,7 +340,7 @@ describe('Vocabulary Extraction', () => {
     it('should merge categories correctly', () => {
       const { existing, extracted } = createCategoryMergeTestData();
       const merged = mergeVocabulary(existing, extracted);
-      
+
       expect(merged.categories).toContain('colors');
       expect(merged.categories).toContain('food');
       expect(merged.categories).toContain('tastes');
@@ -350,7 +350,7 @@ describe('Vocabulary Extraction', () => {
     it('should preserve existing sort options', () => {
       const { existing, extracted } = createSortOptionsTestData();
       const merged = mergeVocabulary(existing, extracted);
-      
+
       expect(merged.sortOptions).toEqual(existing.sortOptions);
     });
 
@@ -363,7 +363,7 @@ describe('Vocabulary Extraction', () => {
           meaning: 'red',
           type: 'い-adjective',
           category: 'colors',
-          tags: ['colors']
+          tags: ['colors'],
         }),
         createTestVocabularyItem({
           id: 'existing_2',
@@ -372,7 +372,7 @@ describe('Vocabulary Extraction', () => {
           meaning: 'topic marker',
           type: 'particle',
           category: 'grammar',
-          tags: ['grammar']
+          tags: ['grammar'],
         }),
         createTestVocabularyItem({
           id: 'existing_3',
@@ -381,8 +381,8 @@ describe('Vocabulary Extraction', () => {
           meaning: 'subject marker',
           type: 'particle',
           category: 'grammar',
-          tags: ['grammar']
-        })
+          tags: ['grammar'],
+        }),
       ], { categories: ['colors', 'grammar'] });
 
       const extracted = createTestVocabularyData([
@@ -393,19 +393,19 @@ describe('Vocabulary Extraction', () => {
           meaning: 'blue',
           type: 'い-adjective',
           category: 'colors',
-          tags: ['colors']
-        })
+          tags: ['colors'],
+        }),
       ], { categories: ['colors'] });
 
       const merged = mergeVocabulary(existing, extracted);
-      
+
       expect(merged.vocabulary).toHaveLength(2);
-      
-      const particles = merged.vocabulary.filter(item => 
-        item.type && item.type.toLowerCase().includes('particle')
+
+      const particles = merged.vocabulary.filter(item =>
+        item.type && item.type.toLowerCase().includes('particle'),
       );
       expect(particles).toHaveLength(0);
-      
+
       expect(merged.vocabulary.find(item => item.hiragana === 'あか')).toBeDefined();
       expect(merged.vocabulary.find(item => item.hiragana === 'あお')).toBeDefined();
     });
@@ -460,10 +460,10 @@ describe('Vocabulary Extraction', () => {
         const merged = mergeVocabulary(existing, extracted);
 
         expect(merged.vocabulary).toHaveLength(3);
-        
+
         expect(merged.vocabulary.find(item => item.id === 'existing_0')).toBeDefined();
         expect(merged.vocabulary.find(item => item.id === 'existing_1')).toBeDefined();
-        
+
         expect(merged.vocabulary.find(item => item.id === 'extracted_0')).toBeDefined();
       });
     });
@@ -472,7 +472,7 @@ describe('Vocabulary Extraction', () => {
       it('should handle empty vocabulary lists', () => {
         const empty = createEmptyTestData();
         const merged = mergeVocabulary(empty, empty);
-        
+
         expect(merged.vocabulary).toHaveLength(0);
         expect(merged.categories).toContain('all');
       });
@@ -490,22 +490,22 @@ describe('Vocabulary Extraction', () => {
     it('should scan all lesson files in a directory', () => {
       const testLessonsDir = path.join(__dirname, 'test-lessons');
       const testVocabDir = path.join(testLessonsDir, 'vocabulary');
-      
+
       fs.mkdirSync(testVocabDir, { recursive: true });
-      
+
       fs.copyFileSync(
         path.join(fixturesDir, 'basic-colors.md'),
-        path.join(testVocabDir, 'colors.md')
+        path.join(testVocabDir, 'colors.md'),
       );
       fs.copyFileSync(
         path.join(fixturesDir, 'tastes.md'),
-        path.join(testVocabDir, 'tastes.md')
+        path.join(testVocabDir, 'tastes.md'),
       );
-      
+
       process.env.TEST_LESSONS_DIR = testLessonsDir;
 
       const result = scanAllLessons();
-      
+
       expect(result.vocabulary).toHaveLength(9);
       expect(result.categories).toContain('vocabulary');
       expect(result.sortOptions).toHaveLength(4);
@@ -514,18 +514,18 @@ describe('Vocabulary Extraction', () => {
     it('should return consistently ordered results across multiple calls', () => {
       const testLessonsDir = path.join(__dirname, 'test-lessons');
       const testVocabDir = path.join(testLessonsDir, 'vocabulary');
-      
+
       fs.mkdirSync(testVocabDir, { recursive: true });
-      
+
       fs.copyFileSync(
         path.join(fixturesDir, 'basic-colors.md'),
-        path.join(testVocabDir, 'colors.md')
+        path.join(testVocabDir, 'colors.md'),
       );
       fs.copyFileSync(
         path.join(fixturesDir, 'tastes.md'),
-        path.join(testVocabDir, 'tastes.md')
+        path.join(testVocabDir, 'tastes.md'),
       );
-      
+
       process.env.TEST_LESSONS_DIR = testLessonsDir;
 
       const result1 = scanAllLessons();
@@ -539,7 +539,7 @@ describe('Vocabulary Extraction', () => {
       expect(result1.categories).toEqual(result2.categories);
       expect(result2.categories).toEqual(result3.categories);
       expect(result1.categories).toEqual(result3.categories);
-      
+
       const sortedCategories = [...result1.categories].sort();
       expect(result1.categories).toEqual(sortedCategories);
 
@@ -550,7 +550,7 @@ describe('Vocabulary Extraction', () => {
       for (let i = 1; i < result1.vocabulary.length; i++) {
         const prev = result1.vocabulary[i - 1];
         const curr = result1.vocabulary[i];
-        
+
         const fileCompare = prev.tags[0].localeCompare(curr.tags[0]);
         if (fileCompare === 0) {
           expect(prev.id.localeCompare(curr.id)).toBeLessThanOrEqual(0);
@@ -571,13 +571,13 @@ describe('Vocabulary Extraction', () => {
           meaning: 'test',
           type: 'noun',
           category: 'general',
-          tags: ['existing']
-        })
-      ], { 
+          tags: ['existing'],
+        }),
+      ], {
         categories: ['general'],
         sortOptions: [
-          { value: 'hiragana', label: 'Hiragana (A-Z)' }
-        ]
+          { value: 'hiragana', label: 'Hiragana (A-Z)' },
+        ],
       });
 
       fs.writeFileSync(testVocabularyFile, yaml.dump(testData));
@@ -590,8 +590,8 @@ describe('Vocabulary Extraction', () => {
           meaning: 'red',
           type: 'い-adjective',
           category: 'vocabulary',
-          tags: ['colors']
-        })
+          tags: ['colors'],
+        }),
       ], { categories: ['vocabulary'] });
 
       const merged = mergeVocabulary(testData, extracted);
@@ -603,12 +603,12 @@ describe('Vocabulary Extraction', () => {
 
     it('should validate vocabulary file structure', () => {
       const vocabularyFile = path.join(__dirname, '../../src/data/vocabulary.yaml');
-      
+
       expect(fs.existsSync(vocabularyFile)).toBe(true);
-      
+
       const content = fs.readFileSync(vocabularyFile, 'utf8');
       const data = yaml.load(content) as VocabularyData;
-      
+
       expect(data).toHaveProperty('vocabulary');
       expect(data).toHaveProperty('categories');
       expect(data).toHaveProperty('sortOptions');
@@ -619,15 +619,15 @@ describe('Vocabulary Extraction', () => {
 
     it('should have no duplicate vocabulary entries', () => {
       const vocabularyFile = path.join(__dirname, '../../src/data/vocabulary.yaml');
-      
+
       expect(fs.existsSync(vocabularyFile)).toBe(true);
-      
+
       const content = fs.readFileSync(vocabularyFile, 'utf8');
       const data = yaml.load(content) as VocabularyData;
-      
+
       const contentKeys = new Set<string>();
       const duplicates: Array<{ index: number; item: VocabularyItem; key: string }> = [];
-      
+
       data.vocabulary.forEach((item, index) => {
         const key = `${item.hiragana}-${item.romaji}-${item.meaning}`.toLowerCase();
         if (contentKeys.has(key)) {
@@ -636,44 +636,44 @@ describe('Vocabulary Extraction', () => {
           contentKeys.add(key);
         }
       });
-      
+
       expect(duplicates).toHaveLength(0);
     });
 
     it('should not have emoji characters in hiragana fields of vocabulary.yaml', () => {
       const vocabularyFile = path.join(__dirname, '../../src/data/vocabulary.yaml');
-      
+
       expect(fs.existsSync(vocabularyFile)).toBe(true);
-      
+
       const content = fs.readFileSync(vocabularyFile, 'utf8');
       const data = yaml.load(content) as VocabularyData;
-      
+
       const emojiRegex = /[📅⬅️➡️🎉🔁🌙🔥💧🌳⭐🌍☀️🌅🌞🌇🌑👨👩👴👵👰🤵💑💔💕🏠]/;
       const itemsWithEmojiInHiragana: VocabularyItem[] = [];
-      
+
       data.vocabulary.forEach(item => {
         if (item.hiragana && emojiRegex.test(item.hiragana)) {
           itemsWithEmojiInHiragana.push(item);
         }
       });
-      
+
       expect(itemsWithEmojiInHiragana).toHaveLength(0);
-      
+
       const arrowEmojiRegex = /[⬅️➡️]/;
-      const itemsWithArrowEmojiInHiragana = data.vocabulary.filter(item => 
-        item.hiragana && arrowEmojiRegex.test(item.hiragana)
+      const itemsWithArrowEmojiInHiragana = data.vocabulary.filter(item =>
+        item.hiragana && arrowEmojiRegex.test(item.hiragana),
       );
-      
+
       expect(itemsWithArrowEmojiInHiragana).toHaveLength(0);
     });
 
     it('should extract vocabulary from real lesson files', () => {
       const result = scanAllLessons();
-      
+
       expect(result.vocabulary.length).toBeGreaterThan(0);
       expect(result.categories.length).toBeGreaterThan(0);
       expect(result.sortOptions.length).toBeGreaterThan(0);
-      
+
       result.vocabulary.forEach(item => {
         expect(item).toHaveProperty('id');
         expect(item).toHaveProperty('hiragana');
@@ -694,7 +694,7 @@ describe('Vocabulary Extraction', () => {
           meaning: 'red',
           type: 'い-adjective',
           category: 'vocabulary',
-          tags: ['colors']
+          tags: ['colors'],
         }),
         createTestVocabularyItem({
           id: 'existing_2',
@@ -703,8 +703,8 @@ describe('Vocabulary Extraction', () => {
           meaning: 'blue',
           type: 'い-adjective',
           category: 'vocabulary',
-          tags: ['colors']
-        })
+          tags: ['colors'],
+        }),
       ], { categories: ['vocabulary'] });
 
       const extracted = createTestVocabularyData([
@@ -715,7 +715,7 @@ describe('Vocabulary Extraction', () => {
           meaning: 'red',
           type: 'い-adjective',
           category: 'vocabulary',
-          tags: ['colors']
+          tags: ['colors'],
         }),
         createTestVocabularyItem({
           id: 'existing_2',
@@ -724,8 +724,8 @@ describe('Vocabulary Extraction', () => {
           meaning: 'blue',
           type: 'い-adjective',
           category: 'vocabulary',
-          tags: ['colors']
-        })
+          tags: ['colors'],
+        }),
       ], { categories: ['vocabulary'] });
 
       const firstMerge = mergeVocabulary(existing, extracted);
@@ -740,7 +740,6 @@ describe('Vocabulary Extraction', () => {
       expect(firstMerge.vocabulary[1].id).toBe('existing_1');
       expect(firstMerge.vocabulary[1].hiragana).toBe('あお');
     });
-
 
     it('should work with any section heading', () => {
       const testFile = path.join(fixturesDir, 'custom-section.md');
@@ -761,7 +760,7 @@ title: Custom Section Test
       fs.writeFileSync(testFile, testContent);
 
       const vocabulary = extractVocabularyFromFile(testFile);
-      
+
       expect(vocabulary).toHaveLength(2);
       expect(vocabulary[0].hiragana).toBe('テスト');
       expect(vocabulary[1].hiragana).toBe('サンプル');

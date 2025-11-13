@@ -1,5 +1,5 @@
-import type {ReactNode} from 'react';
 import Link from '@docusaurus/Link';
+import type {ReactNode} from 'react';
 import styles from './styles.module.css';
 
 export interface LessonItem {

@@ -1,5 +1,5 @@
-import { test, expect } from '@playwright/test';
-import { verifyPageIsFound, verifyPageExists } from './helpers/pageHelper';
+import { expect, test } from '@playwright/test';
+import { verifyPageExists, verifyPageIsFound } from './helpers/pageHelper';
 
 test.describe('Links', () => {
   test.describe('Vocabulary Lessons Navigation', () => {
@@ -112,9 +112,9 @@ test.describe('Links', () => {
       test('should have valid href attributes for all vocabulary sidebar links', async ({ page }) => {
         const vocabularyLinks = page.locator('a.menu__link[href$="/vocabulary/"]');
         const linkCount = await vocabularyLinks.count();
-        
+
         expect(linkCount).toBeGreaterThan(0);
-        
+
         for (let i = 0; i < linkCount; i++) {
           const link = vocabularyLinks.nth(i);
           const href = await link.getAttribute('href');
@@ -126,13 +126,13 @@ test.describe('Links', () => {
       test('should have valid href attributes for all vocabulary card links', async ({ page }) => {
         const cardLinks = page.locator('a[class*="lessonCard"]');
         const linkCount = await cardLinks.count();
-        
+
         expect(linkCount).toBeGreaterThan(0);
-        
+
         for (let i = 0; i < linkCount; i++) {
           const link = cardLinks.nth(i);
           await expect(link).toBeVisible();
-          
+
           const href = await link.getAttribute('href');
           expect(href).toBeTruthy();
           expect(href).toMatch(/\/(docs\/lessons|japanese\/docs\/lessons)/);
@@ -160,9 +160,9 @@ test.describe('Links', () => {
       await expect(header).toBeVisible();
 
       const headerLinks = header.locator('a').filter({
-        has: page.locator('[href]')
+        has: page.locator('[href]'),
       }).filter({
-        hasNotText: /^$/
+        hasNotText: /^$/,
       });
 
       const linkCount = await headerLinks.count();
@@ -172,7 +172,7 @@ test.describe('Links', () => {
         const link = headerLinks.nth(i);
         const href = await link.getAttribute('href');
         const linkText = await link.textContent();
-        
+
         console.log(`Testing header link: ${linkText?.trim()} (${href})`);
 
         await link.click();
@@ -195,9 +195,9 @@ test.describe('Links', () => {
       await expect(footer).toBeVisible();
 
       const footerLinks = footer.locator('a').filter({
-        has: page.locator('[href]')
+        has: page.locator('[href]'),
       }).filter({
-        hasNotText: /^$/
+        hasNotText: /^$/,
       });
 
       const linkCount = await footerLinks.count();
@@ -207,7 +207,7 @@ test.describe('Links', () => {
         const link = footerLinks.nth(i);
         const href = await link.getAttribute('href');
         const linkText = await link.textContent();
-        
+
         console.log(`Testing footer link: ${linkText?.trim()} (${href})`);
 
         await link.click();

@@ -1,4 +1,4 @@
-import { expect, Page } from '@playwright/test';
+import { Page, expect } from '@playwright/test';
 
 /**
  * Helper: Verify that a page has loaded successfully (not a 404 page)

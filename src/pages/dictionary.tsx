@@ -1,8 +1,8 @@
-import React, { useState, useMemo } from 'react';
-import Layout from '@theme/Layout';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import styles from './dictionary.module.css';
+import Layout from '@theme/Layout';
+import React, { useMemo, useState } from 'react';
 import vocabularyYamlData from '../data/vocabulary.yaml';
+import styles from './dictionary.module.css';
 
 interface VocabularyItem {
   id: string;
@@ -29,8 +29,8 @@ export default function Vocabulary(): React.JSX.Element {
   const [showOnlyKatakana, setShowOnlyKatakana] = useState(false);
 
   const filteredAndSortedVocabulary = useMemo(() => {
-    let filtered = vocabularyData.filter(item => {
-      const matchesSearch = 
+    const filtered = vocabularyData.filter(item => {
+      const matchesSearch =
         item.hiragana?.toLowerCase().includes(searchTerm.toLowerCase()) ||
         item.katakana?.toLowerCase().includes(searchTerm.toLowerCase()) ||
         item.kanji?.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -39,7 +39,7 @@ export default function Vocabulary(): React.JSX.Element {
         item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
 
       const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-      
+
       const matchesHiragana = !showOnlyHiragana || item.hiragana;
       const matchesKatakana = !showOnlyKatakana || item.katakana;
 
@@ -71,7 +71,7 @@ export default function Vocabulary(): React.JSX.Element {
           <div className="col col--12">
             <h1>Japanese Vocabulary</h1>
             <p>Search and explore Japanese vocabulary with hiragana, katakana, kanji, and romaji.</p>
-            
+
             {/* Search and Filter Controls */}
             <div className={styles.controls}>
               <div className={styles.searchBox}>
@@ -83,7 +83,7 @@ export default function Vocabulary(): React.JSX.Element {
                   className={styles.searchInput}
                 />
               </div>
-              
+
               <div className={styles.filters}>
                 <select
                   value={selectedCategory}
@@ -96,7 +96,7 @@ export default function Vocabulary(): React.JSX.Element {
                     </option>
                   ))}
                 </select>
-                
+
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
@@ -108,7 +108,7 @@ export default function Vocabulary(): React.JSX.Element {
                     </option>
                   ))}
                 </select>
-                
+
                 <label className={styles.checkboxLabel}>
                   <input
                     type="checkbox"
@@ -117,7 +117,7 @@ export default function Vocabulary(): React.JSX.Element {
                   />
                   Hiragana only
                 </label>
-                
+
                 <label className={styles.checkboxLabel}>
                   <input
                     type="checkbox"
@@ -158,8 +158,8 @@ export default function Vocabulary(): React.JSX.Element {
                     {item.tags.map(tag => {
                       const tagUrl = `${baseUrl}docs/lessons/vocabulary/${tag}`;
                       return (
-                        <a 
-                          key={tag} 
+                        <a
+                          key={tag}
                           href={tagUrl}
                           className={styles.tag}
                           onClick={(e) => {

@@ -1,6 +1,7 @@
-import type {ReactNode} from 'react';
-import clsx from 'clsx';
 import Heading from '@theme/Heading';
+import clsx from 'clsx';
+import React from 'react';
+import type {ReactNode} from 'react';
 import styles from './styles.module.css';
 
 type FeatureItem = {
@@ -15,7 +16,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Learn Japanese step-by-step with organized lessons covering hiragana, katakana, 
+        Learn Japanese step-by-step with organized lessons covering hiragana, katakana,
         grammar, and vocabulary. Each lesson builds upon the previous one.
       </>
     ),
@@ -25,7 +26,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Search and explore Japanese vocabulary with our comprehensive database. 
+        Search and explore Japanese vocabulary with our comprehensive database.
         Filter by category, search by meaning, and practice with hiragana, katakana, and kanji.
       </>
     ),
@@ -35,7 +36,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Access kana charts, conjugation tables, and grammar references instantly. 
+        Access kana charts, conjugation tables, and grammar references instantly.
         Perfect for quick lookups while studying or practicing.
       </>
     ),

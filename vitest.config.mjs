@@ -1,6 +1,6 @@
-import { defineConfig } from 'vitest/config';
-import { fileURLToPath } from 'url';
 import { dirname, resolve } from 'path';
+import { fileURLToPath } from 'url';
+import { defineConfig } from 'vitest/config';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -20,20 +20,20 @@ export default defineConfig({
         'node_modules/',
         'tests/',
         '**/*.test.{js,ts,tsx}',
-        '**/*.config.js'
-      ]
+        '**/*.config.js',
+      ],
     },
     mockReset: true,
-    clearMocks: true
+    clearMocks: true,
   },
   resolve: {
     alias: {
       '@theme': resolve(__dirname, 'tests/__mocks__/@theme'),
       '@docusaurus/useBaseUrl': resolve(__dirname, 'tests/__mocks__/@docusaurus/useBaseUrl'),
-      '@docusaurus': resolve(__dirname, 'node_modules/@docusaurus')
-    }
+      '@docusaurus': resolve(__dirname, 'node_modules/@docusaurus'),
+    },
   },
   define: {
-    'process.env.NODE_ENV': '"test"'
-  }
+    'process.env.NODE_ENV': '"test"',
+  },
 });
