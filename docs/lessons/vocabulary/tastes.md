@@ -13,51 +13,51 @@ Learning how to describe tastes and flavors is essential for talking about food 
 
 ### Five Basic Tastes
 
-| | Hiragana | Kanji | Romaji | English | Type |
-|---|---|--------|--------|---------|------|
-| 🍬 | あまい | 甘い | amai | sweet | い-adjective |
-| 🌶️ | からい | 辛い | karai | spicy, hot | い-adjective |
-| ☕ | にがい | 苦い | nigai | bitter | い-adjective |
-| 🍋 | すっぱい | 酸っぱい | suppai | sour | い-adjective |
-| 🧂 | しおからい | 塩辛い | shiokarai | salty | い-adjective |
+| Hiragana | Kanji | Romaji    | English        | Type        |
+|----------|-------|-----------|----------------|-------------|
+| あまい      | 甘い    | amai      | 🍬 sweet       | い-adjective |
+| からい      | 辛い    | karai     | 🌶️ spicy, hot | い-adjective |
+| にがい      | 苦い    | nigai     | ☕ bitter       | い-adjective |
+| すっぱい     | 酸っぱい  | suppai    | 🍋 sour        | い-adjective |
+| しおからい    | 塩辛い   | shiokarai | 🧂 salty       | い-adjective |
 
 ### Taste and Texture
 
-| | Hiragana | Kanji | Romaji | English | Type |
-|---|---|--------|--------|---------|------|
-| 😋 | おいしい | 美味しい | oishii | delicious, tasty | い-adjective |
-| 👍 | うまい | 旨い | umai | delicious (casual) | い-adjective |
-| 😞 | まずい | 不味い | mazui | bad-tasting, awful | い-adjective |
-| 🍞 | やわらかい | 柔らかい | yawarakai | soft, tender | い-adjective |
-| 🥜 | かたい | 硬い | katai | hard, firm | い-adjective |
-| 🥨 | さくさく | - | sakusaku | crispy, crunchy | adverb |
-| 🍡 | ねばねば | - | nebaneba | sticky, gooey | adverb |
+| Hiragana | Kanji | Romaji    | English               | Type        |
+|----------|-------|-----------|-----------------------|-------------|
+| おいしい     | 美味しい  | oishii    | 😋 delicious, tasty   | い-adjective |
+| うまい      | 旨い    | umai      | 👍 delicious (casual) | い-adjective |
+| まずい      | 不味い   | mazui     | 😞 bad-tasting, awful | い-adjective |
+| やわらかい    | 柔らかい  | yawarakai | 🍞 soft, tender       | い-adjective |
+| かたい      | 硬い    | katai     | 🥜 hard, firm         | い-adjective |
+| さくさく     | -     | sakusaku  | 🥨 crispy, crunchy    | adverb      |
+| ねばねば     | -     | nebaneba  | 🍡 sticky, gooey      | adverb      |
 
 ### Food Items (Examples)
 
-| | Hiragana | Kanji | Romaji | English | Type |
-|---|---|--------|--------|---------|------|
-| 🍰 | ケーキ | - | keeki | cake | noun |
-| 🍛 | カレー | - | karee | curry | noun |
-| ☕ | コーヒー | - | koohii | coffee | noun |
-| 🍋 | レモン | - | remon | lemon | noun |
-| 🍲 | スープ | - | suupu | soup | noun |
-| 🍎 | りんご | 林檎 | ringo | apple | noun |
-| 🍕 | ピザ | - | piza | pizza | noun |
-| 🍫 | チョコレート | - | chokoreeto | chocolate | noun |
-| 🍓 | 果物 | くだもの | kudamono | fruit | noun |
-| 🍜 | 料理 | りょうり | ryouri | dish, cooking | noun |
-| 🍱 | 食べ物 | たべもの | tabemono | food | noun |
-| 💊 | 薬 | くすり | kusuri | medicine | noun |
-| 👅 | 味 | あじ | aji | taste, flavor | noun |
+| Hiragana | Kanji | Romaji     | English          | Type |
+|----------|-------|------------|------------------|------|
+| ケーキ      | -     | keeki      | 🍰 cake          | noun |
+| カレー      | -     | karee      | 🍛 curry         | noun |
+| コーヒー     | -     | koohii     | ☕ coffee         | noun |
+| レモン      | -     | remon      | 🍋 lemon         | noun |
+| スープ      | -     | suupu      | 🍲 soup          | noun |
+| りんご      | 林檎    | ringo      | 🍎 apple         | noun |
+| ピザ       | -     | piza       | 🍕 pizza         | noun |
+| チョコレート   | -     | chokoreeto | 🍫 chocolate     | noun |
+| くだもの     | 果物    | kudamono   | 🍓 fruit         | noun |
+| りょうり     | 料理    | ryouri     | 🍜 dish, cooking | noun |
+| たべもの     | 食べ物   | tabemono   | 🍱 food          | noun |
+| くすり      | 薬     | kusuri     | 💊 medicine      | noun |
+| あじ       | 味     | aji        | 👅 taste, flavor | noun |
 
 ### Taste Combinations
 
-| | Hiragana | Kanji | Romaji | English | Type |
-|---|---|--------|--------|---------|------|
-| 🍯🌶️ | 甘辛い | 甘辛い | amakarai | sweet and spicy | い-adjective |
-| 🍋🍬 | 酸っぱ甘い | 酸っぱ甘い | suppaamai | sweet and sour | い-adjective |
-| 🍯🍋 | 甘酸っぱい | 甘酸っぱい | amasuppai | sweet and sour (alternative) | い-adjective |
+| Hiragana | Kanji | Romaji    | English                           | Type        |
+|----------|-------|-----------|-----------------------------------|-------------|
+| あまからい    | 甘辛い   | amakarai  | 🍯🌶️ sweet and spicy             | い-adjective |
+| すっぱあまい   | 酸っぱ甘い | suppaamai | 🍋🍬 sweet and sour               | い-adjective |
+| あますっぱい   | 甘酸っぱい | amasuppai | 🍯🍋 sweet and sour (alternative) | い-adjective |
 
 ## Using Taste Adjectives in Sentences
 

@@ -16,14 +16,16 @@ const VOCAB_TABLE_PATTERN = /## [^#\n]+[\s\S]*?(\|.*?Hiragana.*?\|[\s\S]*?)(?=\n
 function extractVocabularyFromFile(filePath) {
   const content = fs.readFileSync(filePath, 'utf8');
   const vocabulary = [];
+  let itemCounter = 0;
   
   let match;
   while ((match = VOCAB_TABLE_PATTERN.exec(content)) !== null) {
     const tableContent = match[1];
     
     if (isVocabularyTable(tableContent)) {
-      const extracted = extractFromTable(tableContent, filePath);
+      const extracted = extractFromTable(tableContent, filePath, itemCounter);
       vocabulary.push(...extracted);
+      itemCounter += extracted.length;
     }
   }
   
@@ -73,6 +75,31 @@ function isParticle(type) {
 }
 
 /**
+ * Strip emoji characters from a string.
+ * Uses a whitelist approach: keep only letters (including accented), numbers, spaces, and common punctuation.
+ * Also removes leading numbers with optional spaces (e.g., "8 August" becomes "August").
+ * @param {string} text - The text to strip emojis from
+ * @returns {string} The text with emojis removed
+ */
+function stripEmojis(text) {
+  if (!text) return text;
+  // Whitelist approach: keep only:
+  // - Letters (including Unicode letters for accents: à, é, ñ, etc.) - \p{L}
+  // - Numbers (0-9) - \p{N}
+  // - Spaces - \s
+  // - Common punctuation: . , - ' ( ) : ; / &
+  // Note: This removes emoji styling characters but keeps base characters (e.g., "8️⃣" -> "8")
+  // because the base digit "8" (U+0038) matches \p{N} and is kept as a valid number
+  text = text.replace(/[^\p{L}\p{N}\s.,'():;/&\-]/gu, '').trim();
+  
+  // Remove leading numbers followed by optional spaces (e.g., "8 August" -> "August")
+  // This is needed because keycap emojis like "8️⃣" have a digit base character that survives
+  // the whitelist filter (the emoji styling is removed, but the digit remains)
+  text = text.replace(/^\p{N}+(\s+)?/u, '');
+  return text.trim();
+}
+
+/**
  * Find the index of a column by name (case-insensitive, allows for emoji prefixes).
  * @param {Array<string>} headerCells - The header row cells
  * @param {string} columnName - The column name to find
@@ -90,9 +117,10 @@ function findColumnIndex(headerCells, columnName) {
  * Extract vocabulary from table content, filtering out particles.
  * @param {string} tableContent - The table content to extract from
  * @param {string} filePath - The file path for generating unique IDs
+ * @param {number} startIndex - The starting index for ID generation (to ensure uniqueness across tables)
  * @returns {Array<Object>} Array of vocabulary items
  */
-function extractFromTable(tableContent, filePath) {
+function extractFromTable(tableContent, filePath, startIndex = 0) {
   const vocabulary = [];
   const rows = tableContent.trim().split('\n');
   
@@ -113,7 +141,7 @@ function extractFromTable(tableContent, filePath) {
     return vocabulary;
   }
   
-  let rowIndex = 0;
+  let itemIndex = startIndex;
   
   for (let i = 1; i < rows.length; i++) {
     const row = rows[i];
@@ -127,26 +155,24 @@ function extractFromTable(tableContent, filePath) {
     const hiragana = hiraganaIdx >= 0 && hiraganaIdx < cells.length ? cells[hiraganaIdx].trim() : '';
     const kanji = kanjiIdx >= 0 && kanjiIdx < cells.length ? cells[kanjiIdx].trim() : '';
     const romaji = romajiIdx >= 0 && romajiIdx < cells.length ? cells[romajiIdx].trim() : '';
-    const english = englishIdx >= 0 && englishIdx < cells.length ? cells[englishIdx].trim() : '';
+    const englishRaw = englishIdx >= 0 && englishIdx < cells.length ? cells[englishIdx].trim() : '';
+    const english = stripEmojis(englishRaw);
     const type = typeIdx >= 0 && typeIdx < cells.length ? cells[typeIdx].trim() : '';
     
     if (!hiragana || !romaji || !english || hiragana.includes('---') || hiragana.match(/Hiragana|Kanji|Romaji|English/i)) {
-      rowIndex++;
       continue;
     }
     
     if (isParticle(type)) {
-      rowIndex++;
       continue;
     }
     
     if (hiragana.match(/^[\p{Emoji}\s]+$/u)) {
-      rowIndex++;
       continue;
     }
     
     const fileId = path.basename(filePath, '.md').replace(/[^a-zA-Z0-9]/g, '');
-    const id = `${fileId}_${rowIndex}`;
+    const id = `${fileId}_${itemIndex}`;
     
     let category = 'general';
     if (filePath.includes('/vocabulary/')) {
@@ -173,7 +199,7 @@ function extractFromTable(tableContent, filePath) {
       type: type || 'unknown'
     });
     
-    rowIndex++;
+    itemIndex++;
   }
   
   return vocabulary;
@@ -249,6 +275,70 @@ function loadExistingVocabulary() {
 }
 
 /**
+ * Compare two IDs with natural sorting (handles numeric suffixes correctly).
+ * Example: "tastes_5" < "tastes_12" (not "tastes_12" < "tastes_5").
+ * @param {string} idA - First ID to compare
+ * @param {string} idB - Second ID to compare
+ * @returns {number} Negative if idA < idB, positive if idA > idB, 0 if equal
+ */
+function compareIds(idA, idB) {
+  const partsA = idA.split('_');
+  const partsB = idB.split('_');
+  
+  const prefixA = partsA.slice(0, -1).join('_');
+  const prefixB = partsB.slice(0, -1).join('_');
+  const prefixCompare = prefixA.localeCompare(prefixB);
+  if (prefixCompare !== 0) {
+    return prefixCompare;
+  }
+  
+  const suffixA = partsA[partsA.length - 1];
+  const suffixB = partsB[partsB.length - 1];
+  const numA = parseInt(suffixA, 10);
+  const numB = parseInt(suffixB, 10);
+  
+  if (!isNaN(numA) && !isNaN(numB)) {
+    return numA - numB;
+  }
+  
+  return suffixA.localeCompare(suffixB);
+}
+
+/**
+ * Regenerate IDs to ensure they are unique and incremental per file prefix.
+ * @param {Array<Object>} vocabulary - Array of vocabulary items
+ * @returns {Array<Object>} Vocabulary items with regenerated IDs (new objects)
+ */
+function regenerateIds(vocabulary) {
+  const byPrefix = new Map();
+  
+  vocabulary.forEach(item => {
+    const parts = item.id.split('_');
+    const prefix = parts.slice(0, -1).join('_');
+    
+    if (!byPrefix.has(prefix)) {
+      byPrefix.set(prefix, []);
+    }
+    byPrefix.get(prefix).push(item);
+  });
+  
+  const result = [];
+  
+  byPrefix.forEach((items, prefix) => {
+    items.sort((a, b) => compareIds(a.id, b.id));
+    
+    items.forEach((item, index) => {
+      result.push({
+        ...item,
+        id: `${prefix}_${index}`
+      });
+    });
+  });
+  
+  return result;
+}
+
+/**
  * Merge extracted vocabulary with existing vocabulary, filtering out particles.
  * This function is idempotent - running it multiple times produces the same result.
  * @param {Object} existing - Existing vocabulary data
@@ -290,20 +380,13 @@ function mergeVocabulary(existing, extracted) {
   const allCategories = new Set([...existing.categories, ...extracted.categories]);
   
   const mergedVocabulary = Array.from(contentMap.values()).sort((a, b) => {
-    if (a.category !== b.category) {
-      return a.category.localeCompare(b.category);
-    }
-    if (a.hiragana !== b.hiragana) {
-      return a.hiragana.localeCompare(b.hiragana);
-    }
-    if (a.romaji !== b.romaji) {
-      return a.romaji.localeCompare(b.romaji);
-    }
-    return a.meaning.localeCompare(b.meaning);
+    return compareIds(a.id, b.id);
   });
 
+  const vocabularyWithRegeneratedIds = regenerateIds(mergedVocabulary);
+
   return {
-    vocabulary: mergedVocabulary,
+    vocabulary: vocabularyWithRegeneratedIds,
     categories: Array.from(allCategories).sort(),
     sortOptions: existing.sortOptions.length > 0 ? existing.sortOptions : extracted.sortOptions
   };

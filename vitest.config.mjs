@@ -6,6 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 export default defineConfig({
+  assetsInclude: ['**/*.yaml', '**/*.yml'],
   test: {
     globals: true,
     environment: 'jsdom',
@@ -28,6 +29,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@theme': resolve(__dirname, 'tests/__mocks__/@theme'),
+      '@docusaurus/useBaseUrl': resolve(__dirname, 'tests/__mocks__/@docusaurus/useBaseUrl'),
       '@docusaurus': resolve(__dirname, 'node_modules/@docusaurus')
     }
   },

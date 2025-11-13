@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import Layout from '@theme/Layout';
-import styles from './vocabulary.module.css';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import styles from './dictionary.module.css';
 import vocabularyYamlData from '../data/vocabulary.yaml';
 
 interface VocabularyItem {
@@ -20,6 +21,7 @@ const categories = vocabularyYamlData.categories;
 const sortOptions = vocabularyYamlData.sortOptions;
 
 export default function Vocabulary(): React.JSX.Element {
+  const baseUrl = useBaseUrl('/');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('hiragana');
@@ -153,19 +155,22 @@ export default function Vocabulary(): React.JSX.Element {
                     <span className={styles.category}>{item.type || 'unknown'}</span>
                   </div>
                   <div className={styles.tags}>
-                    {item.tags.map(tag => (
-                      <a 
-                        key={tag} 
-                        href={`/docs/lessons/vocabulary/${tag}`}
-                        className={styles.tag}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          window.location.href = `/docs/lessons/vocabulary/${tag}`;
-                        }}
-                      >
-                        {tag}
-                      </a>
-                    ))}
+                    {item.tags.map(tag => {
+                      const tagUrl = `${baseUrl}docs/lessons/vocabulary/${tag}`;
+                      return (
+                        <a 
+                          key={tag} 
+                          href={tagUrl}
+                          className={styles.tag}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            window.location.href = tagUrl;
+                          }}
+                        >
+                          {tag}
+                        </a>
+                      );
+                    })}
                   </div>
                 </div>
               ))}
@@ -183,3 +188,4 @@ export default function Vocabulary(): React.JSX.Element {
     </Layout>
   );
 }
+

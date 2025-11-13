@@ -13,20 +13,21 @@ Numbers are fundamental in Japanese. This lesson covers basic numbers and how to
 
 ### Cardinal Numbers
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| いち | 一 | ichi | one | noun |
-| に | 二 | ni | two | noun |
-| さん | 三 | san | three | noun |
-| よん/し | 四 | yon/shi | four | noun |
-| ご | 五 | go | five | noun |
-| ろく | 六 | roku | six | noun |
-| なな/しち | 七 | nana/shichi | seven | noun |
-| はち | 八 | hachi | eight | noun |
-| きゅう/く | 九 | kyuu/ku | nine | noun |
-| じゅう | 十 | juu | ten | noun |
+| Hiragana | Kanji | Romaji      | English | Type |
+|----------|-------|-------------|---------|------|
+| いち       | 一     | ichi        | one     | noun |
+| に        | 二     | ni          | two     | noun |
+| さん       | 三     | san         | three   | noun |
+| よん/し     | 四     | yon/shi     | four    | noun |
+| ご        | 五     | go          | five    | noun |
+| ろく       | 六     | roku        | six     | noun |
+| なな/しち    | 七     | nana/shichi | seven   | noun |
+| はち       | 八     | hachi       | eight   | noun |
+| きゅう/く    | 九     | kyuu/ku     | nine    | noun |
+| じゅう      | 十     | juu         | ten     | noun |
 
 **Notes:**
+
 - 四 (four) can be read as よん or し
 - 七 (seven) can be read as なな or しち
 - 九 (nine) can be read as きゅう or く
@@ -48,13 +49,13 @@ Numbers are fundamental in Japanese. This lesson covers basic numbers and how to
 
 ### Power of Ten Units
 
-| Hiragana | Kanji | Romaji | English | Value |
-|----------|-------|--------|---------|-------|
-| ひゃく | 百 | hyaku | hundred | 100 |
-| せん | 千 | sen | thousand | 1,000 |
-| まん | 万 | man | ten thousand | 10,000 |
-| おく | 億 | oku | hundred million | 100,000,000 |
-| ちょう | 兆 | chou | trillion | 1,000,000,000,000 |
+| Hiragana | Kanji | Romaji | English         | Value             |
+|----------|-------|--------|-----------------|-------------------|
+| ひゃく      | 百     | hyaku  | hundred         | 100               |
+| せん       | 千     | sen    | thousand        | 1,000             |
+| まん       | 万     | man    | ten thousand    | 10,000            |
+| おく       | 億     | oku    | hundred million | 100,000,000       |
+| ちょう      | 兆     | chou   | trillion        | 1,000,000,000,000 |
 
 ### Building Larger Numbers - Pattern
 
@@ -71,7 +72,7 @@ Numbers are fundamental in Japanese. This lesson covers basic numbers and how to
 
 **Hundreds (百 - hyaku):**
 - 三百 (300) → さんびゃく (sanbyaku) - changes to "byaku"
-- 六百 (600) → ろっぴゃく (roppyaku) - changes to "ppyaku"  
+- 六百 (600) → ろっぴゃく (roppyaku) - changes to "ppyaku"
 - 八百 (800) → はっぴゃく (happyaku) - changes to "ppyaku"
 
 **Thousands (千 - sen):**
@@ -86,22 +87,22 @@ Numbers are fundamental in Japanese. This lesson covers basic numbers and how to
 
 ## Vocabulary from This Lesson
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| いち | 一 | ichi | one | noun |
-| に | 二 | ni | two | noun |
-| さん | 三 | san | three | noun |
-| よん/し | 四 | yon/shi | four | noun |
-| ご | 五 | go | five | noun |
-| ろく | 六 | roku | six | noun |
-| なな/しち | 七 | nana/shichi | seven | noun |
-| はち | 八 | hachi | eight | noun |
-| きゅう/く | 九 | kyuu/ku | nine | noun |
-| じゅう | 十 | juu | ten | noun |
-| ひゃく | 百 | hyaku | hundred | noun |
-| せん | 千 | sen | thousand | noun |
-| まん | 万 | man | ten thousand | noun |
-| おく | 億 | oku | hundred million | noun |
+| Hiragana | Kanji | Romaji      | English         | Type |
+|----------|-------|-------------|-----------------|------|
+| いち       | 一     | ichi        | one             | noun |
+| に        | 二     | ni          | two             | noun |
+| さん       | 三     | san         | three           | noun |
+| よん/し     | 四     | yon/shi     | four            | noun |
+| ご        | 五     | go          | five            | noun |
+| ろく       | 六     | roku        | six             | noun |
+| なな/しち    | 七     | nana/shichi | seven           | noun |
+| はち       | 八     | hachi       | eight           | noun |
+| きゅう/く    | 九     | kyuu/ku     | nine            | noun |
+| じゅう      | 十     | juu         | ten             | noun |
+| ひゃく      | 百     | hyaku       | hundred         | noun |
+| せん       | 千     | sen         | thousand        | noun |
+| まん       | 万     | man         | ten thousand    | noun |
+| おく       | 億     | oku         | hundred million | noun |
 
 ## Cultural Notes
 

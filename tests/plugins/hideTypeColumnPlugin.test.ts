@@ -12,7 +12,7 @@ describe('hideTypeColumnPlugin', () => {
 
   it('should inject a script tag in postBodyTags', () => {
     const plugin = hideTypeColumnPlugin();
-    const htmlTags = plugin.injectHtmlTags?.();
+    const htmlTags = plugin.injectHtmlTags?.({} as any);
 
     expect(htmlTags).toBeDefined();
     expect(htmlTags?.postBodyTags).toBeDefined();
@@ -24,7 +24,7 @@ describe('hideTypeColumnPlugin', () => {
 
   it('should include the hideTypeColumns function in the script', () => {
     const plugin = hideTypeColumnPlugin();
-    const htmlTags = plugin.injectHtmlTags?.();
+    const htmlTags = plugin.injectHtmlTags?.({} as any);
     const scriptContent = htmlTags?.postBodyTags?.[0]?.innerHTML;
 
     expect(scriptContent).toBeDefined();
@@ -36,7 +36,7 @@ describe('hideTypeColumnPlugin', () => {
 
   it('should include initialization logic in the script', () => {
     const plugin = hideTypeColumnPlugin();
-    const htmlTags = plugin.injectHtmlTags?.();
+    const htmlTags = plugin.injectHtmlTags?.({} as any);
     const scriptContent = htmlTags?.postBodyTags?.[0]?.innerHTML;
 
     expect(scriptContent).toContain('function initialize()');
@@ -48,7 +48,7 @@ describe('hideTypeColumnPlugin', () => {
 
   it('should wrap the code in an IIFE', () => {
     const plugin = hideTypeColumnPlugin();
-    const htmlTags = plugin.injectHtmlTags?.();
+    const htmlTags = plugin.injectHtmlTags?.({} as any);
     const scriptContent = htmlTags?.postBodyTags?.[0]?.innerHTML;
 
     expect(scriptContent).toContain('(function() {');
@@ -57,7 +57,7 @@ describe('hideTypeColumnPlugin', () => {
 
   it('should handle navigation events', () => {
     const plugin = hideTypeColumnPlugin();
-    const htmlTags = plugin.injectHtmlTags?.();
+    const htmlTags = plugin.injectHtmlTags?.({} as any);
     const scriptContent = htmlTags?.postBodyTags?.[0]?.innerHTML;
 
     expect(scriptContent).toContain('popstate');

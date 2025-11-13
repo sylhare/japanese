@@ -121,7 +121,7 @@ const config: Config = {
           position: 'left',
           label: 'Lessons',
         },
-        {to: '/vocabulary', label: 'Dictionary', position: 'left'},
+        {to: '/dictionary', label: 'Dictionary', position: 'left'},
         {
           type: 'doc',
           docId: 'reference/index',
@@ -142,16 +142,16 @@ const config: Config = {
           title: 'Lessons',
           items: [
             {
-              label: 'Getting Started',
+              label: 'Lessons',
               to: '/docs/lessons/intro',
             },
             {
               label: 'Grammar',
-              to: '/docs/lessons/grammar/conjugation',
+              to: '/docs/lessons/grammar',
             },
             {
               label: 'Vocabulary',
-              to: '/vocabulary',
+              to: 'docs/lessons/vocabulary/',
             },
           ],
         },
@@ -159,8 +159,8 @@ const config: Config = {
           title: 'Resources',
           items: [
             {
-              label: 'Vocabulary System',
-              to: '/vocabulary',
+              label: 'Dictionary',
+              to: '/dictionary',
             },
             {
               label: 'Hiragana Chart',

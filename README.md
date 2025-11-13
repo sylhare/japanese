@@ -26,17 +26,17 @@ npm run dev
 
 4. Open your browser and navigate to `http://localhost:3000`
 
-
 ## Adding New Content
 
 ### Adding Lessons
 
 1. Create a new markdown file in the appropriate directory:
-   - [`docs/lessons/`](docs/lessons/) for main lessons
-   - [`docs/lessons/grammar/`](docs/lessons/grammar/) for grammar lessons
-   - [`docs/lessons/vocabulary/`](docs/lessons/vocabulary/) for vocabulary lessons
+    - [`docs/lessons/`](docs/lessons/) for main lessons
+    - [`docs/lessons/grammar/`](docs/lessons/grammar/) for grammar lessons
+    - [`docs/lessons/vocabulary/`](docs/lessons/vocabulary/) for vocabulary lessons
 
 2. Add frontmatter with metadata:
+
 ```markdown
 ---
 sidebar_position: 1
@@ -70,8 +70,6 @@ The vocabulary is automatically extracted from lesson files and stored in [`src/
 2. Include comprehensive tables and examples
 3. Use consistent formatting and structure
 4. Update the reference sidebar in [`sidebars.ts`](sidebars.ts)
-
-
 
 ## Content Guidelines
 

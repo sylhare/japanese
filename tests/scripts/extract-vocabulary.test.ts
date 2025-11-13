@@ -184,11 +184,63 @@ describe('Vocabulary Extraction', () => {
       });
     });
 
+    it('should strip emojis from English translations when extracting vocabulary', () => {
+      const filePath = path.join(fixturesDir, 'emoji-columns.md');
+      const vocabulary = extractVocabularyFromFile(filePath);
+
+      const chichiItem = vocabulary.find(item => item.hiragana === 'ちち');
+      expect(chichiItem).toBeDefined();
+      expect(chichiItem?.meaning).toBe('father');
+      expect(chichiItem?.meaning).not.toContain('👨');
+      
+      const hahaItem = vocabulary.find(item => item.hiragana === 'はは');
+      expect(hahaItem).toBeDefined();
+      expect(hahaItem?.meaning).toBe('mother');
+      expect(hahaItem?.meaning).not.toContain('👩');
+      
+      const ieItem = vocabulary.find(item => item.hiragana === 'いえ');
+      expect(ieItem).toBeDefined();
+      expect(ieItem?.meaning).toBe('house');
+      expect(ieItem?.meaning).not.toContain('🏠');
+      
+      const getsuyoubiItem = vocabulary.find(item => item.hiragana === 'げつようび');
+      expect(getsuyoubiItem).toBeDefined();
+      expect(getsuyoubiItem?.meaning).toBe('Monday');
+      expect(getsuyoubiItem?.meaning).not.toContain('🌙');
+      
+      vocabulary.forEach(item => {
+        expect(item.meaning).not.toMatch(/[\u{1F300}-\u{1F9FF}]|[\u{1F600}-\u{1F64F}]|[\u{2600}-\u{26FF}]|[\u{2700}-\u{27BF}]/u);
+      });
+    });
+
+    it('should remove leading numbers from meanings (e.g., "8️⃣ August" becomes "August")', () => {
+      const testFile = path.join(fixturesDir, 'time-with-emojis.md');
+      const vocabulary = extractVocabularyFromFile(testFile);
+
+      const hachigatsuItem = vocabulary.find(item => item.hiragana === 'はちがつ');
+      expect(hachigatsuItem).toBeDefined();
+      expect(hachigatsuItem?.meaning).toBe('August');
+      expect(hachigatsuItem?.meaning).not.toContain('8');
+      expect(hachigatsuItem?.meaning).not.toMatch(/^\d/);
+
+      const juuichigatsuItem = vocabulary.find(item => item.hiragana === 'じゅういちがつ');
+      expect(juuichigatsuItem).toBeDefined();
+      expect(juuichigatsuItem?.meaning).toBe('November');
+      expect(juuichigatsuItem?.meaning).not.toContain('11');
+      expect(juuichigatsuItem?.meaning).not.toMatch(/^\d/);
+
+      const rokugatsuItem = vocabulary.find(item => item.hiragana === 'ろくがつ');
+      expect(rokugatsuItem).toBeDefined();
+      expect(rokugatsuItem?.meaning).toBe('June');
+      expect(rokugatsuItem?.meaning).not.toContain('6');
+      expect(rokugatsuItem?.meaning).not.toMatch(/^\d/);
+    });
+
     it('should correctly extract time vocabulary with emoji columns without column misalignment', () => {
       const filePath = path.join(fixturesDir, 'time-with-emojis.md');
       const vocabulary = extractVocabularyFromFile(filePath);
       
-      expect(vocabulary).toHaveLength(4);
+      expect(vocabulary).toHaveLength(7);
       
       const emojiInHiragana = vocabulary.filter(item => 
         item.hiragana && /[📅⬅️➡️]/.test(item.hiragana)
@@ -214,10 +266,58 @@ describe('Vocabulary Extraction', () => {
         meaning: 'today',
         type: 'noun'
       });
+
+      expect(kyouItem?.meaning).toBe('today');
+      expect(kyouItem?.meaning).not.toContain('📅');
+      
+      const kinouItem = vocabulary.find(item => item.hiragana === 'きのう');
+      expect(kinouItem?.meaning).toBe('yesterday');
+      expect(kinouItem?.meaning).not.toContain('⬅️');
       
       vocabulary.forEach(item => {
         expect(item.hiragana).not.toMatch(/[⬅️➡️📅🌙🔥💧🌳⭐🌍☀️]/);
+        expect(item.meaning).not.toMatch(/[\u{1F300}-\u{1F9FF}]|[\u{1F600}-\u{1F64F}]|[\u{2600}-\u{26FF}]|[\u{2700}-\u{27BF}]/u);
       });
+    });
+
+    it('should generate unique and incremental IDs across multiple tables in the same file', () => {
+      const filePath = path.join(fixturesDir, 'emoji-columns.md');
+      const vocabulary = extractVocabularyFromFile(filePath);
+
+      expect(vocabulary).toHaveLength(8);
+
+      const ids = vocabulary.map(item => item.id);
+      const uniqueIds = new Set(ids);
+      
+      expect(uniqueIds.size).toBe(ids.length);
+      
+      const idParts = ids.map(id => {
+        const parts = id.split('_');
+        const prefix = parts.slice(0, -1).join('_');
+        const suffix = parseInt(parts[parts.length - 1], 10);
+        return { prefix, suffix };
+      });
+
+      const prefixes = new Set(idParts.map(p => p.prefix));
+      expect(prefixes.size).toBe(1);
+
+      const suffixes = idParts.map(p => p.suffix).sort((a, b) => a - b);
+      expect(suffixes).toEqual([0, 1, 2, 3, 4, 5, 6, 7]);
+
+      const chichiItem1 = vocabulary.find(item => item.hiragana === 'ちち' && item.id === 'emojicolumns_0');
+      expect(chichiItem1).toBeDefined();
+
+      const hahaItem1 = vocabulary.find(item => item.hiragana === 'はは' && item.id === 'emojicolumns_1');
+      expect(hahaItem1).toBeDefined();
+
+      const getsuyoubiItem = vocabulary.find(item => item.hiragana === 'げつようび');
+      expect(getsuyoubiItem?.id).toBe('emojicolumns_3');
+
+      const kayoubiItem = vocabulary.find(item => item.hiragana === 'かようび');
+      expect(kayoubiItem?.id).toBe('emojicolumns_4');
+
+      const chichiItem2 = vocabulary.find(item => item.hiragana === 'ちち' && item.id === 'emojicolumns_5');
+      expect(chichiItem2).toBeDefined();
     });
   });
 
@@ -229,12 +329,12 @@ describe('Vocabulary Extraction', () => {
       expect(merged.vocabulary).toHaveLength(2);
       
       const redItem = merged.vocabulary.find(item => item.hiragana === 'あか');
-      expect(redItem?.id).toBe('existing_1');
+      expect(redItem?.id).toBe('existing_0');
       expect(redItem?.tags).toContain('existing');
 
       const blueItem = merged.vocabulary.find(item => item.hiragana === 'あお');
       expect(blueItem).toBeDefined();
-      expect(blueItem?.id).toBe('extracted_2');
+      expect(blueItem?.id).toBe('extracted_0');
     });
 
     it('should merge categories correctly', () => {
@@ -318,7 +418,7 @@ describe('Vocabulary Extraction', () => {
         const merged = mergeVocabulary(existing, extracted);
 
         expect(merged.vocabulary).toHaveLength(1);
-        expect(merged.vocabulary[0].id).toBe('existing_1');
+        expect(merged.vocabulary[0].id).toBe('existing_0');
       });
 
       it('should prevent duplicates with case-insensitive matching', () => {
@@ -361,10 +461,10 @@ describe('Vocabulary Extraction', () => {
 
         expect(merged.vocabulary).toHaveLength(3);
         
+        expect(merged.vocabulary.find(item => item.id === 'existing_0')).toBeDefined();
         expect(merged.vocabulary.find(item => item.id === 'existing_1')).toBeDefined();
-        expect(merged.vocabulary.find(item => item.id === 'existing_2')).toBeDefined();
         
-        expect(merged.vocabulary.find(item => item.id === 'extracted_2')).toBeDefined();
+        expect(merged.vocabulary.find(item => item.id === 'extracted_0')).toBeDefined();
       });
     });
 
@@ -634,8 +734,11 @@ describe('Vocabulary Extraction', () => {
 
       expect(firstMerge.vocabulary).toEqual(secondMerge.vocabulary);
       expect(secondMerge.vocabulary).toEqual(thirdMerge.vocabulary);
-      expect(firstMerge.vocabulary[0].hiragana).toBe('あお');
-      expect(firstMerge.vocabulary[1].hiragana).toBe('あか');
+      // Vocabulary is now sorted by ID, so existing_0 comes before existing_1
+      expect(firstMerge.vocabulary[0].id).toBe('existing_0');
+      expect(firstMerge.vocabulary[0].hiragana).toBe('あか');
+      expect(firstMerge.vocabulary[1].id).toBe('existing_1');
+      expect(firstMerge.vocabulary[1].hiragana).toBe('あお');
     });
 
 

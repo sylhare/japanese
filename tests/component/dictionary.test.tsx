@@ -8,11 +8,11 @@ vi.mock('../../src/data/vocabulary.yaml', () => ({
   default: mockVocabularyData
 }));
 
-vi.mock('../../src/pages/vocabulary.module.css', () => ({
+vi.mock('../../src/pages/dictionary.module.css', () => ({
   default: {}
 }));
 
-import Vocabulary from '../../src/pages/vocabulary';
+import Vocabulary from '../../src/pages/dictionary';
 
 describe('Vocabulary Component', () => {
   beforeEach(() => {
@@ -294,3 +294,4 @@ describe('Vocabulary Component', () => {
     });
   });
 });
+

@@ -13,15 +13,15 @@ Understanding time vocabulary is crucial for daily conversations and scheduling.
 
 The kanji for days of the week represent the five elements: 月(moon), 火(fire), 水(water), 木(wood), 金(metal), 土(earth), 日(sun). In Japan, the week starts on Monday.
 
-| Emoji | Hiragana | Kanji | Romaji | English | Type |
-|-------|---------|-------|--------|---------|------|
-| 🌙 | げつようび | 月曜日 | getsuyoubi | Monday | noun |
-| 🔥 | かようび | 火曜日 | kayoubi | Tuesday | noun |
-| 💧 | すいようび | 水曜日 | suiyoubi | Wednesday | noun |
-| 🌳 | もくようび | 木曜日 | mokuyoubi | Thursday | noun |
-| ⭐ | きんようび | 金曜日 | kinyoubi | Friday | noun |
-| 🌍 | どようび | 土曜日 | doyoubi | Saturday | noun |
-| ☀️ | にちようび | 日曜日 | nichiyoubi | Sunday | noun |
+| Hiragana | Kanji | Romaji     | English      | Type |
+|----------|-------|------------|--------------|------|
+| げつようび    | 月曜日   | getsuyoubi | 🌙 Monday    | noun |
+| かようび     | 火曜日   | kayoubi    | 🔥 Tuesday   | noun |
+| すいようび    | 水曜日   | suiyoubi   | 💧 Wednesday | noun |
+| もくようび    | 木曜日   | mokuyoubi  | 🌳 Thursday  | noun |
+| きんようび    | 金曜日   | kinyoubi   | ⭐ Friday     | noun |
+| どようび     | 土曜日   | doyoubi    | 🌍 Saturday  | noun |
+| にちようび    | 日曜日   | nichiyoubi | ☀️ Sunday    | noun |
 
 **Examples:**
 - げつようびに かいものに いきます (getsuyoubi ni kaimono ni ikimasu) - I go shopping on Monday
@@ -30,13 +30,13 @@ The kanji for days of the week represent the five elements: 月(moon), 火(fire)
 
 ### Relative Days
 
-| Emoji | Hiragana | Kanji | Romaji | English | Type |
-|-------|---------|-------|--------|---------|------|
-| 📅 | きょう | 今日 | kyou | today | noun |
-| ⬅️ | きのう | 昨日 | kinou | yesterday | noun |
-| ➡️ | あした | 明日 | ashita | tomorrow | noun |
-| ➡️➡️ | あさって | 明後日 | asatte | day after tomorrow | noun |
-| ⬅️⬅️ | おととい | 一昨日 | ototoi | day before yesterday | noun |
+| Hiragana | Kanji | Romaji | English                   | Type |
+|----------|-------|--------|---------------------------|------|
+| きょう      | 今日    | kyou   | 📅 today                  | noun |
+| きのう      | 昨日    | kinou  | ⬅️ yesterday              | noun |
+| あした      | 明日    | ashita | ➡️ tomorrow               | noun |
+| あさって     | 明後日   | asatte | ➡️➡️ day after tomorrow   | noun |
+| おととい     | 一昨日   | ototoi | ⬅️⬅️ day before yesterday | noun |
 
 **Examples:**
 - きょうは しごとが あります (kyou wa shigoto ga arimasu) - I have work today
@@ -45,15 +45,16 @@ The kanji for days of the week represent the five elements: 月(moon), 火(fire)
 
 ### Week References
 
-| Emoji | Hiragana | Kanji | Romaji | English | Type |
-|-------|---------|-------|--------|---------|------|
-| 📆 | こんしゅう | 今週 | konshuu | this week | noun |
-| ⬅️ | せんしゅう | 先週 | senshuu | last week | noun |
-| ➡️ | らいしゅう | 来週 | raishuu | next week | noun |
-| 🔁 | まいしゅう | 毎週 | maishuu | every week | noun |
-| 🎉 | しゅうまつ | 週末 | shuumatsu | weekend | noun |
+| Hiragana | Kanji | Romaji    | English       | Type |
+|----------|-------|-----------|---------------|------|
+| こんしゅう    | 今週    | konshuu   | 📆 this week  | noun |
+| せんしゅう    | 先週    | senshuu   | ⬅️ last week  | noun |
+| らいしゅう    | 来週    | raishuu   | ➡️ next week  | noun |
+| まいしゅう    | 毎週    | maishuu   | 🔁 every week | noun |
+| しゅうまつ    | 週末    | shuumatsu | 🎉 weekend    | noun |
 
 **Examples:**
+
 - こんしゅうは いそがしいです (konshuu wa isogashii desu) - This week is busy
 - せんしゅう えいがを みました (senshuu eiga wo mimashita) - I watched a movie last week
 - しゅうまつに りょこうに いきます (shuumatsu ni ryokou ni ikimasu) - I'm going on a trip this weekend
@@ -61,35 +62,36 @@ The kanji for days of the week represent the five elements: 月(moon), 火(fire)
 
 ## Months
 
-| Emoji | Hiragana | Kanji | Romaji | English | Type |
-|-------|---------|-------|--------|---------|------|
-| 1️⃣ | いちがつ | 一月 | ichigatsu | January | noun |
-| 2️⃣ | にがつ | 二月 | nigatsu | February | noun |
-| 3️⃣ | さんがつ | 三月 | sangatsu | March | noun |
-| 4️⃣ | しがつ | 四月 | shigatsu | April | noun |
-| 5️⃣ | ごがつ | 五月 | gogatsu | May | noun |
-| 6️⃣ | ろくがつ | 六月 | rokugatsu | June | noun |
-| 7️⃣ | しちがつ | 七月 | shichigatsu | July | noun |
-| 8️⃣ | はちがつ | 八月 | hachigatsu | August | noun |
-| 9️⃣ | くがつ | 九月 | kugatsu | September | noun |
-| 🔟 | じゅうがつ | 十月 | juugatsu | October | noun |
-| 1️⃣1️⃣ | じゅういちがつ | 十一月 | juuichigatsu | November | noun |
-| 1️⃣2️⃣ | じゅうにがつ | 十二月 | juunigatsu | December | noun |
+| Hiragana | Kanji | Romaji       | English         | Type |
+|----------|-------|--------------|-----------------|------|
+| いちがつ     | 一月    | ichigatsu    | 1️⃣ January     | noun |
+| にがつ      | 二月    | nigatsu      | 2️⃣ February    | noun |
+| さんがつ     | 三月    | sangatsu     | 3️⃣ March       | noun |
+| しがつ      | 四月    | shigatsu     | 4️⃣ April       | noun |
+| ごがつ      | 五月    | gogatsu      | 5️⃣ May         | noun |
+| ろくがつ     | 六月    | rokugatsu    | 6️⃣ June        | noun |
+| しちがつ     | 七月    | shichigatsu  | 7️⃣ July        | noun |
+| はちがつ     | 八月    | hachigatsu   | 8️⃣ August      | noun |
+| くがつ      | 九月    | kugatsu      | 9️⃣ September   | noun |
+| じゅうがつ    | 十月    | juugatsu     | 🔟 October      | noun |
+| じゅういちがつ  | 十一月   | juuichigatsu | 1️⃣1️⃣ November | noun |
+| じゅうにがつ   | 十二月   | juunigatsu   | 1️⃣2️⃣ December | noun |
 
 **Examples:**
+
 - しがつに がっこうが はじまります (shigatsu ni gakkou ga hajimarimasu) - School starts in April
 - はちがつは なつやすみです (hachigatsu wa natsuyasumi desu) - August is summer vacation
 - じゅうにがつに クリスマスが あります (juunigatsu ni kurisumasu ga arimasu) - Christmas is in December
 
 ## Years
 
-| Emoji | Hiragana | Kanji | Romaji | English | Type |
-|-------|---------|-------|--------|---------|------|
-| 📅 | ことし | 今年 | kotoshi | this year | noun |
-| ⬅️ | きょねん | 去年 | kyonen | last year | noun |
-| ➡️ | らいねん | 来年 | rainen | next year | noun |
-| 🔁 | まいとし | 毎年 | maitoshi | every year | noun |
-| 📆 | ねん | 年 | nen | year | noun |
+| Hiragana | Kanji | Romaji   | English       | Type |
+|----------|-------|----------|---------------|------|
+| ことし      | 今年    | kotoshi  | 📅 this year  | noun |
+| きょねん     | 去年    | kyonen   | ⬅️ last year  | noun |
+| らいねん     | 来年    | rainen   | ➡️ next year  | noun |
+| まいとし     | 毎年    | maitoshi | 🔁 every year | noun |
+| ねん       | 年     | nen      | 📆 year       | noun |
 
 ### Full Date Examples
 
@@ -105,13 +107,13 @@ When expressing full dates in Japanese, the format is: Year + Month + Day.
 
 ## Time of Day
 
-| Emoji | Hiragana | Kanji | Romaji | English | Type |
-|-------|---------|-------|--------|---------|------|
-| 🌅 | あさ | 朝 | asa | morning | noun |
-| 🌞 | ひる | 昼 | hiru | noon/daytime | noun |
-| 🌇 | ゆうがた | 夕方 | yuugata | evening | noun |
-| 🌙 | よる | 夜 | yoru | night | noun |
-| 🌑 | まよなか | 真夜中 | mayonaka | midnight | noun |
+| Hiragana | Kanji | Romaji   | English         | Type |
+|----------|-------|----------|-----------------|------|
+| あさ       | 朝     | asa      | 🌅 morning      | noun |
+| ひる       | 昼     | hiru     | 🌞 noon/daytime | noun |
+| ゆうがた     | 夕方    | yuugata  | 🌇 evening      | noun |
+| よる       | 夜     | yoru     | 🌙 night        | noun |
+| まよなか     | 真夜中   | mayonaka | 🌑 midnight     | noun |
 
 When talking about time periods, Japanese often uses に (ni) particle to indicate when something happens.
 

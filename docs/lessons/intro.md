@@ -93,19 +93,19 @@ Japanese follows a Subject-Object-Verb (SOV) pattern:
 ### Key Grammar Points
 
 1. **Particles**: Small words that indicate grammatical relationships
-   - は (wa) - topic marker
-   - を (o) - object marker
-   - に (ni) - direction/time marker
+    - は (wa) - topic marker
+    - を (o) - object marker
+    - に (ni) - direction/time marker
 
 2. **Verb Conjugation**: Verbs change form based on tense, politeness, and meaning
-   - Dictionary form: 食べる (taberu - to eat)
-   - Polite form: 食べます (tabemasu - eat)
-   - Past tense: 食べました (tabemashita - ate)
+    - Dictionary form: 食べる (taberu - to eat)
+    - Polite form: 食べます (tabemasu - eat)
+    - Past tense: 食べました (tabemashita - ate)
 
 3. **Politeness Levels**: Japanese has different levels of formality
-   - Casual: 食べる (taberu)
-   - Polite: 食べます (tabemasu)
-   - Honorific: 召し上がる (meshiagaru)
+    - Casual: 食べる (taberu)
+    - Polite: 食べます (tabemasu)
+    - Honorific: 召し上がる (meshiagaru)
 
 ## Using Tags and Categories
 

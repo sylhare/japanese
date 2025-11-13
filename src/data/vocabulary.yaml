@@ -1,28 +1,976 @@
 vocabulary:
-  - id: grammarparticles_4
-    hiragana: あなた
-    romaji: anata
-    meaning: you
-    category: grammar
+  - id: colors_0
+    hiragana: いろ
+    kanji: 色
+    romaji: iro
+    meaning: color
+    category: vocabulary
     tags:
-      - grammar-particles
-    type: pronoun
-  - id: grammarparticles_2
-    hiragana: あれ
-    romaji: are
-    meaning: that (far from both)
-    category: grammar
+      - colors
+    type: noun
+  - id: colors_1
+    hiragana: みどり
+    kanji: 緑
+    romaji: midori
+    meaning: green
+    category: vocabulary
     tags:
-      - grammar-particles
-    type: pronoun
-  - id: grammarparticles_0
-    hiragana: これ
-    romaji: kore
-    meaning: this (near speaker)
-    category: grammar
+      - colors
+    type: の-adjective
+  - id: colors_2
+    hiragana: しろ
+    kanji: 白
+    romaji: shiro
+    meaning: white
+    category: vocabulary
     tags:
-      - grammar-particles
-    type: pronoun
+      - colors
+    type: い-adjective
+  - id: colors_3
+    hiragana: ももいろ
+    kanji: 桃色
+    romaji: momoiro
+    meaning: peach color
+    category: vocabulary
+    tags:
+      - colors
+    type: unknown
+  - id: colors_4
+    hiragana: あか
+    kanji: 赤
+    romaji: aka
+    meaning: red
+    category: vocabulary
+    tags:
+      - colors
+    type: い-adjective
+  - id: colors_5
+    hiragana: むらさき
+    kanji: 紫
+    romaji: murasaki
+    meaning: purple
+    category: vocabulary
+    tags:
+      - colors
+    type: の-adjective
+  - id: colors_6
+    hiragana: くろ
+    kanji: 黒
+    romaji: kuro
+    meaning: black
+    category: vocabulary
+    tags:
+      - colors
+    type: い-adjective
+  - id: colors_7
+    hiragana: やまぶきいろ
+    kanji: 山吹色
+    romaji: yamabukiiro
+    meaning: golden yellow
+    category: vocabulary
+    tags:
+      - colors
+    type: unknown
+  - id: colors_8
+    hiragana: あお
+    kanji: 青
+    romaji: ao
+    meaning: blue
+    category: vocabulary
+    tags:
+      - colors
+    type: い-adjective
+  - id: colors_9
+    hiragana: だいだい
+    kanji: 橙
+    romaji: daidai
+    meaning: orange
+    category: vocabulary
+    tags:
+      - colors
+    type: の-adjective
+  - id: colors_10
+    hiragana: はいいろ
+    kanji: 灰色
+    romaji: haiiro
+    meaning: gray
+    category: vocabulary
+    tags:
+      - colors
+    type: の-adjective
+  - id: colors_11
+    hiragana: べにいろ
+    kanji: 紅
+    romaji: beniiro
+    meaning: crimson
+    category: vocabulary
+    tags:
+      - colors
+    type: unknown
+  - id: colors_12
+    hiragana: きいろ
+    kanji: 黄色
+    romaji: kiiro
+    meaning: yellow
+    category: vocabulary
+    tags:
+      - colors
+    type: い-adjective
+  - id: colors_13
+    hiragana: ちゃいろ
+    kanji: 茶色
+    romaji: chairo
+    meaning: brown
+    category: vocabulary
+    tags:
+      - colors
+    type: の-adjective
+  - id: confusingkanji_0
+    hiragana: つち
+    kanji: 土
+    romaji: tsuchi
+    meaning: soil/earth
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_1
+    hiragana: せん
+    kanji: 千
+    romaji: sen
+    meaning: thousand
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_2
+    hiragana: み
+    kanji: 未
+    romaji: mi
+    meaning: not yet/un-
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: prefix
+  - id: confusingkanji_3
+    hiragana: ひ
+    kanji: 日
+    romaji: hi
+    meaning: day/sun
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_4
+    hiragana: ひと
+    kanji: 人
+    romaji: hito
+    meaning: person
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_5
+    hiragana: ちから
+    kanji: 力
+    romaji: chikara
+    meaning: power/strength
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_6
+    hiragana: いし
+    kanji: 石
+    romaji: ishi
+    meaning: stone
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_7
+    hiragana: うし
+    kanji: 牛
+    romaji: ushi
+    meaning: cow
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_8
+    hiragana: き
+    kanji: 木
+    romaji: ki
+    meaning: tree
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_9
+    hiragana: おう
+    kanji: 王
+    romaji: ou
+    meaning: king
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_10
+    hiragana: おお
+    kanji: 大
+    romaji: oo
+    meaning: big
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_11
+    hiragana: ほう
+    kanji: 方
+    romaji: hou
+    meaning: direction/method
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_12
+    hiragana: みず
+    kanji: 水
+    romaji: mizu
+    meaning: water
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_13
+    hiragana: ひろ
+    kanji: 拾
+    romaji: hiro
+    meaning: pick up
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: verb
+  - id: confusingkanji_14
+    hiragana: あいだ
+    kanji: 間
+    romaji: aida
+    meaning: between/interval
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_15
+    hiragana: いま
+    kanji: 今
+    romaji: ima
+    meaning: now
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_16
+    hiragana: おのれ
+    kanji: 己
+    romaji: onore
+    meaning: self/oneself
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_17
+    hiragana: かい
+    kanji: 貝
+    romaji: kai
+    meaning: shell/shellfish
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_18
+    hiragana: め
+    kanji: 目
+    romaji: me
+    meaning: eye
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_19
+    hiragana: た
+    kanji: 田
+    romaji: ta
+    meaning: rice field
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_20
+    hiragana: とり
+    kanji: 鳥
+    romaji: tori
+    meaning: bird
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_21
+    hiragana: かん
+    kanji: 感
+    romaji: kan
+    meaning: feeling/emotion
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_22
+    hiragana: けん
+    kanji: 験
+    romaji: ken
+    meaning: test/verification
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_23
+    hiragana: し
+    kanji: 士
+    romaji: shi
+    meaning: gentleman/samurai
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_24
+    hiragana: かん
+    kanji: 干
+    romaji: kan
+    meaning: to dry
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: verb
+  - id: confusingkanji_25
+    hiragana: まつ
+    kanji: 末
+    romaji: matsu
+    meaning: end/tip
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_26
+    hiragana: いわく
+    kanji: 曰
+    romaji: iwaku
+    meaning: say/reason
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: verb
+  - id: confusingkanji_27
+    hiragana: はい
+    kanji: 入
+    romaji: hairu
+    meaning: enter
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: verb
+  - id: confusingkanji_28
+    hiragana: かたな
+    kanji: 刀
+    romaji: katana
+    meaning: sword
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_29
+    hiragana: みぎ
+    kanji: 右
+    romaji: migi
+    meaning: right
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_30
+    hiragana: ご
+    kanji: 午
+    romaji: go
+    meaning: noon
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_31
+    hiragana: ほん
+    kanji: 本
+    romaji: hon
+    meaning: book/root
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_32
+    hiragana: じ
+    kanji: 自
+    romaji: ji
+    meaning: oneself
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_33
+    hiragana: たま
+    kanji: 玉
+    romaji: tama
+    meaning: gem/jewel
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_34
+    hiragana: いぬ
+    kanji: 犬
+    romaji: inu
+    meaning: dog
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_35
+    hiragana: まん
+    kanji: 万
+    romaji: man
+    meaning: ten thousand
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_36
+    hiragana: こおり
+    kanji: 氷
+    romaji: koori
+    meaning: ice
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_37
+    hiragana: すて
+    kanji: 捨
+    romaji: sute
+    meaning: discard/throw away
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: verb
+  - id: confusingkanji_38
+    hiragana: もん
+    kanji: 問
+    romaji: mon
+    meaning: question
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_39
+    hiragana: れい
+    kanji: 令
+    romaji: rei
+    meaning: command/order
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_40
+    hiragana: い
+    kanji: 已
+    romaji: i
+    meaning: already
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: adverb
+  - id: confusingkanji_41
+    hiragana: みる
+    kanji: 見
+    romaji: miru
+    meaning: to see
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: verb
+  - id: confusingkanji_42
+    hiragana: じ
+    kanji: 自
+    romaji: ji
+    meaning: self
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_43
+    hiragana: ゆう
+    kanji: 由
+    romaji: yuu
+    meaning: reason/from
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_44
+    hiragana: からす
+    kanji: 烏
+    romaji: karasu
+    meaning: crow
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_45
+    hiragana: わく
+    kanji: 惑
+    romaji: waku
+    meaning: confusion
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_46
+    hiragana: けん
+    kanji: 検
+    romaji: ken
+    meaning: examination
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_47
+    hiragana: み
+    kanji: 巳
+    romaji: mi
+    meaning: snake (zodiac)
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_48
+    hiragana: こう
+    kanji: 甲
+    romaji: kou
+    meaning: first/armor
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: noun
+  - id: confusingkanji_49
+    hiragana: しん
+    kanji: 申
+    romaji: shin
+    meaning: to say/explain
+    category: vocabulary
+    tags:
+      - confusing-kanji
+    type: verb
+  - id: family_0
+    hiragana: かぞく
+    kanji: 家族
+    romaji: kazoku
+    meaning: family
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_1
+    hiragana: そふ
+    kanji: 祖父
+    romaji: sofu
+    meaning: grandfather
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_2
+    hiragana: ぎりのあに
+    kanji: 義理の兄
+    romaji: giri no ani
+    meaning: brother-in-law
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_3
+    hiragana: つま
+    kanji: 妻
+    romaji: tsuma
+    meaning: wife
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_4
+    hiragana: ひとり
+    kanji: 一人
+    romaji: hitori
+    meaning: single/unmarried
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_5
+    hiragana: ちち
+    kanji: 父
+    romaji: chichi
+    meaning: father
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_6
+    hiragana: おじいさん
+    kanji: お爺さん
+    romaji: ojiisan
+    meaning: grandfather
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_7
+    hiragana: ぎりのあね
+    kanji: 義理の姉
+    romaji: giri no ane
+    meaning: sister-in-law
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_8
+    hiragana: おっと
+    kanji: 夫
+    romaji: otto
+    meaning: husband
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_9
+    hiragana: けっこん
+    kanji: 結婚
+    romaji: kekkon
+    meaning: marriage
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_10
+    hiragana: はは
+    kanji: 母
+    romaji: haha
+    meaning: mother
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_11
+    hiragana: そぼ
+    kanji: 祖母
+    romaji: sobo
+    meaning: grandmother
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_12
+    hiragana: しゅうと
+    kanji: 舅
+    romaji: shuuto
+    meaning: father-in-law (wife's father)
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_13
+    hiragana: おくさん
+    kanji: 奥さん
+    romaji: okusan
+    meaning: wife
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_14
+    hiragana: けっこんしている
+    kanji: 結婚している
+    romaji: kekkon shite iru
+    meaning: married
+    category: vocabulary
+    tags:
+      - family
+    type: verb
+  - id: family_15
+    hiragana: おとうさん
+    kanji: お父さん
+    romaji: otousan
+    meaning: father
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_16
+    hiragana: おばあさん
+    kanji: お婆さん
+    romaji: obaasan
+    meaning: grandmother
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_17
+    hiragana: しゅうとめ
+    kanji: 姑
+    romaji: shuutome
+    meaning: mother-in-law (wife's mother)
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_18
+    hiragana: ごしゅじん
+    kanji: ご主人
+    romaji: goshujin
+    meaning: husband
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_19
+    hiragana: どくしん
+    kanji: 独身
+    romaji: dokushin
+    meaning: single
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_20
+    hiragana: おかあさん
+    kanji: お母さん
+    romaji: okaasan
+    meaning: mother
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_21
+    hiragana: おじ
+    kanji: 叔父
+    romaji: oji
+    meaning: uncle
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_22
+    hiragana: むこ
+    kanji: 婿
+    romaji: muko
+    meaning: son-in-law
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_23
+    hiragana: こども
+    kanji: 子供
+    romaji: kodomo
+    meaning: child/children
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_24
+    hiragana: りこん
+    kanji: 離婚
+    romaji: rikon
+    meaning: divorce
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_25
+    hiragana: あに
+    kanji: 兄
+    romaji: ani
+    meaning: older brother
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_26
+    hiragana: おば
+    kanji: 叔母
+    romaji: oba
+    meaning: aunt
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_27
+    hiragana: よめ
+    kanji: 嫁
+    romaji: yome
+    meaning: daughter-in-law
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_28
+    hiragana: むすこ
+    kanji: 息子
+    romaji: musuko
+    meaning: son
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_29
+    hiragana: やもめ
+    kanji: 寡婦
+    romaji: yamome
+    meaning: widowed
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_30
+    hiragana: あね
+    kanji: 姉
+    romaji: ane
+    meaning: older sister
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_31
+    hiragana: いとこ
+    kanji: 従兄弟
+    romaji: itoko
+    meaning: cousin
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_32
+    hiragana: むすめ
+    kanji: 娘
+    romaji: musume
+    meaning: daughter
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_33
+    hiragana: こいびと
+    kanji: 恋人
+    romaji: koibito
+    meaning: boyfriend/girlfriend
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_34
+    hiragana: おとうと
+    kanji: 弟
+    romaji: otouto
+    meaning: younger brother
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_35
+    hiragana: おい
+    kanji: 甥
+    romaji: oi
+    meaning: nephew
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_36
+    hiragana: ぼうや
+    kanji: 坊や
+    romaji: bouya
+    meaning: boy (young)
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_37
+    hiragana: ふうふ
+    kanji: 夫婦
+    romaji: fuufu
+    meaning: married couple
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_38
+    hiragana: いもうと
+    kanji: 妹
+    romaji: imouto
+    meaning: younger sister
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_39
+    hiragana: めい
+    kanji: 姪
+    romaji: mei
+    meaning: niece
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_40
+    hiragana: おじょうさん
+    kanji: お嬢さん
+    romaji: ojou san
+    meaning: daughter
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_41
+    hiragana: おにいさん
+    kanji: お兄さん
+    romaji: oniisan
+    meaning: older brother
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_42
+    hiragana: ぼっちゃん
+    kanji: 坊ちゃん
+    romaji: bocchan
+    meaning: son
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_43
+    hiragana: おねえさん
+    kanji: お姉さん
+    romaji: oneesan
+    meaning: older sister
+    category: vocabulary
+    tags:
+      - family
+    type: noun
   - id: grammarparticles_0
     hiragana: そして
     romaji: soshite
@@ -32,22 +980,14 @@ vocabulary:
       - grammar-particles
     type: conjunction
   - id: grammarparticles_1
-    hiragana: それ
-    romaji: sore
-    meaning: that (near listener)
+    hiragana: これ
+    romaji: kore
+    meaning: this (near speaker)
     category: grammar
     tags:
       - grammar-particles
     type: pronoun
   - id: grammarparticles_2
-    hiragana: だから
-    romaji: dakara
-    meaning: so, therefore
-    category: grammar
-    tags:
-      - grammar-particles
-    type: conjunction
-  - id: grammarparticles_1
     hiragana: でも
     romaji: demo
     meaning: but, however
@@ -56,6 +996,30 @@ vocabulary:
       - grammar-particles
     type: conjunction
   - id: grammarparticles_3
+    hiragana: それ
+    romaji: sore
+    meaning: that (near listener)
+    category: grammar
+    tags:
+      - grammar-particles
+    type: pronoun
+  - id: grammarparticles_4
+    hiragana: だから
+    romaji: dakara
+    meaning: so, therefore
+    category: grammar
+    tags:
+      - grammar-particles
+    type: conjunction
+  - id: grammarparticles_5
+    hiragana: あれ
+    romaji: are
+    meaning: that (far from both)
+    category: grammar
+    tags:
+      - grammar-particles
+    type: pronoun
+  - id: grammarparticles_6
     hiragana: または
     romaji: matawa
     meaning: or
@@ -63,7 +1027,7 @@ vocabulary:
     tags:
       - grammar-particles
     type: conjunction
-  - id: grammarparticles_3
+  - id: grammarparticles_7
     hiragana: わたし
     kanji: 私
     romaji: watashi
@@ -72,77 +1036,130 @@ vocabulary:
     tags:
       - grammar-particles
     type: pronoun
-  - id: confusingkanji_0
-    hiragana: あいだ
-    kanji: 間
-    romaji: aida
-    meaning: between/interval
+  - id: grammarparticles_8
+    hiragana: あなた
+    romaji: anata
+    meaning: you
+    category: grammar
+    tags:
+      - grammar-particles
+    type: pronoun
+  - id: numbers_0
+    hiragana: いち
+    kanji: 一
+    romaji: ichi
+    meaning: one
     category: vocabulary
     tags:
-      - confusing-kanji
+      - numbers
     type: noun
-  - id: colors_2
-    hiragana: あお
-    kanji: 青
-    romaji: ao
-    meaning: blue
+  - id: numbers_1
+    hiragana: ひゃく
+    kanji: 百
+    romaji: hyaku
+    meaning: hundred
     category: vocabulary
     tags:
-      - colors
-    type: い-adjective
-  - id: colors_1
-    hiragana: あか
-    kanji: 赤
-    romaji: aka
-    meaning: red
+      - numbers
+    type: unknown
+  - id: numbers_2
+    hiragana: に
+    kanji: 二
+    romaji: ni
+    meaning: two
     category: vocabulary
     tags:
-      - colors
-    type: い-adjective
-  - id: time_0
-    hiragana: あさ
-    kanji: 朝
-    romaji: asa
-    meaning: morning
-    category: vocabulary
-    tags:
-      - time
+      - numbers
     type: noun
-  - id: time_3
-    hiragana: あさって
-    kanji: 明後日
-    romaji: asatte
-    meaning: day after tomorrow
+  - id: numbers_3
+    hiragana: さん
+    kanji: 三
+    romaji: san
+    meaning: three
     category: vocabulary
     tags:
-      - time
+      - numbers
     type: noun
-  - id: time_2
-    hiragana: あした
-    kanji: 明日
-    romaji: ashita
-    meaning: tomorrow
+  - id: numbers_4
+    hiragana: よん/し
+    kanji: 四
+    romaji: yon/shi
+    meaning: four
     category: vocabulary
     tags:
-      - time
+      - numbers
     type: noun
-  - id: family_5
-    hiragana: あに
-    kanji: 兄
-    romaji: ani
-    meaning: older brother (my)
+  - id: numbers_5
+    hiragana: ご
+    kanji: 五
+    romaji: go
+    meaning: five
     category: vocabulary
     tags:
-      - family
+      - numbers
     type: noun
-  - id: family_6
-    hiragana: あね
-    kanji: 姉
-    romaji: ane
-    meaning: older sister (my)
+  - id: numbers_6
+    hiragana: ちょう
+    kanji: 兆
+    romaji: chou
+    meaning: trillion
     category: vocabulary
     tags:
-      - family
+      - numbers
+    type: unknown
+  - id: numbers_7
+    hiragana: ろく
+    kanji: 六
+    romaji: roku
+    meaning: six
+    category: vocabulary
+    tags:
+      - numbers
+    type: noun
+  - id: numbers_8
+    hiragana: なな/しち
+    kanji: 七
+    romaji: nana/shichi
+    meaning: seven
+    category: vocabulary
+    tags:
+      - numbers
+    type: noun
+  - id: numbers_9
+    hiragana: はち
+    kanji: 八
+    romaji: hachi
+    meaning: eight
+    category: vocabulary
+    tags:
+      - numbers
+    type: noun
+  - id: numbers_10
+    hiragana: きゅう/く
+    kanji: 九
+    romaji: kyuu/ku
+    meaning: nine
+    category: vocabulary
+    tags:
+      - numbers
+    type: noun
+  - id: numbers_11
+    hiragana: じゅう
+    kanji: 十
+    romaji: juu
+    meaning: ten
+    category: vocabulary
+    tags:
+      - numbers
+    type: noun
+  - id: numbers_12
+    hiragana: おく
+    kanji: 億
+    romaji: oku
+    meaning: hundred million
+    category: vocabulary
+    tags:
+      - numbers
     type: noun
   - id: tastes_0
     hiragana: あまい
@@ -153,124 +1170,7 @@ vocabulary:
     tags:
       - tastes
     type: い-adjective
-  - id: confusingkanji_1
-    hiragana: い
-    kanji: 已
-    romaji: i
-    meaning: already
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: adverb
-  - id: confusingkanji_0
-    hiragana: いし
-    kanji: 石
-    romaji: ishi
-    meaning: stone
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: numbers_0
-    hiragana: いち
-    kanji: 一
-    romaji: ichi
-    meaning: one
-    category: vocabulary
-    tags:
-      - numbers
-    type: noun
-  - id: time_0
-    hiragana: いちがつ
-    kanji: 一月
-    romaji: ichigatsu
-    meaning: January
-    category: vocabulary
-    tags:
-      - time
-    type: noun
-  - id: family_6
-    hiragana: いとこ
-    kanji: 従兄弟
-    romaji: itoko
-    meaning: cousin
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: confusingkanji_1
-    hiragana: いぬ
-    kanji: 犬
-    romaji: inu
-    meaning: dog
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: confusingkanji_0
-    hiragana: いま
-    kanji: 今
-    romaji: ima
-    meaning: now
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: family_8
-    hiragana: いもうと
-    kanji: 妹
-    romaji: imouto
-    meaning: younger sister (my)
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: colors_0
-    hiragana: いろ
-    kanji: 色
-    romaji: iro
-    meaning: color
-    category: vocabulary
-    tags:
-      - colors
-    type: noun
-  - id: confusingkanji_1
-    hiragana: いわく
-    kanji: 曰
-    romaji: iwaku
-    meaning: say/reason
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: verb
-  - id: confusingkanji_0
-    hiragana: うし
-    kanji: 牛
-    romaji: ushi
-    meaning: cow
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
   - id: tastes_1
-    hiragana: うまい
-    kanji: 旨い
-    romaji: umai
-    meaning: delicious (casual)
-    category: vocabulary
-    tags:
-      - tastes
-    type: い-adjective
-  - id: family_7
-    hiragana: おい
-    kanji: 甥
-    romaji: oi
-    meaning: nephew
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: tastes_0
     hiragana: おいしい
     kanji: 美味しい
     romaji: oishii
@@ -279,205 +1179,24 @@ vocabulary:
     tags:
       - tastes
     type: い-adjective
-  - id: confusingkanji_0
-    hiragana: おう
-    kanji: 王
-    romaji: ou
-    meaning: king
+  - id: tastes_2
+    hiragana: ケーキ
+    romaji: keeki
+    meaning: cake
     category: vocabulary
     tags:
-      - confusing-kanji
+      - tastes
     type: noun
-  - id: confusingkanji_0
-    hiragana: おお
-    kanji: 大
-    romaji: oo
-    meaning: big
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: family_4
-    hiragana: おかあさん
-    kanji: お母さん
-    romaji: okaasan
-    meaning: mother (polite)
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: numbers_13
-    hiragana: おく
-    kanji: 億
-    romaji: oku
-    meaning: hundred million
-    category: vocabulary
-    tags:
-      - numbers
-    type: noun
-  - id: family_2
-    hiragana: おくさん
-    kanji: 奥さん
-    romaji: okusan
-    meaning: wife (polite)
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: family_4
-    hiragana: おじ
-    kanji: 叔父
-    romaji: oji
-    meaning: uncle
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: family_2
-    hiragana: おじいさん
-    kanji: お爺さん
-    romaji: ojiisan
-    meaning: grandfather (polite)
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: family_8
-    hiragana: おじょうさん
-    kanji: お嬢さん
-    romaji: ojou san
-    meaning: daughter (polite)
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: family_1
-    hiragana: おっと
-    kanji: 夫
-    romaji: otto
-    meaning: husband (my)
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: family_3
-    hiragana: おとうさん
-    kanji: お父さん
-    romaji: otousan
-    meaning: father (polite)
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: family_7
-    hiragana: おとうと
-    kanji: 弟
-    romaji: otouto
-    meaning: younger brother (my)
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: time_4
-    hiragana: おととい
-    kanji: 一昨日
-    romaji: ototoi
-    meaning: day before yesterday
-    category: vocabulary
-    tags:
-      - time
-    type: noun
-  - id: family_9
-    hiragana: おにいさん
-    kanji: お兄さん
-    romaji: oniisan
-    meaning: older brother (polite)
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: family_10
-    hiragana: おねえさん
-    kanji: お姉さん
-    romaji: oneesan
-    meaning: older sister (polite)
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: confusingkanji_0
-    hiragana: おのれ
-    kanji: 己
-    romaji: onore
-    meaning: self/oneself
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: family_5
-    hiragana: おば
-    kanji: 叔母
-    romaji: oba
-    meaning: aunt
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: family_3
-    hiragana: おばあさん
-    kanji: お婆さん
-    romaji: obaasan
-    meaning: grandmother (polite)
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: confusingkanji_0
-    hiragana: かい
-    kanji: 貝
-    romaji: kai
-    meaning: shell/shellfish
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: family_0
-    hiragana: かぞく
-    kanji: 家族
-    romaji: kazoku
-    meaning: family
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: tastes_4
-    hiragana: かたい
-    kanji: 硬い
-    romaji: katai
-    meaning: hard, firm
+  - id: tastes_3
+    hiragana: あまからい
+    kanji: 甘辛い
+    romaji: amakarai
+    meaning: sweet and spicy
     category: vocabulary
     tags:
       - tastes
     type: い-adjective
-  - id: confusingkanji_1
-    hiragana: かたな
-    kanji: 刀
-    romaji: katana
-    meaning: sword
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: time_1
-    hiragana: かようび
-    kanji: 火曜日
-    romaji: kayoubi
-    meaning: Tuesday
-    category: vocabulary
-    tags:
-      - time
-    type: noun
-  - id: tastes_1
+  - id: tastes_4
     hiragana: からい
     kanji: 辛い
     romaji: karai
@@ -486,16 +1205,16 @@ vocabulary:
     tags:
       - tastes
     type: い-adjective
-  - id: confusingkanji_1
-    hiragana: からす
-    kanji: 烏
-    romaji: karasu
-    meaning: crow
+  - id: tastes_5
+    hiragana: うまい
+    kanji: 旨い
+    romaji: umai
+    meaning: delicious (casual)
     category: vocabulary
     tags:
-      - confusing-kanji
-    type: noun
-  - id: tastes_1
+      - tastes
+    type: い-adjective
+  - id: tastes_6
     hiragana: カレー
     romaji: karee
     meaning: curry
@@ -503,149 +1222,188 @@ vocabulary:
     tags:
       - tastes
     type: noun
-  - id: confusingkanji_0
-    hiragana: かん
-    kanji: 感
-    romaji: kan
-    meaning: feeling/emotion
+  - id: tastes_7
+    hiragana: すっぱあまい
+    kanji: 酸っぱ甘い
+    romaji: suppaamai
+    meaning: sweet and sour
     category: vocabulary
     tags:
-      - confusing-kanji
-    type: noun
-  - id: confusingkanji_1
-    hiragana: かん
-    kanji: 干
-    romaji: kan
-    meaning: to dry
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: verb
-  - id: confusingkanji_0
-    hiragana: き
-    kanji: 木
-    romaji: ki
-    meaning: tree
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: colors_3
-    hiragana: きいろ
-    kanji: 黄色
-    romaji: kiiro
-    meaning: yellow
-    category: vocabulary
-    tags:
-      - colors
+      - tastes
     type: い-adjective
-  - id: time_1
-    hiragana: きのう
-    kanji: 昨日
-    romaji: kinou
-    meaning: yesterday
+  - id: tastes_8
+    hiragana: にがい
+    kanji: 苦い
+    romaji: nigai
+    meaning: bitter
     category: vocabulary
     tags:
-      - time
-    type: noun
-  - id: numbers_8
-    hiragana: きゅう/く
-    kanji: 九
-    romaji: kyuu/ku
-    meaning: nine
-    category: vocabulary
-    tags:
-      - numbers
-    type: noun
-  - id: time_0
-    hiragana: きょう
-    kanji: 今日
-    romaji: kyou
-    meaning: today
-    category: vocabulary
-    tags:
-      - time
-    type: noun
-  - id: time_1
-    hiragana: きょねん
-    kanji: 去年
-    romaji: kyonen
-    meaning: last year
-    category: vocabulary
-    tags:
-      - time
-    type: noun
-  - id: family_0
-    hiragana: ぎりのあに
-    kanji: 義理の兄
-    romaji: giri no ani
-    meaning: brother-in-law
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: family_1
-    hiragana: ぎりのあね
-    kanji: 義理の姉
-    romaji: giri no ane
-    meaning: sister-in-law
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: time_4
-    hiragana: きんようび
-    kanji: 金曜日
-    romaji: kinyoubi
-    meaning: Friday
-    category: vocabulary
-    tags:
-      - time
-    type: noun
-  - id: time_8
-    hiragana: くがつ
-    kanji: 九月
-    romaji: kugatsu
-    meaning: September
-    category: vocabulary
-    tags:
-      - time
-    type: noun
-  - id: colors_1
-    hiragana: くろ
-    kanji: 黒
-    romaji: kuro
-    meaning: black
-    category: vocabulary
-    tags:
-      - colors
+      - tastes
     type: い-adjective
-  - id: tastes_0
-    hiragana: ケーキ
-    romaji: keeki
-    meaning: cake
+  - id: tastes_9
+    hiragana: まずい
+    kanji: 不味い
+    romaji: mazui
+    meaning: bad-tasting, awful
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_10
+    hiragana: コーヒー
+    romaji: koohii
+    meaning: coffee
     category: vocabulary
     tags:
       - tastes
     type: noun
-  - id: family_1
-    hiragana: けっこん
-    kanji: 結婚
-    romaji: kekkon
-    meaning: marriage
+  - id: tastes_11
+    hiragana: あますっぱい
+    kanji: 甘酸っぱい
+    romaji: amasuppai
+    meaning: sweet and sour (alternative)
     category: vocabulary
     tags:
-      - family
+      - tastes
+    type: い-adjective
+  - id: tastes_12
+    hiragana: すっぱい
+    kanji: 酸っぱい
+    romaji: suppai
+    meaning: sour
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_13
+    hiragana: やわらかい
+    kanji: 柔らかい
+    romaji: yawarakai
+    meaning: soft, tender
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_14
+    hiragana: レモン
+    romaji: remon
+    meaning: lemon
+    category: vocabulary
+    tags:
+      - tastes
     type: noun
-  - id: family_2
-    hiragana: けっこんしている
-    kanji: 結婚している
-    romaji: kekkon shite iru
-    meaning: married
+  - id: tastes_15
+    hiragana: しおからい
+    kanji: 塩辛い
+    romaji: shiokarai
+    meaning: salty
     category: vocabulary
     tags:
-      - family
-    type: verb
+      - tastes
+    type: い-adjective
+  - id: tastes_16
+    hiragana: かたい
+    kanji: 硬い
+    romaji: katai
+    meaning: hard, firm
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_17
+    hiragana: スープ
+    romaji: suupu
+    meaning: soup
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_18
+    hiragana: さくさく
+    romaji: sakusaku
+    meaning: crispy, crunchy
+    category: vocabulary
+    tags:
+      - tastes
+    type: adverb
+  - id: tastes_19
+    hiragana: りんご
+    kanji: 林檎
+    romaji: ringo
+    meaning: apple
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_20
+    hiragana: ねばねば
+    romaji: nebaneba
+    meaning: sticky, gooey
+    category: vocabulary
+    tags:
+      - tastes
+    type: adverb
+  - id: tastes_21
+    hiragana: ピザ
+    romaji: piza
+    meaning: pizza
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_22
+    hiragana: チョコレート
+    romaji: chokoreeto
+    meaning: chocolate
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_23
+    hiragana: くだもの
+    kanji: 果物
+    romaji: kudamono
+    meaning: fruit
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_24
+    hiragana: りょうり
+    kanji: 料理
+    romaji: ryouri
+    meaning: dish, cooking
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_25
+    hiragana: たべもの
+    kanji: 食べ物
+    romaji: tabemono
+    meaning: food
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_26
+    hiragana: くすり
+    kanji: 薬
+    romaji: kusuri
+    meaning: medicine
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_27
+    hiragana: あじ
+    kanji: 味
+    romaji: aji
+    meaning: taste, flavor
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
   - id: time_0
     hiragana: げつようび
     kanji: 月曜日
@@ -655,114 +1413,16 @@ vocabulary:
     tags:
       - time
     type: noun
-  - id: confusingkanji_1
-    hiragana: けん
-    kanji: 検
-    romaji: ken
-    meaning: examination
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: confusingkanji_0
-    hiragana: けん
-    kanji: 験
-    romaji: ken
-    meaning: test/verification
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: numbers_4
-    hiragana: ご
-    kanji: 五
-    romaji: go
-    meaning: five
-    category: vocabulary
-    tags:
-      - numbers
-    type: noun
-  - id: confusingkanji_1
-    hiragana: ご
-    kanji: 午
-    romaji: go
-    meaning: noon
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: tastes_2
-    hiragana: コーヒー
-    romaji: koohii
-    meaning: coffee
-    category: vocabulary
-    tags:
-      - tastes
-    type: noun
-  - id: family_6
-    hiragana: こいびと
-    kanji: 恋人
-    romaji: koibito
-    meaning: boyfriend/girlfriend
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: confusingkanji_2
-    hiragana: こう
-    kanji: 甲
-    romaji: kou
-    meaning: first/armor
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: confusingkanji_1
-    hiragana: こおり
-    kanji: 氷
-    romaji: koori
-    meaning: ice
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: time_4
-    hiragana: ごがつ
-    kanji: 五月
-    romaji: gogatsu
-    meaning: May
+  - id: time_1
+    hiragana: きょう
+    kanji: 今日
+    romaji: kyou
+    meaning: today
     category: vocabulary
     tags:
       - time
     type: noun
-  - id: family_3
-    hiragana: ごしゅじん
-    kanji: ご主人
-    romaji: goshujin
-    meaning: husband (polite)
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: time_0
-    hiragana: ことし
-    kanji: 今年
-    romaji: kotoshi
-    meaning: this year
-    category: vocabulary
-    tags:
-      - time
-    type: noun
-  - id: family_4
-    hiragana: こども
-    kanji: 子供
-    romaji: kodomo
-    meaning: child/children
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: time_0
+  - id: time_2
     hiragana: こんしゅう
     kanji: 今週
     romaji: konshuu
@@ -771,212 +1431,52 @@ vocabulary:
     tags:
       - time
     type: noun
-  - id: tastes_5
-    hiragana: さくさく
-    romaji: sakusaku
-    meaning: crispy, crunchy
-    category: vocabulary
-    tags:
-      - tastes
-    type: adverb
-  - id: numbers_2
-    hiragana: さん
-    kanji: 三
-    romaji: san
-    meaning: three
-    category: vocabulary
-    tags:
-      - numbers
-    type: noun
-  - id: time_2
-    hiragana: さんがつ
-    kanji: 三月
-    romaji: sangatsu
-    meaning: March
-    category: vocabulary
-    tags:
-      - time
-    type: noun
-  - id: confusingkanji_1
-    hiragana: し
-    kanji: 士
-    romaji: shi
-    meaning: gentleman/samurai
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: confusingkanji_1
-    hiragana: じ
-    kanji: 自
-    romaji: ji
-    meaning: oneself
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: confusingkanji_1
-    hiragana: じ
-    kanji: 自
-    romaji: ji
-    meaning: self
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: tastes_4
-    hiragana: しおからい
-    kanji: 塩辛い
-    romaji: shiokarai
-    meaning: salty
-    category: vocabulary
-    tags:
-      - tastes
-    type: い-adjective
   - id: time_3
-    hiragana: しがつ
-    kanji: 四月
-    romaji: shigatsu
-    meaning: April
-    category: vocabulary
-    tags:
-      - time
-    type: noun
-  - id: time_6
-    hiragana: しちがつ
-    kanji: 七月
-    romaji: shichigatsu
-    meaning: July
-    category: vocabulary
-    tags:
-      - time
-    type: noun
-  - id: numbers_9
-    hiragana: じゅう
-    kanji: 十
-    romaji: juu
-    meaning: ten
-    category: vocabulary
-    tags:
-      - numbers
-    type: noun
-  - id: time_10
-    hiragana: じゅういちがつ
-    kanji: 十一月
-    romaji: juuichigatsu
-    meaning: November
-    category: vocabulary
-    tags:
-      - time
-    type: noun
-  - id: time_9
-    hiragana: じゅうがつ
-    kanji: 十月
-    romaji: juugatsu
-    meaning: October
-    category: vocabulary
-    tags:
-      - time
-    type: noun
-  - id: family_2
-    hiragana: しゅうと
-    kanji: 舅
-    romaji: shuuto
-    meaning: father-in-law (wife's father)
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: family_3
-    hiragana: しゅうとめ
-    kanji: 姑
-    romaji: shuutome
-    meaning: mother-in-law (wife's mother)
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: time_11
-    hiragana: じゅうにがつ
-    kanji: 十二月
-    romaji: juunigatsu
-    meaning: December
+    hiragana: いちがつ
+    kanji: 一月
+    romaji: ichigatsu
+    meaning: January
     category: vocabulary
     tags:
       - time
     type: noun
   - id: time_4
-    hiragana: しゅうまつ
-    kanji: 週末
-    romaji: shuumatsu
-    meaning: weekend
+    hiragana: ことし
+    kanji: 今年
+    romaji: kotoshi
+    meaning: this year
     category: vocabulary
     tags:
       - time
     type: noun
-  - id: colors_0
-    hiragana: しろ
-    kanji: 白
-    romaji: shiro
-    meaning: white
-    category: vocabulary
-    tags:
-      - colors
-    type: い-adjective
-  - id: confusingkanji_3
-    hiragana: しん
-    kanji: 申
-    romaji: shin
-    meaning: to say/explain
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: verb
-  - id: tastes_4
-    hiragana: スープ
-    romaji: suupu
-    meaning: soup
-    category: vocabulary
-    tags:
-      - tastes
-    type: noun
-  - id: time_2
-    hiragana: すいようび
-    kanji: 水曜日
-    romaji: suiyoubi
-    meaning: Wednesday
+  - id: time_5
+    hiragana: あさ
+    kanji: 朝
+    romaji: asa
+    meaning: morning
     category: vocabulary
     tags:
       - time
     type: noun
-  - id: tastes_3
-    hiragana: すっぱい
-    kanji: 酸っぱい
-    romaji: suppai
-    meaning: sour
+  - id: time_6
+    hiragana: かようび
+    kanji: 火曜日
+    romaji: kayoubi
+    meaning: Tuesday
     category: vocabulary
     tags:
-      - tastes
-    type: い-adjective
-  - id: confusingkanji_1
-    hiragana: すて
-    kanji: 捨
-    romaji: sute
-    meaning: discard/throw away
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: verb
-  - id: confusingkanji_0
-    hiragana: せん
-    kanji: 千
-    romaji: sen
-    meaning: thousand
-    category: vocabulary
-    tags:
-      - confusing-kanji
+      - time
     type: noun
-  - id: time_1
+  - id: time_7
+    hiragana: きのう
+    kanji: 昨日
+    romaji: kinou
+    meaning: yesterday
+    category: vocabulary
+    tags:
+      - time
+    type: noun
+  - id: time_8
     hiragana: せんしゅう
     kanji: 先週
     romaji: senshuu
@@ -985,168 +1485,7 @@ vocabulary:
     tags:
       - time
     type: noun
-  - id: family_0
-    hiragana: そふ
-    kanji: 祖父
-    romaji: sofu
-    meaning: grandfather (my)
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: family_1
-    hiragana: そぼ
-    kanji: 祖母
-    romaji: sobo
-    meaning: grandmother (my)
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: confusingkanji_0
-    hiragana: た
-    kanji: 田
-    romaji: ta
-    meaning: rice field
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: colors_2
-    hiragana: だいだい
-    kanji: 橙
-    romaji: daidai
-    meaning: orange
-    category: vocabulary
-    tags:
-      - colors
-    type: の-adjective
-  - id: confusingkanji_1
-    hiragana: たま
-    kanji: 玉
-    romaji: tama
-    meaning: gem/jewel
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: confusingkanji_0
-    hiragana: ちから
-    kanji: 力
-    romaji: chikara
-    meaning: power/strength
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: family_1
-    hiragana: ちち
-    kanji: 父
-    romaji: chichi
-    meaning: father (my)
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: colors_3
-    hiragana: ちゃいろ
-    kanji: 茶色
-    romaji: chairo
-    meaning: brown
-    category: vocabulary
-    tags:
-      - colors
-    type: の-adjective
-  - id: numbers_4
-    hiragana: ちょう
-    kanji: 兆
-    romaji: chou
-    meaning: trillion
-    category: vocabulary
-    tags:
-      - numbers
-    type: unknown
-  - id: tastes_7
-    hiragana: チョコレート
-    romaji: chokoreeto
-    meaning: chocolate
-    category: vocabulary
-    tags:
-      - tastes
-    type: noun
-  - id: confusingkanji_0
-    hiragana: つち
-    kanji: 土
-    romaji: tsuchi
-    meaning: soil/earth
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: family_0
-    hiragana: つま
-    kanji: 妻
-    romaji: tsuma
-    meaning: wife (my)
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: family_3
-    hiragana: どくしん
-    kanji: 独身
-    romaji: dokushin
-    meaning: single
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: time_5
-    hiragana: どようび
-    kanji: 土曜日
-    romaji: doyoubi
-    meaning: Saturday
-    category: vocabulary
-    tags:
-      - time
-    type: noun
-  - id: confusingkanji_0
-    hiragana: とり
-    kanji: 鳥
-    romaji: tori
-    meaning: bird
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: numbers_6
-    hiragana: なな/しち
-    kanji: 七
-    romaji: nana/shichi
-    meaning: seven
-    category: vocabulary
-    tags:
-      - numbers
-    type: noun
-  - id: numbers_1
-    hiragana: に
-    kanji: 二
-    romaji: ni
-    meaning: two
-    category: vocabulary
-    tags:
-      - numbers
-    type: noun
-  - id: tastes_2
-    hiragana: にがい
-    kanji: 苦い
-    romaji: nigai
-    meaning: bitter
-    category: vocabulary
-    tags:
-      - tastes
-    type: い-adjective
-  - id: time_1
+  - id: time_9
     hiragana: にがつ
     kanji: 二月
     romaji: nigatsu
@@ -1155,122 +1494,16 @@ vocabulary:
     tags:
       - time
     type: noun
-  - id: time_6
-    hiragana: にちようび
-    kanji: 日曜日
-    romaji: nichiyoubi
-    meaning: Sunday
+  - id: time_10
+    hiragana: きょねん
+    kanji: 去年
+    romaji: kyonen
+    meaning: last year
     category: vocabulary
     tags:
       - time
     type: noun
-  - id: tastes_6
-    hiragana: ねばねば
-    romaji: nebaneba
-    meaning: sticky, gooey
-    category: vocabulary
-    tags:
-      - tastes
-    type: adverb
-  - id: time_4
-    hiragana: ねん
-    kanji: 年
-    romaji: nen
-    meaning: year
-    category: vocabulary
-    tags:
-      - time
-    type: noun
-  - id: confusingkanji_1
-    hiragana: はい
-    kanji: 入
-    romaji: hairu
-    meaning: enter
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: verb
-  - id: colors_2
-    hiragana: はいいろ
-    kanji: 灰色
-    romaji: haiiro
-    meaning: gray
-    category: vocabulary
-    tags:
-      - colors
-    type: の-adjective
-  - id: numbers_7
-    hiragana: はち
-    kanji: 八
-    romaji: hachi
-    meaning: eight
-    category: vocabulary
-    tags:
-      - numbers
-    type: noun
-  - id: time_7
-    hiragana: はちがつ
-    kanji: 八月
-    romaji: hachigatsu
-    meaning: August
-    category: vocabulary
-    tags:
-      - time
-    type: noun
-  - id: family_2
-    hiragana: はは
-    kanji: 母
-    romaji: haha
-    meaning: mother (my)
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: confusingkanji_0
-    hiragana: ひ
-    kanji: 日
-    romaji: hi
-    meaning: day/sun
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: tastes_6
-    hiragana: ピザ
-    romaji: piza
-    meaning: pizza
-    category: vocabulary
-    tags:
-      - tastes
-    type: noun
-  - id: confusingkanji_0
-    hiragana: ひと
-    kanji: 人
-    romaji: hito
-    meaning: person
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: family_0
-    hiragana: ひとり
-    kanji: 一人
-    romaji: hitori
-    meaning: single/unmarried
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: numbers_0
-    hiragana: ひゃく
-    kanji: 百
-    romaji: hyaku
-    meaning: hundred
-    category: vocabulary
-    tags:
-      - numbers
-    type: unknown
-  - id: time_1
+  - id: time_11
     hiragana: ひる
     kanji: 昼
     romaji: hiru
@@ -1279,331 +1512,25 @@ vocabulary:
     tags:
       - time
     type: noun
-  - id: confusingkanji_0
-    hiragana: ひろ
-    kanji: 拾
-    romaji: hiro
-    meaning: pick up
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: verb
-  - id: family_7
-    hiragana: ふうふ
-    kanji: 夫婦
-    romaji: fuufu
-    meaning: married couple
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: colors_2
-    hiragana: べにいろ
-    kanji: 紅
-    romaji: beniiro
-    meaning: crimson
-    category: vocabulary
-    tags:
-      - colors
-    type: unknown
-  - id: confusingkanji_0
-    hiragana: ほう
-    kanji: 方
-    romaji: hou
-    meaning: direction/method
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: family_7
-    hiragana: ぼうや
-    kanji: 坊や
-    romaji: bouya
-    meaning: boy (young)
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: family_9
-    hiragana: ぼっちゃん
-    kanji: 坊ちゃん
-    romaji: bocchan
-    meaning: son (polite)
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: confusingkanji_1
-    hiragana: ほん
-    kanji: 本
-    romaji: hon
-    meaning: book/root
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: time_3
-    hiragana: まいしゅう
-    kanji: 毎週
-    romaji: maishuu
-    meaning: every week
+  - id: time_12
+    hiragana: すいようび
+    kanji: 水曜日
+    romaji: suiyoubi
+    meaning: Wednesday
     category: vocabulary
     tags:
       - time
     type: noun
-  - id: time_3
-    hiragana: まいとし
-    kanji: 毎年
-    romaji: maitoshi
-    meaning: every year
+  - id: time_13
+    hiragana: あした
+    kanji: 明日
+    romaji: ashita
+    meaning: tomorrow
     category: vocabulary
     tags:
       - time
     type: noun
-  - id: tastes_2
-    hiragana: まずい
-    kanji: 不味い
-    romaji: mazui
-    meaning: bad-tasting, awful
-    category: vocabulary
-    tags:
-      - tastes
-    type: い-adjective
-  - id: confusingkanji_1
-    hiragana: まつ
-    kanji: 末
-    romaji: matsu
-    meaning: end/tip
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: time_4
-    hiragana: まよなか
-    kanji: 真夜中
-    romaji: mayonaka
-    meaning: midnight
-    category: vocabulary
-    tags:
-      - time
-    type: noun
-  - id: confusingkanji_1
-    hiragana: まん
-    kanji: 万
-    romaji: man
-    meaning: ten thousand
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: confusingkanji_0
-    hiragana: み
-    kanji: 未
-    romaji: mi
-    meaning: not yet/un-
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: prefix
-  - id: confusingkanji_2
-    hiragana: み
-    kanji: 巳
-    romaji: mi
-    meaning: snake (zodiac)
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: confusingkanji_1
-    hiragana: みぎ
-    kanji: 右
-    romaji: migi
-    meaning: right
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: confusingkanji_0
-    hiragana: みず
-    kanji: 水
-    romaji: mizu
-    meaning: water
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: colors_0
-    hiragana: みどり
-    kanji: 緑
-    romaji: midori
-    meaning: green
-    category: vocabulary
-    tags:
-      - colors
-    type: の-adjective
-  - id: confusingkanji_1
-    hiragana: みる
-    kanji: 見
-    romaji: miru
-    meaning: to see
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: verb
-  - id: family_4
-    hiragana: むこ
-    kanji: 婿
-    romaji: muko
-    meaning: son-in-law
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: family_5
-    hiragana: むすこ
-    kanji: 息子
-    romaji: musuko
-    meaning: son (my)
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: family_6
-    hiragana: むすめ
-    kanji: 娘
-    romaji: musume
-    meaning: daughter (my)
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: colors_1
-    hiragana: むらさき
-    kanji: 紫
-    romaji: murasaki
-    meaning: purple
-    category: vocabulary
-    tags:
-      - colors
-    type: の-adjective
-  - id: confusingkanji_0
-    hiragana: め
-    kanji: 目
-    romaji: me
-    meaning: eye
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: family_8
-    hiragana: めい
-    kanji: 姪
-    romaji: mei
-    meaning: niece
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: time_3
-    hiragana: もくようび
-    kanji: 木曜日
-    romaji: mokuyoubi
-    meaning: Thursday
-    category: vocabulary
-    tags:
-      - time
-    type: noun
-  - id: colors_0
-    hiragana: ももいろ
-    kanji: 桃色
-    romaji: momoiro
-    meaning: peach color
-    category: vocabulary
-    tags:
-      - colors
-    type: unknown
-  - id: confusingkanji_1
-    hiragana: もん
-    kanji: 問
-    romaji: mon
-    meaning: question
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: colors_1
-    hiragana: やまぶきいろ
-    kanji: 山吹色
-    romaji: yamabukiiro
-    meaning: golden yellow
-    category: vocabulary
-    tags:
-      - colors
-    type: unknown
-  - id: family_5
-    hiragana: やもめ
-    kanji: 寡婦
-    romaji: yamome
-    meaning: widowed
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: tastes_3
-    hiragana: やわらかい
-    kanji: 柔らかい
-    romaji: yawarakai
-    meaning: soft, tender
-    category: vocabulary
-    tags:
-      - tastes
-    type: い-adjective
-  - id: confusingkanji_1
-    hiragana: ゆう
-    kanji: 由
-    romaji: yuu
-    meaning: reason/from
-    category: vocabulary
-    tags:
-      - confusing-kanji
-    type: noun
-  - id: time_2
-    hiragana: ゆうがた
-    kanji: 夕方
-    romaji: yuugata
-    meaning: evening
-    category: vocabulary
-    tags:
-      - time
-    type: noun
-  - id: family_5
-    hiragana: よめ
-    kanji: 嫁
-    romaji: yome
-    meaning: daughter-in-law
-    category: vocabulary
-    tags:
-      - family
-    type: noun
-  - id: time_3
-    hiragana: よる
-    kanji: 夜
-    romaji: yoru
-    meaning: night
-    category: vocabulary
-    tags:
-      - time
-    type: noun
-  - id: numbers_3
-    hiragana: よん/し
-    kanji: 四
-    romaji: yon/shi
-    meaning: four
-    category: vocabulary
-    tags:
-      - numbers
-    type: noun
-  - id: time_2
+  - id: time_14
     hiragana: らいしゅう
     kanji: 来週
     romaji: raishuu
@@ -1612,7 +1539,16 @@ vocabulary:
     tags:
       - time
     type: noun
-  - id: time_2
+  - id: time_15
+    hiragana: さんがつ
+    kanji: 三月
+    romaji: sangatsu
+    meaning: March
+    category: vocabulary
+    tags:
+      - time
+    type: noun
+  - id: time_16
     hiragana: らいねん
     kanji: 来年
     romaji: rainen
@@ -1621,51 +1557,133 @@ vocabulary:
     tags:
       - time
     type: noun
-  - id: family_4
-    hiragana: りこん
-    kanji: 離婚
-    romaji: rikon
-    meaning: divorce
+  - id: time_17
+    hiragana: ゆうがた
+    kanji: 夕方
+    romaji: yuugata
+    meaning: evening
     category: vocabulary
     tags:
-      - family
+      - time
     type: noun
-  - id: tastes_5
-    hiragana: りんご
-    kanji: 林檎
-    romaji: ringo
-    meaning: apple
+  - id: time_18
+    hiragana: もくようび
+    kanji: 木曜日
+    romaji: mokuyoubi
+    meaning: Thursday
     category: vocabulary
     tags:
-      - tastes
+      - time
     type: noun
-  - id: confusingkanji_1
-    hiragana: れい
-    kanji: 令
-    romaji: rei
-    meaning: command/order
+  - id: time_19
+    hiragana: あさって
+    kanji: 明後日
+    romaji: asatte
+    meaning: day after tomorrow
     category: vocabulary
     tags:
-      - confusing-kanji
+      - time
     type: noun
-  - id: tastes_3
-    hiragana: レモン
-    romaji: remon
-    meaning: lemon
+  - id: time_20
+    hiragana: まいしゅう
+    kanji: 毎週
+    romaji: maishuu
+    meaning: every week
     category: vocabulary
     tags:
-      - tastes
+      - time
     type: noun
-  - id: numbers_5
-    hiragana: ろく
-    kanji: 六
-    romaji: roku
-    meaning: six
+  - id: time_21
+    hiragana: しがつ
+    kanji: 四月
+    romaji: shigatsu
+    meaning: April
     category: vocabulary
     tags:
-      - numbers
+      - time
     type: noun
-  - id: time_5
+  - id: time_22
+    hiragana: まいとし
+    kanji: 毎年
+    romaji: maitoshi
+    meaning: every year
+    category: vocabulary
+    tags:
+      - time
+    type: noun
+  - id: time_23
+    hiragana: よる
+    kanji: 夜
+    romaji: yoru
+    meaning: night
+    category: vocabulary
+    tags:
+      - time
+    type: noun
+  - id: time_24
+    hiragana: きんようび
+    kanji: 金曜日
+    romaji: kinyoubi
+    meaning: Friday
+    category: vocabulary
+    tags:
+      - time
+    type: noun
+  - id: time_25
+    hiragana: おととい
+    kanji: 一昨日
+    romaji: ototoi
+    meaning: day before yesterday
+    category: vocabulary
+    tags:
+      - time
+    type: noun
+  - id: time_26
+    hiragana: しゅうまつ
+    kanji: 週末
+    romaji: shuumatsu
+    meaning: weekend
+    category: vocabulary
+    tags:
+      - time
+    type: noun
+  - id: time_27
+    hiragana: ごがつ
+    kanji: 五月
+    romaji: gogatsu
+    meaning: May
+    category: vocabulary
+    tags:
+      - time
+    type: noun
+  - id: time_28
+    hiragana: ねん
+    kanji: 年
+    romaji: nen
+    meaning: year
+    category: vocabulary
+    tags:
+      - time
+    type: noun
+  - id: time_29
+    hiragana: まよなか
+    kanji: 真夜中
+    romaji: mayonaka
+    meaning: midnight
+    category: vocabulary
+    tags:
+      - time
+    type: noun
+  - id: time_30
+    hiragana: どようび
+    kanji: 土曜日
+    romaji: doyoubi
+    meaning: Saturday
+    category: vocabulary
+    tags:
+      - time
+    type: noun
+  - id: time_31
     hiragana: ろくがつ
     kanji: 六月
     romaji: rokugatsu
@@ -1674,86 +1692,68 @@ vocabulary:
     tags:
       - time
     type: noun
-  - id: confusingkanji_1
-    hiragana: わく
-    kanji: 惑
-    romaji: waku
-    meaning: confusion
+  - id: time_32
+    hiragana: にちようび
+    kanji: 日曜日
+    romaji: nichiyoubi
+    meaning: Sunday
     category: vocabulary
     tags:
-      - confusing-kanji
+      - time
     type: noun
-  - id: tastes_12
-    hiragana: 味
-    kanji: あじ
-    romaji: aji
-    meaning: taste, flavor
+  - id: time_33
+    hiragana: しちがつ
+    kanji: 七月
+    romaji: shichigatsu
+    meaning: July
     category: vocabulary
     tags:
-      - tastes
+      - time
     type: noun
-  - id: tastes_9
-    hiragana: 料理
-    kanji: りょうり
-    romaji: ryouri
-    meaning: dish, cooking
+  - id: time_34
+    hiragana: はちがつ
+    kanji: 八月
+    romaji: hachigatsu
+    meaning: August
     category: vocabulary
     tags:
-      - tastes
+      - time
     type: noun
-  - id: tastes_8
-    hiragana: 果物
-    kanji: くだもの
-    romaji: kudamono
-    meaning: fruit
+  - id: time_35
+    hiragana: くがつ
+    kanji: 九月
+    romaji: kugatsu
+    meaning: September
     category: vocabulary
     tags:
-      - tastes
+      - time
     type: noun
-  - id: tastes_0
-    hiragana: 甘辛い
-    kanji: 甘辛い
-    romaji: amakarai
-    meaning: sweet and spicy
+  - id: time_36
+    hiragana: じゅうがつ
+    kanji: 十月
+    romaji: juugatsu
+    meaning: October
     category: vocabulary
     tags:
-      - tastes
-    type: い-adjective
-  - id: tastes_2
-    hiragana: 甘酸っぱい
-    kanji: 甘酸っぱい
-    romaji: amasuppai
-    meaning: sweet and sour (alternative)
-    category: vocabulary
-    tags:
-      - tastes
-    type: い-adjective
-  - id: tastes_11
-    hiragana: 薬
-    kanji: くすり
-    romaji: kusuri
-    meaning: medicine
-    category: vocabulary
-    tags:
-      - tastes
+      - time
     type: noun
-  - id: tastes_1
-    hiragana: 酸っぱ甘い
-    kanji: 酸っぱ甘い
-    romaji: suppaamai
-    meaning: sweet and sour
+  - id: time_37
+    hiragana: じゅういちがつ
+    kanji: 十一月
+    romaji: juuichigatsu
+    meaning: November
     category: vocabulary
     tags:
-      - tastes
-    type: い-adjective
-  - id: tastes_10
-    hiragana: 食べ物
-    kanji: たべもの
-    romaji: tabemono
-    meaning: food
+      - time
+    type: noun
+  - id: time_38
+    hiragana: じゅうにがつ
+    kanji: 十二月
+    romaji: juunigatsu
+    meaning: December
     category: vocabulary
     tags:
-      - tastes
+      - time
     type: noun
 categories:
   - all

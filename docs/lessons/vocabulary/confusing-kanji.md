@@ -13,10 +13,10 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 ### 土 vs 士
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| つち | 土 | tsuchi | soil/earth | noun |
-| し | 士 | shi | gentleman/samurai | noun |
+| Hiragana | Kanji | Romaji | English           | Type |
+|----------|-------|--------|-------------------|------|
+| つち       | 土     | tsuchi | soil/earth        | noun |
+| し        | 士     | shi    | gentleman/samurai | noun |
 
 **Memory Tips:**
 - **土 (tsuchi)**: Think of soil on the ground - the ground (bottom stroke) is wider than what's above
@@ -30,10 +30,10 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 ### 千 vs 干
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| せん | 千 | sen | thousand | noun |
-| かん | 干 | kan | to dry | verb |
+| Hiragana | Kanji | Romaji | English  | Type |
+|----------|-------|--------|----------|------|
+| せん       | 千     | sen    | thousand | noun |
+| かん       | 干     | kan    | to dry   | verb |
 
 **Memory Tips:**
 - **千 (sen)**: Looks like a rising number (thousands are higher numbers!). The upward curve represents going up in value
@@ -47,10 +47,10 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 ### 未 vs 末
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| み | 未 | mi | not yet/un- | prefix |
-| まつ | 末 | matsu | end/tip | noun |
+| Hiragana | Kanji | Romaji | English     | Type   |
+|----------|-------|--------|-------------|--------|
+| み        | 未     | mi     | not yet/un- | prefix |
+| まつ       | 末     | matsu  | end/tip     | noun   |
 
 **Memory Tips:**
 - **未 (mi)**: The idea is still small (short first stroke) but growing (long second stroke)
@@ -66,10 +66,10 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 ### 日 vs 曰
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| ひ | 日 | hi | day/sun | noun |
-| いわく | 曰 | iwaku | say/reason | verb |
+| Hiragana | Kanji | Romaji | English    | Type |
+|----------|-------|--------|------------|------|
+| ひ        | 日     | hi     | day/sun    | noun |
+| いわく      | 曰     | iwaku  | say/reason | verb |
 
 **Memory Tips:**
 - **日 (hi)**: A complete circle with rays touching both sides - it's bright and complete!
@@ -85,8 +85,8 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
-| ひと | 人 | hito | person | noun |
-| はい | 入 | hairu | enter | verb |
+| ひと       | 人     | hito   | person  | noun |
+| はい       | 入     | hairu  | enter   | verb |
 
 **Memory Tips:**
 - **人 (hito)**: Looks like a person with arms at the sides (strokes don't meet)
@@ -102,10 +102,10 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 ### 力 vs 刀
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| ちから | 力 | chikara | power/strength | noun |
-| かたな | 刀 | katana | sword | noun |
+| Hiragana | Kanji | Romaji  | English        | Type |
+|----------|-------|---------|----------------|------|
+| ちから      | 力     | chikara | power/strength | noun |
+| かたな      | 刀     | katana  | sword          | noun |
 
 **Memory Tips:**
 - **力 (chikara)**: Looks like someone flexing their muscles (power!) with arms up
@@ -121,8 +121,8 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
-| いし | 石 | ishi | stone | noun |
-| みぎ | 右 | migi | right | noun |
+| いし       | 石     | ishi   | stone   | noun |
+| みぎ       | 右     | migi   | right   | noun |
 
 **Memory Tips:**
 - **石 (ishi)**: Grounded with no pointing direction
@@ -138,8 +138,8 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
-| うし | 牛 | ushi | cow | noun |
-| ご | 午 | go | noon | noun |
+| うし       | 牛     | ushi   | cow     | noun |
+| ご        | 午     | go     | noon    | noun |
 
 **Memory Tips:**
 - **牛 (ushi)**: Has horns sticking up! The long stroke looks like cow horns
@@ -155,10 +155,10 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 ### 木 vs 本
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| き | 木 | ki | tree | noun |
-| ほん | 本 | hon | book/root | noun |
+| Hiragana | Kanji | Romaji | English   | Type |
+|----------|-------|--------|-----------|------|
+| き        | 木     | ki     | tree      | noun |
+| ほん       | 本     | hon    | book/root | noun |
 
 **Memory Tips:**
 - **木 (ki)**: A natural tree growing from the ground
@@ -174,8 +174,8 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
-| しろ | 白 | shiro | white | noun |
-| じ | 自 | ji | oneself | noun |
+| しろ       | 白     | shiro  | white   | noun |
+| じ        | 自     | ji     | oneself | noun |
 
 **Memory Tips:**
 - **白 (shiro)**: Simple and bright with just two strokes
@@ -191,10 +191,10 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 ### 王 vs 玉
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| おう | 王 | ou | king | noun |
-| たま | 玉 | tama | gem/jewel | noun |
+| Hiragana | Kanji | Romaji | English   | Type |
+|----------|-------|--------|-----------|------|
+| おう       | 王     | ou     | king      | noun |
+| たま       | 玉     | tama   | gem/jewel | noun |
 
 **Memory Tips:**
 - **王 (ou)**: The king wears his crown
@@ -206,8 +206,8 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
-| おお | 大 | oo | big | noun |
-| いぬ | 犬 | inu | dog | noun |
+| おお       | 大     | oo     | big     | noun |
+| いぬ       | 犬     | inu    | dog     | noun |
 
 **Memory Tips:**
 - **大 (oo)**: A big person
@@ -221,10 +221,10 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 ### 方 vs 万
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| ほう | 方 | hou | direction/method | noun |
-| まん | 万 | man | ten thousand | noun |
+| Hiragana | Kanji | Romaji | English          | Type |
+|----------|-------|--------|------------------|------|
+| ほう       | 方     | hou    | direction/method | noun |
+| まん       | 万     | man    | ten thousand     | noun |
 
 **Memory Tips:**
 - **方 (hou)**: Has an arrow or pointer on top to show which way to go - looks like a person pointing
@@ -240,8 +240,8 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
-| みず | 水 | mizu | water | noun |
-| こおり | 氷 | koori | ice | noun |
+| みず       | 水     | mizu   | water   | noun |
+| こおり      | 氷     | koori  | ice     | noun |
 
 **Memory Tips:**
 - **水 (mizu)**: Flows freely
@@ -257,10 +257,10 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 ### 拾 vs 捨
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| ひろ | 拾 | hiro | pick up | verb |
-| すて | 捨 | sute | discard/throw away | verb |
+| Hiragana | Kanji | Romaji | English            | Type |
+|----------|-------|--------|--------------------|------|
+| ひろ       | 拾     | hiro   | pick up            | verb |
+| すて       | 捨     | sute   | discard/throw away | verb |
 
 **Memory Tips:**
 - **拾 (hiro)**: One line - you're picking up one item
@@ -276,10 +276,10 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 ### 間 vs 問
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| あいだ | 間 | aida | between/interval | noun |
-| もん | 問 | mon | question | noun |
+| Hiragana | Kanji | Romaji | English          | Type |
+|----------|-------|--------|------------------|------|
+| あいだ      | 間     | aida   | between/interval | noun |
+| もん       | 問     | mon    | question         | noun |
 
 **Memory Tips:**
 - **間 (aida)**: Has the sun (日) - think of sunlight coming through a gate's gap (the space BETWEEN)
@@ -293,10 +293,10 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 ### 今 vs 令
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| いま | 今 | ima | now | noun |
-| れい | 令 | rei | command/order | noun |
+| Hiragana | Kanji | Romaji | English       | Type |
+|----------|-------|--------|---------------|------|
+| いま       | 今     | ima    | now           | noun |
+| れい       | 令     | rei    | command/order | noun |
 
 **Memory Tips:**
 - **今 (ima)**: Simple and immediate - just a simple stroke
@@ -310,11 +310,11 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 ### 己 vs 已 vs 巳
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| おのれ | 己 | onore | self/oneself | noun |
-| い | 已 | i | already | adverb |
-| み | 巳 | mi | snake (zodiac) | noun |
+| Hiragana | Kanji | Romaji | English        | Type   |
+|----------|-------|--------|----------------|--------|
+| おのれ      | 己     | onore  | self/oneself   | noun   |
+| い        | 已     | i      | already        | adverb |
+| み        | 巳     | mi     | snake (zodiac) | noun   |
 
 **Memory Tips:**
 - **己 (onore)**: Open at the top - you're free
@@ -330,10 +330,10 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 ### 貝 vs 見
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| かい | 貝 | kai | shell/shellfish | noun |
-| みる | 見 | miru | to see | verb |
+| Hiragana | Kanji | Romaji | English         | Type |
+|----------|-------|--------|-----------------|------|
+| かい       | 貝     | kai    | shell/shellfish | noun |
+| みる       | 見     | miru   | to see          | verb |
 
 **Memory Tips:**
 - **貝 (kai)**: Looks like a mollusk shell with its characteristic shape
@@ -349,8 +349,8 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
-| め | 目 | me | eye | noun |
-| じ | 自 | ji | self | noun |
+| め        | 目     | me     | eye     | noun |
+| じ        | 自     | ji     | self    | noun |
 
 **Memory Tips:**
 - **目 (me)**: Just a simple EYE looking at things
@@ -364,12 +364,12 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 ### 田 vs 由 vs 甲 vs 申
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| た | 田 | ta | rice field | noun |
-| ゆう | 由 | yuu | reason/from | noun |
-| こう | 甲 | kou | first/armor | noun |
-| しん | 申 | shin | to say/explain | verb |
+| Hiragana | Kanji | Romaji | English        | Type |
+|----------|-------|--------|----------------|------|
+| た        | 田     | ta     | rice field     | noun |
+| ゆう       | 由     | yuu    | reason/from    | noun |
+| こう       | 甲     | kou    | first/armor    | noun |
+| しん       | 申     | shin   | to say/explain | verb |
 
 **Memory Tips:**
 - **田 (ta)**: Has a + in the middle like crossing paths in a field
@@ -389,8 +389,8 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
-| とり | 鳥 | tori | bird | noun |
-| からす | 烏 | karasu | crow | noun |
+| とり       | 鳥     | tori   | bird    | noun |
+| からす      | 烏     | karasu | crow    | noun |
 
 **Memory Tips:**
 - **鳥 (tori)**: Has detail inside - it has a visible white chest!
@@ -404,10 +404,10 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 ### 感 vs 惑
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| かん | 感 | kan | feeling/emotion | noun |
-| わく | 惑 | waku | confusion | noun |
+| Hiragana | Kanji | Romaji | English         | Type |
+|----------|-------|--------|-----------------|------|
+| かん       | 感     | kan    | feeling/emotion | noun |
+| わく       | 惑     | waku   | confusion       | noun |
 
 **Memory Tips:**
 - **感 (kan)**: Has 咸 on top - think of "sensation" with the heart (心) at the bottom
@@ -421,10 +421,10 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 ### 験 vs 検
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| けん | 験 | ken | test/verification | noun |
-| けん | 検 | ken | examination | noun |
+| Hiragana | Kanji | Romaji | English           | Type |
+|----------|-------|--------|-------------------|------|
+| けん       | 験     | ken    | test/verification | noun |
+| けん       | 検     | ken    | examination       | noun |
 
 **Memory Tips:**
 - **験 (ken)**: Has a horse (馬) - imagine running a horse TEST!
