@@ -3,11 +3,13 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import Vocabulary from '../../src/pages/dictionary';
-import { mockVocabularyData } from '../__fixtures__/component/vocabulary-mock-data';
 
-vi.mock('../../src/data/vocabulary.yaml', () => ({
-  default: mockVocabularyData,
-}));
+vi.mock('../../src/data/vocabulary.yaml', async () => {
+  const { mockVocabularyData } = await import('../__fixtures__/component/vocabulary-mock-data');
+  return {
+    default: mockVocabularyData,
+  };
+});
 
 vi.mock('../../src/pages/dictionary.module.css', () => ({
   default: {},
