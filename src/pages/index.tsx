@@ -1,10 +1,8 @@
-import type {ReactNode} from 'react';
-import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
-
+import Layout from '@theme/Layout';
+import type {ReactNode} from 'react';
 import styles from './index.module.css';
 
 const mainFeatures = [
@@ -13,32 +11,32 @@ const mainFeatures = [
     icon: '📚',
     description: 'Structured learning path',
     link: '/docs/lessons/intro',
-    color: 'primary'
+    color: 'primary',
   },
   {
     title: 'Grammar',
     icon: '📘',
     description: 'Grammar rules & structure',
     link: '/docs/lessons/grammar',
-    color: 'info'
+    color: 'info',
   },
   {
     title: 'Vocabulary',
     icon: '📝',
     description: 'Word lists & practice',
     link: '/docs/lessons/vocabulary',
-    color: 'success'
+    color: 'success',
   },
   {
     title: 'References',
     icon: '📖',
     description: 'Quick lookup tools',
     link: '/docs/reference/hiragana-chart',
-    color: 'secondary'
-  }
+    color: 'secondary',
+  },
 ];
 
-function FeatureCard({title, icon, description, link, color}: typeof mainFeatures[0]) {
+function FeatureCard({title, icon, description, link}: typeof mainFeatures[0]) {
   return (
     <Link to={link} className={styles.featureCard}>
       <div className={styles.cardIcon}>{icon}</div>

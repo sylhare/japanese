@@ -8,7 +8,7 @@ export const mockVocabularyData = {
       meaning: 'red',
       category: 'vocabulary',
       tags: ['colors'],
-      type: 'い-adjective'
+      type: 'い-adjective',
     },
     {
       id: 'test_2',
@@ -18,7 +18,7 @@ export const mockVocabularyData = {
       meaning: 'blue',
       category: 'vocabulary',
       tags: ['colors'],
-      type: 'い-adjective'
+      type: 'い-adjective',
     },
     {
       id: 'test_3',
@@ -28,7 +28,7 @@ export const mockVocabularyData = {
       meaning: 'sweet',
       category: 'vocabulary',
       tags: ['tastes'],
-      type: 'い-adjective'
+      type: 'い-adjective',
     },
     {
       id: 'test_4',
@@ -37,14 +37,14 @@ export const mockVocabularyData = {
       meaning: 'coffee',
       category: 'vocabulary',
       tags: ['tastes'],
-      type: 'noun'
-    }
+      type: 'noun',
+    },
   ],
   categories: ['all', 'vocabulary'],
   sortOptions: [
     { value: 'hiragana', label: 'Hiragana (A-Z)' },
     { value: 'romaji', label: 'Romaji (A-Z)' },
     { value: 'meaning', label: 'Meaning (A-Z)' },
-    { value: 'category', label: 'Category' }
-  ]
+    { value: 'category', label: 'Category' },
+  ],
 };

@@ -17,18 +17,18 @@ function extractVocabularyFromFile(filePath) {
   const content = fs.readFileSync(filePath, 'utf8');
   const vocabulary = [];
   let itemCounter = 0;
-  
+
   let match;
   while ((match = VOCAB_TABLE_PATTERN.exec(content)) !== null) {
     const tableContent = match[1];
-    
+
     if (isVocabularyTable(tableContent)) {
       const extracted = extractFromTable(tableContent, filePath, itemCounter);
       vocabulary.push(...extracted);
       itemCounter += extracted.length;
     }
   }
-  
+
   return vocabulary;
 }
 
@@ -44,14 +44,12 @@ function isVocabularyTable(tableContent) {
   if (lines.length === 0) {
     return false;
   }
-  
+
   const headerRow = lines[0];
   const hasHiragana = /Hiragana/i.test(headerRow);
   const hasRomaji = /Romaji/i.test(headerRow);
   const hasEnglish = /English/i.test(headerRow);
-  const hasType = /Type/i.test(headerRow);
-  const hasKanji = /Kanji/i.test(headerRow);
-  
+
   return hasHiragana && hasRomaji && hasEnglish;
 }
 
@@ -90,8 +88,8 @@ function stripEmojis(text) {
   // - Common punctuation: . , - ' ( ) : ; / &
   // Note: This removes emoji styling characters but keeps base characters (e.g., "8️⃣" -> "8")
   // because the base digit "8" (U+0038) matches \p{N} and is kept as a valid number
-  text = text.replace(/[^\p{L}\p{N}\s.,'():;/&\-]/gu, '').trim();
-  
+  text = text.replace(/[^\p{L}\p{N}\s.,'():;/&-]/gu, '').trim();
+
   // Remove leading numbers followed by optional spaces (e.g., "8 August" -> "August")
   // This is needed because keycap emojis like "8️⃣" have a digit base character that survives
   // the whitelist filter (the emoji styling is removed, but the digit remains)
@@ -123,57 +121,57 @@ function findColumnIndex(headerCells, columnName) {
 function extractFromTable(tableContent, filePath, startIndex = 0) {
   const vocabulary = [];
   const rows = tableContent.trim().split('\n');
-  
+
   if (rows.length < 2) {
     return vocabulary;
   }
-  
+
   const headerRow = rows[0];
   const headerCells = parseRow(headerRow);
-  
+
   const hiraganaIdx = findColumnIndex(headerCells, 'Hiragana');
   const kanjiIdx = findColumnIndex(headerCells, 'Kanji');
   const romajiIdx = findColumnIndex(headerCells, 'Romaji');
   const englishIdx = findColumnIndex(headerCells, 'English');
   const typeIdx = findColumnIndex(headerCells, 'Type');
-  
+
   if (hiraganaIdx === -1 || romajiIdx === -1 || englishIdx === -1) {
     return vocabulary;
   }
-  
+
   let itemIndex = startIndex;
-  
+
   for (let i = 1; i < rows.length; i++) {
     const row = rows[i];
-    
+
     if (row.match(/^[\s|:-]+$/)) {
       continue;
     }
-    
+
     const cells = parseRow(row);
-    
+
     const hiragana = hiraganaIdx >= 0 && hiraganaIdx < cells.length ? cells[hiraganaIdx].trim() : '';
     const kanji = kanjiIdx >= 0 && kanjiIdx < cells.length ? cells[kanjiIdx].trim() : '';
     const romaji = romajiIdx >= 0 && romajiIdx < cells.length ? cells[romajiIdx].trim() : '';
     const englishRaw = englishIdx >= 0 && englishIdx < cells.length ? cells[englishIdx].trim() : '';
     const english = stripEmojis(englishRaw);
     const type = typeIdx >= 0 && typeIdx < cells.length ? cells[typeIdx].trim() : '';
-    
+
     if (!hiragana || !romaji || !english || hiragana.includes('---') || hiragana.match(/Hiragana|Kanji|Romaji|English/i)) {
       continue;
     }
-    
+
     if (isParticle(type)) {
       continue;
     }
-    
+
     if (hiragana.match(/^[\p{Emoji}\s]+$/u)) {
       continue;
     }
-    
+
     const fileId = path.basename(filePath, '.md').replace(/[^a-zA-Z0-9]/g, '');
     const id = `${fileId}_${itemIndex}`;
-    
+
     let category = 'general';
     if (filePath.includes('/vocabulary/')) {
       const folderName = path.basename(path.dirname(filePath));
@@ -183,11 +181,11 @@ function extractFromTable(tableContent, filePath, startIndex = 0) {
     } else if (filePath.includes('/lessons/')) {
       category = 'lessons';
     }
-    
+
     const tags = [];
     const lessonName = path.basename(filePath, '.md');
     tags.push(lessonName);
-    
+
     vocabulary.push({
       id,
       hiragana: hiragana || '',
@@ -196,12 +194,12 @@ function extractFromTable(tableContent, filePath, startIndex = 0) {
       meaning: english || '',
       category,
       tags,
-      type: type || 'unknown'
+      type: type || 'unknown',
     });
-    
+
     itemIndex++;
   }
-  
+
   return vocabulary;
 }
 
@@ -216,31 +214,31 @@ function scanAllLessons() {
     { value: 'hiragana', label: 'Hiragana (A-Z)' },
     { value: 'romaji', label: 'Romaji (A-Z)' },
     { value: 'meaning', label: 'Meaning (A-Z)' },
-    { value: 'category', label: 'Category' }
+    { value: 'category', label: 'Category' },
   ];
-  
+
   function scanDirectory(dir) {
     const files = fs.readdirSync(dir).sort();
-    
+
     for (const file of files) {
       const filePath = path.join(dir, file);
       const stat = fs.statSync(filePath);
-      
+
       if (stat.isDirectory()) {
         scanDirectory(filePath);
       } else if (file.endsWith('.md')) {
         const lessonVocabulary = extractVocabularyFromFile(filePath);
         vocabulary.push(...lessonVocabulary);
-        
+
         lessonVocabulary.forEach(item => {
           categories.add(item.category);
         });
       }
     }
   }
-  
+
   scanDirectory(process.env.TEST_LESSONS_DIR || DEFAULT_LESSONS_DIR);
-  
+
   vocabulary.sort((a, b) => {
     const fileCompare = a.tags[0].localeCompare(b.tags[0]);
     if (fileCompare !== 0) {
@@ -248,11 +246,11 @@ function scanAllLessons() {
     }
     return a.id.localeCompare(b.id);
   });
-  
+
   return {
     vocabulary,
     categories: Array.from(categories).sort(),
-    sortOptions
+    sortOptions,
   };
 }
 
@@ -264,7 +262,7 @@ function loadExistingVocabulary() {
   if (!fs.existsSync(VOCABULARY_FILE)) {
     return { vocabulary: [], categories: ['all'], sortOptions: [] };
   }
-  
+
   try {
     const content = fs.readFileSync(VOCABULARY_FILE, 'utf8');
     return yaml.load(content);
@@ -284,23 +282,23 @@ function loadExistingVocabulary() {
 function compareIds(idA, idB) {
   const partsA = idA.split('_');
   const partsB = idB.split('_');
-  
+
   const prefixA = partsA.slice(0, -1).join('_');
   const prefixB = partsB.slice(0, -1).join('_');
   const prefixCompare = prefixA.localeCompare(prefixB);
   if (prefixCompare !== 0) {
     return prefixCompare;
   }
-  
+
   const suffixA = partsA[partsA.length - 1];
   const suffixB = partsB[partsB.length - 1];
   const numA = parseInt(suffixA, 10);
   const numB = parseInt(suffixB, 10);
-  
+
   if (!isNaN(numA) && !isNaN(numB)) {
     return numA - numB;
   }
-  
+
   return suffixA.localeCompare(suffixB);
 }
 
@@ -311,30 +309,30 @@ function compareIds(idA, idB) {
  */
 function regenerateIds(vocabulary) {
   const byPrefix = new Map();
-  
+
   vocabulary.forEach(item => {
     const parts = item.id.split('_');
     const prefix = parts.slice(0, -1).join('_');
-    
+
     if (!byPrefix.has(prefix)) {
       byPrefix.set(prefix, []);
     }
     byPrefix.get(prefix).push(item);
   });
-  
+
   const result = [];
-  
+
   byPrefix.forEach((items, prefix) => {
     items.sort((a, b) => compareIds(a.id, b.id));
-    
+
     items.forEach((item, index) => {
       result.push({
         ...item,
-        id: `${prefix}_${index}`
+        id: `${prefix}_${index}`,
       });
     });
   });
-  
+
   return result;
 }
 
@@ -348,17 +346,17 @@ function regenerateIds(vocabulary) {
 function mergeVocabulary(existing, extracted) {
   const existingMap = new Map();
   const extractedMap = new Map();
-  
+
   existing.vocabulary.forEach(item => {
     existingMap.set(item.id, item);
   });
-  
+
   extracted.vocabulary.forEach(item => {
     extractedMap.set(item.id, item);
   });
-  
+
   const contentMap = new Map();
-  
+
   existing.vocabulary.forEach(item => {
     if (isParticle(item.type)) {
       return;
@@ -366,7 +364,7 @@ function mergeVocabulary(existing, extracted) {
     const contentKey = `${item.hiragana}-${item.romaji}-${item.meaning}`.toLowerCase();
     contentMap.set(contentKey, item);
   });
-  
+
   extracted.vocabulary.forEach(item => {
     if (isParticle(item.type)) {
       return;
@@ -376,9 +374,9 @@ function mergeVocabulary(existing, extracted) {
       contentMap.set(contentKey, item);
     }
   });
-  
+
   const allCategories = new Set([...existing.categories, ...extracted.categories]);
-  
+
   const mergedVocabulary = Array.from(contentMap.values()).sort((a, b) => {
     return compareIds(a.id, b.id);
   });
@@ -388,7 +386,7 @@ function mergeVocabulary(existing, extracted) {
   return {
     vocabulary: vocabularyWithRegeneratedIds,
     categories: Array.from(allCategories).sort(),
-    sortOptions: existing.sortOptions.length > 0 ? existing.sortOptions : extracted.sortOptions
+    sortOptions: existing.sortOptions.length > 0 ? existing.sortOptions : extracted.sortOptions,
   };
 }
 
@@ -397,24 +395,24 @@ function mergeVocabulary(existing, extracted) {
  */
 function main() {
   console.log('🔍 Scanning lesson files for vocabulary...');
-  
+
   const existing = loadExistingVocabulary();
   const extracted = scanAllLessons();
   const merged = mergeVocabulary(existing, extracted);
-  
+
   const newItems = merged.vocabulary.length - existing.vocabulary.length;
   const totalItems = merged.vocabulary.length;
-  
+
   if (newItems > 0) {
     console.log(`📚 Found ${newItems} new vocabulary items`);
   } else {
     console.log('📚 No new vocabulary items found (idempotent)');
   }
   console.log(`📖 Total vocabulary items: ${totalItems}`);
-  
+
   const existingContent = yaml.dump(existing, { indent: 2, lineWidth: -1, noRefs: true });
   const newContent = yaml.dump(merged, { indent: 2, lineWidth: -1, noRefs: true });
-  
+
   if (existingContent !== newContent) {
     fs.writeFileSync(VOCABULARY_FILE, newContent);
     console.log('✅ Vocabulary file updated successfully!');

@@ -34,13 +34,13 @@ export function createTestVocabularyItem(overrides: Partial<VocabularyItem> = {}
     type: 'い-adjective',
     category: 'colors',
     tags: ['test'],
-    ...overrides
+    ...overrides,
   };
 }
 
 export function createTestVocabularyData(
-  vocabulary: VocabularyItem[] = [], 
-  overrides: Partial<VocabularyData> = {}
+  vocabulary: VocabularyItem[] = [],
+  overrides: Partial<VocabularyData> = {},
 ): VocabularyData {
   return {
     vocabulary,
@@ -49,9 +49,9 @@ export function createTestVocabularyData(
       { value: 'hiragana', label: 'Hiragana (A-Z)' },
       { value: 'romaji', label: 'Romaji (A-Z)' },
       { value: 'meaning', label: 'Meaning (A-Z)' },
-      { value: 'category', label: 'Category' }
+      { value: 'category', label: 'Category' },
     ],
-    ...overrides
+    ...overrides,
   };
 }
 
@@ -62,8 +62,8 @@ export function createDuplicateTestData(): TestDataPair {
       hiragana: 'あか',
       romaji: 'aka',
       meaning: 'red',
-      tags: ['existing']
-    })
+      tags: ['existing'],
+    }),
   ], { categories: ['colors'] });
 
   const extracted = createTestVocabularyData([
@@ -73,8 +73,8 @@ export function createDuplicateTestData(): TestDataPair {
       romaji: 'aka',
       meaning: 'red',
       category: 'vocabulary',
-      tags: ['colors']
-    })
+      tags: ['colors'],
+    }),
   ], { categories: ['vocabulary'] });
 
   return { existing, extracted };
@@ -87,15 +87,15 @@ export function createPartialDuplicateTestData(): TestDataPair {
       hiragana: 'あか',
       romaji: 'aka',
       meaning: 'red',
-      tags: ['existing']
+      tags: ['existing'],
     }),
     createTestVocabularyItem({
       id: 'existing_2',
       hiragana: 'あお',
       romaji: 'ao',
       meaning: 'blue',
-      tags: ['existing']
-    })
+      tags: ['existing'],
+    }),
   ], { categories: ['colors'] });
 
   const extracted = createTestVocabularyData([
@@ -105,7 +105,7 @@ export function createPartialDuplicateTestData(): TestDataPair {
       romaji: 'aka',
       meaning: 'red',
       category: 'vocabulary',
-      tags: ['colors']
+      tags: ['colors'],
     }),
     createTestVocabularyItem({
       id: 'extracted_2',
@@ -113,8 +113,8 @@ export function createPartialDuplicateTestData(): TestDataPair {
       romaji: 'kiiro',
       meaning: 'yellow',
       category: 'vocabulary',
-      tags: ['colors']
-    })
+      tags: ['colors'],
+    }),
   ], { categories: ['vocabulary'] });
 
   return { existing, extracted };
@@ -128,7 +128,7 @@ export function createIdempotentTestData(): VocabularyData {
       romaji: 'aka',
       meaning: 'red',
       category: 'vocabulary',
-      tags: ['colors']
+      tags: ['colors'],
     }),
     createTestVocabularyItem({
       id: 'colors_2',
@@ -136,8 +136,8 @@ export function createIdempotentTestData(): VocabularyData {
       romaji: 'ao',
       meaning: 'blue',
       category: 'vocabulary',
-      tags: ['colors']
-    })
+      tags: ['colors'],
+    }),
   ], { categories: ['vocabulary'] });
 
   return baseVocabulary;
@@ -154,8 +154,8 @@ export function createMissingFieldsTestData(): TestDataPair {
       hiragana: 'あか',
       romaji: 'aka',
       meaning: 'red',
-      tags: ['existing']
-    })
+      tags: ['existing'],
+    }),
   ], { categories: ['colors'] });
 
   const extracted = createTestVocabularyData([
@@ -165,8 +165,8 @@ export function createMissingFieldsTestData(): TestDataPair {
       romaji: 'aka',
       meaning: 'red',
       category: 'vocabulary',
-      tags: ['colors']
-    })
+      tags: ['colors'],
+    }),
   ], { categories: ['vocabulary'] });
 
   return { existing, extracted };
@@ -179,8 +179,8 @@ export function createCaseInsensitiveTestData(): TestDataPair {
       hiragana: 'あか',
       romaji: 'aka',
       meaning: 'Red',
-      tags: ['existing']
-    })
+      tags: ['existing'],
+    }),
   ], { categories: ['colors'] });
 
   const extracted = createTestVocabularyData([
@@ -190,8 +190,8 @@ export function createCaseInsensitiveTestData(): TestDataPair {
       romaji: 'aka',
       meaning: 'red',
       category: 'vocabulary',
-      tags: ['colors']
-    })
+      tags: ['colors'],
+    }),
   ], { categories: ['vocabulary'] });
 
   return { existing, extracted };
@@ -204,8 +204,8 @@ export function createDifferentMeaningTestData(): TestDataPair {
       hiragana: 'あか',
       romaji: 'aka',
       meaning: 'red',
-      tags: ['existing']
-    })
+      tags: ['existing'],
+    }),
   ], { categories: ['colors'] });
 
   const extracted = createTestVocabularyData([
@@ -215,8 +215,8 @@ export function createDifferentMeaningTestData(): TestDataPair {
       romaji: 'aka',
       meaning: 'bright',
       category: 'vocabulary',
-      tags: ['colors']
-    })
+      tags: ['colors'],
+    }),
   ], { categories: ['vocabulary'] });
 
   return { existing, extracted };
@@ -229,8 +229,8 @@ export function createDifferentHiraganaTestData(): TestDataPair {
       hiragana: 'あか',
       romaji: 'aka',
       meaning: 'red',
-      tags: ['existing']
-    })
+      tags: ['existing'],
+    }),
   ], { categories: ['colors'] });
 
   const extracted = createTestVocabularyData([
@@ -240,20 +240,20 @@ export function createDifferentHiraganaTestData(): TestDataPair {
       romaji: 'akai',
       meaning: 'red',
       category: 'vocabulary',
-      tags: ['colors']
-    })
+      tags: ['colors'],
+    }),
   ], { categories: ['vocabulary'] });
 
   return { existing, extracted };
 }
 
 export function createCategoryMergeTestData(): TestDataPair {
-  const existing = createTestVocabularyData([], { 
-    categories: ['colors', 'food'] 
+  const existing = createTestVocabularyData([], {
+    categories: ['colors', 'food'],
   });
 
-  const extracted = createTestVocabularyData([], { 
-    categories: ['colors', 'tastes'] 
+  const extracted = createTestVocabularyData([], {
+    categories: ['colors', 'tastes'],
   });
 
   return { existing, extracted };
@@ -262,14 +262,14 @@ export function createCategoryMergeTestData(): TestDataPair {
 export function createSortOptionsTestData(): TestDataPair {
   const existing = createTestVocabularyData([], {
     sortOptions: [
-      { value: 'custom', label: 'Custom Sort' }
-    ]
+      { value: 'custom', label: 'Custom Sort' },
+    ],
   });
 
   const extracted = createTestVocabularyData([], {
     sortOptions: [
-      { value: 'hiragana', label: 'Hiragana (A-Z)' }
-    ]
+      { value: 'hiragana', label: 'Hiragana (A-Z)' },
+    ],
   });
 
   return { existing, extracted };
@@ -282,8 +282,8 @@ export function createExtractVocabularyDuplicateTestData(): TestDataPair {
       hiragana: 'あか',
       romaji: 'aka',
       meaning: 'red',
-      tags: ['existing']
-    })
+      tags: ['existing'],
+    }),
   ], { categories: ['colors'] });
 
   const extracted = createTestVocabularyData([
@@ -293,7 +293,7 @@ export function createExtractVocabularyDuplicateTestData(): TestDataPair {
       romaji: 'aka',
       meaning: 'red',
       category: 'vocabulary',
-      tags: ['colors']
+      tags: ['colors'],
     }),
     createTestVocabularyItem({
       id: 'extracted_2',
@@ -301,8 +301,8 @@ export function createExtractVocabularyDuplicateTestData(): TestDataPair {
       romaji: 'ao',
       meaning: 'blue',
       category: 'vocabulary',
-      tags: ['colors']
-    })
+      tags: ['colors'],
+    }),
   ], { categories: ['vocabulary'] });
 
   return { existing, extracted };
