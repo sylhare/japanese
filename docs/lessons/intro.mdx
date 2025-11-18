@@ -5,6 +5,8 @@ description: Getting started with Japanese language learning
 tags: [introduction, basics, getting-started]
 ---
 
+import LessonList from '@site/src/components/LessonList/index';
+
 # Introduction to Japanese
 
 Welcome to your Japanese learning journey! This guide will help you understand the fundamentals of the Japanese language and how to use this learning platform effectively.
@@ -38,18 +40,7 @@ Japanese uses three different writing systems:
 - **Characters**: Thousands of characters (2,000+ commonly used)
 - **Example**: 日本語 (nihongo - Japanese language)
 
-## How to Use This Learning Platform
-
-### Navigation Structure
-
-This platform is organized into several main sections:
-
-1. **Lessons**: Structured learning content organized by topic
-2. **Reference**: Quick reference materials for kana charts and grammar
-3. **Vocabulary**: Searchable vocabulary database with multiple sorting options
-4. **Blog**: Additional learning resources and cultural insights
-
-### Learning Path
+## Learning Path
 
 We recommend following this learning sequence:
 
@@ -60,20 +51,20 @@ We recommend following this learning sequence:
 5. **Kanji Introduction**: Begin learning common kanji characters
 6. **Advanced Grammar**: Master complex grammatical structures
 
-### Study Tips
+## Study Tips
 
-#### Daily Practice
+### Daily Practice
 - **Consistency**: Study for 15-30 minutes daily rather than long sessions
 - **Review**: Always review previous lessons before starting new ones
 - **Practice Writing**: Physically write characters to build muscle memory
 
-#### Effective Learning Strategies
+### Effective Learning Strategies
 - **Use Mnemonics**: Create visual associations for characters and words
 - **Practice Speaking**: Use audio resources to improve pronunciation
 - **Immerse Yourself**: Watch Japanese content, listen to Japanese music
 - **Use Spaced Repetition**: Review material at increasing intervals
 
-#### Vocabulary Learning
+### Vocabulary Learning
 - **Context Learning**: Learn words in sentences, not in isolation
 - **Use the Vocabulary Page**: Take advantage of our search and filtering features
 - **Create Flashcards**: Use the vocabulary data to create your own study materials
@@ -107,20 +98,37 @@ Japanese follows a Subject-Object-Verb (SOV) pattern:
     - Polite: 食べます (tabemasu)
     - Honorific: 召し上がる (meshiagaru)
 
-## Using Tags and Categories
+## Explore Lessons
 
-### Tags
-Each lesson and vocabulary item includes tags to help you:
-- **Find related content**: Search for lessons with similar topics
-- **Track your progress**: See which topics you've covered
-- **Organize your study**: Focus on specific areas of interest
+Start your learning journey by exploring our structured lesson categories:
 
-### Categories
-Content is organized into logical categories:
-- **Grammar**: Conjugation, particles, sentence structure
-- **Vocabulary**: Themed word lists and usage examples
-- **Reference**: Quick lookup materials
-- **Culture**: Cultural context and real-world usage
+<LessonList items={[
+  {
+    title: '📖 Grammar',
+    description: 'Master Japanese grammar through structured lessons covering particles and sentence structure',
+    to: './grammar',
+  },
+  {
+    title: '📚 Vocabulary',
+    description: 'Build your Japanese vocabulary systematically with themed word lists',
+    to: './vocabulary',
+  },
+  {
+    title: '🔄 Conjugation',
+    description: 'Master Japanese verb conjugation patterns and forms',
+    to: './conjugation',
+  },
+  {
+    title: 'あ Hiragana Chart',
+    description: 'Quick reference for all hiragana characters',
+    to: '/docs/reference/hiragana-chart',
+  },
+  {
+    title: 'ア Katakana Chart',
+    description: 'Quick reference for all katakana characters',
+    to: '/docs/reference/katakana-chart',
+  },
+]} />
 
 ## Getting Started
 
@@ -130,15 +138,6 @@ Ready to begin? Here's your first step:
 2. **Learn the Vowels**: Start with あいうえお (a, i, u, e, o)
 3. **Practice Writing**: Write each character 10 times
 4. **Test Yourself**: Try to write them from memory
-
-## Next Steps
-
-After completing this introduction:
-
-1. **Hiragana Basics**: Learn the complete hiragana system
-2. **Katakana Basics**: Master katakana characters
-3. **Basic Grammar**: Understand sentence structure and particles
-4. **Vocabulary Building**: Start with common words and phrases
 
 ## Resources and Support
 
@@ -150,3 +149,4 @@ After completing this introduction:
 Remember: Learning Japanese is a marathon, not a sprint. Take your time, practice regularly, and don't be afraid to make mistakes. Every expert was once a beginner!
 
 頑張ってください！(Ganbatte kudasai - Good luck!)
+
