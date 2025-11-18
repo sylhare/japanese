@@ -151,5 +151,5 @@ Convert to past tense:
 ## Related Topics
 
 - [Basic Conjugation Lesson](./conjugation)
-- [Particle Guide](./particle-guide.md)
+- [Particle Guide](../grammar/particle-guide)
 - [Colors Vocabulary](../vocabulary/colors)
