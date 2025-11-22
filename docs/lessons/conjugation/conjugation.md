@@ -171,6 +171,6 @@ All follow the same pattern:
 
 ## Related Lessons
 
-- [Particle Guide](./particle-guide) - Learn about Japanese particles
+- [Particle Guide](../grammar/particle-guide) - Learn about Japanese particles
 - [Verb Conjugation Reference](./verb-conjugation) - Complete verb conjugation reference
 - [Colors Vocabulary](../vocabulary/colors.md) - Practice with adjective vocabulary
