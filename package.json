@@ -30,7 +30,7 @@
     "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs --fix"
   },
   "dependencies": {
-    "@docusaurus/core": "3.9.1",
+    "@docusaurus/core": "3.9.2",
     "@docusaurus/preset-classic": "3.9.1",
     "@docusaurus/theme-search-algolia": "^3.9.1",
     "@mdx-js/react": "^3.0.0",
