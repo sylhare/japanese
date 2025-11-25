@@ -31,7 +31,7 @@ const mainFeatures = [
     title: 'References',
     icon: '📖',
     description: 'Quick lookup tools',
-    link: '/docs/reference/hiragana-chart',
+    link: '/docs/reference',
     color: 'secondary',
   },
 ];
