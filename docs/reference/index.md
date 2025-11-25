@@ -70,6 +70,27 @@ Both systems represent the same set of sounds but use different characters.
   }}>View Katakana Chart →</a>
 </div>
 
+<div style={{
+  padding: '1.5rem',
+  background: 'var(--ifm-card-background-color)',
+  border: '1px solid var(--ifm-color-emphasis-200)',
+  borderRadius: '8px',
+  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
+  transition: 'all 0.2s ease'
+}}>
+  <h3 style={{marginTop: 0}}>📚 Dictionary</h3>
+  <p>Searchable vocabulary dictionary with filtering and sorting options.</p>
+  <a href="/japanese/dictionary" style={{
+    display: 'inline-block',
+    marginTop: '1rem',
+    padding: '0.5rem 1rem',
+    background: 'var(--ifm-color-primary)',
+    color: 'white',
+    borderRadius: '4px',
+    textDecoration: 'none'
+  }}>Open Dictionary →</a>
+</div>
+
 </div>
 
 ## Vocabulary References
