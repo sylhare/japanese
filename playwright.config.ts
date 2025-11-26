@@ -22,6 +22,9 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+
+    /* Run browsers in headless mode (no visible windows) */
+    headless: true,
   },
 
   /* Configure projects for major browsers */
@@ -64,8 +67,10 @@ export default defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'npm run start',
+    command: 'npm run extract-vocabulary && npx docusaurus start --no-open',
     url: 'http://localhost:3000/japanese',
     reuseExistingServer: !process.env.CI,
+    stdout: 'ignore',
+    stderr: 'pipe',
   },
 });
