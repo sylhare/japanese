@@ -1,6 +1,6 @@
 ---
-sidebar_position: 3
-title: 🔢 Numbers and Counting
+sidebar_position: 0
+title: Basic Numbers
 description: Learn Japanese numbers and how to construct larger numbers
 tags: [vocabulary, numbers, counting, basic, math]
 ---
@@ -110,3 +110,4 @@ Numbers are fundamental in Japanese. This lesson covers basic numbers and how to
 - In Japanese, 10,000 (万) is the base unit for large numbers, not 1,000
 - The pronunciation of some numbers changes when combined (よん vs し for 4, なな vs しち for 7)
 - Numbers 4 (四) and 7 (七) have alternative readings to avoid sounding like death-related words
+
