@@ -585,6 +585,24 @@ vocabulary:
       - family
     type: noun
   - id: family_1
+    hiragana: りょうしん
+    kanji: 両親
+    romaji: ryoushin
+    meaning: parents
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_2
+    hiragana: きょうだい
+    kanji: 兄弟
+    romaji: kyoudai
+    meaning: siblings
+    category: vocabulary
+    tags:
+      - family
+    type: noun
+  - id: family_3
     hiragana: そふ
     kanji: 祖父
     romaji: sofu
@@ -593,7 +611,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_2
+  - id: family_4
     hiragana: ぎりのあに
     kanji: 義理の兄
     romaji: giri no ani
@@ -602,7 +620,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_3
+  - id: family_5
     hiragana: つま
     kanji: 妻
     romaji: tsuma
@@ -611,7 +629,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_4
+  - id: family_6
     hiragana: ひとり
     kanji: 一人
     romaji: hitori
@@ -620,7 +638,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_5
+  - id: family_7
     hiragana: ちち
     kanji: 父
     romaji: chichi
@@ -629,7 +647,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_6
+  - id: family_8
     hiragana: おじいさん
     kanji: お爺さん
     romaji: ojiisan
@@ -638,7 +656,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_7
+  - id: family_9
     hiragana: ぎりのあね
     kanji: 義理の姉
     romaji: giri no ane
@@ -647,7 +665,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_8
+  - id: family_10
     hiragana: おっと
     kanji: 夫
     romaji: otto
@@ -656,7 +674,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_9
+  - id: family_11
     hiragana: けっこん
     kanji: 結婚
     romaji: kekkon
@@ -665,7 +683,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_10
+  - id: family_12
     hiragana: はは
     kanji: 母
     romaji: haha
@@ -674,7 +692,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_11
+  - id: family_13
     hiragana: そぼ
     kanji: 祖母
     romaji: sobo
@@ -683,7 +701,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_12
+  - id: family_14
     hiragana: しゅうと
     kanji: 舅
     romaji: shuuto
@@ -692,7 +710,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_13
+  - id: family_15
     hiragana: おくさん
     kanji: 奥さん
     romaji: okusan
@@ -701,7 +719,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_14
+  - id: family_16
     hiragana: けっこんしている
     kanji: 結婚している
     romaji: kekkon shite iru
@@ -710,7 +728,7 @@ vocabulary:
     tags:
       - family
     type: verb
-  - id: family_15
+  - id: family_17
     hiragana: おとうさん
     kanji: お父さん
     romaji: otousan
@@ -719,7 +737,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_16
+  - id: family_18
     hiragana: おばあさん
     kanji: お婆さん
     romaji: obaasan
@@ -728,7 +746,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_17
+  - id: family_19
     hiragana: しゅうとめ
     kanji: 姑
     romaji: shuutome
@@ -737,7 +755,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_18
+  - id: family_20
     hiragana: ごしゅじん
     kanji: ご主人
     romaji: goshujin
@@ -746,7 +764,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_19
+  - id: family_21
     hiragana: どくしん
     kanji: 独身
     romaji: dokushin
@@ -755,7 +773,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_20
+  - id: family_22
     hiragana: おかあさん
     kanji: お母さん
     romaji: okaasan
@@ -764,7 +782,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_21
+  - id: family_23
     hiragana: おじ
     kanji: 叔父
     romaji: oji
@@ -773,7 +791,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_22
+  - id: family_24
     hiragana: むこ
     kanji: 婿
     romaji: muko
@@ -782,7 +800,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_23
+  - id: family_25
     hiragana: こども
     kanji: 子供
     romaji: kodomo
@@ -791,7 +809,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_24
+  - id: family_26
     hiragana: りこん
     kanji: 離婚
     romaji: rikon
@@ -800,7 +818,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_25
+  - id: family_27
     hiragana: あに
     kanji: 兄
     romaji: ani
@@ -809,7 +827,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_26
+  - id: family_28
     hiragana: おば
     kanji: 叔母
     romaji: oba
@@ -818,7 +836,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_27
+  - id: family_29
     hiragana: よめ
     kanji: 嫁
     romaji: yome
@@ -827,7 +845,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_28
+  - id: family_30
     hiragana: むすこ
     kanji: 息子
     romaji: musuko
@@ -836,7 +854,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_29
+  - id: family_31
     hiragana: やもめ
     kanji: 寡婦
     romaji: yamome
@@ -845,7 +863,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_30
+  - id: family_32
     hiragana: あね
     kanji: 姉
     romaji: ane
@@ -854,7 +872,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_31
+  - id: family_33
     hiragana: いとこ
     kanji: 従兄弟
     romaji: itoko
@@ -863,7 +881,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_32
+  - id: family_34
     hiragana: むすめ
     kanji: 娘
     romaji: musume
@@ -872,7 +890,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_33
+  - id: family_35
     hiragana: こいびと
     kanji: 恋人
     romaji: koibito
@@ -881,7 +899,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_34
+  - id: family_36
     hiragana: おとうと
     kanji: 弟
     romaji: otouto
@@ -890,7 +908,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_35
+  - id: family_37
     hiragana: おい
     kanji: 甥
     romaji: oi
@@ -899,7 +917,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_36
+  - id: family_38
     hiragana: ぼうや
     kanji: 坊や
     romaji: bouya
@@ -908,7 +926,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_37
+  - id: family_39
     hiragana: ふうふ
     kanji: 夫婦
     romaji: fuufu
@@ -917,7 +935,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_38
+  - id: family_40
     hiragana: いもうと
     kanji: 妹
     romaji: imouto
@@ -926,7 +944,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_39
+  - id: family_41
     hiragana: めい
     kanji: 姪
     romaji: mei
@@ -935,7 +953,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_40
+  - id: family_42
     hiragana: おじょうさん
     kanji: お嬢さん
     romaji: ojou san
@@ -944,7 +962,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_41
+  - id: family_43
     hiragana: おにいさん
     kanji: お兄さん
     romaji: oniisan
@@ -953,7 +971,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_42
+  - id: family_44
     hiragana: ぼっちゃん
     kanji: 坊ちゃん
     romaji: bocchan
@@ -962,7 +980,7 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: family_43
+  - id: family_45
     hiragana: おねえさん
     kanji: お姉さん
     romaji: oneesan
