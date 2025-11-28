@@ -406,7 +406,7 @@ function main() {
   if (newItems > 0) {
     console.log(`📚 Found ${newItems} new vocabulary items`);
   } else {
-    console.log('📚 No new vocabulary items found (idempotent)');
+    console.log('📚 No new vocabulary items found');
   }
   console.log(`📖 Total vocabulary items: ${totalItems}`);
 
