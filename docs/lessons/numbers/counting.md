@@ -7,13 +7,15 @@ tags: [numbers, counting, basics]
 
 # Reading Numbers
 
-Learn the Japanese number system and how to read large numbers.
+Learn how to read any number in Japanese, including sound changes and the unique 4-digit grouping system.
 
-## Basic Number System
+:::info Prerequisites
+Make sure you've learned the [Basic Numbers](./basics) (1-10 and place value units) before starting this lesson!
+:::
 
-Japanese numbers follow a consistent pattern with unique groupings.
+---
 
-### Basic Numbers (1-10)
+## Quick Reference: Basic Numbers (1-10)
 
 | Number | Hiragana | Romaji | English |
 |--------|----------|--------|---------|
@@ -69,11 +71,13 @@ Japanese: 100,0000 (groups of 4)
 
 ### Small Numbers (1-99)
 
+**Pattern:** [number] + じゅう + [number]
+
 - **10** = じゅう (juu)
-- **23** = にじゅう さん (nijuu san) - 2×10 + 3
-- **45** = よんじゅう ご (yonjuu go) - 4×10 + 5
-- **78** = ななじゅう はち (nanajuu hachi) - 7×10 + 8
-- **99** = きゅうじゅう きゅう (kyuujuu kyuu) - 9×10 + 9
+- **23** = にじゅう さん (nijuu san) → 2×10 + 3
+- **45** = よんじゅう ご (yonjuu go) → 4×10 + 5
+- **78** = ななじゅう はち (nanajuu hachi) → 7×10 + 8
+- **99** = きゅうじゅう きゅう (kyuujuu kyuu) → 9×10 + 9
 
 ### Hundreds (100-999)
 
@@ -179,3 +183,10 @@ Read as: **せん にひゃく まん**
 ❌ **Wrong:** Grouping 1,234,567 like English (1,234,567)
 ✓ **Correct:** Group like Japanese (123,4567)
 
+---
+
+## Next Steps
+
+Once you're comfortable reading numbers, check out:
+- **Counters** - Learn frequency expressions like "once a week"
+- **Dates and Calendar** - Apply numbers to dates with special exceptions
