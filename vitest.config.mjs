@@ -29,6 +29,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@theme': resolve(__dirname, 'tests/__mocks__/@theme'),
+      '@docusaurus/Link': resolve(__dirname, 'tests/__mocks__/@docusaurus/Link'),
       '@docusaurus/useBaseUrl': resolve(__dirname, 'tests/__mocks__/@docusaurus/useBaseUrl'),
       '@docusaurus': resolve(__dirname, 'node_modules/@docusaurus'),
     },
