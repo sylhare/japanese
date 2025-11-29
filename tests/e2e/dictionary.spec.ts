@@ -152,7 +152,7 @@ test.describe('Dictionary', () => {
     test('should navigate to Time from tag', async ({ page }) => {
       await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
 
-      const timeTag = page.locator('a[class*="tag"][href$="/vocabulary/time"]').first();
+      const timeTag = page.locator('a[class*="tag"][href*="/vocabulary/time"]').first();
       await expect(timeTag).toBeVisible({ timeout: 10000 });
       await timeTag.click();
       await verifyPageIsFound(page);
@@ -162,7 +162,7 @@ test.describe('Dictionary', () => {
     test('should navigate to Numbers from tag', async ({ page }) => {
       await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
 
-      const numbersTag = page.locator('a[class*="tag"][href$="/vocabulary/numbers"]').first();
+      const numbersTag = page.locator('a[class*="tag"][href*="/lessons/numbers"]').first();
       await expect(numbersTag).toBeVisible({ timeout: 10000 });
       await numbersTag.click();
       await verifyPageIsFound(page);

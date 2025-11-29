@@ -43,7 +43,7 @@ test.describe('Vocabulary Pages', () => {
       });
 
       test('should navigate to Numbers from sidebar', async ({ page }) => {
-        const numbersLink = page.locator('a.menu__link[href$="/numbers/"]').first();
+        const numbersLink = page.locator('a.menu__link[href$="/lessons/numbers/"]').first();
         await expect(numbersLink).toBeVisible();
         await numbersLink.click();
         await verifyPageIsFound(page);
@@ -93,7 +93,7 @@ test.describe('Vocabulary Pages', () => {
       });
 
       test('should navigate to Numbers from landing page', async ({ page }) => {
-        const numbersCard = page.locator('a[class*="lessonCard"][href$="/numbers"]').first();
+        const numbersCard = page.locator('a[class*="lessonCard"][href*="/lessons/numbers"]').first();
         await expect(numbersCard).toBeVisible();
         await numbersCard.click();
         await verifyPageIsFound(page);
