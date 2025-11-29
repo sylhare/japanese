@@ -44,27 +44,50 @@ Here's a visual guide to Japanese family relationships:
 
 ## Immediate Family
 
-### Basic Family Members
+### General Family Terms
 
-| Hiragana | Kanji | Romaji  | English            | Type |
-|----------|-------|---------|--------------------|------|
-| かぞく      | 家族    | kazoku  | 👨‍👩‍👧‍👦 family | noun |
-| ちち       | 父     | chichi  | 👨 father          | noun |
-| はは       | 母     | haha    | 👩 mother          | noun |
-| おとうさん    | お父さん  | otousan | 👨 father          | noun |
-| おかあさん    | お母さん  | okaasan | 👩 mother          | noun |
-| あに       | 兄     | ani     | 👨 older brother   | noun |
-| あね       | 姉     | ane     | 👩 older sister    | noun |
-| おとうと     | 弟     | otouto  | 👨 younger brother | noun |
-| いもうと     | 妹     | imouto  | 👩 younger sister  | noun |
-| おにいさん    | お兄さん  | oniisan | 👨 older brother   | noun |
-| おねえさん    | お姉さん  | oneesan | 👩 older sister    | noun |
+| Hiragana | Kanji | Romaji   | English          | Type |
+|----------|-------|----------|------------------|------|
+| かぞく      | 家族    | kazoku   | 👨‍👩‍👧‍👦 family | noun |
+| りょうしん    | 両親    | ryoushin | 👨👩 parents     | noun |
+| きょうだい    | 兄弟    | kyoudai  | 👦👧 siblings    | noun |
 
 **Examples:**
 
 - わたしの かぞくは よにんです (watashi no kazoku wa yonin desu) - My family has four people
-- おとうさんは いしゃです (otousan wa isha desu) - My father is a doctor
+- りょうしんは とうきょうに すんでいます (ryoushin wa toukyou ni sunde imasu) - My parents live in Tokyo
+- きょうだいが さんにん います (kyoudai ga sannin imasu) - I have three siblings
+
+### Parents
+
+| Hiragana | Kanji  | Romaji  | English   | Usage                | Type |
+|----------|--------|---------|-----------|----------------------|------|
+| ちち       | 父      | chichi  | 👨 father | Your own father      | noun |
+| はは       | 母      | haha    | 👩 mother | Your own mother      | noun |
+| おとうさん    | お父さん  | otousan | 👨 father | Someone else's father | noun |
+| おかあさん    | お母さん  | okaasan | 👩 mother | Someone else's mother | noun |
+
+**Examples:**
+
+- ちちは いしゃです (chichi wa isha desu) - My father is a doctor
+- おとうさんは おげんきですか (otousan wa ogenki desu ka) - Is your father well?
+
+### Siblings
+
+| Hiragana | Kanji  | Romaji  | English            | Usage                      | Type |
+|----------|--------|---------|--------------------|----------------------------|------|
+| あに       | 兄      | ani     | 👨 older brother   | Your own older brother     | noun |
+| あね       | 姉      | ane     | 👩 older sister    | Your own older sister      | noun |
+| おとうと     | 弟      | otouto  | 👨 younger brother | Your own younger brother   | noun |
+| いもうと     | 妹      | imouto  | 👩 younger sister  | Your own younger sister    | noun |
+| おにいさん    | お兄さん  | oniisan | 👨 older brother   | Someone else's older brother | noun |
+| おねえさん    | お姉さん  | oneesan | 👩 older sister    | Someone else's older sister  | noun |
+
+**Examples:**
+
 - あにが ふたり います (ani ga futari imasu) - I have two older brothers
+- いもうとは こうこうせいです (imouto wa koukousei desu) - My younger sister is a high school student
+- おにいさんは なんさいですか (oniisan wa nansai desu ka) - How old is your older brother?
 
 ## Extended Family
 
