@@ -34,6 +34,52 @@
   font-weight: 400;
 }
 
+.buttonContainer {
+  margin-top: 2rem;
+}
+
+.getStartedButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.getStartedButton:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), 0 3px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #000000;
+  background: linear-gradient(135deg, #ffffff 0%, #eeeeee 100%);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.getStartedButton:active {
+  transform: translateY(-1px) scale(1.01);
+}
+
+.arrow {
+  display: inline-block;
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+  color: var(--ifm-color-primary);
+  font-weight: bold;
+}
+
+.getStartedButton:hover .arrow {
+  transform: translateX(4px);
+  color: var(--ifm-color-primary-dark);
+}
+
 .mainContent {
   padding: 3rem 0;
   background: var(--ifm-background-color);

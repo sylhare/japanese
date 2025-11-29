@@ -59,6 +59,13 @@ function HomepageHeader() {
             {siteConfig.title}
           </Heading>
           <p className={styles.heroSubtitle}>Choose your learning path</p>
+          <div className={styles.buttonContainer}>
+            <Link
+              className={styles.getStartedButton}
+              to="/docs/intro">
+              Get Started - はじめましょう <span className={styles.arrow}>→</span>
+            </Link>
+          </div>
         </div>
       </div>
     </header>
