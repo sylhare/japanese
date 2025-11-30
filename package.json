@@ -58,7 +58,7 @@
     "js-yaml": "^4.1.1",
     "jsdom": "^27.2.0",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.6",
+    "vitest": "^4.0.14",
     "yaml-loader": "^0.8.1"
   },
   "browserslist": {
