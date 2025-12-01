@@ -1,17 +1,17 @@
-import React from 'react';
+import React, { type ReactNode } from 'react';
 
 interface LinkProps {
   to: string;
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
+  [key: string]: any;
 }
 
 /** Mock Link component for testing */
-export default function Link({ to, children, className }: LinkProps) {
+export default function Link({ to, children, className, ...props }: LinkProps): ReactNode {
   return (
-    <a href={to} className={className}>
+    <a href={to} className={className} {...props}>
       {children}
     </a>
   );
 }
-

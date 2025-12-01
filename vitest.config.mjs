@@ -31,6 +31,7 @@ export default defineConfig({
       '@theme': resolve(__dirname, 'tests/__mocks__/@theme'),
       '@docusaurus/Link': resolve(__dirname, 'tests/__mocks__/@docusaurus/Link'),
       '@docusaurus/useBaseUrl': resolve(__dirname, 'tests/__mocks__/@docusaurus/useBaseUrl'),
+      '@docusaurus/Link': resolve(__dirname, 'tests/__mocks__/@docusaurus/Link'),
       '@docusaurus': resolve(__dirname, 'node_modules/@docusaurus'),
     },
   },
