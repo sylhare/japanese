@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import Vocabulary from '../../src/pages/dictionary';
+import Vocabulary, { getTagPath } from '../../src/pages/dictionary';
 
 vi.mock('../../src/data/vocabulary.yaml', async () => {
   const { mockVocabularyData } = await import('../__fixtures__/component/vocabulary-mock-data');
@@ -273,6 +273,116 @@ describe('Vocabulary Component', () => {
       await user.click(colorTags[0]);
 
       expect(mockLocation.href).toBe('/docs/lessons/vocabulary/colors');
+    });
+  });
+});
+
+describe('getTagPath', () => {
+  describe('Numbers-related tags', () => {
+    it('should map "numbers" tag to numbers lesson path', () => {
+      expect(getTagPath('numbers')).toBe('docs/lessons/numbers');
+    });
+
+    it('should map "counting" tag to numbers lesson path', () => {
+      expect(getTagPath('counting')).toBe('docs/lessons/numbers');
+    });
+
+    it('should map "counters" tag to numbers lesson path', () => {
+      expect(getTagPath('counters')).toBe('docs/lessons/numbers');
+    });
+  });
+
+  describe('Time-related tags', () => {
+    it('should map "dates" tag to time vocabulary lesson path', () => {
+      expect(getTagPath('dates')).toBe('docs/lessons/vocabulary/time');
+    });
+
+    it('should map "calendar" tag to time vocabulary lesson path', () => {
+      expect(getTagPath('calendar')).toBe('docs/lessons/vocabulary/time');
+    });
+
+    it('should map "time" tag to time vocabulary lesson path', () => {
+      expect(getTagPath('time')).toBe('docs/lessons/vocabulary/time');
+    });
+  });
+
+  describe('Case insensitivity', () => {
+    it('should handle uppercase "NUMBERS" tag', () => {
+      expect(getTagPath('NUMBERS')).toBe('docs/lessons/numbers');
+    });
+
+    it('should handle mixed case "Numbers" tag', () => {
+      expect(getTagPath('Numbers')).toBe('docs/lessons/numbers');
+    });
+
+    it('should handle mixed case "CouNTers" tag', () => {
+      expect(getTagPath('CouNTers')).toBe('docs/lessons/numbers');
+    });
+
+    it('should handle uppercase vocabulary tag "COLORS"', () => {
+      expect(getTagPath('COLORS')).toBe('docs/lessons/vocabulary/COLORS');
+    });
+
+    it('should handle uppercase time tag "TIME"', () => {
+      expect(getTagPath('TIME')).toBe('docs/lessons/vocabulary/time');
+    });
+  });
+
+  describe('Vocabulary tags (default path)', () => {
+    it('should map "colors" tag to vocabulary lesson path', () => {
+      expect(getTagPath('colors')).toBe('docs/lessons/vocabulary/colors');
+    });
+
+    it('should map "tastes" tag to vocabulary lesson path', () => {
+      expect(getTagPath('tastes')).toBe('docs/lessons/vocabulary/tastes');
+    });
+
+    it('should map "family" tag to vocabulary lesson path', () => {
+      expect(getTagPath('family')).toBe('docs/lessons/vocabulary/family');
+    });
+
+    it('should map unmapped tag to vocabulary lesson path', () => {
+      expect(getTagPath('unknown-tag')).toBe('docs/lessons/vocabulary/unknown-tag');
+    });
+  });
+
+  describe('Special characters and edge cases', () => {
+    it('should handle tags with hyphens', () => {
+      expect(getTagPath('confusing-kanji')).toBe('docs/lessons/vocabulary/confusing-kanji');
+    });
+
+    it('should handle empty string', () => {
+      expect(getTagPath('')).toBe('docs/lessons/vocabulary/');
+    });
+
+    it('should preserve original tag casing in the path', () => {
+      expect(getTagPath('MyCustomTag')).toBe('docs/lessons/vocabulary/MyCustomTag');
+    });
+  });
+
+  describe('Tag path format', () => {
+    it('should always start with "docs/lessons/"', () => {
+      const tags = ['numbers', 'colors', 'time', 'counters', 'family'];
+      tags.forEach(tag => {
+        expect(getTagPath(tag)).toMatch(/^docs\/lessons\//);
+      });
+    });
+
+    it('should return correct paths for vocabulary tags', () => {
+      expect(getTagPath('colors')).toBe('docs/lessons/vocabulary/colors');
+      expect(getTagPath('family')).toBe('docs/lessons/vocabulary/family');
+    });
+
+    it('should return correct paths for numbers tags', () => {
+      expect(getTagPath('numbers')).toBe('docs/lessons/numbers');
+      expect(getTagPath('counting')).toBe('docs/lessons/numbers');
+      expect(getTagPath('counters')).toBe('docs/lessons/numbers');
+    });
+
+    it('should return correct paths for time-related tags', () => {
+      expect(getTagPath('time')).toBe('docs/lessons/vocabulary/time');
+      expect(getTagPath('dates')).toBe('docs/lessons/vocabulary/time');
+      expect(getTagPath('calendar')).toBe('docs/lessons/vocabulary/time');
     });
   });
 });

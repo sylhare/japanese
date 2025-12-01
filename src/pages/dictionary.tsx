@@ -24,17 +24,18 @@ const sortOptions = vocabularyYamlData.sortOptions;
  * Get the correct lesson path for a tag.
  * Some tags have moved to different lesson categories.
  */
-function getTagPath(tag: string): string {
+export function getTagPath(tag: string): string {
   const tagMappings: Record<string, string> = {
     'numbers': 'numbers',
     'counting': 'numbers',
     'counters': 'numbers',
-    'dates': 'numbers',
-    'calendar': 'numbers',
+    'dates': 'vocabulary/time',
+    'calendar': 'vocabulary/time',
+    'time': 'vocabulary/time',
   };
   
-  const lessonCategory = tagMappings[tag.toLowerCase()] || 'vocabulary';
-  return `docs/lessons/${lessonCategory}/${tag}`;
+  const lessonCategory = tagMappings[tag.toLowerCase()] || `vocabulary/${tag}`;
+  return `docs/lessons/${lessonCategory}`;
 }
 
 export default function Vocabulary(): React.JSX.Element {
