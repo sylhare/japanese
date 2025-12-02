@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "npm run extract-vocabulary && docusaurus start",
-    "dev": "npm run extract-vocabulary && docusaurus start",
+    "start": "npm run extract-vocabulary && docusaurus start --port 3003",
+    "dev": "npm run extract-vocabulary && docusaurus start --port 3003",
     "build": "npm run extract-vocabulary && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "npm run extract-vocabulary && docusaurus deploy",
