@@ -8,7 +8,7 @@ tags: [vocabulary, N5, JLPT, reference, basic]
 # N5 Vocabulary Reference
 
 A comprehensive reference for all essential vocabulary needed for the Japanese Language Proficiency Test (JLPT) N5 level, organized by theme and type. This vocabulary list has been compiled based on commonly recognized N5-level vocabulary from multiple sources. 
-([JLPT]((https://www.jlpt.jp/e/)) does not publish official vocabulary lists, but indicates the level of language knowledge expected)
+([JLPT](https://www.jlpt.jp/e/) does not publish official vocabulary lists, but indicates the level of language knowledge expected)
 
 ## Pronouns & Demonstratives
 
