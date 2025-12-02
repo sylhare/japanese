@@ -575,6 +575,257 @@ vocabulary:
     tags:
       - confusing-kanji
     type: verb
+  - id: counters_0
+    hiragana: いちにち
+    kanji: 一日
+    romaji: ichinichi
+    meaning: one day
+    category: lessons
+    tags:
+      - counters
+    type: unknown
+  - id: counters_1
+    hiragana: しゅうかん
+    kanji: 週間
+    romaji: shuukan
+    meaning: week
+    category: lessons
+    tags:
+      - counters
+    type: unknown
+  - id: counters_2
+    hiragana: げつ / つき
+    kanji: 月
+    romaji: getsu / tsuki
+    meaning: month
+    category: lessons
+    tags:
+      - counters
+    type: unknown
+  - id: counters_3
+    hiragana: いっかい
+    romaji: ikkai
+    meaning: once
+    category: lessons
+    tags:
+      - counters
+    type: unknown
+  - id: counters_4
+    hiragana: にかい
+    romaji: nikai
+    meaning: twice
+    category: lessons
+    tags:
+      - counters
+    type: unknown
+  - id: counters_5
+    hiragana: さんかい
+    romaji: sankai
+    meaning: three times
+    category: lessons
+    tags:
+      - counters
+    type: unknown
+  - id: counters_6
+    hiragana: よんかい
+    romaji: yonkai
+    meaning: four times
+    category: lessons
+    tags:
+      - counters
+    type: unknown
+  - id: counters_7
+    hiragana: ごかい
+    romaji: gokai
+    meaning: five times
+    category: lessons
+    tags:
+      - counters
+    type: unknown
+  - id: counters_8
+    hiragana: ろっかい
+    romaji: rokkai
+    meaning: six times
+    category: lessons
+    tags:
+      - counters
+    type: unknown
+  - id: counters_9
+    hiragana: ななかい
+    romaji: nanakai
+    meaning: seven times
+    category: lessons
+    tags:
+      - counters
+    type: unknown
+  - id: counters_10
+    hiragana: はっかい
+    romaji: hakkai
+    meaning: eight times
+    category: lessons
+    tags:
+      - counters
+    type: unknown
+  - id: counters_11
+    hiragana: きゅうかい
+    romaji: kyuukai
+    meaning: nine times
+    category: lessons
+    tags:
+      - counters
+    type: unknown
+  - id: counters_12
+    hiragana: じゅっかい
+    romaji: jukkai
+    meaning: ten times
+    category: lessons
+    tags:
+      - counters
+    type: unknown
+  - id: counters_13
+    hiragana: ふつか
+    romaji: futsuka
+    meaning: two days
+    category: lessons
+    tags:
+      - counters
+    type: unknown
+  - id: counters_14
+    hiragana: みっか
+    romaji: mikka
+    meaning: three days
+    category: lessons
+    tags:
+      - counters
+    type: unknown
+  - id: counters_15
+    hiragana: いっしゅうかん
+    romaji: isshuukan
+    meaning: one week
+    category: lessons
+    tags:
+      - counters
+    type: unknown
+  - id: counters_16
+    hiragana: にしゅうかん
+    romaji: nishuukan
+    meaning: two weeks
+    category: lessons
+    tags:
+      - counters
+    type: unknown
+  - id: counters_17
+    hiragana: さんしゅうかん
+    romaji: sanshuukan
+    meaning: three weeks
+    category: lessons
+    tags:
+      - counters
+    type: unknown
+  - id: counters_18
+    hiragana: いっかげつ
+    romaji: ikkagetsu
+    meaning: one month
+    category: lessons
+    tags:
+      - counters
+    type: unknown
+  - id: counters_19
+    hiragana: にかげつ
+    romaji: nikagetsu
+    meaning: two months
+    category: lessons
+    tags:
+      - counters
+    type: unknown
+  - id: counters_20
+    hiragana: さんかげつ
+    romaji: sankagetsu
+    meaning: three months
+    category: lessons
+    tags:
+      - counters
+    type: unknown
+  - id: counters_21
+    hiragana: いちねん
+    romaji: ichinen
+    meaning: one year
+    category: lessons
+    tags:
+      - counters
+    type: unknown
+  - id: counters_22
+    hiragana: にねん
+    romaji: ninen
+    meaning: two years
+    category: lessons
+    tags:
+      - counters
+    type: unknown
+  - id: counters_23
+    hiragana: さんねん
+    romaji: sannen
+    meaning: three years
+    category: lessons
+    tags:
+      - counters
+    type: unknown
+  - id: counting_0
+    hiragana: よん / し
+    romaji: yon / shi
+    meaning: four
+    category: lessons
+    tags:
+      - counting
+    type: unknown
+  - id: counting_1
+    hiragana: なな / しち
+    romaji: nana / shichi
+    meaning: seven
+    category: lessons
+    tags:
+      - counting
+    type: unknown
+  - id: counting_2
+    hiragana: きゅう / く
+    romaji: kyuu / ku
+    meaning: nine
+    category: lessons
+    tags:
+      - counting
+    type: unknown
+  - id: counting_3
+    hiragana: いちまん
+    romaji: ichiman
+    meaning: ten thousand
+    category: lessons
+    tags:
+      - counting
+    type: unknown
+  - id: counting_4
+    hiragana: にまん
+    romaji: niman
+    meaning: twenty thousand
+    category: lessons
+    tags:
+      - counting
+    type: unknown
+  - id: counting_5
+    hiragana: ごまん
+    romaji: goman
+    meaning: fifty thousand
+    category: lessons
+    tags:
+      - counting
+    type: unknown
+  - id: counting_6
+    hiragana: じゅうまん
+    romaji: juuman
+    meaning: one hundred thousand
+    category: lessons
+    tags:
+      - counting
+    type: unknown
   - id: family_0
     hiragana: かぞく
     kanji: 家族
