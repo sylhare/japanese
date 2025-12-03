@@ -67,7 +67,7 @@ export default defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'npm run extract-vocabulary && npx docusaurus start --no-open',
+    command: 'npm run extract-vocabulary && npx docusaurus start --port 3003 --no-open',
     url: 'http://localhost:3003/japanese',
     reuseExistingServer: !process.env.CI,
   },
