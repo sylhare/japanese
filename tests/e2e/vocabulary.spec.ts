@@ -148,14 +148,6 @@ test.describe('Vocabulary Pages', () => {
         }
       });
     });
-
-    test.describe('Expected Failures', () => {
-      test('should fail when navigating to non-existent page', async ({ page }) => {
-        test.fail();
-        await page.goto('./docs/lessons/vocabulary/this-page-does-not-exist');
-        await verifyPageIsFound(page);
-      });
-    });
   });
 
   test.describe('Time Pages', () => {

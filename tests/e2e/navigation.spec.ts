@@ -179,5 +179,23 @@ test.describe('Site Navigation', () => {
       await expect(mobileMenu).toBeVisible();
     });
   });
+
+  test.describe('404 Page', () => {
+    test('should show 404 page for non-existent routes', async ({ page }) => {
+      await page.goto('./non-existent-page-12345');
+      await page.waitForLoadState('networkidle');
+
+      const notFoundHeading = page.locator('h1', { hasText: 'Page Not Found' });
+      await expect(notFoundHeading).toBeVisible();
+    });
+
+    test('should fail verifyPageIsFound for 404 pages', async ({ page }) => {
+      test.fail();
+      await page.goto('./non-existent-page-12345');
+      await page.waitForLoadState('networkidle');
+      
+      await verifyPageIsFound(page);
+    });
+  });
 });
 
