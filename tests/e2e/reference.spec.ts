@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { verifyPageExists, verifyPageIsFound } from './helpers/pageHelper';
+import { verifyPageIsFound } from './helpers/pageHelper';
 
 test.describe('Reference Pages', () => {
   test.describe('Main Page Reference Link', () => {
@@ -54,7 +54,7 @@ test.describe('Reference Pages', () => {
       
       await dictionaryLink.click();
       await page.waitForLoadState('networkidle');
-      await verifyPageExists(page);
+      await verifyPageIsFound(page);
       
       await expect(page.getByRole('heading', { name: 'Japanese Vocabulary' })).toBeVisible();
       await expect(page.getByPlaceholder('Search vocabulary...')).toBeVisible();

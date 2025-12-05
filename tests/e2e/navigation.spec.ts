@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { verifyPageExists, verifyPageIsFound } from './helpers/pageHelper';
+import { verifyPageIsFound } from './helpers/pageHelper';
 
 test.describe('Site Navigation', () => {
   test.describe('Header Navigation', () => {
@@ -27,7 +27,7 @@ test.describe('Site Navigation', () => {
         const linkText = await link.textContent();
 
         await link.click();
-        await verifyPageExists(page);
+        await verifyPageIsFound(page);
 
         await page.goto('./');
         await page.waitForLoadState('networkidle');
@@ -81,7 +81,7 @@ test.describe('Site Navigation', () => {
         const linkText = await link.textContent();
 
         await link.click();
-        await verifyPageExists(page);
+        await verifyPageIsFound(page);
 
         await page.goto('./');
         await page.waitForLoadState('networkidle');
@@ -153,7 +153,7 @@ test.describe('Site Navigation', () => {
       
       const firstLink = breadcrumbLinks.first();
       await firstLink.click();
-      await verifyPageExists(page);
+      await verifyPageIsFound(page);
     });
   });
 
