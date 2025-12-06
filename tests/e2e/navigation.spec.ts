@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { verifyPageExists, verifyPageIsFound } from './helpers/pageHelper';
+import { verifyPageIsFound } from './helpers/pageHelper';
 
 test.describe('Site Navigation', () => {
   test.describe('Header Navigation', () => {
@@ -27,7 +27,7 @@ test.describe('Site Navigation', () => {
         const linkText = await link.textContent();
 
         await link.click();
-        await verifyPageExists(page);
+        await verifyPageIsFound(page);
 
         await page.goto('./');
         await page.waitForLoadState('networkidle');
@@ -81,7 +81,7 @@ test.describe('Site Navigation', () => {
         const linkText = await link.textContent();
 
         await link.click();
-        await verifyPageExists(page);
+        await verifyPageIsFound(page);
 
         await page.goto('./');
         await page.waitForLoadState('networkidle');
@@ -153,7 +153,7 @@ test.describe('Site Navigation', () => {
       
       const firstLink = breadcrumbLinks.first();
       await firstLink.click();
-      await verifyPageExists(page);
+      await verifyPageIsFound(page);
     });
   });
 
@@ -177,6 +177,24 @@ test.describe('Site Navigation', () => {
 
       const mobileMenu = page.locator('.navbar-sidebar');
       await expect(mobileMenu).toBeVisible();
+    });
+  });
+
+  test.describe('404 Page', () => {
+    test('should show 404 page for non-existent routes', async ({ page }) => {
+      await page.goto('./non-existent-page-12345');
+      await page.waitForLoadState('networkidle');
+
+      const notFoundHeading = page.locator('h1', { hasText: 'Page Not Found' });
+      await expect(notFoundHeading).toBeVisible();
+    });
+
+    test('should fail verifyPageIsFound for 404 pages', async ({ page }) => {
+      test.fail();
+      await page.goto('./non-existent-page-12345');
+      await page.waitForLoadState('networkidle');
+      
+      await verifyPageIsFound(page);
     });
   });
 });

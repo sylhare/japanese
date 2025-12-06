@@ -19,7 +19,7 @@ Learning how to describe tastes and flavors is essential for talking about food 
 | からい      | 辛い    | karai     | 🌶️ spicy, hot | い-adjective |
 | にがい      | 苦い    | nigai     | ☕ bitter       | い-adjective |
 | すっぱい     | 酸っぱい  | suppai    | 🍋 sour        | い-adjective |
-| しおからい    | 塩辛い   | shiokarai | 🧂 salty       | い-adjective |
+| ちょっぱい    | 塩っぱい  | choppai   | 🧂 salty       | い-adjective |
 
 ### Taste and Texture
 
@@ -73,7 +73,7 @@ Learning how to describe tastes and flavors is essential for talking about food 
 - このカレーはからいです。 (Kono karee wa karai desu.) - This curry is spicy.
 - あのコーヒーはにがいです。 (Ano koohii wa nigai desu.) - That coffee is bitter.
 - このレモンはすっぱいです。 (Kono remon wa suppai desu.) - This lemon is sour.
-- このスープはしおからいです。 (Kono suupu wa shiokarai desu.) - This soup is salty.
+- このスープはちょっぱいです。 (Kono suupu wa choppai desu.) - This soup is salty.
 
 ### Expressing Preferences
 
@@ -86,7 +86,7 @@ Learning how to describe tastes and flavors is essential for talking about food 
 - すっぱいものがだいすきです。 (Suppai mono ga daisuki desu.) - I love sour things.
 - からい食べ物がにがてです。 (Karai tabemono ga nigate desu.) - I'm not good with spicy food.
 - すっぱい果物がすきです。 (Suppai kudamono ga suki desu.) - I like sour fruits.
-- しおからい料理がすきです。 (Shiokarai ryouri ga suki desu.) - I like salty dishes.
+- ちょっぱい料理がすきです。 (Choppai ryouri ga suki desu.) - I like salty dishes.
 
 ### Asking About Taste
 

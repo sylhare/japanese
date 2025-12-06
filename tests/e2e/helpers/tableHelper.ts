@@ -4,6 +4,9 @@ import { Locator, Page, expect } from '@playwright/test';
  * Helper: Wait for tables to load on a page
  */
 export async function waitForTables(page: Page) {
+  // Wait for page to be fully loaded
+  await page.waitForLoadState('networkidle', { timeout: 30000 });
+  await page.waitForSelector('article', { timeout: 10000 });
   await page.waitForSelector('table', { timeout: 30000 });
   const tables = page.locator('table');
   await tables.first().waitFor({ state: 'attached', timeout: 10000 });
