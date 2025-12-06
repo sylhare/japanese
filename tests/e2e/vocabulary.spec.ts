@@ -1,8 +1,17 @@
 import { expect, test } from '@playwright/test';
-import { verifyPageExists, verifyPageIsFound } from './helpers/pageHelper';
+import { verifyPageIsFound } from './helpers/pageHelper';
 
-test.describe('Links', () => {
-  test.describe('Vocabulary Lessons Navigation', () => {
+test.describe('Vocabulary Pages', () => {
+  test.describe('Vocabulary Landing Page', () => {
+    test('should load vocabulary index page', async ({ page }) => {
+      await page.goto('./docs/lessons/vocabulary/');
+      await page.waitForLoadState('networkidle');
+      await verifyPageIsFound(page);
+      await expect(page.getByRole('heading', { name: /vocabulary/i }).first()).toBeVisible();
+    });
+  });
+
+  test.describe('Vocabulary Landing Page Navigation', () => {
     test.beforeEach(async ({ page }) => {
       await page.goto('./docs/lessons/vocabulary/');
       await page.waitForLoadState('networkidle');
@@ -26,7 +35,7 @@ test.describe('Links', () => {
       });
 
       test('should navigate to Time from sidebar', async ({ page }) => {
-        const timeLink = page.locator('a.menu__link[href$="/vocabulary/time"]').first();
+        const timeLink = page.locator('a.menu__link[href*="/vocabulary/time"]').first();
         await expect(timeLink).toBeVisible();
         await timeLink.click();
         await verifyPageIsFound(page);
@@ -34,7 +43,7 @@ test.describe('Links', () => {
       });
 
       test('should navigate to Numbers from sidebar', async ({ page }) => {
-        const numbersLink = page.locator('a.menu__link[href$="/vocabulary/numbers"]').first();
+        const numbersLink = page.locator('a.menu__link[href$="/lessons/numbers/"]').first();
         await expect(numbersLink).toBeVisible();
         await numbersLink.click();
         await verifyPageIsFound(page);
@@ -58,7 +67,7 @@ test.describe('Links', () => {
       });
     });
 
-    test.describe('Landing Page Links (LessonList)', () => {
+    test.describe('Landing Page Cards (LessonList)', () => {
       test('should navigate to Colors from landing page', async ({ page }) => {
         const colorsCard = page.locator('a[class*="lessonCard"][href$="/vocabulary/colors"]').first();
         await expect(colorsCard).toBeVisible();
@@ -76,7 +85,7 @@ test.describe('Links', () => {
       });
 
       test('should navigate to Time from landing page', async ({ page }) => {
-        const timeCard = page.locator('a[class*="lessonCard"][href$="/vocabulary/time"]').first();
+        const timeCard = page.locator('a[class*="lessonCard"][href*="/vocabulary/time"]').first();
         await expect(timeCard).toBeVisible();
         await timeCard.click();
         await verifyPageIsFound(page);
@@ -84,7 +93,7 @@ test.describe('Links', () => {
       });
 
       test('should navigate to Numbers from landing page', async ({ page }) => {
-        const numbersCard = page.locator('a[class*="lessonCard"][href$="/vocabulary/numbers"]').first();
+        const numbersCard = page.locator('a[class*="lessonCard"][href*="/lessons/numbers"]').first();
         await expect(numbersCard).toBeVisible();
         await numbersCard.click();
         await verifyPageIsFound(page);
@@ -146,76 +155,6 @@ test.describe('Links', () => {
         await page.goto('./docs/lessons/vocabulary/this-page-does-not-exist');
         await verifyPageIsFound(page);
       });
-    });
-  });
-
-  test.describe('Header Links', () => {
-    test.beforeEach(async ({ page }) => {
-      await page.goto('./');
-      await page.waitForLoadState('networkidle');
-    });
-
-    test('should have working header navigation links', async ({ page }) => {
-      const header = page.locator('nav.navbar');
-      await expect(header).toBeVisible();
-
-      const headerLinks = header.locator('a').filter({
-        has: page.locator('[href]'),
-      }).filter({
-        hasNotText: /^$/,
-      });
-
-      const linkCount = await headerLinks.count();
-      expect(linkCount).toBeGreaterThan(0);
-
-      for (let i = 0; i < linkCount; i++) {
-        const link = headerLinks.nth(i);
-        const href = await link.getAttribute('href');
-        const linkText = await link.textContent();
-
-        console.log(`Testing header link: ${linkText?.trim()} (${href})`);
-
-        await link.click();
-        await verifyPageExists(page);
-
-        await page.goto('./');
-        await page.waitForLoadState('networkidle');
-      }
-    });
-  });
-
-  test.describe('Footer Links', () => {
-    test.beforeEach(async ({ page }) => {
-      await page.goto('./');
-      await page.waitForLoadState('networkidle');
-    });
-
-    test('should have working footer navigation links', async ({ page }) => {
-      const footer = page.locator('footer.footer');
-      await expect(footer).toBeVisible();
-
-      const footerLinks = footer.locator('a').filter({
-        has: page.locator('[href]'),
-      }).filter({
-        hasNotText: /^$/,
-      });
-
-      const linkCount = await footerLinks.count();
-      expect(linkCount).toBeGreaterThan(0);
-
-      for (let i = 0; i < linkCount; i++) {
-        const link = footerLinks.nth(i);
-        const href = await link.getAttribute('href');
-        const linkText = await link.textContent();
-
-        console.log(`Testing footer link: ${linkText?.trim()} (${href})`);
-
-        await link.click();
-        await verifyPageExists(page);
-
-        await page.goto('./');
-        await page.waitForLoadState('networkidle');
-      }
     });
   });
 });

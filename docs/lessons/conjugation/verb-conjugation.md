@@ -150,6 +150,6 @@ Convert to past tense:
 
 ## Related Topics
 
-- [Basic Conjugation Lesson](./conjugation)
+- [Basic Conjugation Lesson](./basics)
 - [Particle Guide](../grammar/particle-guide)
 - [Colors Vocabulary](../vocabulary/colors)

@@ -20,6 +20,24 @@ const vocabularyData: VocabularyItem[] = vocabularyYamlData.vocabulary;
 const categories = vocabularyYamlData.categories;
 const sortOptions = vocabularyYamlData.sortOptions;
 
+/**
+ * Get the correct lesson path for a tag.
+ * Some tags have moved to different lesson categories.
+ */
+export function getTagPath(tag: string): string {
+  const tagMappings: Record<string, string> = {
+    'numbers': 'numbers',
+    'counting': 'numbers',
+    'counters': 'numbers',
+    'dates': 'vocabulary/time',
+    'calendar': 'vocabulary/time',
+    'time': 'vocabulary/time',
+  };
+  
+  const lessonCategory = tagMappings[tag.toLowerCase()] || `vocabulary/${tag}`;
+  return `docs/lessons/${lessonCategory}`;
+}
+
 export default function Vocabulary(): React.JSX.Element {
   const baseUrl = useBaseUrl('/');
   const [searchTerm, setSearchTerm] = useState('');
@@ -156,7 +174,7 @@ export default function Vocabulary(): React.JSX.Element {
                   </div>
                   <div className={styles.tags}>
                     {item.tags.map(tag => {
-                      const tagUrl = `${baseUrl}docs/lessons/vocabulary/${tag}`;
+                      const tagUrl = `${baseUrl}${getTagPath(tag)}`;
                       return (
                         <a
                           key={tag}

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Verb Conjugation
+title: Verb Conjugation Basics
 description: Complete guide to Japanese verb conjugation patterns
 tags: [grammar, verbs, conjugation, 活用]
 ---
@@ -173,4 +173,4 @@ All follow the same pattern:
 
 - [Particle Guide](../grammar/particle-guide) - Learn about Japanese particles
 - [Verb Conjugation Reference](./verb-conjugation) - Complete verb conjugation reference
-- [Colors Vocabulary](../vocabulary/colors.md) - Practice with adjective vocabulary
+- [Colors Vocabulary](../vocabulary/colors) - Practice with adjective vocabulary

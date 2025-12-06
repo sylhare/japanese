@@ -117,14 +117,5 @@ Learning how to describe tastes and flavors is essential for talking about food 
 - **Seasonal**: Taste preferences often change with seasons
 - **Regional**: Different regions have different taste preferences
 
-## Tips for Learning Taste Vocabulary
-
-1. **Taste real food**: Experience the actual tastes while learning the words
-2. **Use in daily life**: Describe the taste of food you eat
-3. **Practice with friends**: Ask about taste preferences in Japanese
-4. **Watch cooking shows**: Learn from Japanese cooking programs
-5. **Try Japanese recipes**: Cook and describe the taste in Japanese
-
-Remember: Taste is subjective! What's sweet to one person might be bitter to another. The important thing is being able to express your own taste preferences clearly.
 
 味を楽しんでください！(Aji o tanoshinde kudasai - Enjoy the taste!)

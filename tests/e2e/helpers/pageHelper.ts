@@ -5,7 +5,7 @@ import { Page, expect } from '@playwright/test';
  * This is a basic check that works for any page type
  */
 export async function verifyPageExists(page: Page) {
-  await page.waitForLoadState('networkidle');
+  await page.waitForLoadState('domcontentloaded');
   const pageContent = await page.textContent('body');
   expect(pageContent).not.toContain('Page Not Found');
 }

@@ -18,7 +18,7 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: 'http://localhost:3000/japanese/',
+    baseURL: 'http://localhost:3003/japanese/',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
@@ -67,10 +67,8 @@ export default defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'npm run extract-vocabulary && npx docusaurus start --no-open',
-    url: 'http://localhost:3000/japanese',
+    command: 'npm run extract-vocabulary && npx docusaurus start --port 3003 --no-open',
+    url: 'http://localhost:3003/japanese',
     reuseExistingServer: !process.env.CI,
-    stdout: 'ignore',
-    stderr: 'pipe',
   },
 });
