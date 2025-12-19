@@ -191,9 +191,7 @@ test.describe('Site Navigation', () => {
 
     test('should fail verifyPageIsFound for 404 pages', async ({ page }) => {
       test.fail();
-      await page.goto('./non-existent-page-12345');
-      await page.waitForLoadState('networkidle');
-      
+      await page.goto('./non-existent-page-12345');      
       await verifyPageIsFound(page);
     });
   });
