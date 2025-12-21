@@ -9,8 +9,6 @@ tags: [reference, verbs, conjugation, grammar]
 
 A comprehensive reference guide for Japanese verb conjugation patterns and forms.
 
-test
-
 ## Quick Reference Tables
 
 ### Group 1 (Godan) Verbs - Common Patterns
