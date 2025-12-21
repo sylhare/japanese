@@ -1,13 +1,9 @@
----
-sidebar_position: 1
-title: Verb Conjugation Reference
-description: Complete reference for Japanese verb conjugation patterns
-tags: [reference, verbs, conjugation, grammar]
----
-
+# Verb Conjugation Reference
 # Verb Conjugation Reference
 
 A comprehensive reference guide for Japanese verb conjugation patterns and forms.
+
+test
 
 ## Quick Reference Tables
 
