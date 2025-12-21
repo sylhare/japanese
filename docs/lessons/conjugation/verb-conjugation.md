@@ -1,9 +1,8 @@
 # Verb Conjugation Reference
+
 # Verb Conjugation Reference
 
 A comprehensive reference guide for Japanese verb conjugation patterns and forms.
-
-test
 
 ## Quick Reference Tables
 
