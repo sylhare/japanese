@@ -1,4 +1,74 @@
 vocabulary:
+  - id: advice_0
+    hiragana: ほう が いい です
+    kanji: 方 が いい です
+    romaji: hou ga ii desu
+    meaning: it would be better to, should
+    category: grammar
+    tags:
+      - advice
+    type: expression
+  - id: appearanceandactions_0
+    hiragana: そう
+    romaji: sou
+    meaning: looks like, seems
+    category: grammar
+    tags:
+      - appearance-and-actions
+    type: expression
+  - id: appearanceandactions_1
+    hiragana: みたい です
+    romaji: mitai desu
+    meaning: it looks like, it seems like
+    category: grammar
+    tags:
+      - appearance-and-actions
+    type: expression
+  - id: appearanceandactions_2
+    hiragana: て いる
+    kanji: て いる
+    romaji: te iru
+    meaning: currently doing, in the state of
+    category: grammar
+    tags:
+      - appearance-and-actions
+    type: expression
+  - id: appearanceandactions_3
+    hiragana: を かんがえる
+    kanji: を 考える
+    romaji: wo kangaeru
+    meaning: think about (something)
+    category: grammar
+    tags:
+      - appearance-and-actions
+    type: expression
+  - id: appearanceandactions_4
+    hiragana: と おもう
+    kanji: と 思う
+    romaji: to omou
+    meaning: think that
+    category: grammar
+    tags:
+      - appearance-and-actions
+    type: expression
+  - id: appearanceandactions_5
+    hiragana: て みる
+    kanji: て 見る
+    romaji: te miru
+    meaning: try doing
+    category: grammar
+    tags:
+      - appearance-and-actions
+    type: expression
+  - id: appearanceandactions_6
+    hiragana: て みよう
+    kanji: て 見よう
+    romaji: te miyou
+    meaning: let's try doing
+    category: grammar
+    tags:
+      - appearance-and-actions
+    type: expression
   - id: colors_0
     hiragana: いろ
     kanji: 色
@@ -125,6 +195,33 @@ vocabulary:
     tags:
       - colors
     type: の-adjective
+  - id: comparison_0
+    hiragana: どちら の ほう
+    kanji: どちら の 方
+    romaji: dochira no hou
+    meaning: which one
+    category: grammar
+    tags:
+      - comparison
+    type: expression
+  - id: comparison_1
+    hiragana: の ほう が
+    kanji: の 方 が
+    romaji: no hou ga
+    meaning: (the one) more
+    category: grammar
+    tags:
+      - comparison
+    type: expression
+  - id: comparison_2
+    hiragana: はな より だんご
+    kanji: 花 より 団子
+    romaji: hana yori dango
+    meaning: practicality over beauty (proverb)
+    category: grammar
+    tags:
+      - comparison
+    type: expression
   - id: confusingkanji_0
     hiragana: つち
     kanji: 土
@@ -826,6 +923,74 @@ vocabulary:
     tags:
       - counting
     type: unknown
+  - id: desire_0
+    hiragana: たい です
+    romaji: tai desu
+    meaning: want to
+    category: grammar
+    tags:
+      - desire
+    type: expression
+  - id: desire_1
+    hiragana: たくない です
+    romaji: takunai desu
+    meaning: don't want to
+    category: grammar
+    tags:
+      - desire
+    type: expression
+  - id: desire_2
+    hiragana: たかった です
+    romaji: takatta desu
+    meaning: wanted to
+    category: grammar
+    tags:
+      - desire
+    type: expression
+  - id: desire_3
+    hiragana: たくなかった です
+    romaji: takunakatta desu
+    meaning: didn't want to
+    category: grammar
+    tags:
+      - desire
+    type: expression
+  - id: desire_4
+    hiragana: なに が したい です か
+    kanji: 何 が したい です か
+    romaji: nani ga shitai desu ka
+    meaning: what do you want to do
+    category: grammar
+    tags:
+      - desire
+    type: expression
+  - id: desire_5
+    hiragana: どこ に いきたい です か
+    kanji: どこ に 行きたい です か
+    romaji: doko ni ikitai desu ka
+    meaning: where do you want to go
+    category: grammar
+    tags:
+      - desire
+    type: expression
+  - id: excess_0
+    hiragana: すぎる
+    kanji: 過ぎる
+    romaji: sugiru
+    meaning: too much, excessive
+    category: grammar
+    tags:
+      - excess
+    type: expression
+  - id: experience_0
+    hiragana: こと が ある
+    kanji: 事 が ある
+    romaji: koto ga aru
+    meaning: have experienced, have done before
+    category: grammar
+    tags:
+      - experience
+    type: expression
   - id: family_0
     hiragana: かぞく
     kanji: 家族
@@ -1430,6 +1595,58 @@ vocabulary:
     tags:
       - numbers
     type: noun
+  - id: obligation_0
+    hiragana: なければ いけない
+    kanji: なければ 行けない
+    romaji: nakereba ikenai
+    meaning: must, have to
+    category: grammar
+    tags:
+      - obligation
+    type: expression
+  - id: obligation_1
+    hiragana: なければ ならない
+    kanji: なければ ならない
+    romaji: nakereba naranai
+    meaning: must, have to
+    category: grammar
+    tags:
+      - obligation
+    type: expression
+  - id: obligation_2
+    hiragana: ては いけません
+    kanji: ては 行けません
+    romaji: te wa ikemasen
+    meaning: must not
+    category: grammar
+    tags:
+      - obligation
+    type: expression
+  - id: reason_0
+    hiragana: ので
+    romaji: node
+    meaning: because, so (formal)
+    category: grammar
+    tags:
+      - reason
+    type: conjunction
+  - id: reason_1
+    hiragana: から
+    romaji: kara
+    meaning: because, so (casual)
+    category: grammar
+    tags:
+      - reason
+    type: conjunction
+  - id: reason_2
+    hiragana: ん です
+    kanji: ん です
+    romaji: n desu
+    meaning: explanatory ending
+    category: grammar
+    tags:
+      - reason
+    type: expression
   - id: tastes_0
     hiragana: あまい
     kanji: 甘い
