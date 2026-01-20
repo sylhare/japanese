@@ -1,176 +1,100 @@
 ---
 sidebar_position: 1
-title: Verb Conjugation Basics
-description: Complete guide to Japanese verb conjugation patterns
-tags: [grammar, verbs, conjugation, 活用]
+title: Introduction to Verb Conjugation
+description: A gentle introduction to Japanese verb conjugation
+tags: [grammar, verbs, conjugation, basics]
 ---
 
-# Japanese Verb Conjugation
+# Introduction to Verb Conjugation
 
-Understanding verb conjugation is essential for Japanese grammar. Japanese verbs are categorized into three groups based
-on their conjugation patterns.
+Japanese verbs change their form to express different meanings: tense, politeness, negation, and more. This is called **conjugation** (活用 - かつよう).
 
-## Verb Groups
+## Why Conjugation Matters
 
-### Group 1 (五段動詞 - Godan Verbs)
-- End in う (u) sound
-- Most common type of verbs
-- Examples: 書く (kaku - to write), 話す (hanasu - to speak), 読む (yomu - to read)
+Unlike English where we add separate words ("I **will** go", "I **don't** go"), Japanese builds everything into the verb itself:
 
-### Group 2 (一段動詞 - Ichidan Verbs)
-- End in る (ru) sound
-- Examples: 食べる (taberu - to eat), 見る (miru - to see), 起きる (okiru - to wake up)
+| English | Japanese | Form |
+|---------|----------|------|
+| I eat | 食べる | Dictionary |
+| I eat (polite) | たべます | Masu |
+| I ate | たべた | Ta |
+| I don't eat | たべない | Nai |
+| Eating... | たべて | Te |
 
-### Group 3 (不規則動詞 - Irregular Verbs)
-- Only two verbs: する (suru - to do) and 来る (kuru - to come)
+## The Three Verb Groups
 
-## Conjugation Patterns
+Japanese verbs fall into three groups, each with different conjugation rules:
 
-### Dictionary Form (辞書形)
+| Group | Japanese Name | Key Feature | Examples |
+|-------|--------------|-------------|----------|
+| **Group 1** | 五段動詞 (godan) | End in う-sound | 書く, 話す, 読む |
+| **Group 2** | 一段動詞 (ichidan) | End in る | 食べる, 見る |
+| **Group 3** | 不規則動詞 (fukisoku) | Irregular | する, 来る |
 
-The base form of the verb, used in dictionaries.
+:::tip Good News!
+Group 2 verbs are the easiest, they all follow the same simple pattern. Group 3 only has two verbs to memorize!
+:::
 
-| Group   | Example | Reading |
-|---------|---------|---------|
-| Group 1 | 書く      | kaku    |
-| Group 2 | 食べる     | taberu  |
-| Group 3 | する      | suru    |
+### Why "Godan" and "Ichidan"?
 
-### Masu Form (ます形)
+The Japanese names describe **how the verbs conjugate**, not their order:
 
-Polite form used in formal situations.
+| Name | Kanji | Meaning | Why? |
+|------|-------|---------|------|
+| Godan | 五段 | "five levels" | Uses all 5 vowel rows (あ, い, う, え, お) when conjugating |
+| Ichidan | 一段 | "one level" | Uses only 1 vowel pattern, just drop る |
+| Fukisoku | 不規則 | "irregular" | Doesn't follow standard patterns |
 
-| Group   | Pattern            | Example    | Reading                       |
-|---------|--------------------|------------|-------------------------------|
-| Group 1 | Change う to い + ます | 書く → 書きます  | kaku → kakimasu               |
-| Group 2 | Remove る + ます      | 食べる → 食べます | taberu → tabemasu             |
-| Group 3 | する → します           | 来る → 来ます   | suru → shimasu, kuru → kimasu |
+**Godan = "Five Levels"**: Take 書く (kaku). The stem changes through all 5 vowel columns:
 
-### Te Form (て形)
+| Vowel | Stem | Form |
+|-------|------|------|
+| あ (a) | かか | nai-form → かかない |
+| い (i) | かき | masu-form → かきます |
+| う (u) | かく | dictionary form |
+| え (e) | かけ | potential → かける |
+| お (o) | かこ | volitional → かこう |
 
-Used for various grammatical constructions.
+**Ichidan = "One Level"**: Take 食べる (taberu). The stem **never changes**, always たべ:
+- たべ + ます
+- たべ + て
+- たべ + た
+- たべ + ない
 
-| Group   | Pattern                          | Example                   | Reading         |
-|---------|----------------------------------|---------------------------|-----------------|
-| Group 1 | Various patterns based on ending | 書く → 書いて                  | kaku → kaite    |
-| Group 2 | Remove る + て                     | 食べる → 食べて                 | taberu → tabete |
-| Group 3 | する → して, 来る → 来て                 | suru → shite, kuru → kite |
+:::note Group Numbers vs Japanese Names
+The "Group 1, 2, 3" numbering is just a modern teaching convention, it's unrelated to the Japanese names. 五段 means "five levels" (not "first"), and 一段 means "one level" (not "second").
+:::
 
-### Ta Form (た形)
+## The Main Conjugation Forms
 
-Past tense form.
+Here are the essential forms you'll use every day:
 
-| Group   | Pattern                          | Example                   | Reading         |
-|---------|----------------------------------|---------------------------|-----------------|
-| Group 1 | Various patterns based on ending | 書く → 書いた                  | kaku → kaita    |
-| Group 2 | Remove る + た                     | 食べる → 食べた                 | taberu → tabeta |
-| Group 3 | する → した, 来る → 来た                 | suru → shita, kuru → kita |
+| Form | Purpose | Example |
+|------|---------|---------|
+| **Dictionary** (辞書形) | Base form, casual present | 食べる (taberu) |
+| **Masu** (ます形) | Polite present | たべます (tabemasu) |
+| **Te** (て形) | Connecting, requests | たべて (tabete) |
+| **Ta** (た形) | Past tense | たべた (tabeta) |
+| **Nai** (ない形) | Negative | たべない (tabenai) |
 
-### Nai Form (ない形)
+## Learning Path
 
-Negative form.
+We recommend learning conjugation in this order:
 
-| Group   | Pattern            | Example                     | Reading          |
-|---------|--------------------|-----------------------------|------------------|
-| Group 1 | Change う to あ + ない | 書く → 書かない                   | kaku → kakanai   |
-| Group 2 | Remove る + ない      | 食べる → 食べない                  | taberu → tabenai |
-| Group 3 | する → しない, 来る → 来ない | suru → shinai, kuru → konai |
+1. **[Verb Groups](./verb-groups)** — Understand the three groups and how to identify them
+2. **[Te Form & Nai Form](./te-nai-form)** — Learn connecting and negative forms
+3. **[Ta Form](./ta-form)** — Master past tense conjugation
 
-## Detailed Conjugation Rules
+## Quick Preview
 
-### Group 1 (Godan) Verbs
+Here's how one verb from each group conjugates:
 
-The conjugation depends on the final syllable:
+| Form | Group 1: 書く | Group 2: 食べる | Group 3: する |
+|------|-------------|--------------|-------------|
+| Dictionary | 書く | 食べる | する |
+| Masu | かきます | たべます | します |
+| Te | かいて | たべて | して |
+| Ta | かいた | たべた | した |
+| Nai | かかない | たべない | しない |
 
-#### く → き/いて/いた/かない
-- 書く (kaku) → 書きます/書いて/書いた/書かない
-- 聞く (kiku) → 聞きます/聞いて/聞いた/聞かない
-
-#### ぐ → ぎ/いで/いだ/がない
-- 泳ぐ (oyogu) → 泳ぎます/泳いで/泳いだ/泳がない
-
-#### す → し/して/した/さない
-- 話す (hanasu) → 話します/話して/話した/話さない
-
-#### つ → ち/って/った/たない
-- 待つ (matsu) → 待ちます/待って/待った/待たない
-
-#### ぬ → に/んで/んだ/なない
-- 死ぬ (shinu) → 死にます/死んで/死んだ/死なない
-
-#### む → み/んで/んだ/まない
-- 読む (yomu) → 読みます/読んで/読んだ/読まない
-
-#### る → り/って/った/らない
-- 作る (tsukuru) → 作ります/作って/作った/作らない
-
-#### う → い/って/った/わない
-- 買う (kau) → 買います/買って/買った/買わない
-
-### Group 2 (Ichidan) Verbs
-
-All follow the same pattern:
-- Remove る and add the appropriate ending
-- 食べる → 食べます/食べて/食べた/食べない
-
-### Group 3 (Irregular) Verbs
-
-#### する (suru - to do)
-- します/して/した/しない
-
-#### 来る (kuru - to come)
-- 来ます/来て/来た/来ない
-
-## Common Verb Conjugations
-
-### Basic Verbs
-
-| Dictionary | Masu | Te  | Ta  | Nai  | Meaning   |
-|------------|------|-----|-----|------|-----------|
-| 行く         | 行きます | 行って | 行った | 行かない | to go     |
-| 来る         | 来ます  | 来て  | 来た  | 来ない  | to come   |
-| する         | します  | して  | した  | しない  | to do     |
-| 見る         | 見ます  | 見て  | 見た  | 見ない  | to see    |
-| 食べる        | 食べます | 食べて | 食べた | 食べない | to eat    |
-| 飲む         | 飲みます | 飲んで | 飲んだ | 飲まない | to drink  |
-| 買う         | 買います | 買って | 買った | 買わない | to buy    |
-| 売る         | 売ります | 売って | 売った | 売らない | to sell   |
-| 話す         | 話します | 話して | 話した | 話さない | to speak  |
-| 聞く         | 聞きます | 聞いて | 聞いた | 聞かない | to listen |
-
-## Practice Exercises
-
-### Exercise 1: Convert to Masu Form
-1. 書く (kaku) → ?
-2. 食べる (taberu) → ?
-3. する (suru) → ?
-4. 来る (kuru) → ?
-5. 読む (yomu) → ?
-
-### Exercise 2: Convert to Te Form
-1. 行く (iku) → ?
-2. 見る (miru) → ?
-3. 買う (kau) → ?
-4. 話す (hanasu) → ?
-5. 飲む (nomu) → ?
-
-### Exercise 3: Convert to Past Tense
-1. 食べる (taberu) → ?
-2. 書く (kaku) → ?
-3. 来る (kuru) → ?
-4. する (suru) → ?
-5. 読む (yomu) → ?
-
-## Tips for Learning Conjugation
-
-1. **Practice regularly**: Conjugation requires muscle memory
-2. **Learn patterns**: Focus on the patterns rather than memorizing individual verbs
-3. **Use flashcards**: Create cards for different forms of the same verb
-4. **Practice with sentences**: Use conjugated verbs in context
-5. **Listen and repeat**: Audio practice helps with pronunciation
-
-## Related Lessons
-
-- [Particle Guide](../grammar/particle-guide) - Learn about Japanese particles
-- [Verb Conjugation Reference](./verb-conjugation) - Complete verb conjugation reference
-- [Colors Vocabulary](../vocabulary/colors) - Practice with adjective vocabulary
+Ready to dive deeper? Start with **[Verb Groups](./verb-groups)** to understand the foundation of Japanese conjugation.
