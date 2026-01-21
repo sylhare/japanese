@@ -22,20 +22,60 @@ const sortOptions = vocabularyYamlData.sortOptions;
 
 /**
  * Get the correct lesson path for a tag.
- * Some tags have moved to different lesson categories.
+ * Maps tags to their correct lesson folders.
  */
 export function getTagPath(tag: string): string {
+  // Grammar lessons
+  const grammarTags = [
+    'actions-and-thinking',
+    'advice',
+    'appearance',
+    'comparison',
+    'conjunctions',
+    'desire',
+    'excess',
+    'experience',
+    'grammar-particles',
+    'obligation',
+    'particle-guide',
+    'reason',
+  ];
+
+  // Conjugation lessons
+  const conjugationTags = [
+    'future',
+    'basics',
+    'verb-groups',
+    'te-nai-form',
+    'ta-form',
+  ];
+
+  // Special mappings for tags that don't match their file names
   const tagMappings: Record<string, string> = {
-    'numbers': 'numbers',
-    'counting': 'numbers',
-    'counters': 'numbers',
+    'numbers': 'vocabulary/numbers',
+    'counting': 'vocabulary/numbers',
+    'counters': 'vocabulary/numbers',
     'dates': 'vocabulary/time',
     'calendar': 'vocabulary/time',
     'time': 'vocabulary/time',
+    'days-and-weeks': 'vocabulary/time/days-and-weeks',
   };
+
+  const lowerTag = tag.toLowerCase();
   
-  const lessonCategory = tagMappings[tag.toLowerCase()] || `vocabulary/${tag}`;
-  return `docs/lessons/${lessonCategory}`;
+  if (tagMappings[lowerTag]) {
+    return `docs/lessons/${tagMappings[lowerTag]}`;
+  }
+  
+  if (grammarTags.includes(lowerTag)) {
+    return `docs/lessons/grammar/${tag}`;
+  }
+
+  if (conjugationTags.includes(lowerTag)) {
+    return `docs/lessons/conjugation/${tag}`;
+  }
+  
+  return `docs/lessons/vocabulary/${tag}`;
 }
 
 export default function Vocabulary(): React.JSX.Element {

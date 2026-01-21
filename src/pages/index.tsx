@@ -10,7 +10,7 @@ const mainFeatures = [
     title: 'Lessons',
     icon: '📚',
     description: 'Structured learning path',
-    link: '/docs/lessons/intro',
+    link: '/docs/intro',
     color: 'primary',
   },
   {
