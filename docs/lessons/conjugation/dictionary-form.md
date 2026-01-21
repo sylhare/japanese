@@ -1,11 +1,13 @@
 ---
 sidebar_position: 2
-title: The Three Verb Groups
+title: Dictionary form
 description: Understanding Godan, Ichidan, and irregular verbs
 tags: [grammar, verbs, conjugation, 活用]
 ---
 
-# The Three Verb Groups
+import NextSteps from '@site/src/components/NextSteps';
+
+# Introduction
 
 All Japanese verbs belong to one of three groups. Learning to identify which group a verb belongs to is the first step to conjugating it correctly.
 
@@ -85,8 +87,6 @@ All Ichidan verbs follow the **exact same pattern**. Just drop る and add your 
 
 ## Group 3: Irregular Verbs (不規則動詞)
 
-### The Good News
-
 There are only **two** irregular verbs in Japanese!
 
 ### する (suru) — to do
@@ -120,7 +120,7 @@ There are only **two** irregular verbs in Japanese!
 
 ## How to Tell Groups Apart
 
-### The Tricky Part: る-ending Verbs
+### る-ending Verbs
 
 Some verbs end in る but are **Group 1**, not Group 2!
 
@@ -142,43 +142,11 @@ Some verbs end in る but are **Group 1**, not Group 2!
 | しる | 知る | shiru | to know | verb |
 | きる | 切る | kiru | to cut | verb |
 
-:::tip Learning Strategy
-When you learn a new る-ending verb, always check which group it belongs to. With practice, you'll develop intuition for it!
-:::
 
-## Complete Conjugation Reference
-
-### Group 1 (Godan) — All Patterns
-
-| Ending | Dictionary | Masu | Te | Ta | Nai | Meaning |
-|--------|------------|------|----|----|-----|---------|
-| く | 書く | かきます | かいて | かいた | かかない | to write |
-| ぐ | 泳ぐ | およぎます | およいで | およいだ | およがない | to swim |
-| す | 話す | はなします | はなして | はなした | はなさない | to speak |
-| つ | 待つ | まちます | まって | まった | またない | to wait |
-| ぬ | 死ぬ | しにます | しんで | しんだ | しなない | to die |
-| む | 読む | よみます | よんで | よんだ | よまない | to read |
-| る | 作る | つくります | つくって | つくった | つくらない | to make |
-| う | 買う | かいます | かって | かった | かわない | to buy |
-
-### Group 2 (Ichidan) — Examples
-
-| Dictionary | Masu | Te | Ta | Nai | Meaning |
-|------------|------|----|----|-----|---------|
-| 食べる | たべます | たべて | たべた | たべない | to eat |
-| 見る | みます | みて | みた | みない | to see |
-| 起きる | おきます | おきて | おきた | おきない | to wake up |
-| 寝る | ねます | ねて | ねた | ねない | to sleep |
-
-### Group 3 (Irregular)
-
-| Dictionary | Masu | Te | Ta | Nai | Meaning |
-|------------|------|----|----|-----|---------|
-| する | します | して | した | しない | to do |
-| 来る | きます | きて | きた | こない | to come |
-
-## Related Lessons
-
-- [Te Form & Nai Form](./te-nai-form) — Learn connecting and negative forms in detail
-- [Ta Form](./ta-form) — Master past tense conjugation
-- [Particle Guide](../grammar/particle-guide) — Learn about Japanese particles
+<NextSteps items={[
+  {
+    title: "Present - て form",
+    description: "Learn the connecting form of Japanese verbs",
+    to: "./te-form"
+  }
+]} />

@@ -1,15 +1,22 @@
 ---
 sidebar_position: 4
-title: Ta Form (Past Tense)
+title: Past - た form
 description: Master the past tense conjugation of Japanese verbs
 tags: [grammar, verbs, conjugation, た形, past tense]
 ---
 
-# Ta Form (た形) — Past Tense
+import NextSteps from '@site/src/components/NextSteps';
+
+# Past - た form
 
 The ta-form expresses past actions and completed events. Good news: if you know the te-form, you already know the ta-form!
 
-## The Simple Rule
+:::tip Polite Past Tense
+Polite past = Masu-stem + **ました**
+- たべます → たべました (ate)
+- かきます → かきました (wrote)
+- します → しました (did)
+:::
 
 **Ta-form = Te-form with て→た and で→だ**
 
@@ -20,129 +27,65 @@ The ta-form expresses past actions and completed events. Good news: if you know 
 
 That's it! The patterns are identical.
 
-## Group 1 (Godan) — Follow the Te-form Pattern
+## Group 1 (Godan) — Pattern Based on Ending
 
-| Ending | Te Form | Ta Form | Example |
-|--------|---------|---------|---------|
-| く | いて | いた | 書く → かいた |
-| ぐ | いで | いだ | 泳ぐ → およいだ |
-| す | して | した | 話す → はなした |
-| つ | って | った | 待つ → まった |
-| る | って | った | 作る → つくった |
-| う | って | った | 買う → かった |
-| ぬ | んで | んだ | 死ぬ → しんだ |
-| む | んで | んだ | 読む → よんだ |
-| ぶ | んで | んだ | 遊ぶ → あそんだ |
+The ta-form depends on the final syllable (same as te-form, just て→た and で→だ):
 
-### Special Exception: 行く
+| Ending | Ta Form | Pattern |
+|--------|---------|---------|
+| く | いた | k → ita |
+| ぐ | いだ | g → ida |
+| す | した | s → shita |
+| つ | った | t → tta |
+| る | った | r → tta |
+| う | った | u → tta |
+| ぬ | んだ | n → nda |
+| む | んだ | m → nda |
+| ぶ | んだ | b → nda |
 
-Just like te-form:
+:::tip Memory Trick
+**った group**: つ, る, う (sounds like "tsu-ru-u")  
+**んだ group**: ぬ, む, ぶ (the "nasal" consonants)
+:::
+
+:::warning Special Exception: 行く
+行く (iku - to go) is irregular in ta-form:  
 - 行く → **いった** (itta), NOT ~~いいた~~
+:::
 
-## Group 2 (Ichidan) — Easy!
+### Examples
 
-Replace る with た:
+- かく → かいた (wrote)
+- およぐ → およいだ (swam)
+- はなす → はなした (spoke)
+- まつ → まった (waited)
+- つくる → つくった (made)
+- かう → かった (bought)
+- しぬ → しんだ (died)
+- よむ → よんだ (read)
+- あそぶ → あそんだ (played)
 
-| Dictionary | Te Form | Ta Form |
-|------------|---------|---------|
-| 食べる | たべて | たべた |
-| 見る | みて | みた |
-| 起きる | おきて | おきた |
-| 寝る | ねて | ねた |
+## Group 2 (Ichidan) — The Easy One
+
+| Ending | Ta Form | Pattern |
+|--------|---------|---------|
+| る | た | ru → ta |
+
+### Examples
+
+- たべる → たべた (ate)
+- みる → みた (saw)
+- おきる → おきた (woke up)
+- ねる → ねた (slept)
 
 ## Group 3 (Irregular)
 
-| Dictionary | Te Form | Ta Form |
-|------------|---------|---------|
-| する | して | した |
-| 来る | きて (kite) | きた (kita) |
+### Examples
 
-## Polite Past Tense
-
-For polite speech, use **ました** instead:
-
-| Casual | Polite |
-|--------|--------|
-| たべた | たべました |
-| みた | みました |
-| した | しました |
-| きた | きました |
-| かいた | かきました |
-| よんだ | よみました |
-
-:::tip Formation
-Polite past = Masu-stem + ました
-- たべます → たべました
-- かきます → かきました
-:::
-
-## Negative Past Tense
-
-To say "didn't do," use the nai-form and change ない to なかった:
-
-| Present Negative | Past Negative |
-|-----------------|---------------|
-| たべない | たべなかった |
-| みない | みなかった |
-| かかない | かかなかった |
-| しない | しなかった |
-| こない | こなかった |
-
-### Polite Negative Past
-
-Use **ませんでした**:
-
-| Casual | Polite |
-|--------|--------|
-| たべなかった | たべませんでした |
-| みなかった | みませんでした |
-| しなかった | しませんでした |
-
-## Complete Conjugation Tables
-
-### All Four Combinations
-
-| | Present | Past |
-|---|---------|------|
-| **Affirmative** | 食べる | たべた |
-| **Negative** | たべない | たべなかった |
-
-| | Present (Polite) | Past (Polite) |
-|---|---------|------|
-| **Affirmative** | たべます | たべました |
-| **Negative** | たべません | たべませんでした |
-
-### Group 1 (Godan) Examples
-
-| Dictionary | Ta Form | Negative Past | Meaning |
-|------------|---------|---------------|---------|
-| 書く | かいた | かかなかった | to write |
-| 泳ぐ | およいだ | およがなかった | to swim |
-| 話す | はなした | はなさなかった | to speak |
-| 待つ | まった | またなかった | to wait |
-| 死ぬ | しんだ | しななかった | to die |
-| 読む | よんだ | よまなかった | to read |
-| 遊ぶ | あそんだ | あそばなかった | to play |
-| 作る | つくった | つくらなかった | to make |
-| 買う | かった | かわなかった | to buy |
-
-### Group 2 (Ichidan) Examples
-
-| Dictionary | Ta Form | Negative Past | Meaning |
-|------------|---------|---------------|---------|
-| 食べる | たべた | たべなかった | to eat |
-| 見る | みた | みなかった | to see |
-| 起きる | おきた | おきなかった | to wake up |
-| 寝る | ねた | ねなかった | to sleep |
-| 出る | でた | でなかった | to exit |
-| 開ける | あけた | あけなかった | to open |
-
-### Group 3 (Irregular)
-
-| Dictionary | Ta Form | Negative Past | Meaning |
-|------------|---------|---------------|---------|
-| する | した | しなかった | to do |
-| 来る | きた (kita) | こなかった (konakatta) | to come |
+- する → した (did)
+- くる → きた (came)
+- べんきょうする → べんきょうした (studied)
+- さんぽする → さんぽした (took a walk)
 
 ## Ta Form in Context
 
@@ -172,20 +115,20 @@ Use **ませんでした**:
 > いま、**おきた**ばかりです。
 > *I just woke up.*
 
-## Common Ta Form Patterns
+:::info Common Ta Form Patterns
+- **〜たことがある** — have experienced: にほんにいったことがある (I've been to Japan)
+- **〜たあとで** — after doing: たべたあとで (after eating)
+- **〜たばかり** — just did: きたばかり (just arrived)
+- **〜たら** — if/when: いったら (if/when I go)
+- **〜たり〜たりする** — do things like: たべたりのんだりする (eat, drink, etc.)
+- **〜たほうがいい** — should do: いったほうがいい (you should go)
+- **〜たことがない** — have never: みたことがない (have never seen)
+:::
 
-| Pattern | Reading | Meaning | Form Used | Example |
-|---------|---------|---------|-----------|---------|
-| 〜たことがある | たことがある | have experienced | ta + ことがある | いったことがある |
-| 〜たあとで | たあとで | after doing | ta + あとで | たべたあとで |
-| 〜たばかり | たばかり | just did | ta + ばかり | きたばかり |
-| 〜たら | たら | if/when | ta + ら | いったら |
-| 〜たり〜たりする | たり〜たりする | do things like | ta + り | たべたりのんだりする |
-| 〜たほうがいい | たほうがいい | should do | ta + ほうがいい | いったほうがいい |
-| 〜たことがない | たことがない | have never | ta + ことがない | みたことがない |
-
-## Related Lessons
-
-- [Verb Groups](./verb-groups) — Understanding the three verb groups
-- [Te Form & Nai Form](./te-nai-form) — Connecting and negative forms
-- [Particle Guide](../grammar/particle-guide) — Learn about Japanese particles
+<NextSteps items={[
+  {
+    title: "Present Negative - ない",
+    description: "Learn to express negation with the nai form",
+    to: "./nai-form"
+  }
+]} />

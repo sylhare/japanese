@@ -5,9 +5,19 @@ description: A gentle introduction to Japanese verb conjugation
 tags: [grammar, verbs, conjugation, basics]
 ---
 
+import NextSteps from '@site/src/components/NextSteps';
+
 # Introduction to Verb Conjugation
 
 Japanese verbs change their form to express different meanings: tense, politeness, negation, and more. This is called **conjugation** (活用 - かつよう).
+
+Here are the main conjugation forms you'll use every day:
+
+- **Dictionary** (辞書形) — Base form, casual present: 食べる (taberu)
+- **Masu** (ます形) — Polite present: たべます (tabemasu)
+- **Te** (て形) — Connecting, requests: たべて (tabete)
+- **Ta** (た形) — Past tense: たべた (tabeta)
+- **Nai** (ない形) — Negative: たべない (tabenai)
 
 ## Why Conjugation Matters
 
@@ -39,11 +49,9 @@ Group 2 verbs are the easiest, they all follow the same simple pattern. Group 3 
 
 The Japanese names describe **how the verbs conjugate**, not their order:
 
-| Name | Kanji | Meaning | Why? |
-|------|-------|---------|------|
-| Godan | 五段 | "five levels" | Uses all 5 vowel rows (あ, い, う, え, お) when conjugating |
-| Ichidan | 一段 | "one level" | Uses only 1 vowel pattern, just drop る |
-| Fukisoku | 不規則 | "irregular" | Doesn't follow standard patterns |
+- **Godan** (五段) — "five levels": Uses all 5 vowel rows (あ, い, う, え, お) when conjugating
+- **Ichidan** (一段) — "one level": Uses only 1 vowel pattern, just drop る
+- **Fukisoku** (不規則) — "irregular": Doesn't follow standard patterns
 
 **Godan = "Five Levels"**: Take 書く (kaku). The stem changes through all 5 vowel columns:
 
@@ -65,36 +73,35 @@ The Japanese names describe **how the verbs conjugate**, not their order:
 The "Group 1, 2, 3" numbering is just a modern teaching convention, it's unrelated to the Japanese names. 五段 means "five levels" (not "first"), and 一段 means "one level" (not "second").
 :::
 
-## The Main Conjugation Forms
+## The Copula: です / だ
 
-Here are the essential forms you'll use every day:
+Japanese has a special word called the **copula** (です/だ) which means "to be" for nouns and adjectives. It's not a verb, but it conjugates similarly.
 
-| Form | Purpose | Example |
-|------|---------|---------|
-| **Dictionary** (辞書形) | Base form, casual present | 食べる (taberu) |
-| **Masu** (ます形) | Polite present | たべます (tabemasu) |
-| **Te** (て形) | Connecting, requests | たべて (tabete) |
-| **Ta** (た形) | Past tense | たべた (tabeta) |
-| **Nai** (ない形) | Negative | たべない (tabenai) |
+| Form | Polite | Casual | Meaning |
+|------|--------|--------|---------|
+| Present | です (desu) | だ (da) | is/am/are |
+| Past | でした (deshita) | だった (datta) | was/were |
+| Negative | じゃないです / ではありません | じゃない | is not |
+| Past Negative | じゃなかったです | じゃなかった | was not |
 
-## Learning Path
+### Examples
 
-We recommend learning conjugation in this order:
+- がくせい **です** - I am a student (polite)
+- がくせい **だ** - I am a student (casual)
+- がくせい **でした** - I was a student (polite past)
+- がくせい **だった** - I was a student (casual past)
+- がくせい **じゃない** - I am not a student (casual negative)
 
-1. **[Verb Groups](./verb-groups)** — Understand the three groups and how to identify them
-2. **[Te Form & Nai Form](./te-nai-form)** — Learn connecting and negative forms
-3. **[Ta Form](./ta-form)** — Master past tense conjugation
+:::tip When to Use Which?
+- **です/でした** — Polite speech, formal situations, strangers
+- **だ/だった** — Casual speech, friends, family, inner thoughts
+- In casual speech, だ is often dropped entirely: がくせい？ (Are you a student?)
+:::
 
-## Quick Preview
-
-Here's how one verb from each group conjugates:
-
-| Form | Group 1: 書く | Group 2: 食べる | Group 3: する |
-|------|-------------|--------------|-------------|
-| Dictionary | 書く | 食べる | する |
-| Masu | かきます | たべます | します |
-| Te | かいて | たべて | して |
-| Ta | かいた | たべた | した |
-| Nai | かかない | たべない | しない |
-
-Ready to dive deeper? Start with **[Verb Groups](./verb-groups)** to understand the foundation of Japanese conjugation.
+<NextSteps items={[
+  {
+    title: "Dictionary Form",
+    description: "Learn to identify the three verb groups and their patterns",
+    to: "./dictionary-form"
+  }
+]} />
