@@ -24,14 +24,14 @@ Also called **u-verbs** or **consonant-stem verbs**.
 
 ### Common Examples
 
-| Verb | Reading | Meaning |
-|------|---------|---------|
-| 書く | kaku | to write |
-| 話す | hanasu | to speak |
-| 読む | yomu | to read |
-| 買う | kau | to buy |
-| 作る | tsukuru | to make |
-| 待つ | matsu | to wait |
+| Hiragana | Kanji | Romaji | English | Type |
+|----------|-------|--------|---------|------|
+| かく | 書く | kaku | to write | verb |
+| はなす | 話す | hanasu | to speak | verb |
+| よむ | 読む | yomu | to read | verb |
+| かう | 買う | kau | to buy | verb |
+| つくる | 作る | tsukuru | to make | verb |
+| まつ | 待つ | matsu | to wait | verb |
 
 ### Conjugation Pattern (Masu Form)
 
@@ -59,14 +59,14 @@ Also called **ru-verbs** or **vowel-stem verbs**.
 
 ### Common Examples
 
-| Verb | Reading | Meaning |
-|------|---------|---------|
-| 食べる | taberu | to eat |
-| 見る | miru | to see |
-| 起きる | okiru | to wake up |
-| 寝る | neru | to sleep |
-| 開ける | akeru | to open |
-| 出る | deru | to exit |
+| Hiragana | Kanji | Romaji | English | Type |
+|----------|-------|--------|---------|------|
+| たべる | 食べる | taberu | to eat | verb |
+| みる | 見る | miru | to see | verb |
+| おきる | 起きる | okiru | to wake up | verb |
+| ねる | 寝る | neru | to sleep | verb |
+| あける | 開ける | akeru | to open | verb |
+| でる | 出る | deru | to exit | verb |
 
 ### Conjugation Pattern (Masu Form)
 
@@ -134,13 +134,13 @@ Some verbs end in る but are **Group 1**, not Group 2!
 
 ### Common Exceptions (Group 1 verbs that look like Group 2)
 
-| Verb | Reading | Meaning |
-|------|---------|---------|
-| 帰る | kaeru | to return |
-| 入る | hairu | to enter |
-| 走る | hashiru | to run |
-| 知る | shiru | to know |
-| 切る | kiru | to cut |
+| Hiragana | Kanji | Romaji | English | Type |
+|----------|-------|--------|---------|------|
+| かえる | 帰る | kaeru | to return | verb |
+| はいる | 入る | hairu | to enter | verb |
+| はしる | 走る | hashiru | to run | verb |
+| しる | 知る | shiru | to know | verb |
+| きる | 切る | kiru | to cut | verb |
 
 :::tip Learning Strategy
 When you learn a new る-ending verb, always check which group it belongs to. With practice, you'll develop intuition for it!
