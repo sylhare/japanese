@@ -1,13 +1,20 @@
 ---
 sidebar_position: 5
-title: Listing Items - And / Or More
+title: Listing Items - と / や
 description: Learn the difference between と (and) and や (or more) for listing items
 tags: [grammar, particles, conjunctions, lists]
 ---
 
-# Listing Items: And / Or More
+# Listing Items: と / や
 
 Learn how to list items using **と** (exhaustive) and **や** (non-exhaustive examples).
+
+## Key Expressions
+
+| Hiragana | Kanji | Romaji | English | Type |
+|----------|-------|--------|---------|------|
+| と | - | to | and (exhaustive list) | particle |
+| や | - | ya | or more, such as (examples) | particle |
 
 ## と (And) - Exhaustive List
 
@@ -52,15 +59,6 @@ Use **や** when giving **examples** - there are more items not mentioned.
 - More casual and conversational than と
 - Literally means "things like A and B"
 
-## Vocabulary
-
-### Key Expressions
-
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| と | - | to | and (exhaustive list) | particle |
-| や | - | ya | or more, such as (examples) | particle |
-
 ## Quick Comparison
 
 **と (Exhaustive):** All items listed, nothing more  
@@ -70,4 +68,3 @@ Use **や** when giving **examples** - there are more items not mentioned.
 
 - **すし と てんぷら を たべます** → I'll eat sushi and tempura (*only these two*)
 - **すし や てんぷら を たべます** → I'll eat things like sushi and tempura (*and maybe other things too*)
-

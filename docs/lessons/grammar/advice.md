@@ -1,13 +1,23 @@
 ---
 sidebar_position: 8
-title: Giving Advice
+title: Giving Advice - ほう が いい
 description: Learn how to give advice using ほう が いい
 tags: [grammar, advice, suggestions, ほう]
 ---
 
-# Giving Advice
+# Giving Advice: ほう が いい
 
 Learn how to give advice and suggestions using **ほう が いい です**.
+
+## Key Expressions
+
+| Hiragana | Kanji | Romaji | English | Type |
+|----------|-------|--------|---------|------|
+| ほう が いい です | 方 が いい です | hou ga ii desu | it would be better to, should | expression |
+
+**Other forms:**
+- **ほう が いい です よ** (方 が いい です よ, hou ga ii desu yo) - you should (friendly)
+- **ほう が よろしい です** (方 が よろしい です, hou ga yoroshii desu) - you should (very polite)
 
 ## Pattern: ほう が いい です
 
@@ -60,19 +70,6 @@ Literally: "The direction of [not doing] is good."
 - しない ほう が いい です よ - You shouldn't do (that).
   - *shinai hou ga ii desu yo*
 
-## Vocabulary
-
-### Key Expressions
-
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| ほう が いい です | 方 が いい です | hou ga ii desu | it would be better to, should | expression |
-
-**Other forms:**
-- **ほう が いい です よ** (方 が いい です よ, hou ga ii desu yo) - you should (friendly)
-- **ほう が よろしい です** (方 が よろしい です, hou ga yoroshii desu) - you should (very polite)
-
-
 ## Politeness Levels
 
 **Polite:** ~た ほう が いい です → いった ほう が いい です  
@@ -124,4 +121,3 @@ This pattern is often used:
   - *soko ni ikanai hou ga ii desu yo*
 - それ を しない ほう が いい です よ - You shouldn't do that.
   - *sore wo shinai hou ga ii desu yo*
-

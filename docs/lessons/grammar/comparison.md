@@ -1,13 +1,22 @@
 ---
 sidebar_position: 7
-title: Making Comparisons
+title: Making Comparisons - ほう が / より
 description: Learn how to compare things using ほう が and より
 tags: [grammar, comparison, ほう, より]
 ---
 
-# Making Comparisons
+# Making Comparisons: ほう が / より
 
 Learn how to compare things in Japanese using **ほう が** and **より**.
+
+## Key Expressions
+
+| Hiragana | Kanji | Romaji | English | Type |
+|----------|-------|--------|---------|------|
+| どちら の ほう | どちら の 方 | dochira no hou | which one | expression |
+| の ほう が | の 方 が | no hou ga | (the one) more | expression |
+| より | - | yori | than, compared to | particle |
+| はな より だんご | 花 より 団子 | hana yori dango | practicality over beauty (proverb) | expression |
 
 ## Asking for Comparison
 
@@ -70,17 +79,6 @@ When the comparison is clear from context, you can omit **B より**.
 
 This is a famous Japanese proverb expressing that substance is more important than appearance.
 
-## Vocabulary
-
-### Key Expressions
-
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| どちら の ほう | どちら の 方 | dochira no hou | which one | expression |
-| の ほう が | の 方 が | no hou ga | (the one) more | expression |
-| より | - | yori | than, compared to | particle |
-| はな より だんご | 花 より 団子 | hana yori dango | practicality over beauty (proverb) | expression |
-
 ## Summary
 
 **A と B と どちら の ほう？** → Ask which is better  
@@ -93,4 +91,3 @@ This is a famous Japanese proverb expressing that substance is more important th
 - **より** means "than" or "compared to"
 - The thing being praised comes **before** より
 - Can be used with any adjective
-

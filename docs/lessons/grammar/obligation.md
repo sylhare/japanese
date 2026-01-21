@@ -1,13 +1,26 @@
 ---
 sidebar_position: 9
-title: Expressing Obligation
+title: Expressing Obligation - なければ
 description: Learn how to express obligation and necessity using なければ
 tags: [grammar, obligation, necessity, must, have-to]
 ---
 
-# Expressing Obligation
+# Expressing Obligation: なければ
 
 Learn how to express obligation and necessity - saying you "must" or "have to" do something.
+
+## Key Expressions
+
+| Hiragana | Kanji | Romaji | English | Type |
+|----------|-------|--------|---------|------|
+| なければ いけない | なければ 行けない | nakereba ikenai | must, have to | expression |
+| なければ ならない | なければ ならない | nakereba naranai | must, have to | expression |
+| ては いけません | ては 行けません | te wa ikemasen | must not | expression |
+
+**Other forms:**
+- **なければ いけません** (なければ 行けません, nakereba ikemasen) - must, have to (polite)
+- **なきゃ いけない** (なきゃ 行けない, nakya ikenai) - gotta (casual)
+- **なきゃ** (なきゃ, nakya) - gotta (very casual)
 
 ## Pattern: なければ (ならない/いけない)
 
@@ -114,21 +127,6 @@ Use this pattern to express prohibition - something you must not do.
 **なきゃ** (Very casual) - Gotta → べんきょうしなきゃ  
 **ては いけません** (Formal) - Must not → べんきょうしては いけません
 
-## Vocabulary
-
-### Key Expressions
-
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| なければ いけない | なければ 行けない | nakereba ikenai | must, have to | expression |
-| なければ ならない | なければ ならない | nakereba naranai | must, have to | expression |
-| ては いけません | ては 行けません | te wa ikemasen | must not | expression |
-
-**Other forms:**
-- **なければ いけません** (なければ 行けません, nakereba ikemasen) - must, have to (polite)
-- **なきゃ いけない** (なきゃ 行けない, nakya ikenai) - gotta (casual)
-- **なきゃ** (なきゃ, nakya) - gotta (very casual)
-
 ## Key Points
 
 - **ならない** and **いけない** are largely interchangeable
@@ -136,4 +134,3 @@ Use this pattern to express prohibition - something you must not do.
 - **ならない** can sound slightly more formal or literary
 - Both express strong obligation from external circumstances
 - The casual **なきゃ** is very common among young people
-

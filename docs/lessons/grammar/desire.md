@@ -1,13 +1,24 @@
 ---
 sidebar_position: 11
-title: Expressing Desire
+title: Expressing Desire - たい
 description: Learn how to express wanting to do something using たい
 tags: [grammar, desire, want, たい, verb-conjugation]
 ---
 
-# Expressing Desire
+# Expressing Desire: たい
 
 Learn how to express what you want or don't want to do using **たい**.
+
+## Key Expressions
+
+| Hiragana | Kanji | Romaji | English | Type |
+|----------|-------|--------|---------|------|
+| たい です | - | tai desu | want to | expression |
+| たくない です | - | takunai desu | don't want to | expression |
+| たかった です | - | takatta desu | wanted to | expression |
+| たくなかった です | - | takunakatta desu | didn't want to | expression |
+| なに が したい です か | 何 が したい です か | nani ga shitai desu ka | what do you want to do? | expression |
+| どこ に いきたい です か | どこ に 行きたい です か | doko ni ikitai desu ka | where do you want to go? | expression |
 
 ## Pattern: [verb] + たい
 
@@ -117,19 +128,6 @@ To form the stem:
 - べんきょうしたくなかった です - I didn't want to study.
   - *benkyoushitakunakatta desu*
 
-## Vocabulary
-
-### Key Expressions
-
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| たい です | - | tai desu | want to | expression |
-| たくない です | - | takunai desu | don't want to | expression |
-| たかった です | - | takatta desu | wanted to | expression |
-| たくなかった です | - | takunakatta desu | didn't want to | expression |
-| なに が したい です か | 何 が したい です か | nani ga shitai desu ka | what do you want to do? | expression |
-| どこ に いきたい です か | どこ に 行きたい です か | doko ni ikitai desu ka | where do you want to go? | expression |
-
 ## Summary
 
 **Present:** [stem] + たい です → たべたい です (I want to eat)  
@@ -174,4 +172,3 @@ To form the stem:
   - *amari tabetakunai desu*
 - とても みたかった です - I really wanted to see (it)
   - *totemo mitakatta desu*
-

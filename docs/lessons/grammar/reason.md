@@ -1,13 +1,21 @@
 ---
 sidebar_position: 10
-title: Expressing Reason
+title: Expressing Reason - ので / から
 description: Learn how to express reasons and causes using ので and から
 tags: [grammar, reason, cause, ので, から]
 ---
 
-# Expressing Reason
+# Expressing Reason: ので / から
 
 Learn how to express reasons and causes using **ので** and **から**.
+
+## Key Expressions
+
+| Hiragana | Kanji | Romaji | English | Type |
+|----------|-------|--------|---------|------|
+| ので | - | node | because, so (formal) | conjunction |
+| から | - | kara | because, so (casual) | conjunction |
+| ん です | ん です | n desu | explanatory ending | expression |
 
 ## Formality: ので vs から
 
@@ -120,16 +128,6 @@ Do **not** use な with:
 - あめ が ふった から、いかない - Because it rained, I'm not going.
   - *ame ga futta kara, ikanai*
 
-## Vocabulary
-
-### Key Expressions
-
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| ので | - | node | because, so (formal) | conjunction |
-| から | - | kara | because, so (casual) | conjunction |
-| ん です | ん です | n desu | explanatory ending | expression |
-
 ## Summary Table
 
 | Type | ので Pattern | から Pattern |
@@ -146,4 +144,3 @@ Do **not** use な with:
 3. Don't forget **な** with **ので** for nouns and な-adjectives
 4. **から** often pairs with **ん です** at the end
 5. The reason clause comes **before** the consequence
-

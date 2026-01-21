@@ -9,6 +9,15 @@ tags: [grammar, adjectives, verbs, すぎる, excess]
 
 Learn how to express that something is **too much** or **excessive** using **すぎる**.
 
+## Key Expressions
+
+| Hiragana | Kanji | Romaji | English | Type |
+|----------|-------|--------|---------|------|
+| すぎる | 過ぎる | sugiru | too much, excessive | expression |
+
+**Other forms:**
+- **すぎます** (過ぎます, sugimasu) - too much, excessive (polite)
+
 ## Pattern: [verb/adjective] + すぎる
 
 The **すぎる** pattern expresses excess - something is "too much" or "overdone."
@@ -81,17 +90,6 @@ Simply add **すぎる** directly to the adjective stem (without な).
 - この へや は きれいすぎます - This room is too clean
   - *kono heya wa kireisugimasu*
 
-## Vocabulary
-
-### Key Expressions
-
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| すぎる | 過ぎる | sugiru | too much, excessive | expression |
-
-**Other forms:**
-- **すぎます** (過ぎます, sugimasu) - too much, excessive (polite)
-
 ## Summary
 
 **Verb:** [stem] + すぎる → たべすぎる (eat too much)  
@@ -103,4 +101,3 @@ Simply add **すぎる** directly to the adjective stem (without な).
 - **すぎる** conjugates like a る-verb (すぎます, すぎた, etc.)
 - Can be used in past tense: すぎました (was too much)
 - Common in everyday conversation
-
