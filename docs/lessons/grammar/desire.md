@@ -11,14 +11,12 @@ Learn how to express what you want or don't want to do using **たい**.
 
 ## Key Expressions
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| たい です | - | tai desu | want to | expression |
-| たくない です | - | takunai desu | don't want to | expression |
-| たかった です | - | takatta desu | wanted to | expression |
-| たくなかった です | - | takunakatta desu | didn't want to | expression |
-| なに が したい です か | 何 が したい です か | nani ga shitai desu ka | what do you want to do? | expression |
-| どこ に いきたい です か | どこ に 行きたい です か | doko ni ikitai desu ka | where do you want to go? | expression |
+| Hiragana | Romaji | English | Type |
+|----------|--------|---------|------|
+| [verb stem] + たい です | tai desu | want to | expression |
+| [verb stem] + たくない です | takunai desu | don't want to | expression |
+| [verb stem] + たかった です | takatta desu | wanted to | expression |
+| [verb stem] + たくなかった です | takunakatta desu | didn't want to | expression |
 
 ## Pattern: [verb] + たい
 

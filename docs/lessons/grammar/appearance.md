@@ -11,10 +11,11 @@ Learn how to describe how things look or seem.
 
 ## Key Expressions
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| そう | - | sou | looks like, seems | expression |
-| みたい です | - | mitai desu | it looks like, it seems like | expression |
+| Hiragana | Romaji | English | Type |
+|----------|--------|---------|------|
+| [い-adj without い] + そう | sou | looks [adj] | expression |
+| [な-adj] + そう | sou | looks [adj] | expression |
+| [noun/sentence] + みたい です | mitai desu | it looks like, seems like | expression |
 
 ## そう - Looking...
 

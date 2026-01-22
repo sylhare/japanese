@@ -11,11 +11,11 @@ Learn how to express reasons and causes using **ので** and **から**.
 
 ## Key Expressions
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| ので | - | node | because, so (formal) | conjunction |
-| から | - | kara | because, so (casual) | conjunction |
-| ん です | ん です | n desu | explanatory ending | expression |
+| Hiragana | Romaji | English | Type |
+|----------|--------|---------|------|
+| [reason] + ので | node | because (formal) | conjunction |
+| [reason] + から | kara | because (casual) | conjunction |
+| [sentence] + ん です | n desu | explanatory ending | expression |
 
 ## Formality: ので vs から
 
