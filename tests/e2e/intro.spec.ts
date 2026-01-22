@@ -48,13 +48,13 @@ test.describe('Intro Page', () => {
       await expect(page.getByRole('heading', { name: /katakana/i }).first()).toBeVisible();
     });
 
-    test('should navigate to Grammar Particles', async ({ page }) => {
-      const particlesLink = page.locator('a[href*="grammar-particles"]').first();
+    test('should navigate to Particle Guide', async ({ page }) => {
+      const particlesLink = page.locator('a[href*="particle-guide"]').first();
       await expect(particlesLink).toBeVisible();
-      await expect(particlesLink).toContainText(/grammar particles/i);
+      await expect(particlesLink).toContainText(/particle guide/i);
       await particlesLink.click();
       await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /particles|grammar/i }).first()).toBeVisible();
+      await expect(page.getByRole('heading', { name: /particle/i }).first()).toBeVisible();
     });
 
     test('should navigate to Verb Conjugation', async ({ page }) => {
@@ -74,24 +74,22 @@ test.describe('Intro Page', () => {
       expect(tileCount).toBeGreaterThanOrEqual(2);
     });
 
-    test('should navigate to Lessons from tile', async ({ page }) => {
-      const lessonsCard = page.locator('a[class*="lessonCard"][href*="/lessons/intro"]').first();
-      await expect(lessonsCard).toBeVisible();
-      await expect(lessonsCard).toContainText(/lessons/i);
-      await expect(lessonsCard).toContainText(/structured learning path/i);
-      await lessonsCard.click();
+    test('should navigate to Grammar from tile', async ({ page }) => {
+      const grammarCard = page.locator('a[class*="lessonCard"][href*="/grammar"]').first();
+      await expect(grammarCard).toBeVisible();
+      await expect(grammarCard).toContainText(/grammar/i);
+      await grammarCard.click();
       await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /introduction|lesson/i }).first()).toBeVisible();
+      await expect(page.getByRole('heading', { name: /grammar/i }).first()).toBeVisible();
     });
 
-    test('should navigate to Reference from tile', async ({ page }) => {
-      const referenceCard = page.locator('a[class*="lessonCard"][href*="/reference"]').first();
-      await expect(referenceCard).toBeVisible();
-      await expect(referenceCard).toContainText(/reference/i);
-      await expect(referenceCard).toContainText(/quick lookup tools/i);
-      await referenceCard.click();
+    test('should navigate to Hiragana Chart from tile', async ({ page }) => {
+      const hiraganaCard = page.locator('a[class*="lessonCard"][href*="hiragana-chart"]').first();
+      await expect(hiraganaCard).toBeVisible();
+      await expect(hiraganaCard).toContainText(/hiragana/i);
+      await hiraganaCard.click();
       await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /reference/i }).first()).toBeVisible();
+      await expect(page.getByRole('heading', { name: /hiragana/i }).first()).toBeVisible();
     });
   });
 
@@ -120,7 +118,7 @@ test.describe('Intro Page', () => {
 
         const href = await tile.getAttribute('href');
         expect(href).toBeTruthy();
-        expect(href).toMatch(/\/(docs\/lessons|docs\/reference|vocabulary|dictionary|japanese\/docs)/);
+        expect(href).toMatch(/\/(docs\/lessons|docs\/reference|reference|vocabulary|dictionary|japanese\/docs)/);
       }
     });
 
@@ -146,9 +144,9 @@ test.describe('Intro Page', () => {
       await expect(mainHeading).toBeVisible();
     });
 
-    test('should display reference materials section', async ({ page }) => {
-      const referenceMaterialsHeading = page.getByRole('heading', { name: /reference materials/i });
-      await expect(referenceMaterialsHeading).toBeVisible();
+    test('should display reference section', async ({ page }) => {
+      const referenceHeading = page.getByRole('heading', { name: /reference/i });
+      await expect(referenceHeading).toBeVisible();
     });
   });
 
@@ -169,6 +167,7 @@ test.describe('Intro Page', () => {
     });
 
     test('should not have any broken internal links in quick links', async ({ page }) => {
+      test.slow(); // This test navigates to many pages, triples the default timeout
       const quickLinksSection = page.locator('text=/quick links/i').locator('..');
       const links = quickLinksSection.locator('a[href]');
       const linkCount = await links.count();

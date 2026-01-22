@@ -118,7 +118,7 @@ test.describe('Dictionary', () => {
     });
   });
 
-  test.describe('Tag Navigation', () => {
+  test.describe('Tag Navigation - Vocabulary', () => {
     test('should navigate to Colors from tag', async ({ page }) => {
       await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
 
@@ -172,6 +172,161 @@ test.describe('Dictionary', () => {
       await page.waitForLoadState('networkidle');
       
       await verifyPageIsFound(page);
+    });
+  });
+
+  test.describe('Tag Navigation - Grammar', () => {
+    test('should navigate to Experience grammar lesson from tag', async ({ page }) => {
+      await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
+
+      const experienceTag = page.locator('a[class*="tag"][href$="/grammar/experience"]').first();
+      await expect(experienceTag).toBeVisible({ timeout: 10000 });
+      await experienceTag.click();
+      await verifyPageIsFound(page);
+      await expect(page.getByRole('heading', { name: /experience/i }).first()).toBeVisible();
+    });
+
+    test('should navigate to Advice grammar lesson from tag', async ({ page }) => {
+      await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
+
+      const adviceTag = page.locator('a[class*="tag"][href$="/grammar/advice"]').first();
+      await expect(adviceTag).toBeVisible({ timeout: 10000 });
+      await adviceTag.click();
+      await verifyPageIsFound(page);
+      await expect(page.getByRole('heading', { name: /advice/i }).first()).toBeVisible();
+    });
+
+    test('should navigate to Comparison grammar lesson from tag', async ({ page }) => {
+      await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
+
+      const comparisonTag = page.locator('a[class*="tag"][href$="/grammar/comparison"]').first();
+      await expect(comparisonTag).toBeVisible({ timeout: 10000 });
+      await comparisonTag.click();
+      await verifyPageIsFound(page);
+      await expect(page.getByRole('heading', { name: /comparison/i }).first()).toBeVisible();
+    });
+
+    test('should navigate to Desire grammar lesson from tag', async ({ page }) => {
+      await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
+
+      const desireTag = page.locator('a[class*="tag"][href$="/grammar/desire"]').first();
+      await expect(desireTag).toBeVisible({ timeout: 10000 });
+      await desireTag.click();
+      await verifyPageIsFound(page);
+      await expect(page.getByRole('heading', { name: /desire/i }).first()).toBeVisible();
+    });
+
+    test('should navigate to Excess grammar lesson from tag', async ({ page }) => {
+      await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
+
+      const excessTag = page.locator('a[class*="tag"][href$="/grammar/excess"]').first();
+      await expect(excessTag).toBeVisible({ timeout: 10000 });
+      await excessTag.click();
+      await verifyPageIsFound(page);
+      await expect(page.getByRole('heading', { name: /excess|too much/i }).first()).toBeVisible();
+    });
+
+    test('grammar tags should NOT link to vocabulary folder', async ({ page }) => {
+      await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
+
+      // Verify grammar tags have correct href (grammar/, not vocabulary/)
+      const grammarTags = ['experience', 'advice', 'comparison', 'desire', 'excess'];
+      
+      for (const tag of grammarTags) {
+        const tagElement = page.locator(`a[class*="tag"]`).filter({ hasText: new RegExp(`^${tag}$`, 'i') }).first();
+        if (await tagElement.isVisible()) {
+          const href = await tagElement.getAttribute('href');
+          expect(href).toContain('/grammar/');
+          expect(href).not.toContain('/vocabulary/');
+        }
+      }
+    });
+  });
+
+  test.describe('Merged Tags - Vocabulary in Multiple Lessons', () => {
+    test('tomorrow (ashita) should have tags from multiple lessons', async ({ page }) => {
+      const searchInput = page.getByPlaceholder('Search vocabulary...');
+
+      await searchInput.fill('ashita');
+      await searchInput.press('Enter');
+
+      await page.waitForTimeout(500);
+
+      // Find the vocabulary card for "tomorrow"
+      const vocabularyCard = page.locator('[class*="vocabularyCard"]').filter({ hasText: 'tomorrow' }).first();
+      await expect(vocabularyCard).toBeVisible();
+
+      // Verify it has multiple tags (should have days-and-weeks, future, and time)
+      const tags = vocabularyCard.locator('a[class*="tag"]');
+      const tagCount = await tags.count();
+      expect(tagCount).toBeGreaterThanOrEqual(2);
+
+      // Verify specific tags exist
+      await expect(vocabularyCard.locator('a[class*="tag"]').filter({ hasText: 'future' })).toBeVisible();
+      await expect(vocabularyCard.locator('a[class*="tag"]').filter({ hasText: /days-and-weeks|time/i })).toBeVisible();
+    });
+
+    test('next week (raishuu) should have tags from multiple lessons', async ({ page }) => {
+      const searchInput = page.getByPlaceholder('Search vocabulary...');
+
+      await searchInput.fill('raishuu');
+      await searchInput.press('Enter');
+
+      await page.waitForTimeout(500);
+
+      // Find the vocabulary card for "next week"
+      const vocabularyCard = page.locator('[class*="vocabularyCard"]').filter({ hasText: 'next week' }).first();
+      await expect(vocabularyCard).toBeVisible();
+
+      // Verify it has multiple tags
+      const tags = vocabularyCard.locator('a[class*="tag"]');
+      const tagCount = await tags.count();
+      expect(tagCount).toBeGreaterThanOrEqual(2);
+    });
+
+    test('merged tags should link to correct lessons', async ({ page }) => {
+      const searchInput = page.getByPlaceholder('Search vocabulary...');
+
+      await searchInput.fill('ashita');
+      await searchInput.press('Enter');
+
+      await page.waitForTimeout(500);
+
+      const vocabularyCard = page.locator('[class*="vocabularyCard"]').filter({ hasText: 'tomorrow' }).first();
+      await expect(vocabularyCard).toBeVisible();
+
+      // Verify future tag links to conjugation lesson
+      const futureTag = vocabularyCard.locator('a[class*="tag"]').filter({ hasText: 'future' });
+      await expect(futureTag).toBeVisible();
+      const futureHref = await futureTag.getAttribute('href');
+      expect(futureHref).toContain('/conjugation/future');
+
+      // Verify days-and-weeks tag links to vocabulary/time lesson
+      const daysTag = vocabularyCard.locator('a[class*="tag"]').filter({ hasText: 'days-and-weeks' });
+      if (await daysTag.isVisible()) {
+        const daysHref = await daysTag.getAttribute('href');
+        expect(daysHref).toContain('/vocabulary/time/days-and-weeks');
+      }
+    });
+
+    test('clicking merged tag navigates to correct lesson', async ({ page }) => {
+      const searchInput = page.getByPlaceholder('Search vocabulary...');
+
+      await searchInput.fill('ashita');
+      await searchInput.press('Enter');
+
+      await page.waitForTimeout(500);
+
+      const vocabularyCard = page.locator('[class*="vocabularyCard"]').filter({ hasText: 'tomorrow' }).first();
+      await expect(vocabularyCard).toBeVisible();
+
+      // Click on the future tag and verify navigation
+      const futureTag = vocabularyCard.locator('a[class*="tag"]').filter({ hasText: 'future' });
+      await expect(futureTag).toBeVisible();
+      await futureTag.click();
+
+      await verifyPageIsFound(page);
+      await expect(page.getByRole('heading', { name: /future/i }).first()).toBeVisible();
     });
   });
 });

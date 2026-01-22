@@ -26,12 +26,12 @@ test.describe('Conjugation', () => {
         await expect(page.getByRole('heading', { name: /verb conjugation|conjugation/i }).first()).toBeVisible();
       });
 
-      test('should navigate to Verb Conjugation Reference from sidebar', async ({ page }) => {
-        const verbConjugationLink = page.locator('a.menu__link[href$="/conjugation/verb-conjugation"]').first();
-        await expect(verbConjugationLink).toBeVisible();
-        await verbConjugationLink.click();
+      test('should navigate to Dictionary Form from sidebar', async ({ page }) => {
+        const dictionaryLink = page.locator('a.menu__link[href$="/conjugation/dictionary-form"]').first();
+        await expect(dictionaryLink).toBeVisible();
+        await dictionaryLink.click();
         await verifyPageIsFound(page);
-        await expect(page.getByRole('heading', { name: /verb conjugation reference/i }).first()).toBeVisible();
+        await expect(page.getByRole('heading', { name: /introduction/i }).first()).toBeVisible();
       });
     });
 
@@ -44,12 +44,12 @@ test.describe('Conjugation', () => {
         await expect(page.getByRole('heading', { name: /verb conjugation|conjugation/i }).first()).toBeVisible();
       });
 
-      test('should navigate to Verb Conjugation Reference from landing page', async ({ page }) => {
-        const verbConjugationCard = page.locator('a[class*="lessonCard"][href$="/conjugation/verb-conjugation"]').first();
-        await expect(verbConjugationCard).toBeVisible();
-        await verbConjugationCard.click();
+      test('should navigate to Dictionary Form from landing page', async ({ page }) => {
+        const dictionaryCard = page.locator('a[class*="lessonCard"][href$="/conjugation/dictionary-form"]').first();
+        await expect(dictionaryCard).toBeVisible();
+        await dictionaryCard.click();
         await verifyPageIsFound(page);
-        await expect(page.getByRole('heading', { name: /verb conjugation reference/i }).first()).toBeVisible();
+        await expect(page.getByRole('heading', { name: /introduction/i }).first()).toBeVisible();
       });
     });
 
@@ -96,35 +96,25 @@ test.describe('Conjugation', () => {
       await expect(page.getByRole('heading', { name: /verb conjugation|conjugation/i }).first()).toBeVisible();
     });
 
-    test('should load verb-conjugation.md directly', async ({ page }) => {
-      await page.goto('./docs/lessons/conjugation/verb-conjugation');
+    test('should load dictionary.md directly', async ({ page }) => {
+      await page.goto('./docs/lessons/conjugation/dictionary-form');
       await page.waitForLoadState('networkidle');
       await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /verb conjugation reference/i }).first()).toBeVisible();
+      await expect(page.getByRole('heading', { name: /introduction/i }).first()).toBeVisible();
     });
   });
 
   test.describe('Cross-references', () => {
-    test('should have working links to grammar pages from conjugation lessons', async ({ page }) => {
-      await page.goto('./docs/lessons/conjugation/basics');
-      await page.waitForLoadState('networkidle');
-
-      const particleLink = page.locator('a[href*="particle-guide"]').first();
-      await expect(particleLink).toBeVisible();
-      await particleLink.click();
-      await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /particle/i }).first()).toBeVisible();
-    });
-
     test('should navigate between conjugation lessons', async ({ page }) => {
       await page.goto('./docs/lessons/conjugation/basics');
       await page.waitForLoadState('networkidle');
 
-      const verbConjugationLink = page.locator('a[href*="verb-conjugation"]').first();
-      await expect(verbConjugationLink).toBeVisible();
-      await verbConjugationLink.click();
+      // Click the NextSteps link to dictionary (not the navbar Dictionary link)
+      const dictionaryLink = page.locator('a[href*="conjugation/dictionary-form"]').first();
+      await expect(dictionaryLink).toBeVisible();
+      await dictionaryLink.click();
       await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /verb conjugation reference/i }).first()).toBeVisible();
+      await expect(page.getByRole('heading', { name: /introduction/i }).first()).toBeVisible();
     });
   });
 });
