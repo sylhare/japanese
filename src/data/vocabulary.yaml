@@ -1,16 +1,14 @@
 vocabulary:
   - id: actionsandthinking_0
-    hiragana: て いる
-    kanji: て いる
+    hiragana: '[verb て] + いる'
     romaji: te iru
-    meaning: currently doing, in the state of
+    meaning: currently doing
     category: grammar
     tags:
       - actions-and-thinking
     type: expression
   - id: actionsandthinking_1
-    hiragana: を かんがえる
-    kanji: を 考える
+    hiragana: '[noun] + を かんがえる'
     romaji: wo kangaeru
     meaning: think about (something)
     category: grammar
@@ -18,8 +16,7 @@ vocabulary:
       - actions-and-thinking
     type: expression
   - id: actionsandthinking_2
-    hiragana: と おもう
-    kanji: と 思う
+    hiragana: '[sentence] + と おもう'
     romaji: to omou
     meaning: think that
     category: grammar
@@ -27,8 +24,7 @@ vocabulary:
       - actions-and-thinking
     type: expression
   - id: actionsandthinking_3
-    hiragana: て みる
-    kanji: て 見る
+    hiragana: '[verb て] + みる'
     romaji: te miru
     meaning: try doing
     category: grammar
@@ -36,8 +32,7 @@ vocabulary:
       - actions-and-thinking
     type: expression
   - id: actionsandthinking_4
-    hiragana: て みよう
-    kanji: て 見よう
+    hiragana: '[verb て] + みよう'
     romaji: te miyou
     meaning: let's try doing
     category: grammar
@@ -45,26 +40,57 @@ vocabulary:
       - actions-and-thinking
     type: expression
   - id: advice_0
-    hiragana: ほう が いい です
-    kanji: 方 が いい です
+    hiragana: '[verb た] + ほう が いい です'
     romaji: hou ga ii desu
-    meaning: it would be better to, should
+    meaning: you should (do)
+    category: grammar
+    tags:
+      - advice
+    type: expression
+  - id: advice_1
+    hiragana: '[verb ない] + ほう が いい です'
+    romaji: hou ga ii desu
+    meaning: you shouldn't (do)
+    category: grammar
+    tags:
+      - advice
+    type: expression
+  - id: advice_2
+    hiragana: '[verb た] + ほう が いい です よ'
+    romaji: hou ga ii desu yo
+    meaning: you should (friendly)
+    category: grammar
+    tags:
+      - advice
+    type: expression
+  - id: advice_3
+    hiragana: '[verb た] + ほう が よろしい です'
+    romaji: hou ga yoroshii desu
+    meaning: you should (very polite)
     category: grammar
     tags:
       - advice
     type: expression
   - id: appearance_0
-    hiragana: そう
+    hiragana: '[い-adj without い] + そう'
     romaji: sou
-    meaning: looks like, seems
+    meaning: looks adj
     category: grammar
     tags:
       - appearance
     type: expression
   - id: appearance_1
-    hiragana: みたい です
+    hiragana: '[な-adj] + そう'
+    romaji: sou
+    meaning: looks adj
+    category: grammar
+    tags:
+      - appearance
+    type: expression
+  - id: appearance_2
+    hiragana: '[noun/sentence] + みたい です'
     romaji: mitai desu
-    meaning: it looks like, it seems like
+    meaning: it looks like, seems like
     category: grammar
     tags:
       - appearance
@@ -197,32 +223,29 @@ vocabulary:
       - colors
     type: unknown
   - id: comparison_0
-    hiragana: どちら の ほう
-    kanji: どちら の 方
+    hiragana: A と B と どちら の ほう
     romaji: dochira no hou
-    meaning: which one
+    meaning: which one (of A and B)
     category: grammar
     tags:
       - comparison
     type: expression
   - id: comparison_1
-    hiragana: の ほう が
-    kanji: の 方 が
-    romaji: no hou ga
-    meaning: (the one) more
+    hiragana: A の ほう が B より [adj]
+    romaji: no hou ga ... yori
+    meaning: A is more adj than B
     category: grammar
     tags:
       - comparison
     type: expression
   - id: comparison_2
     hiragana: はな より だんご
-    kanji: 花 より 団子
     romaji: hana yori dango
-    meaning: practicality over beauty (proverb)
+    meaning: practicality over beauty
     category: grammar
     tags:
       - comparison
-    type: expression
+    type: proverb
   - id: confusingkanji_0
     hiragana: つち
     kanji: 土
@@ -564,8 +587,7 @@ vocabulary:
     category: vocabulary
     tags:
       - confusing-kanji
-      - dictionary
-      - verb-groups
+      - dictionary-form
     type: verb
   - id: confusingkanji_38
     hiragana: め
@@ -876,7 +898,6 @@ vocabulary:
     category: time
     tags:
       - days-and-weeks
-      - future
     type: noun
   - id: daysandweeks_10
     hiragana: あさって
@@ -886,7 +907,6 @@ vocabulary:
     category: time
     tags:
       - days-and-weeks
-      - future
     type: noun
   - id: daysandweeks_11
     hiragana: おととい
@@ -923,7 +943,6 @@ vocabulary:
     category: time
     tags:
       - days-and-weeks
-      - future
     type: noun
   - id: daysandweeks_15
     hiragana: まいしゅう
@@ -989,7 +1008,7 @@ vocabulary:
       - days-and-weeks
     type: noun
   - id: desire_0
-    hiragana: たい です
+    hiragana: '[verb stem] + たい です'
     romaji: tai desu
     meaning: want to
     category: grammar
@@ -997,7 +1016,7 @@ vocabulary:
       - desire
     type: expression
   - id: desire_1
-    hiragana: たくない です
+    hiragana: '[verb stem] + たくない です'
     romaji: takunai desu
     meaning: don't want to
     category: grammar
@@ -1005,7 +1024,7 @@ vocabulary:
       - desire
     type: expression
   - id: desire_2
-    hiragana: たかった です
+    hiragana: '[verb stem] + たかった です'
     romaji: takatta desu
     meaning: wanted to
     category: grammar
@@ -1013,45 +1032,201 @@ vocabulary:
       - desire
     type: expression
   - id: desire_3
-    hiragana: たくなかった です
+    hiragana: '[verb stem] + たくなかった です'
     romaji: takunakatta desu
     meaning: didn't want to
     category: grammar
     tags:
       - desire
     type: expression
-  - id: desire_4
-    hiragana: なに が したい です か
-    kanji: 何 が したい です か
-    romaji: nani ga shitai desu ka
-    meaning: what do you want to do
-    category: grammar
+  - id: dictionaryform_0
+    hiragana: かく
+    kanji: 書く
+    romaji: kaku
+    meaning: to write
+    category: lessons
     tags:
-      - desire
-    type: expression
-  - id: desire_5
-    hiragana: どこ に いきたい です か
-    kanji: どこ に 行きたい です か
-    romaji: doko ni ikitai desu ka
-    meaning: where do you want to go
-    category: grammar
+      - dictionary-form
+    type: verb
+  - id: dictionaryform_1
+    hiragana: はなす
+    kanji: 話す
+    romaji: hanasu
+    meaning: to speak
+    category: lessons
     tags:
-      - desire
-    type: expression
+      - dictionary-form
+    type: verb
+  - id: dictionaryform_2
+    hiragana: よむ
+    kanji: 読む
+    romaji: yomu
+    meaning: to read
+    category: lessons
+    tags:
+      - dictionary-form
+    type: verb
+  - id: dictionaryform_3
+    hiragana: かう
+    kanji: 買う
+    romaji: kau
+    meaning: to buy
+    category: lessons
+    tags:
+      - dictionary-form
+    type: verb
+  - id: dictionaryform_4
+    hiragana: つくる
+    kanji: 作る
+    romaji: tsukuru
+    meaning: to make
+    category: lessons
+    tags:
+      - dictionary-form
+    type: verb
+  - id: dictionaryform_5
+    hiragana: まつ
+    kanji: 待つ
+    romaji: matsu
+    meaning: to wait
+    category: lessons
+    tags:
+      - dictionary-form
+    type: verb
+  - id: dictionaryform_6
+    hiragana: たべる
+    kanji: 食べる
+    romaji: taberu
+    meaning: to eat
+    category: lessons
+    tags:
+      - dictionary-form
+    type: verb
+  - id: dictionaryform_7
+    hiragana: おきる
+    kanji: 起きる
+    romaji: okiru
+    meaning: to wake up
+    category: lessons
+    tags:
+      - dictionary-form
+    type: verb
+  - id: dictionaryform_8
+    hiragana: ねる
+    kanji: 寝る
+    romaji: neru
+    meaning: to sleep
+    category: lessons
+    tags:
+      - dictionary-form
+    type: verb
+  - id: dictionaryform_9
+    hiragana: あける
+    kanji: 開ける
+    romaji: akeru
+    meaning: to open
+    category: lessons
+    tags:
+      - dictionary-form
+    type: verb
+  - id: dictionaryform_10
+    hiragana: でる
+    kanji: 出る
+    romaji: deru
+    meaning: to exit
+    category: lessons
+    tags:
+      - dictionary-form
+    type: verb
+  - id: dictionaryform_11
+    hiragana: かえる
+    kanji: 帰る
+    romaji: kaeru
+    meaning: to return
+    category: lessons
+    tags:
+      - dictionary-form
+    type: verb
+  - id: dictionaryform_12
+    hiragana: はいる
+    kanji: 入る
+    romaji: hairu
+    meaning: to enter
+    category: lessons
+    tags:
+      - dictionary-form
+    type: verb
+  - id: dictionaryform_13
+    hiragana: はしる
+    kanji: 走る
+    romaji: hashiru
+    meaning: to run
+    category: lessons
+    tags:
+      - dictionary-form
+    type: verb
+  - id: dictionaryform_14
+    hiragana: しる
+    kanji: 知る
+    romaji: shiru
+    meaning: to know
+    category: lessons
+    tags:
+      - dictionary-form
+    type: verb
+  - id: dictionaryform_15
+    hiragana: きる
+    kanji: 切る
+    romaji: kiru
+    meaning: to cut
+    category: lessons
+    tags:
+      - dictionary-form
+    type: verb
   - id: excess_0
-    hiragana: すぎる
-    kanji: 過ぎる
+    hiragana: '[verb stem] + すぎる'
     romaji: sugiru
-    meaning: too much, excessive
+    meaning: did too much
+    category: grammar
+    tags:
+      - excess
+    type: expression
+  - id: excess_1
+    hiragana: '[い-adj without い] + すぎる'
+    romaji: sugiru
+    meaning: too adj
+    category: grammar
+    tags:
+      - excess
+    type: expression
+  - id: excess_2
+    hiragana: '[な-adj] + すぎる'
+    romaji: sugiru
+    meaning: too adj
     category: grammar
     tags:
       - excess
     type: expression
   - id: experience_0
-    hiragana: こと が ある
-    kanji: 事 が ある
+    hiragana: '[verb た] + こと が ある'
     romaji: koto ga aru
-    meaning: have experienced, have done before
+    meaning: have experienced
+    category: grammar
+    tags:
+      - experience
+    type: expression
+  - id: experience_1
+    hiragana: '[verb た] + こと が あります'
+    romaji: koto ga arimasu
+    meaning: have experienced (polite)
+    category: grammar
+    tags:
+      - experience
+    type: expression
+  - id: experience_2
+    hiragana: '[verb た] + こと が ありません'
+    romaji: koto ga arimasen
+    meaning: have never experienced (polite)
     category: grammar
     tags:
       - experience
@@ -1470,163 +1645,32 @@ vocabulary:
     tags:
       - family
     type: noun
-  - id: future_0
-    hiragana: よう / おう
-    romaji: you / ou
-    meaning: let's, I think I will (volitional)
-    category: lessons
-    tags:
-      - future
-    type: expression
-  - id: future_1
-    hiragana: つもり です
-    kanji: 積もり です
+  - id: intendto_0
+    hiragana: '[verb dictionary] + つもり です'
     romaji: tsumori desu
     meaning: intend to, plan to
-    category: lessons
+    category: grammar
     tags:
-      - future
       - intend_to
     type: expression
-  - id: future_2
-    hiragana: よう と おもう
-    kanji: よう と 思う
-    romaji: you to omou
-    meaning: I think I will (clear personal decision)
-    category: lessons
+  - id: intendto_1
+    hiragana: '[verb ない] + つもり です'
+    romaji: tsumori desu
+    meaning: intend not to
+    category: grammar
     tags:
-      - future
+      - intend_to
     type: expression
-  - id: future_3
-    hiragana: よてい です
-    kanji: 予定 です
-    romaji: yotei desu
-    meaning: scheduled to, planning to
-    category: lessons
-    tags:
-      - future
-    type: expression
-  - id: future_4
-    hiragana: らいげつ
-    kanji: 来月
-    romaji: raigetsu
-    meaning: next month
-    category: lessons
-    tags:
-      - future
-    type: noun
-  - id: future_5
-    hiragana: らいねん
-    kanji: 来年
-    romaji: rainen
-    meaning: next year
-    category: lessons
-    tags:
-      - future
-    type: noun
-  - id: future_6
-    hiragana: こんど
-    kanji: 今度
-    romaji: kondo
-    meaning: next time
-    category: lessons
-    tags:
-      - future
-    type: noun
-  - id: future_7
-    hiragana: あとで
-    kanji: 後で
-    romaji: ato de
-    meaning: later
-    category: lessons
-    tags:
-      - future
-    type: adverb
-  - id: grammarparticles_0
-    hiragana: そして
-    romaji: soshite
-    meaning: and then
-    category: grammar
-    tags:
-      - grammar-particles
-    type: conjunction
-  - id: grammarparticles_1
-    hiragana: でも
-    romaji: demo
-    meaning: but, however
-    category: grammar
-    tags:
-      - grammar-particles
-    type: conjunction
-  - id: grammarparticles_2
-    hiragana: だから
-    romaji: dakara
-    meaning: so, therefore
-    category: grammar
-    tags:
-      - grammar-particles
-    type: conjunction
-  - id: grammarparticles_3
-    hiragana: または
-    romaji: matawa
-    meaning: or
-    category: grammar
-    tags:
-      - grammar-particles
-    type: conjunction
-  - id: grammarparticles_4
-    hiragana: これ
-    romaji: kore
-    meaning: this (near speaker)
-    category: grammar
-    tags:
-      - grammar-particles
-    type: pronoun
-  - id: grammarparticles_5
-    hiragana: それ
-    romaji: sore
-    meaning: that (near listener)
-    category: grammar
-    tags:
-      - grammar-particles
-    type: pronoun
-  - id: grammarparticles_6
-    hiragana: あれ
-    romaji: are
-    meaning: that (far from both)
-    category: grammar
-    tags:
-      - grammar-particles
-    type: pronoun
-  - id: grammarparticles_7
-    hiragana: わたし
-    kanji: 私
-    romaji: watashi
-    meaning: I, me
-    category: grammar
-    tags:
-      - grammar-particles
-    type: pronoun
-  - id: grammarparticles_8
-    hiragana: あなた
-    romaji: anata
-    meaning: you
-    category: grammar
-    tags:
-      - grammar-particles
-    type: pronoun
-  - id: intendto_0
-    hiragana: つもり は ない
-    kanji: 積もり は ない
+  - id: intendto_2
+    hiragana: '[verb dictionary] + つもり は ない'
     romaji: tsumori wa nai
     meaning: have no intention of
     category: grammar
     tags:
       - intend_to
     type: expression
-  - id: intendto_1
-    hiragana: つもり だった
-    kanji: 積もり だった
+  - id: intendto_3
+    hiragana: '[verb dictionary] + つもり だった'
     romaji: tsumori datta
     meaning: intended to (but didn't)
     category: grammar
@@ -1634,8 +1678,7 @@ vocabulary:
       - intend_to
     type: expression
   - id: obligation_0
-    hiragana: なければ いけない
-    kanji: なければ 行けない
+    hiragana: '[verb ない without い] + なければ いけない'
     romaji: nakereba ikenai
     meaning: must, have to
     category: grammar
@@ -1643,8 +1686,7 @@ vocabulary:
       - obligation
     type: expression
   - id: obligation_1
-    hiragana: なければ ならない
-    kanji: なければ ならない
+    hiragana: '[verb ない without い] + なければ ならない'
     romaji: nakereba naranai
     meaning: must, have to
     category: grammar
@@ -1652,33 +1694,112 @@ vocabulary:
       - obligation
     type: expression
   - id: obligation_2
-    hiragana: ては いけません
-    kanji: ては 行けません
+    hiragana: '[verb ない without い] + なきゃ'
+    romaji: nakya
+    meaning: gotta (casual)
+    category: grammar
+    tags:
+      - obligation
+    type: expression
+  - id: obligation_3
+    hiragana: '[verb て] + は いけません'
     romaji: te wa ikemasen
     meaning: must not
     category: grammar
     tags:
       - obligation
     type: expression
+  - id: particleguide_0
+    hiragana: そして
+    romaji: soshite
+    meaning: and then
+    category: grammar
+    tags:
+      - particle-guide
+    type: conjunction
+  - id: particleguide_1
+    hiragana: でも
+    romaji: demo
+    meaning: but, however
+    category: grammar
+    tags:
+      - particle-guide
+    type: conjunction
+  - id: particleguide_2
+    hiragana: だから
+    romaji: dakara
+    meaning: so, therefore
+    category: grammar
+    tags:
+      - particle-guide
+    type: conjunction
+  - id: particleguide_3
+    hiragana: または
+    romaji: matawa
+    meaning: or
+    category: grammar
+    tags:
+      - particle-guide
+    type: conjunction
+  - id: particleguide_4
+    hiragana: これ
+    romaji: kore
+    meaning: this (near speaker)
+    category: grammar
+    tags:
+      - particle-guide
+    type: pronoun
+  - id: particleguide_5
+    hiragana: それ
+    romaji: sore
+    meaning: that (near listener)
+    category: grammar
+    tags:
+      - particle-guide
+    type: pronoun
+  - id: particleguide_6
+    hiragana: あれ
+    romaji: are
+    meaning: that (far from both)
+    category: grammar
+    tags:
+      - particle-guide
+    type: pronoun
+  - id: particleguide_7
+    hiragana: わたし
+    kanji: 私
+    romaji: watashi
+    meaning: I, me
+    category: grammar
+    tags:
+      - particle-guide
+    type: pronoun
+  - id: particleguide_8
+    hiragana: あなた
+    romaji: anata
+    meaning: you
+    category: grammar
+    tags:
+      - particle-guide
+    type: pronoun
   - id: reason_0
-    hiragana: ので
+    hiragana: '[reason] + ので'
     romaji: node
-    meaning: because, so (formal)
+    meaning: because (formal)
     category: grammar
     tags:
       - reason
     type: conjunction
   - id: reason_1
-    hiragana: から
+    hiragana: '[reason] + から'
     romaji: kara
-    meaning: because, so (casual)
+    meaning: because (casual)
     category: grammar
     tags:
       - reason
     type: conjunction
   - id: reason_2
-    hiragana: ん です
-    kanji: ん です
+    hiragana: '[sentence] + ん です'
     romaji: n desu
     meaning: explanatory ending
     category: grammar
@@ -1686,213 +1807,6 @@ vocabulary:
       - reason
     type: expression
   - id: tastes_0
-    hiragana: あまい
-    kanji: 甘い
-    romaji: amai
-    meaning: sweet
-    category: vocabulary
-    tags:
-      - tastes
-    type: い-adjective
-  - id: tastes_1
-    hiragana: からい
-    kanji: 辛い
-    romaji: karai
-    meaning: spicy, hot
-    category: vocabulary
-    tags:
-      - tastes
-    type: い-adjective
-  - id: tastes_2
-    hiragana: にがい
-    kanji: 苦い
-    romaji: nigai
-    meaning: bitter
-    category: vocabulary
-    tags:
-      - tastes
-    type: い-adjective
-  - id: tastes_3
-    hiragana: すっぱい
-    kanji: 酸っぱい
-    romaji: suppai
-    meaning: sour
-    category: vocabulary
-    tags:
-      - tastes
-    type: い-adjective
-  - id: tastes_4
-    hiragana: ちょっぱい
-    kanji: 塩っぱい
-    romaji: choppai
-    meaning: salty
-    category: vocabulary
-    tags:
-      - tastes
-    type: い-adjective
-  - id: tastes_5
-    hiragana: おいしい
-    kanji: 美味しい
-    romaji: oishii
-    meaning: delicious, tasty
-    category: vocabulary
-    tags:
-      - tastes
-    type: い-adjective
-  - id: tastes_6
-    hiragana: うまい
-    kanji: 旨い
-    romaji: umai
-    meaning: delicious (casual)
-    category: vocabulary
-    tags:
-      - tastes
-    type: い-adjective
-  - id: tastes_7
-    hiragana: まずい
-    kanji: 不味い
-    romaji: mazui
-    meaning: bad-tasting, awful
-    category: vocabulary
-    tags:
-      - tastes
-    type: い-adjective
-  - id: tastes_8
-    hiragana: やわらかい
-    kanji: 柔らかい
-    romaji: yawarakai
-    meaning: soft, tender
-    category: vocabulary
-    tags:
-      - tastes
-    type: い-adjective
-  - id: tastes_9
-    hiragana: かたい
-    kanji: 硬い
-    romaji: katai
-    meaning: hard, firm
-    category: vocabulary
-    tags:
-      - tastes
-    type: い-adjective
-  - id: tastes_10
-    hiragana: さくさく
-    romaji: sakusaku
-    meaning: crispy, crunchy
-    category: vocabulary
-    tags:
-      - tastes
-    type: adverb
-  - id: tastes_11
-    hiragana: ねばねば
-    romaji: nebaneba
-    meaning: sticky, gooey
-    category: vocabulary
-    tags:
-      - tastes
-    type: adverb
-  - id: tastes_12
-    hiragana: ケーキ
-    romaji: keeki
-    meaning: cake
-    category: vocabulary
-    tags:
-      - tastes
-    type: noun
-  - id: tastes_13
-    hiragana: カレー
-    romaji: karee
-    meaning: curry
-    category: vocabulary
-    tags:
-      - tastes
-    type: noun
-  - id: tastes_14
-    hiragana: コーヒー
-    romaji: koohii
-    meaning: coffee
-    category: vocabulary
-    tags:
-      - tastes
-    type: noun
-  - id: tastes_15
-    hiragana: レモン
-    romaji: remon
-    meaning: lemon
-    category: vocabulary
-    tags:
-      - tastes
-    type: noun
-  - id: tastes_16
-    hiragana: スープ
-    romaji: suupu
-    meaning: soup
-    category: vocabulary
-    tags:
-      - tastes
-    type: noun
-  - id: tastes_17
-    hiragana: りんご
-    kanji: 林檎
-    romaji: ringo
-    meaning: apple
-    category: vocabulary
-    tags:
-      - tastes
-    type: noun
-  - id: tastes_18
-    hiragana: ピザ
-    romaji: piza
-    meaning: pizza
-    category: vocabulary
-    tags:
-      - tastes
-    type: noun
-  - id: tastes_19
-    hiragana: チョコレート
-    romaji: chokoreeto
-    meaning: chocolate
-    category: vocabulary
-    tags:
-      - tastes
-    type: noun
-  - id: tastes_20
-    hiragana: くだもの
-    kanji: 果物
-    romaji: kudamono
-    meaning: fruit
-    category: vocabulary
-    tags:
-      - tastes
-    type: noun
-  - id: tastes_21
-    hiragana: りょうり
-    kanji: 料理
-    romaji: ryouri
-    meaning: dish, cooking
-    category: vocabulary
-    tags:
-      - tastes
-    type: noun
-  - id: tastes_22
-    hiragana: たべもの
-    kanji: 食べ物
-    romaji: tabemono
-    meaning: food
-    category: vocabulary
-    tags:
-      - tastes
-    type: noun
-  - id: tastes_23
-    hiragana: くすり
-    kanji: 薬
-    romaji: kusuri
-    meaning: medicine
-    category: vocabulary
-    tags:
-      - tastes
-    type: noun
-  - id: tastes_24
     hiragana: あじ
     kanji: 味
     romaji: aji
@@ -1901,7 +1815,310 @@ vocabulary:
     tags:
       - tastes
     type: noun
+  - id: tastes_1
+    hiragana: あまい
+    kanji: 甘い
+    romaji: amai
+    meaning: sweet
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_2
+    hiragana: からい
+    kanji: 辛い
+    romaji: karai
+    meaning: spicy, hot
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_3
+    hiragana: にがい
+    kanji: 苦い
+    romaji: nigai
+    meaning: bitter
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_4
+    hiragana: すっぱい
+    kanji: 酸っぱい
+    romaji: suppai
+    meaning: sour
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_5
+    hiragana: ちょっぱい
+    kanji: 塩っぱい
+    romaji: choppai
+    meaning: salty
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_6
+    hiragana: おいしい
+    kanji: 美味しい
+    romaji: oishii
+    meaning: delicious, tasty
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_7
+    hiragana: うまい
+    kanji: 旨い
+    romaji: umai
+    meaning: delicious (casual)
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_8
+    hiragana: まずい
+    kanji: 不味い
+    romaji: mazui
+    meaning: bad-tasting, awful
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_9
+    hiragana: やわらかい
+    kanji: 柔らかい
+    romaji: yawarakai
+    meaning: soft, tender
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_10
+    hiragana: かたい
+    kanji: 硬い
+    romaji: katai
+    meaning: hard, firm
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_11
+    hiragana: さくさく
+    romaji: sakusaku
+    meaning: crispy, crunchy
+    category: vocabulary
+    tags:
+      - tastes
+    type: adverb
+  - id: tastes_12
+    hiragana: ねばねば
+    romaji: nebaneba
+    meaning: sticky, gooey
+    category: vocabulary
+    tags:
+      - tastes
+    type: adverb
+  - id: tastes_13
+    hiragana: こい
+    kanji: 濃い
+    romaji: koi
+    meaning: strong, rich
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_14
+    hiragana: うすい
+    kanji: 薄い
+    romaji: usui
+    meaning: weak, bland
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+  - id: tastes_15
+    hiragana: ケーキ
+    romaji: keeki
+    meaning: cake
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_16
+    hiragana: カレー
+    romaji: karee
+    meaning: curry
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_17
+    hiragana: コーヒー
+    romaji: koohii
+    meaning: coffee
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_18
+    hiragana: レモン
+    romaji: remon
+    meaning: lemon
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_19
+    hiragana: スープ
+    romaji: suupu
+    meaning: soup
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_20
+    hiragana: りんご
+    kanji: 林檎
+    romaji: ringo
+    meaning: apple
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_21
+    hiragana: ピザ
+    romaji: piza
+    meaning: pizza
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_22
+    hiragana: チョコレート
+    romaji: chokoreeto
+    meaning: chocolate
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_23
+    hiragana: くだもの
+    kanji: 果物
+    romaji: kudamono
+    meaning: fruit
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_24
+    hiragana: りょうり
+    kanji: 料理
+    romaji: ryouri
+    meaning: dish, cooking
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
   - id: tastes_25
+    hiragana: たべもの
+    kanji: 食べ物
+    romaji: tabemono
+    meaning: food
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_26
+    hiragana: しお
+    kanji: 塩
+    romaji: shio
+    meaning: salt
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_27
+    hiragana: さとう
+    kanji: 砂糖
+    romaji: satou
+    meaning: sugar
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_28
+    hiragana: しょうゆ
+    kanji: 醤油
+    romaji: shouyu
+    meaning: soy sauce
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_29
+    hiragana: みそ
+    kanji: 味噌
+    romaji: miso
+    meaning: miso
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_30
+    hiragana: す
+    kanji: 酢
+    romaji: su
+    meaning: vinegar
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_31
+    hiragana: ソース
+    romaji: soosu
+    meaning: sauce
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_32
+    hiragana: ケチャップ
+    romaji: kechappu
+    meaning: ketchup
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_33
+    hiragana: マヨネーズ
+    romaji: mayoneezu
+    meaning: mayonnaise
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_34
+    hiragana: わさび
+    kanji: 山葵
+    romaji: wasabi
+    meaning: wasabi
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_35
+    hiragana: からし
+    kanji: 芥子
+    romaji: karashi
+    meaning: mustard
+    category: vocabulary
+    tags:
+      - tastes
+    type: noun
+  - id: tastes_36
     hiragana: あまからい
     kanji: 甘辛い
     romaji: amakarai
@@ -1910,7 +2127,7 @@ vocabulary:
     tags:
       - tastes
     type: い-adjective
-  - id: tastes_26
+  - id: tastes_37
     hiragana: すっぱあまい
     kanji: 酸っぱ甘い
     romaji: suppaamai
@@ -1919,7 +2136,7 @@ vocabulary:
     tags:
       - tastes
     type: い-adjective
-  - id: tastes_27
+  - id: tastes_38
     hiragana: あますっぱい
     kanji: 甘酸っぱい
     romaji: amasuppai
@@ -1928,166 +2145,60 @@ vocabulary:
     tags:
       - tastes
     type: い-adjective
-  - id: verbgroups_0
-    hiragana: かく
-    kanji: 書く
-    romaji: kaku
-    meaning: to write
-    category: lessons
+  - id: tastes_39
+    hiragana: あじわう
+    kanji: 味わう
+    romaji: ajiwau
+    meaning: to taste, to savor
+    category: vocabulary
     tags:
-      - dictionary
-      - verb-groups
-    type: verb
-  - id: verbgroups_1
-    hiragana: はなす
-    kanji: 話す
-    romaji: hanasu
-    meaning: to speak
-    category: lessons
+      - tastes
+    type: godan verb
+  - id: tastes_40
+    hiragana: つける
+    kanji: 付ける
+    romaji: tsukeru
+    meaning: to dip, to put on
+    category: vocabulary
     tags:
-      - dictionary
-      - verb-groups
-    type: verb
-  - id: verbgroups_2
-    hiragana: よむ
-    kanji: 読む
-    romaji: yomu
-    meaning: to read
-    category: lessons
+      - tastes
+    type: ichidan verb
+  - id: tastes_41
+    hiragana: かける
+    kanji: 掛ける
+    romaji: kakeru
+    meaning: to pour over, to sprinkle
+    category: vocabulary
     tags:
-      - dictionary
-      - verb-groups
-    type: verb
-  - id: verbgroups_3
-    hiragana: かう
-    kanji: 買う
-    romaji: kau
-    meaning: to buy
-    category: lessons
+      - tastes
+    type: ichidan verb
+  - id: tastes_42
+    hiragana: そそぐ
+    kanji: 注ぐ
+    romaji: sosogu
+    meaning: to pour (into)
+    category: vocabulary
     tags:
-      - dictionary
-      - verb-groups
-    type: verb
-  - id: verbgroups_4
-    hiragana: つくる
-    kanji: 作る
-    romaji: tsukuru
-    meaning: to make
-    category: lessons
+      - tastes
+    type: godan verb
+  - id: tastes_43
+    hiragana: まぜる
+    kanji: 混ぜる
+    romaji: mazeru
+    meaning: to mix, to stir
+    category: vocabulary
     tags:
-      - dictionary
-      - verb-groups
-    type: verb
-  - id: verbgroups_5
-    hiragana: まつ
-    kanji: 待つ
-    romaji: matsu
-    meaning: to wait
-    category: lessons
+      - tastes
+    type: ichidan verb
+  - id: tastes_44
+    hiragana: とる
+    kanji: 取る
+    romaji: toru
+    meaning: to take, to pick up
+    category: vocabulary
     tags:
-      - dictionary
-      - verb-groups
-    type: verb
-  - id: verbgroups_6
-    hiragana: たべる
-    kanji: 食べる
-    romaji: taberu
-    meaning: to eat
-    category: lessons
-    tags:
-      - dictionary
-      - verb-groups
-    type: verb
-  - id: verbgroups_7
-    hiragana: おきる
-    kanji: 起きる
-    romaji: okiru
-    meaning: to wake up
-    category: lessons
-    tags:
-      - dictionary
-      - verb-groups
-    type: verb
-  - id: verbgroups_8
-    hiragana: ねる
-    kanji: 寝る
-    romaji: neru
-    meaning: to sleep
-    category: lessons
-    tags:
-      - dictionary
-      - verb-groups
-    type: verb
-  - id: verbgroups_9
-    hiragana: あける
-    kanji: 開ける
-    romaji: akeru
-    meaning: to open
-    category: lessons
-    tags:
-      - dictionary
-      - verb-groups
-    type: verb
-  - id: verbgroups_10
-    hiragana: でる
-    kanji: 出る
-    romaji: deru
-    meaning: to exit
-    category: lessons
-    tags:
-      - dictionary
-      - verb-groups
-    type: verb
-  - id: verbgroups_11
-    hiragana: かえる
-    kanji: 帰る
-    romaji: kaeru
-    meaning: to return
-    category: lessons
-    tags:
-      - dictionary
-      - verb-groups
-    type: verb
-  - id: verbgroups_12
-    hiragana: はいる
-    kanji: 入る
-    romaji: hairu
-    meaning: to enter
-    category: lessons
-    tags:
-      - dictionary
-      - verb-groups
-    type: verb
-  - id: verbgroups_13
-    hiragana: はしる
-    kanji: 走る
-    romaji: hashiru
-    meaning: to run
-    category: lessons
-    tags:
-      - dictionary
-      - verb-groups
-    type: verb
-  - id: verbgroups_14
-    hiragana: しる
-    kanji: 知る
-    romaji: shiru
-    meaning: to know
-    category: lessons
-    tags:
-      - dictionary
-      - verb-groups
-    type: verb
-  - id: verbgroups_15
-    hiragana: きる
-    kanji: 切る
-    romaji: kiru
-    meaning: to cut
-    category: lessons
-    tags:
-      - dictionary
-      - verb-groups
-    type: verb
+      - tastes
+    type: godan verb
 categories:
   - all
   - grammar
