@@ -188,9 +188,9 @@ describe('Vocabulary Component', () => {
 
       const vocabularyCards = screen.getAllByText(/あか|あお|あまい|コーヒー/);
 
-      expect(vocabularyCards[0]).toHaveTextContent('あか'); // aka
-      expect(vocabularyCards[1]).toHaveTextContent('あまい'); // amai
-      expect(vocabularyCards[2]).toHaveTextContent('あお'); // ao
+      expect(vocabularyCards[0]).toHaveTextContent('あか');
+      expect(vocabularyCards[1]).toHaveTextContent('あまい');
+      expect(vocabularyCards[2]).toHaveTextContent('あお');
     });
   });
 
@@ -241,8 +241,8 @@ describe('Vocabulary Component', () => {
     it('displays tags correctly', () => {
       render(<Vocabulary />);
 
-      expect(screen.getAllByText('colors')).toHaveLength(2); // appears twice
-      expect(screen.getAllByText('tastes')).toHaveLength(2); // appears twice
+      expect(screen.getAllByText('colors')).toHaveLength(2);
+      expect(screen.getAllByText('tastes')).toHaveLength(2);
     });
 
     it('displays kanji when available', () => {
@@ -280,15 +280,15 @@ describe('Vocabulary Component', () => {
 describe('getTagPath', () => {
   describe('Numbers-related tags', () => {
     it('should map "numbers" tag to numbers lesson path', () => {
-      expect(getTagPath('numbers')).toBe('docs/lessons/numbers');
+      expect(getTagPath('numbers')).toBe('docs/lessons/vocabulary/numbers');
     });
 
     it('should map "counting" tag to numbers lesson path', () => {
-      expect(getTagPath('counting')).toBe('docs/lessons/numbers');
+      expect(getTagPath('counting')).toBe('docs/lessons/vocabulary/numbers');
     });
 
     it('should map "counters" tag to numbers lesson path', () => {
-      expect(getTagPath('counters')).toBe('docs/lessons/numbers');
+      expect(getTagPath('counters')).toBe('docs/lessons/vocabulary/numbers');
     });
   });
 
@@ -308,15 +308,15 @@ describe('getTagPath', () => {
 
   describe('Case insensitivity', () => {
     it('should handle uppercase "NUMBERS" tag', () => {
-      expect(getTagPath('NUMBERS')).toBe('docs/lessons/numbers');
+      expect(getTagPath('NUMBERS')).toBe('docs/lessons/vocabulary/numbers');
     });
 
     it('should handle mixed case "Numbers" tag', () => {
-      expect(getTagPath('Numbers')).toBe('docs/lessons/numbers');
+      expect(getTagPath('Numbers')).toBe('docs/lessons/vocabulary/numbers');
     });
 
     it('should handle mixed case "CouNTers" tag', () => {
-      expect(getTagPath('CouNTers')).toBe('docs/lessons/numbers');
+      expect(getTagPath('CouNTers')).toBe('docs/lessons/vocabulary/numbers');
     });
 
     it('should handle uppercase vocabulary tag "COLORS"', () => {
@@ -374,9 +374,9 @@ describe('getTagPath', () => {
     });
 
     it('should return correct paths for numbers tags', () => {
-      expect(getTagPath('numbers')).toBe('docs/lessons/numbers');
-      expect(getTagPath('counting')).toBe('docs/lessons/numbers');
-      expect(getTagPath('counters')).toBe('docs/lessons/numbers');
+      expect(getTagPath('numbers')).toBe('docs/lessons/vocabulary/numbers');
+      expect(getTagPath('counting')).toBe('docs/lessons/vocabulary/numbers');
+      expect(getTagPath('counters')).toBe('docs/lessons/vocabulary/numbers');
     });
 
     it('should return correct paths for time-related tags', () => {

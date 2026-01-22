@@ -25,7 +25,6 @@ const sortOptions = vocabularyYamlData.sortOptions;
  * Maps tags to their correct lesson folders.
  */
 export function getTagPath(tag: string): string {
-  // Grammar lessons
   const grammarTags = [
     'actions-and-thinking',
     'advice',
@@ -35,13 +34,11 @@ export function getTagPath(tag: string): string {
     'desire',
     'excess',
     'experience',
-    'grammar-particles',
     'obligation',
     'particle-guide',
     'reason',
   ];
 
-  // Conjugation lessons
   const conjugationTags = [
     'future',
     'basics',
@@ -50,7 +47,6 @@ export function getTagPath(tag: string): string {
     'ta-form',
   ];
 
-  // Special mappings for tags that don't match their file names
   const tagMappings: Record<string, string> = {
     'numbers': 'vocabulary/numbers',
     'counting': 'vocabulary/numbers',
@@ -130,7 +126,6 @@ export default function Vocabulary(): React.JSX.Element {
             <h1>Japanese Vocabulary</h1>
             <p>Search and explore Japanese vocabulary with hiragana, katakana, kanji, and romaji.</p>
 
-            {/* Search and Filter Controls */}
             <div className={styles.controls}>
               <div className={styles.searchBox}>
                 <input
@@ -187,12 +182,10 @@ export default function Vocabulary(): React.JSX.Element {
               </div>
             </div>
 
-            {/* Results Count */}
             <div className={styles.resultsCount}>
               Showing {filteredAndSortedVocabulary.length} of {vocabularyData.length} vocabulary items
             </div>
 
-            {/* Vocabulary Grid */}
             <div className={styles.vocabularyGrid}>
               {filteredAndSortedVocabulary.map(item => (
                 <div key={item.id} className={styles.vocabularyCard}>
