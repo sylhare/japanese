@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node-version: [22.x]
+        node-version: [24.x]
         browser: [chromium, firefox, webkit]
 
     steps:
@@ -48,7 +48,7 @@ jobs:
         fi
 
     - name: Run unit tests
-      run: npm run test:run
+      run: npm test
 
     - name: Run Docusaurus build test
       run: npm run build
