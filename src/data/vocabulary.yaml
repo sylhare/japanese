@@ -1645,6 +1645,41 @@ vocabulary:
     tags:
       - family
     type: noun
+  - id: future_0
+    hiragana: よう / おう
+    romaji: you / ou
+    meaning: let's, I think I will (volitional)
+    category: lessons
+    tags:
+      - future
+    type: expression
+  - id: future_1
+    hiragana: よう と おもう
+    kanji: よう と 思う
+    romaji: you to omou
+    meaning: I think I will (clear personal decision)
+    category: lessons
+    tags:
+      - future
+    type: expression
+  - id: future_2
+    hiragana: つもり です
+    kanji: 積もり です
+    romaji: tsumori desu
+    meaning: intend to, plan to
+    category: lessons
+    tags:
+      - future
+    type: expression
+  - id: future_3
+    hiragana: よてい です
+    kanji: 予定 です
+    romaji: yotei desu
+    meaning: scheduled to, planning to
+    category: lessons
+    tags:
+      - future
+    type: expression
   - id: intendto_0
     hiragana: '[verb dictionary] + つもり です'
     romaji: tsumori desu

@@ -1,6 +1,7 @@
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import React, { useMemo, useState } from 'react';
+import n5VocabularyData from '../data/n5-vocabulary.json';
 import vocabularyYamlData from '../data/vocabulary.yaml';
 import styles from './dictionary.module.css';
 
@@ -20,11 +21,50 @@ const vocabularyData: VocabularyItem[] = vocabularyYamlData.vocabulary;
 const categories = vocabularyYamlData.categories;
 const sortOptions = vocabularyYamlData.sortOptions;
 
+const N5_TAG = 'N5';
+const n5VocabularyTokens = new Set<string>(n5VocabularyData.tokens);
+
+function normalizeToken(value?: string): string {
+  if (!value) {
+    return '';
+  }
+  return value
+    .replace(/[()（）]/g, '')
+    .replace(/[~～]/g, '')
+    .replace(/\s+/g, '')
+    .toLowerCase();
+}
+
+function isN5VocabularyItem(item: VocabularyItem): boolean {
+  const primaryCandidates = [
+    normalizeToken(item.hiragana),
+    normalizeToken(item.katakana),
+    normalizeToken(item.kanji),
+  ].filter(Boolean);
+
+  if (primaryCandidates.some(candidate => n5VocabularyTokens.has(candidate))) {
+    return true;
+  }
+
+  const romajiCandidate = normalizeToken(item.romaji);
+  return romajiCandidate ? n5VocabularyTokens.has(romajiCandidate) : false;
+}
+
+function addN5Tag(tags: string[]): string[] {
+  if (tags.some(tag => tag.toLowerCase() === 'n5')) {
+    return tags;
+  }
+  return [...tags, N5_TAG];
+}
+
 /**
  * Get the correct lesson path for a tag.
  * Maps tags to their correct lesson folders.
  */
 export function getTagPath(tag: string): string {
+  const jlptTagMappings: Record<string, string> = {
+    'n5': 'docs/reference/n5-vocabulary',
+  };
   const grammarTags = [
     'actions-and-thinking',
     'advice',
@@ -42,6 +82,7 @@ export function getTagPath(tag: string): string {
   const conjugationTags = [
     'future',
     'basics',
+    'dictionary-form',
     'verb-groups',
     'te-nai-form',
     'ta-form',
@@ -59,6 +100,10 @@ export function getTagPath(tag: string): string {
 
   const lowerTag = tag.toLowerCase();
   
+  if (jlptTagMappings[lowerTag]) {
+    return jlptTagMappings[lowerTag];
+  }
+
   if (tagMappings[lowerTag]) {
     return `docs/lessons/${tagMappings[lowerTag]}`;
   }
@@ -82,8 +127,22 @@ export default function Vocabulary(): React.JSX.Element {
   const [showOnlyHiragana, setShowOnlyHiragana] = useState(false);
   const [showOnlyKatakana, setShowOnlyKatakana] = useState(false);
 
+  const vocabularyWithJlptTags = useMemo(
+    () =>
+      vocabularyData.map(item => {
+        if (!isN5VocabularyItem(item)) {
+          return item;
+        }
+        return {
+          ...item,
+          tags: addN5Tag(item.tags),
+        };
+      }),
+    [],
+  );
+
   const filteredAndSortedVocabulary = useMemo(() => {
-    const filtered = vocabularyData.filter(item => {
+    const filtered = vocabularyWithJlptTags.filter(item => {
       const matchesSearch =
         item.hiragana?.toLowerCase().includes(searchTerm.toLowerCase()) ||
         item.katakana?.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -116,7 +175,14 @@ export default function Vocabulary(): React.JSX.Element {
     });
 
     return filtered;
-  }, [searchTerm, selectedCategory, sortBy, showOnlyHiragana, showOnlyKatakana]);
+  }, [
+    searchTerm,
+    selectedCategory,
+    sortBy,
+    showOnlyHiragana,
+    showOnlyKatakana,
+    vocabularyWithJlptTags,
+  ]);
 
   return (
     <Layout title="Vocabulary" description="Japanese vocabulary with search and filtering">

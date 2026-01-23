@@ -11,6 +11,12 @@ vi.mock('../../src/data/vocabulary.yaml', async () => {
   };
 });
 
+vi.mock('../../src/data/n5-vocabulary.json', () => ({
+  default: {
+    tokens: ['あか', 'aka', '赤'],
+  },
+}));
+
 vi.mock('../../src/pages/dictionary.module.css', () => ({
   default: {},
 }));
@@ -264,6 +270,21 @@ describe('Vocabulary Component', () => {
       expect(particleLink?.getAttribute('href')).toBe('/docs/lessons/grammar/particle-guide');
     });
 
+    it('adds an N5 tag with the correct reference link for N5 items only', () => {
+      render(<Vocabulary />);
+
+      const n5Tags = screen.getAllByText('N5');
+      expect(n5Tags).toHaveLength(1);
+
+      const n5Tag = n5Tags[0];
+      expect(n5Tag.getAttribute('href')).toBe('/docs/reference/n5-vocabulary');
+
+      const redMeaning = screen.getByText('red');
+      const redCard = redMeaning.closest('div')?.parentElement;
+      expect(redCard?.querySelectorAll('a')).toHaveLength(2);
+      expect(redCard?.textContent).toContain('N5');
+    });
+
     it('displays kanji when available', () => {
       render(<Vocabulary />);
 
@@ -297,6 +318,16 @@ describe('Vocabulary Component', () => {
 });
 
 describe('getTagPath', () => {
+  describe('JLPT tags', () => {
+    it('should map "N5" tag to the N5 reference page', () => {
+      expect(getTagPath('N5')).toBe('docs/reference/n5-vocabulary');
+    });
+
+    it('should map lowercase "n5" tag to the N5 reference page', () => {
+      expect(getTagPath('n5')).toBe('docs/reference/n5-vocabulary');
+    });
+  });
+
   describe('Numbers-related tags', () => {
     it('should map "numbers" tag to numbers lesson path', () => {
       expect(getTagPath('numbers')).toBe('docs/lessons/vocabulary/numbers');

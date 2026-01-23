@@ -6,6 +6,8 @@ const yaml = require('js-yaml');
 
 const DEFAULT_LESSONS_DIR = path.join(__dirname, '../docs/lessons');
 const VOCABULARY_FILE = path.join(__dirname, '../src/data/vocabulary.yaml');
+const N5_REFERENCE_FILE = path.join(__dirname, '../docs/reference/n5-vocabulary.md');
+const N5_VOCABULARY_FILE = path.join(__dirname, '../src/data/n5-vocabulary.json');
 const VOCAB_TABLE_PATTERN = /## [^#\n]+[\s\S]*?(\|.*?Hiragana.*?\|[\s\S]*?)(?=\n##|\n## Next Steps|\n## Tips|\n## Remember|$)/gi;
 
 /**
@@ -84,6 +86,104 @@ function stripEmojis(text) {
   text = text.replace(/[^\p{L}\p{N}\s.,'():;/&-]/gu, '').trim();
   text = text.replace(/^\p{N}+(\s+)?/u, '');
   return text.trim();
+}
+
+/**
+ * Normalize a vocabulary token for matching across sources.
+ * @param {string} token - Raw token
+ * @returns {string} Normalized token
+ */
+function normalizeToken(token) {
+  if (!token) return '';
+  return token
+    .replace(/[()（）]/g, '')
+    .replace(/[~～]/g, '')
+    .replace(/\s+/g, '')
+    .toLowerCase();
+}
+
+function addTokensFromCell(cell, tokens) {
+  if (!cell) return;
+  const cleaned = cell.replace(/（.*?）/g, '').replace(/\(.*?\)/g, '').trim();
+  const parts = cleaned.split(/[\/／]/);
+  parts.forEach(part => {
+    const normalized = normalizeToken(part);
+    if (normalized) {
+      tokens.add(normalized);
+    }
+  });
+}
+
+/**
+ * Extract N5 vocabulary tokens from the N5 reference article.
+ * @returns {string[]} Array of normalized tokens
+ */
+function extractN5VocabularyTokens() {
+  if (!fs.existsSync(N5_REFERENCE_FILE)) {
+    return [];
+  }
+
+  const content = fs.readFileSync(N5_REFERENCE_FILE, 'utf8');
+  const tokens = new Set();
+  const lines = content.split('\n');
+
+  for (let index = 0; index < lines.length; index++) {
+    const line = lines[index];
+    if (!line.startsWith('|')) {
+      continue;
+    }
+
+    const headerCells = parseRow(line);
+    const hiraganaIdx = findColumnIndex(headerCells, 'Hiragana');
+    const kanjiIdx = findColumnIndex(headerCells, 'Kanji');
+    const romajiIdx = findColumnIndex(headerCells, 'Romaji');
+
+    if (hiraganaIdx === -1 || romajiIdx === -1) {
+      continue;
+    }
+
+    index += 1;
+    for (; index < lines.length; index++) {
+      const row = lines[index];
+      if (!row.startsWith('|')) {
+        break;
+      }
+      if (row.match(/^\|\s*[-:]+/)) {
+        continue;
+      }
+
+      const cells = parseRow(row);
+      const hiragana = cells[hiraganaIdx] || '';
+      const kanji = kanjiIdx >= 0 ? cells[kanjiIdx] : '';
+      const romaji = cells[romajiIdx] || '';
+
+      if (!hiragana || hiragana.match(/^-+$/)) {
+        continue;
+      }
+
+      addTokensFromCell(hiragana, tokens);
+      addTokensFromCell(kanji, tokens);
+      addTokensFromCell(romaji, tokens);
+    }
+  }
+
+  return Array.from(tokens).sort();
+}
+
+function updateN5VocabularyData() {
+  const tokens = extractN5VocabularyTokens();
+  const payload = { tokens };
+  const nextContent = JSON.stringify(payload, null, 2) + '\n';
+  const existingContent = fs.existsSync(N5_VOCABULARY_FILE)
+    ? fs.readFileSync(N5_VOCABULARY_FILE, 'utf8')
+    : '';
+
+  if (existingContent !== nextContent) {
+    fs.writeFileSync(N5_VOCABULARY_FILE, nextContent);
+    console.log('✅ N5 vocabulary data updated successfully!');
+  } else {
+    console.log('✅ N5 vocabulary data is up to date (no changes needed)');
+  }
 }
 
 /**
@@ -450,6 +550,8 @@ function main(options = {}) {
   } else {
     console.log('✅ Vocabulary file is up to date (no changes needed)');
   }
+
+  updateN5VocabularyData();
 }
 
 if (require.main === module) {
@@ -463,4 +565,11 @@ if (require.main === module) {
   main({ force: args.force });
 }
 
-module.exports = { extractVocabularyFromFile, scanAllLessons, mergeVocabulary, parseArgs, main };
+module.exports = {
+  extractVocabularyFromFile,
+  extractN5VocabularyTokens,
+  scanAllLessons,
+  mergeVocabulary,
+  parseArgs,
+  main,
+};

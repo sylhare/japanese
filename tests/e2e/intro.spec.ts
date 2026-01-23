@@ -143,7 +143,10 @@ test.describe('Intro Page', () => {
 
   test.describe('Link Validation', () => {
     test('should have valid href attributes for all reference links', async ({ page }) => {
-      const referenceSection = page.getByRole('heading', { name: /reference/i }).locator('..');
+      const referenceSection = page
+        .locator('article')
+        .getByRole('heading', { name: /reference/i })
+        .locator('xpath=following-sibling::*[1]');
       const links = referenceSection.locator('a[href]');
       const linkCount = await links.count();
 
@@ -159,7 +162,10 @@ test.describe('Intro Page', () => {
 
     test('should not have any broken internal links in reference section', async ({ page }) => {
       test.slow();
-      const referenceSection = page.getByRole('heading', { name: /reference/i }).locator('..');
+      const referenceSection = page
+        .locator('article')
+        .getByRole('heading', { name: /reference/i })
+        .locator('xpath=following-sibling::*[1]');
       const links = referenceSection.locator('a[href]');
       const linkCount = await links.count();
 

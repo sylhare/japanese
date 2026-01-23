@@ -3,7 +3,14 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import yaml from 'js-yaml';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import { extractVocabularyFromFile, main, mergeVocabulary, parseArgs, scanAllLessons } from '../../scripts/extract-vocabulary.js';
+import {
+  extractN5VocabularyTokens,
+  extractVocabularyFromFile,
+  main,
+  mergeVocabulary,
+  parseArgs,
+  scanAllLessons,
+} from '../../scripts/extract-vocabulary.js';
 import {
   type VocabularyData,
   type VocabularyItem,
@@ -997,6 +1004,16 @@ title: Custom Section Test
 
       expect(args.force).toBe(false);
       expect(args.help).toBe(false);
+    });
+  });
+
+  describe('extractN5VocabularyTokens', () => {
+    it('should include miru tokens from the N5 reference article', () => {
+      const tokens = extractN5VocabularyTokens();
+
+      expect(tokens).toContain('みる');
+      expect(tokens).toContain('見る');
+      expect(tokens).toContain('miru');
     });
   });
 

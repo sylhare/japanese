@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test, type Page } from '@playwright/test';
 import { verifyPageIsFound } from './helpers/pageHelper';
 
 test.describe('Dictionary', () => {
@@ -312,6 +312,62 @@ test.describe('Dictionary', () => {
 
       await verifyPageIsFound(page);
       await expect(page.getByRole('heading', { name: /days and weeks/i }).first()).toBeVisible();
+    });
+  });
+
+  test.describe('Vocabulary Tags - Miru', () => {
+    const findMiruCard = async (page: Page) => {
+      const searchInput = page.getByPlaceholder('Search vocabulary...');
+      await searchInput.fill('miru');
+      await searchInput.press('Enter');
+      await page.waitForTimeout(500);
+
+      const vocabularyCard = page.locator('[class*="vocabularyCard"]').filter({ hasText: 'to see' }).first();
+      await expect(vocabularyCard).toBeVisible();
+      return vocabularyCard;
+    };
+
+    test('miru should show dictionary-form, confusing-kanji, and N5 tags', async ({ page }) => {
+      const vocabularyCard = await findMiruCard(page);
+
+      const dictionaryFormTag = vocabularyCard.locator('a[class*="tag"]').filter({ hasText: /^dictionary-form$/i });
+      const confusingKanjiTag = vocabularyCard.locator('a[class*="tag"]').filter({ hasText: /^confusing-kanji$/i });
+      const n5Tag = vocabularyCard.locator('a[class*="tag"]').filter({ hasText: /^N5$/ });
+
+      await expect(dictionaryFormTag).toBeVisible();
+      await expect(confusingKanjiTag).toBeVisible();
+      await expect(n5Tag).toBeVisible();
+
+      await expect(dictionaryFormTag).toHaveAttribute('href', /\/docs\/lessons\/conjugation\/dictionary-form$/);
+      await expect(confusingKanjiTag).toHaveAttribute('href', /\/docs\/lessons\/vocabulary\/confusing-kanji$/);
+      await expect(n5Tag).toHaveAttribute('href', /\/docs\/reference\/n5-vocabulary$/);
+    });
+
+    test('miru tags should redirect to the correct pages', async ({ page }) => {
+      let vocabularyCard = await findMiruCard(page);
+
+      const dictionaryFormTag = vocabularyCard.locator('a[class*="tag"]').filter({ hasText: /^dictionary-form$/i });
+      await dictionaryFormTag.click();
+      await verifyPageIsFound(page);
+      await expect(page).toHaveURL(/\/docs\/lessons\/conjugation\/dictionary-form/);
+
+      await page.goto('./dictionary');
+      await page.waitForLoadState('networkidle');
+      vocabularyCard = await findMiruCard(page);
+      const confusingKanjiTag = vocabularyCard.locator('a[class*="tag"]').filter({ hasText: /^confusing-kanji$/i });
+      await confusingKanjiTag.click();
+      await verifyPageIsFound(page);
+      await expect(page).toHaveURL(/\/docs\/lessons\/vocabulary\/confusing-kanji/);
+      await expect(page.getByRole('heading', { name: /confusing kanji/i }).first()).toBeVisible();
+
+      await page.goto('./dictionary');
+      await page.waitForLoadState('networkidle');
+      vocabularyCard = await findMiruCard(page);
+      const n5Tag = vocabularyCard.locator('a[class*="tag"]').filter({ hasText: /^N5$/ });
+      await n5Tag.click();
+      await verifyPageIsFound(page);
+      await expect(page).toHaveURL(/\/docs\/reference\/n5-vocabulary/);
+      await expect(page.getByRole('heading', { name: /n5 vocabulary reference/i }).first()).toBeVisible();
     });
   });
 });
