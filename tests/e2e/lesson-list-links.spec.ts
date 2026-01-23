@@ -5,7 +5,7 @@ const lessonsIntroLinks = [
   { name: 'Grammar', hrefPattern: '/grammar', headingPattern: /grammar/i },
   { name: 'Vocabulary', hrefPattern: '/vocabulary', headingPattern: /vocabulary/i },
   { name: 'Conjugation', hrefPattern: '/conjugation', headingPattern: /conjugation/i },
-  { name: 'Numbers and Counting', hrefPattern: '/vocabulary/numbers', headingPattern: /numbers|counting/i },
+  { name: 'Dictionary', hrefPattern: '/dictionary', headingPattern: /vocabulary|dictionary/i },
   { name: 'Hiragana Chart', hrefPattern: 'hiragana-chart', headingPattern: /hiragana/i },
   { name: 'Katakana Chart', hrefPattern: 'katakana-chart', headingPattern: /katakana/i },
 ];

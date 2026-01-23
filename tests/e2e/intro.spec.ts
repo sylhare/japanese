@@ -18,9 +18,9 @@ test.describe('Intro Page', () => {
       await expect(heading).toBeVisible();
     });
 
-    test('should display the quick links section', async ({ page }) => {
-      const quickLinksHeading = page.getByRole('heading', { name: /quick links/i });
-      await expect(quickLinksHeading).toBeVisible();
+    test('should display the reference section', async ({ page }) => {
+      const referenceHeading = page.getByRole('heading', { name: /reference/i });
+      await expect(referenceHeading).toBeVisible();
     });
 
     test('should display the learning resources section', async ({ page }) => {
@@ -29,7 +29,16 @@ test.describe('Intro Page', () => {
     });
   });
 
-  test.describe('Quick Links Section', () => {
+  test.describe('Reference Section', () => {
+    test('should navigate to Dictionary', async ({ page }) => {
+      const dictionaryLink = page.locator('a[href*="/dictionary"]').first();
+      await expect(dictionaryLink).toBeVisible();
+      await expect(dictionaryLink).toContainText(/dictionary/i);
+      await dictionaryLink.click();
+      await verifyPageIsFound(page);
+      await expect(page.getByRole('heading', { name: /vocabulary|dictionary/i }).first()).toBeVisible();
+    });
+
     test('should navigate to Hiragana Chart', async ({ page }) => {
       const hiraganaLink = page.locator('a[href*="hiragana-chart"]').first();
       await expect(hiraganaLink).toBeVisible();
@@ -46,24 +55,6 @@ test.describe('Intro Page', () => {
       await katakanaLink.click();
       await verifyPageIsFound(page);
       await expect(page.getByRole('heading', { name: /katakana/i }).first()).toBeVisible();
-    });
-
-    test('should navigate to Particle Guide', async ({ page }) => {
-      const particlesLink = page.locator('a[href*="particle-guide"]').first();
-      await expect(particlesLink).toBeVisible();
-      await expect(particlesLink).toContainText(/particle guide/i);
-      await particlesLink.click();
-      await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /particle/i }).first()).toBeVisible();
-    });
-
-    test('should navigate to Verb Conjugation', async ({ page }) => {
-      const conjugationLink = page.locator('a[href*="conjugation"]').first();
-      await expect(conjugationLink).toBeVisible();
-      await expect(conjugationLink).toContainText(/verb conjugation|conjugation/i);
-      await conjugationLink.click();
-      await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /conjugation|verb/i }).first()).toBeVisible();
     });
   });
 
@@ -151,9 +142,9 @@ test.describe('Intro Page', () => {
   });
 
   test.describe('Link Validation', () => {
-    test('should have valid href attributes for all quick links', async ({ page }) => {
-      const quickLinksSection = page.locator('text=/quick links/i').locator('..');
-      const links = quickLinksSection.locator('a[href]');
+    test('should have valid href attributes for all reference links', async ({ page }) => {
+      const referenceSection = page.getByRole('heading', { name: /reference/i }).locator('..');
+      const links = referenceSection.locator('a[href]');
       const linkCount = await links.count();
 
       expect(linkCount).toBeGreaterThan(0);
@@ -166,10 +157,10 @@ test.describe('Intro Page', () => {
       }
     });
 
-    test('should not have any broken internal links in quick links', async ({ page }) => {
-      test.slow(); // This test navigates to many pages, triples the default timeout
-      const quickLinksSection = page.locator('text=/quick links/i').locator('..');
-      const links = quickLinksSection.locator('a[href]');
+    test('should not have any broken internal links in reference section', async ({ page }) => {
+      test.slow();
+      const referenceSection = page.getByRole('heading', { name: /reference/i }).locator('..');
+      const links = referenceSection.locator('a[href]');
       const linkCount = await links.count();
 
       expect(linkCount).toBeGreaterThan(0);
@@ -180,17 +171,14 @@ test.describe('Intro Page', () => {
         
         expect(href).toBeTruthy();
         
-        // Only test internal links
         const isExternal = href?.startsWith('http');
         if (isExternal) continue;
-        
-        // Navigate directly using href instead of clicking (avoids webpack overlay issues)
+
         if (href) {
           await page.goto(href);
           await page.waitForLoadState('networkidle');
           await verifyPageIsFound(page);
-          
-          // Navigate back to intro page
+
           await page.goto('./docs/intro');
           await page.waitForLoadState('networkidle');
         }

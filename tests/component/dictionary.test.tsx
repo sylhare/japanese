@@ -245,6 +245,25 @@ describe('Vocabulary Component', () => {
       expect(screen.getAllByText('tastes')).toHaveLength(2);
     });
 
+    it('renders multiple tags with correct links for a single item', () => {
+      render(<Vocabulary />);
+
+      const sweetMeaning = screen.getByText('sweet');
+      const card = sweetMeaning.closest('div')?.parentElement;
+      expect(card).not.toBeNull();
+
+      const tagLinks = Array.from(card?.querySelectorAll('a') ?? []);
+      const tagTexts = tagLinks.map(link => link.textContent);
+
+      expect(tagTexts).toEqual(expect.arrayContaining(['tastes', 'particle-guide']));
+
+      const tastesLink = tagLinks.find(link => link.textContent === 'tastes');
+      expect(tastesLink?.getAttribute('href')).toBe('/docs/lessons/vocabulary/tastes');
+
+      const particleLink = tagLinks.find(link => link.textContent === 'particle-guide');
+      expect(particleLink?.getAttribute('href')).toBe('/docs/lessons/grammar/particle-guide');
+    });
+
     it('displays kanji when available', () => {
       render(<Vocabulary />);
 

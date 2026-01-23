@@ -229,7 +229,6 @@ test.describe('Dictionary', () => {
     test('grammar tags should NOT link to vocabulary folder', async ({ page }) => {
       await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
 
-      // Verify grammar tags have correct href (grammar/, not vocabulary/)
       const grammarTags = ['experience', 'advice', 'comparison', 'desire', 'excess'];
       
       for (const tag of grammarTags) {
@@ -243,8 +242,8 @@ test.describe('Dictionary', () => {
     });
   });
 
-  test.describe('Merged Tags - Vocabulary in Multiple Lessons', () => {
-    test('tomorrow (ashita) should have tags from multiple lessons', async ({ page }) => {
+  test.describe('Vocabulary Tags - Time Lessons', () => {
+    test('tomorrow (ashita) should have a days-and-weeks tag', async ({ page }) => {
       const searchInput = page.getByPlaceholder('Search vocabulary...');
 
       await searchInput.fill('ashita');
@@ -252,21 +251,17 @@ test.describe('Dictionary', () => {
 
       await page.waitForTimeout(500);
 
-      // Find the vocabulary card for "tomorrow"
       const vocabularyCard = page.locator('[class*="vocabularyCard"]').filter({ hasText: 'tomorrow' }).first();
       await expect(vocabularyCard).toBeVisible();
 
-      // Verify it has multiple tags (should have days-and-weeks, future, and time)
       const tags = vocabularyCard.locator('a[class*="tag"]');
       const tagCount = await tags.count();
-      expect(tagCount).toBeGreaterThanOrEqual(2);
+      expect(tagCount).toBeGreaterThanOrEqual(1);
 
-      // Verify specific tags exist
-      await expect(vocabularyCard.locator('a[class*="tag"]').filter({ hasText: 'future' })).toBeVisible();
-      await expect(vocabularyCard.locator('a[class*="tag"]').filter({ hasText: /days-and-weeks|time/i })).toBeVisible();
+      await expect(vocabularyCard.locator('a[class*="tag"]').filter({ hasText: 'days-and-weeks' })).toBeVisible();
     });
 
-    test('next week (raishuu) should have tags from multiple lessons', async ({ page }) => {
+    test('next week (raishuu) should have a days-and-weeks tag', async ({ page }) => {
       const searchInput = page.getByPlaceholder('Search vocabulary...');
 
       await searchInput.fill('raishuu');
@@ -274,17 +269,16 @@ test.describe('Dictionary', () => {
 
       await page.waitForTimeout(500);
 
-      // Find the vocabulary card for "next week"
       const vocabularyCard = page.locator('[class*="vocabularyCard"]').filter({ hasText: 'next week' }).first();
       await expect(vocabularyCard).toBeVisible();
 
-      // Verify it has multiple tags
       const tags = vocabularyCard.locator('a[class*="tag"]');
       const tagCount = await tags.count();
-      expect(tagCount).toBeGreaterThanOrEqual(2);
+      expect(tagCount).toBeGreaterThanOrEqual(1);
+      await expect(vocabularyCard.locator('a[class*="tag"]').filter({ hasText: 'days-and-weeks' })).toBeVisible();
     });
 
-    test('merged tags should link to correct lessons', async ({ page }) => {
+    test('tags should link to correct lessons', async ({ page }) => {
       const searchInput = page.getByPlaceholder('Search vocabulary...');
 
       await searchInput.fill('ashita');
@@ -295,21 +289,13 @@ test.describe('Dictionary', () => {
       const vocabularyCard = page.locator('[class*="vocabularyCard"]').filter({ hasText: 'tomorrow' }).first();
       await expect(vocabularyCard).toBeVisible();
 
-      // Verify future tag links to conjugation lesson
-      const futureTag = vocabularyCard.locator('a[class*="tag"]').filter({ hasText: 'future' });
-      await expect(futureTag).toBeVisible();
-      const futureHref = await futureTag.getAttribute('href');
-      expect(futureHref).toContain('/conjugation/future');
-
-      // Verify days-and-weeks tag links to vocabulary/time lesson
       const daysTag = vocabularyCard.locator('a[class*="tag"]').filter({ hasText: 'days-and-weeks' });
-      if (await daysTag.isVisible()) {
-        const daysHref = await daysTag.getAttribute('href');
-        expect(daysHref).toContain('/vocabulary/time/days-and-weeks');
-      }
+      await expect(daysTag).toBeVisible();
+      const daysHref = await daysTag.getAttribute('href');
+      expect(daysHref).toContain('/vocabulary/time/days-and-weeks');
     });
 
-    test('clicking merged tag navigates to correct lesson', async ({ page }) => {
+    test('clicking tag navigates to correct lesson', async ({ page }) => {
       const searchInput = page.getByPlaceholder('Search vocabulary...');
 
       await searchInput.fill('ashita');
@@ -320,13 +306,12 @@ test.describe('Dictionary', () => {
       const vocabularyCard = page.locator('[class*="vocabularyCard"]').filter({ hasText: 'tomorrow' }).first();
       await expect(vocabularyCard).toBeVisible();
 
-      // Click on the future tag and verify navigation
-      const futureTag = vocabularyCard.locator('a[class*="tag"]').filter({ hasText: 'future' });
-      await expect(futureTag).toBeVisible();
-      await futureTag.click();
+      const daysTag = vocabularyCard.locator('a[class*="tag"]').filter({ hasText: 'days-and-weeks' });
+      await expect(daysTag).toBeVisible();
+      await daysTag.click();
 
       await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /future/i }).first()).toBeVisible();
+      await expect(page.getByRole('heading', { name: /days and weeks/i }).first()).toBeVisible();
     });
   });
 });
