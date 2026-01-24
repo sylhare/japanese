@@ -246,3 +246,40 @@ Particles are small words that indicate the grammatical relationship between wor
 ### を vs が
 - **を**: Direct object (what receives action)
 - **が**: Subject (who performs action)
+
+## Quick Reference Tables
+
+### Essential Particles
+
+| Hiragana | Kanji | Romaji | English        | Type     |
+|----------|-------|--------|----------------|----------|
+| は        | -     | wa     | topic marker   | particle |
+| が        | -     | ga     | subject marker | particle |
+| を        | -     | wo     | object marker  | particle |
+
+### Location and Direction
+
+| Hiragana | Kanji | Romaji | English      | Type     |
+|----------|-------|--------|--------------|----------|
+| に        | -     | ni     | to, at, in   | particle |
+| で        | -     | de     | at, by, with | particle |
+| へ        | -     | e      | to, toward   | particle |
+
+### Common Conjunctions
+
+| Hiragana | Kanji | Romaji  | English       | Type        |
+|----------|-------|---------|---------------|-------------|
+| そして      | -     | soshite | and then      | conjunction |
+| でも       | -     | demo    | but, however  | conjunction |
+| だから      | -     | dakara  | so, therefore | conjunction |
+| または      | -     | matawa  | or            | conjunction |
+
+### Basic Pronouns
+
+| Hiragana | Kanji | Romaji  | English              | Type    |
+|----------|-------|---------|----------------------|---------|
+| これ       | -     | kore    | this (near speaker)  | pronoun |
+| それ       | -     | sore    | that (near listener) | pronoun |
+| あれ       | -     | are     | that (far from both) | pronoun |
+| わたし      | 私     | watashi | I, me                | pronoun |
+| あなた      | -     | anata   | you                  | pronoun |

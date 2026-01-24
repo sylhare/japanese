@@ -11,6 +11,12 @@ vi.mock('../../src/data/vocabulary.yaml', async () => {
   };
 });
 
+vi.mock('../../src/data/n5-vocabulary.json', () => ({
+  default: {
+    tokens: ['あか', 'aka', '赤'],
+  },
+}));
+
 vi.mock('../../src/pages/dictionary.module.css', () => ({
   default: {},
 }));
@@ -188,9 +194,9 @@ describe('Vocabulary Component', () => {
 
       const vocabularyCards = screen.getAllByText(/あか|あお|あまい|コーヒー/);
 
-      expect(vocabularyCards[0]).toHaveTextContent('あか'); // aka
-      expect(vocabularyCards[1]).toHaveTextContent('あまい'); // amai
-      expect(vocabularyCards[2]).toHaveTextContent('あお'); // ao
+      expect(vocabularyCards[0]).toHaveTextContent('あか');
+      expect(vocabularyCards[1]).toHaveTextContent('あまい');
+      expect(vocabularyCards[2]).toHaveTextContent('あお');
     });
   });
 
@@ -241,8 +247,42 @@ describe('Vocabulary Component', () => {
     it('displays tags correctly', () => {
       render(<Vocabulary />);
 
-      expect(screen.getAllByText('colors')).toHaveLength(2); // appears twice
-      expect(screen.getAllByText('tastes')).toHaveLength(2); // appears twice
+      expect(screen.getAllByText('colors')).toHaveLength(2);
+      expect(screen.getAllByText('tastes')).toHaveLength(2);
+    });
+
+    it('renders multiple tags with correct links for a single item', () => {
+      render(<Vocabulary />);
+
+      const sweetMeaning = screen.getByText('sweet');
+      const card = sweetMeaning.closest('div')?.parentElement;
+      expect(card).not.toBeNull();
+
+      const tagLinks = Array.from(card?.querySelectorAll('a') ?? []);
+      const tagTexts = tagLinks.map(link => link.textContent);
+
+      expect(tagTexts).toEqual(expect.arrayContaining(['tastes', 'particle-guide']));
+
+      const tastesLink = tagLinks.find(link => link.textContent === 'tastes');
+      expect(tastesLink?.getAttribute('href')).toBe('/docs/lessons/vocabulary/tastes');
+
+      const particleLink = tagLinks.find(link => link.textContent === 'particle-guide');
+      expect(particleLink?.getAttribute('href')).toBe('/docs/lessons/grammar/particle-guide');
+    });
+
+    it('adds an N5 tag with the correct reference link for N5 items only', () => {
+      render(<Vocabulary />);
+
+      const n5Tags = screen.getAllByText('N5');
+      expect(n5Tags).toHaveLength(1);
+
+      const n5Tag = n5Tags[0];
+      expect(n5Tag.getAttribute('href')).toBe('/docs/reference/n5-vocabulary');
+
+      const redMeaning = screen.getByText('red');
+      const redCard = redMeaning.closest('div')?.parentElement;
+      expect(redCard?.querySelectorAll('a')).toHaveLength(2);
+      expect(redCard?.textContent).toContain('N5');
     });
 
     it('displays kanji when available', () => {
@@ -278,17 +318,27 @@ describe('Vocabulary Component', () => {
 });
 
 describe('getTagPath', () => {
+  describe('JLPT tags', () => {
+    it('should map "N5" tag to the N5 reference page', () => {
+      expect(getTagPath('N5')).toBe('docs/reference/n5-vocabulary');
+    });
+
+    it('should map lowercase "n5" tag to the N5 reference page', () => {
+      expect(getTagPath('n5')).toBe('docs/reference/n5-vocabulary');
+    });
+  });
+
   describe('Numbers-related tags', () => {
     it('should map "numbers" tag to numbers lesson path', () => {
-      expect(getTagPath('numbers')).toBe('docs/lessons/numbers');
+      expect(getTagPath('numbers')).toBe('docs/lessons/vocabulary/numbers');
     });
 
     it('should map "counting" tag to numbers lesson path', () => {
-      expect(getTagPath('counting')).toBe('docs/lessons/numbers');
+      expect(getTagPath('counting')).toBe('docs/lessons/vocabulary/numbers');
     });
 
     it('should map "counters" tag to numbers lesson path', () => {
-      expect(getTagPath('counters')).toBe('docs/lessons/numbers');
+      expect(getTagPath('counters')).toBe('docs/lessons/vocabulary/numbers');
     });
   });
 
@@ -308,15 +358,15 @@ describe('getTagPath', () => {
 
   describe('Case insensitivity', () => {
     it('should handle uppercase "NUMBERS" tag', () => {
-      expect(getTagPath('NUMBERS')).toBe('docs/lessons/numbers');
+      expect(getTagPath('NUMBERS')).toBe('docs/lessons/vocabulary/numbers');
     });
 
     it('should handle mixed case "Numbers" tag', () => {
-      expect(getTagPath('Numbers')).toBe('docs/lessons/numbers');
+      expect(getTagPath('Numbers')).toBe('docs/lessons/vocabulary/numbers');
     });
 
     it('should handle mixed case "CouNTers" tag', () => {
-      expect(getTagPath('CouNTers')).toBe('docs/lessons/numbers');
+      expect(getTagPath('CouNTers')).toBe('docs/lessons/vocabulary/numbers');
     });
 
     it('should handle uppercase vocabulary tag "COLORS"', () => {
@@ -374,9 +424,9 @@ describe('getTagPath', () => {
     });
 
     it('should return correct paths for numbers tags', () => {
-      expect(getTagPath('numbers')).toBe('docs/lessons/numbers');
-      expect(getTagPath('counting')).toBe('docs/lessons/numbers');
-      expect(getTagPath('counters')).toBe('docs/lessons/numbers');
+      expect(getTagPath('numbers')).toBe('docs/lessons/vocabulary/numbers');
+      expect(getTagPath('counting')).toBe('docs/lessons/vocabulary/numbers');
+      expect(getTagPath('counters')).toBe('docs/lessons/vocabulary/numbers');
     });
 
     it('should return correct paths for time-related tags', () => {

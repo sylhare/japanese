@@ -2,6 +2,9 @@ import Heading from '@theme/Heading';
 import clsx from 'clsx';
 import React from 'react';
 import type {ReactNode} from 'react';
+import MountainSvg from '@site/static/img/undraw_docusaurus_mountain.svg';
+import TreeSvg from '@site/static/img/undraw_docusaurus_tree.svg';
+import ReactSvg from '@site/static/img/undraw_docusaurus_react.svg';
 import styles from './styles.module.css';
 
 type FeatureItem = {
@@ -13,7 +16,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Structured Lessons',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: MountainSvg,
     description: (
       <>
         Learn Japanese step-by-step with organized lessons covering hiragana, katakana,
@@ -23,7 +26,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Interactive Vocabulary',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: TreeSvg,
     description: (
       <>
         Search and explore Japanese vocabulary with our comprehensive database.
@@ -33,7 +36,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Quick Reference',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: ReactSvg,
     description: (
       <>
         Access kana charts, conjugation tables, and grammar references instantly.

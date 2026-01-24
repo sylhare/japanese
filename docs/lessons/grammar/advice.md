@@ -11,13 +11,12 @@ Learn how to give advice and suggestions using **ほう が いい です**.
 
 ## Key Expressions
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| ほう が いい です | 方 が いい です | hou ga ii desu | it would be better to, should | expression |
-
-**Other forms:**
-- **ほう が いい です よ** (方 が いい です よ, hou ga ii desu yo) - you should (friendly)
-- **ほう が よろしい です** (方 が よろしい です, hou ga yoroshii desu) - you should (very polite)
+| Hiragana | Romaji | English | Type |
+|----------|--------|---------|------|
+| [verb た] + ほう が いい です | hou ga ii desu | you should (do) | expression |
+| [verb ない] + ほう が いい です | hou ga ii desu | you shouldn't (do) | expression |
+| [verb た] + ほう が いい です よ | hou ga ii desu yo | you should (friendly) | expression |
+| [verb た] + ほう が よろしい です | hou ga yoroshii desu | you should (very polite) | expression |
 
 ## Pattern: ほう が いい です
 

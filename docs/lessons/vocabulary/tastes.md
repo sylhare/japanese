@@ -15,6 +15,7 @@ Learning how to describe tastes and flavors is essential for talking about food 
 
 | Hiragana | Kanji | Romaji    | English        | Type        |
 |----------|-------|-----------|----------------|-------------|
+| あじ       | 味     | aji       | 👅 taste, flavor | noun        |
 | あまい      | 甘い    | amai      | 🍬 sweet       | い-adjective |
 | からい      | 辛い    | karai     | 🌶️ spicy, hot | い-adjective |
 | にがい      | 苦い    | nigai     | ☕ bitter       | い-adjective |
@@ -32,6 +33,8 @@ Learning how to describe tastes and flavors is essential for talking about food 
 | かたい      | 硬い    | katai     | 🥜 hard, firm         | い-adjective |
 | さくさく     | -     | sakusaku  | 🥨 crispy, crunchy    | adverb      |
 | ねばねば     | -     | nebaneba  | 🍡 sticky, gooey      | adverb      |
+| こい       | 濃い    | koi       | 🫖 strong, rich       | い-adjective |
+| うすい      | 薄い    | usui      | 💧 weak, bland        | い-adjective |
 
 ### Food Items (Examples)
 
@@ -48,8 +51,21 @@ Learning how to describe tastes and flavors is essential for talking about food 
 | くだもの     | 果物    | kudamono   | 🍓 fruit         | noun |
 | りょうり     | 料理    | ryouri     | 🍜 dish, cooking | noun |
 | たべもの     | 食べ物   | tabemono   | 🍱 food          | noun |
-| くすり      | 薬     | kusuri     | 💊 medicine      | noun |
-| あじ       | 味     | aji        | 👅 taste, flavor | noun |
+
+### Condiments
+
+| Hiragana | Kanji | Romaji     | English            | Type |
+|----------|-------|------------|--------------------|------|
+| しお       | 塩     | shio       | 🧂 salt            | noun |
+| さとう      | 砂糖    | satou      | 🍚 sugar           | noun |
+| しょうゆ     | 醤油    | shouyu     | 🫘 soy sauce       | noun |
+| みそ       | 味噌    | miso       | 🍲 miso            | noun |
+| す        | 酢     | su         | 🫗 vinegar         | noun |
+| ソース      | -     | soosu      | 🥫 sauce           | noun |
+| ケチャップ    | -     | kechappu   | 🍅 ketchup         | noun |
+| マヨネーズ    | -     | mayoneezu  | 🥚 mayonnaise      | noun |
+| わさび      | 山葵    | wasabi     | 🟢 wasabi          | noun |
+| からし      | 芥子    | karashi    | 🟡 mustard         | noun |
 
 ### Taste Combinations
 
@@ -59,54 +75,73 @@ Learning how to describe tastes and flavors is essential for talking about food 
 | すっぱあまい   | 酸っぱ甘い | suppaamai | 🍋🍬 sweet and sour               | い-adjective |
 | あますっぱい   | 甘酸っぱい | amasuppai | 🍯🍋 sweet and sour (alternative) | い-adjective |
 
+### Useful Verbs for Eating
+
+| Hiragana | Kanji | Romaji    | English                        | Type       |
+|----------|-------|-----------|--------------------------------|------------|
+| あじわう     | 味わう   | ajiwau    | 👅 to taste, to savor          | godan verb |
+| つける      | 付ける   | tsukeru   | 🫕 to dip, to put on           | ichidan verb |
+| かける      | 掛ける   | kakeru    | 🫗 to pour over, to sprinkle   | ichidan verb |
+| そそぐ      | 注ぐ    | sosogu    | 🍵 to pour (into)              | godan verb |
+| まぜる      | 混ぜる   | mazeru    | 🥄 to mix, to stir             | ichidan verb |
+| とる       | 取る    | toru      | 🥢 to take, to pick up         | godan verb   |
+
 ## Using Taste Adjectives in Sentences
 
-### Basic Sentence Pattern
+### Example Conversations
 
-**Pattern**: [Food] は [Taste] です。
-**Meaning**: [Food] is [taste].
+**Asking about taste:**
+- Q: これはどんなあじですか？ (Kore wa donna aji desu ka?) - What does this taste like?
+- A: このケーキはあまいです。 (Kono keeki wa amai desu.) - This cake is sweet.
 
-#### Examples:
-- このりんごはあまいです。 (Kono ringo wa amai desu.) - This apple is sweet.
-- このケーキはあまいです。 (Kono keeki wa amai desu.) - This cake is sweet.
-- そのピザはからいです。 (Sono piza wa karai desu.) - That pizza is spicy.
-- このカレーはからいです。 (Kono karee wa karai desu.) - This curry is spicy.
-- あのコーヒーはにがいです。 (Ano koohii wa nigai desu.) - That coffee is bitter.
-- このレモンはすっぱいです。 (Kono remon wa suppai desu.) - This lemon is sour.
-- このスープはちょっぱいです。 (Kono suupu wa choppai desu.) - This soup is salty.
+**Asking about spiciness:**
+- Q: このカレーはからいですか？ (Kono karee wa karai desu ka?) - Is this curry spicy?
+- A: はい、とてもからいです。 (Hai, totemo karai desu.) - Yes, it's very spicy.
 
-### Expressing Preferences
+**Asking about flavor strength:**
+- Q: このラーメンはどうですか？ (Kono raamen wa dou desu ka?) - How is this ramen?
+- A: あじがこいです。おいしい！ (Aji ga koi desu. Oishii!) - It has a rich flavor. Delicious!
 
-**Pattern**: [Taste] ものが [好き/嫌い] です。
-**Meaning**: I [like/dislike] [taste] things.
+**Asking about preferences:**
+- Q: あまいものはすきですか？ (Amai mono wa suki desu ka?) - Do you like sweet things?
+- A: はい、だいすきです。 (Hai, daisuki desu.) - Yes, I love them.
 
-#### Examples:
-- あまいものがすきです。 (Amai mono ga suki desu.) - I like sweet things.
-- からいものがきらいです。 (Karai mono ga kirai desu.) - I dislike spicy things.
-- すっぱいものがだいすきです。 (Suppai mono ga daisuki desu.) - I love sour things.
-- からい食べ物がにがてです。 (Karai tabemono ga nigate desu.) - I'm not good with spicy food.
-- すっぱい果物がすきです。 (Suppai kudamono ga suki desu.) - I like sour fruits.
-- ちょっぱい料理がすきです。 (Choppai ryouri ga suki desu.) - I like salty dishes.
+**Asking about texture:**
+- Q: このパンはどうですか？ (Kono pan wa dou desu ka?) - How is this bread?
+- A: やわらかくておいしいです。 (Yawarakakute oishii desu.) - It's soft and delicious.
 
-### Asking About Taste
+**Describing food:**
+- Q: このおちゃはおいしいですか？ (Kono ocha wa oishii desu ka?) - Is this tea good?
+- A: ちょっとうすいです。 (Chotto usui desu.) - It's a bit weak/bland.
 
-**Question**: これはどんな味ですか？ (Kore wa donna aji desu ka?)
-**Meaning**: What does this taste like?
+### Using Taste Verbs
 
-**Answer**: これは[味]です。 (Kore wa [aji] desu.)
-**Meaning**: This is [taste].
+**あじわう (to taste, to savor)**:
+- このりょうりをあじわってください。 (Kono ryouri o ajiwatte kudasai.) - Please savor this dish.
+- ゆっくりあじわいましょう。 (Yukkuri ajiwaimashou.) - Let's take our time and taste it.
 
-### Describing Food Quality
+**つける (to dip, to put on)**:
+- しょうゆにつけてください。 (Shouyu ni tsukete kudasai.) - Please dip it in soy sauce.
+- てんぷらをしおにつける。 (Tenpura o shio ni tsukeru.) - Dip the tempura in salt.
+- ソースをつけますか？ (Soosu o tsukemasu ka?) - Would you like sauce (on it)?
 
-**Pattern**: この[食べ物]は[形容詞]です。
-**Meaning**: This [food] is [adjective].
+**かける (to pour over, to sprinkle)**:
+- ごはんにカレーをかける。 (Gohan ni karee o kakeru.) - Pour curry over rice.
+- サラダにドレッシングをかけてください。 (Sarada ni doresshingu o kakete kudasai.) - Please pour dressing on the salad.
+- しおをかけますか？ (Shio o kakemasu ka?) - Shall I sprinkle salt (on it)?
 
-#### Examples:
-- このりょうりはおいしいです。 (Kono ryouri wa oishii desu.) - This dish is delicious.
-- このパンはやわらかいです。 (Kono pan wa yawarakai desu.) - This bread is soft.
-- このせんべいはかたいです。 (Kono senbei wa katai desu.) - This rice cracker is hard.
-- このせんべいはさくさくです。 (Kono senbei wa sakusaku desu.) - This rice cracker is crispy.
-- このおもちはねばねばです。 (Kono omochi wa nebaneba desu.) - This mochi is sticky.
+**そそぐ (to pour into)**:
+- おちゃをそそいでください。 (Ocha o sosoide kudasai.) - Please pour the tea.
+- コップにみずをそそぐ。 (Koppu ni mizu o sosogu.) - Pour water into the glass.
+
+**まぜる (to mix, to stir)**:
+- よくまぜてください。 (Yoku mazete kudasai.) - Please mix well.
+- なっとうをまぜる。 (Nattou o mazeru.) - Mix the natto.
+
+**とる (to take, to pick up)**:
+- おさらからにくをとってください。 (Osara kara niku o totte kudasai.) - Please take meat from the plate.
+- やきにくをとる。 (Yakiniku o toru.) - Take the grilled meat.
+- すきなものをとってください。 (Suki na mono o totte kudasai.) - Please take whatever you like.
 
 ## Cultural Notes
 
@@ -118,4 +153,4 @@ Learning how to describe tastes and flavors is essential for talking about food 
 - **Regional**: Different regions have different taste preferences
 
 
-味を楽しんでください！(Aji o tanoshinde kudasai - Enjoy the taste!)
+あじをたのしんでください！(Aji o tanoshinde kudasai - Enjoy the taste!)

@@ -27,7 +27,7 @@ export const mockVocabularyData = {
       romaji: 'amai',
       meaning: 'sweet',
       category: 'vocabulary',
-      tags: ['tastes'],
+      tags: ['tastes', 'particle-guide'],
       type: 'い-adjective',
     },
     {

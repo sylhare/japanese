@@ -6,6 +6,8 @@ const yaml = require('js-yaml');
 
 const DEFAULT_LESSONS_DIR = path.join(__dirname, '../docs/lessons');
 const VOCABULARY_FILE = path.join(__dirname, '../src/data/vocabulary.yaml');
+const N5_REFERENCE_FILE = path.join(__dirname, '../docs/reference/n5-vocabulary.md');
+const N5_VOCABULARY_FILE = path.join(__dirname, '../src/data/n5-vocabulary.json');
 const VOCAB_TABLE_PATTERN = /## [^#\n]+[\s\S]*?(\|.*?Hiragana.*?\|[\s\S]*?)(?=\n##|\n## Next Steps|\n## Tips|\n## Remember|$)/gi;
 
 /**
@@ -81,20 +83,107 @@ function isParticle(type) {
  */
 function stripEmojis(text) {
   if (!text) return text;
-  // Whitelist approach: keep only:
-  // - Letters (including Unicode letters for accents: à, é, ñ, etc.) - \p{L}
-  // - Numbers (0-9) - \p{N}
-  // - Spaces - \s
-  // - Common punctuation: . , - ' ( ) : ; / &
-  // Note: This removes emoji styling characters but keeps base characters (e.g., "8️⃣" -> "8")
-  // because the base digit "8" (U+0038) matches \p{N} and is kept as a valid number
   text = text.replace(/[^\p{L}\p{N}\s.,'():;/&-]/gu, '').trim();
-
-  // Remove leading numbers followed by optional spaces (e.g., "8 August" -> "August")
-  // This is needed because keycap emojis like "8️⃣" have a digit base character that survives
-  // the whitelist filter (the emoji styling is removed, but the digit remains)
   text = text.replace(/^\p{N}+(\s+)?/u, '');
   return text.trim();
+}
+
+/**
+ * Normalize a vocabulary token for matching across sources.
+ * @param {string} token - Raw token
+ * @returns {string} Normalized token
+ */
+function normalizeToken(token) {
+  if (!token) return '';
+  return token
+    .replace(/[()（）]/g, '')
+    .replace(/[~～]/g, '')
+    .replace(/\s+/g, '')
+    .toLowerCase();
+}
+
+function addTokensFromCell(cell, tokens) {
+  if (!cell) return;
+  const cleaned = cell.replace(/（.*?）/g, '').replace(/\(.*?\)/g, '').trim();
+  const parts = cleaned.split(/[\/／]/);
+  parts.forEach(part => {
+    const normalized = normalizeToken(part);
+    if (normalized) {
+      tokens.add(normalized);
+    }
+  });
+}
+
+/**
+ * Extract N5 vocabulary tokens from the N5 reference article.
+ * @returns {string[]} Array of normalized tokens
+ */
+function extractN5VocabularyTokens() {
+  if (!fs.existsSync(N5_REFERENCE_FILE)) {
+    return [];
+  }
+
+  const content = fs.readFileSync(N5_REFERENCE_FILE, 'utf8');
+  const tokens = new Set();
+  const lines = content.split('\n');
+
+  for (let index = 0; index < lines.length; index++) {
+    const line = lines[index];
+    if (!line.startsWith('|')) {
+      continue;
+    }
+
+    const headerCells = parseRow(line);
+    const hiraganaIdx = findColumnIndex(headerCells, 'Hiragana');
+    const kanjiIdx = findColumnIndex(headerCells, 'Kanji');
+    const romajiIdx = findColumnIndex(headerCells, 'Romaji');
+
+    if (hiraganaIdx === -1 || romajiIdx === -1) {
+      continue;
+    }
+
+    index += 1;
+    for (; index < lines.length; index++) {
+      const row = lines[index];
+      if (!row.startsWith('|')) {
+        break;
+      }
+      if (row.match(/^\|\s*[-:]+/)) {
+        continue;
+      }
+
+      const cells = parseRow(row);
+      const hiragana = cells[hiraganaIdx] || '';
+      const kanji = kanjiIdx >= 0 ? cells[kanjiIdx] : '';
+      const romaji = cells[romajiIdx] || '';
+
+      if (!hiragana || hiragana.match(/^-+$/)) {
+        continue;
+      }
+
+      addTokensFromCell(hiragana, tokens);
+      addTokensFromCell(kanji, tokens);
+      addTokensFromCell(romaji, tokens);
+    }
+  }
+
+  return Array.from(tokens).sort();
+}
+
+function updateN5VocabularyData() {
+  const tokens = extractN5VocabularyTokens();
+  const payload = { tokens };
+  const nextContent = JSON.stringify(payload, null, 2) + '\n';
+  const existingContent = fs.existsSync(N5_VOCABULARY_FILE)
+    ? fs.readFileSync(N5_VOCABULARY_FILE, 'utf8')
+    : '';
+
+  if (existingContent !== nextContent) {
+    fs.writeFileSync(N5_VOCABULARY_FILE, nextContent);
+    console.log('✅ N5 vocabulary data updated successfully!');
+  } else {
+    console.log('✅ N5 vocabulary data is up to date (no changes needed)');
+  }
 }
 
 /**
@@ -339,41 +428,34 @@ function regenerateIds(vocabulary) {
 /**
  * Merge extracted vocabulary with existing vocabulary, filtering out particles.
  * This function is idempotent - running it multiple times produces the same result.
+ * When duplicates are found (same hiragana-romaji-meaning), tags are merged.
  * @param {Object} existing - Existing vocabulary data
  * @param {Object} extracted - Newly extracted vocabulary data
  * @returns {Object} Merged vocabulary data
  */
 function mergeVocabulary(existing, extracted) {
-  const existingMap = new Map();
-  const extractedMap = new Map();
-
-  existing.vocabulary.forEach(item => {
-    existingMap.set(item.id, item);
-  });
-
-  extracted.vocabulary.forEach(item => {
-    extractedMap.set(item.id, item);
-  });
-
   const contentMap = new Map();
 
-  existing.vocabulary.forEach(item => {
+  const mergeItem = (item) => {
     if (isParticle(item.type)) {
       return;
     }
     const contentKey = `${item.hiragana}-${item.romaji}-${item.meaning}`.toLowerCase();
-    contentMap.set(contentKey, item);
-  });
+    
+    if (contentMap.has(contentKey)) {
+      const existingItem = contentMap.get(contentKey);
+      const mergedTags = [...new Set([...existingItem.tags, ...item.tags])].sort();
+      contentMap.set(contentKey, {
+        ...existingItem,
+        tags: mergedTags,
+      });
+    } else {
+      contentMap.set(contentKey, { ...item });
+    }
+  };
 
-  extracted.vocabulary.forEach(item => {
-    if (isParticle(item.type)) {
-      return;
-    }
-    const contentKey = `${item.hiragana}-${item.romaji}-${item.meaning}`.toLowerCase();
-    if (!contentMap.has(contentKey)) {
-      contentMap.set(contentKey, item);
-    }
-  });
+  existing.vocabulary.forEach(mergeItem);
+  extracted.vocabulary.forEach(mergeItem);
 
   const allCategories = new Set([...existing.categories, ...extracted.categories]);
 
@@ -391,38 +473,103 @@ function mergeVocabulary(existing, extracted) {
 }
 
 /**
- * Main execution function to extract and merge vocabulary.
+ * Parse command line arguments.
+ * @returns {Object} Parsed arguments
  */
-function main() {
+function parseArgs() {
+  const args = process.argv.slice(2);
+  return {
+    force: args.includes('--force') || args.includes('-f'),
+    help: args.includes('--help') || args.includes('-h'),
+  };
+}
+
+/**
+ * Display help message.
+ */
+function showHelp() {
+  console.log(`
+Usage: node extract-vocabulary.js [options]
+
+Options:
+  -f, --force    Force recreate vocabulary from scratch (ignore existing entries)
+  -h, --help     Show this help message
+
+Examples:
+  node extract-vocabulary.js           # Merge with existing vocabulary
+  node extract-vocabulary.js --force   # Recreate vocabulary from scratch
+  npm run extract-vocabulary           # Merge with existing vocabulary
+  npm run extract-vocabulary -- --force # Recreate vocabulary from scratch
+`);
+}
+
+/**
+ * Main execution function to extract and merge vocabulary.
+ * @param {Object} options - Execution options
+ * @param {boolean} options.force - If true, recreate vocabulary from scratch
+ */
+function main(options = {}) {
+  const { force = false } = options;
+
+  if (force) {
+    console.log('🔄 Force mode: Recreating vocabulary from scratch...');
+  }
   console.log('🔍 Scanning lesson files for vocabulary...');
 
-  const existing = loadExistingVocabulary();
+  const existing = force 
+    ? { vocabulary: [], categories: ['all'], sortOptions: [] }
+    : loadExistingVocabulary();
   const extracted = scanAllLessons();
   const merged = mergeVocabulary(existing, extracted);
 
-  const newItems = merged.vocabulary.length - existing.vocabulary.length;
+  const previousCount = force ? 0 : existing.vocabulary.length;
+  const newItems = merged.vocabulary.length - previousCount;
   const totalItems = merged.vocabulary.length;
 
-  if (newItems > 0) {
+  if (force) {
+    console.log(`📚 Extracted ${totalItems} vocabulary items`);
+  } else if (newItems > 0) {
     console.log(`📚 Found ${newItems} new vocabulary items`);
   } else {
     console.log('📚 No new vocabulary items found');
   }
   console.log(`📖 Total vocabulary items: ${totalItems}`);
 
-  const existingContent = yaml.dump(existing, { indent: 2, lineWidth: -1, noRefs: true });
+  const existingContent = force 
+    ? '' 
+    : yaml.dump(existing, { indent: 2, lineWidth: -1, noRefs: true });
   const newContent = yaml.dump(merged, { indent: 2, lineWidth: -1, noRefs: true });
 
-  if (existingContent !== newContent) {
+  if (force || existingContent !== newContent) {
     fs.writeFileSync(VOCABULARY_FILE, newContent);
-    console.log('✅ Vocabulary file updated successfully!');
+    if (force) {
+      console.log('✅ Vocabulary file recreated successfully!');
+    } else {
+      console.log('✅ Vocabulary file updated successfully!');
+    }
   } else {
     console.log('✅ Vocabulary file is up to date (no changes needed)');
   }
+
+  updateN5VocabularyData();
 }
 
 if (require.main === module) {
-  main();
+  const args = parseArgs();
+  
+  if (args.help) {
+    showHelp();
+    process.exit(0);
+  }
+  
+  main({ force: args.force });
 }
 
-module.exports = { extractVocabularyFromFile, scanAllLessons, mergeVocabulary };
+module.exports = {
+  extractVocabularyFromFile,
+  extractN5VocabularyTokens,
+  scanAllLessons,
+  mergeVocabulary,
+  parseArgs,
+  main,
+};

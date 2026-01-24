@@ -18,9 +18,9 @@ test.describe('Intro Page', () => {
       await expect(heading).toBeVisible();
     });
 
-    test('should display the quick links section', async ({ page }) => {
-      const quickLinksHeading = page.getByRole('heading', { name: /quick links/i });
-      await expect(quickLinksHeading).toBeVisible();
+    test('should display the reference section', async ({ page }) => {
+      const referenceHeading = page.getByRole('heading', { name: /reference/i });
+      await expect(referenceHeading).toBeVisible();
     });
 
     test('should display the learning resources section', async ({ page }) => {
@@ -29,7 +29,16 @@ test.describe('Intro Page', () => {
     });
   });
 
-  test.describe('Quick Links Section', () => {
+  test.describe('Reference Section', () => {
+    test('should navigate to Dictionary', async ({ page }) => {
+      const dictionaryLink = page.locator('a[href*="/dictionary"]').first();
+      await expect(dictionaryLink).toBeVisible();
+      await expect(dictionaryLink).toContainText(/dictionary/i);
+      await dictionaryLink.click();
+      await verifyPageIsFound(page);
+      await expect(page.getByRole('heading', { name: /vocabulary|dictionary/i }).first()).toBeVisible();
+    });
+
     test('should navigate to Hiragana Chart', async ({ page }) => {
       const hiraganaLink = page.locator('a[href*="hiragana-chart"]').first();
       await expect(hiraganaLink).toBeVisible();
@@ -47,24 +56,6 @@ test.describe('Intro Page', () => {
       await verifyPageIsFound(page);
       await expect(page.getByRole('heading', { name: /katakana/i }).first()).toBeVisible();
     });
-
-    test('should navigate to Grammar Particles', async ({ page }) => {
-      const particlesLink = page.locator('a[href*="grammar-particles"]').first();
-      await expect(particlesLink).toBeVisible();
-      await expect(particlesLink).toContainText(/grammar particles/i);
-      await particlesLink.click();
-      await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /particles|grammar/i }).first()).toBeVisible();
-    });
-
-    test('should navigate to Verb Conjugation', async ({ page }) => {
-      const conjugationLink = page.locator('a[href*="conjugation"]').first();
-      await expect(conjugationLink).toBeVisible();
-      await expect(conjugationLink).toContainText(/verb conjugation|conjugation/i);
-      await conjugationLink.click();
-      await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /conjugation|verb/i }).first()).toBeVisible();
-    });
   });
 
   test.describe('Learning Resources Tiles', () => {
@@ -74,24 +65,22 @@ test.describe('Intro Page', () => {
       expect(tileCount).toBeGreaterThanOrEqual(2);
     });
 
-    test('should navigate to Lessons from tile', async ({ page }) => {
-      const lessonsCard = page.locator('a[class*="lessonCard"][href*="/lessons/intro"]').first();
-      await expect(lessonsCard).toBeVisible();
-      await expect(lessonsCard).toContainText(/lessons/i);
-      await expect(lessonsCard).toContainText(/structured learning path/i);
-      await lessonsCard.click();
+    test('should navigate to Grammar from tile', async ({ page }) => {
+      const grammarCard = page.locator('a[class*="lessonCard"][href*="/grammar"]').first();
+      await expect(grammarCard).toBeVisible();
+      await expect(grammarCard).toContainText(/grammar/i);
+      await grammarCard.click();
       await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /introduction|lesson/i }).first()).toBeVisible();
+      await expect(page.getByRole('heading', { name: /grammar/i }).first()).toBeVisible();
     });
 
-    test('should navigate to Reference from tile', async ({ page }) => {
-      const referenceCard = page.locator('a[class*="lessonCard"][href*="/reference"]').first();
-      await expect(referenceCard).toBeVisible();
-      await expect(referenceCard).toContainText(/reference/i);
-      await expect(referenceCard).toContainText(/quick lookup tools/i);
-      await referenceCard.click();
+    test('should navigate to Hiragana Chart from tile', async ({ page }) => {
+      const hiraganaCard = page.locator('a[class*="lessonCard"][href*="hiragana-chart"]').first();
+      await expect(hiraganaCard).toBeVisible();
+      await expect(hiraganaCard).toContainText(/hiragana/i);
+      await hiraganaCard.click();
       await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /reference/i }).first()).toBeVisible();
+      await expect(page.getByRole('heading', { name: /hiragana/i }).first()).toBeVisible();
     });
   });
 
@@ -120,7 +109,7 @@ test.describe('Intro Page', () => {
 
         const href = await tile.getAttribute('href');
         expect(href).toBeTruthy();
-        expect(href).toMatch(/\/(docs\/lessons|docs\/reference|vocabulary|dictionary|japanese\/docs)/);
+        expect(href).toMatch(/\/(docs\/lessons|docs\/reference|reference|vocabulary|dictionary|japanese\/docs)/);
       }
     });
 
@@ -146,16 +135,19 @@ test.describe('Intro Page', () => {
       await expect(mainHeading).toBeVisible();
     });
 
-    test('should display reference materials section', async ({ page }) => {
-      const referenceMaterialsHeading = page.getByRole('heading', { name: /reference materials/i });
-      await expect(referenceMaterialsHeading).toBeVisible();
+    test('should display reference section', async ({ page }) => {
+      const referenceHeading = page.getByRole('heading', { name: /reference/i });
+      await expect(referenceHeading).toBeVisible();
     });
   });
 
   test.describe('Link Validation', () => {
-    test('should have valid href attributes for all quick links', async ({ page }) => {
-      const quickLinksSection = page.locator('text=/quick links/i').locator('..');
-      const links = quickLinksSection.locator('a[href]');
+    test('should have valid href attributes for all reference links', async ({ page }) => {
+      const referenceSection = page
+        .locator('article')
+        .getByRole('heading', { name: /reference/i })
+        .locator('xpath=following-sibling::*[1]');
+      const links = referenceSection.locator('a[href]');
       const linkCount = await links.count();
 
       expect(linkCount).toBeGreaterThan(0);
@@ -168,9 +160,13 @@ test.describe('Intro Page', () => {
       }
     });
 
-    test('should not have any broken internal links in quick links', async ({ page }) => {
-      const quickLinksSection = page.locator('text=/quick links/i').locator('..');
-      const links = quickLinksSection.locator('a[href]');
+    test('should not have any broken internal links in reference section', async ({ page }) => {
+      test.slow();
+      const referenceSection = page
+        .locator('article')
+        .getByRole('heading', { name: /reference/i })
+        .locator('xpath=following-sibling::*[1]');
+      const links = referenceSection.locator('a[href]');
       const linkCount = await links.count();
 
       expect(linkCount).toBeGreaterThan(0);
@@ -181,17 +177,14 @@ test.describe('Intro Page', () => {
         
         expect(href).toBeTruthy();
         
-        // Only test internal links
         const isExternal = href?.startsWith('http');
         if (isExternal) continue;
-        
-        // Navigate directly using href instead of clicking (avoids webpack overlay issues)
+
         if (href) {
           await page.goto(href);
           await page.waitForLoadState('networkidle');
           await verifyPageIsFound(page);
-          
-          // Navigate back to intro page
+
           await page.goto('./docs/intro');
           await page.waitForLoadState('networkidle');
         }

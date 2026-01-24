@@ -11,12 +11,11 @@ Learn how to express that something is **too much** or **excessive** using **す
 
 ## Key Expressions
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| すぎる | 過ぎる | sugiru | too much, excessive | expression |
-
-**Other forms:**
-- **すぎます** (過ぎます, sugimasu) - too much, excessive (polite)
+| Hiragana | Romaji | English | Type |
+|----------|--------|---------|------|
+| [verb stem] + すぎる | sugiru | did too much | expression |
+| [い-adj without い] + すぎる | sugiru | too [adj] | expression |
+| [な-adj] + すぎる | sugiru | too [adj] | expression |
 
 ## Pattern: [verb/adjective] + すぎる
 

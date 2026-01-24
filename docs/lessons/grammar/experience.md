@@ -11,13 +11,11 @@ Learn how to talk about past experiences using the **こと が ある** pattern
 
 ## Key Expressions
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| こと が ある | 事 が ある | koto ga aru | have experienced, have done before | expression |
-
-**Other forms:**
-- **こと が あります** (事 が あります, koto ga arimasu) - have experienced (polite)
-- **こと が ありません** (事 が ありません, koto ga arimasen) - have never experienced (polite)
+| Hiragana | Romaji | English | Type |
+|----------|--------|---------|------|
+| [verb た] + こと が ある | koto ga aru | have experienced | expression |
+| [verb た] + こと が あります | koto ga arimasu | have experienced (polite) | expression |
+| [verb た] + こと が ありません | koto ga arimasen | have never experienced (polite) | expression |
 
 ## Pattern: [verb た] + こと が ある
 

@@ -11,10 +11,10 @@ Learn how to list items using **と** (exhaustive) and **や** (non-exhaustive e
 
 ## Key Expressions
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| と | - | to | and (exhaustive list) | particle |
-| や | - | ya | or more, such as (examples) | particle |
+| Hiragana | Romaji | English | Type |
+|----------|--------|---------|------|
+| A と B | to | A and B (exhaustive list) | particle |
+| A や B | ya | A, B, etc. (examples) | particle |
 
 ## と (And) - Exhaustive List
 

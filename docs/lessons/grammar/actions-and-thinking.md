@@ -11,13 +11,13 @@ Learn how to express ongoing actions, trying things, and thoughts.
 
 ## Key Expressions
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| て いる | て いる | te iru | currently doing, in the state of | expression |
-| を かんがえる | を 考える | wo kangaeru | think about (something) | expression |
-| と おもう | と 思う | to omou | think that | expression |
-| て みる | て 見る | te miru | try doing | expression |
-| て みよう | て 見よう | te miyou | let's try doing | expression |
+| Hiragana | Romaji | English | Type |
+|----------|--------|---------|------|
+| [verb て] + いる | te iru | currently doing | expression |
+| [noun] + を かんがえる | wo kangaeru | think about (something) | expression |
+| [sentence] + と おもう | to omou | think that | expression |
+| [verb て] + みる | te miru | try doing | expression |
+| [verb て] + みよう | te miyou | let's try doing | expression |
 
 ## Continuous Action: ている
 

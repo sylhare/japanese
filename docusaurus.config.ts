@@ -144,7 +144,7 @@ const config: Config = {
           items: [
             {
               label: 'Lessons',
-              to: '/docs/lessons/intro',
+              to: '/docs/intro',
             },
             {
               label: 'Grammar',
