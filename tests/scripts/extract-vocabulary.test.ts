@@ -295,6 +295,7 @@ describe('Vocabulary Extraction', () => {
 
       vocabulary.forEach(item => {
         expect(item.kanji).toBeUndefined();
+        expect(Object.prototype.hasOwnProperty.call(item, 'kanji')).toBe(false);
       });
 
       const houGaIi = vocabulary.find(item => item.hiragana === '[verb た] + ほう が いい です');
@@ -323,6 +324,17 @@ describe('Vocabulary Extraction', () => {
         expect(item).toHaveProperty('category');
         expect(item).toHaveProperty('tags');
       });
+    });
+
+    it('should not produce YAML undefined tags when kanji is missing', () => {
+      const filePath = path.join(fixturesDir, 'no-kanji-column.md');
+      const vocabulary = extractVocabularyFromFile(filePath);
+
+      const data = { vocabulary };
+      const yamlOutput = yaml.dump(data, { indent: 2, lineWidth: -1, noRefs: true });
+
+      expect(yamlOutput).not.toContain('!<tag:yaml.org,2002:js/undefined>');
+      expect(yamlOutput).not.toContain('kanji:');
     });
 
     it('should generate unique and incremental IDs across multiple tables in the same file', () => {
