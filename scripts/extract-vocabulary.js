@@ -275,16 +275,21 @@ function extractFromTable(tableContent, filePath, startIndex = 0) {
     const lessonName = path.basename(filePath, '.md');
     tags.push(lessonName);
 
-    vocabulary.push({
+    const item = {
       id,
       hiragana: hiragana || '',
-      kanji: kanji && kanji !== '-' ? kanji : undefined,
       romaji: romaji || '',
       meaning: english || '',
       category,
       tags,
       type: type || 'unknown',
-    });
+    };
+
+    if (kanji && kanji !== '-') {
+      item.kanji = kanji;
+    }
+
+    vocabulary.push(item);
 
     itemIndex++;
   }
