@@ -65,6 +65,30 @@ test.describe('Vocabulary Pages', () => {
         await verifyPageIsFound(page);
         await expect(page.getByRole('heading', { name: /confusing kanji/i }).first()).toBeVisible();
       });
+
+      test('should navigate to Clothes from sidebar', async ({ page }) => {
+        const clothesLink = page.locator('a.menu__link[href$="/vocabulary/clothes"]').first();
+        await expect(clothesLink).toBeVisible();
+        await clothesLink.click();
+        await verifyPageIsFound(page);
+        await expect(page.getByRole('heading', { name: /clothes|wearing/i }).first()).toBeVisible();
+      });
+
+      test('should navigate to Weather from sidebar', async ({ page }) => {
+        const weatherLink = page.locator('a.menu__link[href$="/vocabulary/weather"]').first();
+        await expect(weatherLink).toBeVisible();
+        await weatherLink.click();
+        await verifyPageIsFound(page);
+        await expect(page.getByRole('heading', { name: /weather/i }).first()).toBeVisible();
+      });
+
+      test('should navigate to Cooking from sidebar', async ({ page }) => {
+        const cookingLink = page.locator('a.menu__link[href$="/vocabulary/cooking"]').first();
+        await expect(cookingLink).toBeVisible();
+        await cookingLink.click();
+        await verifyPageIsFound(page);
+        await expect(page.getByRole('heading', { name: /cooking|food prep/i }).first()).toBeVisible();
+      });
     });
 
     test.describe('Landing Page Cards (LessonList)', () => {
@@ -114,6 +138,30 @@ test.describe('Vocabulary Pages', () => {
         await kanjiCard.click();
         await verifyPageIsFound(page);
         await expect(page.getByRole('heading', { name: /confusing kanji/i }).first()).toBeVisible();
+      });
+
+      test('should navigate to Clothes from landing page', async ({ page }) => {
+        const clothesCard = page.locator('a[class*="lessonCard"][href$="/vocabulary/clothes"]').first();
+        await expect(clothesCard).toBeVisible();
+        await clothesCard.click();
+        await verifyPageIsFound(page);
+        await expect(page.getByRole('heading', { name: /clothes|wearing/i }).first()).toBeVisible();
+      });
+
+      test('should navigate to Weather from landing page', async ({ page }) => {
+        const weatherCard = page.locator('a[class*="lessonCard"][href$="/vocabulary/weather"]').first();
+        await expect(weatherCard).toBeVisible();
+        await weatherCard.click();
+        await verifyPageIsFound(page);
+        await expect(page.getByRole('heading', { name: /weather/i }).first()).toBeVisible();
+      });
+
+      test('should navigate to Cooking from landing page', async ({ page }) => {
+        const cookingCard = page.locator('a[class*="lessonCard"][href$="/vocabulary/cooking"]').first();
+        await expect(cookingCard).toBeVisible();
+        await cookingCard.click();
+        await verifyPageIsFound(page);
+        await expect(page.getByRole('heading', { name: /cooking|food prep/i }).first()).toBeVisible();
       });
     });
 
@@ -304,6 +352,29 @@ test.describe('Vocabulary Pages', () => {
         await verifyPageIsFound(page);
         await expect(page.getByRole('heading', { name: /counters|frequency/i }).first()).toBeVisible();
       });
+    });
+  });
+
+  test.describe('Individual Vocabulary Pages', () => {
+    test('should load Clothes page directly', async ({ page }) => {
+      await page.goto('./docs/lessons/vocabulary/clothes');
+      await page.waitForLoadState('networkidle');
+      await verifyPageIsFound(page);
+      await expect(page.getByRole('heading', { name: /clothes|wearing/i }).first()).toBeVisible();
+    });
+
+    test('should load Weather page directly', async ({ page }) => {
+      await page.goto('./docs/lessons/vocabulary/weather');
+      await page.waitForLoadState('networkidle');
+      await verifyPageIsFound(page);
+      await expect(page.getByRole('heading', { name: /weather/i }).first()).toBeVisible();
+    });
+
+    test('should load Cooking page directly', async ({ page }) => {
+      await page.goto('./docs/lessons/vocabulary/cooking');
+      await page.waitForLoadState('networkidle');
+      await verifyPageIsFound(page);
+      await expect(page.getByRole('heading', { name: /cooking|food prep/i }).first()).toBeVisible();
     });
   });
 });

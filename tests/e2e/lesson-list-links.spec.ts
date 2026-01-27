@@ -30,6 +30,9 @@ const vocabularyLinks = [
   { name: 'Time', hrefPattern: '/time', headingPattern: /time|dates/i },
   { name: 'Numbers', hrefPattern: '/numbers', headingPattern: /numbers|counting/i },
   { name: 'Family', hrefPattern: 'family', headingPattern: /family|relationships/i },
+  { name: 'Clothes', hrefPattern: 'clothes', headingPattern: /clothes|wearing/i },
+  { name: 'Weather', hrefPattern: 'weather', headingPattern: /weather/i },
+  { name: 'Cooking', hrefPattern: 'cooking', headingPattern: /cooking|food prep/i },
   { name: 'Confusing Kanji', hrefPattern: 'confusing-kanji', headingPattern: /confusing kanji/i },
 ];
 
