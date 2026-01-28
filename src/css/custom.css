@@ -131,13 +131,33 @@
   .theme-doc-markdown.markdown table td {
     padding: 0.75rem 0.5rem;
   }
+}
 
-  /* Code blocks with ASCII art on mobile - prevent wrapping and enable horizontal scroll */
-  .theme-doc-markdown.markdown pre,
-  .theme-doc-markdown.markdown code {
-    white-space: pre;
-    overflow-x: auto;
-    word-wrap: normal;
-    word-break: normal;
+/* ASCII art and code block styling - ensure monospace and no wrapping */
+.theme-doc-markdown.markdown pre {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.theme-doc-markdown.markdown pre code {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Mono', 'Droid Sans Mono', 'Source Code Pro', monospace;
+  white-space: pre;
+  word-wrap: normal;
+  word-break: normal;
+  overflow-wrap: normal;
+  line-height: 1.4;
+  display: block;
+  min-width: max-content;
+}
+
+/* Mobile-specific code block styling */
+@media (max-width: 768px) {
+  .theme-doc-markdown.markdown pre {
+    font-size: 0.75rem;
+    padding: 0.75rem;
+  }
+  
+  .theme-doc-markdown.markdown pre code {
+    font-size: 0.75rem;
   }
 }
