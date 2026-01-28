@@ -1,6 +1,6 @@
 ---
 sidebar_position: 6
-title: Clothes and Wearing
+title: 👕 Clothes and Wearing
 description: Learn basic clothing vocabulary and which verb to use for "wear"
 tags: [vocabulary, clothes, clothing, wear]
 ---
@@ -84,7 +84,7 @@ All "wear" verbs use the particle **を** to mark the clothing item:
 - まいにち くつしたを はきます。 — *mainichi kutsushita o hakimasu.* — I wear socks every day.
 - かのじょは きれいな ドレスを きている。 — *kanojo wa kirei na doresu o kite iru.* — She is wearing a beautiful dress.
 
-:::idea Special Cases
+:::info Special Cases
 
 **ている = state, not action** — With clothing verbs, ている describes a current state ("is wearing") rather than an ongoing action:
 - きている = is wearing (right now)

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Reading Numbers
+title: 📖 Reading Numbers
 description: Learn how to read and group Japanese numbers
 tags: [numbers, counting, basics]
 ---
@@ -13,7 +13,7 @@ Learn how to read any number in Japanese, including sound changes and the unique
 Make sure you've learned the [Basic Numbers](./basics) (1-10 and place value units) before starting this lesson!
 :::
 
----
+
 
 ## Quick Reference: Basic Numbers (1-10)
 
@@ -30,7 +30,7 @@ Make sure you've learned the [Basic Numbers](./basics) (1-10 and place value uni
 | 9 | きゅう / く | kyuu / ku | nine |
 | 10 | じゅう | juu | ten |
 
----
+
 
 ## Place Values
 
@@ -44,7 +44,7 @@ Make sure you've learned the [Basic Numbers](./basics) (1-10 and place value uni
 | Ten Thousand | 万 | まん | man | 10,000 |
 | Hundred Million | 億 | おく | oku | 100,000,000 |
 
----
+
 
 ## Number Grouping System
 
@@ -65,7 +65,7 @@ Japanese: 100,0000 (groups of 4)
     おく       まん
 ```
 
----
+
 
 ## Reading Examples
 
@@ -120,7 +120,7 @@ Watch for sound changes at 3,000 and 8,000!
 - 8,000: は**っせん** (not はちせん)
 :::
 
----
+
 
 ## Large Numbers
 
@@ -145,7 +145,7 @@ Read as: **せん にひゃく まん**
 - Group by 4: 2050 | 0000
 - Read: にせん ごじゅう まん (nisen gojuu man)
 
----
+
 
 ## Practice Examples
 
@@ -158,7 +158,7 @@ Read as: **せん にひゃく まん**
   - (sen nihyaku sanjuu yon man gosen roppyaku nanajuu hachi)
   - Grouped as 1234,5678
 
----
+
 
 ## Key Points to Remember
 
@@ -170,7 +170,7 @@ Read as: **せん にひゃく まん**
 4. Use **よん** (not し) and **なな** (not しち) in most contexts
 5. **いち** (1) is often dropped before じゅう, ひゃく, せん but kept with まん
 
----
+
 
 ## Common Mistakes
 
@@ -183,7 +183,7 @@ Read as: **せん にひゃく まん**
 ❌ **Wrong:** Grouping 1,234,567 like English (1,234,567)
 ✓ **Correct:** Group like Japanese (123,4567)
 
----
+
 
 ## Next Steps
 
