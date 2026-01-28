@@ -1,5 +1,5 @@
 ---
-sidebar_position: 12
+sidebar_position: 13
 title: Appearance - そう / みたい
 description: Learn expressions for describing how things look (そう, みたい)
 tags: [grammar, appearance, そう, みたい]

@@ -88,8 +88,8 @@ Using たべる (to eat) as an example:
 
 <NextSteps items={[
   {
-    title: "Future Tense",
-    description: "Learn how to express future actions and intentions",
-    to: "./future"
+    title: "Past - た form",
+    description: "Review the past tense conjugation of Japanese verbs",
+    to: "./ta-form"
   }
 ]} />

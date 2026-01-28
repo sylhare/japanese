@@ -26,7 +26,7 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 **Examples:**
 - つち (tsuchi) - soil, earth
-- しし (shishi) - gentleman, samurai
+- し (shi) - gentleman, samurai (as in 武士 bushi)
 
 ### 千 vs 干
 
