@@ -941,6 +941,15 @@ vocabulary:
     type: verb
     kanji: 混ぜる
   - id: cooking_4
+    hiragana: かわる
+    romaji: kawaru
+    meaning: change
+    category: vocabulary
+    tags:
+      - cooking
+    type: verb
+    kanji: 変わる
+  - id: cooking_5
     hiragana: したくする
     romaji: shitaku suru
     meaning: prepare/get ready
@@ -949,7 +958,7 @@ vocabulary:
       - cooking
     type: verb
     kanji: 支度する
-  - id: cooking_5
+  - id: cooking_6
     hiragana: にる
     romaji: niru
     meaning: simmer/boil
@@ -958,7 +967,7 @@ vocabulary:
       - cooking
     type: verb
     kanji: 煮る
-  - id: cooking_6
+  - id: cooking_7
     hiragana: やく
     romaji: yaku
     meaning: grill/bake
@@ -967,7 +976,7 @@ vocabulary:
       - cooking
     type: verb
     kanji: 焼く
-  - id: cooking_7
+  - id: cooking_8
     hiragana: あぶらであげる
     romaji: abura de ageru
     meaning: deep-fry
@@ -976,7 +985,7 @@ vocabulary:
       - cooking
     type: verb
     kanji: 油で揚げる
-  - id: cooking_8
+  - id: cooking_9
     hiragana: りょうりする
     romaji: ryouri suru
     meaning: cook
@@ -985,7 +994,7 @@ vocabulary:
       - cooking
     type: verb
     kanji: 料理する
-  - id: cooking_9
+  - id: cooking_10
     hiragana: もりつける
     romaji: moritsukeru
     meaning: plate/serve (arrange)
@@ -994,7 +1003,7 @@ vocabulary:
       - cooking
     type: verb
     kanji: 盛り付ける
-  - id: cooking_10
+  - id: cooking_11
     hiragana: だす
     romaji: dasu
     meaning: serve/put out
@@ -1003,7 +1012,7 @@ vocabulary:
       - cooking
     type: verb
     kanji: 出す
-  - id: cooking_11
+  - id: cooking_12
     hiragana: ほうちょう
     romaji: houchou
     meaning: kitchen knife
@@ -1012,7 +1021,7 @@ vocabulary:
       - cooking
     type: noun
     kanji: 包丁
-  - id: cooking_12
+  - id: cooking_13
     hiragana: まないた
     romaji: manaita
     meaning: cutting board
@@ -1021,7 +1030,16 @@ vocabulary:
       - cooking
     type: noun
     kanji: まな板
-  - id: cooking_13
+  - id: cooking_14
+    hiragana: つける
+    romaji: tsukeru
+    meaning: dip (in sauce)
+    category: vocabulary
+    tags:
+      - cooking
+    type: verb
+    kanji: 付ける
+  - id: cooking_15
     hiragana: なべ
     romaji: nabe
     meaning: pot
@@ -1030,7 +1048,16 @@ vocabulary:
       - cooking
     type: noun
     kanji: 鍋
-  - id: cooking_14
+  - id: cooking_16
+    hiragana: かける
+    romaji: kakeru
+    meaning: pour over (sauce)
+    category: vocabulary
+    tags:
+      - cooking
+    type: verb
+    kanji: 掛ける
+  - id: cooking_17
     hiragana: フライパン
     romaji: furaipan
     meaning: frying pan
@@ -1038,7 +1065,16 @@ vocabulary:
     tags:
       - cooking
     type: noun
-  - id: cooking_15
+  - id: cooking_18
+    hiragana: とる
+    romaji: toru
+    meaning: take/pick up
+    category: vocabulary
+    tags:
+      - cooking
+    type: verb
+    kanji: 取る
+  - id: cooking_19
     hiragana: おたま
     romaji: otama
     meaning: ladle
@@ -1046,7 +1082,7 @@ vocabulary:
     tags:
       - cooking
     type: noun
-  - id: cooking_16
+  - id: cooking_20
     hiragana: はし
     romaji: hashi
     meaning: chopsticks
@@ -1055,7 +1091,7 @@ vocabulary:
       - cooking
     type: noun
     kanji: 箸
-  - id: cooking_17
+  - id: cooking_21
     hiragana: スプーン
     romaji: supuun
     meaning: spoon
@@ -1063,7 +1099,7 @@ vocabulary:
     tags:
       - cooking
     type: noun
-  - id: cooking_18
+  - id: cooking_22
     hiragana: フォーク
     romaji: fooku
     meaning: fork
@@ -1071,6 +1107,104 @@ vocabulary:
     tags:
       - cooking
     type: noun
+  - id: cooking_23
+    hiragana: おさら
+    romaji: osara
+    meaning: plate/dish
+    category: vocabulary
+    tags:
+      - cooking
+    type: noun
+    kanji: お皿
+  - id: cooking_24
+    hiragana: おわん
+    romaji: owan
+    meaning: bowl (soup/rice)
+    category: vocabulary
+    tags:
+      - cooking
+    type: noun
+    kanji: お椀
+  - id: cooking_25
+    hiragana: どんぶり
+    romaji: donburi
+    meaning: rice bowl
+    category: vocabulary
+    tags:
+      - cooking
+    type: noun
+    kanji: 丼
+  - id: cooking_26
+    hiragana: ざいりょう
+    romaji: zairyou
+    meaning: ingredients
+    category: vocabulary
+    tags:
+      - cooking
+    type: noun
+    kanji: 材料
+  - id: cooking_27
+    hiragana: てづくり
+    romaji: tezukuri
+    meaning: handmade/homemade
+    category: vocabulary
+    tags:
+      - cooking
+    type: noun
+    kanji: 手作り
+  - id: cooking_28
+    hiragana: れいとうしょくひん
+    romaji: reitou shokuhin
+    meaning: frozen food
+    category: vocabulary
+    tags:
+      - cooking
+    type: noun
+    kanji: 冷凍食品
+  - id: cooking_29
+    hiragana: たれ
+    romaji: tare
+    meaning: dipping sauce
+    category: vocabulary
+    tags:
+      - cooking
+    type: noun
+    kanji: タレ
+  - id: cooking_30
+    hiragana: レシピ
+    romaji: reshipi
+    meaning: recipe
+    category: vocabulary
+    tags:
+      - cooking
+    type: noun
+  - id: cooking_31
+    hiragana: ぶんりょう
+    romaji: bunryou
+    meaning: quantity/amount
+    category: vocabulary
+    tags:
+      - cooking
+    type: noun
+    kanji: 分量
+  - id: cooking_32
+    hiragana: がまん
+    romaji: gaman
+    meaning: patience
+    category: vocabulary
+    tags:
+      - cooking
+    type: noun
+    kanji: 我慢
+  - id: cooking_33
+    hiragana: かんぱい
+    romaji: kanpai
+    meaning: cheers (toast)
+    category: vocabulary
+    tags:
+      - cooking
+    type: expression
+    kanji: 乾杯
   - id: counting_0
     hiragana: いち
     romaji: ichi
@@ -2156,6 +2290,30 @@ vocabulary:
     tags:
       - particle-guide
     type: pronoun
+  - id: prohibition_0
+    hiragana: '[verb て] + は いけません'
+    romaji: te wa ikemasen
+    meaning: 'must not, not allowed to'
+    category: grammar
+    tags:
+      - prohibition
+    type: expression
+  - id: prohibition_1
+    hiragana: '[verb て] + は だめです'
+    romaji: te wa dame desu
+    meaning: 'must not, not allowed to'
+    category: grammar
+    tags:
+      - prohibition
+    type: expression
+  - id: prohibition_2
+    hiragana: '[verb て] + じゃ だめです'
+    romaji: te ja dame desu
+    meaning: must not (casual)
+    category: grammar
+    tags:
+      - prohibition
+    type: expression
   - id: reason_0
     hiragana: '[reason] + ので'
     romaji: node
@@ -2179,6 +2337,14 @@ vocabulary:
     category: grammar
     tags:
       - reason
+    type: expression
+  - id: sequentialactions_0
+    hiragana: '[verb て] + から'
+    romaji: te kara
+    meaning: after doing
+    category: grammar
+    tags:
+      - sequential-actions
     type: expression
   - id: tastes_0
     hiragana: あじ
@@ -2235,6 +2401,15 @@ vocabulary:
     type: い-adjective
     kanji: 塩っぱい
   - id: tastes_6
+    hiragana: しょっぱい
+    romaji: shoppai
+    meaning: salty
+    category: vocabulary
+    tags:
+      - tastes
+    type: い-adjective
+    kanji: 塩っぱい
+  - id: tastes_7
     hiragana: おいしい
     romaji: oishii
     meaning: 'delicious, tasty'
@@ -2243,7 +2418,7 @@ vocabulary:
       - tastes
     type: い-adjective
     kanji: 美味しい
-  - id: tastes_7
+  - id: tastes_8
     hiragana: うまい
     romaji: umai
     meaning: delicious (casual)
@@ -2252,7 +2427,7 @@ vocabulary:
       - tastes
     type: い-adjective
     kanji: 旨い
-  - id: tastes_8
+  - id: tastes_9
     hiragana: まずい
     romaji: mazui
     meaning: 'bad-tasting, awful'
@@ -2261,7 +2436,7 @@ vocabulary:
       - tastes
     type: い-adjective
     kanji: 不味い
-  - id: tastes_9
+  - id: tastes_10
     hiragana: やわらかい
     romaji: yawarakai
     meaning: 'soft, tender'
@@ -2270,7 +2445,7 @@ vocabulary:
       - tastes
     type: い-adjective
     kanji: 柔らかい
-  - id: tastes_10
+  - id: tastes_11
     hiragana: かたい
     romaji: katai
     meaning: 'hard, firm'
@@ -2279,7 +2454,7 @@ vocabulary:
       - tastes
     type: い-adjective
     kanji: 硬い
-  - id: tastes_11
+  - id: tastes_12
     hiragana: さくさく
     romaji: sakusaku
     meaning: 'crispy, crunchy'
@@ -2287,7 +2462,7 @@ vocabulary:
     tags:
       - tastes
     type: adverb
-  - id: tastes_12
+  - id: tastes_13
     hiragana: ねばねば
     romaji: nebaneba
     meaning: 'sticky, gooey'
@@ -2295,7 +2470,7 @@ vocabulary:
     tags:
       - tastes
     type: adverb
-  - id: tastes_13
+  - id: tastes_14
     hiragana: こい
     romaji: koi
     meaning: 'strong, rich'
@@ -2304,7 +2479,7 @@ vocabulary:
       - tastes
     type: い-adjective
     kanji: 濃い
-  - id: tastes_14
+  - id: tastes_15
     hiragana: うすい
     romaji: usui
     meaning: 'weak, bland'
@@ -2313,7 +2488,7 @@ vocabulary:
       - tastes
     type: い-adjective
     kanji: 薄い
-  - id: tastes_15
+  - id: tastes_16
     hiragana: ケーキ
     romaji: keeki
     meaning: cake
@@ -2321,7 +2496,7 @@ vocabulary:
     tags:
       - tastes
     type: noun
-  - id: tastes_16
+  - id: tastes_17
     hiragana: カレー
     romaji: karee
     meaning: curry
@@ -2329,7 +2504,7 @@ vocabulary:
     tags:
       - tastes
     type: noun
-  - id: tastes_17
+  - id: tastes_18
     hiragana: コーヒー
     romaji: koohii
     meaning: coffee
@@ -2337,7 +2512,7 @@ vocabulary:
     tags:
       - tastes
     type: noun
-  - id: tastes_18
+  - id: tastes_19
     hiragana: レモン
     romaji: remon
     meaning: lemon
@@ -2345,7 +2520,7 @@ vocabulary:
     tags:
       - tastes
     type: noun
-  - id: tastes_19
+  - id: tastes_20
     hiragana: スープ
     romaji: suupu
     meaning: soup
@@ -2353,7 +2528,7 @@ vocabulary:
     tags:
       - tastes
     type: noun
-  - id: tastes_20
+  - id: tastes_21
     hiragana: りんご
     romaji: ringo
     meaning: apple
@@ -2362,7 +2537,7 @@ vocabulary:
       - tastes
     type: noun
     kanji: 林檎
-  - id: tastes_21
+  - id: tastes_22
     hiragana: ピザ
     romaji: piza
     meaning: pizza
@@ -2370,7 +2545,7 @@ vocabulary:
     tags:
       - tastes
     type: noun
-  - id: tastes_22
+  - id: tastes_23
     hiragana: チョコレート
     romaji: chokoreeto
     meaning: chocolate
@@ -2378,7 +2553,7 @@ vocabulary:
     tags:
       - tastes
     type: noun
-  - id: tastes_23
+  - id: tastes_24
     hiragana: くだもの
     romaji: kudamono
     meaning: fruit
@@ -2387,7 +2562,7 @@ vocabulary:
       - tastes
     type: noun
     kanji: 果物
-  - id: tastes_24
+  - id: tastes_25
     hiragana: りょうり
     romaji: ryouri
     meaning: 'dish, cooking'
@@ -2396,7 +2571,7 @@ vocabulary:
       - tastes
     type: noun
     kanji: 料理
-  - id: tastes_25
+  - id: tastes_26
     hiragana: たべもの
     romaji: tabemono
     meaning: food
@@ -2405,7 +2580,7 @@ vocabulary:
       - tastes
     type: noun
     kanji: 食べ物
-  - id: tastes_26
+  - id: tastes_27
     hiragana: しお
     romaji: shio
     meaning: salt
@@ -2414,7 +2589,7 @@ vocabulary:
       - tastes
     type: noun
     kanji: 塩
-  - id: tastes_27
+  - id: tastes_28
     hiragana: さとう
     romaji: satou
     meaning: sugar
@@ -2423,7 +2598,7 @@ vocabulary:
       - tastes
     type: noun
     kanji: 砂糖
-  - id: tastes_28
+  - id: tastes_29
     hiragana: しょうゆ
     romaji: shouyu
     meaning: soy sauce
@@ -2432,7 +2607,7 @@ vocabulary:
       - tastes
     type: noun
     kanji: 醤油
-  - id: tastes_29
+  - id: tastes_30
     hiragana: みそ
     romaji: miso
     meaning: miso
@@ -2441,7 +2616,7 @@ vocabulary:
       - tastes
     type: noun
     kanji: 味噌
-  - id: tastes_30
+  - id: tastes_31
     hiragana: す
     romaji: su
     meaning: vinegar
@@ -2450,7 +2625,7 @@ vocabulary:
       - tastes
     type: noun
     kanji: 酢
-  - id: tastes_31
+  - id: tastes_32
     hiragana: ソース
     romaji: soosu
     meaning: sauce
@@ -2458,7 +2633,7 @@ vocabulary:
     tags:
       - tastes
     type: noun
-  - id: tastes_32
+  - id: tastes_33
     hiragana: ケチャップ
     romaji: kechappu
     meaning: ketchup
@@ -2466,7 +2641,7 @@ vocabulary:
     tags:
       - tastes
     type: noun
-  - id: tastes_33
+  - id: tastes_34
     hiragana: マヨネーズ
     romaji: mayoneezu
     meaning: mayonnaise
@@ -2474,7 +2649,7 @@ vocabulary:
     tags:
       - tastes
     type: noun
-  - id: tastes_34
+  - id: tastes_35
     hiragana: わさび
     romaji: wasabi
     meaning: wasabi
@@ -2483,7 +2658,7 @@ vocabulary:
       - tastes
     type: noun
     kanji: 山葵
-  - id: tastes_35
+  - id: tastes_36
     hiragana: からし
     romaji: karashi
     meaning: mustard
@@ -2492,7 +2667,7 @@ vocabulary:
       - tastes
     type: noun
     kanji: 芥子
-  - id: tastes_36
+  - id: tastes_37
     hiragana: あまからい
     romaji: amakarai
     meaning: sweet and spicy
@@ -2501,7 +2676,7 @@ vocabulary:
       - tastes
     type: い-adjective
     kanji: 甘辛い
-  - id: tastes_37
+  - id: tastes_38
     hiragana: すっぱあまい
     romaji: suppaamai
     meaning: sweet and sour
@@ -2510,7 +2685,7 @@ vocabulary:
       - tastes
     type: い-adjective
     kanji: 酸っぱ甘い
-  - id: tastes_38
+  - id: tastes_39
     hiragana: あますっぱい
     romaji: amasuppai
     meaning: sweet and sour (alternative)
@@ -2519,7 +2694,7 @@ vocabulary:
       - tastes
     type: い-adjective
     kanji: 甘酸っぱい
-  - id: tastes_39
+  - id: tastes_40
     hiragana: あじわう
     romaji: ajiwau
     meaning: 'to taste, to savor'
@@ -2528,7 +2703,7 @@ vocabulary:
       - tastes
     type: godan verb
     kanji: 味わう
-  - id: tastes_40
+  - id: tastes_41
     hiragana: つける
     romaji: tsukeru
     meaning: 'to dip, to put on'
@@ -2537,7 +2712,7 @@ vocabulary:
       - tastes
     type: ichidan verb
     kanji: 付ける
-  - id: tastes_41
+  - id: tastes_42
     hiragana: かける
     romaji: kakeru
     meaning: 'to pour over, to sprinkle'
@@ -2546,7 +2721,7 @@ vocabulary:
       - tastes
     type: ichidan verb
     kanji: 掛ける
-  - id: tastes_42
+  - id: tastes_43
     hiragana: そそぐ
     romaji: sosogu
     meaning: to pour (into)
@@ -2555,7 +2730,7 @@ vocabulary:
       - tastes
     type: godan verb
     kanji: 注ぐ
-  - id: tastes_43
+  - id: tastes_44
     hiragana: まぜる
     romaji: mazeru
     meaning: 'to mix, to stir'
@@ -2564,7 +2739,7 @@ vocabulary:
       - tastes
     type: ichidan verb
     kanji: 混ぜる
-  - id: tastes_44
+  - id: tastes_45
     hiragana: とる
     romaji: toru
     meaning: 'to take, to pick up'
@@ -2601,6 +2776,15 @@ vocabulary:
     type: noun
     kanji: 晴れ
   - id: weather_3
+    hiragana: はれ
+    romaji: hare
+    meaning: clear weather
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+    kanji: 晴れ
+  - id: weather_4
     hiragana: くもり
     romaji: kumori
     meaning: cloudy
@@ -2609,7 +2793,16 @@ vocabulary:
       - weather
     type: noun
     kanji: 曇り
-  - id: weather_4
+  - id: weather_5
+    hiragana: はれている
+    romaji: harete iru
+    meaning: it's sunny
+    category: vocabulary
+    tags:
+      - weather
+    type: expression
+    kanji: 晴れている
+  - id: weather_6
     hiragana: あめ
     romaji: ame
     meaning: rain
@@ -2618,7 +2811,16 @@ vocabulary:
       - weather
     type: noun
     kanji: 雨
-  - id: weather_5
+  - id: weather_7
+    hiragana: くもり
+    romaji: kumori
+    meaning: cloudy weather
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+    kanji: 曇り
+  - id: weather_8
     hiragana: ゆき
     romaji: yuki
     meaning: snow
@@ -2627,7 +2829,16 @@ vocabulary:
       - weather
     type: noun
     kanji: 雪
-  - id: weather_6
+  - id: weather_9
+    hiragana: くもっている
+    romaji: kumotte iru
+    meaning: it's cloudy
+    category: vocabulary
+    tags:
+      - weather
+    type: expression
+    kanji: 曇っている
+  - id: weather_10
     hiragana: かぜ
     romaji: kaze
     meaning: wind
@@ -2636,7 +2847,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 風
-  - id: weather_7
+  - id: weather_11
     hiragana: かみなり
     romaji: kaminari
     meaning: 'thunder, lightning'
@@ -2645,7 +2856,16 @@ vocabulary:
       - weather
     type: noun
     kanji: 雷
-  - id: weather_8
+  - id: weather_12
+    hiragana: あめが ふる
+    romaji: ame ga furu
+    meaning: it rains
+    category: vocabulary
+    tags:
+      - weather
+    type: expression
+    kanji: 雨が降る
+  - id: weather_13
     hiragana: たいふう
     romaji: taifuu
     meaning: typhoon
@@ -2654,7 +2874,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 台風
-  - id: weather_9
+  - id: weather_14
     hiragana: きり
     romaji: kiri
     meaning: fog
@@ -2663,7 +2883,16 @@ vocabulary:
       - weather
     type: noun
     kanji: 霧
-  - id: weather_10
+  - id: weather_15
+    hiragana: ゆきが ふる
+    romaji: yuki ga furu
+    meaning: it snows
+    category: vocabulary
+    tags:
+      - weather
+    type: expression
+    kanji: 雪が降る
+  - id: weather_16
     hiragana: はれている
     romaji: harete iru
     meaning: 'sunny, clear'
@@ -2672,7 +2901,7 @@ vocabulary:
       - weather
     type: expression
     kanji: 晴れている
-  - id: weather_11
+  - id: weather_17
     hiragana: くもっている
     romaji: kumotte iru
     meaning: cloudy
@@ -2681,7 +2910,16 @@ vocabulary:
       - weather
     type: expression
     kanji: 曇っている
-  - id: weather_12
+  - id: weather_18
+    hiragana: かぜが ふく
+    romaji: kaze ga fuku
+    meaning: wind blows
+    category: vocabulary
+    tags:
+      - weather
+    type: expression
+    kanji: 風が吹く
+  - id: weather_19
     hiragana: むしあつい
     romaji: mushiatsui
     meaning: humid and hot
@@ -2690,7 +2928,7 @@ vocabulary:
       - weather
     type: い-adjective
     kanji: 蒸し暑い
-  - id: weather_13
+  - id: weather_20
     hiragana: じめじめした
     romaji: jimejime shita
     meaning: 'damp, humid'
@@ -2698,7 +2936,7 @@ vocabulary:
     tags:
       - weather
     type: な-adjective
-  - id: weather_14
+  - id: weather_21
     hiragana: きおん
     romaji: kion
     meaning: temperature
@@ -2707,7 +2945,16 @@ vocabulary:
       - weather
     type: noun
     kanji: 気温
-  - id: weather_15
+  - id: weather_22
+    hiragana: おんど
+    romaji: ondo
+    meaning: temperature
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+    kanji: 温度
+  - id: weather_23
     hiragana: あつい
     romaji: atsui
     meaning: hot (weather)
@@ -2716,7 +2963,16 @@ vocabulary:
       - weather
     type: い-adjective
     kanji: 暑い
-  - id: weather_16
+  - id: weather_24
+    hiragana: しつど
+    romaji: shitsudo
+    meaning: humidity
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+    kanji: 湿度
+  - id: weather_25
     hiragana: さむい
     romaji: samui
     meaning: cold (weather)
@@ -2725,7 +2981,7 @@ vocabulary:
       - weather
     type: い-adjective
     kanji: 寒い
-  - id: weather_17
+  - id: weather_26
     hiragana: あたたかい
     romaji: atatakai
     meaning: warm
@@ -2734,7 +2990,7 @@ vocabulary:
       - weather
     type: い-adjective
     kanji: 暖かい
-  - id: weather_18
+  - id: weather_27
     hiragana: すずしい
     romaji: suzushii
     meaning: 'cool, refreshing'
@@ -2743,7 +2999,7 @@ vocabulary:
       - weather
     type: い-adjective
     kanji: 涼しい
-  - id: weather_19
+  - id: weather_28
     hiragana: きせつ
     romaji: kisetsu
     meaning: season
@@ -2752,7 +3008,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 季節
-  - id: weather_20
+  - id: weather_29
     hiragana: はる
     romaji: haru
     meaning: spring
@@ -2761,7 +3017,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 春
-  - id: weather_21
+  - id: weather_30
     hiragana: なつ
     romaji: natsu
     meaning: summer
@@ -2770,7 +3026,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 夏
-  - id: weather_22
+  - id: weather_31
     hiragana: あき
     romaji: aki
     meaning: 'autumn, fall'
@@ -2779,7 +3035,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 秋
-  - id: weather_23
+  - id: weather_32
     hiragana: ふゆ
     romaji: fuyu
     meaning: winter
@@ -2788,7 +3044,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 冬
-  - id: weather_24
+  - id: weather_33
     hiragana: ふる
     romaji: furu
     meaning: to fall (rain/snow)
@@ -2797,7 +3053,7 @@ vocabulary:
       - weather
     type: godan verb
     kanji: 降る
-  - id: weather_25
+  - id: weather_34
     hiragana: ぬれる
     romaji: nureru
     meaning: to get wet
@@ -2806,7 +3062,7 @@ vocabulary:
       - weather
     type: ichidan verb
     kanji: 濡れる
-  - id: weather_26
+  - id: weather_35
     hiragana: かわく
     romaji: kawaku
     meaning: to dry
@@ -2815,7 +3071,7 @@ vocabulary:
       - weather
     type: godan verb
     kanji: 乾く
-  - id: weather_27
+  - id: weather_36
     hiragana: かわかす
     romaji: kawakasu
     meaning: to dry (something)
@@ -2824,7 +3080,7 @@ vocabulary:
       - weather
     type: godan verb
     kanji: 乾かす
-  - id: weather_28
+  - id: weather_37
     hiragana: やむ
     romaji: yamu
     meaning: to stop (rain)
@@ -2833,7 +3089,7 @@ vocabulary:
       - weather
     type: godan verb
     kanji: 止む
-  - id: weather_29
+  - id: weather_38
     hiragana: かさ
     romaji: kasa
     meaning: umbrella
@@ -2842,7 +3098,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 傘
-  - id: weather_30
+  - id: weather_39
     hiragana: レインコート
     romaji: reinkooto
     meaning: raincoat
@@ -2850,7 +3106,7 @@ vocabulary:
     tags:
       - weather
     type: noun
-  - id: weather_31
+  - id: weather_40
     hiragana: ながぐつ
     romaji: nagagutsu
     meaning: rain boots
@@ -2859,7 +3115,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 長靴
-  - id: weather_32
+  - id: weather_41
     hiragana: つもる
     romaji: tsumoru
     meaning: 'to pile up, accumulate'
@@ -2868,7 +3124,7 @@ vocabulary:
       - weather
     type: godan verb
     kanji: 積もる
-  - id: weather_33
+  - id: weather_42
     hiragana: とける
     romaji: tokeru
     meaning: to melt
@@ -2877,7 +3133,7 @@ vocabulary:
       - weather
     type: ichidan verb
     kanji: 溶ける
-  - id: weather_34
+  - id: weather_43
     hiragana: ゆきかき
     romaji: yukikaki
     meaning: snow shoveling
@@ -2886,7 +3142,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 雪かき
-  - id: weather_35
+  - id: weather_44
     hiragana: ゆきかきをする
     romaji: yukikaki o suru
     meaning: to shovel snow
@@ -2895,7 +3151,7 @@ vocabulary:
       - weather
     type: expression
     kanji: 雪かきをする
-  - id: weather_36
+  - id: weather_45
     hiragana: のぞく
     romaji: nozoku
     meaning: 'to remove, clear away'
@@ -2904,7 +3160,7 @@ vocabulary:
       - weather
     type: godan verb
     kanji: 除く
-  - id: weather_37
+  - id: weather_46
     hiragana: スコップ
     romaji: sukoppu
     meaning: 'shovel, scoop'
@@ -2912,7 +3168,7 @@ vocabulary:
     tags:
       - weather
     type: noun
-  - id: weather_38
+  - id: weather_47
     hiragana: ゆきだるま
     romaji: yukidaruma
     meaning: snowman
@@ -2921,7 +3177,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 雪だるま
-  - id: weather_39
+  - id: weather_48
     hiragana: マフラー
     romaji: mafuraa
     meaning: scarf
