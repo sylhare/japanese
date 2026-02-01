@@ -8,7 +8,6 @@ from prompt_toolkit.history import FileHistory
 from prompt_toolkit.styles import Style
 from rich.console import Console
 from rich.panel import Panel
-from rich.table import Table
 from rich.text import Text
 
 from translator.intent import Intent, IntentDetector, IntentType
@@ -72,34 +71,19 @@ def print_welcome() -> None:
 
 
 def display_translation(response: TranslationResponse) -> None:
-    """Display translation results in a beautiful format."""
-    # Main translation panel
-    main_table = Table(show_header=False, box=None, padding=(0, 2))
-    main_table.add_column("Label", style="dim", width=10)
-    main_table.add_column("Value")
-
-    main_table.add_row("Japanese", Text(response.main.japanese, style="bold yellow"))
-    main_table.add_row("Hiragana", Text(response.main.hiragana, style="cyan"))
-    main_table.add_row("Romaji", Text(response.main.romaji, style="magenta italic"))
-
-    panel_title = f'[bold white]"{response.original}"[/bold white]'
-    console.print(Panel(main_table, title=panel_title, border_style="green", padding=(1, 1)))
+    """Display translation results in a clean format."""
+    console.print()
+    console.print(f"[bold white]English:[/bold white]  {response.original}")
+    console.print(f"[bold yellow]Japanese:[/bold yellow] {response.main.japanese}")
+    console.print(f"[cyan]Hiragana:[/cyan] {response.main.hiragana}")
+    console.print(f"[magenta italic]Romaji:[/magenta italic]   {response.main.romaji}")
 
     # Alternatives
     if response.alternatives:
         console.print()
         console.print("[dim]Alternatives:[/dim]")
-
         for i, alt in enumerate(response.alternatives, 1):
-            alt_text = Text()
-            alt_text.append(f"  {i}. ", style="dim")
-            alt_text.append(alt.japanese, style="yellow")
-            alt_text.append("  →  ", style="dim")
-            alt_text.append(alt.hiragana, style="cyan dim")
-            alt_text.append("  (", style="dim")
-            alt_text.append(alt.romaji, style="magenta dim italic")
-            alt_text.append(")", style="dim")
-            console.print(alt_text)
+            console.print(f"  [dim]{i}.[/dim] [yellow]{alt.japanese}[/yellow] [dim]({alt.romaji})[/dim]")
 
     # Note if any
     if response.note:

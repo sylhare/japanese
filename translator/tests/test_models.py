@@ -84,7 +84,7 @@ class TestJapaneseTranslator:
     def test_initialization(self):
         """Test translator initialization."""
         translator = JapaneseTranslator()
-        assert translator.model_name == "Helsinki-NLP/opus-mt-en-jap"
+        assert translator.model_name == "facebook/nllb-200-distilled-600M"
         assert translator.model is None
         assert translator.tokenizer is None
         assert translator._loaded is False
@@ -107,7 +107,12 @@ class TestAvailableModels:
     """Tests for available models configuration."""
 
     def test_default_model_present(self):
-        """Test that default Helsinki model is in available models."""
+        """Test that default NLLB model is in available models."""
+        assert "nllb" in AVAILABLE_MODELS
+        assert AVAILABLE_MODELS["nllb"] == "facebook/nllb-200-distilled-600M"
+
+    def test_helsinki_model_present(self):
+        """Test that Helsinki model is available as alternative."""
         assert "helsinki" in AVAILABLE_MODELS
         assert AVAILABLE_MODELS["helsinki"] == "Helsinki-NLP/opus-mt-en-jap"
 
