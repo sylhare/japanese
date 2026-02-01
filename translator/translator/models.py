@@ -28,24 +28,17 @@ class TranslationResponse:
     note: Optional[str] = None  # Optional note about the translation
 
 
+DEFAULT_MODEL = "facebook/nllb-200-distilled-600M"
+
+
 class JapaneseTranslator:
     """Handles English to Japanese translation using Hugging Face models."""
 
-    # Model-specific configuration for multilingual models
-    MODEL_CONFIG = {
-        "facebook/mbart-large-50-many-to-many-mmt": {
-            "src_lang": "en_XX",
-            "tgt_lang": "ja_XX",
-            "multilingual": True,
-        },
-        "facebook/nllb-200-distilled-600M": {
-            "src_lang": "eng_Latn",
-            "tgt_lang": "jpn_Jpan",
-            "multilingual": True,
-        },
-    }
+    # NLLB model configuration (multilingual model requires language codes)
+    _SRC_LANG = "eng_Latn"
+    _TGT_LANG = "jpn_Jpan"
 
-    def __init__(self, model_name: str = "facebook/nllb-200-distilled-600M"):
+    def __init__(self, model_name: str = DEFAULT_MODEL):
         """
         Initialize the translator with a specified model.
 
@@ -58,7 +51,6 @@ class JapaneseTranslator:
         self.device = None
         self.kakasi = None
         self._loaded = False
-        self._config = self.MODEL_CONFIG.get(model_name, {"multilingual": False})
 
     def load(self) -> None:
         """Load the model and tokenizer. Called lazily on first translation."""
@@ -81,9 +73,8 @@ class JapaneseTranslator:
         self.model.to(self.device)
         self.model.eval()
 
-        # Set source language for multilingual models
-        if self._config.get("multilingual") and self._config.get("src_lang"):
-            self.tokenizer.src_lang = self._config["src_lang"]
+        # Set source language for NLLB model
+        self.tokenizer.src_lang = self._SRC_LANG
 
         # Initialize kakasi for romaji conversion
         self.kakasi = pykakasi.kakasi()
@@ -92,15 +83,28 @@ class JapaneseTranslator:
         print("Model loaded successfully!\n")
 
     def _to_hiragana(self, text: str) -> str:
-        """Convert Japanese text to hiragana."""
+        """Convert Japanese text to hiragana with spaces between words."""
         result = self.kakasi.convert(text)
-        return "".join(item["hira"] for item in result)
+        # Add spaces between words, filter empty and punctuation-only items
+        parts = []
+        for item in result:
+            hira = item["hira"].strip()
+            # Skip empty or punctuation-only items
+            if hira and hira not in ".,。、!?！？":
+                parts.append(hira)
+        return " ".join(parts)
 
     def _to_romaji(self, text: str) -> str:
-        """Convert Japanese text to romaji."""
+        """Convert Japanese text to romaji with spaces between words."""
         result = self.kakasi.convert(text)
-        # Join without extra spaces - pykakasi already handles word boundaries
-        return "".join(item["hepburn"] for item in result)
+        # Add spaces between words, filter empty and punctuation-only items
+        parts = []
+        for item in result:
+            romaji = item["hepburn"].strip()
+            # Skip empty or punctuation-only items
+            if romaji and romaji not in ".,。、!?！？":
+                parts.append(romaji)
+        return " ".join(parts)
 
     def _create_result(self, japanese: str, confidence: float = 1.0) -> TranslationResult:
         """Create a TranslationResult from Japanese text."""
@@ -138,18 +142,15 @@ class JapaneseTranslator:
         num_beams = max(5, num_alternatives + 1)
         num_return_sequences = num_alternatives + 1
 
-        # Prepare generation kwargs
+        # Prepare generation kwargs with target language for NLLB
+        tgt_lang_id = self.tokenizer.convert_tokens_to_ids(self._TGT_LANG)
         gen_kwargs = {
             "max_length": 128,
             "num_beams": num_beams,
             "num_return_sequences": num_return_sequences,
             "early_stopping": True,
+            "forced_bos_token_id": tgt_lang_id,
         }
-
-        # For multilingual models, set the forced BOS token for target language
-        if self._config.get("multilingual") and self._config.get("tgt_lang"):
-            tgt_lang_id = self.tokenizer.convert_tokens_to_ids(self._config["tgt_lang"])
-            gen_kwargs["forced_bos_token_id"] = tgt_lang_id
 
         with torch.no_grad():
             outputs = self.model.generate(**inputs, **gen_kwargs)
@@ -189,10 +190,3 @@ class JapaneseTranslator:
         )
 
 
-# Alternative models that can be used
-AVAILABLE_MODELS = {
-    "nllb": "facebook/nllb-200-distilled-600M",  # Default - best quality
-    "helsinki": "Helsinki-NLP/opus-mt-en-jap",  # Smaller but lower quality
-    # Note: mbart (facebook/mbart-large-50-many-to-many-mmt) has compatibility
-    # issues with transformers v5 tokenizers
-}

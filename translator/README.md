@@ -71,7 +71,7 @@ Alternatives:
 
 ## Configuration
 
-The translator uses the Helsinki-NLP/opus-mt-en-jap model by default. Command history is stored in `~/.japanese_translator_history`.
+The translator uses the `facebook/nllb-200-distilled-600M` model for high-quality translations. Command history is stored in `~/.japanese_translator_history`.
 
 ## Dependencies
 

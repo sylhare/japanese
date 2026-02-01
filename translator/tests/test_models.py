@@ -3,7 +3,7 @@
 import pytest
 
 from translator.models import (
-    AVAILABLE_MODELS,
+    DEFAULT_MODEL,
     JapaneseTranslator,
     TranslationResponse,
     TranslationResult,
@@ -103,24 +103,17 @@ class TestJapaneseTranslator:
         assert translator.kakasi is None
 
 
-class TestAvailableModels:
-    """Tests for available models configuration."""
+class TestDefaultModel:
+    """Tests for default model configuration."""
 
-    def test_default_model_present(self):
-        """Test that default NLLB model is in available models."""
-        assert "nllb" in AVAILABLE_MODELS
-        assert AVAILABLE_MODELS["nllb"] == "facebook/nllb-200-distilled-600M"
+    def test_default_model_is_nllb(self):
+        """Test that default model is NLLB."""
+        assert DEFAULT_MODEL == "facebook/nllb-200-distilled-600M"
 
-    def test_helsinki_model_present(self):
-        """Test that Helsinki model is available as alternative."""
-        assert "helsinki" in AVAILABLE_MODELS
-        assert AVAILABLE_MODELS["helsinki"] == "Helsinki-NLP/opus-mt-en-jap"
-
-    def test_all_models_have_valid_paths(self):
-        """Test that all model paths look valid."""
-        for name, path in AVAILABLE_MODELS.items():
-            assert "/" in path, f"Model {name} should have org/model format"
-            assert len(path) > 5, f"Model {name} path seems too short"
+    def test_translator_uses_default_model(self):
+        """Test that translator uses the default model."""
+        translator = JapaneseTranslator()
+        assert translator.model_name == DEFAULT_MODEL
 
 
 # Integration tests that require model loading (marked as slow)
