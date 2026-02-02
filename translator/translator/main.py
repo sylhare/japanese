@@ -1,6 +1,10 @@
-"""Main CLI entry point for the Japanese translator."""
+"""
+Main CLI entry point for the Japanese translator.
 
-import sys
+This module provides an interactive command-line interface for translating
+English text to Japanese with hiragana and romaji representations.
+"""
+
 from pathlib import Path
 
 from prompt_toolkit import PromptSession
@@ -11,20 +15,16 @@ from rich.panel import Panel
 from rich.text import Text
 
 from translator.intent import Intent, IntentDetector, IntentType
-from translator.models import JapaneseTranslator, TranslationResponse
+from translator.models import JapaneseTranslator, TranslationResult
 
-# Rich console for pretty output
+
 console = Console()
 
-# Custom prompt style
-PROMPT_STYLE = Style.from_dict(
-    {
-        "prompt": "#ff6b6b bold",
-        "": "#e0e0e0",
-    }
-)
+PROMPT_STYLE = Style.from_dict({
+    "prompt": "#ff6b6b bold",
+    "": "#e0e0e0",
+})
 
-# Help text
 HELP_TEXT = """
 [bold cyan]Japanese Translator - Help[/bold cyan]
 
@@ -39,7 +39,6 @@ HELP_TEXT = """
   • [yellow]Japanese[/yellow] (kanji/hiragana/katakana)
   • [cyan]Hiragana[/cyan] (reading in hiragana)
   • [magenta]Romaji[/magenta] (romanized pronunciation)
-  • Alternative translations
 
 [bold]Navigation:[/bold]
   ↑/↓ arrows    Navigate through previous inputs
@@ -47,7 +46,6 @@ HELP_TEXT = """
   Ctrl+D        Exit
 
 [bold]Tips:[/bold]
-  • The translator prefers native Japanese words for beginners
   • Keep sentences simple for better translations
   • Try rephrasing if the translation seems off
 
@@ -56,7 +54,7 @@ HELP_TEXT = """
 
 
 def print_welcome() -> None:
-    """Print welcome message."""
+    """Print the welcome banner."""
     welcome = Text()
     welcome.append("🇯🇵 Japanese Translator\n", style="bold cyan")
     welcome.append("English → Japanese with Hiragana, Kanji & Romaji\n\n", style="dim")
@@ -70,35 +68,30 @@ def print_welcome() -> None:
     console.print()
 
 
-def display_translation(response: TranslationResponse) -> None:
-    """Display translation results in a clean format."""
+def display_translation(result: TranslationResult) -> None:
+    """
+    Display a translation result.
+
+    Args:
+        result: The translation result to display.
+    """
     console.print()
-    console.print(f"[bold white]English:[/bold white]  {response.original}")
-    console.print(f"[bold yellow]Japanese:[/bold yellow] {response.main.japanese}")
-    console.print(f"[cyan]Hiragana:[/cyan] {response.main.hiragana}")
-    console.print(f"[magenta italic]Romaji:[/magenta italic]   {response.main.romaji}")
-
-    # Alternatives
-    if response.alternatives:
-        console.print()
-        console.print("[dim]Alternatives:[/dim]")
-        for i, alt in enumerate(response.alternatives, 1):
-            console.print(f"  [dim]{i}.[/dim] [yellow]{alt.japanese}[/yellow] [dim]({alt.romaji})[/dim]")
-
-    # Note if any
-    if response.note:
-        console.print()
-        console.print(f"[dim]{response.note}[/dim]")
-
+    console.print(f"[bold white]English:[/bold white]  {result.original}")
+    console.print(f"[bold yellow]Japanese:[/bold yellow] {result.japanese}")
+    console.print(f"[cyan]Hiragana:[/cyan] {result.hiragana}")
+    console.print(f"[magenta italic]Romaji:[/magenta italic]   {result.romaji}")
     console.print()
 
 
-def handle_instruction(intent: Intent, translator: JapaneseTranslator) -> bool:
+def handle_instruction(intent: Intent) -> bool:
     """
     Handle non-translation instructions.
 
+    Args:
+        intent: The detected intent from user input.
+
     Returns:
-        True if the program should continue, False if it should exit.
+        True if the program should continue, False to exit.
     """
     text = intent.text.lower().strip()
 
@@ -111,19 +104,20 @@ def handle_instruction(intent: Intent, translator: JapaneseTranslator) -> bool:
         print_welcome()
         return True
 
-    # Generic instruction handling
     console.print(f"[yellow]I understood this as an instruction: {intent.text}[/yellow]")
     console.print("[dim]If you wanted to translate this text, try rephrasing it.[/dim]")
     console.print()
-
     return True
 
 
 def create_session() -> PromptSession:
-    """Create a prompt session with history support."""
-    # Store history in user's home directory
-    history_file = Path.home() / ".japanese_translator_history"
+    """
+    Create a prompt session with command history.
 
+    Returns:
+        A configured PromptSession with file-based history.
+    """
+    history_file = Path.home() / ".japanese_translator_history"
     return PromptSession(
         history=FileHistory(str(history_file)),
         style=PROMPT_STYLE,
@@ -132,51 +126,37 @@ def create_session() -> PromptSession:
 
 
 def main() -> None:
-    """Main entry point for the translator CLI."""
-    # Print welcome
+    """Run the interactive translator CLI."""
     print_welcome()
 
-    # Initialize components
     translator = JapaneseTranslator()
-    intent_detector = IntentDetector(use_llm=False)  # Start with rule-based for speed
-
-    # Create prompt session with history
+    intent_detector = IntentDetector(use_llm=False)
     session = create_session()
 
-    # Main loop
     while True:
         try:
-            # Get user input with prompt
             user_input = session.prompt(
                 [("class:prompt", "翻訳 ❯ ")],
                 style=PROMPT_STYLE,
             ).strip()
 
-            # Skip empty input
             if not user_input:
                 continue
 
-            # Detect intent
             intent = intent_detector.detect(user_input)
 
-            # Handle based on intent
             if intent.type == IntentType.EXIT:
                 console.print("\n[cyan]さようなら! (Goodbye!)[/cyan] 👋\n")
                 break
 
             elif intent.type in (IntentType.INSTRUCTION, IntentType.QUESTION):
-                should_continue = handle_instruction(intent, translator)
-                if not should_continue:
+                if not handle_instruction(intent):
                     break
 
             elif intent.type == IntentType.TRANSLATE:
                 try:
-                    response = translator.translate(
-                        intent.text,
-                        num_alternatives=2,
-                        prefer_native=True,
-                    )
-                    display_translation(response)
+                    result = translator.translate(intent.text)
+                    display_translation(result)
                 except Exception as e:
                     console.print(f"[red]Translation error: {e}[/red]")
                     console.print("[dim]Please try again or rephrase your input.[/dim]\n")
