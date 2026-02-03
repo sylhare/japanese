@@ -17,13 +17,13 @@ Learning colors is essential for describing objects and expressing preferences i
 | あか       | 赤     | aka      | 🔴 red    | い-adjective |
 | あお       | 青     | ao       | 🔵 blue   | い-adjective |
 | きいろ      | 黄色    | kiiro    | 🟡 yellow | い-adjective |
-| みどり      | 緑     | midori   | 🟢 green  | の-adjective |
-| むらさき     | 紫     | murasaki | 🟣 purple | の-adjective |
-| だいだい     | 橙     | daidai   | 🟠 orange | の-adjective |
+| みどり      | 緑     | midori   | 🟢 green  | noun (の)    |
+| むらさき     | 紫     | murasaki | 🟣 purple | noun (の)    |
+| だいだい     | 橙     | daidai   | 🟠 orange | noun (の)    |
 | しろ       | 白     | shiro    | ⚪ white   | い-adjective |
 | くろ       | 黒     | kuro     | ⚫ black   | い-adjective |
-| はいいろ     | 灰色    | haiiro   | ⬜ gray    | の-adjective |
-| ちゃいろ     | 茶色    | chairo   | 🟤 brown  | の-adjective |
+| はいいろ     | 灰色    | haiiro   | ⬜ gray    | noun (の)    |
+| ちゃいろ     | 茶色    | chairo   | 🟤 brown  | noun (の)    |
 
 **Examples:**
 
@@ -45,7 +45,7 @@ Learning colors is essential for describing objects and expressing preferences i
 
 **Rule:**
 - For い-adjectives: Color modifies noun directly (no particle needed)
-- For の-adjectives: Color requires の particle before the noun
+- For noun colors: Use の particle before the noun
 
 **Examples:**
 - 🔴 あかいとり (akai tori) - red bird
@@ -64,7 +64,7 @@ Learning colors is essential for describing objects and expressing preferences i
 
 - For い-adjectives: Conjugate by changing the final い
     - あかい → あかくない, あかかった
-- For の-adjectives: Conjugate by changing です
+- For noun colors: Conjugate by changing です (same as nouns)
     - みどりです → みどりじゃないです, みどりでした
 
 **Examples:**
@@ -75,7 +75,7 @@ Learning colors is essential for describing objects and expressing preferences i
     - Present: りんごはあかいです。(The apple is red.)
     - Negative: りんごはあかくないです。(The apple is not red.)
     - Past: りんごはあかかったです。(The apple was red.)
-- の-adjectives:
+- Noun colors:
     - みどり → みどりじゃない (not green) → みどりじゃなかった (was not green)
     - みどり → みどりでした (was green)
     - Present: ほんはみどりです。(The book is green.)
@@ -88,7 +88,7 @@ To describe light shades, add **うすい** (usui - thin/light) before the color
 
 **Rule:** 
 - For い-adjectives: うすい + color → うすいあか (usui aka) → うすいあかい (usui akai)
-- For の-adjectives: うすい + color → うすいみどり (usui midori) → うすいみどりの (usui midori no)
+- For noun colors: うすい + color → うすいみどり (usui midori) → うすいみどりの (usui midori no)
 
 **Examples:**
 - 🔴 うすいあかいペン (usui akai pen) - light red pen
@@ -100,7 +100,7 @@ To describe dark shades, add **こい** (koi - thick/dark) before the color.
 
 **Rule:**
 - For い-adjectives: こい + color → こいあか (koi aka) → こいあかい (koi akai)
-- For の-adjectives: こい + color → こいみどり (koi midori) → こいみどりの (koi midori no)
+- For noun colors: こい + color → こいみどり (koi midori) → こいみどりの (koi midori no)
 
 **Examples:**
 - 🟦 こいあおいくつ (koi aoi kutsu) - dark blue shoes

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Days and Weeks
+title: 📅 Days and Weeks
 description: Learn days of the week and relative time expressions
 tags: [vocabulary, time, days, weeks, basic, nouns]
 ---
@@ -28,7 +28,7 @@ The kanji for days of the week represent the five elements: 月(moon), 火(fire)
 - きんようびは やすみです (kinyoubi wa yasumi desu) - Friday is a day off
 - げつようびから かようびまで がっこうに いきます (getsuyoubi kara kayoubi made gakkou ni ikimasu) - I go to school from Monday to Tuesday
 
----
+
 
 ## Relative Days
 
@@ -45,7 +45,7 @@ The kanji for days of the week represent the five elements: 月(moon), 火(fire)
 - きのう ともだちと あいました (kinou tomodachi to aimashita) - I met my friend yesterday
 - あした えいがを みます (ashita eiga wo mimasu) - I will watch a movie tomorrow
 
----
+
 
 ## Week References
 
@@ -64,7 +64,7 @@ The kanji for days of the week represent the five elements: 月(moon), 火(fire)
 - しゅうまつに りょこうに いきます (shuumatsu ni ryokou ni ikimasu) - I'm going on a trip this weekend
 - まいしゅう げつようびに かいものに いきます (maishuu getsuyoubi ni kaimono ni ikimasu) - I go shopping every Monday
 
----
+
 
 ## Time of Day
 

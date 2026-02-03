@@ -20,7 +20,7 @@ Learning how to describe tastes and flavors is essential for talking about food 
 | からい      | 辛い    | karai     | 🌶️ spicy, hot | い-adjective |
 | にがい      | 苦い    | nigai     | ☕ bitter       | い-adjective |
 | すっぱい     | 酸っぱい  | suppai    | 🍋 sour        | い-adjective |
-| ちょっぱい    | 塩っぱい  | choppai   | 🧂 salty       | い-adjective |
+| しょっぱい    | 塩っぱい  | shoppai   | 🧂 salty       | い-adjective |
 
 ### Taste and Texture
 

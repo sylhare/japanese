@@ -22,6 +22,8 @@ const grammarLinks = [
   { name: 'Desire', hrefPattern: 'desire', headingPattern: /desire/i },
   { name: 'Appearance', hrefPattern: 'appearance', headingPattern: /appearance/i },
   { name: 'Actions and Thinking', hrefPattern: 'actions-and-thinking', headingPattern: /actions|thinking/i },
+  { name: 'Sequential Actions', hrefPattern: 'sequential-actions', headingPattern: /sequential|てから/i },
+  { name: 'Prohibition', hrefPattern: 'prohibition', headingPattern: /prohibition|いけません|だめ/i },
 ];
 
 const vocabularyLinks = [

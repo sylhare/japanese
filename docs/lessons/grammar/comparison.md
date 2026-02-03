@@ -20,6 +20,10 @@ Learn how to compare things in Japanese using **ほう が** and **より**.
 
 ## Asking for Comparison
 
+**A と B と どちら の ほう？** → Ask which is better  
+**A の ほう が B より [adj]** → A is more [adj] than B  
+**A の ほう が [adj]** → A is more [adj] (implied comparison)
+
 **A と B と どちら の ほう？**
 
 Use this pattern to ask "Which is more...?" between two options.
@@ -30,6 +34,18 @@ Use this pattern to ask "Which is more...?" between two options.
   - *koohii to cha to dochira no hou?*
 - なつ と ふゆ と どちら の ほう が すき？ - Which do you like more, summer or winter?
   - *natsu to fuyu to dochira no hou ga suki?*
+- とうきょう と おおさか と どちら の ほう が おおきい ですか？ - Which is bigger, Tokyo or Osaka?
+  - *toukyou to oosaka to dochira no hou ga ookii desu ka?*
+- この みっつ の なか で どれ が いちばん いい ですか？ - Which one is the best among these three?
+  - *kono mittsu no naka de dore ga ichiban ii desu ka?*
+- この クラス で だれ が いちばん せ が たかい ですか？ - Who is the tallest in this class?
+  - *kono kurasu de dare ga ichiban se ga takai desu ka?*
+
+:::tip どちら vs どれ
+- **どちら** - which one (between **two** options)
+- **どれ** - which one (among **three or more** options)
+- **だれ** - who (for people)
+:::
 
 ## Making Comparisons
 
@@ -79,15 +95,3 @@ When the comparison is clear from context, you can omit **B より**.
 
 This is a famous Japanese proverb expressing that substance is more important than appearance.
 
-## Summary
-
-**A と B と どちら の ほう？** → Ask which is better  
-**A の ほう が B より [adj]** → A is more [adj] than B  
-**A の ほう が [adj]** → A is more [adj] (implied comparison)
-
-### Key Points
-
-- **の ほう** literally means "the direction/side of"
-- **より** means "than" or "compared to"
-- The thing being praised comes **before** より
-- Can be used with any adjective

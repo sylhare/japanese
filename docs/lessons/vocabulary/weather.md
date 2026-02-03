@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 8
 title: 🌤️ Weather
 description: Learn Japanese vocabulary for weather conditions, temperature, and seasonal activities
 tags: [vocabulary, weather, seasons, temperature, nature]
@@ -11,45 +11,44 @@ Weather is a universal conversation topic in Japan, where seasons play an import
 
 ## Weather Conditions
 
-### Basic Weather
-
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
 | てんき | 天気 | tenki | ☀️ weather | noun |
 | そら | 空 | sora | 🌌 sky | noun |
-| はれ | 晴れ | hare | ☀️ clear weather, sunny | noun |
-| くもり | 曇り | kumori | ☁️ cloudy | noun |
+| はれ | 晴れ | hare | ☀️ clear weather | noun |
+| はれている | 晴れている | harete iru | ☀️ it's sunny | expression |
+| くもり | 曇り | kumori | ☁️ cloudy weather | noun |
+| くもっている | 曇っている | kumotte iru | ☁️ it's cloudy | expression |
 | あめ | 雨 | ame | 🌧️ rain | noun |
+| あめが ふる | 雨が降る | ame ga furu | 🌧️ it rains | expression |
 | ゆき | 雪 | yuki | ❄️ snow | noun |
+| ゆきが ふる | 雪が降る | yuki ga furu | ❄️ it snows | expression |
 | かぜ | 風 | kaze | 💨 wind | noun |
+| かぜが ふく | 風が吹く | kaze ga fuku | 💨 wind blows | expression |
 | かみなり | 雷 | kaminari | ⚡ thunder, lightning | noun |
 | たいふう | 台風 | taifuu | 🌀 typhoon | noun |
 | きり | 霧 | kiri | 🌫️ fog | noun |
-
-### Weather Adjectives
-
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| はれている | 晴れている | harete iru | ☀️ sunny, clear | expression |
-| くもっている | 曇っている | kumotte iru | ☁️ cloudy | expression |
 | むしあつい | 蒸し暑い | mushiatsui | 🥵 humid and hot | い-adjective |
 | じめじめした | | jimejime shita | 💧 damp, humid | な-adjective |
 
 **Examples:**
-- きょうは いいてんき ですね。 — *kyou wa ii tenki desu ne.* — Nice weather today, isn't it?
-- きょうは むしあつい ですね。 — *kyou wa mushiatsui desu ne.* — It's humid and hot today, isn't it?
+- きょうは いいてんき ですね。 — Nice weather today, isn't it?
+  - *kyou wa ii tenki desu ne.*
+- きょうは むしあつい ですね。 — It's humid and hot today, isn't it?
+  - *kyou wa mushiatsui desu ne.*
 
 ## Temperature
 
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
-| きおん | 気温 | kion | 🌡️ temperature | noun |
+| おんど | 温度 | ondo | 🌡️ temperature | noun |
+| しつど | 湿度 | shitsudo | 💧 humidity | noun |
 | あつい | 暑い | atsui | 🥵 hot (weather) | い-adjective |
 | さむい | 寒い | samui | 🥶 cold (weather) | い-adjective |
 | あたたかい | 暖かい | atatakai | 🌸 warm | い-adjective |
 | すずしい | 涼しい | suzushii | 🍃 cool, refreshing | い-adjective |
 
-:::idea Weather Forecast Vocabulary
+:::info Weather Forecast Vocabulary
 When watching Japanese weather forecasts:
 - てんきよほう (天気予報) — weather forecast
 - さいこうきおん (最高気温) — high temperature  
@@ -58,10 +57,12 @@ When watching Japanese weather forecasts:
 :::
 
 **Examples:**
-- きょうは さむい ですね。 — *kyou wa samui desu ne.* — It's cold today, isn't it?
-- なつは あつい です。 — *natsu wa atsui desu.* — Summer is hot.
-- このへやは すずしい です。 — *kono heya wa suzushii desu.* — This room is cool.
-- あたたかく なりましたね。 — *atatakaku narimashita ne.* — It's gotten warm, hasn't it?
+- きょうは さむい ですね。 — It's cold today, isn't it?
+  - *kyou wa samui desu ne.*
+- なつは あつい です。 — Summer is hot.
+  - *natsu wa atsui desu.*
+- あたたかく なりましたね。 — It's gotten warm, hasn't it?
+  - *atatakaku narimashita ne.*
 
 :::warning あつい vs あつい
 Don't confuse **暑い** (atsui, hot weather) with **熱い** (atsui, hot to touch). Same pronunciation, different kanji!
@@ -93,10 +94,12 @@ Example:
 - **Autumn Leaves**: 紅葉 (kouyou/momiji) viewing is popular in autumn
 
 **Examples:**
-- はるに さくらを みに いきます。 — *haru ni sakura o mi ni ikimasu.* — In spring, I go to see the cherry blossoms.
-- あきは すずしく なります。 — *aki wa suzushiku narimasu.* — Autumn becomes cool.
-- あきは こうようが きれい です。 — *aki wa kouyou ga kirei desu.* — The autumn leaves are beautiful in fall.
-- ふゆに スキーを しに いきます。 — *fuyu ni sukii o shi ni ikimasu.* — In winter, I go skiing.
+- はるに さくらを みに いきます。 — In spring, I go to see the cherry blossoms.
+  - *haru ni sakura o mi ni ikimasu.*
+- あきは すずしく なります。 — Autumn becomes cool.
+  - *aki wa suzushiku narimasu.*
+- ふゆに スキーを しに いきます。 — In winter, I go skiing.
+  - *fuyu ni sukii o shi ni ikimasu.*
 
 ## Weather Actions
 
@@ -114,11 +117,12 @@ Example:
 | ながぐつ | 長靴 | nagagutsu | 👢 rain boots | noun |
 
 **Examples:**
-- あめが ふっています。 — *ame ga futte imasu.* — It's raining.
-- かさを もっていますか？ — *kasa o motte imasu ka?* — Do you have an umbrella?
-- かさを わすれました。ぬれました。 — *kasa o wasuremashita. nuremashita.* — I forgot my umbrella. I got wet.
-- あめが やみました。 — *ame ga yamimashita.* — The rain stopped.
-- あめが ふりそうだから、かさを もっていきましょう。 — *ame ga furisou dakara, kasa o motte ikimashou.* — It looks like rain, so let's take an umbrella.
+- あめが ふっています。 — It's raining.
+  - *ame ga futte imasu.*
+- かさを もっていますか？ — Do you have an umbrella?
+  - *kasa o motte imasu ka?*
+- あめが やみました。 — The rain stopped.
+  - *ame ga yamimashita.*
 
 ### Snow-Related
 
@@ -135,28 +139,30 @@ Example:
 | マフラー | | mafuraa | 🧣 scarf | noun |
 
 **Examples:**
-- ゆきが ふっています！ — *yuki ga futte imasu!* — It's snowing!
-- ゆきが たくさん つもりました。 — *yuki ga takusan tsumorimashita.* — A lot of snow accumulated.
-- あさ、ゆきかきを しなければなりません。 — *asa, yukikaki o shinakereba narimasen.* — I have to shovel snow in the morning.
-- ゆきが とけて、みちが ぬれています。 — *yuki ga tokete, michi ga nurete imasu.* — The snow melted and the road is wet.
-- こどもたちは ゆきだるまを つくっています。 — *kodomotachi wa yukidaruma o tsukutte imasu.* — The children are making a snowman.
-- さむいから、マフラーを しましょう。 — *samui kara, mafuraa o shimashou.* — It's cold, so let's wear a scarf.
+- ゆきが ふっています！ — It's snowing!
+  - *yuki ga futte imasu!*
+- ゆきが たくさん つもりました。 — A lot of snow accumulated.
+  - *yuki ga takusan tsumorimashita.*
+- ゆきが とけて、みちが ぬれています。 — The snow melted and the road is wet.
+  - *yuki ga tokete, michi ga nurete imasu.*
+- こどもたちは ゆきだるまを つくっています。 — The children are making a snowman.
+  - *kodomotachi wa yukidaruma o tsukutte imasu.*
 
 ## Weather Expressions
 
 ### Asking About Weather
 
-- Q: きょうの てんきは どうですか？ — *kyou no tenki wa dou desu ka?* — How's the weather today?
-- A: あめが ふっています。 — *ame ga futte imasu.* — It's raining.
+- Q: きょうの てんきは どうですか？ — How's the weather today?
+  - *kyou no tenki wa dou desu ka?*
+- A: あめが ふっています。 — It's raining.
+  - *ame ga futte imasu.*
 
-- Q: そとは どうですか？ — *soto wa dou desu ka?* — How is it outside?
-- A: かぜが ふいています。 — *kaze ga fuite imasu.* — The wind is blowing.
+- Q: そとは どうですか？ — How is it outside?
+  - *soto wa dou desu ka?*
+- A: かぜが ふいています。 — The wind is blowing.
+  - *kaze ga fuite imasu.*
 
-- Q: あしたは はれますか？ — *ashita wa haremasu ka?* — Will it be sunny tomorrow?
-- A: はい、はれると おもいます。 — *hai, hareru to omoimasu.* — Yes, I think it will be sunny.
-
-- Q: あめが ふりそうですか？ — *ame ga furisou desu ka?* — Does it look like rain?
-- A: はい、そらが くもっています。 — *hai, sora ga kumotte imasu.* — Yes, the sky is cloudy.
-
-- Q: あめは やみましたか？ — *ame wa yamimashita ka?* — Has the rain stopped?
-- A: はい、あめが やみました。 — *hai, ame ga yamimashita.* — Yes, the rain stopped.
+- Q: あしたは はれますか？ — Will it be sunny tomorrow?
+  - *ashita wa haremasu ka?*
+- A: はい、はれると おもいます。 — Yes, I think it will be sunny.
+  - *hai, hareru to omoimasu.*
