@@ -42,8 +42,8 @@ HELP_TEXT = """
 
 [bold]Navigation:[/bold]
   ↑/↓ arrows    Navigate through previous inputs
-  Ctrl+C        Cancel current input
-  Ctrl+D        Exit
+  Ctrl+C        Exit
+  Ctrl+D        Cancel current input
 
 [bold]Tips:[/bold]
   • Keep sentences simple for better translations
@@ -56,7 +56,7 @@ HELP_TEXT = """
 def print_welcome() -> None:
     """Print the welcome banner."""
     welcome = Text()
-    welcome.append("🇯🇵 Japanese Translator\n", style="bold cyan")
+    welcome.append("日本語 Translator\n", style="bold cyan")
     welcome.append("English → Japanese with Hiragana, Kanji & Romaji\n\n", style="dim")
     welcome.append("Type ", style="white")
     welcome.append("help", style="green bold")
@@ -130,13 +130,14 @@ def main() -> None:
     print_welcome()
 
     translator = JapaneseTranslator()
+    translator.load()
     intent_detector = IntentDetector(use_llm=False)
     session = create_session()
 
     while True:
         try:
             user_input = session.prompt(
-                [("class:prompt", "翻訳 ❯ ")],
+                [("class:prompt", "translate ❯ ")],
                 style=PROMPT_STYLE,
             ).strip()
 
@@ -162,12 +163,12 @@ def main() -> None:
                     console.print("[dim]Please try again or rephrase your input.[/dim]\n")
 
         except KeyboardInterrupt:
-            console.print("\n[dim]Press Ctrl+D or type 'quit' to exit[/dim]\n")
-            continue
-
-        except EOFError:
             console.print("\n[cyan]さようなら! (Goodbye!)[/cyan] 👋\n")
             break
+
+        except EOFError:
+            console.print("\n[dim]Input cancelled[/dim]\n")
+            continue
 
         except Exception as e:
             console.print(f"[red]Error: {e}[/red]\n")

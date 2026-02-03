@@ -5,11 +5,19 @@ This module provides the JapaneseTranslator class for translating English text
 to Japanese, with automatic conversion to hiragana and romaji representations.
 """
 
+import logging
+import os
 from dataclasses import dataclass
 
 import pykakasi
 import torch
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+from transformers import AutoConfig, AutoModelForSeq2SeqLM, AutoTokenizer
+
+os.environ["HF_HUB_DISABLE_PROGRESS_BARS"] = "1"
+os.environ["TQDM_DISABLE"] = "1"
+logging.getLogger("transformers").setLevel(logging.ERROR)
+logging.getLogger("accelerate").setLevel(logging.ERROR)
+logging.getLogger("huggingface_hub").setLevel(logging.ERROR)
 
 
 PUNCTUATION = ".,。、!?！？"
@@ -86,7 +94,12 @@ class JapaneseTranslator:
             self.device = torch.device("cpu")
 
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
-        self.model = AutoModelForSeq2SeqLM.from_pretrained(self.model_name)
+        config = AutoConfig.from_pretrained(self.model_name, tie_word_embeddings=False)
+        self.model = AutoModelForSeq2SeqLM.from_pretrained(
+            self.model_name,
+            config=config,
+            low_cpu_mem_usage=False,
+        )
         self.model.to(self.device)
         self.model.eval()
         self.tokenizer.src_lang = self._SRC_LANG
