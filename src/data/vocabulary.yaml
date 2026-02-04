@@ -241,6 +241,7 @@ vocabulary:
     category: vocabulary
     tags:
       - clothes
+      - weather
     type: noun
   - id: clothes_17
     hiragana: ドレス
@@ -2866,6 +2867,15 @@ vocabulary:
     type: expression
     kanji: 雨が降る
   - id: weather_13
+    hiragana: はれる
+    romaji: hareru
+    meaning: to clear up
+    category: vocabulary
+    tags:
+      - weather
+    type: verb
+    kanji: 晴れる
+  - id: weather_14
     hiragana: たいふう
     romaji: taifuu
     meaning: typhoon
@@ -2874,7 +2884,16 @@ vocabulary:
       - weather
     type: noun
     kanji: 台風
-  - id: weather_14
+  - id: weather_15
+    hiragana: くもる
+    romaji: kumoru
+    meaning: to become cloudy
+    category: vocabulary
+    tags:
+      - weather
+    type: verb
+    kanji: 曇る
+  - id: weather_16
     hiragana: きり
     romaji: kiri
     meaning: fog
@@ -2883,7 +2902,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 霧
-  - id: weather_15
+  - id: weather_17
     hiragana: ゆきが ふる
     romaji: yuki ga furu
     meaning: it snows
@@ -2892,7 +2911,16 @@ vocabulary:
       - weather
     type: expression
     kanji: 雪が降る
-  - id: weather_16
+  - id: weather_18
+    hiragana: ふく
+    romaji: fuku
+    meaning: to blow (wind)
+    category: vocabulary
+    tags:
+      - weather
+    type: verb
+    kanji: 吹く
+  - id: weather_19
     hiragana: はれている
     romaji: harete iru
     meaning: 'sunny, clear'
@@ -2901,7 +2929,7 @@ vocabulary:
       - weather
     type: expression
     kanji: 晴れている
-  - id: weather_17
+  - id: weather_20
     hiragana: くもっている
     romaji: kumotte iru
     meaning: cloudy
@@ -2910,7 +2938,7 @@ vocabulary:
       - weather
     type: expression
     kanji: 曇っている
-  - id: weather_18
+  - id: weather_21
     hiragana: かぜが ふく
     romaji: kaze ga fuku
     meaning: wind blows
@@ -2919,7 +2947,7 @@ vocabulary:
       - weather
     type: expression
     kanji: 風が吹く
-  - id: weather_19
+  - id: weather_22
     hiragana: むしあつい
     romaji: mushiatsui
     meaning: humid and hot
@@ -2928,7 +2956,16 @@ vocabulary:
       - weather
     type: い-adjective
     kanji: 蒸し暑い
-  - id: weather_20
+  - id: weather_23
+    hiragana: つもる
+    romaji: tsumoru
+    meaning: to pile up
+    category: vocabulary
+    tags:
+      - weather
+    type: verb
+    kanji: 積もる
+  - id: weather_24
     hiragana: じめじめした
     romaji: jimejime shita
     meaning: 'damp, humid'
@@ -2936,7 +2973,7 @@ vocabulary:
     tags:
       - weather
     type: な-adjective
-  - id: weather_21
+  - id: weather_25
     hiragana: きおん
     romaji: kion
     meaning: temperature
@@ -2945,7 +2982,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 気温
-  - id: weather_22
+  - id: weather_26
     hiragana: おんど
     romaji: ondo
     meaning: temperature
@@ -2954,7 +2991,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 温度
-  - id: weather_23
+  - id: weather_27
     hiragana: あつい
     romaji: atsui
     meaning: hot (weather)
@@ -2963,7 +3000,7 @@ vocabulary:
       - weather
     type: い-adjective
     kanji: 暑い
-  - id: weather_24
+  - id: weather_28
     hiragana: しつど
     romaji: shitsudo
     meaning: humidity
@@ -2972,7 +3009,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 湿度
-  - id: weather_25
+  - id: weather_29
     hiragana: さむい
     romaji: samui
     meaning: cold (weather)
@@ -2981,7 +3018,7 @@ vocabulary:
       - weather
     type: い-adjective
     kanji: 寒い
-  - id: weather_26
+  - id: weather_30
     hiragana: あたたかい
     romaji: atatakai
     meaning: warm
@@ -2990,7 +3027,7 @@ vocabulary:
       - weather
     type: い-adjective
     kanji: 暖かい
-  - id: weather_27
+  - id: weather_31
     hiragana: すずしい
     romaji: suzushii
     meaning: 'cool, refreshing'
@@ -2999,7 +3036,7 @@ vocabulary:
       - weather
     type: い-adjective
     kanji: 涼しい
-  - id: weather_28
+  - id: weather_32
     hiragana: きせつ
     romaji: kisetsu
     meaning: season
@@ -3008,7 +3045,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 季節
-  - id: weather_29
+  - id: weather_33
     hiragana: はる
     romaji: haru
     meaning: spring
@@ -3017,7 +3054,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 春
-  - id: weather_30
+  - id: weather_34
     hiragana: なつ
     romaji: natsu
     meaning: summer
@@ -3026,7 +3063,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 夏
-  - id: weather_31
+  - id: weather_35
     hiragana: あき
     romaji: aki
     meaning: 'autumn, fall'
@@ -3035,7 +3072,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 秋
-  - id: weather_32
+  - id: weather_36
     hiragana: ふゆ
     romaji: fuyu
     meaning: winter
@@ -3044,7 +3081,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 冬
-  - id: weather_33
+  - id: weather_37
     hiragana: ふる
     romaji: furu
     meaning: to fall (rain/snow)
@@ -3053,7 +3090,16 @@ vocabulary:
       - weather
     type: godan verb
     kanji: 降る
-  - id: weather_34
+  - id: weather_38
+    hiragana: ぼうし
+    romaji: boushi
+    meaning: 'hat, cap'
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+    kanji: 帽子
+  - id: weather_39
     hiragana: ぬれる
     romaji: nureru
     meaning: to get wet
@@ -3062,7 +3108,15 @@ vocabulary:
       - weather
     type: ichidan verb
     kanji: 濡れる
-  - id: weather_35
+  - id: weather_40
+    hiragana: サングラス
+    romaji: sangurasu
+    meaning: sunglasses
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+  - id: weather_41
     hiragana: かわく
     romaji: kawaku
     meaning: to dry
@@ -3071,7 +3125,16 @@ vocabulary:
       - weather
     type: godan verb
     kanji: 乾く
-  - id: weather_36
+  - id: weather_42
+    hiragana: ひやけどめ
+    romaji: hiyakedome
+    meaning: sunscreen
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+    kanji: 日焼け止め
+  - id: weather_43
     hiragana: かわかす
     romaji: kawakasu
     meaning: to dry (something)
@@ -3080,7 +3143,16 @@ vocabulary:
       - weather
     type: godan verb
     kanji: 乾かす
-  - id: weather_37
+  - id: weather_44
+    hiragana: せんす
+    romaji: sensu
+    meaning: folding fan
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+    kanji: 扇子
+  - id: weather_45
     hiragana: やむ
     romaji: yamu
     meaning: to stop (rain)
@@ -3089,7 +3161,16 @@ vocabulary:
       - weather
     type: godan verb
     kanji: 止む
-  - id: weather_38
+  - id: weather_46
+    hiragana: うちわ
+    romaji: uchiwa
+    meaning: hand fan
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+    kanji: 団扇
+  - id: weather_47
     hiragana: かさ
     romaji: kasa
     meaning: umbrella
@@ -3098,7 +3179,16 @@ vocabulary:
       - weather
     type: noun
     kanji: 傘
-  - id: weather_39
+  - id: weather_48
+    hiragana: ひがさ
+    romaji: higasa
+    meaning: parasol
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+    kanji: 日傘
+  - id: weather_49
     hiragana: レインコート
     romaji: reinkooto
     meaning: raincoat
@@ -3106,7 +3196,7 @@ vocabulary:
     tags:
       - weather
     type: noun
-  - id: weather_40
+  - id: weather_50
     hiragana: ながぐつ
     romaji: nagagutsu
     meaning: rain boots
@@ -3115,7 +3205,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 長靴
-  - id: weather_41
+  - id: weather_51
     hiragana: つもる
     romaji: tsumoru
     meaning: 'to pile up, accumulate'
@@ -3124,7 +3214,7 @@ vocabulary:
       - weather
     type: godan verb
     kanji: 積もる
-  - id: weather_42
+  - id: weather_52
     hiragana: とける
     romaji: tokeru
     meaning: to melt
@@ -3133,7 +3223,16 @@ vocabulary:
       - weather
     type: ichidan verb
     kanji: 溶ける
-  - id: weather_43
+  - id: weather_53
+    hiragana: かっぱ
+    romaji: kappa
+    meaning: rain poncho
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+    kanji: 合羽
+  - id: weather_54
     hiragana: ゆきかき
     romaji: yukikaki
     meaning: snow shoveling
@@ -3142,7 +3241,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 雪かき
-  - id: weather_44
+  - id: weather_55
     hiragana: ゆきかきをする
     romaji: yukikaki o suru
     meaning: to shovel snow
@@ -3151,7 +3250,7 @@ vocabulary:
       - weather
     type: expression
     kanji: 雪かきをする
-  - id: weather_45
+  - id: weather_56
     hiragana: のぞく
     romaji: nozoku
     meaning: 'to remove, clear away'
@@ -3160,7 +3259,7 @@ vocabulary:
       - weather
     type: godan verb
     kanji: 除く
-  - id: weather_46
+  - id: weather_57
     hiragana: スコップ
     romaji: sukoppu
     meaning: 'shovel, scoop'
@@ -3168,7 +3267,15 @@ vocabulary:
     tags:
       - weather
     type: noun
-  - id: weather_47
+  - id: weather_58
+    hiragana: ダウンジャケット
+    romaji: daun jaketto
+    meaning: down jacket
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+  - id: weather_59
     hiragana: ゆきだるま
     romaji: yukidaruma
     meaning: snowman
@@ -3177,10 +3284,35 @@ vocabulary:
       - weather
     type: noun
     kanji: 雪だるま
-  - id: weather_48
+  - id: weather_60
+    hiragana: ニットぼう
+    romaji: nittobou
+    meaning: 'knit cap, beanie'
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+    kanji: ニット帽
+  - id: weather_61
     hiragana: マフラー
     romaji: mafuraa
     meaning: scarf
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+  - id: weather_62
+    hiragana: イヤーマフ
+    romaji: iyaamafu
+    meaning: earmuffs
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+  - id: weather_63
+    hiragana: ブーツ
+    romaji: buutsu
+    meaning: boots
     category: vocabulary
     tags:
       - weather

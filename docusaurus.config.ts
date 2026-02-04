@@ -187,7 +187,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Japanese Lessons. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Japanese Lessons. Built with Docusaurus. Made with AI 🤖`,
     },
     prism: {
       theme: prismThemes.github,
