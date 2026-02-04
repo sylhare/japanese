@@ -16,20 +16,25 @@ Weather is a universal conversation topic in Japan, where seasons play an import
 | てんき | 天気 | tenki | ☀️ weather | noun |
 | そら | 空 | sora | 🌌 sky | noun |
 | はれ | 晴れ | hare | ☀️ clear weather | noun |
-| はれている | 晴れている | harete iru | ☀️ it's sunny | expression |
 | くもり | 曇り | kumori | ☁️ cloudy weather | noun |
-| くもっている | 曇っている | kumotte iru | ☁️ it's cloudy | expression |
 | あめ | 雨 | ame | 🌧️ rain | noun |
-| あめが ふる | 雨が降る | ame ga furu | 🌧️ it rains | expression |
 | ゆき | 雪 | yuki | ❄️ snow | noun |
-| ゆきが ふる | 雪が降る | yuki ga furu | ❄️ it snows | expression |
 | かぜ | 風 | kaze | 💨 wind | noun |
-| かぜが ふく | 風が吹く | kaze ga fuku | 💨 wind blows | expression |
 | かみなり | 雷 | kaminari | ⚡ thunder, lightning | noun |
 | たいふう | 台風 | taifuu | 🌀 typhoon | noun |
 | きり | 霧 | kiri | 🌫️ fog | noun |
 | むしあつい | 蒸し暑い | mushiatsui | 🥵 humid and hot | い-adjective |
 | じめじめした | | jimejime shita | 💧 damp, humid | な-adjective |
+| はれる | 晴れる | hareru | ☀️ to clear up | verb |
+| くもる | 曇る | kumoru | ☁️ to become cloudy | verb |
+| ふる | 降る | furu | 🌧️ to fall (rain/snow) | verb |
+| ふく | 吹く | fuku | 💨 to blow (wind) | verb |
+| やむ | 止む | yamu | 🛑 to stop (rain) | verb |
+| ぬれる | 濡れる | nureru | 💦 to get wet | verb |
+| かわく | 乾く | kawaku | ☀️ to dry | verb |
+| つもる | 積もる | tsumoru | ❄️ to pile up | verb |
+| とける | 溶ける | tokeru | 💧 to melt | verb |
+| ゆきかき | 雪かき | yukikaki | ⛏️ snow shoveling | noun |
 
 **Examples:**
 - きょうは いいてんき ですね。 — Nice weather today, isn't it?
@@ -101,50 +106,61 @@ Example:
 - ふゆに スキーを しに いきます。 — In winter, I go skiing.
   - *fuyu ni sukii o shi ni ikimasu.*
 
-## Weather Actions
+## Weather Gear
 
-### Rain-Related
+### Hot Weather
 
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
-| ふる | 降る | furu | 🌧️ to fall (rain/snow) | godan verb |
-| ぬれる | 濡れる | nureru | 💦 to get wet | ichidan verb |
-| かわく | 乾く | kawaku | ☀️ to dry | godan verb |
-| かわかす | 乾かす | kawakasu | 🌬️ to dry (something) | godan verb |
-| やむ | 止む | yamu | 🛑 to stop (rain) | godan verb |
+| ぼうし | 帽子 | boushi | 🧢 hat, cap | noun |
+| サングラス | | sangurasu | 🕶️ sunglasses | noun |
+| ひやけどめ | 日焼け止め | hiyakedome | 🧴 sunscreen | noun |
+| せんす | 扇子 | sensu | 🪭 folding fan | noun |
+| うちわ | 団扇 | uchiwa | 🪭 hand fan | noun |
+| ひがさ | 日傘 | higasa | ☂️ parasol | noun |
+
+**Examples:**
+- ぼうしを かぶってください。 — Please wear a hat.
+  - *boushi o kabutte kudasai.*
+- ひやけどめを ぬりましたか？ — Did you put on sunscreen?
+  - *hiyakedome o nurimashita ka?*
+
+### Rain Gear
+
+| Hiragana | Kanji | Romaji | English | Type |
+|----------|-------|--------|---------|------|
 | かさ | 傘 | kasa | ☂️ umbrella | noun |
 | レインコート | | reinkooto | 🧥 raincoat | noun |
 | ながぐつ | 長靴 | nagagutsu | 👢 rain boots | noun |
+| かっぱ | 合羽 | kappa | 🧥 rain poncho | noun |
 
 **Examples:**
-- あめが ふっています。 — It's raining.
-  - *ame ga futte imasu.*
 - かさを もっていますか？ — Do you have an umbrella?
   - *kasa o motte imasu ka?*
-- あめが やみました。 — The rain stopped.
-  - *ame ga yamimashita.*
+- あめが ふりそうだから、かさを もっていって。 — It looks like rain, so take an umbrella.
+  - *ame ga furisou dakara, kasa o motte itte.*
 
-### Snow-Related
+### Winter Gear
 
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
-| つもる | 積もる | tsumoru | ❄️ to pile up, accumulate | godan verb |
-| とける | 溶ける | tokeru | 💧 to melt | ichidan verb |
-| ゆきかき | 雪かき | yukikaki | ⛏️ snow shoveling | noun |
-| ゆきかきをする | 雪かきをする | yukikaki o suru | ⛏️ to shovel snow | expression |
-| のぞく | 除く | nozoku | 🧹 to remove, clear away | godan verb |
-| スコップ | | sukoppu | 🪣 shovel, scoop | noun |
-| ゆきだるま | 雪だるま | yukidaruma | ⛄ snowman | noun |
 | てぶくろ | 手袋 | tebukuro | 🧤 gloves | noun |
 | マフラー | | mafuraa | 🧣 scarf | noun |
+| コート | | kooto | 🧥 coat | noun |
+| ダウンジャケット | | daun jaketto | 🧥 down jacket | noun |
+| ニットぼう | ニット帽 | nittobou | 🧶 knit cap, beanie | noun |
+| イヤーマフ | | iyaamafu | 🎧 earmuffs | noun |
+| ブーツ | | buutsu | 👢 boots | noun |
+| スコップ | | sukoppu | 🪣 shovel, scoop | noun |
+| ゆきだるま | 雪だるま | yukidaruma | ⛄ snowman | noun |
 
 **Examples:**
-- ゆきが ふっています！ — It's snowing!
-  - *yuki ga futte imasu!*
+- さむいから、コートを きてください。 — It's cold, so please wear a coat.
+  - *samui kara, kooto o kite kudasai.*
+- てぶくろを わすれました。 — I forgot my gloves.
+  - *tebukuro o wasuremashita.*
 - ゆきが たくさん つもりました。 — A lot of snow accumulated.
   - *yuki ga takusan tsumorimashita.*
-- ゆきが とけて、みちが ぬれています。 — The snow melted and the road is wet.
-  - *yuki ga tokete, michi ga nurete imasu.*
 - こどもたちは ゆきだるまを つくっています。 — The children are making a snowman.
   - *kodomotachi wa yukidaruma o tsukutte imasu.*
 
