@@ -9,37 +9,6 @@ tags: [vocabulary, cooking, food, kitchen]
 
 Cooking in Japanese uses a mix of common verbs and handy kitchen words. This lesson covers preparing food, serving, eating, and utensils. If you want flavor words, see the [Tastes lesson](./tastes).
 
-## Simple Curry Recipe 🍛
-
-**ざいりょう (Ingredients):**
-- やさい (vegetables): にんじん (carrots), じゃがいも (potatoes), たまねぎ (onion), にく (meat), みず (water), カレールー (curry roux)
-
-**どうぐ (Utensils):**
-- ほうちょう (knife), まないた (cutting board), なべ (pot), おたま (ladle), おさら (plate)
-
-**つくりかた (Instructions):**
-
-1. やさいを あらいます。 — Wash the vegetables.
-  - *yasai o araimasu.*
-2. ほうちょうで にんじんと じゃがいもの かわを むきます。 — Peel the carrots and potatoes with a knife.
-  - *houchou de ninjin to jagaimo no kawa o mukimasu.*
-3. まないたの うえで やさいを きります。 — Cut the vegetables on the cutting board.
-  - *manaita no ue de yasai o kirimasu.*
-4. まないたの うえで にくを きります。 — Cut the meat on the cutting board.
-  - *manaita no ue de niku o kirimasu.*
-5. なべで にくを やきます。 — Grill the meat in the pot.
-  - *nabe de niku o yakimasu.*
-6. やさいを いれて、おたまで まぜます。 — Add the vegetables and mix with a ladle.
-  - *yasai o irete, otama de mazemasu.*
-7. みずを いれて、にます。 — Add water and simmer.
-  - *mizu o irete, nimasu.*
-8. カレールーを いれて、まぜます。 — Add curry roux and mix.
-  - *karee ruu o irete, mazemasu.*
-9. おさらに もりつけます。 — Plate it on a dish.
-  - *osara ni moritsukemasu.*
-10. いただきます！ — Let's eat!
-  - *itadakimasu!*
-
 ## Cooking Verbs
 
 | Hiragana | Kanji | Romaji | English | Type |
@@ -116,3 +85,34 @@ Cooking in Japanese uses a mix of common verbs and handy kitchen words. This les
   - *tezukuri no keeki o tsukurimashita.*
 - かんぱい！ — Cheers!
   - *kanpai!*
+
+## Simple Curry Recipe 🍛
+
+**ざいりょう (Ingredients):**
+- やさい (vegetables): にんじん (carrots), じゃがいも (potatoes), たまねぎ (onion), にく (meat), みず (water), カレールー (curry roux)
+
+**どうぐ (Utensils):**
+- ほうちょう (knife), まないた (cutting board), なべ (pot), おたま (ladle), おさら (plate)
+
+**つくりかた (Instructions):**
+
+1. やさいを あらいます。 — Wash the vegetables.
+  - *yasai o araimasu.*
+2. ほうちょうで にんじんと じゃがいもの かわを むきます。 — Peel the carrots and potatoes with a knife.
+  - *houchou de ninjin to jagaimo no kawa o mukimasu.*
+3. まないたの うえで やさいを きります。 — Cut the vegetables on the cutting board.
+  - *manaita no ue de yasai o kirimasu.*
+4. まないたの うえで にくを きります。 — Cut the meat on the cutting board.
+  - *manaita no ue de niku o kirimasu.*
+5. なべで にくを やきます。 — Grill the meat in the pot.
+  - *nabe de niku o yakimasu.*
+6. やさいを いれて、おたまで まぜます。 — Add the vegetables and mix with a ladle.
+  - *yasai o irete, otama de mazemasu.*
+7. みずを いれて、にます。 — Add water and simmer.
+  - *mizu o irete, nimasu.*
+8. カレールーを いれて、まぜます。 — Add curry roux and mix.
+  - *karee ruu o irete, mazemasu.*
+9. おさらに もりつけます。 — Plate it on a dish.
+  - *osara ni moritsukemasu.*
+10. いただきます！ — Let's eat!
+  - *itadakimasu!*

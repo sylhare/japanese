@@ -241,6 +241,7 @@ vocabulary:
     category: vocabulary
     tags:
       - clothes
+      - weather
     type: noun
   - id: clothes_17
     hiragana: ドレス
@@ -803,6 +804,7 @@ vocabulary:
     category: vocabulary
     tags:
       - confusing-kanji
+      - health
     type: noun
     kanji: 目
   - id: confusingkanji_39
@@ -2153,6 +2155,451 @@ vocabulary:
       - family
     type: noun
     kanji: 夫婦
+  - id: health_0
+    hiragana: くしゃみ
+    romaji: kushami
+    meaning: sneeze
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+  - id: health_1
+    hiragana: くしゃみをする
+    romaji: kushami o suru
+    meaning: to sneeze
+    category: vocabulary
+    tags:
+      - health
+    type: verb
+  - id: health_2
+    hiragana: せき
+    romaji: seki
+    meaning: cough
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 咳
+  - id: health_3
+    hiragana: せきをする
+    romaji: seki o suru
+    meaning: to cough
+    category: vocabulary
+    tags:
+      - health
+    type: verb
+    kanji: 咳をする
+  - id: health_4
+    hiragana: はなみず
+    romaji: hanamizu
+    meaning: runny nose
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 鼻水
+  - id: health_5
+    hiragana: はなづまり
+    romaji: hanazumari
+    meaning: stuffy nose
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 鼻詰まり
+  - id: health_6
+    hiragana: ねつ
+    romaji: netsu
+    meaning: fever
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 熱
+  - id: health_7
+    hiragana: ずつう
+    romaji: zutsuu
+    meaning: headache
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 頭痛
+  - id: health_8
+    hiragana: いつう
+    romaji: itsuu
+    meaning: stomachache
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 胃痛
+  - id: health_9
+    hiragana: のどのいたみ
+    romaji: nodo no itami
+    meaning: sore throat
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 喉の痛み
+  - id: health_10
+    hiragana: めまい
+    romaji: memai
+    meaning: dizziness
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 目眩
+  - id: health_11
+    hiragana: はきけ
+    romaji: hakike
+    meaning: nausea
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 吐き気
+  - id: health_12
+    hiragana: かゆい
+    romaji: kayui
+    meaning: itchy
+    category: vocabulary
+    tags:
+      - health
+    type: adjective
+    kanji: 痒い
+  - id: health_13
+    hiragana: いたい
+    romaji: itai
+    meaning: 'painful, hurts'
+    category: vocabulary
+    tags:
+      - health
+    type: adjective
+    kanji: 痛い
+  - id: health_14
+    hiragana: だるい
+    romaji: darui
+    meaning: 'sluggish, tired'
+    category: vocabulary
+    tags:
+      - health
+    type: adjective
+  - id: health_15
+    hiragana: びょうき
+    romaji: byouki
+    meaning: 'illness, sickness'
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 病気
+  - id: health_16
+    hiragana: かぜ
+    romaji: kaze
+    meaning: cold (illness)
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 風邪
+  - id: health_17
+    hiragana: インフルエンザ
+    romaji: infuruenza
+    meaning: 'influenza, flu'
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+  - id: health_18
+    hiragana: アレルギー
+    romaji: arerugi
+    meaning: allergy
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+  - id: health_19
+    hiragana: かふんしょう
+    romaji: kafunshou
+    meaning: hay fever
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 花粉症
+  - id: health_20
+    hiragana: しょくちゅうどく
+    romaji: shokuchuudoku
+    meaning: food poisoning
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 食中毒
+  - id: health_21
+    hiragana: ねっちゅうしょう
+    romaji: necchuushou
+    meaning: heatstroke
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 熱中症
+  - id: health_22
+    hiragana: けが
+    romaji: kega
+    meaning: injury
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 怪我
+  - id: health_23
+    hiragana: やけど
+    romaji: yakedo
+    meaning: burn
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 火傷
+  - id: health_24
+    hiragana: ねんざ
+    romaji: nenza
+    meaning: sprain
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 捻挫
+  - id: health_25
+    hiragana: こっせつ
+    romaji: kossetsu
+    meaning: bone fracture
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 骨折
+  - id: health_26
+    hiragana: くすり
+    romaji: kusuri
+    meaning: medicine
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 薬
+  - id: health_27
+    hiragana: くすりをのむ
+    romaji: kusuri o nomu
+    meaning: to take medicine
+    category: vocabulary
+    tags:
+      - health
+    type: verb
+    kanji: 薬を飲む
+  - id: health_28
+    hiragana: びょういん
+    romaji: byouin
+    meaning: hospital
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 病院
+  - id: health_29
+    hiragana: いしゃ
+    romaji: isha
+    meaning: doctor
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 医者
+  - id: health_30
+    hiragana: かんごし
+    romaji: kangoshi
+    meaning: nurse
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 看護師
+  - id: health_31
+    hiragana: しんさつ
+    romaji: shinsatsu
+    meaning: medical examination
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 診察
+  - id: health_32
+    hiragana: ちゅうしゃ
+    romaji: chuusha
+    meaning: 'injection, shot'
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 注射
+  - id: health_33
+    hiragana: ほうたい
+    romaji: houtai
+    meaning: bandage
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 包帯
+  - id: health_34
+    hiragana: ばんそうこう
+    romaji: bansoukou
+    meaning: band-aid
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 絆創膏
+  - id: health_35
+    hiragana: たいおんけい
+    romaji: taionkei
+    meaning: thermometer
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 体温計
+  - id: health_36
+    hiragana: しょほうせん
+    romaji: shohousen
+    meaning: prescription
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 処方箋
+  - id: health_37
+    hiragana: やっきょく
+    romaji: yakkyoku
+    meaning: pharmacy
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 薬局
+  - id: health_38
+    hiragana: からだ
+    romaji: karada
+    meaning: body
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 体
+  - id: health_39
+    hiragana: あたま
+    romaji: atama
+    meaning: head
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 頭
+  - id: health_40
+    hiragana: かお
+    romaji: kao
+    meaning: face
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 顔
+  - id: health_41
+    hiragana: はな
+    romaji: hana
+    meaning: nose
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 鼻
+  - id: health_42
+    hiragana: くち
+    romaji: kuchi
+    meaning: mouth
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 口
+  - id: health_43
+    hiragana: みみ
+    romaji: mimi
+    meaning: ear
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 耳
+  - id: health_44
+    hiragana: のど
+    romaji: nodo
+    meaning: throat
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 喉
+  - id: health_45
+    hiragana: おなか
+    romaji: onaka
+    meaning: 'stomach, belly'
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: お腹
+  - id: health_46
+    hiragana: せなか
+    romaji: senaka
+    meaning: back
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 背中
+  - id: health_47
+    hiragana: て
+    romaji: te
+    meaning: hand
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 手
+  - id: health_48
+    hiragana: あし
+    romaji: ashi
+    meaning: 'foot, leg'
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 足
+  - id: health_49
+    hiragana: ゆび
+    romaji: yubi
+    meaning: finger
+    category: vocabulary
+    tags:
+      - health
+    type: noun
+    kanji: 指
   - id: intendto_0
     hiragana: '[verb dictionary] + つもり です'
     romaji: tsumori desu
@@ -2866,6 +3313,15 @@ vocabulary:
     type: expression
     kanji: 雨が降る
   - id: weather_13
+    hiragana: はれる
+    romaji: hareru
+    meaning: to clear up
+    category: vocabulary
+    tags:
+      - weather
+    type: verb
+    kanji: 晴れる
+  - id: weather_14
     hiragana: たいふう
     romaji: taifuu
     meaning: typhoon
@@ -2874,7 +3330,16 @@ vocabulary:
       - weather
     type: noun
     kanji: 台風
-  - id: weather_14
+  - id: weather_15
+    hiragana: くもる
+    romaji: kumoru
+    meaning: to become cloudy
+    category: vocabulary
+    tags:
+      - weather
+    type: verb
+    kanji: 曇る
+  - id: weather_16
     hiragana: きり
     romaji: kiri
     meaning: fog
@@ -2883,7 +3348,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 霧
-  - id: weather_15
+  - id: weather_17
     hiragana: ゆきが ふる
     romaji: yuki ga furu
     meaning: it snows
@@ -2892,7 +3357,16 @@ vocabulary:
       - weather
     type: expression
     kanji: 雪が降る
-  - id: weather_16
+  - id: weather_18
+    hiragana: ふく
+    romaji: fuku
+    meaning: to blow (wind)
+    category: vocabulary
+    tags:
+      - weather
+    type: verb
+    kanji: 吹く
+  - id: weather_19
     hiragana: はれている
     romaji: harete iru
     meaning: 'sunny, clear'
@@ -2901,7 +3375,7 @@ vocabulary:
       - weather
     type: expression
     kanji: 晴れている
-  - id: weather_17
+  - id: weather_20
     hiragana: くもっている
     romaji: kumotte iru
     meaning: cloudy
@@ -2910,7 +3384,7 @@ vocabulary:
       - weather
     type: expression
     kanji: 曇っている
-  - id: weather_18
+  - id: weather_21
     hiragana: かぜが ふく
     romaji: kaze ga fuku
     meaning: wind blows
@@ -2919,7 +3393,7 @@ vocabulary:
       - weather
     type: expression
     kanji: 風が吹く
-  - id: weather_19
+  - id: weather_22
     hiragana: むしあつい
     romaji: mushiatsui
     meaning: humid and hot
@@ -2928,7 +3402,16 @@ vocabulary:
       - weather
     type: い-adjective
     kanji: 蒸し暑い
-  - id: weather_20
+  - id: weather_23
+    hiragana: つもる
+    romaji: tsumoru
+    meaning: to pile up
+    category: vocabulary
+    tags:
+      - weather
+    type: verb
+    kanji: 積もる
+  - id: weather_24
     hiragana: じめじめした
     romaji: jimejime shita
     meaning: 'damp, humid'
@@ -2936,7 +3419,7 @@ vocabulary:
     tags:
       - weather
     type: な-adjective
-  - id: weather_21
+  - id: weather_25
     hiragana: きおん
     romaji: kion
     meaning: temperature
@@ -2945,7 +3428,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 気温
-  - id: weather_22
+  - id: weather_26
     hiragana: おんど
     romaji: ondo
     meaning: temperature
@@ -2954,7 +3437,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 温度
-  - id: weather_23
+  - id: weather_27
     hiragana: あつい
     romaji: atsui
     meaning: hot (weather)
@@ -2963,7 +3446,7 @@ vocabulary:
       - weather
     type: い-adjective
     kanji: 暑い
-  - id: weather_24
+  - id: weather_28
     hiragana: しつど
     romaji: shitsudo
     meaning: humidity
@@ -2972,7 +3455,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 湿度
-  - id: weather_25
+  - id: weather_29
     hiragana: さむい
     romaji: samui
     meaning: cold (weather)
@@ -2981,7 +3464,7 @@ vocabulary:
       - weather
     type: い-adjective
     kanji: 寒い
-  - id: weather_26
+  - id: weather_30
     hiragana: あたたかい
     romaji: atatakai
     meaning: warm
@@ -2990,7 +3473,7 @@ vocabulary:
       - weather
     type: い-adjective
     kanji: 暖かい
-  - id: weather_27
+  - id: weather_31
     hiragana: すずしい
     romaji: suzushii
     meaning: 'cool, refreshing'
@@ -2999,7 +3482,7 @@ vocabulary:
       - weather
     type: い-adjective
     kanji: 涼しい
-  - id: weather_28
+  - id: weather_32
     hiragana: きせつ
     romaji: kisetsu
     meaning: season
@@ -3008,7 +3491,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 季節
-  - id: weather_29
+  - id: weather_33
     hiragana: はる
     romaji: haru
     meaning: spring
@@ -3017,7 +3500,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 春
-  - id: weather_30
+  - id: weather_34
     hiragana: なつ
     romaji: natsu
     meaning: summer
@@ -3026,7 +3509,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 夏
-  - id: weather_31
+  - id: weather_35
     hiragana: あき
     romaji: aki
     meaning: 'autumn, fall'
@@ -3035,7 +3518,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 秋
-  - id: weather_32
+  - id: weather_36
     hiragana: ふゆ
     romaji: fuyu
     meaning: winter
@@ -3044,7 +3527,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 冬
-  - id: weather_33
+  - id: weather_37
     hiragana: ふる
     romaji: furu
     meaning: to fall (rain/snow)
@@ -3053,7 +3536,16 @@ vocabulary:
       - weather
     type: godan verb
     kanji: 降る
-  - id: weather_34
+  - id: weather_38
+    hiragana: ぼうし
+    romaji: boushi
+    meaning: 'hat, cap'
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+    kanji: 帽子
+  - id: weather_39
     hiragana: ぬれる
     romaji: nureru
     meaning: to get wet
@@ -3062,7 +3554,15 @@ vocabulary:
       - weather
     type: ichidan verb
     kanji: 濡れる
-  - id: weather_35
+  - id: weather_40
+    hiragana: サングラス
+    romaji: sangurasu
+    meaning: sunglasses
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+  - id: weather_41
     hiragana: かわく
     romaji: kawaku
     meaning: to dry
@@ -3071,7 +3571,16 @@ vocabulary:
       - weather
     type: godan verb
     kanji: 乾く
-  - id: weather_36
+  - id: weather_42
+    hiragana: ひやけどめ
+    romaji: hiyakedome
+    meaning: sunscreen
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+    kanji: 日焼け止め
+  - id: weather_43
     hiragana: かわかす
     romaji: kawakasu
     meaning: to dry (something)
@@ -3080,7 +3589,16 @@ vocabulary:
       - weather
     type: godan verb
     kanji: 乾かす
-  - id: weather_37
+  - id: weather_44
+    hiragana: せんす
+    romaji: sensu
+    meaning: folding fan
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+    kanji: 扇子
+  - id: weather_45
     hiragana: やむ
     romaji: yamu
     meaning: to stop (rain)
@@ -3089,7 +3607,16 @@ vocabulary:
       - weather
     type: godan verb
     kanji: 止む
-  - id: weather_38
+  - id: weather_46
+    hiragana: うちわ
+    romaji: uchiwa
+    meaning: hand fan
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+    kanji: 団扇
+  - id: weather_47
     hiragana: かさ
     romaji: kasa
     meaning: umbrella
@@ -3098,7 +3625,16 @@ vocabulary:
       - weather
     type: noun
     kanji: 傘
-  - id: weather_39
+  - id: weather_48
+    hiragana: ひがさ
+    romaji: higasa
+    meaning: parasol
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+    kanji: 日傘
+  - id: weather_49
     hiragana: レインコート
     romaji: reinkooto
     meaning: raincoat
@@ -3106,7 +3642,7 @@ vocabulary:
     tags:
       - weather
     type: noun
-  - id: weather_40
+  - id: weather_50
     hiragana: ながぐつ
     romaji: nagagutsu
     meaning: rain boots
@@ -3115,7 +3651,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 長靴
-  - id: weather_41
+  - id: weather_51
     hiragana: つもる
     romaji: tsumoru
     meaning: 'to pile up, accumulate'
@@ -3124,7 +3660,7 @@ vocabulary:
       - weather
     type: godan verb
     kanji: 積もる
-  - id: weather_42
+  - id: weather_52
     hiragana: とける
     romaji: tokeru
     meaning: to melt
@@ -3133,7 +3669,16 @@ vocabulary:
       - weather
     type: ichidan verb
     kanji: 溶ける
-  - id: weather_43
+  - id: weather_53
+    hiragana: かっぱ
+    romaji: kappa
+    meaning: rain poncho
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+    kanji: 合羽
+  - id: weather_54
     hiragana: ゆきかき
     romaji: yukikaki
     meaning: snow shoveling
@@ -3142,7 +3687,7 @@ vocabulary:
       - weather
     type: noun
     kanji: 雪かき
-  - id: weather_44
+  - id: weather_55
     hiragana: ゆきかきをする
     romaji: yukikaki o suru
     meaning: to shovel snow
@@ -3151,7 +3696,7 @@ vocabulary:
       - weather
     type: expression
     kanji: 雪かきをする
-  - id: weather_45
+  - id: weather_56
     hiragana: のぞく
     romaji: nozoku
     meaning: 'to remove, clear away'
@@ -3160,7 +3705,7 @@ vocabulary:
       - weather
     type: godan verb
     kanji: 除く
-  - id: weather_46
+  - id: weather_57
     hiragana: スコップ
     romaji: sukoppu
     meaning: 'shovel, scoop'
@@ -3168,7 +3713,15 @@ vocabulary:
     tags:
       - weather
     type: noun
-  - id: weather_47
+  - id: weather_58
+    hiragana: ダウンジャケット
+    romaji: daun jaketto
+    meaning: down jacket
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+  - id: weather_59
     hiragana: ゆきだるま
     romaji: yukidaruma
     meaning: snowman
@@ -3177,10 +3730,35 @@ vocabulary:
       - weather
     type: noun
     kanji: 雪だるま
-  - id: weather_48
+  - id: weather_60
+    hiragana: ニットぼう
+    romaji: nittobou
+    meaning: 'knit cap, beanie'
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+    kanji: ニット帽
+  - id: weather_61
     hiragana: マフラー
     romaji: mafuraa
     meaning: scarf
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+  - id: weather_62
+    hiragana: イヤーマフ
+    romaji: iyaamafu
+    meaning: earmuffs
+    category: vocabulary
+    tags:
+      - weather
+    type: noun
+  - id: weather_63
+    hiragana: ブーツ
+    romaji: buutsu
+    meaning: boots
     category: vocabulary
     tags:
       - weather

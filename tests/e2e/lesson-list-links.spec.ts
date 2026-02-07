@@ -35,6 +35,7 @@ const vocabularyLinks = [
   { name: 'Clothes', hrefPattern: 'clothes', headingPattern: /clothes|wearing/i },
   { name: 'Weather', hrefPattern: 'weather', headingPattern: /weather/i },
   { name: 'Cooking', hrefPattern: 'cooking', headingPattern: /cooking|food prep/i },
+  { name: 'Health', hrefPattern: 'health', headingPattern: /health|medical/i },
   { name: 'Confusing Kanji', hrefPattern: 'confusing-kanji', headingPattern: /confusing kanji/i },
 ];
 
