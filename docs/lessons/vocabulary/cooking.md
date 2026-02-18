@@ -5,6 +5,8 @@ description: Learn vocabulary for preparing, serving, and eating food
 tags: [vocabulary, cooking, food, kitchen]
 ---
 
+import NextSteps from '@site/src/components/NextSteps';
+
 # Cooking and Food Prep
 
 Cooking in Japanese uses a mix of common verbs and handy kitchen words. This lesson covers preparing food, serving, eating, and utensils. If you want flavor words, see the [Tastes lesson](./tastes).
@@ -116,3 +118,16 @@ Cooking in Japanese uses a mix of common verbs and handy kitchen words. This les
   - *osara ni moritsukemasu.*
 10. いただきます！ — Let's eat!
   - *itadakimasu!*
+
+<NextSteps items={[
+  {
+    title: 'Food and Ingredients',
+    description: 'Learn common foods, Japanese dishes, and essential pantry ingredients',
+    to: './food',
+  },
+  {
+    title: 'Tastes and Flavors',
+    description: 'Learn how to describe the taste and texture of food',
+    to: './tastes',
+  },
+]} />
