@@ -66,6 +66,22 @@ test.describe('Vocabulary Pages', () => {
         await expect(page.getByRole('heading', { name: /confusing kanji/i }).first()).toBeVisible();
       });
 
+      test('should navigate to Linking Words from sidebar', async ({ page }) => {
+        const linkingWordsLink = page.locator('a.menu__link[href$="/vocabulary/linking-words"]').first();
+        await expect(linkingWordsLink).toBeVisible();
+        await linkingWordsLink.click();
+        await verifyPageIsFound(page);
+        await expect(page.getByRole('heading', { name: /linking words/i }).first()).toBeVisible();
+      });
+
+      test('should navigate to Food and Ingredients from sidebar', async ({ page }) => {
+        const foodLink = page.locator('a.menu__link[href$="/vocabulary/food"]').first();
+        await expect(foodLink).toBeVisible();
+        await foodLink.click();
+        await verifyPageIsFound(page);
+        await expect(page.getByRole('heading', { name: /food|ingredients/i }).first()).toBeVisible();
+      });
+
       test('should navigate to Clothes from sidebar', async ({ page }) => {
         const clothesLink = page.locator('a.menu__link[href$="/vocabulary/clothes"]').first();
         await expect(clothesLink).toBeVisible();
@@ -138,6 +154,22 @@ test.describe('Vocabulary Pages', () => {
         await kanjiCard.click();
         await verifyPageIsFound(page);
         await expect(page.getByRole('heading', { name: /confusing kanji/i }).first()).toBeVisible();
+      });
+
+      test('should navigate to Linking Words from landing page', async ({ page }) => {
+        const linkingWordsCard = page.locator('a[class*="lessonCard"][href$="/vocabulary/linking-words"]').first();
+        await expect(linkingWordsCard).toBeVisible();
+        await linkingWordsCard.click();
+        await verifyPageIsFound(page);
+        await expect(page.getByRole('heading', { name: /linking words/i }).first()).toBeVisible();
+      });
+
+      test('should navigate to Food and Ingredients from landing page', async ({ page }) => {
+        const foodCard = page.locator('a[class*="lessonCard"][href$="/vocabulary/food"]').first();
+        await expect(foodCard).toBeVisible();
+        await foodCard.click();
+        await verifyPageIsFound(page);
+        await expect(page.getByRole('heading', { name: /food|ingredients/i }).first()).toBeVisible();
       });
 
       test('should navigate to Clothes from landing page', async ({ page }) => {
@@ -375,6 +407,20 @@ test.describe('Vocabulary Pages', () => {
       await page.waitForLoadState('networkidle');
       await verifyPageIsFound(page);
       await expect(page.getByRole('heading', { name: /cooking|food prep/i }).first()).toBeVisible();
+    });
+
+    test('should load Linking Words page directly', async ({ page }) => {
+      await page.goto('./docs/lessons/vocabulary/linking-words');
+      await page.waitForLoadState('networkidle');
+      await verifyPageIsFound(page);
+      await expect(page.getByRole('heading', { name: /linking words/i }).first()).toBeVisible();
+    });
+
+    test('should load Food and Ingredients page directly', async ({ page }) => {
+      await page.goto('./docs/lessons/vocabulary/food');
+      await page.waitForLoadState('networkidle');
+      await verifyPageIsFound(page);
+      await expect(page.getByRole('heading', { name: /food|ingredients/i }).first()).toBeVisible();
     });
   });
 });
