@@ -5,6 +5,8 @@ description: Learn the difference between と (and) and や (or more) for listin
 tags: [grammar, particles, conjunctions, lists]
 ---
 
+import NextSteps from '@site/src/components/NextSteps';
+
 # Listing Items: と / や
 
 Learn how to list items using **と** (exhaustive) and **や** (non-exhaustive examples).
@@ -68,3 +70,11 @@ Use **や** when giving **examples** - there are more items not mentioned.
 
 - **すし と てんぷら を たべます** → I'll eat sushi and tempura (*only these two*)
 - **すし や てんぷら を たべます** → I'll eat things like sushi and tempura (*and maybe other things too*)
+
+<NextSteps items={[
+  {
+    title: 'Linking Words',
+    description: 'Learn sentence connectors like because, however, only, and more',
+    to: '../vocabulary/linking-words',
+  },
+]} />
