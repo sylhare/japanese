@@ -17,74 +17,59 @@ To say "didn't do" something, change ない to **なかった**.
 |-----------------|---------------|
 | 〜ない | 〜なかった |
 
-## Group 1 (Godan)
+### Examples
 
-- かかない → かかなかった (didn't write)
-- およがない → およがなかった (didn't swim)
-- はなさない → はなさなかった (didn't speak)
-- またない → またなかった (didn't wait)
-- よまない → よまなかった (didn't read)
-- つくらない → つくらなかった (didn't make)
-- かわない → かわなかった (didn't buy)
+**Group 1 (Godan)**
 
-## Group 2 (Ichidan)
+- かかない → かか**なかった** (didn't write)
+- およがない → およが**なかった** (didn't swim)
+- はなさない → はなさ**なかった** (didn't speak)
+- またない → また**なかった** (didn't wait)
+- よまない → よま**なかった** (didn't read)
+- つくらない → つくら**なかった** (didn't make)
+- かわない → かわ**なかった** (didn't buy)
 
-- たべない → たべなかった (didn't eat)
-- みない → みなかった (didn't see)
-- おきない → おきなかった (didn't wake up)
-- ねない → ねなかった (didn't sleep)
+**Group 2 (Ichidan)**
 
-## Group 3 (Irregular)
+- たべない → たべ**なかった** (didn't eat)
+- みない → み**なかった** (didn't see)
+- おきない → おき**なかった** (didn't wake up)
+- ねない → ね**なかった** (didn't sleep)
 
-- しない → しなかった (didn't do)
-- こない → こなかった (didn't come)
+**Group 3 (Irregular)**
 
-## Polite Past Negative
+- しない → し**なかった** (didn't do)
+- こない → こ**なかった** (didn't come)
 
-Use **ませんでした** for polite speech:
-
-| Casual | Polite |
-|--------|--------|
-| たべなかった | たべませんでした |
-| みなかった | みませんでした |
-| しなかった | しませんでした |
-| こなかった | きませんでした |
-
-:::tip Formation
-Polite past negative = Masu-stem + **ませんでした**
-- たべます → たべませんでした
-- かきます → かきませんでした
-:::
-
-## Past Negative in Context
+### Past Negative in Context
 
 **Simple past negation:**
 > きのう、べんきょう**しなかった**。
-> *I didn't study yesterday.*
+> - *I didn't study yesterday.*
 
 **Explaining why:**
-> でんしゃに**のれなかった**から、おくれた。
-> *I was late because I couldn't get on the train.*
+> でんしゃ に **のれなかった** から、おくれた。
+> - *I was late because I couldn't get on the train.*
 
 **Asking about past:**
-> あさごはんを**たべなかった**の？
-> *Didn't you eat breakfast?*
+> あさごはん を **たべなかった** の？
+> - *Didn't you eat breakfast?*
 
-:::note Quick Reference — All Four Combinations
-Using たべる (to eat) as an example:
 
-|  | Present | Past |
-|---|---------|------|
-| **Positive** | たべる | たべた |
-| **Negative** | たべない | たべなかった |
+## Polite Past Negative
 
-**Polite:**
+Use Masu-stem + **ませんでした** for polite speech.
 
-|  | Present | Past |
-|---|---------|------|
-| **Positive** | たべます | たべました |
-| **Negative** | たべません | たべませんでした |
-:::
+| Present Negative (Polite) | Past Negative (Polite) |
+|---------------------------|------------------------|
+| 〜ません | 〜ませんでした |
+
+### Example
+
+- たべ**なかった** → たべ**ませんでした** (didn't eat)
+- み**なかった** → み**ませんでした** (didn't see)
+- し**なかった** → し**ませんでした** (didn't do)
+- こ**なかった** → き**ませんでした** (didn't come)
 
 <NextSteps items={[
   {
