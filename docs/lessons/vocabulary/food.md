@@ -2,142 +2,145 @@
 sidebar_position: 11
 title: 🍱 Food and Ingredients
 description: Learn common Japanese food vocabulary, everyday ingredients, and popular Japanese dishes
-tags: [vocabulary, food, ingredients, japanese-cuisine, dishes]
+tags: [ vocabulary, food, ingredients, japanese-cuisine, dishes ]
 ---
 
 import NextSteps from '@site/src/components/NextSteps';
 
 # Food and Ingredients
 
-Food is one of the most common topics in Japanese conversation. This lesson covers everyday food staples, common Japanese dishes, and the essential pantry ingredients behind Japanese cooking.
+Food is one of the most common topics in Japanese conversation. 
+This lesson covers everyday food staples, 
+common Japanese dishes, and the essential pantry ingredients behind Japanese cooking.
 
 ## Staples
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| ごはん | ご飯 | gohan | cooked rice, meal | noun |
-| こめ | 米 | kome | uncooked rice | noun |
-| パン | - | pan | bread | noun |
-| めん | 麺 | men | noodles | noun |
-| うどん | 饂飩 | udon | udon noodles | noun |
-| そば | 蕎麦 | soba | soba (buckwheat noodles) | noun |
-| ラーメン | - | raamen | ramen | noun |
-| おかゆ | お粥 | okayu | rice porridge, congee | noun |
+| Hiragana | Kanji | Romaji | English                     | Type |
+|----------|-------|--------|-----------------------------|------|
+| ごはん      | ご飯    | gohan  | 🍚 cooked rice, meal        | noun |
+| こめ       | 米     | kome   | 🌾 uncooked rice            | noun |
+| パン       | -     | pan    | 🍞 bread                    | noun |
+| めん       | 麺     | men    | 🍜 noodles                  | noun |
+| うどん      | 饂飩    | udon   | 🍜 udon noodles             | noun |
+| そば       | 蕎麦    | soba   | 🍜 soba (buckwheat noodles) | noun |
+| ラーメン     | -     | raamen | 🍜 ramen                    | noun |
+| おかゆ      | お粥    | okayu  | 🍚 rice porridge, congee    | noun |
 
 ## Proteins
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| にく | 肉 | niku | meat | noun |
-| ぎゅうにく | 牛肉 | gyuuniku | beef | noun |
-| ぶたにく | 豚肉 | butaniku | pork | noun |
-| とりにく | 鶏肉 | toriniku | chicken | noun |
-| さかな | 魚 | sakana | fish | noun |
-| えび | 海老 | ebi | shrimp, prawn | noun |
-| いか | 烏賊 | ika | squid | noun |
-| たこ | 蛸 | tako | octopus | noun |
-| たまご | 卵 | tamago | egg | noun |
-| とうふ | 豆腐 | toufu | tofu | noun |
+| Hiragana | Kanji | Romaji   | English          | Type |
+|----------|-------|----------|------------------|------|
+| にく       | 肉     | niku     | 🥩 meat          | noun |
+| ぎゅうにく    | 牛肉    | gyuuniku | 🥩 beef          | noun |
+| ぶたにく     | 豚肉    | butaniku | 🐷 pork          | noun |
+| とりにく     | 鶏肉    | toriniku | 🍗 chicken       | noun |
+| さかな      | 魚     | sakana   | 🐟 fish          | noun |
+| えび       | 海老    | ebi      | 🍤 shrimp, prawn | noun |
+| いか       | 烏賊    | ika      | 🦑 squid         | noun |
+| たこ       | 蛸     | tako     | 🐙 octopus       | noun |
+| たまご      | 卵     | tamago   | 🥚 egg           | noun |
+| とうふ      | 豆腐    | toufu    | 🫙 tofu          | noun |
 
 **Examples:**
 
 - ぎゅうにくと やさいを いためます。 — I stir-fry the beef and vegetables.
-  - *gyuuniku to yasai o itamemasu.*
+    - *gyuuniku to yasai o itamemasu.*
 - さかなを やきましょう。 — Let's grill the fish.
-  - *sakana o yakimashou.*
+    - *sakana o yakimashou.*
 
 ## Vegetables
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| やさい | 野菜 | yasai | vegetables | noun |
-| たまねぎ | 玉ねぎ | tamanegi | onion | noun |
-| にんじん | 人参 | ninjin | carrot | noun |
-| じゃがいも | じゃが芋 | jagaimo | potato | noun |
-| きゅうり | 胡瓜 | kyuuri | cucumber | noun |
-| トマト | - | tomato | tomato | noun |
-| なす | 茄子 | nasu | eggplant, aubergine | noun |
-| キャベツ | - | kyabetsu | cabbage | noun |
-| ほうれんそう | ほうれん草 | hoorensou | spinach | noun |
-| ねぎ | 葱 | negi | green onion, leek | noun |
-| にんにく | 大蒜 | ninniku | garlic | noun |
-| しょうが | 生姜 | shouga | ginger | noun |
-| たけのこ | 竹の子 | takenoko | bamboo shoot | noun |
-| もやし | 萌やし | moyashi | bean sprouts | noun |
+| Hiragana | Kanji | Romaji    | English                | Type |
+|----------|-------|-----------|------------------------|------|
+| やさい      | 野菜    | yasai     | 🥦 vegetables          | noun |
+| たまねぎ     | 玉ねぎ   | tamanegi  | 🧅 onion               | noun |
+| にんじん     | 人参    | ninjin    | 🥕 carrot              | noun |
+| じゃがいも    | じゃが芋  | jagaimo   | 🥔 potato              | noun |
+| きゅうり     | 胡瓜    | kyuuri    | 🥒 cucumber            | noun |
+| トマト      | -     | tomato    | 🍅 tomato              | noun |
+| なす       | 茄子    | nasu      | 🍆 eggplant, aubergine | noun |
+| キャベツ     | -     | kyabetsu  | 🥬 cabbage             | noun |
+| ほうれんそう   | ほうれん草 | hoorensou | 🌿 spinach             | noun |
+| ねぎ       | 葱     | negi      | 🌱 green onion, leek   | noun |
+| にんにく     | 大蒜    | ninniku   | 🧄 garlic              | noun |
+| しょうが     | 生姜    | shouga    | 🫚 ginger              | noun |
+| たけのこ     | 竹の子   | takenoko  | 🎋 bamboo shoot        | noun |
+| もやし      | 萌やし   | moyashi   | 🌱 bean sprouts        | noun |
 
 **Examples:**
 
 - ねぎを こまかく きります。 — I chop the green onion finely.
-  - *negi o komakaku kirimasu.*
+    - *negi o komakaku kirimasu.*
 - にんにくを いためると いいにおいが します。 — When you fry garlic, it smells good.
-  - *ninniku o itameru to ii nioi ga shimasu.*
+    - *ninniku o itameru to ii nioi ga shimasu.*
 
 ## Fruits
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| くだもの | 果物 | kudamono | fruit | noun |
-| りんご | 林檎 | ringo | apple | noun |
-| バナナ | - | banana | banana | noun |
-| みかん | 蜜柑 | mikan | mandarin orange | noun |
-| いちご | 苺 | ichigo | strawberry | noun |
-| ぶどう | 葡萄 | budou | grape | noun |
-| もも | 桃 | momo | peach | noun |
-| なし | 梨 | nashi | Japanese pear | noun |
-| スイカ | 西瓜 | suika | watermelon | noun |
+| Hiragana | Kanji | Romaji   | English            | Type |
+|----------|-------|----------|--------------------|------|
+| くだもの     | 果物    | kudamono | 🍎 fruit           | noun |
+| りんご      | 林檎    | ringo    | 🍎 apple           | noun |
+| バナナ      | -     | banana   | 🍌 banana          | noun |
+| みかん      | 蜜柑    | mikan    | 🍊 mandarin orange | noun |
+| いちご      | 苺     | ichigo   | 🍓 strawberry      | noun |
+| ぶどう      | 葡萄    | budou    | 🍇 grape           | noun |
+| もも       | 桃     | momo     | 🍑 peach           | noun |
+| なし       | 梨     | nashi    | 🍐 Japanese pear   | noun |
+| スイカ      | 西瓜    | suika    | 🍉 watermelon      | noun |
 
 ## Popular Japanese Dishes
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| すし | 寿司 | sushi | sushi | noun |
-| さしみ | 刺身 | sashimi | sashimi (raw fish) | noun |
-| てんぷら | 天ぷら | tenpura | tempura (battered, deep-fried) | noun |
-| みそしる | 味噌汁 | misoshiru | miso soup | noun |
-| おにぎり | お握り | onigiri | rice ball | noun |
-| やきとり | 焼き鳥 | yakitori | grilled chicken skewers | noun |
-| どんぶり | 丼 | donburi | rice bowl dish | noun |
-| カレーライス | - | karee raisu | curry rice | noun |
-| やきそば | 焼きそば | yakisoba | fried noodles | noun |
-| おこのみやき | お好み焼き | okonomiyaki | savory pancake | noun |
-| たこやき | たこ焼き | takoyaki | octopus balls | noun |
-| ちゃわんむし | 茶碗蒸し | chawanmushi | savory egg custard | noun |
-| おでん | - | oden | oden (hot pot stew) | noun |
-| すきやき | すき焼き | sukiyaki | sukiyaki (beef hot pot) | noun |
+| Hiragana | Kanji | Romaji      | English                           | Type |
+|----------|-------|-------------|-----------------------------------|------|
+| すし       | 寿司    | sushi       | 🍣 sushi                          | noun |
+| さしみ      | 刺身    | sashimi     | 🐟 sashimi (raw fish)             | noun |
+| てんぷら     | 天ぷら   | tenpura     | 🍤 tempura (battered, deep-fried) | noun |
+| みそしる     | 味噌汁   | misoshiru   | 🍜 miso soup                      | noun |
+| おにぎり     | お握り   | onigiri     | 🍙 rice ball                      | noun |
+| やきとり     | 焼き鳥   | yakitori    | 🍢 grilled chicken skewers        | noun |
+| どんぶり     | 丼     | donburi     | 🍚 rice bowl dish                 | noun |
+| カレーライス   | -     | karee raisu | 🍛 curry rice                     | noun |
+| やきそば     | 焼きそば  | yakisoba    | 🍜 fried noodles                  | noun |
+| おこのみやき   | お好み焼き | okonomiyaki | 🥞 savory pancake                 | noun |
+| たこやき     | たこ焼き  | takoyaki    | 🐙 octopus balls                  | noun |
+| ちゃわんむし   | 茶碗蒸し  | chawanmushi | 🥚 savory egg custard             | noun |
+| おでん      | -     | oden        | 🍢 oden (hot pot stew)            | noun |
+| すきやき     | すき焼き  | sukiyaki    | 🥩 sukiyaki (beef hot pot)        | noun |
 
 **Examples:**
 
 - すしを たべに いきましょう！ — Let's go eat sushi!
-  - *sushi o tabe ni ikimashou!*
+    - *sushi o tabe ni ikimashou!*
 - おにぎりを コンビニで かいました。 — I bought a rice ball at the convenience store.
-  - *onigiri o konbini de kaimashita.*
+    - *onigiri o konbini de kaimashita.*
 - みそしるは まいにち のみます。 — I drink miso soup every day.
-  - *misoshiru wa mainichi nomimasu.*
+    - *misoshiru wa mainichi nomimasu.*
 
 ## Japanese Pantry Ingredients
 
 These are the building blocks of Japanese cooking. Stock these and you can make almost any Japanese dish.
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| しょうゆ | 醤油 | shouyu | soy sauce | noun |
-| みそ | 味噌 | miso | miso paste | noun |
-| だし | 出汁 | dashi | Japanese stock | noun |
-| みりん | 味醂 | mirin | sweet rice wine (cooking) | noun |
-| りょうりざけ | 料理酒 | ryouri sake | cooking sake | noun |
-| ごま | 胡麻 | goma | sesame seeds | noun |
-| ごまあぶら | 胡麻油 | goma abura | sesame oil | noun |
-| のり | 海苔 | nori | dried seaweed sheet | noun |
-| わかめ | 若布 | wakame | wakame seaweed | noun |
-| こんぶ | 昆布 | konbu | kombu (kelp, for stock) | noun |
-| かつおぶし | 鰹節 | katsuobushi | bonito flakes | noun |
-| あぶらあげ | 油揚げ | aburaage | thin fried tofu | noun |
-| こんにゃく | 蒟蒻 | konnyaku | konjac jelly | noun |
-| かたくりこ | 片栗粉 | katakuriko | potato starch | noun |
-| だしのもと | 出汁の素 | dashi no moto | instant dashi powder | noun |
+| Hiragana | Kanji | Romaji        | English                      | Type |
+|----------|-------|---------------|------------------------------|------|
+| しょうゆ     | 醤油    | shouyu        | 🍶 soy sauce                 | noun |
+| みそ       | 味噌    | miso          | 🫙 miso paste                | noun |
+| だし       | 出汁    | dashi         | 🍵 Japanese stock            | noun |
+| みりん      | 味醂    | mirin         | 🍶 sweet rice wine (cooking) | noun |
+| りょうりざけ   | 料理酒   | ryouri sake   | 🍶 cooking sake              | noun |
+| ごま       | 胡麻    | goma          | 🌰 sesame seeds              | noun |
+| ごまあぶら    | 胡麻油   | goma abura    | 🫙 sesame oil                | noun |
+| のり       | 海苔    | nori          | 🌿 dried seaweed sheet       | noun |
+| わかめ      | 若布    | wakame        | 🌿 wakame seaweed            | noun |
+| こんぶ      | 昆布    | konbu         | 🌿 kombu (kelp, for stock)   | noun |
+| かつおぶし    | 鰹節    | katsuobushi   | 🐟 bonito flakes             | noun |
+| あぶらあげ    | 油揚げ   | aburaage      | 🫙 thin fried tofu           | noun |
+| こんにゃく    | 蒟蒻    | konnyaku      | 🫙 konjac jelly              | noun |
+| かたくりこ    | 片栗粉   | katakuriko    | 🥔 potato starch             | noun |
+| だしのもと    | 出汁の素  | dashi no moto | 🍵 instant dashi powder      | noun |
 
 :::info How to make だし (Dashi)
 だし is the foundation of Japanese cooking. The simplest version:
+
 1. こんぶを みずに ひたす — Soak kombu in cold water
 2. ゆっくり あたためる — Heat slowly
 3. わかす まえに こんぶを とりだす — Remove kombu before it boils
@@ -149,33 +152,34 @@ The result is a light, umami-rich stock used in soups, sauces, and simmered dish
 
 :::tip Soy sauce types
 Not all しょうゆ is the same:
+
 - **こいくちしょうゆ (濃口醤油)** — dark soy sauce, the standard
 - **うすくちしょうゆ (薄口醤油)** — light-colored soy sauce, saltier, used in Kansai cuisine
 - **たまりしょうゆ (たまり醤油)** — thick, rich, good for sashimi
-:::
+  :::
 
 ## Eating Out Vocabulary
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| メニュー | - | menyuu | menu | noun |
-| ちゅうもん | 注文 | chuumon | order | noun |
-| おすすめ | お勧め | osusume | recommendation | noun |
-| ていしょく | 定食 | teishoku | set meal | noun |
-| おかわり | お代わり | okawari | refill, second helping | noun |
-| おかんじょう | お勘定 | okanjou | the bill | noun |
-| もちかえり | 持ち帰り | mochikaeri | takeaway, to go | noun |
+| Hiragana | Kanji | Romaji     | English                   | Type |
+|----------|-------|------------|---------------------------|------|
+| メニュー     | -     | menyuu     | 📋 menu                   | noun |
+| ちゅうもん    | 注文    | chuumon    | 🖊️ order                 | noun |
+| おすすめ     | お勧め   | osusume    | ⭐ recommendation          | noun |
+| ていしょく    | 定食    | teishoku   | 🍱 set meal               | noun |
+| おかわり     | お代わり  | okawari    | 🔄 refill, second helping | noun |
+| おかんじょう   | お勘定   | okanjou    | 🧾 the bill               | noun |
+| もちかえり    | 持ち帰り  | mochikaeri | 🥡 takeaway, to go        | noun |
 
 **Common phrases at a restaurant:**
 
 - すみません、ちゅうもんを おねがいします。 — Excuse me, I'd like to order.
-  - *sumimasen, chuumon o onegai shimasu.*
+    - *sumimasen, chuumon o onegai shimasu.*
 - おすすめは なんですか？ — What do you recommend?
-  - *osusume wa nan desu ka?*
+    - *osusume wa nan desu ka?*
 - おかわりを ください。 — Please give me a refill.
-  - *okawari o kudasai.*
+    - *okawari o kudasai.*
 - おかんじょうを おねがいします。 — The bill, please.
-  - *okanjou o onegai shimasu.*
+    - *okanjou o onegai shimasu.*
 
 <NextSteps items={[
   {
