@@ -69,7 +69,7 @@ export const VOCABULARY_SECTIONS: LessonSection[] = [
     basePath: 'food',
     heading: /food/i,
     subLessons: [
-      { name: 'Food and Ingredients', path: 'food',     heading: /food|ingredients/i },
+      { name: 'Food and Ingredients', path: 'food-and-ingredients', heading: /food|ingredients/i },
       { name: 'Cooking',              path: 'cooking',  heading: /cooking|food prep/i },
       { name: 'Tastes',               path: 'tastes',   heading: /tastes|flavors/i },
     ],

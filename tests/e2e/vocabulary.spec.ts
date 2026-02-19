@@ -157,7 +157,7 @@ test.describe('Vocabulary Pages', () => {
     });
 
     test('should navigate from Food to Cooking via NextSteps', async ({ page }) => {
-      await page.goto('./docs/lessons/vocabulary/food/food');
+      await page.goto('./docs/lessons/vocabulary/food/food-and-ingredients');
       await page.waitForLoadState('networkidle');
 
       const cookingLink = page.locator('a[href*="food/cooking"]').first();
@@ -168,7 +168,7 @@ test.describe('Vocabulary Pages', () => {
     });
 
     test('should navigate from Food to Tastes via NextSteps', async ({ page }) => {
-      await page.goto('./docs/lessons/vocabulary/food/food');
+      await page.goto('./docs/lessons/vocabulary/food/food-and-ingredients');
       await page.waitForLoadState('networkidle');
 
       const tastesLink = page.locator('a[href*="food/tastes"]').first();

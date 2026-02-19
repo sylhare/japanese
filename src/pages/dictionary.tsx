@@ -96,6 +96,12 @@ export function getTagPath(tag: string): string {
     'calendar': 'vocabulary/time',
     'time': 'vocabulary/time',
     'days-and-weeks': 'vocabulary/time/days-and-weeks',
+    'tastes': 'vocabulary/food/tastes',
+    'flavors': 'vocabulary/food/tastes',
+    'cooking': 'vocabulary/food/cooking',
+    'kitchen': 'vocabulary/food/cooking',
+    'food': 'vocabulary/food',
+    'ingredients': 'vocabulary/food/food-and-ingredients',
   };
 
   const lowerTag = tag.toLowerCase();
