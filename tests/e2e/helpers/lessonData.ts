@@ -51,21 +51,29 @@ export const GRAMMAR_LESSONS: Lesson[] = [
 ];
 
 export const VOCABULARY_LESSONS: Lesson[] = [
-  { name: 'Colors',               path: 'colors',         heading: /colors/i },
-  { name: 'Tastes',               path: 'tastes',         heading: /tastes|flavors/i },
-  { name: 'Time',                 path: 'time',           heading: /time|dates/i,         partial: true },
-  { name: 'Numbers',              path: 'numbers',        heading: /numbers|counting/i,   partial: true },
-  { name: 'Family',               path: 'family',         heading: /family|relationships/i },
-  { name: 'Clothes',              path: 'clothes',        heading: /clothes|wearing/i },
-  { name: 'Weather',              path: 'weather',        heading: /weather/i },
-  { name: 'Cooking',              path: 'cooking',        heading: /cooking|food prep/i },
-  { name: 'Health',               path: 'health',         heading: /health|medical/i },
-  { name: 'Confusing Kanji',      path: 'confusing-kanji', heading: /confusing kanji/i },
-  { name: 'Linking Words',        path: 'linking-words',  heading: /linking words/i },
-  { name: 'Food and Ingredients', path: 'food',           heading: /food|ingredients/i },
+  { name: 'Colors',          path: 'colors',         heading: /colors/i },
+  { name: 'Food',            path: 'food',           heading: /food/i,               partial: true },
+  { name: 'Time',            path: 'time',           heading: /time|dates/i,         partial: true },
+  { name: 'Numbers',         path: 'numbers',        heading: /numbers|counting/i,   partial: true },
+  { name: 'Family',          path: 'family',         heading: /family|relationships/i },
+  { name: 'Clothes',         path: 'clothes',        heading: /clothes|wearing/i },
+  { name: 'Weather',         path: 'weather',        heading: /weather/i },
+  { name: 'Health',          path: 'health',         heading: /health|medical/i },
+  { name: 'Confusing Kanji', path: 'confusing-kanji', heading: /confusing kanji/i },
+  { name: 'Linking Words',   path: 'linking-words',  heading: /linking words/i },
 ];
 
 export const VOCABULARY_SECTIONS: LessonSection[] = [
+  {
+    section: 'Food',
+    basePath: 'food',
+    heading: /food/i,
+    subLessons: [
+      { name: 'Food and Ingredients', path: 'food',     heading: /food|ingredients/i },
+      { name: 'Cooking',              path: 'cooking',  heading: /cooking|food prep/i },
+      { name: 'Tastes',               path: 'tastes',   heading: /tastes|flavors/i },
+    ],
+  },
   {
     section: 'Time',
     basePath: 'time',

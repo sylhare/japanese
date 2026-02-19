@@ -3,7 +3,7 @@ import { verifyPageIsFound, navigateViaTag } from './helpers/pageHelper';
 
 const VOCAB_TAGS = [
   { name: 'Colors', href: '/vocabulary/colors', heading: /colors/i },
-  { name: 'Tastes', href: '/vocabulary/tastes', heading: /tastes/i },
+  { name: 'Tastes', href: '/vocabulary/food/tastes', heading: /tastes/i },
   { name: 'Time',   href: '/vocabulary/time',   heading: /time/i },
 ];
 
