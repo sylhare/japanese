@@ -1,8 +1,8 @@
 ---
-sidebar_position: 10
+sidebar_position: 18
 title: 🔗 Linking Words
 description: Learn Japanese linking words and connectors like because, however, only, and more
-tags: [vocabulary, grammar, conjunctions, particles, connectors, linking-words]
+tags: [grammar, conjunctions, particles, connectors, linking-words]
 ---
 
 import NextSteps from '@site/src/components/NextSteps';
@@ -211,16 +211,16 @@ Here are some example sentences combining multiple linking words:
   {
     title: 'Question Words — 疑問詞',
     description: 'Learn why, what, when, where, how, how many, and more',
-    to: '../grammar/question-words',
+    to: './question-words',
   },
   {
     title: 'Expressing Reason — ので / から',
     description: 'Dive deeper into the grammar of because with ので and から',
-    to: '../grammar/reason',
+    to: './reason',
   },
   {
     title: 'Listing Items — と / や',
     description: 'Learn how to connect nouns in lists using と and や',
-    to: '../grammar/conjunctions',
+    to: './conjunctions',
   },
 ]} />

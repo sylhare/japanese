@@ -151,6 +151,6 @@ Do **not** use な with:
   {
     title: 'Linking Words',
     description: 'Learn more connectors like however, only, therefore, and more',
-    to: '../vocabulary/linking-words',
+    to: './linking-words',
   },
 ]} />

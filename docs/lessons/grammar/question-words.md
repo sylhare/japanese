@@ -222,7 +222,7 @@ Note that **いつも** (always) is a common set expression meaning "always/usua
   {
     title: 'Linking Words',
     description: 'Learn connectors like because, however, and only to build more complete answers',
-    to: '../vocabulary/linking-words',
+    to: './linking-words',
   },
   {
     title: 'Particle Guide',

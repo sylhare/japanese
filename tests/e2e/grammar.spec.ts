@@ -69,7 +69,7 @@ test.describe('Grammar Pages', () => {
       await page.goto('./docs/lessons/grammar/question-words');
       await page.waitForLoadState('networkidle');
 
-      const linkingWordsLink = page.locator('a[href*="vocabulary/linking-words"]').first();
+      const linkingWordsLink = page.locator('a[href*="grammar/linking-words"]').first();
       await expect(linkingWordsLink).toBeVisible();
       await linkingWordsLink.click();
       await verifyPageIsFound(page);

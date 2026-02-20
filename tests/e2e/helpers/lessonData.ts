@@ -48,6 +48,7 @@ export const GRAMMAR_LESSONS: Lesson[] = [
   { name: 'Sequential Actions',   path: 'sequential-actions',   heading: /sequential|てから/i },
   { name: 'Prohibition',          path: 'prohibition',          heading: /prohibition|いけません|だめ/i },
   { name: 'Question Words',       path: 'question-words',       heading: /question words/i },
+  { name: 'Linking Words',        path: 'linking-words',        heading: /linking words/i },
 ];
 
 export const VOCABULARY_LESSONS: Lesson[] = [
@@ -60,7 +61,6 @@ export const VOCABULARY_LESSONS: Lesson[] = [
   { name: 'Weather',         path: 'weather',        heading: /weather/i },
   { name: 'Health',          path: 'health',         heading: /health|medical/i },
   { name: 'Confusing Kanji', path: 'confusing-kanji', heading: /confusing kanji/i },
-  { name: 'Linking Words',   path: 'linking-words',  heading: /linking words/i },
 ];
 
 export const VOCABULARY_SECTIONS: LessonSection[] = [

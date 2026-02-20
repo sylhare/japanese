@@ -75,6 +75,6 @@ Use **や** when giving **examples** - there are more items not mentioned.
   {
     title: 'Linking Words',
     description: 'Learn sentence connectors like because, however, only, and more',
-    to: '../vocabulary/linking-words',
+    to: './linking-words',
   },
 ]} />
