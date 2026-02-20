@@ -264,7 +264,7 @@ describe('Vocabulary Component', () => {
       expect(tagTexts).toEqual(expect.arrayContaining(['tastes', 'particle-guide']));
 
       const tastesLink = tagLinks.find(link => link.textContent === 'tastes');
-      expect(tastesLink?.getAttribute('href')).toBe('/docs/lessons/vocabulary/tastes');
+      expect(tastesLink?.getAttribute('href')).toBe('/docs/lessons/vocabulary/food/tastes');
 
       const particleLink = tagLinks.find(link => link.textContent === 'particle-guide');
       expect(particleLink?.getAttribute('href')).toBe('/docs/lessons/grammar/particle-guide');
@@ -384,7 +384,7 @@ describe('getTagPath', () => {
     });
 
     it('should map "tastes" tag to vocabulary lesson path', () => {
-      expect(getTagPath('tastes')).toBe('docs/lessons/vocabulary/tastes');
+      expect(getTagPath('tastes')).toBe('docs/lessons/vocabulary/food/tastes');
     });
 
     it('should map "family" tag to vocabulary lesson path', () => {
