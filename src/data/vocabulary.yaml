@@ -2155,6 +2155,664 @@ vocabulary:
       - family
     type: noun
     kanji: 夫婦
+  - id: food_0
+    hiragana: ごはん
+    romaji: gohan
+    meaning: 'cooked rice, meal'
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: ご飯
+  - id: food_1
+    hiragana: こめ
+    romaji: kome
+    meaning: uncooked rice
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 米
+  - id: food_2
+    hiragana: パン
+    romaji: pan
+    meaning: bread
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+  - id: food_3
+    hiragana: めん
+    romaji: men
+    meaning: noodles
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 麺
+  - id: food_4
+    hiragana: うどん
+    romaji: udon
+    meaning: udon noodles
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 饂飩
+  - id: food_5
+    hiragana: そば
+    romaji: soba
+    meaning: soba (buckwheat noodles)
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 蕎麦
+  - id: food_6
+    hiragana: ラーメン
+    romaji: raamen
+    meaning: ramen
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+  - id: food_7
+    hiragana: おかゆ
+    romaji: okayu
+    meaning: 'rice porridge, congee'
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: お粥
+  - id: food_8
+    hiragana: にく
+    romaji: niku
+    meaning: meat
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 肉
+  - id: food_9
+    hiragana: ぎゅうにく
+    romaji: gyuuniku
+    meaning: beef
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 牛肉
+  - id: food_10
+    hiragana: ぶたにく
+    romaji: butaniku
+    meaning: pork
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 豚肉
+  - id: food_11
+    hiragana: とりにく
+    romaji: toriniku
+    meaning: chicken
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 鶏肉
+  - id: food_12
+    hiragana: さかな
+    romaji: sakana
+    meaning: fish
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 魚
+  - id: food_13
+    hiragana: えび
+    romaji: ebi
+    meaning: 'shrimp, prawn'
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 海老
+  - id: food_14
+    hiragana: いか
+    romaji: ika
+    meaning: squid
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 烏賊
+  - id: food_15
+    hiragana: たこ
+    romaji: tako
+    meaning: octopus
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 蛸
+  - id: food_16
+    hiragana: たまご
+    romaji: tamago
+    meaning: egg
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 卵
+  - id: food_17
+    hiragana: とうふ
+    romaji: toufu
+    meaning: tofu
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 豆腐
+  - id: food_18
+    hiragana: やさい
+    romaji: yasai
+    meaning: vegetables
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 野菜
+  - id: food_19
+    hiragana: たまねぎ
+    romaji: tamanegi
+    meaning: onion
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 玉ねぎ
+  - id: food_20
+    hiragana: にんじん
+    romaji: ninjin
+    meaning: carrot
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 人参
+  - id: food_21
+    hiragana: じゃがいも
+    romaji: jagaimo
+    meaning: potato
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: じゃが芋
+  - id: food_22
+    hiragana: きゅうり
+    romaji: kyuuri
+    meaning: cucumber
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 胡瓜
+  - id: food_23
+    hiragana: トマト
+    romaji: tomato
+    meaning: tomato
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+  - id: food_24
+    hiragana: なす
+    romaji: nasu
+    meaning: 'eggplant, aubergine'
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 茄子
+  - id: food_25
+    hiragana: キャベツ
+    romaji: kyabetsu
+    meaning: cabbage
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+  - id: food_26
+    hiragana: ほうれんそう
+    romaji: hoorensou
+    meaning: spinach
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: ほうれん草
+  - id: food_27
+    hiragana: ねぎ
+    romaji: negi
+    meaning: 'green onion, leek'
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 葱
+  - id: food_28
+    hiragana: にんにく
+    romaji: ninniku
+    meaning: garlic
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 大蒜
+  - id: food_29
+    hiragana: しょうが
+    romaji: shouga
+    meaning: ginger
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 生姜
+  - id: food_30
+    hiragana: たけのこ
+    romaji: takenoko
+    meaning: bamboo shoot
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 竹の子
+  - id: food_31
+    hiragana: もやし
+    romaji: moyashi
+    meaning: bean sprouts
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 萌やし
+  - id: food_32
+    hiragana: バナナ
+    romaji: banana
+    meaning: banana
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+  - id: food_33
+    hiragana: みかん
+    romaji: mikan
+    meaning: mandarin orange
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 蜜柑
+  - id: food_34
+    hiragana: いちご
+    romaji: ichigo
+    meaning: strawberry
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 苺
+  - id: food_35
+    hiragana: ぶどう
+    romaji: budou
+    meaning: grape
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 葡萄
+  - id: food_36
+    hiragana: もも
+    romaji: momo
+    meaning: peach
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 桃
+  - id: food_37
+    hiragana: なし
+    romaji: nashi
+    meaning: Japanese pear
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 梨
+  - id: food_38
+    hiragana: スイカ
+    romaji: suika
+    meaning: watermelon
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 西瓜
+  - id: food_39
+    hiragana: すし
+    romaji: sushi
+    meaning: sushi
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 寿司
+  - id: food_40
+    hiragana: さしみ
+    romaji: sashimi
+    meaning: sashimi (raw fish)
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 刺身
+  - id: food_41
+    hiragana: てんぷら
+    romaji: tenpura
+    meaning: 'tempura (battered, deep-fried)'
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 天ぷら
+  - id: food_42
+    hiragana: みそしる
+    romaji: misoshiru
+    meaning: miso soup
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 味噌汁
+  - id: food_43
+    hiragana: おにぎり
+    romaji: onigiri
+    meaning: rice ball
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: お握り
+  - id: food_44
+    hiragana: やきとり
+    romaji: yakitori
+    meaning: grilled chicken skewers
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 焼き鳥
+  - id: food_45
+    hiragana: どんぶり
+    romaji: donburi
+    meaning: rice bowl dish
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 丼
+  - id: food_46
+    hiragana: カレーライス
+    romaji: karee raisu
+    meaning: curry rice
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+  - id: food_47
+    hiragana: やきそば
+    romaji: yakisoba
+    meaning: fried noodles
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 焼きそば
+  - id: food_48
+    hiragana: おこのみやき
+    romaji: okonomiyaki
+    meaning: savory pancake
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: お好み焼き
+  - id: food_49
+    hiragana: たこやき
+    romaji: takoyaki
+    meaning: octopus balls
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: たこ焼き
+  - id: food_50
+    hiragana: ちゃわんむし
+    romaji: chawanmushi
+    meaning: savory egg custard
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 茶碗蒸し
+  - id: food_51
+    hiragana: おでん
+    romaji: oden
+    meaning: oden (hot pot stew)
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+  - id: food_52
+    hiragana: すきやき
+    romaji: sukiyaki
+    meaning: sukiyaki (beef hot pot)
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: すき焼き
+  - id: food_53
+    hiragana: みそ
+    romaji: miso
+    meaning: miso paste
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 味噌
+  - id: food_54
+    hiragana: だし
+    romaji: dashi
+    meaning: Japanese stock
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 出汁
+  - id: food_55
+    hiragana: みりん
+    romaji: mirin
+    meaning: sweet rice wine (cooking)
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 味醂
+  - id: food_56
+    hiragana: りょうりざけ
+    romaji: ryouri sake
+    meaning: cooking sake
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 料理酒
+  - id: food_57
+    hiragana: ごま
+    romaji: goma
+    meaning: sesame seeds
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 胡麻
+  - id: food_58
+    hiragana: ごまあぶら
+    romaji: goma abura
+    meaning: sesame oil
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 胡麻油
+  - id: food_59
+    hiragana: のり
+    romaji: nori
+    meaning: dried seaweed sheet
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 海苔
+  - id: food_60
+    hiragana: わかめ
+    romaji: wakame
+    meaning: wakame seaweed
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 若布
+  - id: food_61
+    hiragana: こんぶ
+    romaji: konbu
+    meaning: 'kombu (kelp, for stock)'
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 昆布
+  - id: food_62
+    hiragana: かつおぶし
+    romaji: katsuobushi
+    meaning: bonito flakes
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 鰹節
+  - id: food_63
+    hiragana: あぶらあげ
+    romaji: aburaage
+    meaning: thin fried tofu
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 油揚げ
+  - id: food_64
+    hiragana: こんにゃく
+    romaji: konnyaku
+    meaning: konjac jelly
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 蒟蒻
+  - id: food_65
+    hiragana: かたくりこ
+    romaji: katakuriko
+    meaning: potato starch
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 片栗粉
+  - id: food_66
+    hiragana: だしのもと
+    romaji: dashi no moto
+    meaning: instant dashi powder
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 出汁の素
+  - id: food_67
+    hiragana: メニュー
+    romaji: menyuu
+    meaning: menu
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+  - id: food_68
+    hiragana: ちゅうもん
+    romaji: chuumon
+    meaning: order
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 注文
+  - id: food_69
+    hiragana: おすすめ
+    romaji: osusume
+    meaning: recommendation
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: お勧め
+  - id: food_70
+    hiragana: ていしょく
+    romaji: teishoku
+    meaning: set meal
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 定食
+  - id: food_71
+    hiragana: おかわり
+    romaji: okawari
+    meaning: 'refill, second helping'
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: お代わり
+  - id: food_72
+    hiragana: おかんじょう
+    romaji: okanjou
+    meaning: the bill
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: お勘定
+  - id: food_73
+    hiragana: もちかえり
+    romaji: mochikaeri
+    meaning: 'takeaway, to go'
+    category: vocabulary
+    tags:
+      - food
+    type: noun
+    kanji: 持ち帰り
   - id: health_0
     hiragana: くしゃみ
     romaji: kushami
@@ -2632,6 +3290,269 @@ vocabulary:
     tags:
       - intend_to
     type: expression
+  - id: linkingwords_0
+    hiragana: から
+    romaji: kara
+    meaning: 'because, since (casual)'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: conjunction
+  - id: linkingwords_1
+    hiragana: ので
+    romaji: node
+    meaning: 'because, since (polite)'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: conjunction
+  - id: linkingwords_2
+    hiragana: そのため
+    romaji: sono tame
+    meaning: 'for that reason, therefore'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: conjunction
+    kanji: その為
+  - id: linkingwords_3
+    hiragana: なぜなら
+    romaji: nazenara
+    meaning: because (formal explanation)
+    category: vocabulary
+    tags:
+      - linking-words
+    type: conjunction
+    kanji: 何故なら
+  - id: linkingwords_4
+    hiragana: でも
+    romaji: demo
+    meaning: 'but, however (casual)'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: conjunction
+  - id: linkingwords_5
+    hiragana: しかし
+    romaji: shikashi
+    meaning: however (formal)
+    category: vocabulary
+    tags:
+      - linking-words
+    type: conjunction
+  - id: linkingwords_6
+    hiragana: けど
+    romaji: kedo
+    meaning: 'but (casual, spoken)'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: conjunction
+  - id: linkingwords_7
+    hiragana: けれど
+    romaji: keredo
+    meaning: 'but, however'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: conjunction
+  - id: linkingwords_8
+    hiragana: ところが
+    romaji: tokoro ga
+    meaning: 'however, unexpectedly'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: conjunction
+  - id: linkingwords_9
+    hiragana: のに
+    romaji: noni
+    meaning: 'even though, despite'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: conjunction
+  - id: linkingwords_10
+    hiragana: ても
+    romaji: temo
+    meaning: 'even if, even though'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: conjunction
+  - id: linkingwords_11
+    hiragana: そして
+    romaji: soshite
+    meaning: 'and, and then'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: conjunction
+  - id: linkingwords_12
+    hiragana: それに
+    romaji: soreni
+    meaning: 'moreover, in addition'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: conjunction
+  - id: linkingwords_13
+    hiragana: また
+    romaji: mata
+    meaning: 'also, again, moreover'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: conjunction
+    kanji: 又
+  - id: linkingwords_14
+    hiragana: さらに
+    romaji: sara ni
+    meaning: 'furthermore, even more'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: conjunction
+    kanji: 更に
+  - id: linkingwords_15
+    hiragana: まず
+    romaji: mazu
+    meaning: 'first of all, to begin with'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: adverb
+    kanji: 先ず
+  - id: linkingwords_16
+    hiragana: それから
+    romaji: sorekara
+    meaning: 'and then, after that'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: conjunction
+  - id: linkingwords_17
+    hiragana: つぎに
+    romaji: tsugi ni
+    meaning: next
+    category: vocabulary
+    tags:
+      - linking-words
+    type: adverb
+    kanji: 次に
+  - id: linkingwords_18
+    hiragana: さいごに
+    romaji: saigo ni
+    meaning: 'finally, lastly'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: adverb
+    kanji: 最後に
+  - id: linkingwords_19
+    hiragana: やっと
+    romaji: yatto
+    meaning: 'finally, at last (after effort)'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: adverb
+  - id: linkingwords_20
+    hiragana: ついに
+    romaji: tsui ni
+    meaning: 'finally, at last (after time)'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: adverb
+    kanji: 遂に
+  - id: linkingwords_21
+    hiragana: たとえば
+    romaji: tatoeba
+    meaning: for example
+    category: vocabulary
+    tags:
+      - linking-words
+    type: adverb
+    kanji: 例えば
+  - id: linkingwords_22
+    hiragana: つまり
+    romaji: tsumari
+    meaning: 'in other words, that is to say'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: conjunction
+  - id: linkingwords_23
+    hiragana: すなわち
+    romaji: sunawachi
+    meaning: 'namely, that is (formal)'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: conjunction
+    kanji: 即ち
+  - id: linkingwords_24
+    hiragana: じつは
+    romaji: jitsu wa
+    meaning: 'actually, in fact'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: adverb
+    kanji: 実は
+  - id: linkingwords_25
+    hiragana: じつに
+    romaji: jitsu ni
+    meaning: 'indeed, truly, really'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: adverb
+    kanji: 実に
+  - id: linkingwords_26
+    hiragana: まさか
+    romaji: masaka
+    meaning: 'no way, surely not'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: adverb
+  - id: linkingwords_27
+    hiragana: もちろん
+    romaji: mochiron
+    meaning: 'of course, certainly'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: adverb
+    kanji: 勿論
+  - id: linkingwords_28
+    hiragana: または
+    romaji: mata wa
+    meaning: 'or, either (formal)'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: conjunction
+    kanji: 又は
+  - id: linkingwords_29
+    hiragana: あるいは
+    romaji: arui wa
+    meaning: 'or, possibly (formal)'
+    category: vocabulary
+    tags:
+      - linking-words
+    type: conjunction
+    kanji: 或いは
+  - id: linkingwords_30
+    hiragana: どちらか
+    romaji: dochira ka
+    meaning: either one (of two)
+    category: vocabulary
+    tags:
+      - linking-words
+    type: expression
   - id: obligation_0
     hiragana: '[verb ない without い] + なければ いけない'
     romaji: nakereba ikenai
@@ -2686,6 +3607,7 @@ vocabulary:
     meaning: 'so, therefore'
     category: grammar
     tags:
+      - linking-words
       - particle-guide
     type: conjunction
   - id: particleguide_3
@@ -2761,6 +3683,241 @@ vocabulary:
     tags:
       - prohibition
     type: expression
+  - id: questionwords_0
+    hiragana: なに / なん
+    romaji: nani / nan
+    meaning: what
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+    kanji: 何
+  - id: questionwords_1
+    hiragana: だれ
+    romaji: dare
+    meaning: who
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+    kanji: 誰
+  - id: questionwords_2
+    hiragana: どなた
+    romaji: donata
+    meaning: who (polite)
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+    kanji: 何方
+  - id: questionwords_3
+    hiragana: いつ
+    romaji: itsu
+    meaning: when
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+    kanji: 何時
+  - id: questionwords_4
+    hiragana: どこ
+    romaji: doko
+    meaning: where
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+    kanji: 何処
+  - id: questionwords_5
+    hiragana: なぜ
+    romaji: naze
+    meaning: why (formal/written)
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+    kanji: 何故
+  - id: questionwords_6
+    hiragana: どうして
+    romaji: doushite
+    meaning: why (everyday)
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+  - id: questionwords_7
+    hiragana: なんで
+    romaji: nande
+    meaning: 'why (casual, spoken)'
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+  - id: questionwords_8
+    hiragana: どう
+    romaji: dou
+    meaning: how (in what way)
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+  - id: questionwords_9
+    hiragana: どのように
+    romaji: dono you ni
+    meaning: 'how (formal, more detail)'
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+    kanji: どの様に
+  - id: questionwords_10
+    hiragana: どれ
+    romaji: dore
+    meaning: which one (of three or more)
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+  - id: questionwords_11
+    hiragana: どちら
+    romaji: dochira
+    meaning: 'which one (of two), polite'
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+  - id: questionwords_12
+    hiragana: どっち
+    romaji: docchi
+    meaning: 'which one (of two, casual)'
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+  - id: questionwords_13
+    hiragana: どの
+    romaji: dono
+    meaning: which... (before a noun)
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+  - id: questionwords_14
+    hiragana: どんな
+    romaji: donna
+    meaning: 'what kind of, what sort of'
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+  - id: questionwords_15
+    hiragana: いくら
+    romaji: ikura
+    meaning: how much (price)
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+    kanji: 幾ら
+  - id: questionwords_16
+    hiragana: いくつ
+    romaji: ikutsu
+    meaning: 'how many (general), how old'
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+    kanji: 幾つ
+  - id: questionwords_17
+    hiragana: どのくらい
+    romaji: dono kurai
+    meaning: 'how much, how many, approximately how'
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+    kanji: どの位
+  - id: questionwords_18
+    hiragana: どれくらい
+    romaji: dore kurai
+    meaning: 'how much, how many (casual variant)'
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+    kanji: どれ位
+  - id: questionwords_19
+    hiragana: どのくらい
+    romaji: dono kurai
+    meaning: 'how long (duration), how far (distance)'
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+    kanji: どの位
+  - id: questionwords_20
+    hiragana: なんじかん
+    romaji: nanjikan
+    meaning: how many hours
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+    kanji: 何時間
+  - id: questionwords_21
+    hiragana: なんぷん
+    romaji: nanpun
+    meaning: how many minutes
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+    kanji: 何分
+  - id: questionwords_22
+    hiragana: なんにち
+    romaji: nannichi
+    meaning: how many days
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+    kanji: 何日
+  - id: questionwords_23
+    hiragana: なんしゅうかん
+    romaji: nannshuukan
+    meaning: how many weeks
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+    kanji: 何週間
+  - id: questionwords_24
+    hiragana: なんかげつ
+    romaji: nankagetsu
+    meaning: how many months
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+    kanji: 何ヶ月
+  - id: questionwords_25
+    hiragana: なんねん
+    romaji: nannen
+    meaning: 'how many years, what year'
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+    kanji: 何年
+  - id: questionwords_26
+    hiragana: どのくらいとおい
+    romaji: dono kurai tooi
+    meaning: how far away
+    category: grammar
+    tags:
+      - question-words
+    type: expression
+    kanji: どの位遠い
   - id: reason_0
     hiragana: '[reason] + ので'
     romaji: node
@@ -2981,6 +4138,7 @@ vocabulary:
     meaning: apple
     category: vocabulary
     tags:
+      - food
       - tastes
     type: noun
     kanji: 林檎
@@ -3006,6 +4164,7 @@ vocabulary:
     meaning: fruit
     category: vocabulary
     tags:
+      - food
       - tastes
     type: noun
     kanji: 果物
@@ -3051,6 +4210,7 @@ vocabulary:
     meaning: soy sauce
     category: vocabulary
     tags:
+      - food
       - tastes
     type: noun
     kanji: 醤油

@@ -26,7 +26,7 @@ test.describe('Vocabulary Type Column Visibility', () => {
   test('should hide Type column in tables across multiple vocabulary articles', async ({ page }) => {
     const articles = [
       '/japanese/docs/lessons/vocabulary/colors',
-      '/japanese/docs/lessons/vocabulary/tastes',
+      '/japanese/docs/lessons/vocabulary/food/tastes',
       '/japanese/docs/lessons/vocabulary/family',
     ];
 

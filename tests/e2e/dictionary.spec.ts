@@ -1,5 +1,19 @@
 import { expect, test, type Page } from '@playwright/test';
-import { verifyPageIsFound } from './helpers/pageHelper';
+import { verifyPageIsFound, navigateViaTag } from './helpers/pageHelper';
+
+const VOCAB_TAGS = [
+  { name: 'Colors', href: '/vocabulary/colors', heading: /colors/i },
+  { name: 'Tastes', href: '/vocabulary/food/tastes', heading: /tastes/i },
+  { name: 'Time',   href: '/vocabulary/time',   heading: /time/i },
+];
+
+const GRAMMAR_TAGS = [
+  { name: 'Experience', href: '/grammar/experience', heading: /experience/i },
+  { name: 'Advice',     href: '/grammar/advice',     heading: /advice/i },
+  { name: 'Comparison', href: '/grammar/comparison', heading: /comparison/i },
+  { name: 'Desire',     href: '/grammar/desire',     heading: /desire/i },
+  { name: 'Excess',     href: '/grammar/excess',     heading: /excess|too much/i },
+];
 
 test.describe('Dictionary', () => {
   test.beforeEach(async ({ page }) => {
@@ -119,15 +133,11 @@ test.describe('Dictionary', () => {
   });
 
   test.describe('Tag Navigation - Vocabulary', () => {
-    test('should navigate to Colors from tag', async ({ page }) => {
-      await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
-
-      const colorsTag = page.locator('a[class*="tag"][href$="/vocabulary/colors"]').first();
-      await expect(colorsTag).toBeVisible({ timeout: 10000 });
-      await colorsTag.click();
-      await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /colors/i }).first()).toBeVisible();
-    });
+    for (const { name, href, heading } of VOCAB_TAGS) {
+      test(`should navigate to ${name} from tag`, async ({ page }) => {
+        await navigateViaTag(page, href, heading);
+      });
+    }
 
     test('should navigate to Family from tag', async ({ page }) => {
       await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
@@ -137,26 +147,6 @@ test.describe('Dictionary', () => {
       await familyTag.click();
       await page.waitForLoadState('networkidle');
       await expect(page.locator('a[class*="tag"]').filter({ hasText: /^family$/i }).first()).toBeVisible();
-    });
-
-    test('should navigate to Tastes from tag', async ({ page }) => {
-      await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
-
-      const tastesTag = page.locator('a[class*="tag"][href$="/vocabulary/tastes"]').first();
-      await expect(tastesTag).toBeVisible({ timeout: 10000 });
-      await tastesTag.click();
-      await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /tastes/i }).first()).toBeVisible();
-    });
-
-    test('should navigate to Time from tag', async ({ page }) => {
-      await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
-
-      const timeTag = page.locator('a[class*="tag"][href*="/vocabulary/time"]').first();
-      await expect(timeTag).toBeVisible({ timeout: 10000 });
-      await timeTag.click();
-      await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /time/i }).first()).toBeVisible();
     });
 
     test('should have functional tag filtering', async ({ page }) => {
@@ -170,61 +160,17 @@ test.describe('Dictionary', () => {
       await expect(firstTag).toBeVisible();
       await firstTag.click();
       await page.waitForLoadState('networkidle');
-      
+
       await verifyPageIsFound(page);
     });
   });
 
   test.describe('Tag Navigation - Grammar', () => {
-    test('should navigate to Experience grammar lesson from tag', async ({ page }) => {
-      await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
-
-      const experienceTag = page.locator('a[class*="tag"][href$="/grammar/experience"]').first();
-      await expect(experienceTag).toBeVisible({ timeout: 10000 });
-      await experienceTag.click();
-      await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /experience/i }).first()).toBeVisible();
-    });
-
-    test('should navigate to Advice grammar lesson from tag', async ({ page }) => {
-      await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
-
-      const adviceTag = page.locator('a[class*="tag"][href$="/grammar/advice"]').first();
-      await expect(adviceTag).toBeVisible({ timeout: 10000 });
-      await adviceTag.click();
-      await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /advice/i }).first()).toBeVisible();
-    });
-
-    test('should navigate to Comparison grammar lesson from tag', async ({ page }) => {
-      await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
-
-      const comparisonTag = page.locator('a[class*="tag"][href$="/grammar/comparison"]').first();
-      await expect(comparisonTag).toBeVisible({ timeout: 10000 });
-      await comparisonTag.click();
-      await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /comparison/i }).first()).toBeVisible();
-    });
-
-    test('should navigate to Desire grammar lesson from tag', async ({ page }) => {
-      await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
-
-      const desireTag = page.locator('a[class*="tag"][href$="/grammar/desire"]').first();
-      await expect(desireTag).toBeVisible({ timeout: 10000 });
-      await desireTag.click();
-      await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /desire/i }).first()).toBeVisible();
-    });
-
-    test('should navigate to Excess grammar lesson from tag', async ({ page }) => {
-      await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
-
-      const excessTag = page.locator('a[class*="tag"][href$="/grammar/excess"]').first();
-      await expect(excessTag).toBeVisible({ timeout: 10000 });
-      await excessTag.click();
-      await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /excess|too much/i }).first()).toBeVisible();
-    });
+    for (const { name, href, heading } of GRAMMAR_TAGS) {
+      test(`should navigate to ${name} grammar lesson from tag`, async ({ page }) => {
+        await navigateViaTag(page, href, heading);
+      });
+    }
 
     test('grammar tags should NOT link to vocabulary folder', async ({ page }) => {
       await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });

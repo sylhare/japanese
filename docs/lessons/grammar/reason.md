@@ -5,6 +5,8 @@ description: Learn how to express reasons and causes using ので and から
 tags: [grammar, reason, cause, ので, から]
 ---
 
+import NextSteps from '@site/src/components/NextSteps';
+
 # Expressing Reason: ので / から
 
 Learn how to express reasons and causes using **ので** and **から**.
@@ -144,3 +146,11 @@ Do **not** use な with:
 3. Don't forget **な** with **ので** for nouns and な-adjectives
 4. **から** often pairs with **ん です** at the end
 5. The reason clause comes **before** the consequence
+
+<NextSteps items={[
+  {
+    title: 'Linking Words',
+    description: 'Learn more connectors like however, only, therefore, and more',
+    to: './linking-words',
+  },
+]} />
