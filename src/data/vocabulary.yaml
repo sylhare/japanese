@@ -3771,6 +3771,14 @@ vocabulary:
     type: question word
     kanji: どの様に
   - id: questionwords_10
+    hiragana: どうやって
+    romaji: dou yatte
+    meaning: how (by what method/means)
+    category: grammar
+    tags:
+      - question-words
+    type: question word
+  - id: questionwords_11
     hiragana: どれ
     romaji: dore
     meaning: which one (of three or more)
@@ -3778,7 +3786,7 @@ vocabulary:
     tags:
       - question-words
     type: question word
-  - id: questionwords_11
+  - id: questionwords_12
     hiragana: どちら
     romaji: dochira
     meaning: 'which one (of two), polite'
@@ -3786,7 +3794,7 @@ vocabulary:
     tags:
       - question-words
     type: question word
-  - id: questionwords_12
+  - id: questionwords_13
     hiragana: どっち
     romaji: docchi
     meaning: 'which one (of two, casual)'
@@ -3794,7 +3802,7 @@ vocabulary:
     tags:
       - question-words
     type: question word
-  - id: questionwords_13
+  - id: questionwords_14
     hiragana: どの
     romaji: dono
     meaning: which... (before a noun)
@@ -3802,7 +3810,7 @@ vocabulary:
     tags:
       - question-words
     type: question word
-  - id: questionwords_14
+  - id: questionwords_15
     hiragana: どんな
     romaji: donna
     meaning: 'what kind of, what sort of'
@@ -3810,7 +3818,7 @@ vocabulary:
     tags:
       - question-words
     type: question word
-  - id: questionwords_15
+  - id: questionwords_16
     hiragana: いくら
     romaji: ikura
     meaning: how much (price)
@@ -3819,7 +3827,7 @@ vocabulary:
       - question-words
     type: question word
     kanji: 幾ら
-  - id: questionwords_16
+  - id: questionwords_17
     hiragana: いくつ
     romaji: ikutsu
     meaning: 'how many (general), how old'
@@ -3828,7 +3836,7 @@ vocabulary:
       - question-words
     type: question word
     kanji: 幾つ
-  - id: questionwords_17
+  - id: questionwords_18
     hiragana: どのくらい
     romaji: dono kurai
     meaning: 'how much, how many, approximately how'
@@ -3837,7 +3845,7 @@ vocabulary:
       - question-words
     type: question word
     kanji: どの位
-  - id: questionwords_18
+  - id: questionwords_19
     hiragana: どれくらい
     romaji: dore kurai
     meaning: 'how much, how many (casual variant)'
@@ -3846,7 +3854,7 @@ vocabulary:
       - question-words
     type: question word
     kanji: どれ位
-  - id: questionwords_19
+  - id: questionwords_20
     hiragana: どのくらい
     romaji: dono kurai
     meaning: 'how long (duration), how far (distance)'
@@ -3855,7 +3863,7 @@ vocabulary:
       - question-words
     type: question word
     kanji: どの位
-  - id: questionwords_20
+  - id: questionwords_21
     hiragana: なんじかん
     romaji: nanjikan
     meaning: how many hours
@@ -3864,7 +3872,7 @@ vocabulary:
       - question-words
     type: question word
     kanji: 何時間
-  - id: questionwords_21
+  - id: questionwords_22
     hiragana: なんぷん
     romaji: nanpun
     meaning: how many minutes
@@ -3873,7 +3881,7 @@ vocabulary:
       - question-words
     type: question word
     kanji: 何分
-  - id: questionwords_22
+  - id: questionwords_23
     hiragana: なんにち
     romaji: nannichi
     meaning: how many days
@@ -3882,7 +3890,7 @@ vocabulary:
       - question-words
     type: question word
     kanji: 何日
-  - id: questionwords_23
+  - id: questionwords_24
     hiragana: なんしゅうかん
     romaji: nannshuukan
     meaning: how many weeks
@@ -3891,7 +3899,7 @@ vocabulary:
       - question-words
     type: question word
     kanji: 何週間
-  - id: questionwords_24
+  - id: questionwords_25
     hiragana: なんかげつ
     romaji: nankagetsu
     meaning: how many months
@@ -3900,7 +3908,7 @@ vocabulary:
       - question-words
     type: question word
     kanji: 何ヶ月
-  - id: questionwords_25
+  - id: questionwords_26
     hiragana: なんねん
     romaji: nannen
     meaning: 'how many years, what year'
@@ -3909,7 +3917,7 @@ vocabulary:
       - question-words
     type: question word
     kanji: 何年
-  - id: questionwords_26
+  - id: questionwords_27
     hiragana: どのくらいとおい
     romaji: dono kurai tooi
     meaning: how far away
@@ -3918,6 +3926,86 @@ vocabulary:
       - question-words
     type: expression
     kanji: どの位遠い
+  - id: questionwords_28
+    hiragana: だれも
+    romaji: daremo
+    meaning: no one
+    category: grammar
+    tags:
+      - question-words
+    type: negative
+  - id: questionwords_29
+    hiragana: だれか
+    romaji: dareka
+    meaning: someone
+    category: grammar
+    tags:
+      - question-words
+    type: indefinite
+  - id: questionwords_30
+    hiragana: なにも
+    romaji: nanimo
+    meaning: nothing
+    category: grammar
+    tags:
+      - question-words
+    type: negative
+  - id: questionwords_31
+    hiragana: なにか
+    romaji: nanika
+    meaning: something
+    category: grammar
+    tags:
+      - question-words
+    type: indefinite
+  - id: questionwords_32
+    hiragana: どこも
+    romaji: dokomo
+    meaning: nowhere
+    category: grammar
+    tags:
+      - question-words
+    type: negative
+  - id: questionwords_33
+    hiragana: どこか
+    romaji: dokoka
+    meaning: somewhere
+    category: grammar
+    tags:
+      - question-words
+    type: indefinite
+  - id: questionwords_34
+    hiragana: いつも
+    romaji: itsumo
+    meaning: never
+    category: grammar
+    tags:
+      - question-words
+    type: negative
+  - id: questionwords_35
+    hiragana: いつか
+    romaji: itsuka
+    meaning: sometime
+    category: grammar
+    tags:
+      - question-words
+    type: indefinite
+  - id: questionwords_36
+    hiragana: どれも
+    romaji: doremo
+    meaning: none of them
+    category: grammar
+    tags:
+      - question-words
+    type: negative
+  - id: questionwords_37
+    hiragana: どれか
+    romaji: doreka
+    meaning: one of them
+    category: grammar
+    tags:
+      - question-words
+    type: indefinite
   - id: reason_0
     hiragana: '[reason] + ので'
     romaji: node
