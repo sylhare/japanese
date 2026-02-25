@@ -31,6 +31,7 @@ Japanese question words go in the same position as the answer would.
 | どうして | - | doushite | why (everyday) | question word |
 | なんで | - | nande | why (casual, spoken) | question word |
 | どう | - | dou | how (in what way) | question word |
+| どうやって | - | dou yatte | how (by what method/means) | question word |
 | どのように | どの様に | dono you ni | how (formal, more detail) | question word |
 | どれ | - | dore | which one (of three or more) | question word |
 | どちら | - | dochira | which one (of two), polite | question word |
@@ -74,11 +75,20 @@ Japanese question words go in the same position as the answer would.
 - なんで ないているの？ — Why are you crying? (very casual)
   - *nande naite iru no?*
 
-**どう / どのように (how)**
+:::tip なぜ vs どうして vs なんで
+All three mean "why" but differ in register:
+- **なぜ** — formal/written, also used in serious spoken contexts
+- **どうして** — everyday spoken Japanese, the most neutral choice
+- **なんで** — very casual, use only with close friends or family
+:::
+
+**どう / どうやって / どのように (how)**
 - にほんごの べんきょうは どうですか？ — How is your Japanese study going?
   - *nihongo no benkyou wa dou desu ka?*
 - これは どうやって つかいますか？ — How do you use this?
   - *kore wa dou yatte tsukaimasu ka?*
+- えきまで どうやって いきますか？ — How do you get to the station?
+  - *eki made dou yatte ikimasu ka?*
 
 **どれ / どちら / どの (which)**
 - どれが すきですか？ — Which one do you like? (of 3 or more)
@@ -88,23 +98,22 @@ Japanese question words go in the same position as the answer would.
 - どの でんしゃに のりますか？ — Which train do you take? (before a noun)
   - *dono densha ni norimasu ka?*
 
+:::tip どれ vs どちら vs どの
+- **どれ** — standalone pronoun for 3 or more items: どれが いいですか？
+- **どちら** — standalone pronoun for exactly 2 items, also used as polite "where/which direction": どちらに なさいますか？
+- **どの** — must be followed by a noun: どの バッグ？ (which bag?)
+:::
+
 **どんな (what kind of)**
 - どんな おんがくが すきですか？ — What kind of music do you like?
   - *donna ongaku ga suki desu ka?*
 - どんな ひとですか？ — What kind of person is they?
   - *donna hito desu ka?*
 
-:::tip なぜ vs どうして vs なんで
-All three mean "why" but differ in register:
-- **なぜ** — formal/written, also used in serious spoken contexts
-- **どうして** — everyday spoken Japanese, the most neutral choice
-- **なんで** — very casual, use only with close friends or family
-:::
-
-:::tip どれ vs どちら vs どの
-- **どれ** — standalone pronoun for 3 or more items: どれが いいですか？
-- **どちら** — standalone pronoun for exactly 2 items, also used as polite "where/which direction": どちらに なさいますか？
-- **どの** — must be followed by a noun: どの バッグ？ (which bag?)
+:::tip どう vs どうやって vs どのように
+- **どう** — asks about state or impression: どうですか？ (How is it? / What do you think?)
+- **どうやって** — asks about method or process: どうやって いきますか？ (How do you get there?)
+- **どのように** — formal version of どうやって, used in writing or polite speech
 :::
 
 ## How Much and How Many
@@ -114,7 +123,10 @@ All three mean "why" but differ in register:
 | いくら | 幾ら | ikura | how much (price) | question word |
 | いくつ | 幾つ | ikutsu | how many (general), how old | question word |
 | どのくらい | どの位 | dono kurai | how much, how many, approximately how | question word |
-| どれくらい | どれ位 | dore kurai | how much, how many (casual variant) | question word |
+
+:::note
+**どれくらい** (*dore kurai*) is a casual variant of どのくらい with the same meaning.
+:::
 
 ### Examples
 
@@ -192,15 +204,34 @@ Question words combine with **counters** to ask specific quantities.
 
 ## Negative and Indefinite Forms
 
-Question words also create **negative** (no one, nowhere, nothing) and **indefinite** (someone, somewhere, something) meanings depending on the sentence.
+Question words combine with **も** or **か** to shift their meaning:
 
-| Question word | + も + negative | + か | Meaning |
-|---------------|-----------------|------|---------|
-| だれ | だれも〜ない | だれか | no one / someone |
-| なに | なにも〜ない | なにか | nothing / something |
-| どこ | どこも〜ない | どこか | nowhere / somewhere |
-| いつ | いつも〜ない | いつか | never / sometime |
-| どれ | どれも〜ない | どれか | none of them / one of them |
+### How to Build the Form
+
+| Pattern | Formation | Meaning |
+|---------|-----------|---------|
+| Negative | question word + も + negative verb | no one, nothing, nowhere... |
+| Indefinite | question word + か | someone, something, somewhere... |
+
+### Vocabulary
+
+| Hiragana | Romaji | English | Type |
+|----------|--------|---------|------|
+| だれも | daremo | no one | negative |
+| だれか | dareka | someone | indefinite |
+| なにも | nanimo | nothing | negative |
+| なにか | nanika | something | indefinite |
+| どこも | dokomo | nowhere | negative |
+| どこか | dokoka | somewhere | indefinite |
+| いつも | itsumo | never | negative |
+| いつか | itsuka | sometime | indefinite |
+| どれも | doremo | none of them | negative |
+| どれか | doreka | one of them | indefinite |
+
+:::info いつも (always)
+**いつも** without a negative verb is a fixed expression meaning "always/usually":
+- いつも コーヒーを のみます。 — I always drink coffee.
+:::
 
 ### Examples
 
@@ -212,11 +243,6 @@ Question words also create **negative** (no one, nowhere, nothing) and **indefin
   - *dokoka ni ikimashou.*
 - いつか にほんに いきたいです。 — I want to go to Japan someday.
   - *itsuka nihon ni ikitai desu.*
-
-:::info いつも (always)
-Note that **いつも** (always) is a common set expression meaning "always/usually" when used **without** a negative verb:
-- いつも コーヒーを のみます。 — I always drink coffee.
-:::
 
 <NextSteps items={[
   {
