@@ -43,15 +43,15 @@ Use these to explain *why* something happens.
 
 Use these to express *however*, *but*, or *even though*.
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| でも | - | demo | but, however (casual) | conjunction |
-| しかし | - | shikashi | however (formal) | conjunction |
-| けど | - | kedo | but (casual, spoken) | conjunction |
-| けれど | - | keredo | but, however | conjunction |
-| ところが | - | tokoro ga | however, unexpectedly | conjunction |
-| のに | - | noni | even though, despite | conjunction |
-| ても | - | temo | even if, even though | conjunction |
+| Hiragana | Romaji | English | Type |
+|----------|--------|---------|------|
+| でも | demo | but, however (casual) | conjunction |
+| しかし | shikashi | however (formal) | conjunction |
+| けど | kedo | but (casual, spoken) | conjunction |
+| けれど | keredo | but, however | conjunction |
+| ところが | tokoro ga | however, unexpectedly | conjunction |
+| のに | noni | even though, despite | conjunction |
+| ても | temo | even if, even though | conjunction |
 
 **Examples:**
 
@@ -113,12 +113,12 @@ Use these to order events — *first*, *then*, *finally*.
 
 Use these to express *only*, *just*, or *nothing but*.
 
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| だけ | - | dake | only, just | particle |
-| しか〜ない | - | shika~nai | nothing but, only (negative emphasis) | particle |
-| ばかり | - | bakari | nothing but, only, just (excessive) | particle |
-| さえ | - | sae | even, only (emphasizing minimum) | particle |
+| Hiragana | Romaji | English | Type |
+|----------|--------|---------|------|
+| だけ | dake | only, just | particle |
+| しか〜ない | shika~nai | nothing but, only (negative emphasis) | particle |
+| ばかり | bakari | nothing but, only, just (excessive) | particle |
+| さえ | sae | even, only (emphasizing minimum) | particle |
 
 **Examples:**
 
