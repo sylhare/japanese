@@ -17,9 +17,9 @@ Particles are small words that indicate the grammatical relationship between wor
 **Usage**: Marks what the sentence is about
 
 #### Examples:
-- 私は学生です。 (Watashi wa gakusei desu.) - I am a student.
-- これは本です。 (Kore wa hon desu.) - This is a book.
-- 今日は暑いです。 (Kyou wa atsui desu.) - Today is hot.
+- わたし**は**がくせいです。 (Watashi wa gakusei desu.) - I am a student.
+- これ**は**ほんです。 (Kore wa hon desu.) - This is a book.
+- きょう**は**あついです。 (Kyou wa atsui desu.) - Today is hot.
 
 #### Key Points:
 - Pronounced "wa" but written は
@@ -32,9 +32,9 @@ Particles are small words that indicate the grammatical relationship between wor
 **Usage**: Marks who or what performs the action
 
 #### Examples:
-- 私が学生です。 (Watashi ga gakusei desu.) - I am the student (emphasizing "I")
-- 雨が降っています。 (Ame ga futte imasu.) - It is raining.
-- 誰が来ましたか？ (Dare ga kimashita ka?) - Who came?
+- わたし**が**がくせいです。 (Watashi ga gakusei desu.) - I am the student (emphasizing "I")
+- あめ**が**ふっています。 (Ame ga futte imasu.) - It is raining.
+- だれ**が**きましたか？ (Dare ga kimashita ka?) - Who came?
 
 #### Key Points:
 - Used for new information or emphasis
@@ -47,9 +47,9 @@ Particles are small words that indicate the grammatical relationship between wor
 **Usage**: Marks what receives the action
 
 #### Examples:
-- 本を読みます。 (Hon o yomimasu.) - I read a book.
-- コーヒーを飲みます。 (Koohii o nomimasu.) - I drink coffee.
-- 日本語を勉強します。 (Nihongo o benkyou shimasu.) - I study Japanese.
+- ほん**を**よみます。 (Hon o yomimasu.) - I read a book.
+- コーヒー**を**のみます。 (Koohii o nomimasu.) - I drink coffee.
+- にほんご**を**べんきょうします。 (Nihongo o benkyou shimasu.) - I study Japanese.
 
 #### Key Points:
 - Always used with transitive verbs
@@ -62,9 +62,9 @@ Particles are small words that indicate the grammatical relationship between wor
 **Usage**: Multiple functions depending on context
 
 #### Examples:
-- 学校に行きます。 (Gakkou ni ikimasu.) - I go to school.
-- 三時に会います。 (Sanji ni aimasu.) - I will meet at 3 o'clock.
-- 友達に手紙を書きます。 (Tomodachi ni tegami o kakimasu.) - I write a letter to my friend.
+- がっこう**に**いきます。 (Gakkou ni ikimasu.) - I go to school.
+- さんじ**に**あいます。 (Sanji ni aimasu.) - I will meet at 3 o'clock.
+- ともだち**に**てがみをかきます。 (Tomodachi ni tegami o kakimasu.) - I write a letter to my friend.
 
 #### Key Points:
 - Used with time expressions
@@ -77,9 +77,9 @@ Particles are small words that indicate the grammatical relationship between wor
 **Usage**: Shows where an action takes place or how it's done
 
 #### Examples:
-- 図書館で勉強します。 (Toshokan de benkyou shimasu.) - I study at the library.
-- 電車で行きます。 (Densha de ikimasu.) - I go by train.
-- 日本語で話します。 (Nihongo de hanashimasu.) - I speak in Japanese.
+- としょかん**で**べんきょうします。 (Toshokan de benkyou shimasu.) - I study at the library.
+- でんしゃ**で**いきます。 (Densha de ikimasu.) - I go by train.
+- にほんご**で**はなします。 (Nihongo de hanashimasu.) - I speak in Japanese.
 
 #### Key Points:
 - Used for location of action (not destination)
@@ -92,9 +92,9 @@ Particles are small words that indicate the grammatical relationship between wor
 **Usage**: Shows ownership or describes nouns
 
 #### Examples:
-- 私の本です。 (Watashi no hon desu.) - It's my book.
-- 日本の車です。 (Nihon no kuruma desu.) - It's a Japanese car.
-- 大きいのを買いました。 (Ookii no o kaimashita.) - I bought a big one.
+- わたし**の**ほんです。 (Watashi no hon desu.) - It's my book.
+- にほん**の**くるまです。 (Nihon no kuruma desu.) - It's a Japanese car.
+- おおきい**の**をかいました。 (Ookii no o kaimashita.) - I bought a big one.
 
 #### Key Points:
 - Used for possession
@@ -109,8 +109,8 @@ Particles are small words that indicate the grammatical relationship between wor
 **Usage**: Shows where someone is going
 
 #### Examples:
-- 東京へ行きます。 (Toukyou e ikimasu.) - I go to Tokyo.
-- 家へ帰ります。 (Ie e kaerimasu.) - I return home.
+- とうきょう**へ**いきます。 (Toukyou e ikimasu.) - I go to Tokyo.
+- いえ**へ**かえります。 (Ie e kaerimasu.) - I return home.
 
 #### Key Points:
 - Used only with movement verbs
@@ -123,8 +123,8 @@ Particles are small words that indicate the grammatical relationship between wor
 **Usage**: Shows where something starts or comes from
 
 #### Examples:
-- 日本から来ました。 (Nihon kara kimashita.) - I came from Japan.
-- 九時から始まります。 (Kuji kara hajimarimasu.) - It starts from 9 o'clock.
+- にほん**から**きました。 (Nihon kara kimashita.) - I came from Japan.
+- くじ**から**はじまります。 (Kuji kara hajimarimasu.) - It starts from 9 o'clock.
 
 ### まで (made) - Until Marker
 
@@ -132,8 +132,8 @@ Particles are small words that indicate the grammatical relationship between wor
 **Usage**: Shows where something ends or goes until
 
 #### Examples:
-- 五時まで働きます。 (Goji made hatarakimasu.) - I work until 5 o'clock.
-- 駅まで歩きます。 (Eki made arukimasu.) - I walk to the station.
+- ごじ**まで**はたらきます。 (Goji made hatarakimasu.) - I work until 5 o'clock.
+- えき**まで**あるきます。 (Eki made arukimasu.) - I walk to the station.
 
 ## Time Particles
 
@@ -143,8 +143,8 @@ Particles are small words that indicate the grammatical relationship between wor
 **Usage**: Used with specific time expressions
 
 #### Examples:
-- 三時に会います。 (Sanji ni aimasu.) - I will meet at 3 o'clock.
-- 月曜日に来ます。 (Getsuyoubi ni kimasu.) - I will come on Monday.
+- さんじ**に**あいます。 (Sanji ni aimasu.) - I will meet at 3 o'clock.
+- げつようび**に**きます。 (Getsuyoubi ni kimasu.) - I will come on Monday.
 
 ### から...まで (kara...made) - Time Range
 
@@ -152,8 +152,8 @@ Particles are small words that indicate the grammatical relationship between wor
 **Usage**: Shows duration from start to end
 
 #### Examples:
-- 九時から五時まで働きます。 (Kuji kara goji made hatarakimasu.) - I work from 9 to 5.
-- 月曜日から金曜日まで学校に行きます。 (Getsuyoubi kara kinyoubi made gakkou ni ikimasu.) - I go to school from Monday to Friday.
+- くじ**から**ごじ**まで**はたらきます。 (Kuji kara goji made hatarakimasu.) - I work from 9 to 5.
+- げつようび**から**きんようび**まで**がっこうにいきます。 (Getsuyoubi kara kinyoubi made gakkou ni ikimasu.) - I go to school from Monday to Friday.
 
 ## Comparison and Contrast Particles
 
@@ -163,8 +163,8 @@ Particles are small words that indicate the grammatical relationship between wor
 **Usage**: Connects nouns or shows accompaniment
 
 #### Examples:
-- 本とペンがあります。 (Hon to pen ga arimasu.) - There are books and pens.
-- 友達と映画を見ます。 (Tomodachi to eiga o mimasu.) - I watch movies with friends.
+- ほん**と**ペンがあります。 (Hon to pen ga arimasu.) - There are books and pens.
+- ともだち**と**えいがをみます。 (Tomodachi to eiga o mimasu.) - I watch movies with friends.
 
 ### や (ya) - And So On Marker
 
@@ -172,8 +172,8 @@ Particles are small words that indicate the grammatical relationship between wor
 **Usage**: Gives examples without being exhaustive
 
 #### Examples:
-- りんごやバナナを買いました。 (Ringo ya banana o kaimashita.) - I bought apples, bananas, and so on.
-- 日本語や英語を勉強します。 (Nihongo ya eigo o benkyou shimasu.) - I study Japanese, English, and so on.
+- りんご**や**バナナをかいました。 (Ringo ya banana o kaimashita.) - I bought apples, bananas, and so on.
+- にほんご**や**えいごをべんきょうします。 (Nihongo ya eigo o benkyou shimasu.) - I study Japanese, English, and so on.
 
 ### も (mo) - Also/Even Marker
 
@@ -181,8 +181,8 @@ Particles are small words that indicate the grammatical relationship between wor
 **Usage**: Adds emphasis or shows inclusion
 
 #### Examples:
-- 私も学生です。 (Watashi mo gakusei desu.) - I am also a student.
-- 今日も雨です。 (Kyou mo ame desu.) - It's raining today too.
+- わたし**も**がくせいです。 (Watashi mo gakusei desu.) - I am also a student.
+- きょう**も**あめです。 (Kyou mo ame desu.) - It's raining today too.
 
 ## Question Particles
 
@@ -192,8 +192,8 @@ Particles are small words that indicate the grammatical relationship between wor
 **Usage**: Turns a statement into a question
 
 #### Examples:
-- これは本ですか？ (Kore wa hon desu ka?) - Is this a book?
-- 何時ですか？ (Nanji desu ka?) - What time is it?
+- これはほんです**か**？ (Kore wa hon desu ka?) - Is this a book?
+- なんじです**か**？ (Nanji desu ka?) - What time is it?
 
 ### ね (ne) - Confirmation Particle
 
@@ -201,8 +201,8 @@ Particles are small words that indicate the grammatical relationship between wor
 **Usage**: Softens statements and seeks agreement
 
 #### Examples:
-- 今日は暑いですね。 (Kyou wa atsui desu ne.) - It's hot today, isn't it?
-- いい天気ですね。 (Ii tenki desu ne.) - It's nice weather, isn't it?
+- きょうはあついです**ね**。 (Kyou wa atsui desu ne.) - It's hot today, isn't it?
+- いいてんきです**ね**。 (Ii tenki desu ne.) - It's nice weather, isn't it?
 
 ### よ (yo) - Emphasis Particle
 
@@ -210,8 +210,8 @@ Particles are small words that indicate the grammatical relationship between wor
 **Usage**: Emphasizes information or gives advice
 
 #### Examples:
-- これは本ですよ。 (Kore wa hon desu yo.) - This is a book (I'm telling you).
-- 早く行きましょうよ。 (Hayaku ikimashou yo.) - Let's go quickly.
+- これはほんです**よ**。 (Kore wa hon desu yo.) - This is a book (I'm telling you).
+- はやくいきましょう**よ**。 (Hayaku ikimashou yo.) - Let's go quickly.
 
 ## Particle Combinations
 
@@ -221,8 +221,8 @@ Particles are small words that indicate the grammatical relationship between wor
 **Usage**: Shows what something is for
 
 #### Examples:
-- これは子供には難しいです。 (Kore wa kodomo ni wa muzukashii desu.) - This is difficult for children.
-- 勉強には時間が必要です。 (Benkyou ni wa jikan ga hitsuyou desu.) - Time is necessary for studying.
+- これはこども**には**むずかしいです。 (Kore wa kodomo ni wa muzukashii desu.) - This is difficult for children.
+- べんきょう**には**じかんがひつようです。 (Benkyou ni wa jikan ga hitsuyou desu.) - Time is necessary for studying.
 
 ### では (de wa) - In/At (Conditional)
 
@@ -230,8 +230,8 @@ Particles are small words that indicate the grammatical relationship between wor
 **Usage**: Shows under what circumstances
 
 #### Examples:
-- 日本では日本語を話します。 (Nihon de wa nihongo o hanashimasu.) - In Japan, I speak Japanese.
-- 雨では行けません。 (Ame de wa ikemasen.) - If it's raining, I can't go.
+- にほん**では**にほんごをはなします。 (Nihon de wa nihongo o hanashimasu.) - In Japan, I speak Japanese.
+- あめ**では**いけません。 (Ame de wa ikemasen.) - If it's raining, I can't go.
 
 ## Common Particle Mistakes
 

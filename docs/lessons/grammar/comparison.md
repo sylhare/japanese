@@ -16,7 +16,17 @@ Learn how to compare things in Japanese using **ほう が** and **より**.
 | A と B と どちら の ほう | dochira no hou | which one (of A and B) | expression |
 | A の ほう が B より [adj] | no hou ga ... yori | A is more [adj] than B | expression |
 | より | yori | than, compared to | particle |
-| はな より だんご | hana yori dango | practicality over beauty | proverb |
+
+:::note proverb
+
+**はな 🌸 より だんご 🍡 (の ほう が いい)** — *hana yori dango (no hou ga ii)*
+
+- **Literally:** Dango is better than flowers
+- **Meaning:** Practical things 🍡 are more important than beauty 🌸
+
+This is a famous Japanese proverb emphasizing practicality over aesthetics — substance is more important than appearance.
+
+:::
 
 ## Asking for Comparison
 
@@ -82,16 +92,4 @@ When the comparison is clear from context, you can omit **B より**.
   - *koohii no hou ga oishii desu*
 - なつ の ほう が すき です - I like summer more.
   - *natsu no hou ga suki desu*
-
-## Common Expression
-
-### はな より だんご
-
-**はな 🌸 より だんご 🍡 (の ほう が いい)**
-
-- **Literally:** Dango is better than flowers
-- **Meaning:** Practical things 🍡 are more important than beauty 🌸
-- **Usage:** Emphasizes practicality over aesthetics
-
-This is a famous Japanese proverb expressing that substance is more important than appearance.
 
