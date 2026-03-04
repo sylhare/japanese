@@ -454,6 +454,14 @@ vocabulary:
     tags:
       - comparison
     type: proverb
+  - id: conditional_0
+    hiragana: '[clause A] + と + [clause B]'
+    romaji: to
+    meaning: 'when/if A, then B'
+    category: grammar
+    tags:
+      - conditional
+    type: conditional
   - id: confusingkanji_0
     hiragana: つち
     romaji: tsuchi

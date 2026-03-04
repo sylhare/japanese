@@ -39,8 +39,9 @@ For polite speech, [describe the polite equivalent]:
 | む | [form] | [m → X] |
 | ぶ | [form] | [b → X] |
 
-:::caution Irregular Ending: [Verb]
-<!-- Always call out irregular endings within the group. See te-form: 行く → いって not いいて. -->
+:::warning Irregular Ending: [Verb]
+<!-- Always call out irregular endings within the group. See te-form: 行く → いって not いいて.
+     Use :::warning (not :::caution) for irregular verb exceptions — canonical pattern from te-form.md. -->
 **[verb]** ([reading] - [meaning]) is irregular:
 - [verb] → **[correct form]**, NOT ~~[wrong form]~~
 :::
@@ -79,6 +80,13 @@ For polite speech, [describe the polite equivalent]:
 
 - する → [form] (to do)
 - くる → [form] (to come)
+
+### Examples
+
+<!-- Include する compound verbs to show real-world applicability. See te-form.md.
+     Common compounds: べんきょうする (to study), さんぽする (to walk), でんわする (to call). -->
+
+- [verb する compound] → [form] ([meaning])
 - [verb する compound] → [form] ([meaning])
 
 :::caution [Verb with Exception]

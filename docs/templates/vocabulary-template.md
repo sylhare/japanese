@@ -1,9 +1,12 @@
 ---
 sidebar_position: 1
-title: 🎯 Topic Name
+title: "[emoji] Topic Name"
 description: Learn Japanese vocabulary for [topic]
 tags: [vocabulary, tag1, tag2, nouns]
 ---
+
+<!-- Use an emoji thematically linked to the topic, not a generic placeholder.
+     E.g. 👨‍👩‍👧 for family, 🏥 for health, 🎨 for colors. -->
 
 # Topic Name
 
@@ -39,7 +42,24 @@ Knowing [topic] vocabulary is essential for [context/situation]. This lesson cov
 ## [Category 2]
 
 <!-- Repeat the same structure for each thematic group.
-     Use a Usage/Notes column when a word has register differences. See family.md. -->
+     Use a Usage/Notes column when a word has register differences. See family.md.
+
+     COMPARISON TABLE: When words have register differences (e.g. your own family vs.
+     someone else's), use a two-column comparison table:
+
+     | Meaning | Your Own | Someone Else's |
+     |---------|----------|----------------|
+     | father  | ちち     | おとうさん     |
+     | mother  | はは     | おかあさん     |
+
+     HIERARCHY DIAGRAM: For topics with a natural hierarchy (family tree, org chart, etc.),
+     consider adding an ASCII diagram to show relationships visually. Example:
+       祖父・祖母
+           │
+       父  ─┬─  母
+           │
+        [you]
+-->
 
 | Hiragana | Kanji | Romaji | English | Usage | Type |
 |----------|-------|--------|---------|-------|------|

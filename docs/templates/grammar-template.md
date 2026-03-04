@@ -87,9 +87,11 @@ Learn how to express [concept] using **[form 1]** and **[form 2]**.
 - [Japanese sentence] — [English translation].
   - *[romaji]*
 
-### Same Sentence, Both Ways
+## Same Sentence, Both Ways
 
-<!-- Always show the same example in both patterns when comparing. See reason.md. -->
+<!-- Standalone section — always placed after both Pattern sections, before Quick Comparison.
+     Always use the identical scenario in both forms — the contrast should be the *only* difference.
+     See reason.md for a canonical example. -->
 
 **[Pattern 1] ([formal/casual]):**
 - [Japanese] — [English].
@@ -108,9 +110,25 @@ Learn how to express [concept] using **[form 1]** and **[form 2]**.
 
 **[Key structural difference]:** [explain concisely]
 
+## Formation Summary
+
+<!-- Formation reference: shows exactly what to attach after each word type.
+     Use this when word-type formation differs (e.g. noun/な-adj need extra な).
+     See reason.md: な-adj + な + ので vs verb + ので.
+     Omit if all word types attach identically. -->
+
+| Type | [Pattern 1] | [Pattern 2] |
+|------|-------------|-------------|
+| Verb | [example form] | [example form] |
+| い-Adj | [example form] | [example form] |
+| な-Adj | [example form] | [example form] |
+| Noun | [example form] | [example form] |
+
 ## Key Points
 
-<!-- Numbered list of gotchas, constraints, and important rules. -->
+<!-- Usage guidance only — NOT formation rules (those go in Formation Summary above).
+     Cover: register/formality, common mistakes, word-order constraints, pragmatic tips.
+     See reason.md: "ので is safer for formal situations", "から pairs with んです". -->
 
 1. [First rule or constraint]
 2. [Second rule or constraint]
@@ -124,27 +142,15 @@ Learn how to express [concept] using **[form 1]** and **[form 2]**.
 [Describe how this pattern is confused with a similar grammar point and how to distinguish them.]
 :::
 
-## Summary Table
-
-<!-- Recommended when ≥2 patterns exist or there are word-type variations.
-     Shows the full formation at a glance. -->
-
-| Type | [Pattern 1] | [Pattern 2] |
-|------|-------------|-------------|
-| Verb | [example form] | [example form] |
-| い-Adj | [example form] | [example form] |
-| な-Adj | [example form] | [example form] |
-| Noun | [example form] | [example form] |
-
 <NextSteps items={[
   {
     title: '[Related Article Title]',
     description: '[What the learner will learn next]',
     to: './[article-slug]',
   },
-  {
-    title: '[Optional Second Article]',
-    description: '[What the learner will learn next]',
-    to: './[article-slug]',
-  },
+  // {
+  //   title: '[Optional Second Article]',
+  //   description: '[What the learner will learn next — e.g. an alternative pattern or next grammar level]',
+  //   to: './[article-slug]',
+  // },
 ]} />
