@@ -1,4 +1,13 @@
 #!/usr/bin/env node
+/**
+ * Vocabulary extraction script.
+ *
+ * Scans all lesson files in docs/lessons/ for vocabulary tables, merges the
+ * results into src/data/vocabulary.yaml, and regenerates src/data/n5-vocabulary.json
+ * from the N5 reference article.
+ *
+ * Full documentation: .github/docs/vocabulary-extraction.md
+ */
 
 const fs = require('fs');
 const path = require('path');

@@ -1,5 +1,4 @@
 ---
-sidebar_position: 1
 title: Tense/Form - かな form
 description: Learn the [form name] of Japanese verbs
 tags: [grammar, verbs, conjugation, かな形]

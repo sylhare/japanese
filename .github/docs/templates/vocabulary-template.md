@@ -1,5 +1,4 @@
 ---
-sidebar_position: 1
 title: "[emoji] Topic Name"
 description: Learn Japanese vocabulary for [topic]
 tags: [vocabulary, tag1, tag2, nouns]

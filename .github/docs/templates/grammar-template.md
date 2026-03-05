@@ -1,5 +1,4 @@
 ---
-sidebar_position: 1
 title: Pattern Name - かな
 description: Learn how to [describe what the pattern expresses]
 tags: [grammar, tag1, tag2]

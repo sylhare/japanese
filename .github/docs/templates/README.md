@@ -58,3 +58,58 @@ npm run test:e2e
 ```
 
 Playwright starts the site automatically — no separate `npm start` needed.
+
+---
+
+## Writing Conventions
+
+### Examples format
+
+All lesson examples follow this format (em-dash, period, indented romaji):
+
+```md
+- Japanese sentence — English translation.
+  - *romaji*
+```
+
+### Callout types
+
+Use callouts consistently:
+
+| Callout | Use for |
+|---------|---------|
+| `:::tip` | Memory tricks, cultural advice, polite-form equivalents |
+| `:::caution` | Exceptions and irregular forms within a rule |
+| `:::warning` | Common confusion between similar words or patterns |
+| `:::info` | Links to related articles (second use of a particle, related grammar) |
+
+### Vocabulary tables
+
+Standard columns: **Hiragana | Kanji | Romaji | English | Type**
+
+Add a **Usage** column when register differences apply (e.g. humble/honorific forms for family vocabulary). See `vocabulary/family.md` for a canonical example.
+
+Emoji rules:
+- Nouns and adjectives: include an emoji in the English column (e.g. `👨 father`)
+- Verbs: **no emoji** in the English column
+
+Keep tables to ≤10 rows. Split into subsections if more words are needed.
+
+Never mix grammatically different types (nouns, adjectives, verbs) in one table.
+
+### Grammar lessons
+
+- Start with a **Key Expressions** table (Hiragana | Romaji | English | Type) — always the first content section.
+- End with `<NextSteps items={[...]} />`.
+- Grammar lessons use `.md` extension unless they import JSX components — use `.mdx` in that case.
+
+### Conjugation lessons
+
+- Always open with `:::tip Polite Form Equivalent`.
+- Group 1 (Godan): table by ending + `:::warning` for irregular verbs (行く, etc.).
+- Group 3: always list する and くる explicitly; add `:::caution` for ある if it has an irregular form.
+- End "in Context" section with `:::info Common [Form] Patterns`.
+
+### File format
+
+Use `.md` for plain markdown. Use `.mdx` when the file imports JSX components (e.g. `NextSteps`, `LessonList`). See [components/](../components/) for all available components.
