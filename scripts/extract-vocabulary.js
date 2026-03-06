@@ -114,7 +114,7 @@ function normalizeToken(token) {
 function addTokensFromCell(cell, tokens) {
   if (!cell) return;
   const cleaned = cell.replace(/（.*?）/g, '').replace(/\(.*?\)/g, '').trim();
-  const parts = cleaned.split(/[\/／]/);
+  const parts = cleaned.split(/[/／]/);
   parts.forEach(part => {
     const normalized = normalizeToken(part);
     if (normalized) {

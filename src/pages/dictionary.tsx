@@ -70,6 +70,7 @@ export function getTagPath(tag: string): string {
     'advice',
     'appearance',
     'comparison',
+    'conditional',
     'conjunctions',
     'desire',
     'excess',

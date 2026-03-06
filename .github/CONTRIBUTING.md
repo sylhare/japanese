@@ -19,7 +19,7 @@ npm install
 | `npm run lint:fix` | Lint and auto-fix |
 | `npm run extract-vocabulary` | Extract vocabulary from lesson tables into `src/data/vocabulary.yaml` |
 | `npm test` | Run unit tests (Vitest) |
-| `npm run test:e2e` | Run end-to-end tests (Playwright) — starts the site automatically |
+| `npm run test:e2e` | Run end-to-end tests (Playwright) — starts the site automatically; if you added vocabulary with a new tag, see the [Vocabulary System Guide](docs/vocabulary-extraction.md#adding-new-tag-mappings) |
 
 ## Deployment
 

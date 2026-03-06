@@ -23,8 +23,6 @@ test.describe('Site Navigation', () => {
 
       for (let i = 0; i < linkCount; i++) {
         const link = headerLinks.nth(i);
-        const href = await link.getAttribute('href');
-        const linkText = await link.textContent();
 
         await link.click();
         await verifyPageIsFound(page);
@@ -77,8 +75,6 @@ test.describe('Site Navigation', () => {
 
       for (let i = 0; i < linkCount; i++) {
         const link = footerLinks.nth(i);
-        const href = await link.getAttribute('href');
-        const linkText = await link.textContent();
 
         await link.click();
         await verifyPageIsFound(page);
