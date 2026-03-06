@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
-import { verifyPageIsFound, validateSidebarLinks, validateCardLinks } from './helpers/pageHelper';
 import { GRAMMAR_LESSONS } from './helpers/lessonData';
+import { validateCardLinks, validateSidebarLinks, verifyPageIsFound } from './helpers/pageHelper';
 
 test.describe('Grammar Pages', () => {
   test.describe('Grammar Landing Page', () => {

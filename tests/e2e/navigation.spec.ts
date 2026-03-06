@@ -44,7 +44,7 @@ test.describe('Site Navigation', () => {
 
     test('should have all expected header links', async ({ page }) => {
       const header = page.locator('nav.navbar');
-      
+
       const lessonsLink = header.locator('a.navbar__link').filter({ hasText: /^Lessons$/i });
       await expect(lessonsLink).toBeVisible();
 
@@ -121,14 +121,14 @@ test.describe('Site Navigation', () => {
       const sidebar = page.locator('aside.theme-doc-sidebar-container');
       const categories = sidebar.locator('.menu__list-item--collapsed, .theme-doc-sidebar-item-category');
       const categoryCount = await categories.count();
-      
+
       expect(categoryCount).toBeGreaterThan(0);
     });
 
     test('should highlight active page in sidebar', async ({ page }) => {
       const sidebar = page.locator('aside.theme-doc-sidebar-container');
       const activeLink = sidebar.locator('a.menu__link--active');
-      
+
       await expect(activeLink.first()).toBeVisible();
     });
   });
@@ -148,9 +148,9 @@ test.describe('Site Navigation', () => {
 
       const breadcrumbs = page.locator('nav.theme-doc-breadcrumbs');
       const breadcrumbLinks = breadcrumbs.locator('a');
-      
+
       expect(await breadcrumbLinks.count()).toBeGreaterThan(0);
-      
+
       const firstLink = breadcrumbLinks.first();
       await firstLink.click();
       await verifyPageIsFound(page);
@@ -191,7 +191,7 @@ test.describe('Site Navigation', () => {
 
     test('should fail verifyPageIsFound for 404 pages', async ({ page }) => {
       test.fail();
-      await page.goto('./non-existent-page-12345');      
+      await page.goto('./non-existent-page-12345');
       await verifyPageIsFound(page);
     });
   });

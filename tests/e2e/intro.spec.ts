@@ -88,12 +88,12 @@ test.describe('Intro Page', () => {
     test('should show hover effect on tiles', async ({ page }) => {
       const firstTile = page.locator('a[class*="lessonCard"]').first();
       await expect(firstTile).toBeVisible();
-      
+
       const initialBox = await firstTile.boundingBox();
       expect(initialBox).not.toBeNull();
-      
+
       await firstTile.hover();
-      
+
       await expect(firstTile).toBeVisible();
     });
 
@@ -130,7 +130,7 @@ test.describe('Intro Page', () => {
     test('should have proper article structure', async ({ page }) => {
       const article = page.locator('article').first();
       await expect(article).toBeVisible();
-      
+
       const mainHeading = article.getByRole('heading', { level: 1 });
       await expect(mainHeading).toBeVisible();
     });
@@ -174,9 +174,9 @@ test.describe('Intro Page', () => {
       for (let i = 0; i < linkCount; i++) {
         const link = links.nth(i);
         const href = await link.getAttribute('href');
-        
+
         expect(href).toBeTruthy();
-        
+
         const isExternal = href?.startsWith('http');
         if (isExternal) continue;
 
