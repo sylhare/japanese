@@ -70,6 +70,7 @@ export function getTagPath(tag: string): string {
     'advice',
     'appearance',
     'comparison',
+    'conditional',
     'conjunctions',
     'desire',
     'excess',
@@ -105,7 +106,7 @@ export function getTagPath(tag: string): string {
   };
 
   const lowerTag = tag.toLowerCase();
-  
+
   if (jlptTagMappings[lowerTag]) {
     return jlptTagMappings[lowerTag];
   }
@@ -113,7 +114,7 @@ export function getTagPath(tag: string): string {
   if (tagMappings[lowerTag]) {
     return `docs/lessons/${tagMappings[lowerTag]}`;
   }
-  
+
   if (grammarTags.includes(lowerTag)) {
     return `docs/lessons/grammar/${tag}`;
   }
@@ -121,7 +122,7 @@ export function getTagPath(tag: string): string {
   if (conjugationTags.includes(lowerTag)) {
     return `docs/lessons/conjugation/${tag}`;
   }
-  
+
   return `docs/lessons/vocabulary/${tag}`;
 }
 

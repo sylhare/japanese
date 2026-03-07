@@ -304,6 +304,8 @@ vocabulary:
 
 ## Data Flow
 
+The script (`scripts/extract-vocabulary.js`) produces two output files each run:
+
 ```
 Lesson Files → Extraction Script → vocabulary.yaml → Dictionary Page
      ↓              ↓                    ↓              ↓
@@ -311,6 +313,10 @@ Lesson Files → Extraction Script → vocabulary.yaml → Dictionary Page
   Tables        Parses Tables       Stores Data      Displays Data
                 Merges Tags         Merged Tags      Clickable Tags
 ```
+
+**`src/data/vocabulary.yaml`** — main vocabulary database consumed by the Dictionary page (`/dictionary`) and the Vocabulary page (`/vocabulary`). Contains all extracted entries with merged tags, categories, and sort options.
+
+**`src/data/n5-vocabulary.json`** — flat list of normalized tokens (hiragana, kanji, romaji) extracted from `docs/reference/n5-vocabulary.md`. Used by the dictionary to highlight N5-level words. Updated in the same run as `vocabulary.yaml`.
 
 ## Testing
 

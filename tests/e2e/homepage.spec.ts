@@ -27,16 +27,16 @@ test.describe('Homepage', () => {
     test('should navigate to intro page when Get Started button is clicked', async ({ page }) => {
       const getStartedButton = page.locator(`a[class*="getStartedButton"]`);
       await expect(getStartedButton).toBeVisible();
-      
+
       const href = await getStartedButton.getAttribute('href');
       expect(href).toContain('/docs/intro');
-      
+
       await getStartedButton.click();
       await page.waitForLoadState('networkidle');
       await verifyPageIsFound(page);
-      
+
       await expect(page.getByRole('heading', { name: /welcome to japanese lessons/i })).toBeVisible();
-      
+
       expect(page.url()).toContain('intro');
     });
   });
@@ -75,11 +75,11 @@ test.describe('Homepage', () => {
     test('should navigate when clicking feature cards', async ({ page }) => {
       const cards = page.locator('a[class*="featureCard"]');
       const firstCard = cards.first();
-      
+
       await expect(firstCard).toBeVisible();
       const href = await firstCard.getAttribute('href');
       expect(href).toBeTruthy();
-      
+
       await firstCard.click();
       await page.waitForLoadState('networkidle');
       await verifyPageIsFound(page);
@@ -90,12 +90,12 @@ test.describe('Homepage', () => {
     test('should have hover effect on Get Started button', async ({ page }) => {
       const getStartedButton = page.locator(`a[class*="getStartedButton"]`);
       await expect(getStartedButton).toBeVisible();
-      
+
       const initialBox = await getStartedButton.boundingBox();
       expect(initialBox).not.toBeNull();
-      
+
       await getStartedButton.hover();
-      
+
       await expect(getStartedButton).toBeVisible();
     });
   });
@@ -103,11 +103,11 @@ test.describe('Homepage', () => {
   test.describe('Responsive Design', () => {
     test('should be visible on mobile viewport', async ({ page }) => {
       await page.setViewportSize({ width: 375, height: 667 });
-      
+
       const heading = page.getByRole('heading', { level: 1 });
       const getStartedButton = page.locator(`a[class*="getStartedButton"]`);
       const cards = page.locator('a[class*="featureCard"]');
-      
+
       await expect(heading).toBeVisible();
       await expect(getStartedButton).toBeVisible();
       expect(await cards.count()).toBe(4);
@@ -115,11 +115,11 @@ test.describe('Homepage', () => {
 
     test('should be visible on tablet viewport', async ({ page }) => {
       await page.setViewportSize({ width: 768, height: 1024 });
-      
+
       const heading = page.getByRole('heading', { level: 1 });
       const getStartedButton = page.locator(`a[class*="getStartedButton"]`);
       const cards = page.locator('a[class*="featureCard"]');
-      
+
       await expect(heading).toBeVisible();
       await expect(getStartedButton).toBeVisible();
       expect(await cards.count()).toBe(4);
@@ -127,11 +127,11 @@ test.describe('Homepage', () => {
 
     test('should be visible on desktop viewport', async ({ page }) => {
       await page.setViewportSize({ width: 1920, height: 1080 });
-      
+
       const heading = page.getByRole('heading', { level: 1 });
       const getStartedButton = page.locator(`a[class*="getStartedButton"]`);
       const cards = page.locator('a[class*="featureCard"]');
-      
+
       await expect(heading).toBeVisible();
       await expect(getStartedButton).toBeVisible();
       expect(await cards.count()).toBe(4);

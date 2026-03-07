@@ -1,10 +1,10 @@
+import MountainSvg from '@site/static/img/undraw_docusaurus_mountain.svg';
+import ReactSvg from '@site/static/img/undraw_docusaurus_react.svg';
+import TreeSvg from '@site/static/img/undraw_docusaurus_tree.svg';
 import Heading from '@theme/Heading';
 import clsx from 'clsx';
 import React from 'react';
 import type {ReactNode} from 'react';
-import MountainSvg from '@site/static/img/undraw_docusaurus_mountain.svg';
-import TreeSvg from '@site/static/img/undraw_docusaurus_tree.svg';
-import ReactSvg from '@site/static/img/undraw_docusaurus_react.svg';
 import styles from './styles.module.css';
 
 type FeatureItem = {

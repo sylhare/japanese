@@ -4,14 +4,9 @@ This folder contains documentation for developers and contributors working on th
 
 ## Contents
 
-### Docusaurus Tutorials
-
-- [`tutorial-basics/`](tutorial-basics/) - Basic Docusaurus setup and usage tutorials
-- [`tutorial-extras/`](tutorial-extras/) - Advanced Docusaurus features and customization
-
-### Content and Development Documentation
-
-- [`content-guide.md`](content-guide.md) - Guidelines for creating Japanese lesson content
-- [`vocabulary-extraction.md`](vocabulary-extraction.md) - Complete guide for vocabulary extraction and management
-- [`testing-guide.md`](testing-guide.md) - Testing documentation
-
+| File | Purpose |
+|------|---------|
+| [`docusaurus.md`](docusaurus.md) | Site configuration, menus, sidebars, callouts, plugins |
+| [`vocabulary-extraction.md`](vocabulary-extraction.md) | Vocabulary extraction script, table format, YAML structure, tag system, and dictionary features |
+| [`components/`](components/) | Custom MDX components (NextSteps, LessonList, ReferenceCard) |
+| [`templates/`](templates/) | Lesson templates and the contributor checklist |

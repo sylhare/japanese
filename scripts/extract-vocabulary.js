@@ -1,4 +1,13 @@
 #!/usr/bin/env node
+/**
+ * Vocabulary extraction script.
+ *
+ * Scans all lesson files in docs/lessons/ for vocabulary tables, merges the
+ * results into src/data/vocabulary.yaml, and regenerates src/data/n5-vocabulary.json
+ * from the N5 reference article.
+ *
+ * Full documentation: .github/docs/vocabulary-extraction.md
+ */
 
 const fs = require('fs');
 const path = require('path');
@@ -105,7 +114,7 @@ function normalizeToken(token) {
 function addTokensFromCell(cell, tokens) {
   if (!cell) return;
   const cleaned = cell.replace(/（.*?）/g, '').replace(/\(.*?\)/g, '').trim();
-  const parts = cleaned.split(/[\/／]/);
+  const parts = cleaned.split(/[/／]/);
   parts.forEach(part => {
     const normalized = normalizeToken(part);
     if (normalized) {
@@ -173,7 +182,7 @@ function extractN5VocabularyTokens() {
 function updateN5VocabularyData() {
   const tokens = extractN5VocabularyTokens();
   const payload = { tokens };
-  const nextContent = JSON.stringify(payload, null, 2) + '\n';
+  const nextContent = `${JSON.stringify(payload, null, 2)  }\n`;
   const existingContent = fs.existsSync(N5_VOCABULARY_FILE)
     ? fs.readFileSync(N5_VOCABULARY_FILE, 'utf8')
     : '';
@@ -446,7 +455,7 @@ function mergeVocabulary(existing, extracted) {
       return;
     }
     const contentKey = `${item.hiragana}-${item.romaji}-${item.meaning}`.toLowerCase();
-    
+
     if (contentMap.has(contentKey)) {
       const existingItem = contentMap.get(contentKey);
       const mergedTags = [...new Set([...existingItem.tags, ...item.tags])].sort();
@@ -521,7 +530,7 @@ function main(options = {}) {
   }
   console.log('🔍 Scanning lesson files for vocabulary...');
 
-  const existing = force 
+  const existing = force
     ? { vocabulary: [], categories: ['all'], sortOptions: [] }
     : loadExistingVocabulary();
   const extracted = scanAllLessons();
@@ -540,8 +549,8 @@ function main(options = {}) {
   }
   console.log(`📖 Total vocabulary items: ${totalItems}`);
 
-  const existingContent = force 
-    ? '' 
+  const existingContent = force
+    ? ''
     : yaml.dump(existing, { indent: 2, lineWidth: -1, noRefs: true });
   const newContent = yaml.dump(merged, { indent: 2, lineWidth: -1, noRefs: true });
 
@@ -561,12 +570,12 @@ function main(options = {}) {
 
 if (require.main === module) {
   const args = parseArgs();
-  
+
   if (args.help) {
     showHelp();
     process.exit(0);
   }
-  
+
   main({ force: args.force });
 }
 

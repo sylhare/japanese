@@ -71,7 +71,17 @@ Use **や** when giving **examples** - there are more items not mentioned.
 - **すし と てんぷら を たべます** → I'll eat sushi and tempura (*only these two*)
 - **すし や てんぷら を たべます** → I'll eat things like sushi and tempura (*and maybe other things too*)
 
+:::info と has another use
+**と** can also connect two clauses to express a natural consequence: *when A happens, B follows*.
+See the [Conditional: と](./conditional) article for more.
+:::
+
 <NextSteps items={[
+  {
+    title: 'Conditional: と',
+    description: 'Learn how to use と to express natural conditionals and automatic consequences',
+    to: './conditional',
+  },
   {
     title: 'Linking Words',
     description: 'Learn sentence connectors like because, however, only, and more',

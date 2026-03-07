@@ -1,5 +1,5 @@
-import { expect, test, type Page } from '@playwright/test';
-import { verifyPageIsFound, navigateViaTag } from './helpers/pageHelper';
+import { type Page, expect, test } from '@playwright/test';
+import { navigateViaTag, verifyPageIsFound } from './helpers/pageHelper';
 
 const VOCAB_TAGS = [
   { name: 'Colors', href: '/vocabulary/colors', heading: /colors/i },
@@ -176,7 +176,7 @@ test.describe('Dictionary', () => {
       await page.waitForSelector('a[class*="tag"]', { timeout: 15000 });
 
       const grammarTags = ['experience', 'advice', 'comparison', 'desire', 'excess'];
-      
+
       for (const tag of grammarTags) {
         const tagElement = page.locator(`a[class*="tag"]`).filter({ hasText: new RegExp(`^${tag}$`, 'i') }).first();
         if (await tagElement.isVisible()) {

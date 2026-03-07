@@ -14,9 +14,9 @@ Knowing health-related vocabulary is essential for daily life in Japan. This les
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
 | くしゃみ | | kushami | 🤧 sneeze | noun |
-| くしゃみをする | | kushami o suru | 🤧 to sneeze | verb |
+| くしゃみをする | | kushami o suru | to sneeze | verb |
 | せき | 咳 | seki | 😷 cough | noun |
-| せきをする | 咳をする | seki o suru | 😷 to cough | verb |
+| せきをする | 咳をする | seki o suru | to cough | verb |
 | はなみず | 鼻水 | hanamizu | 🤧 runny nose | noun |
 | はなづまり | 鼻詰まり | hanazumari | 😤 stuffy nose | noun |
 | ねつ | 熱 | netsu | 🤒 fever | noun |
@@ -25,8 +25,8 @@ Knowing health-related vocabulary is essential for daily life in Japan. This les
 | のどのいたみ | 喉の痛み | nodo no itami | 😖 sore throat | noun |
 | めまい | 目眩 | memai | 😵 dizziness | noun |
 | はきけ | 吐き気 | hakike | 🤢 nausea | noun |
-| かゆい | 痒い | kayui | 😣 itchy | adjective |
-| いたい | 痛い | itai | 😣 painful, hurts | adjective |
+| かゆい | 痒い | kayui | 🦟 itchy | adjective |
+| いたい | 痛い | itai | 🤕 painful, hurts | adjective |
 | だるい | | darui | 😩 sluggish, tired | adjective |
 
 **Examples:**
@@ -66,7 +66,8 @@ Knowing health-related vocabulary is essential for daily life in Japan. This les
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
 | くすり | 薬 | kusuri | 💊 medicine | noun |
-| くすりをのむ | 薬を飲む | kusuri o nomu | 💊 to take medicine | verb |
+| くすりをのむ | 薬を飲む | kusuri o nomu | to take medicine | verb |
+| くすりをのまない | 薬を飲まない | kusuri o nomanai | to not take medicine | verb |
 | びょういん | 病院 | byouin | 🏥 hospital | noun |
 | いしゃ | 医者 | isha | 👨‍⚕️ doctor | noun |
 | かんごし | 看護師 | kangoshi | 👩‍⚕️ nurse | noun |
@@ -77,6 +78,7 @@ Knowing health-related vocabulary is essential for daily life in Japan. This les
 | たいおんけい | 体温計 | taionkei | 🌡️ thermometer | noun |
 | しょほうせん | 処方箋 | shohousen | 📝 prescription | noun |
 | やっきょく | 薬局 | yakkyoku | 💊 pharmacy | noun |
+| なおす | 治す | naosu | to cure, to heal | verb |
 
 **Examples:**
 - くすりを のんでください。 — Please take your medicine.

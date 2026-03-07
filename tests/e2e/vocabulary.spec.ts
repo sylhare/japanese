@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
-import { verifyPageIsFound } from './helpers/pageHelper';
 import { VOCABULARY_LESSONS, VOCABULARY_SECTIONS } from './helpers/lessonData';
+import { verifyPageIsFound } from './helpers/pageHelper';
 
 test.describe('Vocabulary Pages', () => {
   test.describe('Vocabulary Landing Page', () => {

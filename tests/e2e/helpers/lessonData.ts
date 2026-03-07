@@ -49,6 +49,7 @@ export const GRAMMAR_LESSONS: Lesson[] = [
   { name: 'Prohibition',          path: 'prohibition',          heading: /prohibition|いけません|だめ/i },
   { name: 'Question Words',       path: 'question-words',       heading: /question words/i },
   { name: 'Linking Words',        path: 'linking-words',        heading: /linking words/i },
+  { name: 'Conditional - と',     path: 'conditional',          heading: /conditional|と/i },
 ];
 
 export const VOCABULARY_LESSONS: Lesson[] = [

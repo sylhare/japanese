@@ -71,7 +71,7 @@ describe('ReferenceCard', () => {
     });
 
     it('renders multiple cards independently', () => {
-      const {container} = render(
+      render(
         <>
           <ReferenceCard
             emoji="📝"
