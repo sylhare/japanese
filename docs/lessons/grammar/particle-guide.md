@@ -11,6 +11,15 @@ Particles are small words that indicate the grammatical relationship between wor
 
 ## Basic Particles
 
+| Hiragana | Kanji | Romaji | English         | Type     |
+|----------|-------|--------|-----------------|----------|
+| は        | -     | wa     | topic marker    | particle |
+| が        | -     | ga     | subject marker  | particle |
+| を        | -     | wo     | object marker   | particle |
+| に        | -     | ni     | to, at, in      | particle |
+| で        | -     | de     | at, by, with    | particle |
+| の        | -     | no     | 's (possession) | particle |
+
 ### は (wa) - Topic Marker
 
 **Function**: Indicates the topic of the sentence
@@ -103,6 +112,12 @@ Particles are small words that indicate the grammatical relationship between wor
 
 ## Direction and Location Particles
 
+| Hiragana | Kanji | Romaji | English      | Type     |
+|----------|-------|--------|--------------|----------|
+| へ        | -     | e      | to, toward   | particle |
+| から       | -     | kara   | from, since  | particle |
+| まで       | -     | made   | until, up to | particle |
+
 ### へ (e) - Direction Marker
 
 **Function**: Indicates direction of movement
@@ -137,6 +152,11 @@ Particles are small words that indicate the grammatical relationship between wor
 
 ## Time Particles
 
+| Hiragana | Kanji | Romaji      | English         | Type     |
+|----------|-------|-------------|-----------------|----------|
+| に        | -     | ni          | at, on (time)   | particle |
+| から...まで  | -     | kara...made | from...until    | particle |
+
 ### に (ni) - Specific Time
 
 **Function**: Indicates specific time
@@ -156,6 +176,12 @@ Particles are small words that indicate the grammatical relationship between wor
 - げつようび**から**きんようび**まで**がっこうにいきます。 (Getsuyoubi kara kinyoubi made gakkou ni ikimasu.) - I go to school from Monday to Friday.
 
 ## Comparison and Contrast Particles
+
+| Hiragana | Kanji | Romaji | English    | Type     |
+|----------|-------|--------|------------|----------|
+| と        | -     | to     | and, with  | particle |
+| や        | -     | ya     | and so on  | particle |
+| も        | -     | mo     | also, even | particle |
 
 ### と (to) - And/With Marker
 
@@ -186,6 +212,12 @@ Particles are small words that indicate the grammatical relationship between wor
 
 ## Question Particles
 
+| Hiragana | Kanji | Romaji | English          | Type     |
+|----------|-------|--------|------------------|----------|
+| か        | -     | ka     | ? (question)     | particle |
+| ね        | -     | ne     | isn't it?        | particle |
+| よ        | -     | yo     | you know         | particle |
+
 ### か (ka) - Question Marker
 
 **Function**: Indicates a question
@@ -214,6 +246,11 @@ Particles are small words that indicate the grammatical relationship between wor
 - はやくいきましょう**よ**。 (Hayaku ikimashou yo.) - Let's go quickly.
 
 ## Particle Combinations
+
+| Hiragana | Kanji | Romaji | English              | Type        |
+|----------|-------|--------|----------------------|-------------|
+| には       | -     | ni wa  | for, regarding       | combination |
+| では       | -     | de wa  | in, at (conditional) | combination |
 
 ### には (ni wa) - For/Regarding
 
@@ -246,40 +283,3 @@ Particles are small words that indicate the grammatical relationship between wor
 ### を vs が
 - **を**: Direct object (what receives action)
 - **が**: Subject (who performs action)
-
-## Quick Reference Tables
-
-### Essential Particles
-
-| Hiragana | Kanji | Romaji | English        | Type     |
-|----------|-------|--------|----------------|----------|
-| は        | -     | wa     | topic marker   | particle |
-| が        | -     | ga     | subject marker | particle |
-| を        | -     | wo     | object marker  | particle |
-
-### Location and Direction
-
-| Hiragana | Kanji | Romaji | English      | Type     |
-|----------|-------|--------|--------------|----------|
-| に        | -     | ni     | to, at, in   | particle |
-| で        | -     | de     | at, by, with | particle |
-| へ        | -     | e      | to, toward   | particle |
-
-### Common Conjunctions
-
-| Hiragana | Kanji | Romaji  | English       | Type        |
-|----------|-------|---------|---------------|-------------|
-| そして      | -     | soshite | and then      | conjunction |
-| でも       | -     | demo    | but, however  | conjunction |
-| だから      | -     | dakara  | so, therefore | conjunction |
-| または      | -     | matawa  | or            | conjunction |
-
-### Basic Pronouns
-
-| Hiragana | Kanji | Romaji  | English              | Type    |
-|----------|-------|---------|----------------------|---------|
-| これ       | -     | kore    | this (near speaker)  | pronoun |
-| それ       | -     | sore    | that (near listener) | pronoun |
-| あれ       | -     | are     | that (far from both) | pronoun |
-| わたし      | 私     | watashi | I, me                | pronoun |
-| あなた      | -     | anata   | you                  | pronoun |
