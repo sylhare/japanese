@@ -139,14 +139,6 @@ Do **not** use な with:
 | な-Adj | しずか な ので | しずか だ から |
 | Noun | がくせい な ので | がくせい だ から |
 
-## Key Points
-
-1. **ので** is safer for formal situations
-2. **から** is more common in daily conversation
-3. Don't forget **な** with **ので** for nouns and な-adjectives
-4. **から** often pairs with **ん です** at the end
-5. The reason clause comes **before** the consequence
-
 <NextSteps items={[
   {
     title: 'Linking Words',

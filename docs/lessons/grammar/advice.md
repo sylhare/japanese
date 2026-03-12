@@ -75,29 +75,6 @@ Literally: "The direction of [not doing] is good."
 **Casual:** ~た ほう が いい → いった ほう が いい  
 **Very polite:** ~た ほう が よろしい です → いった ほう が よろしい です
 
-## Key Points
-
-### Remember the Verb Forms
-
-- **Affirmative advice:** Use **た form** (past tense)
-  - たべた ほう が いい (should eat)
-- **Negative advice:** Use **ない form** (negative)
-  - たべない ほう が いい (shouldn't eat)
-
-### よ Particle
-
-The **よ** at the end adds emphasis and makes the advice more friendly and helpful:
-- Without よ: Statement of fact
-- With よ: Friendly advice
-
-### Common Contexts
-
-This pattern is often used:
-- Giving health advice
-- Making suggestions
-- Warning about consequences
-- Recommending actions
-
 ## Examples in Context
 
 ### Health Advice
