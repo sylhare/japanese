@@ -162,9 +162,7 @@ Read as: **せん にひゃく まん**
 
 
 
-## Practice Examples
-
-### Real Numbers
+## Examples
 
 - **1,234** → せん にひゃく さんじゅう よん (sen nihyaku sanjuu yon)
 - **5,678** → ごせん ろっぴゃく ななじゅう はち (gosen roppyaku nanajuu hachi)
