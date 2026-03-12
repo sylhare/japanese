@@ -80,15 +80,7 @@ Remove **な** and add **そう**.
 - おいしい みたい です - It looks delicious.
   - *oishii mitai desu*
 
-## Summary
-
-**い-adj + そう** - Looks... → おいしそう (Looks tasty)  
-**な-adj + そう** - Looks... → げんきそう (Looks healthy)  
-**A みたい** - Looks like A → がくせい みたい (Looks like a student)
-
-## Key Points
-
-1. **そう** is used for visual appearance based on observation
-2. **みたい** suggests resemblance or likelihood
-3. Remove い from い-adjectives before adding そう
-4. Remove な from な-adjectives before adding そう
+:::tip そう vs みたい
+Use **そう** for visual appearance based on direct observation — you can see it.
+Use **みたい** for resemblance or likelihood — it reminds you of something, or you infer it.
+:::

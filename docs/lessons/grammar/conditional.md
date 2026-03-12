@@ -56,12 +56,6 @@ The verb in clause A must be in the **dictionary (plain)** form.
 - このみちを いくと、えきに つきます — If you take this road, you'll reach the station.
   - *kono michi o iku to, eki ni tsukimasu*
 
-## Key Points
-
-1. Clause A uses the **dictionary form** (plain, non-past)
-2. The result in clause B is **automatic** — it happens every time A happens
-3. Cannot be used for **one-time decisions**, **requests**, or **commands** in clause B
-
 ## What と Cannot Express
 
 **と** is for natural/automatic results only. Do **not** use it when clause B expresses:

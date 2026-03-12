@@ -126,13 +126,6 @@ To form the stem:
 - べんきょうしたくなかった です - I didn't want to study.
   - *benkyoushitakunakatta desu*
 
-## Summary
-
-**Present:** [stem] + たい です → たべたい です (I want to eat)  
-**Present Negative:** [stem] + たくない です → たべたくない です (I don't want to eat)  
-**Past:** [stem] + たかった です → たべたかった です (I wanted to eat)  
-**Past Negative:** [stem] + たくなかった です → たべたくなかった です (I didn't want to eat)
-
 ## Important Notes
 
 ### Conjugation Pattern

@@ -127,7 +127,10 @@ Learn how to express [concept] using **[form 1]** and **[form 2]**.
 
 <!-- Usage guidance only — NOT formation rules (those go in Formation Summary above).
      Cover: register/formality, common mistakes, word-order constraints, pragmatic tips.
-     See reason.md: "ので is safer for formal situations", "から pairs with んです". -->
+     See reason.md: "ので is safer for formal situations", "から pairs with んです".
+     ⚠️ Do NOT add a "## Summary" section — all key information must be integrated into the
+     article body, not restated at the end. -->
+
 
 1. [First rule or constraint]
 2. [Second rule or constraint]

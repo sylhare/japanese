@@ -34,6 +34,12 @@ Use the **past tense (た form)** of the verb to suggest someone **should do** s
 
 Literally: "The direction of [doing] is good."
 
+:::tip The よ Particle
+Adding **よ** softens and warms the advice — it signals that you're being helpful, not demanding.
+- Without よ: statement ("it's better to...")
+- With よ: friendly recommendation ("you really should...")
+:::
+
 ### Examples
 
 - はやく ねた ほう が いい です よ - You should go to bed early.

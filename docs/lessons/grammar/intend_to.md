@@ -92,15 +92,6 @@ This pattern often implies that the intention was not fulfilled.
 - てがみ を かく つもり だった - I intended to write a letter (but didn't).
   - *tegami wo kaku tsumori datta*
 
-## Summary
-
-| Form | Pattern | Meaning |
-|------|---------|---------|
-| Affirmative | [dictionary form] + つもり です | I intend to... |
-| Negative (action) | [ない form] + つもり です | I intend not to... |
-| Negative (no intention) | [dictionary form] + つもり は ない | I have no intention of... |
-| Past | [dictionary form] + つもり だった | I intended to... (but didn't) |
-
 ## Important Notes
 
 ### つもり vs よてい
