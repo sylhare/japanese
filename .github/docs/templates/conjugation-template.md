@@ -2,6 +2,7 @@
 title: Tense/Form - かな form
 description: Learn the [form name] of Japanese verbs
 tags: [grammar, verbs, conjugation, かな形]
+sidebar_position: N # Replace N with the next available number in docs/lessons/conjugation/
 ---
 
 import NextSteps from '@site/src/components/NextSteps';
