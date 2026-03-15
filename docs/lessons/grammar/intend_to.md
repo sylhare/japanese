@@ -92,38 +92,21 @@ This pattern often implies that the intention was not fulfilled.
 - てがみ を かく つもり だった - I intended to write a letter (but didn't).
   - *tegami wo kaku tsumori datta*
 
-## Summary
-
-| Form | Pattern | Meaning |
-|------|---------|---------|
-| Affirmative | [dictionary form] + つもり です | I intend to... |
-| Negative (action) | [ない form] + つもり です | I intend not to... |
-| Negative (no intention) | [dictionary form] + つもり は ない | I have no intention of... |
-| Past | [dictionary form] + つもり だった | I intended to... (but didn't) |
-
-## Important Notes
-
-### つもり vs よてい
+## つもり vs よてい
 
 Both express future plans, but they differ:
 
-- **つもり** — Personal intention, your own decision
-  - あした やすむ つもり です - I intend to rest tomorrow (my decision)
-- **よてい** — Scheduled plan, can be external or formal
-  - あした かいぎ が ある よてい です - There's a meeting scheduled tomorrow
+**つもり** — Personal intention, your own decision
+- あした やすむ つもり です - I intend to rest tomorrow (my decision).
+  - *ashita yasumu tsumori desu*
 
-### Usage Notes
+**よてい** — Scheduled plan, can be external or formal
+- あした かいぎ が ある よてい です - There's a meeting scheduled tomorrow.
+  - *ashita kaigi ga aru yotei desu*
 
-1. **First Person:** Primarily used for **your own** intentions
-   - ✓ わたし は にほん に いく つもり です - I intend to go to Japan
-
-2. **Questions:** Can ask others about their intentions
-   - なに を する つもり です か？ - What do you intend to do?
-     - *nani wo suru tsumori desu ka?*
-
-3. **Third Person:** Can be used for third person when reporting
-   - かれ は やめる つもり だ そうです - I heard he intends to quit
-     - *kare wa yameru tsumori da soudesu*
+:::caution Third person
+**つもり** is mainly for your own intentions. For third person, use it only when reporting what someone said: かれ は やめる つもり だ そうです — I heard he intends to quit.
+:::
 
 ## Common Expressions
 

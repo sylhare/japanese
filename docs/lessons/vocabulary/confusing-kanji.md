@@ -436,18 +436,11 @@ Many Japanese kanji look very similar but have completely different meanings and
 - しけん (shiken) - test, exam
 - けんさ (kensa) - examination, inspection
 
-## Practice Exercises
-
-1. **Identify the difference:** Which kanji means "person" and which means "enter"?
-2. **Memory trick:** How can you remember the difference between 王 (king) and 玉 (gem)?
-3. **Opposite meanings:** Which kanji means "pick up" and which means "throw away"?
-
-
-## Cultural Notes
-
-- Handwritten kanji may look different from printed versions, so context is crucial
-- Some kanji have multiple readings (on-yomi and kun-yomi), making context even more important
-- Learning radicals (部首) can help identify kanji even when they look similar
-- The stroke order animation feature in dictionaries can be very helpful for visualizing differences
+:::tip Reading unfamiliar kanji
+- Handwritten kanji may look different from printed versions — context is crucial.
+- Some kanji have multiple readings (on-yomi and kun-yomi), making context even more important.
+- Learning radicals (部首) helps identify kanji even when they look similar.
+- Stroke order animations in dictionaries are very helpful for visualising differences.
+:::
 
 *Reference: [Nihongo Master - The Most Confusing Japanese Kanji](https://www.nihongomaster.com/blog/the-most-confusing-japanese-kanji-and-how-to-tell-the-difference/)*

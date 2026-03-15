@@ -119,17 +119,3 @@ Learn how to express ongoing actions, trying things, and thoughts.
 - あたらしい レストラン に いってみよう - Let's try going to the new restaurant.
   - *atarashii resutoran ni ittemiyou*
 
-## Summary
-
-**て + いる** - Currently doing → たべている (Currently eating)  
-**を かんがえる** - Think about → みらい を かんがえる (Think about future)  
-**と おもう** - Think that → いい と おもう (Think it's good)  
-**て + みる** - Try doing → たべてみる (Try eating)  
-**て + みよう** - Let's try → たべてみよう (Let's try eating)
-
-## Key Points
-
-1. **て + いる** describes ongoing states or habitual actions
-2. **て + みる** suggests experimentation or testing something out
-3. **かんがえる** uses を particle (thinking about an object)
-4. **おもう** uses と particle (expressing thoughts/opinions)

@@ -54,6 +54,12 @@ These patterns express strong obligation or necessity.
 - たべなければ ならない - I must eat.
   - *tabenakereba naranai*
 
+:::tip ならない vs いけない
+Both patterns mean the same thing and are largely interchangeable.
+- **いけない** is slightly more common in everyday speech
+- **ならない** sounds slightly more formal or literary
+:::
+
 ## How to Form: [verb な-form]
 
 To create the な-form needed for these patterns:
@@ -114,19 +120,3 @@ Use this pattern to express prohibition - something you must not do.
 - しては いけません - You must not do (that).
   - *shite wa ikemasen*
 
-## Summary
-
-**なければ ならない** (Neutral) - Must/Have to → べんきょうしなければ ならない  
-**なければ いけない** (Neutral) - Must/Have to → べんきょうしなければ いけない  
-**なければ いけません** (Formal) - Must/Have to → べんきょうしなければ いけません  
-**なきゃ いけない** (Casual) - Gotta → べんきょうしなきゃ いけない  
-**なきゃ** (Very casual) - Gotta → べんきょうしなきゃ  
-**ては いけません** (Formal) - Must not → べんきょうしては いけません
-
-## Key Points
-
-- **ならない** and **いけない** are largely interchangeable
-- **いけない** is slightly more common in speech
-- **ならない** can sound slightly more formal or literary
-- Both express strong obligation from external circumstances
-- The casual **なきゃ** is very common among young people

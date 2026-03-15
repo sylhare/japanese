@@ -21,6 +21,12 @@ Learn how to express that something is **too much** or **excessive** using **す
 
 The **すぎる** pattern expresses excess - something is "too much" or "overdone."
 
+:::tip すぎる Conjugation
+**すぎる** conjugates like a regular る-verb:
+- Present: すぎる / すぎます
+- Past: すぎた / すぎました (e.g. たべすぎました — I ate too much)
+:::
+
 ## With Verbs
 
 **[verb stem] + すぎる/すぎます**
@@ -89,14 +95,3 @@ Simply add **すぎる** directly to the adjective stem (without な).
 - この へや は きれいすぎます - This room is too clean
   - *kono heya wa kireisugimasu*
 
-## Summary
-
-**Verb:** [stem] + すぎる → たべすぎる (eat too much)  
-**い-Adjective:** [without い] + すぎる → さむすぎる (too cold)  
-**な-Adjective:** [stem] + すぎる → しずかすぎる (too quiet)
-
-### Key Points
-
-- **すぎる** conjugates like a る-verb (すぎます, すぎた, etc.)
-- Can be used in past tense: すぎました (was too much)
-- Common in everyday conversation

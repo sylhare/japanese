@@ -2,6 +2,7 @@
 title: "[emoji] Topic Name"
 description: Learn Japanese vocabulary for [topic]
 tags: [vocabulary, tag1, tag2, nouns]
+sidebar_position: N # Replace N with the next available number in docs/lessons/vocabulary/
 ---
 
 <!-- Use an emoji thematically linked to the topic, not a generic placeholder.

@@ -126,39 +126,18 @@ To form the stem:
 - べんきょうしたくなかった です - I didn't want to study.
   - *benkyoushitakunakatta desu*
 
-## Summary
+:::tip たい conjugates like an い-adjective
+Use all い-adjective endings: たい → たくない (negative), たかった (past), たくなかった (past negative). The Key Expressions table above shows all four forms.
+:::
 
-**Present:** [stem] + たい です → たべたい です (I want to eat)  
-**Present Negative:** [stem] + たくない です → たべたくない です (I don't want to eat)  
-**Past:** [stem] + たかった です → たべたかった です (I wanted to eat)  
-**Past Negative:** [stem] + たくなかった です → たべたくなかった です (I didn't want to eat)
+:::caution Third person
+**たい** is mainly for your own desires. To talk about someone else's, use **たがる** or report with **たい と いっています**.
+:::
 
-## Important Notes
-
-### Conjugation Pattern
-
-**たい** conjugates like an **い-adjective**:
-
-- Present: たい
-- Negative: たくない
-- Past: たかった
-- Past Negative: たくなかった
-
-### Usage Notes
-
-1. **First Person:** Primarily used for **your own** desires
-   - ✓ わたし は すし を たべたい です - I want to eat sushi
-     - *watashi wa sushi wo tabetai desu*
-
-2. **Questions:** Can ask others about their desires
-   - ✓ なに を たべたい です か？ - What do you want to eat?
-     - *nani wo tabetai desu ka?*
-
-3. **Third Person:** To talk about others' desires, use different patterns
-   - たがる or たい と いっています
-
-4. **Particle Change:** The object particle often changes from を to が
-   - すし を たべたい or すし が たべたい (both acceptable)
+:::tip Particle change
+The object particle can shift from **を** to **が** with たい:
+- すし **を** たべたい and すし **が** たべたい are both acceptable.
+:::
 
 ## Common Expressions
 

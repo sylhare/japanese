@@ -223,10 +223,6 @@ In Japanese, the words you use to describe family members change depending on wh
 - When talking about SOMEONE'S family: おとうさんは いしゃですか？ (otousan wa isha desu ka?) - Is your father a doctor?
 - Polite form 〜さま is more respectful than 〜さん and is used in very formal situations
 
-## Cultural Notes
-
-- In Japanese, you use different words when talking about your own family vs. someone else's family
-- When talking about your own family, use humble forms (ちち, はは, あに, etc.)
-- When talking about someone else's family, use polite forms (おとうさん, おかあさん, おにいさん, etc.)
-- Family relationships are very important in Japanese culture and society
-- The concept of 家 (ie) - household/family line - is significant in traditional Japanese culture
+:::tip Family and culture
+Family relationships are central to Japanese culture. The concept of **家** (ie) — household/family line — carries significant weight in traditional society. Always use humble forms for your own family (ちち, はは) and polite forms for someone else's (おとうさん, おかあさん) to show proper respect.
+:::

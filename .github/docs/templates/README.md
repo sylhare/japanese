@@ -79,8 +79,8 @@ Use callouts consistently:
 | Callout | Use for |
 |---------|---------|
 | `:::tip` | Memory tricks, cultural advice, polite-form equivalents |
-| `:::caution` | Exceptions and irregular forms within a rule |
-| `:::warning` | Common confusion between similar words or patterns |
+| `:::caution` | Exceptions to a rule (e.g. ある → ない in ない-form), irregular forms in Group 3 |
+| `:::warning` | Irregular verbs within Group 1 (e.g. 行く → いって, not いいて); common confusion between similar words or patterns |
 | `:::info` | Links to related articles (second use of a particle, related grammar) |
 
 ### Vocabulary tables
@@ -101,6 +101,7 @@ Never mix grammatically different types (nouns, adjectives, verbs) in one table.
 
 - Start with a **Key Expressions** table (Hiragana | Romaji | English | Type) — always the first content section.
 - End with `<NextSteps items={[...]} />`.
+- Exceptions (`:::caution`) and confusion warnings (`:::warning`) go **inline within each Pattern section**, immediately after the relevant formation block — do NOT collect them into a trailing section.
 - Grammar lessons use `.md` extension unless they import JSX components — use `.mdx` in that case.
 
 ### Conjugation lessons

@@ -113,6 +113,37 @@ Do **not** use な with:
 - おかね が ない から、かえない ん です - Because I don't have money, I can't buy it.
   - *okane ga nai kara, kaenai n desu*
 
+## Pattern 3: し (Multiple Reasons)
+
+Use **し** to stack multiple reasons together, similar to "and also" or "not only... but also...".
+The final clause states the conclusion or consequence.
+
+**[reason 1] し、[reason 2] し、[conclusion]**
+
+### With い-Adjectives
+
+**[い-adjective] + し**
+
+- やすい し、おいしい し、このみせがすきです — It's cheap and also delicious, so I like this restaurant.
+  - *yasui shi, oishii shi, kono mise ga suki desu*
+- さむい し、つかれた し、うちにいたい — It's cold and I'm tired, so I want to stay home.
+  - *samui shi, tsukareta shi, uchi ni itai*
+
+### With な-Adjectives
+
+**[な-adjective] + だ + し**
+
+- しずか だ し、きれい だ し、このまちがすきです — It's quiet and beautiful, so I like this town.
+  - *shizuka da shi, kirei da shi, kono machi ga suki desu*
+- べんり だ し、やすい し、このアプリをよくつかいます — It's convenient and cheap, so I use this app a lot.
+  - *benri da shi, yasui shi, kono apuri wo yoku tsukaimasu*
+
+:::tip し vs から / ので
+Use **し** when you have two or more reasons to give. Use **から** or **ので** when there is a single clear cause.
+- ❌ あつい から、つかれた から、やすみたい *(unnatural with から repeated)*
+- ✓ あつい し、つかれた し、やすみたい
+:::
+
 ## Quick Comparison
 
 **ので** - More formal, written, polite speech, objective tone  
@@ -138,14 +169,6 @@ Do **not** use な with:
 | い-Adj | たかい ので | たかい から |
 | な-Adj | しずか な ので | しずか だ から |
 | Noun | がくせい な ので | がくせい だ から |
-
-## Key Points
-
-1. **ので** is safer for formal situations
-2. **から** is more common in daily conversation
-3. Don't forget **な** with **ので** for nouns and な-adjectives
-4. **から** often pairs with **ん です** at the end
-5. The reason clause comes **before** the consequence
 
 <NextSteps items={[
   {

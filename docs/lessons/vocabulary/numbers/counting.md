@@ -30,6 +30,12 @@ Make sure you've learned the [Basic Numbers](./basics) (1-10 and place value uni
 | 9 | きゅう / く | kyuu / ku | nine |
 | 10 | じゅう | juu | ten |
 
+:::tip Choosing Between Readings
+For **4**, prefer **よん** over し in most everyday contexts.
+For **7**, prefer **なな** over しち in most everyday contexts.
+し and しち are sometimes avoided because し sounds like death (死).
+:::
+
 
 
 ## Place Values
@@ -43,6 +49,15 @@ Make sure you've learned the [Basic Numbers](./basics) (1-10 and place value uni
 | Thousand | 千 | せん | sen | 1,000 |
 | Ten Thousand | 万 | まん | man | 10,000 |
 | Hundred Million | 億 | おく | oku | 100,000,000 |
+
+:::tip Dropping いち
+**1** (いち) is usually **omitted** before じゅう (10), ひゃく (100), and せん (1,000):
+- じゅう (10), not ~~いちじゅう~~
+- ひゃく (100), not ~~いちひゃく~~
+- せん (1,000), not ~~いちせん~~
+
+However, **いち is kept** before まん (10,000): **いちまん** ✓
+:::
 
 
 
@@ -147,9 +162,7 @@ Read as: **せん にひゃく まん**
 
 
 
-## Practice Examples
-
-### Real Numbers
+## Examples
 
 - **1,234** → せん にひゃく さんじゅう よん (sen nihyaku sanjuu yon)
 - **5,678** → ごせん ろっぴゃく ななじゅう はち (gosen roppyaku nanajuu hachi)
@@ -157,18 +170,6 @@ Read as: **せん にひゃく まん**
 - **12,345,678** → せん にひゃく さんじゅう よん まん ごせん ろっぴゃく ななじゅう はち
   - (sen nihyaku sanjuu yon man gosen roppyaku nanajuu hachi)
   - Grouped as 1234,5678
-
-
-
-## Key Points to Remember
-
-1. **Group by 4 digits** in Japanese (not 3 like English)
-2. **まん (10,000)** is a fundamental unit in Japanese
-3. **Sound changes** occur with certain numbers:
-   - 300, 600, 800 (hundreds)
-   - 3,000, 8,000 (thousands)
-4. Use **よん** (not し) and **なな** (not しち) in most contexts
-5. **いち** (1) is often dropped before じゅう, ひゃく, せん but kept with まん
 
 
 
