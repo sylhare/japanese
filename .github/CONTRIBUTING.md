@@ -48,5 +48,6 @@ The [`.github/docs/templates/README.md`](docs/templates/README.md) contains the 
 - How to link to and from related articles
 - How to update the e2e test data in `tests/e2e/helpers/lessonData.ts`
 - How to run the e2e tests
+- How to run `npm run build` to regenerate `vocabulary.md` after adding new vocabulary
 
 Follow all steps in that checklist before opening a pull request.
