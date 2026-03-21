@@ -58,6 +58,10 @@ To form the stem:
   - *sushi wo tabetai desu*
 - えいが を みたい です - I want to watch a movie.
   - *eiga wo mitai desu*
+- なに が したい です か？ - What do you want to do?
+  - *nani ga shitai desu ka?*
+- どこ に いきたい です か？ - Where do you want to go?
+  - *doko ni ikitai desu ka?*
 
 ### Negative: たくない です
 
@@ -81,6 +85,8 @@ To form the stem:
   - *ikitakunai desu*
 - はたらきたくない です - I don't want to work.
   - *hatarakitakunai desu*
+- あまり たべたくない です - I don't really want to eat.
+  - *amari tabetakunai desu*
 
 ## Past Tense
 
@@ -104,6 +110,8 @@ To form the stem:
   - *nihon ni ikitakatta desu*
 - すし を たべたかった です - I wanted to eat sushi.
   - *sushi wo tabetakatta desu*
+- とても みたかった です - I really wanted to see (it).
+  - *totemo mitakatta desu*
 
 ### Negative Past: たくなかった です
 
@@ -139,13 +147,3 @@ The object particle can shift from **を** to **が** with たい:
 - すし **を** たべたい and すし **が** たべたい are both acceptable.
 :::
 
-## Common Expressions
-
-- なに が したい です か？ - What do you want to do?
-  - *nani ga shitai desu ka?*
-- どこ に いきたい です か？ - Where do you want to go?
-  - *doko ni ikitai desu ka?*
-- あまり たべたくない です - I don't really want to eat
-  - *amari tabetakunai desu*
-- とても みたかった です - I really wanted to see (it)
-  - *totemo mitakatta desu*

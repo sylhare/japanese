@@ -53,6 +53,7 @@ export const GRAMMAR_LESSONS: Lesson[] = [
 ];
 
 export const VOCABULARY_LESSONS: Lesson[] = [
+  { name: 'Adjectives',      path: 'adjectives',     heading: /adjectives/i },
   { name: 'Colors',          path: 'colors',         heading: /colors/i },
   { name: 'Food',            path: 'food',           heading: /food/i,               partial: true },
   { name: 'Time',            path: 'time',           heading: /time|dates/i,         partial: true },

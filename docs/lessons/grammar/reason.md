@@ -32,66 +32,29 @@ Learn how to express reasons and causes using **ので** and **から**.
 
 **Meaning:** "Because of A, ... (consequence)"
 
-### When to Use な
+### Formation
 
-Add **な** only before **ので** when using:
-- **な-adjectives**
-- **Nouns**
+| Type | Pattern |
+|------|---------|
+| Verb | [verb short form] + ので |
+| い-Adjective | [い-adjective] + ので |
+| な-Adjective | [な-adjective] + **な** + ので |
+| Noun | [noun] + **な** + ので |
 
-Do **not** use な with:
-- Verbs
-- い-adjectives
+:::tip When to Use な
+Add **な** before **ので** with な-adjectives and nouns. Do **not** use な with verbs or い-adjectives.
+:::
 
-## Formation Examples
+### Examples
 
-### With Verbs
-
-**[verb short form] + ので**
-
-- たべた ので ... - Because I ate...
-  - *tabeta node ...*
-- いく ので ... - Because I'm going...
-  - *iku node ...*
-- みた ので ... - Because I saw...
-  - *mita node ...*
-
-### With い-Adjectives
-
-**[い-adjective] + ので**
-
-- たかい ので ... - Because it's expensive...
-  - *takai node ...*
-- さむい ので ... - Because it's cold...
-  - *samui node ...*
-
-### With な-Adjectives
-
-**[な-adjective] + な + ので**
-
-- しずか な ので ... - Because it's quiet...
-  - *shizuka na node ...*
-- きれい な ので ... - Because it's beautiful...
-  - *kirei na node ...*
-
-### With Nouns
-
-**[noun] + な + ので**
-
-- がくせい な ので ... - Because I'm a student...
-  - *gakusei na node ...*
-- やすみ な ので ... - Because it's a holiday...
-  - *yasumi na node ...*
-
-## Complete Sentence Examples
-
-### Using ので
-
-- とても あつかった ので、アイスクリーム を たべました - Because it was so hot, I ate an ice cream.
+- とても あつかった ので、アイスクリーム を たべました — Because it was so hot, I ate an ice cream.
   - *totemo atsukatta node, aisukuriimu wo tabemashita*
-- あめ が ふった ので、うち に いました - Because it rained, I stayed home.
+- あめ が ふった ので、うち に いました — Because it rained, I stayed home.
   - *ame ga futta node, uchi ni imashita*
-- しずか な ので、べんきょう できます - Because it's quiet, I can study.
+- しずか な ので、べんきょう できます — Because it's quiet, I can study.
   - *shizuka na node, benkyou dekimasu*
+- がくせい な ので、わりびき が あります — Because I'm a student, there is a discount.
+  - *gakusei na node, waribiki ga arimasu*
 
 ## Pattern 2: から (Less Formal)
 
@@ -99,18 +62,22 @@ Do **not** use な with:
 
 **Meaning:** "Because of A (reason), B (consequence)"
 
-### Structure
+### Formation
 
-- **A から** = Because of A (reason)
-- **B + ん です** = B (consequence/explanation)
+| Type | Pattern |
+|------|---------|
+| Verb | [verb short form] + から |
+| い-Adjective | [い-adjective] + から |
+| な-Adjective | [な-adjective] + **だ** + から |
+| Noun | [noun] + **だ** + から |
 
 ### Examples
 
-- あつい から、アイスクリーム を たべる ん です - Because it's hot, I'm eating ice cream.
+- あつい から、アイスクリーム を たべる ん です — Because it's hot, I'm eating ice cream.
   - *atsui kara, aisukuriimu wo taberu n desu*
-- びょうき だ から、がっこう に いかない ん です - Because I'm sick, I'm not going to school.
+- びょうき だ から、がっこう に いかない ん です — Because I'm sick, I'm not going to school.
   - *byouki da kara, gakkou ni ikanai n desu*
-- おかね が ない から、かえない ん です - Because I don't have money, I can't buy it.
+- おかね が ない から、かえない ん です — Because I don't have money, I can't buy it.
   - *okane ga nai kara, kaenai n desu*
 
 ## Pattern 3: し (Multiple Reasons)
@@ -120,23 +87,24 @@ The final clause states the conclusion or consequence.
 
 **[reason 1] し、[reason 2] し、[conclusion]**
 
-### With い-Adjectives
+### Formation
 
-**[い-adjective] + し**
+| Type | Pattern |
+|------|---------|
+| Verb | [verb short form] + し |
+| い-Adjective | [い-adjective] + し |
+| な-Adjective | [な-adjective] + だ + し |
+
+### Examples
 
 - やすい し、おいしい し、このみせがすきです — It's cheap and also delicious, so I like this restaurant.
   - *yasui shi, oishii shi, kono mise ga suki desu*
 - さむい し、つかれた し、うちにいたい — It's cold and I'm tired, so I want to stay home.
   - *samui shi, tsukareta shi, uchi ni itai*
-
-### With な-Adjectives
-
-**[な-adjective] + だ + し**
-
 - しずか だ し、きれい だ し、このまちがすきです — It's quiet and beautiful, so I like this town.
   - *shizuka da shi, kirei da shi, kono machi ga suki desu*
-- べんり だ し、やすい し、このアプリをよくつかいます — It's convenient and cheap, so I use this app a lot.
-  - *benri da shi, yasui shi, kono apuri wo yoku tsukaimasu*
+- べんきょう する し、しゅくだい も する し、いそがしい — I have to study and do homework, so I'm busy.
+  - *benkyou suru shi, shukudai mo suru shi, isogashii*
 
 :::tip し vs から / ので
 Use **し** when you have two or more reasons to give. Use **から** or **ので** when there is a single clear cause.

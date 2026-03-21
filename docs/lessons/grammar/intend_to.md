@@ -48,6 +48,12 @@ The **つもり** pattern expresses a firm personal intention or plan to do some
   - *daigaku ni hairu tsumori desu*
 - あたらしい くるま を かう つもり です - I plan to buy a new car.
   - *atarashii kuruma wo kau tsumori desu*
+- いつ いく つもり です か？ - When do you intend to go?
+  - *itsu iku tsumori desu ka?*
+- どうする つもり です か？ - What do you intend to do?
+  - *dou suru tsumori desu ka?*
+- ずっと ここ に いる つもり です - I intend to stay here forever.
+  - *zutto koko ni iru tsumori desu*
 
 ## Negative Intention
 
@@ -108,11 +114,3 @@ Both express future plans, but they differ:
 **つもり** is mainly for your own intentions. For third person, use it only when reporting what someone said: かれ は やめる つもり だ そうです — I heard he intends to quit.
 :::
 
-## Common Expressions
-
-- いつ いく つもり です か？ - When do you intend to go?
-  - *itsu iku tsumori desu ka?*
-- どうする つもり です か？ - What do you intend to do?
-  - *dou suru tsumori desu ka?*
-- ずっと ここ に いる つもり です - I intend to stay here forever.
-  - *zutto koko ni iru tsumori desu*

@@ -39,6 +39,303 @@ vocabulary:
     tags:
       - actions-and-thinking
     type: expression
+  - id: adjectives_0
+    hiragana: おおきい
+    romaji: ookii
+    meaning: big/large
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 大きい
+  - id: adjectives_1
+    hiragana: ちいさい
+    romaji: chiisai
+    meaning: small
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 小さい
+  - id: adjectives_2
+    hiragana: ひろい
+    romaji: hiroi
+    meaning: wide/spacious
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 広い
+  - id: adjectives_3
+    hiragana: せまい
+    romaji: semai
+    meaning: narrow/cramped
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 狭い
+  - id: adjectives_4
+    hiragana: ながい
+    romaji: nagai
+    meaning: long
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 長い
+  - id: adjectives_5
+    hiragana: みじかい
+    romaji: mijikai
+    meaning: short
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 短い
+  - id: adjectives_6
+    hiragana: たかい
+    romaji: takai
+    meaning: tall/high
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 高い
+  - id: adjectives_7
+    hiragana: ひくい
+    romaji: hikui
+    meaning: low/short
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 低い
+  - id: adjectives_8
+    hiragana: おおい
+    romaji: ooi
+    meaning: many/a lot
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 多い
+  - id: adjectives_9
+    hiragana: すくない
+    romaji: sukunai
+    meaning: few/little
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 少ない
+  - id: adjectives_10
+    hiragana: たくさん
+    romaji: takusan
+    meaning: many/a lot
+    category: vocabulary
+    tags:
+      - adjectives
+    type: adverb
+    kanji: 沢山
+  - id: adjectives_11
+    hiragana: すこし
+    romaji: sukoshi
+    meaning: a little/few
+    category: vocabulary
+    tags:
+      - adjectives
+    type: adverb
+    kanji: 少し
+  - id: adjectives_12
+    hiragana: ぜんぶ
+    romaji: zenbu
+    meaning: all/everything
+    category: vocabulary
+    tags:
+      - adjectives
+    type: noun
+    kanji: 全部
+  - id: adjectives_13
+    hiragana: すずしい
+    romaji: suzushii
+    meaning: cool/refreshing
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 涼しい
+  - id: adjectives_14
+    hiragana: つめたい
+    romaji: tsumetai
+    meaning: cold (to touch)
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 冷たい
+  - id: adjectives_15
+    hiragana: からい
+    romaji: karai
+    meaning: spicy/hot
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 辛い
+  - id: adjectives_16
+    hiragana: はやい
+    romaji: hayai
+    meaning: fast
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 速い
+  - id: adjectives_17
+    hiragana: おそい
+    romaji: osoi
+    meaning: slow/late
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 遅い
+  - id: adjectives_18
+    hiragana: おもい
+    romaji: omoi
+    meaning: heavy
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 重い
+  - id: adjectives_19
+    hiragana: かるい
+    romaji: karui
+    meaning: light
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 軽い
+  - id: adjectives_20
+    hiragana: あたらしい
+    romaji: atarashii
+    meaning: new
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 新しい
+  - id: adjectives_21
+    hiragana: ふるい
+    romaji: furui
+    meaning: old (objects)
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 古い
+  - id: adjectives_22
+    hiragana: わかい
+    romaji: wakai
+    meaning: young
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 若い
+  - id: adjectives_23
+    hiragana: きたない
+    romaji: kitanai
+    meaning: dirty
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 汚い
+  - id: adjectives_24
+    hiragana: きれい
+    romaji: kirei
+    meaning: clean/pretty
+    category: vocabulary
+    tags:
+      - adjectives
+    type: な-adj
+    kanji: 綺麗
+  - id: adjectives_25
+    hiragana: いい / よい
+    romaji: ii / yoi
+    meaning: good
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 良い
+  - id: adjectives_26
+    hiragana: わるい
+    romaji: warui
+    meaning: bad
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 悪い
+  - id: adjectives_27
+    hiragana: たのしい
+    romaji: tanoshii
+    meaning: fun/enjoyable
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 楽しい
+  - id: adjectives_28
+    hiragana: つまらない
+    romaji: tsumaranai
+    meaning: boring/dull
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 詰まらない
+  - id: adjectives_29
+    hiragana: むずかしい
+    romaji: muzukashii
+    meaning: difficult
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 難しい
+  - id: adjectives_30
+    hiragana: やさしい
+    romaji: yasashii
+    meaning: easy/kind
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 易しい
+  - id: adjectives_31
+    hiragana: かわいい
+    romaji: kawaii
+    meaning: cute
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 可愛い
+  - id: adjectives_32
+    hiragana: かっこいい
+    romaji: kakkoii
+    meaning: cool/handsome
+    category: vocabulary
+    tags:
+      - adjectives
+    type: い-adj
+    kanji: 格好いい
   - id: advice_0
     hiragana: '[verb た] + ほう が いい です'
     romaji: hou ga ii desu
@@ -71,6 +368,51 @@ vocabulary:
     tags:
       - advice
     type: expression
+  - id: advice_4
+    hiragana: あげる
+    romaji: ageru
+    meaning: to give (to someone else)
+    category: grammar
+    tags:
+      - advice
+    type: verb
+    kanji: 上げる
+  - id: advice_5
+    hiragana: もらう
+    romaji: morau
+    meaning: to receive (from someone)
+    category: grammar
+    tags:
+      - advice
+    type: verb
+    kanji: 貰う
+  - id: advice_6
+    hiragana: くれる
+    romaji: kureru
+    meaning: to give (to me/my side)
+    category: grammar
+    tags:
+      - advice
+    type: verb
+    kanji: 呉れる
+  - id: advice_7
+    hiragana: さしあげる
+    romaji: sashiageru
+    meaning: to give (very polite)
+    category: grammar
+    tags:
+      - advice
+    type: verb
+    kanji: 差し上げる
+  - id: advice_8
+    hiragana: いただく
+    romaji: itadaku
+    meaning: to receive (polite)
+    category: grammar
+    tags:
+      - advice
+    type: verb
+    kanji: 頂く
   - id: appearance_0
     hiragana: '[い-adj without い] + そう'
     romaji: sou
@@ -3620,6 +3962,14 @@ vocabulary:
       - particle-guide
     type: conjunction
   - id: particleguide_1
+    hiragana: には
+    romaji: ni wa
+    meaning: 'for, regarding'
+    category: grammar
+    tags:
+      - particle-guide
+    type: combination
+  - id: particleguide_2
     hiragana: でも
     romaji: demo
     meaning: 'but, however'
@@ -3627,7 +3977,15 @@ vocabulary:
     tags:
       - particle-guide
     type: conjunction
-  - id: particleguide_2
+  - id: particleguide_3
+    hiragana: では
+    romaji: de wa
+    meaning: 'in, at (conditional)'
+    category: grammar
+    tags:
+      - particle-guide
+    type: combination
+  - id: particleguide_4
     hiragana: だから
     romaji: dakara
     meaning: 'so, therefore'
@@ -3636,7 +3994,7 @@ vocabulary:
       - linking-words
       - particle-guide
     type: conjunction
-  - id: particleguide_3
+  - id: particleguide_5
     hiragana: または
     romaji: matawa
     meaning: or
@@ -3644,7 +4002,7 @@ vocabulary:
     tags:
       - particle-guide
     type: conjunction
-  - id: particleguide_4
+  - id: particleguide_6
     hiragana: これ
     romaji: kore
     meaning: this (near speaker)
@@ -3652,7 +4010,7 @@ vocabulary:
     tags:
       - particle-guide
     type: pronoun
-  - id: particleguide_5
+  - id: particleguide_7
     hiragana: それ
     romaji: sore
     meaning: that (near listener)
@@ -3660,7 +4018,7 @@ vocabulary:
     tags:
       - particle-guide
     type: pronoun
-  - id: particleguide_6
+  - id: particleguide_8
     hiragana: あれ
     romaji: are
     meaning: that (far from both)
@@ -3668,7 +4026,7 @@ vocabulary:
     tags:
       - particle-guide
     type: pronoun
-  - id: particleguide_7
+  - id: particleguide_9
     hiragana: わたし
     romaji: watashi
     meaning: 'I, me'
@@ -3677,7 +4035,7 @@ vocabulary:
       - particle-guide
     type: pronoun
     kanji: 私
-  - id: particleguide_8
+  - id: particleguide_10
     hiragana: あなた
     romaji: anata
     meaning: you
@@ -4079,6 +4437,7 @@ vocabulary:
     meaning: sweet
     category: vocabulary
     tags:
+      - adjectives
       - tastes
     type: い-adjective
     kanji: 甘い
@@ -4717,6 +5076,7 @@ vocabulary:
     meaning: hot (weather)
     category: vocabulary
     tags:
+      - adjectives
       - weather
     type: い-adjective
     kanji: 暑い
@@ -4735,6 +5095,7 @@ vocabulary:
     meaning: cold (weather)
     category: vocabulary
     tags:
+      - adjectives
       - weather
     type: い-adjective
     kanji: 寒い
@@ -4744,6 +5105,7 @@ vocabulary:
     meaning: warm
     category: vocabulary
     tags:
+      - adjectives
       - weather
     type: い-adjective
     kanji: 暖かい

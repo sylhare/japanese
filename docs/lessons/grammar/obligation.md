@@ -77,7 +77,7 @@ To create the な-form needed for these patterns:
 | する | しない | しなければ | しなければ いけない |
 | くる | こない | こなければ | こなければ いけない |
 
-## Common Expressions
+## Formal and Casual Forms
 
 ### Formal
 

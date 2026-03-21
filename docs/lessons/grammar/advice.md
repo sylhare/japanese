@@ -83,12 +83,30 @@ Literally: "The direction of [not doing] is good."
 
 ## Examples in Context
 
+### Vocabulary
+
+| Hiragana | Kanji | Romaji | English | Type |
+|----------|-------|--------|---------|------|
+| あげる | 上げる | ageru | to give (to someone else) | verb |
+| もらう | 貰う | morau | to receive (from someone) | verb |
+| くれる | 呉れる | kureru | to give (to me/my side) | verb |
+| さしあげる | 差し上げる | sashiageru | to give (very polite) | verb |
+| いただく | 頂く | itadaku | to receive (polite) | verb |
+
+:::tip Which verb to use
+- **あげる** — you or someone gives to another person: アドバイス を あげました (I gave advice)
+- **もらう** — you receive from someone: アドバイス を もらいました (I received advice)
+- **くれる** — someone gives to you: アドバイス を くれました (They gave me advice)
+:::
+
 ### Health Advice
 
 - くすり を のんだ ほう が いい です よ - You should take medicine.
   - *kusuri wo nonda hou ga ii desu yo*
 - やすんだ ほう が いい です よ - You should rest.
   - *yasunda hou ga ii desu yo*
+- いしゃ に アドバイス を もらった ほう が いい です よ — You should get advice from a doctor.
+  - *isha ni adobaisu wo moratta hou ga ii desu yo*
 
 ### Study Advice
 
@@ -96,6 +114,8 @@ Literally: "The direction of [not doing] is good."
   - *mainichi renshuushita hou ga ii desu yo*
 - あした の テスト の ために べんきょうした ほう が いい です よ - You should study for tomorrow's test.
   - *ashita no tesuto no tame ni benkyoushita hou ga ii desu yo*
+- せんせい に アドバイス を もらった ほう が いい です よ — You should get advice from your teacher.
+  - *sensei ni adobaisu wo moratta hou ga ii desu yo*
 
 ### Warnings
 
@@ -103,3 +123,5 @@ Literally: "The direction of [not doing] is good."
   - *soko ni ikanai hou ga ii desu yo*
 - それ を しない ほう が いい です よ - You shouldn't do that.
   - *sore wo shinai hou ga ii desu yo*
+- そんな アドバイス を あげない ほう が いい です よ — You shouldn't give that kind of advice.
+  - *sonna adobaisu wo agenai hou ga ii desu yo*
