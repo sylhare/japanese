@@ -450,6 +450,22 @@ function regenerateIds(vocabulary) {
  * @returns {Object} Merged vocabulary data
  */
 function mergeVocabulary(existing, extracted) {
+  const contentToExistingId = new Map();
+  for (const item of existing.vocabulary) {
+    const key = `${item.hiragana}-${item.romaji}-${item.meaning}`.toLowerCase();
+    contentToExistingId.set(key, item.id);
+  }
+
+  const maxSuffixByPrefix = new Map();
+  for (const item of existing.vocabulary) {
+    const parts = item.id.split('_');
+    const num = parseInt(parts[parts.length - 1], 10);
+    const prefix = parts.slice(0, -1).join('_');
+    if (!isNaN(num)) {
+      maxSuffixByPrefix.set(prefix, Math.max(maxSuffixByPrefix.get(prefix) ?? -1, num));
+    }
+  }
+
   const contentMap = new Map();
 
   const mergeItem = (item) => {
@@ -466,7 +482,17 @@ function mergeVocabulary(existing, extracted) {
         tags: mergedTags,
       });
     } else {
-      contentMap.set(contentKey, { ...item });
+      let id;
+      if (contentToExistingId.has(contentKey)) {
+        id = contentToExistingId.get(contentKey);
+      } else {
+        const parts = item.id.split('_');
+        const prefix = parts.slice(0, -1).join('_');
+        const next = (maxSuffixByPrefix.get(prefix) ?? -1) + 1;
+        maxSuffixByPrefix.set(prefix, next);
+        id = `${prefix}_${next}`;
+      }
+      contentMap.set(contentKey, { ...item, id });
     }
   };
 
@@ -479,10 +505,8 @@ function mergeVocabulary(existing, extracted) {
     return compareIds(a.id, b.id);
   });
 
-  const vocabularyWithRegeneratedIds = regenerateIds(mergedVocabulary);
-
   return {
-    vocabulary: vocabularyWithRegeneratedIds,
+    vocabulary: mergedVocabulary,
     categories: Array.from(allCategories).sort(),
     sortOptions: existing.sortOptions.length > 0 ? existing.sortOptions : extracted.sortOptions,
   };

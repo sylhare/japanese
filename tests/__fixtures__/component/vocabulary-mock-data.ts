@@ -3,7 +3,7 @@ import { DEFAULT_SORT_OPTIONS } from '../../../scripts/extract-vocabulary';
 export const mockVocabularyData = {
   vocabulary: [
     {
-      id: 'test_1',
+      id: 'test_0',
       hiragana: 'あか',
       kanji: '赤',
       romaji: 'aka',
@@ -13,7 +13,7 @@ export const mockVocabularyData = {
       type: 'い-adjective',
     },
     {
-      id: 'test_2',
+      id: 'test_1',
       hiragana: 'あお',
       kanji: '青',
       romaji: 'ao',
@@ -23,7 +23,7 @@ export const mockVocabularyData = {
       type: 'い-adjective',
     },
     {
-      id: 'test_3',
+      id: 'test_2',
       hiragana: 'あまい',
       kanji: '甘い',
       romaji: 'amai',
@@ -33,7 +33,7 @@ export const mockVocabularyData = {
       type: 'い-adjective',
     },
     {
-      id: 'test_4',
+      id: 'test_3',
       katakana: 'コーヒー',
       romaji: 'koohii',
       meaning: 'coffee',

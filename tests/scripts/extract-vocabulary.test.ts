@@ -525,6 +525,44 @@ describe('Vocabulary Extraction', () => {
       expect(merged.vocabulary.find(item => item.hiragana === 'あか')).toBeDefined();
       expect(merged.vocabulary.find(item => item.hiragana === 'あお')).toBeDefined();
     });
+
+    it('should preserve existing IDs when items are reordered', () => {
+      const existing = createTestVocabularyData([
+        createTestVocabularyItem({ id: 'colors_0', tags: ['colors'] }),
+        createBlueItem({ id: 'colors_1', tags: ['colors'] }),
+        createYellowItem({ id: 'colors_2', tags: ['colors'] }),
+      ], { categories: ['vocabulary'] });
+
+      const extracted = createTestVocabularyData([
+        createYellowItem({ id: 'colors_0', tags: ['colors'] }),
+        createTestVocabularyItem({ id: 'colors_1', tags: ['colors'] }),
+        createBlueItem({ id: 'colors_2', tags: ['colors'] }),
+      ], { categories: ['vocabulary'] });
+
+      const merged = mergeVocabulary(existing, extracted);
+
+      expect(merged.vocabulary.find(item => item.hiragana === 'あか')?.id).toBe('colors_0');
+      expect(merged.vocabulary.find(item => item.hiragana === 'あお')?.id).toBe('colors_1');
+      expect(merged.vocabulary.find(item => item.hiragana === 'きいろ')?.id).toBe('colors_2');
+    });
+
+    it('should assign new IDs continuing from the max existing ID', () => {
+      const existing = createTestVocabularyData([
+        createTestVocabularyItem({ id: 'colors_0', tags: ['colors'] }),
+        createBlueItem({ id: 'colors_1', tags: ['colors'] }),
+      ], { categories: ['vocabulary'] });
+
+      const extracted = createTestVocabularyData([
+        createTestVocabularyItem({ id: 'colors_0', tags: ['colors'] }),
+        createTestVocabularyItem({ id: 'colors_1', hiragana: 'みどり', romaji: 'midori', meaning: 'green', tags: ['colors'] }),
+      ], { categories: ['vocabulary'] });
+
+      const merged = mergeVocabulary(existing, extracted);
+
+      expect(merged.vocabulary.find(item => item.hiragana === 'あか')?.id).toBe('colors_0');
+      expect(merged.vocabulary.find(item => item.hiragana === 'あお')?.id).toBe('colors_1');
+      expect(merged.vocabulary.find(item => item.hiragana === 'みどり')?.id).toBe('colors_2');
+    });
   });
 
   describe('Duplicate Prevention', () => {
