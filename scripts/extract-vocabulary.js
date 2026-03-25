@@ -314,10 +314,10 @@ function scanAllLessons() {
   const vocabulary = [];
   const categories = new Set(['all']);
   const sortOptions = [
-    { value: 'hiragana', label: 'Hiragana (A-Z)' },
+    { value: 'hiragana', label: 'Hiragana (あ→ん)' },
     { value: 'romaji', label: 'Romaji (A-Z)' },
     { value: 'meaning', label: 'Meaning (A-Z)' },
-    { value: 'category', label: 'Category' },
+    { value: 'category', label: 'Category (A-Z)' },
   ];
 
   function scanDirectory(dir) {

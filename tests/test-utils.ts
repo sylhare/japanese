@@ -46,10 +46,10 @@ export function createTestVocabularyData(
     vocabulary,
     categories: ['all'],
     sortOptions: [
-      { value: 'hiragana', label: 'Hiragana (A-Z)' },
+      { value: 'hiragana', label: 'Hiragana (あ→ん)' },
       { value: 'romaji', label: 'Romaji (A-Z)' },
       { value: 'meaning', label: 'Meaning (A-Z)' },
-      { value: 'category', label: 'Category' },
+      { value: 'category', label: 'Category (A-Z)' },
     ],
     ...overrides,
   };
@@ -268,7 +268,7 @@ export function createSortOptionsTestData(): TestDataPair {
 
   const extracted = createTestVocabularyData([], {
     sortOptions: [
-      { value: 'hiragana', label: 'Hiragana (A-Z)' },
+      { value: 'hiragana', label: 'Hiragana (あ→ん)' },
     ],
   });
 

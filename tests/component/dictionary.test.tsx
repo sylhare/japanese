@@ -175,7 +175,7 @@ describe('Vocabulary Component', () => {
       const user = userEvent.setup();
       render(<Vocabulary />);
 
-      const sortSelect = screen.getByDisplayValue('Hiragana (A-Z)');
+      const sortSelect = screen.getByDisplayValue('Hiragana (あ→ん)');
       await user.selectOptions(sortSelect, 'hiragana');
 
       const vocabularyCards = screen.getAllByText(/あか|あお|あまい/);
@@ -189,7 +189,7 @@ describe('Vocabulary Component', () => {
       const user = userEvent.setup();
       render(<Vocabulary />);
 
-      const sortSelect = screen.getByDisplayValue('Hiragana (A-Z)');
+      const sortSelect = screen.getByDisplayValue('Hiragana (あ→ん)');
       await user.selectOptions(sortSelect, 'romaji');
 
       const vocabularyCards = screen.getAllByText(/あか|あお|あまい|コーヒー/);

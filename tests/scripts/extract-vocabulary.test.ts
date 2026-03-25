@@ -761,7 +761,7 @@ describe('Vocabulary Extraction', () => {
       ], {
         categories: ['general'],
         sortOptions: [
-          { value: 'hiragana', label: 'Hiragana (A-Z)' },
+          { value: 'hiragana', label: 'Hiragana (あ→ん)' },
         ],
       });
 
