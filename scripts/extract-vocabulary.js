@@ -310,15 +310,17 @@ function extractFromTable(tableContent, filePath, startIndex = 0) {
  * Scan all lesson files for vocabulary.
  * @returns {Object} Vocabulary data with categories and sort options
  */
+const DEFAULT_SORT_OPTIONS = [
+  { value: 'hiragana', label: 'Hiragana (あ→ん)' },
+  { value: 'romaji', label: 'Romaji (A-Z)' },
+  { value: 'meaning', label: 'Meaning (A-Z)' },
+  { value: 'category', label: 'Category (A-Z)' },
+];
+
 function scanAllLessons() {
   const vocabulary = [];
   const categories = new Set(['all']);
-  const sortOptions = [
-    { value: 'hiragana', label: 'Hiragana (あ→ん)' },
-    { value: 'romaji', label: 'Romaji (A-Z)' },
-    { value: 'meaning', label: 'Meaning (A-Z)' },
-    { value: 'category', label: 'Category (A-Z)' },
-  ];
+  const sortOptions = DEFAULT_SORT_OPTIONS;
 
   function scanDirectory(dir) {
     const files = fs.readdirSync(dir).sort();
@@ -580,6 +582,7 @@ if (require.main === module) {
 }
 
 module.exports = {
+  DEFAULT_SORT_OPTIONS,
   extractVocabularyFromFile,
   extractN5VocabularyTokens,
   scanAllLessons,

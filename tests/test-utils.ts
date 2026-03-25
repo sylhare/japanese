@@ -1,6 +1,7 @@
 /**
  * Shared test utilities for vocabulary extraction tests
  */
+import { DEFAULT_SORT_OPTIONS } from '../scripts/extract-vocabulary';
 
 export interface VocabularyItem {
   id: string;
@@ -45,12 +46,7 @@ export function createTestVocabularyData(
   return {
     vocabulary,
     categories: ['all'],
-    sortOptions: [
-      { value: 'hiragana', label: 'Hiragana (あ→ん)' },
-      { value: 'romaji', label: 'Romaji (A-Z)' },
-      { value: 'meaning', label: 'Meaning (A-Z)' },
-      { value: 'category', label: 'Category (A-Z)' },
-    ],
+    sortOptions: DEFAULT_SORT_OPTIONS,
     ...overrides,
   };
 }

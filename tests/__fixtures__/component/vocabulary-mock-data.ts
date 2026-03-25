@@ -1,3 +1,5 @@
+import { DEFAULT_SORT_OPTIONS } from '../../../scripts/extract-vocabulary';
+
 export const mockVocabularyData = {
   vocabulary: [
     {
@@ -41,10 +43,5 @@ export const mockVocabularyData = {
     },
   ],
   categories: ['all', 'vocabulary'],
-  sortOptions: [
-    { value: 'hiragana', label: 'Hiragana (あ→ん)' },
-    { value: 'romaji', label: 'Romaji (A-Z)' },
-    { value: 'meaning', label: 'Meaning (A-Z)' },
-    { value: 'category', label: 'Category (A-Z)' },
-  ],
+  sortOptions: DEFAULT_SORT_OPTIONS,
 };
