@@ -131,9 +131,6 @@ export default function Vocabulary(): React.JSX.Element {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('hiragana');
-  const [showOnlyHiragana, setShowOnlyHiragana] = useState(false);
-  const [showOnlyKatakana, setShowOnlyKatakana] = useState(false);
-
   const vocabularyWithJlptTags = useMemo(
     () =>
       vocabularyData.map(item => {
@@ -160,10 +157,7 @@ export default function Vocabulary(): React.JSX.Element {
 
       const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
 
-      const matchesHiragana = !showOnlyHiragana || item.hiragana;
-      const matchesKatakana = !showOnlyKatakana || item.katakana;
-
-      return matchesSearch && matchesCategory && matchesHiragana && matchesKatakana;
+      return matchesSearch && matchesCategory;
     });
 
     filtered.sort((a, b) => {
@@ -186,8 +180,6 @@ export default function Vocabulary(): React.JSX.Element {
     searchTerm,
     selectedCategory,
     sortBy,
-    showOnlyHiragana,
-    showOnlyKatakana,
     vocabularyWithJlptTags,
   ]);
 
@@ -235,23 +227,6 @@ export default function Vocabulary(): React.JSX.Element {
                   ))}
                 </select>
 
-                <label className={styles.checkboxLabel}>
-                  <input
-                    type="checkbox"
-                    checked={showOnlyHiragana}
-                    onChange={(e) => setShowOnlyHiragana(e.target.checked)}
-                  />
-                  Hiragana only
-                </label>
-
-                <label className={styles.checkboxLabel}>
-                  <input
-                    type="checkbox"
-                    checked={showOnlyKatakana}
-                    onChange={(e) => setShowOnlyKatakana(e.target.checked)}
-                  />
-                  Katakana only
-                </label>
               </div>
             </div>
 

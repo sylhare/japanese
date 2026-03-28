@@ -11,6 +11,21 @@ Japanese uses different verbs for "wear" depending on where the item goes. This 
 
 ## Which verb to use for "wear"?
 
+### Wear Verbs
+
+| Hiragana | Kanji | Romaji | English | Type |
+|----------|-------|--------|---------|------|
+| きる | 着る | kiru | wear (👕 upper body) | verb |
+| はく | 履く | haku | wear (👖 lower body, shoes) | verb |
+| かぶる | 被る | kaburu | wear (🎩 head) | verb |
+| かける | 掛ける | kakeru | wear (👓 glasses, headphones) | verb |
+| つける | 付ける | tsukeru | wear (💍 small items) | verb |
+| しめる | 締める | shimeru | wear (👔 belt/tie) | verb |
+| はめる | | hameru | wear (🧤 gloves, rings) | verb |
+| する | | suru | wear/do (⌚ accessories) | verb |
+
+### Body Reference
+
 ```
 🎩 ぼうし → かぶる ─────────────→       XXXXX
                                      X     X
@@ -22,7 +37,7 @@ Japanese uses different verbs for "wear" depending on where the item goes. This 
                                     /  | |   \
 👕 シャツ → きる ────────────────── /──→|  |    \
 🧤 てぶくろ → はめる ─────────────→[ ]  |   |     [ ]
-🧷 ベルト → しめる ───────────────→    [====]      
+🧷 ベルト → しめる ───────────────→    [====]
                                       /   \
                                      /     \
 👖 ズボン → はく ─────────────────→   /       \
@@ -36,19 +51,6 @@ Japanese uses different verbs for "wear" depending on where the item goes. This 
 Don't confuse 着る (kiru, to wear) with 切る (kiru, to cut). Same pronunciation, different kanji!
 :::
 
-## Wear Verbs
-
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| きる | 着る | kiru | wear (upper body) | verb |
-| はく | 履く | haku | wear (lower body, shoes) | verb |
-| かぶる | 被る | kaburu | wear (head) | verb |
-| かける | 掛ける | kakeru | wear (glasses, headphones) | verb |
-| つける | 付ける | tsukeru | wear (small items) | verb |
-| しめる | 締める | shimeru | wear (belt/tie) | verb |
-| はめる | | hameru | wear (gloves, rings) | verb |
-| する | | suru | wear/do (accessories) | verb |
-
 :::tip Removing item
 **Taking off clothes** — Use **ぬぐ（脱ぐ）** for most items:
 - くつを ぬぐ (take off shoes)
@@ -61,7 +63,30 @@ For accessories, use **はずす（外す）** or **とる（取る）**:
 **する is flexible** — する can replace つける for many accessories: とけいをする、ネクタイをする
 :::
 
-## Example Sentences
+## Clothing Items
+
+| Hiragana | Kanji | Romaji | English | Type |
+|----------|-------|--------|---------|------|
+| ふく | 服 | fuku | 👗 clothes | noun |
+| ようふく | 洋服 | youfuku | 🧥 western clothes | noun |
+| シャツ | | shatsu | 👕 shirt | noun |
+| ズボン | | zubon | 👖 pants | noun |
+| スカート | | sukaato | 🩱 skirt | noun |
+| くつ | 靴 | kutsu | 👟 shoes | noun |
+| くつした | 靴下 | kutsushita | 🧦 socks | noun |
+| ぼうし | 帽子 | boushi | 🎩 hat | noun |
+| コート | | kooto | 🧥 coat | noun |
+| ドレス | | doresu | 👗 dress | noun |
+| めがね | 眼鏡 | megane | 👓 glasses | noun |
+| とけい | 時計 | tokei | ⌚ watch/clock | noun |
+| ネクタイ | | nekutai | 👔 tie | noun |
+| ベルト | | beruto | 🪢 belt | noun |
+| イヤリング | | iyaringu | 💍 earrings | noun |
+| てぶくろ | 手袋 | tebukuro | 🧤 gloves | noun |
+
+## Examples
+
+### Verb + Object
 
 All "wear" verbs use the particle **を** to mark the clothing item:
 
@@ -76,7 +101,7 @@ All "wear" verbs use the particle **を** to mark the clothing item:
 - てぶくろをはめる — *tebukuro o hameru* — wear gloves
 - とけいをする — *tokei o suru* — wear a watch
 
-### Full Sentences
+### In Context
 
 - わたしは あかい シャツを きます。 — *watashi wa akai shatsu o kimasu.* — I wear a red shirt.
 - かれは めがねを かけています。 — *kare wa megane o kakete imasu.* — He is wearing glasses.
@@ -91,24 +116,3 @@ All "wear" verbs use the particle **を** to mark the clothing item:
 - きます = will wear / wears (habit)
 
 :::
-
-## Clothing Items
-
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| ふく | 服 | fuku | clothes | noun |
-| ようふく | 洋服 | youfuku | western clothes | noun |
-| シャツ | | shatsu | shirt | noun |
-| ズボン | | zubon | pants | noun |
-| スカート | | sukaato | skirt | noun |
-| くつ | 靴 | kutsu | shoes | noun |
-| くつした | 靴下 | kutsushita | socks | noun |
-| ぼうし | 帽子 | boushi | hat | noun |
-| コート | | kooto | coat | noun |
-| ドレス | | doresu | dress | noun |
-| めがね | 眼鏡 | megane | glasses | noun |
-| とけい | 時計 | tokei | watch/clock | noun |
-| ネクタイ | | nekutai | tie | noun |
-| ベルト | | beruto | belt | noun |
-| イヤリング | | iyaringu | earrings | noun |
-| てぶくろ | 手袋 | tebukuro | gloves | noun |

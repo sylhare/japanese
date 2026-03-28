@@ -176,13 +176,13 @@ categories:
   - vocabulary
 sortOptions:
   - value: hiragana
-    label: Hiragana (A-Z)
+    label: Hiragana (あ→ん)
   - value: romaji
     label: Romaji (A-Z)
   - value: meaning
     label: Meaning (A-Z)
   - value: category
-    label: Category
+    label: Category (A-Z)
 ```
 
 ### Vocabulary Item Fields

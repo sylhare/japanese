@@ -137,45 +137,12 @@ describe('Vocabulary Component', () => {
     });
   });
 
-  describe('Type Filtering', () => {
-    it('filters vocabulary by hiragana only checkbox', async () => {
-      const user = userEvent.setup();
-      render(<Vocabulary />);
-
-      const hiraganaCheckbox = screen.getByLabelText('Hiragana only');
-      await user.click(hiraganaCheckbox);
-
-      expect(screen.getByText('あか')).toBeInTheDocument();
-      expect(screen.getByText('あお')).toBeInTheDocument();
-      expect(screen.getByText('あまい')).toBeInTheDocument();
-      expect(screen.queryByText('コーヒー')).not.toBeInTheDocument();
-
-      expect(screen.getByText('Showing 3 of 4 vocabulary items')).toBeInTheDocument();
-    });
-
-    it('filters vocabulary by katakana only checkbox', async () => {
-      const user = userEvent.setup();
-      render(<Vocabulary />);
-
-      const katakanaCheckbox = screen.getByLabelText('Katakana only');
-      await user.click(katakanaCheckbox);
-
-      expect(screen.getByText('コーヒー')).toBeInTheDocument();
-
-      expect(screen.queryByText('あか')).not.toBeInTheDocument();
-      expect(screen.queryByText('あお')).not.toBeInTheDocument();
-      expect(screen.queryByText('あまい')).not.toBeInTheDocument();
-
-      expect(screen.getByText('Showing 1 of 4 vocabulary items')).toBeInTheDocument();
-    });
-  });
-
   describe('Sorting Functionality', () => {
     it('sorts vocabulary by hiragana', async () => {
       const user = userEvent.setup();
       render(<Vocabulary />);
 
-      const sortSelect = screen.getByDisplayValue('Hiragana (A-Z)');
+      const sortSelect = screen.getByDisplayValue('Hiragana (あ→ん)');
       await user.selectOptions(sortSelect, 'hiragana');
 
       const vocabularyCards = screen.getAllByText(/あか|あお|あまい/);
@@ -189,7 +156,7 @@ describe('Vocabulary Component', () => {
       const user = userEvent.setup();
       render(<Vocabulary />);
 
-      const sortSelect = screen.getByDisplayValue('Hiragana (A-Z)');
+      const sortSelect = screen.getByDisplayValue('Hiragana (あ→ん)');
       await user.selectOptions(sortSelect, 'romaji');
 
       const vocabularyCards = screen.getAllByText(/あか|あお|あまい|コーヒー/);

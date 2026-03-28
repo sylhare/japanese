@@ -447,6 +447,15 @@ vocabulary:
     type: verb
     kanji: 着る
   - id: clothes_1
+    hiragana: きる
+    romaji: kiru
+    meaning: wear ( upper body)
+    category: vocabulary
+    tags:
+      - clothes
+    type: verb
+    kanji: 着る
+  - id: clothes_2
     hiragana: はく
     romaji: haku
     meaning: 'wear (lower body, shoes)'
@@ -455,7 +464,16 @@ vocabulary:
       - clothes
     type: verb
     kanji: 履く
-  - id: clothes_2
+  - id: clothes_3
+    hiragana: はく
+    romaji: haku
+    meaning: 'wear ( lower body, shoes)'
+    category: vocabulary
+    tags:
+      - clothes
+    type: verb
+    kanji: 履く
+  - id: clothes_4
     hiragana: かぶる
     romaji: kaburu
     meaning: wear (head)
@@ -464,7 +482,16 @@ vocabulary:
       - clothes
     type: verb
     kanji: 被る
-  - id: clothes_3
+  - id: clothes_5
+    hiragana: かぶる
+    romaji: kaburu
+    meaning: wear ( head)
+    category: vocabulary
+    tags:
+      - clothes
+    type: verb
+    kanji: 被る
+  - id: clothes_6
     hiragana: かける
     romaji: kakeru
     meaning: 'wear (glasses, headphones)'
@@ -473,7 +500,16 @@ vocabulary:
       - clothes
     type: verb
     kanji: 掛ける
-  - id: clothes_4
+  - id: clothes_7
+    hiragana: かける
+    romaji: kakeru
+    meaning: 'wear ( glasses, headphones)'
+    category: vocabulary
+    tags:
+      - clothes
+    type: verb
+    kanji: 掛ける
+  - id: clothes_8
     hiragana: つける
     romaji: tsukeru
     meaning: wear (small items)
@@ -482,7 +518,16 @@ vocabulary:
       - clothes
     type: verb
     kanji: 付ける
-  - id: clothes_5
+  - id: clothes_9
+    hiragana: つける
+    romaji: tsukeru
+    meaning: wear ( small items)
+    category: vocabulary
+    tags:
+      - clothes
+    type: verb
+    kanji: 付ける
+  - id: clothes_10
     hiragana: しめる
     romaji: shimeru
     meaning: wear (belt/tie)
@@ -491,7 +536,16 @@ vocabulary:
       - clothes
     type: verb
     kanji: 締める
-  - id: clothes_6
+  - id: clothes_11
+    hiragana: しめる
+    romaji: shimeru
+    meaning: wear ( belt/tie)
+    category: vocabulary
+    tags:
+      - clothes
+    type: verb
+    kanji: 締める
+  - id: clothes_12
     hiragana: はめる
     romaji: hameru
     meaning: 'wear (gloves, rings)'
@@ -499,7 +553,15 @@ vocabulary:
     tags:
       - clothes
     type: verb
-  - id: clothes_7
+  - id: clothes_13
+    hiragana: はめる
+    romaji: hameru
+    meaning: 'wear ( gloves, rings)'
+    category: vocabulary
+    tags:
+      - clothes
+    type: verb
+  - id: clothes_14
     hiragana: する
     romaji: suru
     meaning: wear/do (accessories)
@@ -507,7 +569,15 @@ vocabulary:
     tags:
       - clothes
     type: verb
-  - id: clothes_8
+  - id: clothes_15
+    hiragana: する
+    romaji: suru
+    meaning: wear/do ( accessories)
+    category: vocabulary
+    tags:
+      - clothes
+    type: verb
+  - id: clothes_16
     hiragana: ふく
     romaji: fuku
     meaning: clothes
@@ -516,7 +586,7 @@ vocabulary:
       - clothes
     type: noun
     kanji: 服
-  - id: clothes_9
+  - id: clothes_17
     hiragana: ようふく
     romaji: youfuku
     meaning: western clothes
@@ -525,7 +595,7 @@ vocabulary:
       - clothes
     type: noun
     kanji: 洋服
-  - id: clothes_10
+  - id: clothes_18
     hiragana: シャツ
     romaji: shatsu
     meaning: shirt
@@ -533,7 +603,7 @@ vocabulary:
     tags:
       - clothes
     type: noun
-  - id: clothes_11
+  - id: clothes_19
     hiragana: ズボン
     romaji: zubon
     meaning: pants
@@ -541,7 +611,7 @@ vocabulary:
     tags:
       - clothes
     type: noun
-  - id: clothes_12
+  - id: clothes_20
     hiragana: スカート
     romaji: sukaato
     meaning: skirt
@@ -549,7 +619,7 @@ vocabulary:
     tags:
       - clothes
     type: noun
-  - id: clothes_13
+  - id: clothes_21
     hiragana: くつ
     romaji: kutsu
     meaning: shoes
@@ -558,7 +628,7 @@ vocabulary:
       - clothes
     type: noun
     kanji: 靴
-  - id: clothes_14
+  - id: clothes_22
     hiragana: くつした
     romaji: kutsushita
     meaning: socks
@@ -567,7 +637,7 @@ vocabulary:
       - clothes
     type: noun
     kanji: 靴下
-  - id: clothes_15
+  - id: clothes_23
     hiragana: ぼうし
     romaji: boushi
     meaning: hat
@@ -576,7 +646,7 @@ vocabulary:
       - clothes
     type: noun
     kanji: 帽子
-  - id: clothes_16
+  - id: clothes_24
     hiragana: コート
     romaji: kooto
     meaning: coat
@@ -585,7 +655,7 @@ vocabulary:
       - clothes
       - weather
     type: noun
-  - id: clothes_17
+  - id: clothes_25
     hiragana: ドレス
     romaji: doresu
     meaning: dress
@@ -593,7 +663,7 @@ vocabulary:
     tags:
       - clothes
     type: noun
-  - id: clothes_18
+  - id: clothes_26
     hiragana: めがね
     romaji: megane
     meaning: glasses
@@ -602,7 +672,7 @@ vocabulary:
       - clothes
     type: noun
     kanji: 眼鏡
-  - id: clothes_19
+  - id: clothes_27
     hiragana: とけい
     romaji: tokei
     meaning: watch/clock
@@ -611,7 +681,7 @@ vocabulary:
       - clothes
     type: noun
     kanji: 時計
-  - id: clothes_20
+  - id: clothes_28
     hiragana: ネクタイ
     romaji: nekutai
     meaning: tie
@@ -619,7 +689,7 @@ vocabulary:
     tags:
       - clothes
     type: noun
-  - id: clothes_21
+  - id: clothes_29
     hiragana: ベルト
     romaji: beruto
     meaning: belt
@@ -627,7 +697,7 @@ vocabulary:
     tags:
       - clothes
     type: noun
-  - id: clothes_22
+  - id: clothes_30
     hiragana: イヤリング
     romaji: iyaringu
     meaning: earrings
@@ -635,7 +705,7 @@ vocabulary:
     tags:
       - clothes
     type: noun
-  - id: clothes_23
+  - id: clothes_31
     hiragana: てぶくろ
     romaji: tebukuro
     meaning: gloves
@@ -5408,10 +5478,10 @@ categories:
   - vocabulary
 sortOptions:
   - value: hiragana
-    label: Hiragana (A-Z)
+    label: Hiragana (あ→ん)
   - value: romaji
     label: Romaji (A-Z)
   - value: meaning
     label: Meaning (A-Z)
   - value: category
-    label: Category
+    label: Category (A-Z)
