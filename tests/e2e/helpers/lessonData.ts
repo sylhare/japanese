@@ -30,6 +30,7 @@ export const INTRO_LINKS: Lesson[] = [
 export const CONJUGATION_LESSONS: Lesson[] = [
   { name: 'Verb Conjugation Basics', path: 'basics',          heading: /verb conjugation|conjugation/i },
   { name: 'Dictionary Form',         path: 'dictionary-form', heading: /introduction/i },
+  { name: 'Potential Form',          path: 'potential-form',  heading: /potential form|できる/i },
 ];
 
 export const GRAMMAR_LESSONS: Lesson[] = [
