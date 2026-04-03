@@ -408,40 +408,6 @@ function compareIds(idA, idB) {
 }
 
 /**
- * Regenerate IDs to ensure they are unique and incremental per file prefix.
- * @param {Array<Object>} vocabulary - Array of vocabulary items
- * @returns {Array<Object>} Vocabulary items with regenerated IDs (new objects)
- */
-function regenerateIds(vocabulary) {
-  const byPrefix = new Map();
-
-  vocabulary.forEach(item => {
-    const parts = item.id.split('_');
-    const prefix = parts.slice(0, -1).join('_');
-
-    if (!byPrefix.has(prefix)) {
-      byPrefix.set(prefix, []);
-    }
-    byPrefix.get(prefix).push(item);
-  });
-
-  const result = [];
-
-  byPrefix.forEach((items, prefix) => {
-    items.sort((a, b) => compareIds(a.id, b.id));
-
-    items.forEach((item, index) => {
-      result.push({
-        ...item,
-        id: `${prefix}_${index}`,
-      });
-    });
-  });
-
-  return result;
-}
-
-/**
  * Merge extracted vocabulary with existing vocabulary, filtering out particles.
  * This function is idempotent - running it multiple times produces the same result.
  * When duplicates are found (same hiragana-romaji-meaning), tags are merged.
