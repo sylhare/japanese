@@ -108,6 +108,7 @@ export const VOCABULARY_LESSONS: Lesson[] = [
   { name: 'Clothes',     path: 'clothes',     heading: /clothes|wearing/i },
   { name: 'Weather',     path: 'weather',     heading: /weather/i },
   { name: 'Health',      path: 'health',      heading: /health|medical/i },
+  { name: 'Events',     path: 'events',      heading: /events|festivals/i },
 ];
 
 export const VOCABULARY_SECTIONS: LessonSection[] = [

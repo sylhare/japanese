@@ -2631,6 +2631,361 @@ vocabulary:
       - dictionary-form
     type: verb
     kanji: 切る
+  - id: events_0
+    hiragana: まつり
+    romaji: matsuri
+    meaning: festival
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 祭り
+  - id: events_1
+    hiragana: はなび
+    romaji: hanabi
+    meaning: fireworks
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 花火
+  - id: events_2
+    hiragana: えんげき
+    romaji: engeki
+    meaning: 'theater, play'
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 演劇
+  - id: events_3
+    hiragana: てんらんかい
+    romaji: tenrankai
+    meaning: exhibition
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 展覧会
+  - id: events_4
+    hiragana: しき
+    romaji: shiki
+    meaning: ceremony
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 式
+  - id: events_5
+    hiragana: おどり
+    romaji: odori
+    meaning: dance
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 踊り
+  - id: events_6
+    hiragana: ぼんおどり
+    romaji: bon odori
+    meaning: Bon dance
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 盆踊り
+  - id: events_7
+    hiragana: さつえい
+    romaji: satsuei
+    meaning: 'filming, photography'
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 撮影
+  - id: events_8
+    hiragana: じかい
+    romaji: jikai
+    meaning: 'next time, next session'
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 次回
+  - id: events_9
+    hiragana: ばしょ
+    romaji: basho
+    meaning: 'place, location'
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 場所
+  - id: events_10
+    hiragana: ひろば
+    romaji: hiroba
+    meaning: 'plaza, square'
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 広場
+  - id: events_11
+    hiragana: かいじょう
+    romaji: kaijou
+    meaning: venue
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 会場
+  - id: events_12
+    hiragana: はなびたいかい
+    romaji: hanabi taikai
+    meaning: fireworks festival
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 花火大会
+  - id: events_13
+    hiragana: ホール
+    romaji: hooru
+    meaning: hall
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+  - id: events_14
+    hiragana: うけつけ
+    romaji: uketsuke
+    meaning: 'reception, front desk'
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 受付
+  - id: events_15
+    hiragana: いりぐち
+    romaji: iriguchi
+    meaning: entrance
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 入口
+  - id: events_16
+    hiragana: でぐち
+    romaji: deguchi
+    meaning: exit
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 出口
+  - id: events_17
+    hiragana: さんかする
+    romaji: sanka suru
+    meaning: to participate
+    category: vocabulary
+    tags:
+      - events
+    type: verb
+    kanji: 参加する
+  - id: events_18
+    hiragana: おどる
+    romaji: odoru
+    meaning: to dance
+    category: vocabulary
+    tags:
+      - events
+    type: verb
+    kanji: 踊る
+  - id: events_19
+    hiragana: もよおす
+    romaji: moyoosu
+    meaning: to hold (an event)
+    category: vocabulary
+    tags:
+      - events
+    type: verb
+    kanji: 催す
+  - id: events_20
+    hiragana: あつまる
+    romaji: atsumaru
+    meaning: 'to gather, to meet up'
+    category: vocabulary
+    tags:
+      - events
+    type: verb
+    kanji: 集まる
+  - id: events_21
+    hiragana: てつだう
+    romaji: tetsudau
+    meaning: 'to help, to assist'
+    category: vocabulary
+    tags:
+      - events
+    type: verb
+    kanji: 手伝う
+  - id: events_22
+    hiragana: じゅんびする
+    romaji: junbi suru
+    meaning: to prepare
+    category: vocabulary
+    tags:
+      - events
+    type: verb
+    kanji: 準備する
+  - id: events_23
+    hiragana: やたい
+    romaji: yatai
+    meaning: food stall
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 屋台
+  - id: events_24
+    hiragana: ほんやくする
+    romaji: honyaku suru
+    meaning: to translate
+    category: vocabulary
+    tags:
+      - events
+    type: verb
+    kanji: 翻訳する
+  - id: events_25
+    hiragana: あんないする
+    romaji: annai suru
+    meaning: 'to guide, to show around'
+    category: vocabulary
+    tags:
+      - events
+    type: verb
+    kanji: 案内する
+  - id: events_26
+    hiragana: ボランティア
+    romaji: borantia
+    meaning: 'volunteering, volunteer'
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+  - id: events_27
+    hiragana: かつどう
+    romaji: katsudou
+    meaning: activity
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 活動
+  - id: events_28
+    hiragana: ちいき
+    romaji: chiiki
+    meaning: 'community, local area'
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 地域
+  - id: events_29
+    hiragana: きふ
+    romaji: kifu
+    meaning: donation
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 寄付
+  - id: events_30
+    hiragana: かた
+    romaji: kata
+    meaning: way (of doing something)
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 方
+  - id: events_31
+    hiragana: じしん
+    romaji: jishin
+    meaning: confidence
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 自信
+  - id: events_32
+    hiragana: ボランティアする
+    romaji: borantia suru
+    meaning: to volunteer
+    category: vocabulary
+    tags:
+      - events
+    type: verb
+  - id: events_33
+    hiragana: きふする
+    romaji: kifu suru
+    meaning: to donate
+    category: vocabulary
+    tags:
+      - events
+    type: verb
+    kanji: 寄付する
+  - id: events_34
+    hiragana: みこし
+    romaji: mikoshi
+    meaning: portable shrine
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 神輿
+  - id: events_35
+    hiragana: ゆかた
+    romaji: yukata
+    meaning: summer kimono
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 浴衣
+  - id: events_36
+    hiragana: イベント
+    romaji: ibento
+    meaning: event
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+  - id: events_37
+    hiragana: たいかい
+    romaji: taikai
+    meaning: 'competition, tournament'
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 大会
+  - id: events_38
+    hiragana: しあい
+    romaji: shiai
+    meaning: 'match, game'
+    category: vocabulary
+    tags:
+      - events
+    type: noun
+    kanji: 試合
+  - id: events_39
+    hiragana: コンサート
+    romaji: konsaato
+    meaning: concert
+    category: vocabulary
+    tags:
+      - events
+    type: noun
   - id: excess_0
     hiragana: '[verb stem] + すぎる'
     romaji: sugiru
