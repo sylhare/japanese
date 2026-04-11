@@ -109,6 +109,7 @@ export const VOCABULARY_LESSONS: Lesson[] = [
   { name: 'Weather',     path: 'weather',     heading: /weather/i },
   { name: 'Health',      path: 'health',      heading: /health|medical/i },
   { name: 'Events',     path: 'events',      heading: /events|festivals/i },
+  { name: 'Travel',     path: 'travel',      heading: /travel|tourism/i },
 ];
 
 export const VOCABULARY_SECTIONS: LessonSection[] = [

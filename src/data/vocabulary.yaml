@@ -5803,6 +5803,438 @@ vocabulary:
       - tastes
     type: い-adjective
     kanji: 柔らかい
+  - id: travel_0
+    hiragana: しぜん
+    romaji: shizen
+    meaning: nature
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 自然
+  - id: travel_1
+    hiragana: けしき
+    romaji: keshiki
+    meaning: 'landscape, scenery'
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 景色
+  - id: travel_2
+    hiragana: ビーチ
+    romaji: biichi
+    meaning: beach
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+  - id: travel_3
+    hiragana: すなはま
+    romaji: sunahama
+    meaning: sandy beach
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 砂浜
+  - id: travel_4
+    hiragana: たいよう
+    romaji: taiyou
+    meaning: sun
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 太陽
+  - id: travel_5
+    hiragana: か
+    romaji: ka
+    meaning: mosquito
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 蚊
+  - id: travel_6
+    hiragana: ぶんか
+    romaji: bunka
+    meaning: culture
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 文化
+  - id: travel_7
+    hiragana: かんこう
+    romaji: kankou
+    meaning: 'sightseeing, tourism'
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 観光
+  - id: travel_8
+    hiragana: かんこうち
+    romaji: kankouchi
+    meaning: tourist spot
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 観光地
+  - id: travel_9
+    hiragana: めいしょ
+    romaji: meisho
+    meaning: famous place
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 名所
+  - id: travel_10
+    hiragana: おてら
+    romaji: otera
+    meaning: temple (Buddhist)
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: お寺
+  - id: travel_11
+    hiragana: じんじゃ
+    romaji: jinja
+    meaning: shrine (Shinto)
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 神社
+  - id: travel_12
+    hiragana: やま
+    romaji: yama
+    meaning: mountain
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 山
+  - id: travel_13
+    hiragana: おしろ
+    romaji: oshiro
+    meaning: castle
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: お城
+  - id: travel_14
+    hiragana: はくぶつかん
+    romaji: hakubutsukan
+    meaning: museum
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 博物館
+  - id: travel_15
+    hiragana: びじゅつかん
+    romaji: bijutsukan
+    meaning: art museum
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 美術館
+  - id: travel_16
+    hiragana: ハイキング
+    romaji: haikingu
+    meaning: hiking
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+  - id: travel_17
+    hiragana: キャンプ
+    romaji: kyanpu
+    meaning: camping
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+  - id: travel_18
+    hiragana: シュノーケリング
+    romaji: shunookeringu
+    meaning: snorkeling
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+  - id: travel_19
+    hiragana: ダイビング
+    romaji: daibingu
+    meaning: diving
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+  - id: travel_20
+    hiragana: つり
+    romaji: tsuri
+    meaning: fishing
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 釣り
+  - id: travel_21
+    hiragana: おんせん
+    romaji: onsen
+    meaning: hot spring
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 温泉
+  - id: travel_22
+    hiragana: さんぽ
+    romaji: sanpo
+    meaning: 'walk, stroll'
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 散歩
+  - id: travel_23
+    hiragana: うみ
+    romaji: umi
+    meaning: 'sea, ocean'
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 海
+  - id: travel_24
+    hiragana: のぼる
+    romaji: noboru
+    meaning: to climb
+    category: vocabulary
+    tags:
+      - travel
+    type: verb
+    kanji: 登る
+  - id: travel_25
+    hiragana: およぐ
+    romaji: oyogu
+    meaning: to swim
+    category: vocabulary
+    tags:
+      - travel
+    type: verb
+    kanji: 泳ぐ
+  - id: travel_26
+    hiragana: さんぽする
+    romaji: sanpo suru
+    meaning: to take a walk
+    category: vocabulary
+    tags:
+      - travel
+    type: verb
+    kanji: 散歩する
+  - id: travel_27
+    hiragana: よやく
+    romaji: yoyaku
+    meaning: reservation
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 予約
+  - id: travel_28
+    hiragana: ホテル
+    romaji: hoteru
+    meaning: hotel
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+  - id: travel_29
+    hiragana: りょかん
+    romaji: ryokan
+    meaning: traditional Japanese inn
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 旅館
+  - id: travel_30
+    hiragana: レンタカー
+    romaji: rentakaa
+    meaning: rental car
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+  - id: travel_31
+    hiragana: ツアー
+    romaji: tsuaa
+    meaning: tour
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+  - id: travel_32
+    hiragana: にもつ
+    romaji: nimotsu
+    meaning: 'luggage, baggage'
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 荷物
+  - id: travel_33
+    hiragana: パスポート
+    romaji: pasupooto
+    meaning: passport
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+  - id: travel_34
+    hiragana: かわ
+    romaji: kawa
+    meaning: river
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 川
+  - id: travel_35
+    hiragana: よやくする
+    romaji: yoyaku suru
+    meaning: 'to reserve, to book'
+    category: vocabulary
+    tags:
+      - travel
+    type: verb
+    kanji: 予約する
+  - id: travel_36
+    hiragana: かりる
+    romaji: kariru
+    meaning: 'to rent, to borrow'
+    category: vocabulary
+    tags:
+      - travel
+    type: verb
+    kanji: 借りる
+  - id: travel_37
+    hiragana: とまる
+    romaji: tomaru
+    meaning: to stay (overnight)
+    category: vocabulary
+    tags:
+      - travel
+    type: verb
+    kanji: 泊まる
+  - id: travel_38
+    hiragana: にぎやか
+    romaji: nigiyaka
+    meaning: 'lively, bustling'
+    category: vocabulary
+    tags:
+      - travel
+    type: な-adjective
+    kanji: 賑やか
+  - id: travel_39
+    hiragana: しずか
+    romaji: shizuka
+    meaning: 'quiet, peaceful'
+    category: vocabulary
+    tags:
+      - travel
+    type: な-adjective
+    kanji: 静か
+  - id: travel_40
+    hiragana: こんでいる
+    romaji: konde iru
+    meaning: crowded
+    category: vocabulary
+    tags:
+      - travel
+    type: verb
+    kanji: 混んでいる
+  - id: travel_41
+    hiragana: すいている
+    romaji: suite iru
+    meaning: 'empty, not crowded'
+    category: vocabulary
+    tags:
+      - travel
+    type: verb
+    kanji: 空いている
+  - id: travel_42
+    hiragana: ゆうめい
+    romaji: yuumei
+    meaning: famous
+    category: vocabulary
+    tags:
+      - travel
+    type: な-adjective
+    kanji: 有名
+  - id: travel_43
+    hiragana: きれい
+    romaji: kirei
+    meaning: 'beautiful, clean'
+    category: vocabulary
+    tags:
+      - travel
+    type: な-adjective
+    kanji: 綺麗
+  - id: travel_44
+    hiragana: みずうみ
+    romaji: mizuumi
+    meaning: lake
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 湖
+  - id: travel_45
+    hiragana: もり
+    romaji: mori
+    meaning: forest
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 森
+  - id: travel_46
+    hiragana: はやし
+    romaji: hayashi
+    meaning: 'grove, woods'
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 林
+  - id: travel_47
+    hiragana: たき
+    romaji: taki
+    meaning: waterfall
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 滝
+  - id: travel_48
+    hiragana: しま
+    romaji: shima
+    meaning: island
+    category: vocabulary
+    tags:
+      - travel
+    type: noun
+    kanji: 島
   - id: weather_0
     hiragana: てんき
     romaji: tenki
