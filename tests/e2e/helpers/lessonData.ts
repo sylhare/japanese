@@ -53,6 +53,7 @@ export const GRAMMAR_SECTIONS: LessonSection[] = [
       { name: 'Particle Guide',  path: 'particle-guide', heading: /particle/i },
       { name: 'Conjunctions',    path: 'conjunctions',   heading: /listing items|conjunctions/i },
       { name: 'Question Words',  path: 'question-words', heading: /question words/i },
+      { name: 'Indirect Questions', path: 'indirect-questions', heading: /indirect questions/i },
     ],
   },
   {
