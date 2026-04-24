@@ -5,6 +5,8 @@ description: Learn how to read and group Japanese numbers
 tags: [numbers, counting, basics]
 ---
 
+import NextSteps from '@site/src/components/NextSteps';
+
 # Reading Numbers
 
 Learn how to read any number in Japanese, including sound changes and the unique 4-digit grouping system.
@@ -186,8 +188,20 @@ Read as: **せん にひゃく まん**
 
 
 
-## Next Steps
-
-Once you're comfortable reading numbers, check out:
-- **Counters** - Learn frequency expressions like "once a week"
-- **Dates and Calendar** - Apply numbers to dates with special exceptions
+<NextSteps items={[
+  {
+    title: 'Frequency Counters',
+    description: 'Learn frequency expressions like "once a week"',
+    to: '../time/frequency',
+  },
+  {
+    title: 'Duration Counters',
+    description: 'Learn to count days, weeks, months, and years',
+    to: '../time/date-counters',
+  },
+  {
+    title: 'Calendar and Dates',
+    description: 'Apply numbers to dates with special exceptions',
+    to: '../time/calendar',
+  },
+]} />
