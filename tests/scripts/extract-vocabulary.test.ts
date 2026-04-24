@@ -226,6 +226,36 @@ describe('Vocabulary Extraction', () => {
       });
     });
 
+    it('should extract vocabulary from .mdx files', () => {
+      const vocabulary = extractVocabularyFromFile(path.join(fixturesDir, 'food-basics.mdx'));
+
+      expect(vocabulary).toHaveLength(3);
+      expect(vocabulary.map(i => i.hiragana)).toContain('あじ');
+      expect(vocabulary.map(i => i.hiragana)).toContain('たべもの');
+      expect(vocabulary.map(i => i.hiragana)).toContain('のみもの');
+    });
+
+    it('should use the filename without extension for IDs in .mdx files', () => {
+      const vocabulary = extractVocabularyFromFile(path.join(fixturesDir, 'food-basics.mdx'));
+
+      vocabulary.forEach(item => {
+        expect(item.id).toMatch(/^foodbasics_\d+$/);
+        expect(item.id).not.toMatch(/foodbasicsx_/);
+      });
+      expect(vocabulary[0].id).toBe('foodbasics_0');
+      expect(vocabulary[1].id).toBe('foodbasics_1');
+      expect(vocabulary[2].id).toBe('foodbasics_2');
+    });
+
+    it('should use the filename without extension for tags in .mdx files', () => {
+      const vocabulary = extractVocabularyFromFile(path.join(fixturesDir, 'food-basics.mdx'));
+
+      vocabulary.forEach(item => {
+        expect(item.tags).toContain('food-basics');
+        expect(item.tags).not.toContain('food-basicsx');
+      });
+    });
+
     it('should remove leading numbers from meanings (e.g., "8️⃣ August" becomes "August")', () => {
       const testFile = path.join(fixturesDir, 'time-with-emojis.md');
       const vocabulary = extractVocabularyFromFile(testFile);
@@ -525,7 +555,8 @@ describe('Vocabulary Extraction', () => {
       ], { categories: ['colors', 'grammar'] });
 
       const extracted = createTestVocabularyData([
-        createBlueItem({ id: 'extracted_0', tags: ['colors'] }),
+        createTestVocabularyItem({ id: 'extracted_0', tags: ['colors'] }),
+        createBlueItem({ id: 'extracted_1', tags: ['colors'] }),
       ], { categories: ['colors'] });
 
       const merged = mergeVocabulary(existing, extracted);
@@ -569,6 +600,7 @@ describe('Vocabulary Extraction', () => {
 
       const extracted = createTestVocabularyData([
         createTestVocabularyItem({ id: 'colors_0', tags: ['colors'] }),
+        createBlueItem({ id: 'colors_0', tags: ['colors'] }),
         createTestVocabularyItem({ id: 'colors_1', hiragana: 'みどり', romaji: 'midori', meaning: 'green', tags: ['colors'] }),
       ], { categories: ['vocabulary'] });
 
@@ -601,7 +633,10 @@ describe('Vocabulary Extraction', () => {
 
       it('should allow different words with same hiragana but different meaning', () => {
         const existing = createTestVocabularyData([createTestVocabularyItem({ id: 'existing_0', tags: ['colors'] })], { categories: ['colors'] });
-        const extracted = createTestVocabularyData([createTestVocabularyItem({ id: 'extracted_0', meaning: 'bright', category: 'vocabulary', tags: ['colors'] })], { categories: ['vocabulary'] });
+        const extracted = createTestVocabularyData([
+          createTestVocabularyItem({ id: 'extracted_0', tags: ['colors'] }),
+          createTestVocabularyItem({ id: 'extracted_1', meaning: 'bright', category: 'vocabulary', tags: ['colors'] }),
+        ], { categories: ['vocabulary'] });
         const merged = mergeVocabulary(existing, extracted);
 
         expect(merged.vocabulary).toHaveLength(2);
@@ -609,7 +644,10 @@ describe('Vocabulary Extraction', () => {
 
       it('should allow same meaning with different hiragana', () => {
         const existing = createTestVocabularyData([createTestVocabularyItem({ id: 'existing_0', tags: ['colors'] })], { categories: ['colors'] });
-        const extracted = createTestVocabularyData([createTestVocabularyItem({ id: 'extracted_0', hiragana: 'あかい', romaji: 'akai', category: 'vocabulary', tags: ['colors'] })], { categories: ['vocabulary'] });
+        const extracted = createTestVocabularyData([
+          createTestVocabularyItem({ id: 'extracted_0', tags: ['colors'] }),
+          createTestVocabularyItem({ id: 'extracted_1', hiragana: 'あかい', romaji: 'akai', category: 'vocabulary', tags: ['colors'] }),
+        ], { categories: ['vocabulary'] });
         const merged = mergeVocabulary(existing, extracted);
 
         expect(merged.vocabulary).toHaveLength(2);
@@ -710,6 +748,7 @@ describe('Vocabulary Extraction', () => {
         ], { categories: ['colors'] });
         const extracted = createTestVocabularyData([
           createTestVocabularyItem({ id: 'extracted_0', category: 'vocabulary', tags: ['colors'] }),
+          createBlueItem({ id: 'extracted_2', category: 'vocabulary', tags: ['colors'] }),
           createYellowItem({ id: 'extracted_1', category: 'vocabulary', tags: ['colors'] }),
         ], { categories: ['vocabulary'] });
         const merged = mergeVocabulary(existing, extracted);
@@ -733,7 +772,10 @@ describe('Vocabulary Extraction', () => {
 
       it('should handle vocabulary with missing fields gracefully', () => {
         const existing = createTestVocabularyData([createTestVocabularyItem({ id: 'existing_0', tags: ['colors'] })], { categories: ['colors'] });
-        const extracted = createTestVocabularyData([createTestVocabularyItem({ id: 'extracted_0', hiragana: '', category: 'vocabulary', tags: ['colors'] })], { categories: ['vocabulary'] });
+        const extracted = createTestVocabularyData([
+          createTestVocabularyItem({ id: 'extracted_0', tags: ['colors'] }),
+          createTestVocabularyItem({ id: 'extracted_1', hiragana: '', category: 'vocabulary', tags: ['colors'] }),
+        ], { categories: ['vocabulary'] });
         const merged = mergeVocabulary(existing, extracted);
 
         expect(merged.vocabulary).toHaveLength(2);
@@ -764,6 +806,41 @@ describe('Vocabulary Extraction', () => {
       expect(result.vocabulary).toHaveLength(9);
       expect(result.categories).toContain('vocabulary');
       expect(result.sortOptions).toHaveLength(4);
+    });
+
+    it('should scan .mdx files alongside .md files', () => {
+      const testLessonsDir = path.join(__dirname, 'test-lessons-mdx');
+      const testVocabDir = path.join(testLessonsDir, 'vocabulary');
+
+      fs.mkdirSync(testVocabDir, { recursive: true });
+
+      fs.copyFileSync(
+        path.join(fixturesDir, 'basic-colors.md'),
+        path.join(testVocabDir, 'colors.md'),
+      );
+      fs.copyFileSync(
+        path.join(fixturesDir, 'food-basics.mdx'),
+        path.join(testVocabDir, 'food-basics.mdx'),
+      );
+
+      process.env.TEST_LESSONS_DIR = testLessonsDir;
+
+      const result = scanAllLessons();
+
+      // 5 from basic-colors.md + 3 from food-basics.mdx
+      expect(result.vocabulary).toHaveLength(8);
+
+      const hiraganaList = result.vocabulary.map(i => i.hiragana);
+      expect(hiraganaList).toContain('あか');
+      expect(hiraganaList).toContain('あじ');
+
+      // .mdx items should have clean tags (no trailing 'x')
+      const ajiItem = result.vocabulary.find(i => i.hiragana === 'あじ');
+      expect(ajiItem?.tags).toContain('food-basics');
+      expect(ajiItem?.tags).not.toContain('food-basicsx');
+      expect(ajiItem?.id).toMatch(/^foodbasics_\d+$/);
+
+      fs.rmSync(testLessonsDir, { recursive: true });
     });
 
     it('should return consistently ordered results across multiple calls', () => {
@@ -844,6 +921,15 @@ describe('Vocabulary Extraction', () => {
           romaji: 'aka',
           meaning: 'red',
           type: 'い-adjective',
+          category: 'vocabulary',
+          tags: ['colors'],
+        }),
+        createTestVocabularyItem({
+          id: 'colors_1',
+          hiragana: 'テスト',
+          romaji: 'tesuto',
+          meaning: 'test',
+          type: 'noun',
           category: 'vocabulary',
           tags: ['colors'],
         }),

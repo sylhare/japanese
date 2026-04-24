@@ -269,7 +269,7 @@ function extractFromTable(tableContent, filePath, startIndex = 0) {
       continue;
     }
 
-    const fileId = path.basename(filePath, '.md').replace(/[^a-zA-Z0-9]/g, '');
+    const fileId = path.basename(filePath).replace(/\.mdx?$/, '').replace(/[^a-zA-Z0-9]/g, '');
     const id = `${fileId}_${itemIndex}`;
 
     let category = 'general';
@@ -283,7 +283,7 @@ function extractFromTable(tableContent, filePath, startIndex = 0) {
     }
 
     const tags = [];
-    const lessonName = path.basename(filePath, '.md');
+    const lessonName = path.basename(filePath).replace(/\.mdx?$/, '');
     tags.push(lessonName);
 
     const item = {
@@ -333,7 +333,7 @@ function scanAllLessons() {
 
       if (stat.isDirectory()) {
         scanDirectory(filePath);
-      } else if (file.endsWith('.md')) {
+      } else if (file.endsWith('.md') || file.endsWith('.mdx')) {
         const lessonVocabulary = extractVocabularyFromFile(filePath);
         vocabulary.push(...lessonVocabulary);
 
@@ -473,12 +473,12 @@ function mergeVocabulary(existing, extracted) {
   existing.vocabulary.forEach(mergeItem);
   extracted.vocabulary.forEach(mergeItem);
 
-  const activeLessonTags = new Set(extracted.vocabulary.flatMap(item => item.tags));
+  const extractedKeys = new Set(extracted.vocabulary.map(contentKeyFor));
 
   const allCategories = new Set([...existing.categories, ...extracted.categories]);
 
   const mergedVocabulary = Array.from(contentMap.values())
-    .filter(item => item.tags.length === 0 || item.tags.some(tag => activeLessonTags.has(tag)))
+    .filter(item => item.tags.length === 0 || extractedKeys.has(contentKeyFor(item)))
     .sort((a, b) => compareIds(a.id, b.id));
 
   return {
