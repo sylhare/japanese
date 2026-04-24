@@ -446,28 +446,10 @@ vocabulary:
       - clothes
     type: verb
     kanji: 着る
-  - id: clothes_1
-    hiragana: きる
-    romaji: kiru
-    meaning: wear ( upper body)
-    category: vocabulary
-    tags:
-      - clothes
-    type: verb
-    kanji: 着る
   - id: clothes_2
     hiragana: はく
     romaji: haku
     meaning: 'wear (lower body, shoes)'
-    category: vocabulary
-    tags:
-      - clothes
-    type: verb
-    kanji: 履く
-  - id: clothes_3
-    hiragana: はく
-    romaji: haku
-    meaning: 'wear ( lower body, shoes)'
     category: vocabulary
     tags:
       - clothes
@@ -482,28 +464,10 @@ vocabulary:
       - clothes
     type: verb
     kanji: 被る
-  - id: clothes_5
-    hiragana: かぶる
-    romaji: kaburu
-    meaning: wear ( head)
-    category: vocabulary
-    tags:
-      - clothes
-    type: verb
-    kanji: 被る
   - id: clothes_6
     hiragana: かける
     romaji: kakeru
     meaning: 'wear (glasses, headphones)'
-    category: vocabulary
-    tags:
-      - clothes
-    type: verb
-    kanji: 掛ける
-  - id: clothes_7
-    hiragana: かける
-    romaji: kakeru
-    meaning: 'wear ( glasses, headphones)'
     category: vocabulary
     tags:
       - clothes
@@ -518,28 +482,10 @@ vocabulary:
       - clothes
     type: verb
     kanji: 付ける
-  - id: clothes_9
-    hiragana: つける
-    romaji: tsukeru
-    meaning: wear ( small items)
-    category: vocabulary
-    tags:
-      - clothes
-    type: verb
-    kanji: 付ける
   - id: clothes_10
     hiragana: しめる
     romaji: shimeru
     meaning: wear (belt/tie)
-    category: vocabulary
-    tags:
-      - clothes
-    type: verb
-    kanji: 締める
-  - id: clothes_11
-    hiragana: しめる
-    romaji: shimeru
-    meaning: wear ( belt/tie)
     category: vocabulary
     tags:
       - clothes
@@ -553,26 +499,10 @@ vocabulary:
     tags:
       - clothes
     type: verb
-  - id: clothes_13
-    hiragana: はめる
-    romaji: hameru
-    meaning: 'wear ( gloves, rings)'
-    category: vocabulary
-    tags:
-      - clothes
-    type: verb
   - id: clothes_14
     hiragana: する
     romaji: suru
     meaning: wear/do (accessories)
-    category: vocabulary
-    tags:
-      - clothes
-    type: verb
-  - id: clothes_15
-    hiragana: する
-    romaji: suru
-    meaning: wear/do ( accessories)
     category: vocabulary
     tags:
       - clothes
@@ -715,6 +645,33 @@ vocabulary:
       - weather
     type: noun
     kanji: 手袋
+  - id: clothes_32
+    hiragana: しめる
+    romaji: shimeru
+    meaning: wear (tie)
+    category: vocabulary
+    tags:
+      - clothes
+    type: verb
+    kanji: 締める
+  - id: clothes_33
+    hiragana: しめる
+    romaji: shimeru
+    meaning: wear (belt)
+    category: vocabulary
+    tags:
+      - clothes
+    type: verb
+    kanji: 締める
+  - id: clothes_34
+    hiragana: はく
+    romaji: haku
+    meaning: wear (lower body / shoes)
+    category: vocabulary
+    tags:
+      - clothes
+    type: verb
+    kanji: 履く
   - id: colors_0
     hiragana: いろ
     romaji: iro
@@ -1739,6 +1696,240 @@ vocabulary:
     tags:
       - counting
     type: unknown
+  - id: datecounters_0
+    hiragana: いちにち
+    romaji: ichinichi
+    meaning: day
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 一日
+  - id: datecounters_1
+    hiragana: ふつか
+    romaji: futsuka
+    meaning: days
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 二日
+  - id: datecounters_2
+    hiragana: じゅうよっか
+    romaji: juuyokka
+    meaning: days
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 十四日
+  - id: datecounters_3
+    hiragana: はつか
+    romaji: hatsuka
+    meaning: days
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 二十日
+  - id: datecounters_4
+    hiragana: いっしゅうかん
+    romaji: isshuukan
+    meaning: week
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 一週間
+  - id: datecounters_5
+    hiragana: にしゅうかん
+    romaji: nishuukan
+    meaning: weeks
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 二週間
+  - id: datecounters_6
+    hiragana: さんしゅうかん
+    romaji: sanshuukan
+    meaning: weeks
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 三週間
+  - id: datecounters_7
+    hiragana: よんしゅうかん
+    romaji: yonshuukan
+    meaning: weeks
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 四週間
+  - id: datecounters_8
+    hiragana: いっかげつ
+    romaji: ikkagetsu
+    meaning: month
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 一ヶ月
+  - id: datecounters_9
+    hiragana: にかげつ
+    romaji: nikagetsu
+    meaning: months
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 二ヶ月
+  - id: datecounters_10
+    hiragana: さんかげつ
+    romaji: sankagetsu
+    meaning: months
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 三ヶ月
+  - id: datecounters_11
+    hiragana: ろっかげつ
+    romaji: rokkagetsu
+    meaning: months
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 六ヶ月
+  - id: datecounters_12
+    hiragana: みっか
+    romaji: mikka
+    meaning: days
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 三日
+  - id: datecounters_13
+    hiragana: はっかげつ
+    romaji: hakkagetsu
+    meaning: months
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 八ヶ月
+  - id: datecounters_14
+    hiragana: じゅっかげつ
+    romaji: jukkagetsu
+    meaning: months
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 十ヶ月
+  - id: datecounters_15
+    hiragana: いちねん
+    romaji: ichinen
+    meaning: year
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 一年
+  - id: datecounters_16
+    hiragana: にねん
+    romaji: ninen
+    meaning: years
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 二年
+  - id: datecounters_17
+    hiragana: さんねん
+    romaji: sannen
+    meaning: years
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 三年
+  - id: datecounters_18
+    hiragana: じゅうねん
+    romaji: juunen
+    meaning: years
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 十年
+  - id: datecounters_19
+    hiragana: よっか
+    romaji: yokka
+    meaning: days
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 四日
+  - id: datecounters_20
+    hiragana: いつか
+    romaji: itsuka
+    meaning: days
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 五日
+  - id: datecounters_21
+    hiragana: むいか
+    romaji: muika
+    meaning: days
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 六日
+  - id: datecounters_22
+    hiragana: なのか
+    romaji: nanoka
+    meaning: days
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 七日
+  - id: datecounters_23
+    hiragana: ようか
+    romaji: youka
+    meaning: days
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 八日
+  - id: datecounters_24
+    hiragana: ここのか
+    romaji: kokonoka
+    meaning: days
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 九日
+  - id: datecounters_25
+    hiragana: とおか
+    romaji: tooka
+    meaning: days
+    category: time
+    tags:
+      - date-counters
+    type: counter
+    kanji: 十日
   - id: daysandweeks_0
     hiragana: げつようび
     romaji: getsuyoubi
@@ -3233,6 +3424,96 @@ vocabulary:
       - food
     type: noun
     kanji: 持ち帰り
+  - id: frequency_0
+    hiragana: いっかい
+    romaji: ikkai
+    meaning: once
+    category: time
+    tags:
+      - frequency
+    type: counter
+    kanji: 一回
+  - id: frequency_1
+    hiragana: にかい
+    romaji: nikai
+    meaning: twice
+    category: time
+    tags:
+      - frequency
+    type: counter
+    kanji: 二回
+  - id: frequency_2
+    hiragana: さんかい
+    romaji: sankai
+    meaning: three times
+    category: time
+    tags:
+      - frequency
+    type: counter
+    kanji: 三回
+  - id: frequency_3
+    hiragana: よんかい
+    romaji: yonkai
+    meaning: four times
+    category: time
+    tags:
+      - frequency
+    type: counter
+    kanji: 四回
+  - id: frequency_4
+    hiragana: ごかい
+    romaji: gokai
+    meaning: five times
+    category: time
+    tags:
+      - frequency
+    type: counter
+    kanji: 五回
+  - id: frequency_5
+    hiragana: ろっかい
+    romaji: rokkai
+    meaning: six times
+    category: time
+    tags:
+      - frequency
+    type: counter
+    kanji: 六回
+  - id: frequency_6
+    hiragana: ななかい
+    romaji: nanakai
+    meaning: seven times
+    category: time
+    tags:
+      - frequency
+    type: counter
+    kanji: 七回
+  - id: frequency_7
+    hiragana: はっかい
+    romaji: hakkai
+    meaning: eight times
+    category: time
+    tags:
+      - frequency
+    type: counter
+    kanji: 八回
+  - id: frequency_8
+    hiragana: きゅうかい
+    romaji: kyuukai
+    meaning: nine times
+    category: time
+    tags:
+      - frequency
+    type: counter
+    kanji: 九回
+  - id: frequency_9
+    hiragana: じゅっかい
+    romaji: jukkai
+    meaning: ten times
+    category: time
+    tags:
+      - frequency
+    type: counter
+    kanji: 十回
   - id: health_0
     hiragana: くしゃみ
     romaji: kushami
@@ -3991,6 +4272,15 @@ vocabulary:
     tags:
       - linking-words
     type: expression
+  - id: linkingwords_31
+    hiragana: そのほか
+    romaji: sonohoka
+    meaning: 'other, the rest, etc.'
+    category: grammar
+    tags:
+      - linking-words
+    type: expression
+    kanji: その他
   - id: obligation_0
     hiragana: '[verb ない without い] + なければ いけない'
     romaji: nakereba ikenai
