@@ -437,6 +437,114 @@ vocabulary:
     tags:
       - appearance
     type: expression
+  - id: basics_0
+    hiragana: よん/し
+    romaji: yon/shi
+    meaning: four
+    category: numbers
+    tags:
+      - basics
+    type: noun
+    kanji: 四
+  - id: basics_1
+    hiragana: なな/しち
+    romaji: nana/shichi
+    meaning: seven
+    category: numbers
+    tags:
+      - basics
+    type: noun
+    kanji: 七
+  - id: basics_2
+    hiragana: きゅう/く
+    romaji: kyuu/ku
+    meaning: nine
+    category: numbers
+    tags:
+      - basics
+    type: noun
+    kanji: 九
+  - id: basics_3
+    hiragana: ひゃく
+    romaji: hyaku
+    meaning: hundred
+    category: numbers
+    tags:
+      - basics
+    type: noun
+    kanji: 百
+  - id: basics_4
+    hiragana: おく
+    romaji: oku
+    meaning: hundred million
+    category: numbers
+    tags:
+      - basics
+    type: noun
+    kanji: 億
+  - id: basics_5
+    hiragana: ちょう
+    romaji: chou
+    meaning: trillion
+    category: numbers
+    tags:
+      - basics
+    type: noun
+    kanji: 兆
+  - id: calendar_0
+    hiragana: ことし
+    romaji: kotoshi
+    meaning: this year
+    category: time
+    tags:
+      - calendar
+    type: noun
+    kanji: 今年
+  - id: calendar_1
+    hiragana: きょねん
+    romaji: kyonen
+    meaning: last year
+    category: time
+    tags:
+      - calendar
+    type: noun
+    kanji: 去年
+  - id: calendar_2
+    hiragana: らいねん
+    romaji: rainen
+    meaning: next year
+    category: time
+    tags:
+      - calendar
+    type: noun
+    kanji: 来年
+  - id: calendar_3
+    hiragana: まいとし
+    romaji: maitoshi
+    meaning: every year
+    category: time
+    tags:
+      - calendar
+    type: noun
+    kanji: 毎年
+  - id: calendar_4
+    hiragana: いちねんじゅう
+    romaji: ichinenjuu
+    meaning: all year (long)
+    category: time
+    tags:
+      - calendar
+    type: noun
+    kanji: 一年中
+  - id: calendar_5
+    hiragana: ねん
+    romaji: nen
+    meaning: year
+    category: time
+    tags:
+      - calendar
+    type: noun
+    kanji: 年
   - id: clothes_0
     hiragana: きる
     romaji: kiru
@@ -446,15 +554,6 @@ vocabulary:
       - clothes
     type: verb
     kanji: 着る
-  - id: clothes_2
-    hiragana: はく
-    romaji: haku
-    meaning: 'wear (lower body, shoes)'
-    category: vocabulary
-    tags:
-      - clothes
-    type: verb
-    kanji: 履く
   - id: clothes_4
     hiragana: かぶる
     romaji: kaburu
@@ -482,15 +581,6 @@ vocabulary:
       - clothes
     type: verb
     kanji: 付ける
-  - id: clothes_10
-    hiragana: しめる
-    romaji: shimeru
-    meaning: wear (belt/tie)
-    category: vocabulary
-    tags:
-      - clothes
-    type: verb
-    kanji: 締める
   - id: clothes_12
     hiragana: はめる
     romaji: hameru
@@ -815,14 +905,6 @@ vocabulary:
     tags:
       - comparison
     type: expression
-  - id: comparison_2
-    hiragana: はな より だんご
-    romaji: hana yori dango
-    meaning: practicality over beauty
-    category: grammar
-    tags:
-      - comparison
-    type: proverb
   - id: conditional_0
     hiragana: '[clause A] + と + [clause B]'
     romaji: to
@@ -855,6 +937,7 @@ vocabulary:
     meaning: thousand
     category: vocabulary
     tags:
+      - basics
       - confusing-kanji
     type: noun
     kanji: 千
@@ -1053,6 +1136,7 @@ vocabulary:
     meaning: ten thousand
     category: vocabulary
     tags:
+      - basics
       - confusing-kanji
     type: noun
     kanji: 万
@@ -1287,7 +1371,7 @@ vocabulary:
     hiragana: きる
     romaji: kiru
     meaning: cut
-    category: vocabulary
+    category: food
     tags:
       - cooking
     type: verb
@@ -1296,300 +1380,301 @@ vocabulary:
     hiragana: あらう
     romaji: arau
     meaning: wash
-    category: vocabulary
+    category: food
     tags:
       - cooking
     type: verb
     kanji: 洗う
   - id: cooking_2
-    hiragana: かわをむく
-    romaji: kawa o muku
-    meaning: peel
-    category: vocabulary
-    tags:
-      - cooking
-    type: verb
-    kanji: 皮をむく
-  - id: cooking_3
-    hiragana: まぜる
-    romaji: mazeru
-    meaning: mix
-    category: vocabulary
-    tags:
-      - cooking
-    type: verb
-    kanji: 混ぜる
-  - id: cooking_4
-    hiragana: かわる
-    romaji: kawaru
-    meaning: change
-    category: vocabulary
-    tags:
-      - cooking
-    type: verb
-    kanji: 変わる
-  - id: cooking_5
-    hiragana: したくする
-    romaji: shitaku suru
-    meaning: prepare/get ready
-    category: vocabulary
-    tags:
-      - cooking
-    type: verb
-    kanji: 支度する
-  - id: cooking_6
-    hiragana: にる
-    romaji: niru
-    meaning: simmer/boil
-    category: vocabulary
-    tags:
-      - cooking
-    type: verb
-    kanji: 煮る
-  - id: cooking_7
-    hiragana: やく
-    romaji: yaku
-    meaning: grill/bake
-    category: vocabulary
-    tags:
-      - cooking
-    type: verb
-    kanji: 焼く
-  - id: cooking_8
-    hiragana: あぶらであげる
-    romaji: abura de ageru
-    meaning: deep-fry
-    category: vocabulary
-    tags:
-      - cooking
-    type: verb
-    kanji: 油で揚げる
-  - id: cooking_9
-    hiragana: りょうりする
-    romaji: ryouri suru
-    meaning: cook
-    category: vocabulary
-    tags:
-      - cooking
-    type: verb
-    kanji: 料理する
-  - id: cooking_10
     hiragana: もりつける
     romaji: moritsukeru
     meaning: plate/serve (arrange)
-    category: vocabulary
+    category: food
     tags:
       - cooking
     type: verb
     kanji: 盛り付ける
-  - id: cooking_11
+  - id: cooking_3
     hiragana: だす
     romaji: dasu
     meaning: serve/put out
-    category: vocabulary
+    category: food
     tags:
       - cooking
     type: verb
     kanji: 出す
-  - id: cooking_12
-    hiragana: ほうちょう
-    romaji: houchou
-    meaning: kitchen knife
-    category: vocabulary
-    tags:
-      - cooking
-    type: noun
-    kanji: 包丁
-  - id: cooking_13
-    hiragana: まないた
-    romaji: manaita
-    meaning: cutting board
-    category: vocabulary
-    tags:
-      - cooking
-    type: noun
-    kanji: まな板
-  - id: cooking_14
+  - id: cooking_4
     hiragana: つける
     romaji: tsukeru
     meaning: dip (in sauce)
-    category: vocabulary
+    category: food
     tags:
       - cooking
     type: verb
     kanji: 付ける
-  - id: cooking_15
-    hiragana: なべ
-    romaji: nabe
-    meaning: pot
-    category: vocabulary
-    tags:
-      - cooking
-    type: noun
-    kanji: 鍋
-  - id: cooking_16
+  - id: cooking_5
     hiragana: かける
     romaji: kakeru
     meaning: pour over (sauce)
-    category: vocabulary
+    category: food
     tags:
       - cooking
     type: verb
     kanji: 掛ける
-  - id: cooking_17
-    hiragana: フライパン
-    romaji: furaipan
-    meaning: frying pan
-    category: vocabulary
-    tags:
-      - cooking
-    type: noun
-  - id: cooking_18
+  - id: cooking_6
     hiragana: とる
     romaji: toru
     meaning: take/pick up
-    category: vocabulary
+    category: food
     tags:
       - cooking
     type: verb
     kanji: 取る
-  - id: cooking_19
+  - id: cooking_7
+    hiragana: ほうちょう
+    romaji: houchou
+    meaning: kitchen knife
+    category: food
+    tags:
+      - cooking
+    type: noun
+    kanji: 包丁
+  - id: cooking_8
+    hiragana: まないた
+    romaji: manaita
+    meaning: cutting board
+    category: food
+    tags:
+      - cooking
+    type: noun
+    kanji: まな板
+  - id: cooking_9
+    hiragana: なべ
+    romaji: nabe
+    meaning: pot
+    category: food
+    tags:
+      - cooking
+    type: noun
+    kanji: 鍋
+  - id: cooking_10
+    hiragana: フライパン
+    romaji: furaipan
+    meaning: frying pan
+    category: food
+    tags:
+      - cooking
+    type: noun
+  - id: cooking_11
     hiragana: おたま
     romaji: otama
     meaning: ladle
-    category: vocabulary
+    category: food
     tags:
       - cooking
     type: noun
-  - id: cooking_20
-    hiragana: はし
-    romaji: hashi
-    meaning: chopsticks
-    category: vocabulary
+  - id: cooking_12
+    hiragana: かわをむく
+    romaji: kawa o muku
+    meaning: peel
+    category: food
     tags:
       - cooking
-    type: noun
-    kanji: 箸
-  - id: cooking_21
-    hiragana: スプーン
-    romaji: supuun
-    meaning: spoon
-    category: vocabulary
-    tags:
-      - cooking
-    type: noun
-  - id: cooking_22
-    hiragana: フォーク
-    romaji: fooku
-    meaning: fork
-    category: vocabulary
-    tags:
-      - cooking
-    type: noun
-  - id: cooking_23
+    type: verb
+    kanji: 皮をむく
+  - id: cooking_13
     hiragana: おさら
     romaji: osara
     meaning: plate/dish
-    category: vocabulary
+    category: food
     tags:
       - cooking
     type: noun
     kanji: お皿
-  - id: cooking_24
+  - id: cooking_14
     hiragana: おわん
     romaji: owan
     meaning: bowl (soup/rice)
-    category: vocabulary
+    category: food
     tags:
       - cooking
     type: noun
     kanji: お椀
-  - id: cooking_25
+  - id: cooking_15
     hiragana: どんぶり
     romaji: donburi
     meaning: rice bowl
-    category: vocabulary
+    category: food
     tags:
       - cooking
     type: noun
     kanji: 丼
-  - id: cooking_26
+  - id: cooking_16
+    hiragana: はし
+    romaji: hashi
+    meaning: chopsticks
+    category: food
+    tags:
+      - cooking
+    type: noun
+    kanji: 箸
+  - id: cooking_17
+    hiragana: スプーン
+    romaji: supuun
+    meaning: spoon
+    category: food
+    tags:
+      - cooking
+    type: noun
+  - id: cooking_18
+    hiragana: フォーク
+    romaji: fooku
+    meaning: fork
+    category: food
+    tags:
+      - cooking
+    type: noun
+  - id: cooking_19
     hiragana: ざいりょう
     romaji: zairyou
     meaning: ingredients
-    category: vocabulary
+    category: food
     tags:
       - cooking
     type: noun
     kanji: 材料
-  - id: cooking_27
+  - id: cooking_20
     hiragana: てづくり
     romaji: tezukuri
     meaning: handmade/homemade
-    category: vocabulary
+    category: food
     tags:
       - cooking
     type: noun
     kanji: 手作り
-  - id: cooking_28
+  - id: cooking_21
     hiragana: れいとうしょくひん
     romaji: reitou shokuhin
     meaning: frozen food
-    category: vocabulary
+    category: food
     tags:
       - cooking
     type: noun
     kanji: 冷凍食品
-  - id: cooking_29
+  - id: cooking_22
     hiragana: たれ
     romaji: tare
     meaning: dipping sauce
-    category: vocabulary
+    category: food
     tags:
       - cooking
     type: noun
     kanji: タレ
-  - id: cooking_30
+  - id: cooking_23
+    hiragana: かわる
+    romaji: kawaru
+    meaning: change
+    category: food
+    tags:
+      - cooking
+    type: verb
+    kanji: 変わる
+  - id: cooking_24
     hiragana: レシピ
     romaji: reshipi
     meaning: recipe
-    category: vocabulary
+    category: food
     tags:
       - cooking
     type: noun
-  - id: cooking_31
+  - id: cooking_25
     hiragana: ぶんりょう
     romaji: bunryou
     meaning: quantity/amount
-    category: vocabulary
+    category: food
     tags:
       - cooking
     type: noun
     kanji: 分量
-  - id: cooking_32
+  - id: cooking_26
     hiragana: がまん
     romaji: gaman
     meaning: patience
-    category: vocabulary
+    category: food
     tags:
       - cooking
     type: noun
     kanji: 我慢
-  - id: cooking_33
+  - id: cooking_27
     hiragana: かんぱい
     romaji: kanpai
     meaning: cheers (toast)
-    category: vocabulary
+    category: food
     tags:
       - cooking
     type: expression
     kanji: 乾杯
+  - id: cooking_28
+    hiragana: まぜる
+    romaji: mazeru
+    meaning: mix
+    category: food
+    tags:
+      - cooking
+    type: verb
+    kanji: 混ぜる
+  - id: cooking_29
+    hiragana: したくする
+    romaji: shitaku suru
+    meaning: prepare/get ready
+    category: food
+    tags:
+      - cooking
+    type: verb
+    kanji: 支度する
+  - id: cooking_30
+    hiragana: にる
+    romaji: niru
+    meaning: simmer/boil
+    category: food
+    tags:
+      - cooking
+    type: verb
+    kanji: 煮る
+  - id: cooking_31
+    hiragana: やく
+    romaji: yaku
+    meaning: grill/bake
+    category: food
+    tags:
+      - cooking
+    type: verb
+    kanji: 焼く
+  - id: cooking_32
+    hiragana: あぶらであげる
+    romaji: abura de ageru
+    meaning: deep-fry
+    category: food
+    tags:
+      - cooking
+    type: verb
+    kanji: 油で揚げる
+  - id: cooking_33
+    hiragana: りょうりする
+    romaji: ryouri suru
+    meaning: cook
+    category: food
+    tags:
+      - cooking
+    type: verb
+    kanji: 料理する
   - id: counting_0
     hiragana: いち
     romaji: ichi
     meaning: one
     category: numbers
     tags:
+      - basics
       - counting
     type: unknown
   - id: counting_1
@@ -1598,6 +1683,7 @@ vocabulary:
     meaning: two
     category: numbers
     tags:
+      - basics
       - counting
     type: unknown
   - id: counting_2
@@ -1606,6 +1692,7 @@ vocabulary:
     meaning: three
     category: numbers
     tags:
+      - basics
       - counting
     type: unknown
   - id: counting_3
@@ -1614,6 +1701,7 @@ vocabulary:
     meaning: four
     category: numbers
     tags:
+      - basics
       - counting
     type: unknown
   - id: counting_4
@@ -1622,6 +1710,7 @@ vocabulary:
     meaning: five
     category: numbers
     tags:
+      - basics
       - counting
     type: unknown
   - id: counting_5
@@ -1630,6 +1719,7 @@ vocabulary:
     meaning: six
     category: numbers
     tags:
+      - basics
       - counting
     type: unknown
   - id: counting_6
@@ -1638,6 +1728,7 @@ vocabulary:
     meaning: seven
     category: numbers
     tags:
+      - basics
       - counting
     type: unknown
   - id: counting_7
@@ -1646,6 +1737,7 @@ vocabulary:
     meaning: eight
     category: numbers
     tags:
+      - basics
       - counting
     type: unknown
   - id: counting_8
@@ -1654,6 +1746,7 @@ vocabulary:
     meaning: nine
     category: numbers
     tags:
+      - basics
       - counting
     type: unknown
   - id: counting_9
@@ -1662,6 +1755,7 @@ vocabulary:
     meaning: ten
     category: numbers
     tags:
+      - basics
       - counting
     type: unknown
   - id: counting_10
@@ -2766,664 +2860,694 @@ vocabulary:
       - family
     type: noun
     kanji: 夫婦
-  - id: food_0
+  - id: foodandingredients_0
     hiragana: ごはん
     romaji: gohan
     meaning: 'cooked rice, meal'
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: ご飯
-  - id: food_1
+  - id: foodandingredients_1
     hiragana: こめ
     romaji: kome
     meaning: uncooked rice
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 米
-  - id: food_2
-    hiragana: パン
-    romaji: pan
-    meaning: bread
-    category: vocabulary
-    tags:
-      - food
-    type: noun
-  - id: food_3
-    hiragana: めん
-    romaji: men
-    meaning: noodles
-    category: vocabulary
-    tags:
-      - food
-    type: noun
-    kanji: 麺
-  - id: food_4
-    hiragana: うどん
-    romaji: udon
-    meaning: udon noodles
-    category: vocabulary
-    tags:
-      - food
-    type: noun
-    kanji: 饂飩
-  - id: food_5
-    hiragana: そば
-    romaji: soba
-    meaning: soba (buckwheat noodles)
-    category: vocabulary
-    tags:
-      - food
-    type: noun
-    kanji: 蕎麦
-  - id: food_6
-    hiragana: ラーメン
-    romaji: raamen
-    meaning: ramen
-    category: vocabulary
-    tags:
-      - food
-    type: noun
-  - id: food_7
-    hiragana: おかゆ
-    romaji: okayu
-    meaning: 'rice porridge, congee'
-    category: vocabulary
-    tags:
-      - food
-    type: noun
-    kanji: お粥
-  - id: food_8
-    hiragana: にく
-    romaji: niku
-    meaning: meat
-    category: vocabulary
-    tags:
-      - food
-    type: noun
-    kanji: 肉
-  - id: food_9
-    hiragana: ぎゅうにく
-    romaji: gyuuniku
-    meaning: beef
-    category: vocabulary
-    tags:
-      - food
-    type: noun
-    kanji: 牛肉
-  - id: food_10
+  - id: foodandingredients_2
     hiragana: ぶたにく
     romaji: butaniku
     meaning: pork
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 豚肉
-  - id: food_11
+  - id: foodandingredients_3
     hiragana: とりにく
     romaji: toriniku
     meaning: chicken
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 鶏肉
-  - id: food_12
+  - id: foodandingredients_4
     hiragana: さかな
     romaji: sakana
     meaning: fish
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 魚
-  - id: food_13
+  - id: foodandingredients_5
     hiragana: えび
     romaji: ebi
     meaning: 'shrimp, prawn'
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 海老
-  - id: food_14
+  - id: foodandingredients_6
     hiragana: いか
     romaji: ika
     meaning: squid
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 烏賊
-  - id: food_15
+  - id: foodandingredients_7
     hiragana: たこ
     romaji: tako
     meaning: octopus
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 蛸
-  - id: food_16
+  - id: foodandingredients_8
     hiragana: たまご
     romaji: tamago
     meaning: egg
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 卵
-  - id: food_17
+  - id: foodandingredients_9
     hiragana: とうふ
     romaji: toufu
     meaning: tofu
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 豆腐
-  - id: food_18
+  - id: foodandingredients_10
     hiragana: やさい
     romaji: yasai
     meaning: vegetables
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 野菜
-  - id: food_19
+  - id: foodandingredients_11
     hiragana: たまねぎ
     romaji: tamanegi
     meaning: onion
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 玉ねぎ
-  - id: food_20
+  - id: foodandingredients_12
+    hiragana: パン
+    romaji: pan
+    meaning: bread
+    category: food
+    tags:
+      - food-and-ingredients
+    type: noun
+  - id: foodandingredients_13
     hiragana: にんじん
     romaji: ninjin
     meaning: carrot
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 人参
-  - id: food_21
+  - id: foodandingredients_14
     hiragana: じゃがいも
     romaji: jagaimo
     meaning: potato
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: じゃが芋
-  - id: food_22
+  - id: foodandingredients_15
     hiragana: きゅうり
     romaji: kyuuri
     meaning: cucumber
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 胡瓜
-  - id: food_23
+  - id: foodandingredients_16
     hiragana: トマト
     romaji: tomato
     meaning: tomato
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
-  - id: food_24
+  - id: foodandingredients_17
     hiragana: なす
     romaji: nasu
     meaning: 'eggplant, aubergine'
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 茄子
-  - id: food_25
+  - id: foodandingredients_18
     hiragana: キャベツ
     romaji: kyabetsu
     meaning: cabbage
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
-  - id: food_26
+  - id: foodandingredients_19
     hiragana: ほうれんそう
     romaji: hoorensou
     meaning: spinach
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: ほうれん草
-  - id: food_27
+  - id: foodandingredients_20
     hiragana: ねぎ
     romaji: negi
     meaning: 'green onion, leek'
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 葱
-  - id: food_28
+  - id: foodandingredients_21
     hiragana: にんにく
     romaji: ninniku
     meaning: garlic
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 大蒜
-  - id: food_29
+  - id: foodandingredients_22
     hiragana: しょうが
     romaji: shouga
     meaning: ginger
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 生姜
-  - id: food_30
+  - id: foodandingredients_23
+    hiragana: めん
+    romaji: men
+    meaning: noodles
+    category: food
+    tags:
+      - food-and-ingredients
+    type: noun
+    kanji: 麺
+  - id: foodandingredients_24
     hiragana: たけのこ
     romaji: takenoko
     meaning: bamboo shoot
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 竹の子
-  - id: food_31
+  - id: foodandingredients_25
     hiragana: もやし
     romaji: moyashi
     meaning: bean sprouts
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 萌やし
-  - id: food_32
+  - id: foodandingredients_26
+    hiragana: くだもの
+    romaji: kudamono
+    meaning: fruit
+    category: food
+    tags:
+      - food-and-ingredients
+      - tastes
+    type: noun
+    kanji: 果物
+  - id: foodandingredients_27
+    hiragana: りんご
+    romaji: ringo
+    meaning: apple
+    category: food
+    tags:
+      - food-and-ingredients
+      - tastes
+    type: noun
+    kanji: 林檎
+  - id: foodandingredients_28
     hiragana: バナナ
     romaji: banana
     meaning: banana
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
-  - id: food_33
+  - id: foodandingredients_29
     hiragana: みかん
     romaji: mikan
     meaning: mandarin orange
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 蜜柑
-  - id: food_34
+  - id: foodandingredients_30
     hiragana: いちご
     romaji: ichigo
     meaning: strawberry
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 苺
-  - id: food_35
+  - id: foodandingredients_31
     hiragana: ぶどう
     romaji: budou
     meaning: grape
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 葡萄
-  - id: food_36
+  - id: foodandingredients_32
     hiragana: もも
     romaji: momo
     meaning: peach
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 桃
-  - id: food_37
+  - id: foodandingredients_33
     hiragana: なし
     romaji: nashi
     meaning: Japanese pear
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 梨
-  - id: food_38
+  - id: foodandingredients_34
+    hiragana: うどん
+    romaji: udon
+    meaning: udon noodles
+    category: food
+    tags:
+      - food-and-ingredients
+    type: noun
+    kanji: 饂飩
+  - id: foodandingredients_35
     hiragana: スイカ
     romaji: suika
     meaning: watermelon
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 西瓜
-  - id: food_39
+  - id: foodandingredients_36
     hiragana: すし
     romaji: sushi
     meaning: sushi
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 寿司
-  - id: food_40
+  - id: foodandingredients_37
     hiragana: さしみ
     romaji: sashimi
     meaning: sashimi (raw fish)
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 刺身
-  - id: food_41
+  - id: foodandingredients_38
     hiragana: てんぷら
     romaji: tenpura
     meaning: 'tempura (battered, deep-fried)'
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 天ぷら
-  - id: food_42
+  - id: foodandingredients_39
     hiragana: みそしる
     romaji: misoshiru
     meaning: miso soup
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 味噌汁
-  - id: food_43
+  - id: foodandingredients_40
     hiragana: おにぎり
     romaji: onigiri
     meaning: rice ball
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: お握り
-  - id: food_44
+  - id: foodandingredients_41
     hiragana: やきとり
     romaji: yakitori
     meaning: grilled chicken skewers
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 焼き鳥
-  - id: food_45
+  - id: foodandingredients_42
     hiragana: どんぶり
     romaji: donburi
     meaning: rice bowl dish
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 丼
-  - id: food_46
+  - id: foodandingredients_43
     hiragana: カレーライス
     romaji: karee raisu
     meaning: curry rice
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
-  - id: food_47
+  - id: foodandingredients_44
     hiragana: やきそば
     romaji: yakisoba
     meaning: fried noodles
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 焼きそば
-  - id: food_48
+  - id: foodandingredients_45
+    hiragana: そば
+    romaji: soba
+    meaning: soba (buckwheat noodles)
+    category: food
+    tags:
+      - food-and-ingredients
+    type: noun
+    kanji: 蕎麦
+  - id: foodandingredients_46
     hiragana: おこのみやき
     romaji: okonomiyaki
     meaning: savory pancake
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: お好み焼き
-  - id: food_49
+  - id: foodandingredients_47
     hiragana: たこやき
     romaji: takoyaki
     meaning: octopus balls
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: たこ焼き
-  - id: food_50
+  - id: foodandingredients_48
     hiragana: ちゃわんむし
     romaji: chawanmushi
     meaning: savory egg custard
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 茶碗蒸し
-  - id: food_51
+  - id: foodandingredients_49
     hiragana: おでん
     romaji: oden
     meaning: oden (hot pot stew)
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
-  - id: food_52
+  - id: foodandingredients_50
     hiragana: すきやき
     romaji: sukiyaki
     meaning: sukiyaki (beef hot pot)
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: すき焼き
-  - id: food_53
+  - id: foodandingredients_51
+    hiragana: しょうゆ
+    romaji: shouyu
+    meaning: soy sauce
+    category: food
+    tags:
+      - food-and-ingredients
+      - tastes
+    type: noun
+    kanji: 醤油
+  - id: foodandingredients_52
     hiragana: みそ
     romaji: miso
     meaning: miso paste
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 味噌
-  - id: food_54
+  - id: foodandingredients_53
     hiragana: だし
     romaji: dashi
     meaning: Japanese stock
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 出汁
-  - id: food_55
+  - id: foodandingredients_54
     hiragana: みりん
     romaji: mirin
     meaning: sweet rice wine (cooking)
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 味醂
-  - id: food_56
+  - id: foodandingredients_55
     hiragana: りょうりざけ
     romaji: ryouri sake
     meaning: cooking sake
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 料理酒
-  - id: food_57
+  - id: foodandingredients_56
+    hiragana: ラーメン
+    romaji: raamen
+    meaning: ramen
+    category: food
+    tags:
+      - food-and-ingredients
+    type: noun
+  - id: foodandingredients_57
     hiragana: ごま
     romaji: goma
     meaning: sesame seeds
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 胡麻
-  - id: food_58
+  - id: foodandingredients_58
     hiragana: ごまあぶら
     romaji: goma abura
     meaning: sesame oil
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 胡麻油
-  - id: food_59
+  - id: foodandingredients_59
     hiragana: のり
     romaji: nori
     meaning: dried seaweed sheet
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 海苔
-  - id: food_60
+  - id: foodandingredients_60
     hiragana: わかめ
     romaji: wakame
     meaning: wakame seaweed
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 若布
-  - id: food_61
+  - id: foodandingredients_61
     hiragana: こんぶ
     romaji: konbu
     meaning: 'kombu (kelp, for stock)'
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 昆布
-  - id: food_62
+  - id: foodandingredients_62
     hiragana: かつおぶし
     romaji: katsuobushi
     meaning: bonito flakes
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 鰹節
-  - id: food_63
+  - id: foodandingredients_63
     hiragana: あぶらあげ
     romaji: aburaage
     meaning: thin fried tofu
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 油揚げ
-  - id: food_64
+  - id: foodandingredients_64
     hiragana: こんにゃく
     romaji: konnyaku
     meaning: konjac jelly
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 蒟蒻
-  - id: food_65
+  - id: foodandingredients_65
     hiragana: かたくりこ
     romaji: katakuriko
     meaning: potato starch
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 片栗粉
-  - id: food_66
+  - id: foodandingredients_66
     hiragana: だしのもと
     romaji: dashi no moto
     meaning: instant dashi powder
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 出汁の素
-  - id: food_67
+  - id: foodandingredients_67
+    hiragana: おかゆ
+    romaji: okayu
+    meaning: 'rice porridge, congee'
+    category: food
+    tags:
+      - food-and-ingredients
+    type: noun
+    kanji: お粥
+  - id: foodandingredients_68
     hiragana: メニュー
     romaji: menyuu
     meaning: menu
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
-  - id: food_68
+  - id: foodandingredients_69
     hiragana: ちゅうもん
     romaji: chuumon
     meaning: order
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 注文
-  - id: food_69
+  - id: foodandingredients_70
     hiragana: おすすめ
     romaji: osusume
     meaning: recommendation
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: お勧め
-  - id: food_70
+  - id: foodandingredients_71
     hiragana: ていしょく
     romaji: teishoku
     meaning: set meal
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 定食
-  - id: food_71
+  - id: foodandingredients_72
     hiragana: おかわり
     romaji: okawari
     meaning: 'refill, second helping'
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: お代わり
-  - id: food_72
+  - id: foodandingredients_73
     hiragana: おかんじょう
     romaji: okanjou
     meaning: the bill
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: お勘定
-  - id: food_73
+  - id: foodandingredients_74
     hiragana: もちかえり
     romaji: mochikaeri
     meaning: 'takeaway, to go'
-    category: vocabulary
+    category: food
     tags:
-      - food
+      - food-and-ingredients
     type: noun
     kanji: 持ち帰り
+  - id: foodandingredients_75
+    hiragana: にく
+    romaji: niku
+    meaning: meat
+    category: food
+    tags:
+      - food-and-ingredients
+    type: noun
+    kanji: 肉
+  - id: foodandingredients_76
+    hiragana: ぎゅうにく
+    romaji: gyuuniku
+    meaning: beef
+    category: food
+    tags:
+      - food-and-ingredients
+    type: noun
+    kanji: 牛肉
   - id: frequency_0
     hiragana: いっかい
     romaji: ikkai
@@ -4313,14 +4437,6 @@ vocabulary:
     tags:
       - obligation
     type: expression
-  - id: particleguide_0
-    hiragana: そして
-    romaji: soshite
-    meaning: and then
-    category: grammar
-    tags:
-      - particle-guide
-    type: conjunction
   - id: particleguide_1
     hiragana: には
     romaji: ni wa
@@ -4329,14 +4445,6 @@ vocabulary:
     tags:
       - particle-guide
     type: combination
-  - id: particleguide_2
-    hiragana: でも
-    romaji: demo
-    meaning: 'but, however'
-    category: grammar
-    tags:
-      - particle-guide
-    type: conjunction
   - id: particleguide_3
     hiragana: では
     romaji: de wa
@@ -4354,55 +4462,6 @@ vocabulary:
       - linking-words
       - particle-guide
     type: conjunction
-  - id: particleguide_5
-    hiragana: または
-    romaji: matawa
-    meaning: or
-    category: grammar
-    tags:
-      - particle-guide
-    type: conjunction
-  - id: particleguide_6
-    hiragana: これ
-    romaji: kore
-    meaning: this (near speaker)
-    category: grammar
-    tags:
-      - particle-guide
-    type: pronoun
-  - id: particleguide_7
-    hiragana: それ
-    romaji: sore
-    meaning: that (near listener)
-    category: grammar
-    tags:
-      - particle-guide
-    type: pronoun
-  - id: particleguide_8
-    hiragana: あれ
-    romaji: are
-    meaning: that (far from both)
-    category: grammar
-    tags:
-      - particle-guide
-    type: pronoun
-  - id: particleguide_9
-    hiragana: わたし
-    romaji: watashi
-    meaning: 'I, me'
-    category: grammar
-    tags:
-      - particle-guide
-    type: pronoun
-    kanji: 私
-  - id: particleguide_10
-    hiragana: あなた
-    romaji: anata
-    meaning: you
-    category: grammar
-    tags:
-      - particle-guide
-    type: pronoun
   - id: prohibition_0
     hiragana: '[verb て] + は いけません'
     romaji: te wa ikemasen
@@ -4589,15 +4648,6 @@ vocabulary:
       - question-words
     type: question word
     kanji: どの位
-  - id: questionwords_19
-    hiragana: どれくらい
-    romaji: dore kurai
-    meaning: 'how much, how many (casual variant)'
-    category: grammar
-    tags:
-      - question-words
-    type: question word
-    kanji: どれ位
   - id: questionwords_20
     hiragana: どのくらい
     romaji: dono kurai
@@ -4782,15 +4832,6 @@ vocabulary:
     tags:
       - sequential-actions
     type: expression
-  - id: tastes_0
-    hiragana: あじ
-    romaji: aji
-    meaning: 'taste, flavor'
-    category: vocabulary
-    tags:
-      - tastes
-    type: noun
-    kanji: 味
   - id: tastes_1
     hiragana: あまい
     romaji: amai
@@ -4802,392 +4843,362 @@ vocabulary:
     type: い-adjective
     kanji: 甘い
   - id: tastes_2
-    hiragana: からい
-    romaji: karai
-    meaning: 'spicy, hot'
-    category: vocabulary
+    hiragana: あじ
+    romaji: aji
+    meaning: 'taste, flavor'
+    category: food
     tags:
       - tastes
-    type: い-adjective
-    kanji: 辛い
+    type: noun
+    kanji: 味
   - id: tastes_3
-    hiragana: にがい
-    romaji: nigai
-    meaning: bitter
-    category: vocabulary
-    tags:
-      - tastes
-    type: い-adjective
-    kanji: 苦い
-  - id: tastes_4
-    hiragana: すっぱい
-    romaji: suppai
-    meaning: sour
-    category: vocabulary
-    tags:
-      - tastes
-    type: い-adjective
-    kanji: 酸っぱい
-  - id: tastes_5
-    hiragana: ちょっぱい
-    romaji: choppai
-    meaning: salty
-    category: vocabulary
-    tags:
-      - tastes
-    type: い-adjective
-    kanji: 塩っぱい
-  - id: tastes_6
-    hiragana: しょっぱい
-    romaji: shoppai
-    meaning: salty
-    category: vocabulary
-    tags:
-      - tastes
-    type: い-adjective
-    kanji: 塩っぱい
-  - id: tastes_7
-    hiragana: おいしい
-    romaji: oishii
-    meaning: 'delicious, tasty'
-    category: vocabulary
-    tags:
-      - tastes
-    type: い-adjective
-    kanji: 美味しい
-  - id: tastes_8
-    hiragana: うまい
-    romaji: umai
-    meaning: delicious (casual)
-    category: vocabulary
-    tags:
-      - tastes
-    type: い-adjective
-    kanji: 旨い
-  - id: tastes_9
-    hiragana: まずい
-    romaji: mazui
-    meaning: 'bad-tasting, awful'
-    category: vocabulary
-    tags:
-      - tastes
-    type: い-adjective
-    kanji: 不味い
-  - id: tastes_10
-    hiragana: やわらかい
-    romaji: yawarakai
-    meaning: 'soft, tender'
-    category: vocabulary
-    tags:
-      - tastes
-    type: い-adjective
-    kanji: 柔らかい
-  - id: tastes_11
     hiragana: かたい
     romaji: katai
     meaning: 'hard, firm'
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: い-adjective
     kanji: 硬い
-  - id: tastes_12
+  - id: tastes_4
     hiragana: さくさく
     romaji: sakusaku
     meaning: 'crispy, crunchy'
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: adverb
-  - id: tastes_13
+  - id: tastes_5
     hiragana: ねばねば
     romaji: nebaneba
     meaning: 'sticky, gooey'
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: adverb
-  - id: tastes_14
+  - id: tastes_6
     hiragana: こい
     romaji: koi
     meaning: 'strong, rich'
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: い-adjective
     kanji: 濃い
-  - id: tastes_15
+  - id: tastes_7
     hiragana: うすい
     romaji: usui
     meaning: 'weak, bland'
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: い-adjective
     kanji: 薄い
-  - id: tastes_16
+  - id: tastes_8
     hiragana: ケーキ
     romaji: keeki
     meaning: cake
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: noun
-  - id: tastes_17
+  - id: tastes_9
     hiragana: カレー
     romaji: karee
     meaning: curry
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: noun
-  - id: tastes_18
+  - id: tastes_10
     hiragana: コーヒー
     romaji: koohii
     meaning: coffee
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: noun
-  - id: tastes_19
+  - id: tastes_11
     hiragana: レモン
     romaji: remon
     meaning: lemon
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: noun
-  - id: tastes_20
+  - id: tastes_12
     hiragana: スープ
     romaji: suupu
     meaning: soup
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: noun
-  - id: tastes_21
-    hiragana: りんご
-    romaji: ringo
-    meaning: apple
-    category: vocabulary
+  - id: tastes_13
+    hiragana: からい
+    romaji: karai
+    meaning: 'spicy, hot'
+    category: food
     tags:
-      - food
       - tastes
-    type: noun
-    kanji: 林檎
-  - id: tastes_22
+    type: い-adjective
+    kanji: 辛い
+  - id: tastes_14
     hiragana: ピザ
     romaji: piza
     meaning: pizza
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: noun
-  - id: tastes_23
+  - id: tastes_15
     hiragana: チョコレート
     romaji: chokoreeto
     meaning: chocolate
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: noun
-  - id: tastes_24
-    hiragana: くだもの
-    romaji: kudamono
-    meaning: fruit
-    category: vocabulary
-    tags:
-      - food
-      - tastes
-    type: noun
-    kanji: 果物
-  - id: tastes_25
+  - id: tastes_16
     hiragana: りょうり
     romaji: ryouri
     meaning: 'dish, cooking'
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: noun
     kanji: 料理
-  - id: tastes_26
+  - id: tastes_17
     hiragana: たべもの
     romaji: tabemono
     meaning: food
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: noun
     kanji: 食べ物
-  - id: tastes_27
+  - id: tastes_18
     hiragana: しお
     romaji: shio
     meaning: salt
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: noun
     kanji: 塩
-  - id: tastes_28
+  - id: tastes_19
     hiragana: さとう
     romaji: satou
     meaning: sugar
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: noun
     kanji: 砂糖
-  - id: tastes_29
-    hiragana: しょうゆ
-    romaji: shouyu
-    meaning: soy sauce
-    category: vocabulary
-    tags:
-      - food
-      - tastes
-    type: noun
-    kanji: 醤油
-  - id: tastes_30
+  - id: tastes_20
     hiragana: みそ
     romaji: miso
     meaning: miso
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: noun
     kanji: 味噌
-  - id: tastes_31
+  - id: tastes_21
+    hiragana: にがい
+    romaji: nigai
+    meaning: bitter
+    category: food
+    tags:
+      - tastes
+    type: い-adjective
+    kanji: 苦い
+  - id: tastes_22
     hiragana: す
     romaji: su
     meaning: vinegar
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: noun
     kanji: 酢
-  - id: tastes_32
+  - id: tastes_23
     hiragana: ソース
     romaji: soosu
     meaning: sauce
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: noun
-  - id: tastes_33
+  - id: tastes_24
     hiragana: ケチャップ
     romaji: kechappu
     meaning: ketchup
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: noun
-  - id: tastes_34
+  - id: tastes_25
     hiragana: マヨネーズ
     romaji: mayoneezu
     meaning: mayonnaise
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: noun
-  - id: tastes_35
+  - id: tastes_26
     hiragana: わさび
     romaji: wasabi
     meaning: wasabi
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: noun
     kanji: 山葵
-  - id: tastes_36
+  - id: tastes_27
     hiragana: からし
     romaji: karashi
     meaning: mustard
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: noun
     kanji: 芥子
-  - id: tastes_37
+  - id: tastes_28
     hiragana: あまからい
     romaji: amakarai
     meaning: sweet and spicy
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: い-adjective
     kanji: 甘辛い
-  - id: tastes_38
+  - id: tastes_29
     hiragana: すっぱあまい
     romaji: suppaamai
     meaning: sweet and sour
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: い-adjective
     kanji: 酸っぱ甘い
-  - id: tastes_39
+  - id: tastes_30
     hiragana: あますっぱい
     romaji: amasuppai
     meaning: sweet and sour (alternative)
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: い-adjective
     kanji: 甘酸っぱい
-  - id: tastes_40
+  - id: tastes_31
     hiragana: あじわう
     romaji: ajiwau
     meaning: 'to taste, to savor'
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: godan verb
     kanji: 味わう
-  - id: tastes_41
+  - id: tastes_32
+    hiragana: すっぱい
+    romaji: suppai
+    meaning: sour
+    category: food
+    tags:
+      - tastes
+    type: い-adjective
+    kanji: 酸っぱい
+  - id: tastes_33
     hiragana: つける
     romaji: tsukeru
     meaning: 'to dip, to put on'
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: ichidan verb
     kanji: 付ける
-  - id: tastes_42
+  - id: tastes_34
     hiragana: かける
     romaji: kakeru
     meaning: 'to pour over, to sprinkle'
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: ichidan verb
     kanji: 掛ける
-  - id: tastes_43
+  - id: tastes_35
     hiragana: そそぐ
     romaji: sosogu
     meaning: to pour (into)
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: godan verb
     kanji: 注ぐ
-  - id: tastes_44
+  - id: tastes_36
     hiragana: まぜる
     romaji: mazeru
     meaning: 'to mix, to stir'
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: ichidan verb
     kanji: 混ぜる
-  - id: tastes_45
+  - id: tastes_37
     hiragana: とる
     romaji: toru
     meaning: 'to take, to pick up'
-    category: vocabulary
+    category: food
     tags:
       - tastes
     type: godan verb
     kanji: 取る
+  - id: tastes_38
+    hiragana: しょっぱい
+    romaji: shoppai
+    meaning: salty
+    category: food
+    tags:
+      - tastes
+    type: い-adjective
+    kanji: 塩っぱい
+  - id: tastes_39
+    hiragana: おいしい
+    romaji: oishii
+    meaning: 'delicious, tasty'
+    category: food
+    tags:
+      - tastes
+    type: い-adjective
+    kanji: 美味しい
+  - id: tastes_40
+    hiragana: うまい
+    romaji: umai
+    meaning: delicious (casual)
+    category: food
+    tags:
+      - tastes
+    type: い-adjective
+    kanji: 旨い
+  - id: tastes_41
+    hiragana: まずい
+    romaji: mazui
+    meaning: 'bad-tasting, awful'
+    category: food
+    tags:
+      - tastes
+    type: い-adjective
+    kanji: 不味い
+  - id: tastes_42
+    hiragana: やわらかい
+    romaji: yawarakai
+    meaning: 'soft, tender'
+    category: food
+    tags:
+      - tastes
+    type: い-adjective
+    kanji: 柔らかい
   - id: weather_0
     hiragana: てんき
     romaji: tenki
@@ -5206,15 +5217,6 @@ vocabulary:
       - weather
     type: noun
     kanji: 空
-  - id: weather_2
-    hiragana: はれ
-    romaji: hare
-    meaning: 'clear weather, sunny'
-    category: vocabulary
-    tags:
-      - weather
-    type: noun
-    kanji: 晴れ
   - id: weather_3
     hiragana: はれ
     romaji: hare
@@ -5224,24 +5226,6 @@ vocabulary:
       - weather
     type: noun
     kanji: 晴れ
-  - id: weather_4
-    hiragana: くもり
-    romaji: kumori
-    meaning: cloudy
-    category: vocabulary
-    tags:
-      - weather
-    type: noun
-    kanji: 曇り
-  - id: weather_5
-    hiragana: はれている
-    romaji: harete iru
-    meaning: it's sunny
-    category: vocabulary
-    tags:
-      - weather
-    type: expression
-    kanji: 晴れている
   - id: weather_6
     hiragana: あめ
     romaji: ame
@@ -5269,15 +5253,6 @@ vocabulary:
       - weather
     type: noun
     kanji: 雪
-  - id: weather_9
-    hiragana: くもっている
-    romaji: kumotte iru
-    meaning: it's cloudy
-    category: vocabulary
-    tags:
-      - weather
-    type: expression
-    kanji: 曇っている
   - id: weather_10
     hiragana: かぜ
     romaji: kaze
@@ -5296,15 +5271,6 @@ vocabulary:
       - weather
     type: noun
     kanji: 雷
-  - id: weather_12
-    hiragana: あめが ふる
-    romaji: ame ga furu
-    meaning: it rains
-    category: vocabulary
-    tags:
-      - weather
-    type: expression
-    kanji: 雨が降る
   - id: weather_13
     hiragana: はれる
     romaji: hareru
@@ -5341,15 +5307,6 @@ vocabulary:
       - weather
     type: noun
     kanji: 霧
-  - id: weather_17
-    hiragana: ゆきが ふる
-    romaji: yuki ga furu
-    meaning: it snows
-    category: vocabulary
-    tags:
-      - weather
-    type: expression
-    kanji: 雪が降る
   - id: weather_18
     hiragana: ふく
     romaji: fuku
@@ -5359,33 +5316,6 @@ vocabulary:
       - weather
     type: verb
     kanji: 吹く
-  - id: weather_19
-    hiragana: はれている
-    romaji: harete iru
-    meaning: 'sunny, clear'
-    category: vocabulary
-    tags:
-      - weather
-    type: expression
-    kanji: 晴れている
-  - id: weather_20
-    hiragana: くもっている
-    romaji: kumotte iru
-    meaning: cloudy
-    category: vocabulary
-    tags:
-      - weather
-    type: expression
-    kanji: 曇っている
-  - id: weather_21
-    hiragana: かぜが ふく
-    romaji: kaze ga fuku
-    meaning: wind blows
-    category: vocabulary
-    tags:
-      - weather
-    type: expression
-    kanji: 風が吹く
   - id: weather_22
     hiragana: むしあつい
     romaji: mushiatsui
@@ -5412,15 +5342,6 @@ vocabulary:
     tags:
       - weather
     type: な-adjective
-  - id: weather_25
-    hiragana: きおん
-    romaji: kion
-    meaning: temperature
-    category: vocabulary
-    tags:
-      - weather
-    type: noun
-    kanji: 気温
   - id: weather_26
     hiragana: おんど
     romaji: ondo
@@ -5576,15 +5497,6 @@ vocabulary:
       - weather
     type: noun
     kanji: 日焼け止め
-  - id: weather_43
-    hiragana: かわかす
-    romaji: kawakasu
-    meaning: to dry (something)
-    category: vocabulary
-    tags:
-      - weather
-    type: godan verb
-    kanji: 乾かす
   - id: weather_44
     hiragana: せんす
     romaji: sensu
@@ -5647,15 +5559,6 @@ vocabulary:
       - weather
     type: noun
     kanji: 長靴
-  - id: weather_51
-    hiragana: つもる
-    romaji: tsumoru
-    meaning: 'to pile up, accumulate'
-    category: vocabulary
-    tags:
-      - weather
-    type: godan verb
-    kanji: 積もる
   - id: weather_52
     hiragana: とける
     romaji: tokeru
@@ -5683,24 +5586,6 @@ vocabulary:
       - weather
     type: noun
     kanji: 雪かき
-  - id: weather_55
-    hiragana: ゆきかきをする
-    romaji: yukikaki o suru
-    meaning: to shovel snow
-    category: vocabulary
-    tags:
-      - weather
-    type: expression
-    kanji: 雪かきをする
-  - id: weather_56
-    hiragana: のぞく
-    romaji: nozoku
-    meaning: 'to remove, clear away'
-    category: vocabulary
-    tags:
-      - weather
-    type: godan verb
-    kanji: 除く
   - id: weather_57
     hiragana: スコップ
     romaji: sukoppu
@@ -5761,6 +5646,7 @@ vocabulary:
     type: noun
 categories:
   - all
+  - food
   - grammar
   - lessons
   - numbers

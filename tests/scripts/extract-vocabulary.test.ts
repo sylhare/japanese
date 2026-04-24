@@ -142,71 +142,19 @@ describe('Vocabulary Extraction', () => {
       fs.unlinkSync(emptyFile);
     });
 
-    it('should ignore emoji columns and extract vocabulary correctly', () => {
-      const filePath = path.join(fixturesDir, 'emoji-columns.md');
-      const vocabulary = extractVocabularyFromFile(filePath);
+    it('should extract vocabulary from files with emoji columns, stripping emojis from meanings', () => {
+      const vocabulary = extractVocabularyFromFile(path.join(fixturesDir, 'emoji-columns.md'));
 
-      expect(vocabulary.length).toBeGreaterThan(0);
-
-      const emojiOnlyItems = vocabulary.filter(item =>
-        item.hiragana.match(/^[\p{Emoji}\s]+$/u),
-      );
-      expect(emojiOnlyItems).toHaveLength(0);
-
-      const hiraganaList = vocabulary.map(item => item.hiragana);
-      expect(hiraganaList).toContain('ちち');
-      expect(hiraganaList).toContain('はは');
-      expect(hiraganaList).toContain('いえ');
-      expect(hiraganaList).toContain('げつようび');
-      expect(hiraganaList).toContain('かようび');
+      expect(vocabulary).toHaveLength(8);
+      expect(vocabulary.find(item => item.hiragana === 'ちち')).toMatchObject({
+        kanji: '父', romaji: 'chichi', meaning: 'father', type: 'noun',
+      });
+      expect(vocabulary.find(item => item.hiragana === 'はは')?.meaning).toBe('mother');
+      expect(vocabulary.find(item => item.hiragana === 'いえ')?.meaning).toBe('house');
+      expect(vocabulary.find(item => item.hiragana === 'げつようび')?.meaning).toBe('Monday');
 
       vocabulary.forEach(item => {
-        expect(item).toHaveProperty('id');
-        expect(item).toHaveProperty('hiragana');
-        expect(item).toHaveProperty('romaji');
-        expect(item).toHaveProperty('meaning');
-        expect(item).toHaveProperty('type');
-        expect(item).toHaveProperty('category');
-        expect(item).toHaveProperty('tags');
-
         expect(item.hiragana).not.toMatch(/^[\p{Emoji}\s]+$/u);
-      });
-
-      const chichiItem = vocabulary.find(item => item.hiragana === 'ちち');
-      expect(chichiItem).toMatchObject({
-        hiragana: 'ちち',
-        kanji: '父',
-        romaji: 'chichi',
-        meaning: 'father',
-        type: 'noun',
-      });
-    });
-
-    it('should strip emojis from English translations when extracting vocabulary', () => {
-      const filePath = path.join(fixturesDir, 'emoji-columns.md');
-      const vocabulary = extractVocabularyFromFile(filePath);
-
-      const chichiItem = vocabulary.find(item => item.hiragana === 'ちち');
-      expect(chichiItem).toBeDefined();
-      expect(chichiItem?.meaning).toBe('father');
-      expect(chichiItem?.meaning).not.toContain('👨');
-
-      const hahaItem = vocabulary.find(item => item.hiragana === 'はは');
-      expect(hahaItem).toBeDefined();
-      expect(hahaItem?.meaning).toBe('mother');
-      expect(hahaItem?.meaning).not.toContain('👩');
-
-      const ieItem = vocabulary.find(item => item.hiragana === 'いえ');
-      expect(ieItem).toBeDefined();
-      expect(ieItem?.meaning).toBe('house');
-      expect(ieItem?.meaning).not.toContain('🏠');
-
-      const getsuyoubiItem = vocabulary.find(item => item.hiragana === 'げつようび');
-      expect(getsuyoubiItem).toBeDefined();
-      expect(getsuyoubiItem?.meaning).toBe('Monday');
-      expect(getsuyoubiItem?.meaning).not.toContain('🌙');
-
-      vocabulary.forEach(item => {
         expect(item.meaning).not.toMatch(/[\u{1F300}-\u{1F9FF}]|[\u{1F600}-\u{1F64F}]|[\u{2600}-\u{26FF}]|[\u{2700}-\u{27BF}]/u);
       });
     });
@@ -226,100 +174,37 @@ describe('Vocabulary Extraction', () => {
       });
     });
 
-    it('should extract vocabulary from .mdx files', () => {
+    it('should extract vocabulary from .mdx files with correct IDs and tags', () => {
       const vocabulary = extractVocabularyFromFile(path.join(fixturesDir, 'food-basics.mdx'));
 
       expect(vocabulary).toHaveLength(3);
-      expect(vocabulary.map(i => i.hiragana)).toContain('あじ');
-      expect(vocabulary.map(i => i.hiragana)).toContain('たべもの');
-      expect(vocabulary.map(i => i.hiragana)).toContain('のみもの');
-    });
-
-    it('should use the filename without extension for IDs in .mdx files', () => {
-      const vocabulary = extractVocabularyFromFile(path.join(fixturesDir, 'food-basics.mdx'));
-
-      vocabulary.forEach(item => {
-        expect(item.id).toMatch(/^foodbasics_\d+$/);
-        expect(item.id).not.toMatch(/foodbasicsx_/);
-      });
-      expect(vocabulary[0].id).toBe('foodbasics_0');
-      expect(vocabulary[1].id).toBe('foodbasics_1');
-      expect(vocabulary[2].id).toBe('foodbasics_2');
-    });
-
-    it('should use the filename without extension for tags in .mdx files', () => {
-      const vocabulary = extractVocabularyFromFile(path.join(fixturesDir, 'food-basics.mdx'));
-
-      vocabulary.forEach(item => {
+      expect(vocabulary.map(i => i.hiragana)).toEqual(['あじ', 'たべもの', 'のみもの']);
+      vocabulary.forEach((item, i) => {
+        expect(item.id).toBe(`foodbasics_${i}`);
         expect(item.tags).toContain('food-basics');
-        expect(item.tags).not.toContain('food-basicsx');
       });
     });
 
-    it('should remove leading numbers from meanings (e.g., "8️⃣ August" becomes "August")', () => {
-      const testFile = path.join(fixturesDir, 'time-with-emojis.md');
-      const vocabulary = extractVocabularyFromFile(testFile);
-
-      const hachigatsuItem = vocabulary.find(item => item.hiragana === 'はちがつ');
-      expect(hachigatsuItem).toBeDefined();
-      expect(hachigatsuItem?.meaning).toBe('August');
-      expect(hachigatsuItem?.meaning).not.toContain('8');
-      expect(hachigatsuItem?.meaning).not.toMatch(/^\d/);
-
-      const juuichigatsuItem = vocabulary.find(item => item.hiragana === 'じゅういちがつ');
-      expect(juuichigatsuItem).toBeDefined();
-      expect(juuichigatsuItem?.meaning).toBe('November');
-      expect(juuichigatsuItem?.meaning).not.toContain('11');
-      expect(juuichigatsuItem?.meaning).not.toMatch(/^\d/);
-
-      const rokugatsuItem = vocabulary.find(item => item.hiragana === 'ろくがつ');
-      expect(rokugatsuItem).toBeDefined();
-      expect(rokugatsuItem?.meaning).toBe('June');
-      expect(rokugatsuItem?.meaning).not.toContain('6');
-      expect(rokugatsuItem?.meaning).not.toMatch(/^\d/);
-    });
-
-    it('should correctly extract time vocabulary with emoji columns without column misalignment', () => {
-      const filePath = path.join(fixturesDir, 'time-with-emojis.md');
-      const vocabulary = extractVocabularyFromFile(filePath);
+    it('should extract time vocabulary, stripping emojis and leading numbers from meanings', () => {
+      const vocabulary = extractVocabularyFromFile(path.join(fixturesDir, 'time-with-emojis.md'));
 
       expect(vocabulary).toHaveLength(7);
-
-      const emojiInHiragana = vocabulary.filter(item =>
-        item.hiragana && /[📅⬅️➡️]/.test(item.hiragana),
-      );
-      expect(emojiInHiragana).toHaveLength(0);
-
-      const ototoiItem = vocabulary.find(item => item.hiragana === 'おととい');
-      expect(ototoiItem).toBeDefined();
-      expect(ototoiItem).toMatchObject({
-        hiragana: 'おととい',
-        kanji: '一昨日',
-        romaji: 'ototoi',
-        meaning: 'day before yesterday',
-        type: 'noun',
+      expect(vocabulary.find(item => item.hiragana === 'おととい')).toMatchObject({
+        kanji: '一昨日', romaji: 'ototoi', meaning: 'day before yesterday', type: 'noun',
+      });
+      expect(vocabulary.find(item => item.hiragana === 'きょう')).toMatchObject({
+        kanji: '今日', romaji: 'kyou', meaning: 'today', type: 'noun',
       });
 
-      const kyouItem = vocabulary.find(item => item.hiragana === 'きょう');
-      expect(kyouItem).toBeDefined();
-      expect(kyouItem).toMatchObject({
-        hiragana: 'きょう',
-        kanji: '今日',
-        romaji: 'kyou',
-        meaning: 'today',
-        type: 'noun',
-      });
-
-      expect(kyouItem?.meaning).toBe('today');
-      expect(kyouItem?.meaning).not.toContain('📅');
-
-      const kinouItem = vocabulary.find(item => item.hiragana === 'きのう');
-      expect(kinouItem?.meaning).toBe('yesterday');
-      expect(kinouItem?.meaning).not.toContain('⬅️');
+      expect(vocabulary.find(item => item.hiragana === 'はちがつ')?.meaning).toBe('August');
+      expect(vocabulary.find(item => item.hiragana === 'じゅういちがつ')?.meaning).toBe('November');
+      expect(vocabulary.find(item => item.hiragana === 'ろくがつ')?.meaning).toBe('June');
+      expect(vocabulary.find(item => item.hiragana === 'きのう')?.meaning).toBe('yesterday');
 
       vocabulary.forEach(item => {
         expect(item.hiragana).not.toMatch(/[⬅️➡️📅🌙🔥💧🌳⭐🌍☀️]/);
         expect(item.meaning).not.toMatch(/[\u{1F300}-\u{1F9FF}]|[\u{1F600}-\u{1F64F}]|[\u{2600}-\u{26FF}]|[\u{2700}-\u{27BF}]/u);
+        expect(item.meaning).not.toMatch(/^\d/);
       });
     });
 
@@ -374,43 +259,11 @@ describe('Vocabulary Extraction', () => {
     });
 
     it('should generate unique and incremental IDs across multiple tables in the same file', () => {
-      const filePath = path.join(fixturesDir, 'emoji-columns.md');
-      const vocabulary = extractVocabularyFromFile(filePath);
+      const vocabulary = extractVocabularyFromFile(path.join(fixturesDir, 'emoji-columns.md'));
 
       expect(vocabulary).toHaveLength(8);
 
-      const ids = vocabulary.map(item => item.id);
-      const uniqueIds = new Set(ids);
-
-      expect(uniqueIds.size).toBe(ids.length);
-
-      const idParts = ids.map(id => {
-        const parts = id.split('_');
-        const prefix = parts.slice(0, -1).join('_');
-        const suffix = parseInt(parts[parts.length - 1], 10);
-        return { prefix, suffix };
-      });
-
-      const prefixes = new Set(idParts.map(p => p.prefix));
-      expect(prefixes.size).toBe(1);
-
-      const suffixes = idParts.map(p => p.suffix).sort((a, b) => a - b);
-      expect(suffixes).toEqual([0, 1, 2, 3, 4, 5, 6, 7]);
-
-      const chichiItem1 = vocabulary.find(item => item.hiragana === 'ちち' && item.id === 'emojicolumns_0');
-      expect(chichiItem1).toBeDefined();
-
-      const hahaItem1 = vocabulary.find(item => item.hiragana === 'はは' && item.id === 'emojicolumns_1');
-      expect(hahaItem1).toBeDefined();
-
-      const getsuyoubiItem = vocabulary.find(item => item.hiragana === 'げつようび');
-      expect(getsuyoubiItem?.id).toBe('emojicolumns_3');
-
-      const kayoubiItem = vocabulary.find(item => item.hiragana === 'かようび');
-      expect(kayoubiItem?.id).toBe('emojicolumns_4');
-
-      const chichiItem2 = vocabulary.find(item => item.hiragana === 'ちち' && item.id === 'emojicolumns_5');
-      expect(chichiItem2).toBeDefined();
+      vocabulary.forEach((item, i) => expect(item.id).toBe(`emojicolumns_${i}`));
     });
   });
 
@@ -784,23 +637,21 @@ describe('Vocabulary Extraction', () => {
   });
 
   describe('scanAllLessons', () => {
-    it('should scan all lesson files in a directory', () => {
-      const testLessonsDir = path.join(__dirname, 'test-lessons');
-      const testVocabDir = path.join(testLessonsDir, 'vocabulary');
+    const testLessonsDir = path.join(__dirname, 'test-lessons');
+    const testVocabDir = path.join(testLessonsDir, 'vocabulary');
 
+    beforeEach(() => {
       fs.mkdirSync(testVocabDir, { recursive: true });
-
-      fs.copyFileSync(
-        path.join(fixturesDir, 'basic-colors.md'),
-        path.join(testVocabDir, 'colors.md'),
-      );
-      fs.copyFileSync(
-        path.join(fixturesDir, 'tastes.md'),
-        path.join(testVocabDir, 'tastes.md'),
-      );
-
+      fs.copyFileSync(path.join(fixturesDir, 'basic-colors.md'), path.join(testVocabDir, 'colors.md'));
+      fs.copyFileSync(path.join(fixturesDir, 'tastes.md'), path.join(testVocabDir, 'tastes.md'));
       process.env.TEST_LESSONS_DIR = testLessonsDir;
+    });
 
+    afterEach(() => {
+      fs.rmSync(testLessonsDir, { recursive: true, force: true });
+    });
+
+    it('should scan all lesson files in a directory', () => {
       const result = scanAllLessons();
 
       expect(result.vocabulary).toHaveLength(9);
@@ -809,80 +660,35 @@ describe('Vocabulary Extraction', () => {
     });
 
     it('should scan .mdx files alongside .md files', () => {
-      const testLessonsDir = path.join(__dirname, 'test-lessons-mdx');
-      const testVocabDir = path.join(testLessonsDir, 'vocabulary');
-
-      fs.mkdirSync(testVocabDir, { recursive: true });
-
-      fs.copyFileSync(
-        path.join(fixturesDir, 'basic-colors.md'),
-        path.join(testVocabDir, 'colors.md'),
-      );
-      fs.copyFileSync(
-        path.join(fixturesDir, 'food-basics.mdx'),
-        path.join(testVocabDir, 'food-basics.mdx'),
-      );
-
-      process.env.TEST_LESSONS_DIR = testLessonsDir;
+      const mdxVocabDir = path.join(testLessonsDir, 'vocabulary', 'food');
+      fs.mkdirSync(mdxVocabDir, { recursive: true });
+      fs.copyFileSync(path.join(fixturesDir, 'food-basics.mdx'), path.join(mdxVocabDir, 'food-basics.mdx'));
 
       const result = scanAllLessons();
 
-      // 5 from basic-colors.md + 3 from food-basics.mdx
-      expect(result.vocabulary).toHaveLength(8);
+      expect(result.vocabulary).toHaveLength(12);
 
       const hiraganaList = result.vocabulary.map(i => i.hiragana);
-      expect(hiraganaList).toContain('あか');
-      expect(hiraganaList).toContain('あじ');
+      expect(hiraganaList).toContain('あか');  // .md file still scanned
+      expect(hiraganaList).toContain('あじ');  // .mdx file scanned alongside
 
-      // .mdx items should have clean tags (no trailing 'x')
       const ajiItem = result.vocabulary.find(i => i.hiragana === 'あじ');
       expect(ajiItem?.tags).toContain('food-basics');
-      expect(ajiItem?.tags).not.toContain('food-basicsx');
       expect(ajiItem?.id).toMatch(/^foodbasics_\d+$/);
-
-      fs.rmSync(testLessonsDir, { recursive: true });
     });
 
     it('should return consistently ordered results across multiple calls', () => {
-      const testLessonsDir = path.join(__dirname, 'test-lessons');
-      const testVocabDir = path.join(testLessonsDir, 'vocabulary');
-
-      fs.mkdirSync(testVocabDir, { recursive: true });
-
-      fs.copyFileSync(
-        path.join(fixturesDir, 'basic-colors.md'),
-        path.join(testVocabDir, 'colors.md'),
-      );
-      fs.copyFileSync(
-        path.join(fixturesDir, 'tastes.md'),
-        path.join(testVocabDir, 'tastes.md'),
-      );
-
-      process.env.TEST_LESSONS_DIR = testLessonsDir;
-
       const result1 = scanAllLessons();
       const result2 = scanAllLessons();
-      const result3 = scanAllLessons();
 
       expect(result1.vocabulary).toEqual(result2.vocabulary);
-      expect(result2.vocabulary).toEqual(result3.vocabulary);
-      expect(result1.vocabulary).toEqual(result3.vocabulary);
-
       expect(result1.categories).toEqual(result2.categories);
-      expect(result2.categories).toEqual(result3.categories);
-      expect(result1.categories).toEqual(result3.categories);
-
-      const sortedCategories = [...result1.categories].sort();
-      expect(result1.categories).toEqual(sortedCategories);
-
       expect(result1.sortOptions).toEqual(result2.sortOptions);
-      expect(result2.sortOptions).toEqual(result3.sortOptions);
-      expect(result1.sortOptions).toEqual(result3.sortOptions);
+      expect(result1.categories).toEqual([...result1.categories].sort());
 
       for (let i = 1; i < result1.vocabulary.length; i++) {
         const prev = result1.vocabulary[i - 1];
         const curr = result1.vocabulary[i];
-
         const fileCompare = prev.tags[0].localeCompare(curr.tags[0]);
         if (fileCompare === 0) {
           expect(prev.id.localeCompare(curr.id)).toBeLessThanOrEqual(0);
