@@ -143,6 +143,7 @@ Use these to give *examples* or *refer back* to something.
 |----------|-------|--------|---------|------|
 | たとえば | 例えば | tatoeba | for example | adverb |
 | など | - | nado | and so on, etc. | particle |
+| そのほか | その他 | sonohoka | other, the rest, etc. | expression |
 | つまり | - | tsumari | in other words, that is to say | conjunction |
 | すなわち | 即ち | sunawachi | namely, that is (formal) | conjunction |
 
@@ -152,6 +153,8 @@ Use these to give *examples* or *refer back* to something.
   - *tatoeba, sushi ya raamen nado, nihon ryouri ga suki desu.*
 - かれは ざんぎょうが おおい。つまり、いつも いそがしい。 — He has lots of overtime. In other words, he's always busy.
   - *kare wa zangyou ga ooi. tsumari, itsumo isogashii.*
+- すし、てんぷら、そのほかの にほんりょうりが あります。 — There is sushi, tempura, and other Japanese food.
+  - *sushi, tenpura, sonohoka no nihon ryouri ga arimasu.*
 
 ## Concession and Surprise
 
