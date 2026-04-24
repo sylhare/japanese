@@ -15,14 +15,15 @@ Japanese uses different verbs for "wear" depending on where the item goes. This 
 
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
-| きる | 着る | kiru | wear (👕 upper body) | verb |
-| はく | 履く | haku | wear (👖 lower body, shoes) | verb |
 | かぶる | 被る | kaburu | wear (🎩 head) | verb |
 | かける | 掛ける | kakeru | wear (👓 glasses, headphones) | verb |
-| つける | 付ける | tsukeru | wear (💍 small items) | verb |
-| しめる | 締める | shimeru | wear (👔 belt/tie) | verb |
-| はめる | | hameru | wear (🧤 gloves, rings) | verb |
+| つける | 付ける | tsukeru | wear (💎 small items) | verb |
+| しめる | 締める | shimeru | wear (👔 tie) | verb |
+| きる | 着る | kiru | wear (👕 upper body) | verb |
 | する | | suru | wear/do (⌚ accessories) | verb |
+| はめる | | hameru | wear (🧤 gloves, rings) | verb |
+| しめる | 締める | shimeru | wear (🪢 belt) | verb |
+| はく | 履く | haku | wear (👖 lower body / 👟 shoes) | verb |
 
 ### Body Reference
 
@@ -36,6 +37,7 @@ Japanese uses different verbs for "wear" depending on where the item goes. This 
                                       /  |  \
                                     /  | |   \
 👕 シャツ → きる ────────────────── /──→|  |    \
+⌚ とけい → する ───────────────────→ /  |   |    \
 🧤 てぶくろ → はめる ─────────────→[ ]  |   |     [ ]
 🪢 ベルト → しめる ───────────────────→[====]
                                       /   \
