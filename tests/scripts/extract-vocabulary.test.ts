@@ -211,6 +211,21 @@ describe('Vocabulary Extraction', () => {
       });
     });
 
+    it('should normalize spaces inside parentheses after stripping emojis', () => {
+      // Wear-verb tables use "wear (👕 upper body)" format.
+      // Stripping the emoji leaves a leading space: "wear ( upper body)".
+      // The normalization step removes it to produce "wear (upper body)".
+      const vocabulary = extractVocabularyFromFile(path.join(fixturesDir, 'wear-verbs-emoji.md'));
+
+      expect(vocabulary).toHaveLength(3);
+      expect(vocabulary.find(item => item.hiragana === 'きる')?.meaning).toBe('wear (upper body)');
+      expect(vocabulary.find(item => item.hiragana === 'はく')?.meaning).toBe('wear (lower body / shoes)');
+      expect(vocabulary.find(item => item.hiragana === 'かぶる')?.meaning).toBe('wear (head)');
+      vocabulary.forEach(item => {
+        expect(item.meaning).not.toMatch(/\(\s|\s{2,}/);
+      });
+    });
+
     it('should remove leading numbers from meanings (e.g., "8️⃣ August" becomes "August")', () => {
       const testFile = path.join(fixturesDir, 'time-with-emojis.md');
       const vocabulary = extractVocabularyFromFile(testFile);
@@ -585,7 +600,7 @@ describe('Vocabulary Extraction', () => {
       });
 
       it('should allow different words with same hiragana but different meaning', () => {
-        const existing = createTestVocabularyData([createTestVocabularyItem({ id: 'existing_0', tags: ['existing'] })], { categories: ['colors'] });
+        const existing = createTestVocabularyData([createTestVocabularyItem({ id: 'existing_0', tags: ['colors'] })], { categories: ['colors'] });
         const extracted = createTestVocabularyData([createTestVocabularyItem({ id: 'extracted_0', meaning: 'bright', category: 'vocabulary', tags: ['colors'] })], { categories: ['vocabulary'] });
         const merged = mergeVocabulary(existing, extracted);
 
@@ -593,11 +608,83 @@ describe('Vocabulary Extraction', () => {
       });
 
       it('should allow same meaning with different hiragana', () => {
-        const existing = createTestVocabularyData([createTestVocabularyItem({ id: 'existing_0', tags: ['existing'] })], { categories: ['colors'] });
+        const existing = createTestVocabularyData([createTestVocabularyItem({ id: 'existing_0', tags: ['colors'] })], { categories: ['colors'] });
         const extracted = createTestVocabularyData([createTestVocabularyItem({ id: 'extracted_0', hiragana: 'あかい', romaji: 'akai', category: 'vocabulary', tags: ['colors'] })], { categories: ['vocabulary'] });
         const merged = mergeVocabulary(existing, extracted);
 
         expect(merged.vocabulary).toHaveLength(2);
+      });
+
+      // Helper for the emoji-space deduplication tests below.
+      // All fields are fixed; only id and meaning vary between scenarios.
+      const wearVerb = (id: string, meaning: string) =>
+        createTestVocabularyItem({ id, hiragana: 'きる', romaji: 'kiru', type: 'verb', tags: ['clothes'], meaning });
+
+      it('should treat meanings that differ only by spaces left from emoji stripping as duplicates', () => {
+        // "wear (👕 upper body)" → before normalization: "wear ( upper body)"
+        // Both resolve to the same content key, so no duplicate entry is created.
+        const existing = createTestVocabularyData([wearVerb('clothes_0', 'wear (upper body)')]);
+        const extracted = createTestVocabularyData([wearVerb('clothes_0', 'wear ( upper body)')]);
+
+        const merged = mergeVocabulary(existing, extracted);
+
+        expect(merged.vocabulary).toHaveLength(1);
+        expect(merged.vocabulary[0]).toMatchObject({ id: 'clothes_0', meaning: 'wear (upper body)' });
+      });
+
+      it('should consolidate pre-existing duplicate entries with emoji-space variants, keeping lowest ID', () => {
+        // vocabulary.yaml can accumulate duplicate pairs across extraction runs:
+        //   clothes_0: "wear (upper body)"   ← original, no emoji in lesson
+        //   clothes_1: "wear ( upper body)"  ← created after emoji added, space remained
+        // Both normalize to the same content key; merge should collapse them to clothes_0.
+        const existing = createTestVocabularyData([
+          wearVerb('clothes_0', 'wear (upper body)'),
+          wearVerb('clothes_1', 'wear ( upper body)'),
+        ]);
+        const extracted = createTestVocabularyData([wearVerb('clothes_0', 'wear (upper body)')]);
+
+        const merged = mergeVocabulary(existing, extracted);
+
+        expect(merged.vocabulary).toHaveLength(1);
+        expect(merged.vocabulary[0]).toMatchObject({ id: 'clothes_0', meaning: 'wear (upper body)' });
+      });
+    });
+
+    describe('Orphan removal (deleted lesson files)', () => {
+      it('should remove vocabulary items whose lesson file no longer exists', () => {
+        // When a lesson file is deleted (e.g. counters.mdx → frequency.md, date-counters.md),
+        // its vocabulary items are orphaned: they have tags that no active lesson produces.
+        // The merge should drop those items so vocabulary.yaml stays clean.
+        const existing = createTestVocabularyData([
+          createTestVocabularyItem({ id: 'counters_0', hiragana: 'いっぽん', romaji: 'ippon', meaning: 'one (long thing)', type: 'counter', tags: ['counters'] }),
+          createTestVocabularyItem({ id: 'counters_1', hiragana: 'にほん', romaji: 'nihon', meaning: 'two (long things)', type: 'counter', tags: ['counters'] }),
+        ]);
+        // Extracted has no items with tag 'counters' because the lesson file was deleted
+        const extracted = createTestVocabularyData([
+          createTestVocabularyItem({ id: 'datecounters_0', hiragana: 'いちにち', romaji: 'ichinichi', meaning: 'one day', type: 'counter', tags: ['date-counters'] }),
+        ]);
+
+        const merged = mergeVocabulary(existing, extracted);
+
+        expect(merged.vocabulary).toHaveLength(1);
+        expect(merged.vocabulary[0].hiragana).toBe('いちにち');
+        expect(merged.vocabulary.find(i => i.tags.includes('counters'))).toBeUndefined();
+      });
+
+      it('should keep vocabulary items that appear in at least one still-active lesson', () => {
+        // A word that appears in both an active and a deleted lesson should be kept.
+        const existing = createTestVocabularyData([
+          createTestVocabularyItem({ id: 'word_0', hiragana: 'たくさん', romaji: 'takusan', meaning: 'many', type: 'adverb', tags: ['adjectives', 'cooking'] }),
+        ]);
+        // 'adjectives' is still active, 'cooking' was deleted — item must survive
+        const extracted = createTestVocabularyData([
+          createTestVocabularyItem({ id: 'word_0', hiragana: 'たくさん', romaji: 'takusan', meaning: 'many', type: 'adverb', tags: ['adjectives'] }),
+        ]);
+
+        const merged = mergeVocabulary(existing, extracted);
+
+        expect(merged.vocabulary).toHaveLength(1);
+        expect(merged.vocabulary[0].hiragana).toBe('たくさん');
       });
     });
 
@@ -618,8 +705,8 @@ describe('Vocabulary Extraction', () => {
 
       it('should handle partial duplicates correctly', () => {
         const existing = createTestVocabularyData([
-          createTestVocabularyItem({ id: 'existing_0', tags: ['existing'] }),
-          createBlueItem({ id: 'existing_1', tags: ['existing'] }),
+          createTestVocabularyItem({ id: 'existing_0', tags: ['colors'] }),
+          createBlueItem({ id: 'existing_1', tags: ['colors'] }),
         ], { categories: ['colors'] });
         const extracted = createTestVocabularyData([
           createTestVocabularyItem({ id: 'extracted_0', category: 'vocabulary', tags: ['colors'] }),
@@ -645,7 +732,7 @@ describe('Vocabulary Extraction', () => {
       });
 
       it('should handle vocabulary with missing fields gracefully', () => {
-        const existing = createTestVocabularyData([createTestVocabularyItem({ id: 'existing_0', tags: ['existing'] })], { categories: ['colors'] });
+        const existing = createTestVocabularyData([createTestVocabularyItem({ id: 'existing_0', tags: ['colors'] })], { categories: ['colors'] });
         const extracted = createTestVocabularyData([createTestVocabularyItem({ id: 'extracted_0', hiragana: '', category: 'vocabulary', tags: ['colors'] })], { categories: ['vocabulary'] });
         const merged = mergeVocabulary(existing, extracted);
 
@@ -739,7 +826,7 @@ describe('Vocabulary Extraction', () => {
           meaning: 'test',
           type: 'noun',
           category: 'general',
-          tags: ['existing'],
+          tags: ['colors'],
         }),
       ], {
         categories: ['general'],
