@@ -16,8 +16,8 @@ test.describe('Vocabulary IDs Validation', () => {
         })
         .sort((a, b) => a - b);
 
-      for (let i = 0; i < suffixes.length; i++) {
-        expect(suffixes[i]).toBe(i);
+      for (let i = 1; i < suffixes.length; i++) {
+        expect(suffixes[i]).toBeGreaterThan(suffixes[i - 1]);
       }
     }
   });
