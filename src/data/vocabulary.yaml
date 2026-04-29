@@ -2446,6 +2446,22 @@ vocabulary:
     tags:
       - experience
     type: expression
+  - id: experience_3
+    hiragana: やった こと が ある
+    romaji: yatta koto ga aru
+    meaning: have done / tried (casual)
+    category: grammar
+    tags:
+      - experience
+    type: expression
+  - id: experience_4
+    hiragana: やった こと が ない
+    romaji: yatta koto ga nai
+    meaning: have never done / tried (casual)
+    category: grammar
+    tags:
+      - experience
+    type: expression
   - id: family_0
     hiragana: かぞく
     romaji: kazoku

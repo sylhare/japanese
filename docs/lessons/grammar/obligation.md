@@ -87,8 +87,15 @@ More polite form used in formal situations.
 
 - しゅくだい を しなければ いけません - I must do my homework.
   - *shukudai wo shinakereba ikemasen*
-- あした はやく おきなければ いけません - I must wake up early tomorrow.
-  - *ashita hayaku okinakereba ikemasen*
+
+:::tip Polite Refusal: つごうが わるい
+When you can't fulfill an obligation or attend something, **つごうが わるい** (inconvenient / doesn't work for me) is the natural polite explanation:
+- つごうが わるい です - It's not convenient for me.
+- つごうが わるい ので、いけません - I can't go because it's inconvenient.
+
+The opposite, **つごうが いい**, means it works / is convenient:
+- つごうが いい 時間 は いつ ですか？ - When is a convenient time for you?
+:::
 
 ### Casual
 
