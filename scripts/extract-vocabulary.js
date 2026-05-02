@@ -92,8 +92,10 @@ function isParticle(type) {
  */
 function stripEmojis(text) {
   if (!text) return text;
-  text = text.replace(/[^\p{L}\p{N}\s.,'():;/&-]/gu, '').trim();
+  text = text.replace(/[^\p{L}\p{N}\s.,'():;/&-]/gu, '');
   text = text.replace(/^\p{N}+(\s+)?/u, '');
+  text = text.replace(/\(\s+/g, '(').replace(/\s+\)/g, ')');
+  text = text.replace(/\s+/g, ' ');
   return text.trim();
 }
 
@@ -267,7 +269,7 @@ function extractFromTable(tableContent, filePath, startIndex = 0) {
       continue;
     }
 
-    const fileId = path.basename(filePath, '.md').replace(/[^a-zA-Z0-9]/g, '');
+    const fileId = path.basename(filePath).replace(/\.mdx?$/, '').replace(/[^a-zA-Z0-9]/g, '');
     const id = `${fileId}_${itemIndex}`;
 
     let category = 'general';
@@ -281,7 +283,7 @@ function extractFromTable(tableContent, filePath, startIndex = 0) {
     }
 
     const tags = [];
-    const lessonName = path.basename(filePath, '.md');
+    const lessonName = path.basename(filePath).replace(/\.mdx?$/, '');
     tags.push(lessonName);
 
     const item = {
@@ -331,7 +333,7 @@ function scanAllLessons() {
 
       if (stat.isDirectory()) {
         scanDirectory(filePath);
-      } else if (file.endsWith('.md')) {
+      } else if (file.endsWith('.md') || file.endsWith('.mdx')) {
         const lessonVocabulary = extractVocabularyFromFile(filePath);
         vocabulary.push(...lessonVocabulary);
 
@@ -415,11 +417,17 @@ function compareIds(idA, idB) {
  * @param {Object} extracted - Newly extracted vocabulary data
  * @returns {Object} Merged vocabulary data
  */
+function contentKeyFor(item) {
+  return `${item.hiragana}-${item.romaji}-${stripEmojis(item.meaning)}`.toLowerCase();
+}
+
 function mergeVocabulary(existing, extracted) {
   const contentToExistingId = new Map();
   for (const item of existing.vocabulary) {
-    const key = `${item.hiragana}-${item.romaji}-${item.meaning}`.toLowerCase();
-    contentToExistingId.set(key, item.id);
+    const key = contentKeyFor(item);
+    if (!contentToExistingId.has(key)) {
+      contentToExistingId.set(key, item.id);
+    }
   }
 
   const maxSuffixByPrefix = new Map();
@@ -438,7 +446,7 @@ function mergeVocabulary(existing, extracted) {
     if (isParticle(item.type)) {
       return;
     }
-    const contentKey = `${item.hiragana}-${item.romaji}-${item.meaning}`.toLowerCase();
+    const contentKey = contentKeyFor(item);
 
     if (contentMap.has(contentKey)) {
       const existingItem = contentMap.get(contentKey);
@@ -465,11 +473,13 @@ function mergeVocabulary(existing, extracted) {
   existing.vocabulary.forEach(mergeItem);
   extracted.vocabulary.forEach(mergeItem);
 
+  const extractedKeys = new Set(extracted.vocabulary.map(contentKeyFor));
+
   const allCategories = new Set([...existing.categories, ...extracted.categories]);
 
-  const mergedVocabulary = Array.from(contentMap.values()).sort((a, b) => {
-    return compareIds(a.id, b.id);
-  });
+  const mergedVocabulary = Array.from(contentMap.values())
+    .filter(item => item.tags.length === 0 || extractedKeys.has(contentKeyFor(item)))
+    .sort((a, b) => compareIds(a.id, b.id));
 
   return {
     vocabulary: mergedVocabulary,
@@ -529,15 +539,17 @@ function main(options = {}) {
   const merged = mergeVocabulary(existing, extracted);
 
   const previousCount = force ? 0 : existing.vocabulary.length;
-  const newItems = merged.vocabulary.length - previousCount;
   const totalItems = merged.vocabulary.length;
 
   if (force) {
     console.log(`📚 Extracted ${totalItems} vocabulary items`);
-  } else if (newItems > 0) {
-    console.log(`📚 Found ${newItems} new vocabulary items`);
   } else {
-    console.log('📚 No new vocabulary items found');
+    const existingIds = new Set(existing.vocabulary.map(i => i.id));
+    const addedCount = merged.vocabulary.filter(i => !existingIds.has(i.id)).length;
+    const removedCount = previousCount - (totalItems - addedCount);
+    if (addedCount) console.log(`📚 Found ${addedCount} new vocabulary items`);
+    if (removedCount) console.log(`🗑️  Removed ${removedCount} vocabulary items from deleted lesson files`);
+    if (!addedCount && !removedCount) console.log('📚 No vocabulary changes found');
   }
   console.log(`📖 Total vocabulary items: ${totalItems}`);
 

@@ -31,6 +31,7 @@ export const CONJUGATION_LESSONS: Lesson[] = [
   { name: 'Verb Conjugation Basics', path: 'basics',          heading: /verb conjugation|conjugation/i },
   { name: 'Dictionary Form',         path: 'dictionary-form', heading: /introduction/i },
   { name: 'Potential Form',          path: 'potential-form',  heading: /potential form|できる/i },
+  { name: 'Passive Form',            path: 'passive-form',    heading: /passive form|られる/i },
 ];
 
 export const GRAMMAR_LESSONS: Lesson[] = [
@@ -82,8 +83,10 @@ export const VOCABULARY_SECTIONS: LessonSection[] = [
     basePath: 'time',
     heading: /time|dates/i,
     subLessons: [
-      { name: 'Days and Weeks', path: 'days-and-weeks', heading: /days.*weeks|days of the week/i },
-      { name: 'Calendar',       path: 'calendar',       heading: /calendar|dates/i },
+      { name: 'Days and Weeks',     path: 'days-and-weeks', heading: /days.*weeks|days of the week/i },
+      { name: 'Calendar',           path: 'calendar',       heading: /calendar|dates/i },
+      { name: 'Duration Counters',  path: 'date-counters',  heading: /duration counters/i },
+      { name: 'Frequency Counters', path: 'frequency',      heading: /frequency counters/i },
     ],
   },
   {
@@ -93,7 +96,6 @@ export const VOCABULARY_SECTIONS: LessonSection[] = [
     subLessons: [
       { name: 'Basic Numbers',   path: 'basics',   heading: /basic numbers|numbers/i },
       { name: 'Reading Numbers', path: 'counting', heading: /reading numbers|counting/i },
-      { name: 'Counters',        path: 'counters', heading: /counters|frequency/i },
     ],
   },
 ];

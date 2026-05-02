@@ -145,15 +145,15 @@ test.describe('Vocabulary Pages', () => {
   });
 
   test.describe('Cross-references', () => {
-    test('should navigate from Calendar to Counters via NextSteps', async ({ page }) => {
+    test('should navigate from Calendar to Frequency Counters via NextSteps', async ({ page }) => {
       await page.goto('./docs/lessons/vocabulary/time/calendar');
       await page.waitForLoadState('networkidle');
 
-      const countersLink = page.locator('a[href*="numbers/counters"]').first();
+      const countersLink = page.locator('a[href*="time/frequency"]').first();
       await expect(countersLink).toBeVisible();
       await countersLink.click();
       await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /counters|frequency/i }).first()).toBeVisible();
+      await expect(page.getByRole('heading', { name: /frequency counters/i }).first()).toBeVisible();
     });
 
     test('should navigate from Food to Cooking via NextSteps', async ({ page }) => {
