@@ -43,15 +43,6 @@ Godan passive always inserts an **あ** sound before れる:
 く → か**れる**, む → ま**れる**, ぶ → ば**れる**.
 :::
 
-### Examples
-
-- かく → かかれる (to be written)
-- よむ → よまれる (to be read)
-- はなす → はなされる (to be spoken about)
-- よぶ → よばれる (to be called)
-- つくる → つくられる (to be made)
-- かう → かわれる (to be bought)
-
 ## Group 2 (Ichidan) — Drop る, add られる
 
 | Ending | Passive Form | Pattern |
@@ -69,19 +60,12 @@ Context determines the meaning. This ambiguity is why casual speech often uses *
 The potential form uses the same られる ending for Ichidan verbs. See [Potential Form - できる](./potential-form) for a full breakdown and comparison.
 :::
 
-### Examples
-
-- みる → みられる (to be seen)
-- たべる → たべられる (to be eaten)
-- おしえる → おしえられる (to be taught)
-- ほめる → ほめられる (to be praised)
-- しかる → しかられる (to be scolded)
-- わすれる → わすれられる (to be forgotten)
-
 ## Group 3 (Irregular)
 
-- する → **される** (to be done)
-- くる → **こられる** (to be come to / to have someone come)
+| Dictionary Form | Passive Form | Romaji |
+|----------------|-------------|--------|
+| する | される | suru → sareru |
+| くる | こられる | kuru → korareru |
 
 :::warning Special Case: する
 する becomes **される**, not すれる or すられる.
