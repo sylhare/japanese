@@ -125,7 +125,7 @@
 
 .category {
   background: var(--ifm-color-primary);
-  color: white;
+  color: var(--color-primary-foreground);
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   font-weight: 500;
@@ -151,7 +151,7 @@
 
 .tag:hover {
   background: var(--ifm-color-primary);
-  color: white;
+  color: var(--color-primary-foreground);
   border-color: var(--ifm-color-primary);
   text-decoration: none;
 }
