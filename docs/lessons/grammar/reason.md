@@ -142,6 +142,6 @@ Use **し** when you have two or more reasons to give. Use **から** or **の�
   {
     title: 'Linking Words',
     description: 'Learn more connectors like however, only, therefore, and more',
-    to: './linking-words',
+    to: '/docs/lessons/vocabulary/linking-words',
   },
 ]} />
