@@ -50,7 +50,7 @@ export const GRAMMAR_LESSONS: Lesson[] = [
   { name: 'Sequential Actions',   path: 'sequential-actions',   heading: /sequential|てから/i },
   { name: 'Prohibition',          path: 'prohibition',          heading: /prohibition|いけません|だめ/i },
   { name: 'Question Words',       path: 'question-words',       heading: /question words/i },
-  { name: 'Conditional - と',     path: 'conditional',          heading: /conditional|と/i },
+  { name: 'Conditional - と / たら', path: 'conditional',          heading: /conditional/i },
 ];
 
 export const VOCABULARY_LESSONS: Lesson[] = [
