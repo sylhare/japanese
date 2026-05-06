@@ -87,6 +87,7 @@ export const VOCABULARY_SECTIONS: LessonSection[] = [
       { name: 'Calendar',           path: 'calendar',       heading: /calendar|dates/i },
       { name: 'Duration Counters',  path: 'date-counters',  heading: /duration counters/i },
       { name: 'Frequency Counters', path: 'frequency',      heading: /frequency counters/i },
+      { name: 'Telling Time',       path: 'clock',          heading: /telling time/i },
     ],
   },
   {
