@@ -51,3 +51,15 @@ The [`.github/docs/templates/README.md`](docs/templates/README.md) contains the 
 - How to run `npm run build` to regenerate `vocabulary.md` after adding new vocabulary
 
 Follow all steps in that checklist before opening a pull request.
+
+## Documentation
+
+Developer and contributor documentation lives in [`.github/docs/`](docs/):
+
+| Resource | Path |
+|----------|------|
+| Docusaurus configuration, menus, sidebars, plugins | [`.github/docs/docusaurus.md`](docs/docusaurus.md) |
+| Vocabulary extraction, table format, YAML structure, tag system | [`.github/docs/vocabulary-extraction.md`](docs/vocabulary-extraction.md) |
+| Deployment pipeline | [`.github/docs/deployment-guide.md`](docs/deployment-guide.md) |
+| Lesson templates and contributor checklist | [`.github/docs/templates/`](docs/templates/) |
+| Component usage (NextSteps, LessonList, ReferenceCard) | [`src/components/`](../src/components/) (README.md in each component folder) |

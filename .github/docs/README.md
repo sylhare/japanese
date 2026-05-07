@@ -8,5 +8,5 @@ This folder contains documentation for developers and contributors working on th
 |------|---------|
 | [`docusaurus.md`](docusaurus.md) | Site configuration, menus, sidebars, callouts, plugins |
 | [`vocabulary-extraction.md`](vocabulary-extraction.md) | Vocabulary extraction script, table format, YAML structure, tag system, and dictionary features |
-| [`components/`](components/) | Custom MDX components (NextSteps, LessonList, ReferenceCard) |
+| [`../../src/components/`](../../src/components/) | Custom MDX components (NextSteps, LessonList, ReferenceCard) — docs co-located with each component |
 | [`templates/`](templates/) | Lesson templates and the contributor checklist |
