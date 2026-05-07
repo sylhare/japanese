@@ -85,6 +85,6 @@ See the [Conditional: と](./conditional) article for more.
   {
     title: 'Linking Words',
     description: 'Learn sentence connectors like because, however, only, and more',
-    to: '/docs/lessons/vocabulary/linking-words',
+    to: '/docs/lessons/vocabulary/essentials/linking-words',
   },
 ]} />

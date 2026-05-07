@@ -248,7 +248,7 @@ Question words combine with **も** or **か** to shift their meaning:
   {
     title: 'Linking Words',
     description: 'Learn connectors like because, however, and only to build more complete answers',
-    to: '/docs/lessons/vocabulary/linking-words',
+    to: '/docs/lessons/vocabulary/essentials/linking-words',
   },
   {
     title: 'Particle Guide',

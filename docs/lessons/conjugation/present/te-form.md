@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 1
 title: Present - て form
 description: Learn the connecting form of Japanese verbs
 tags: [grammar, verbs, conjugation, て形]
@@ -108,7 +108,7 @@ The te-form depends on the final syllable:
   {
     title: "Past - た form",
     description: "Master the past tense conjugation of Japanese verbs",
-    to: "./ta-form"
+    to: "../past/ta-form"
   },
   {
     title: "Present Negative - ない",

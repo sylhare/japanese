@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 1
 title: Past - た form
 description: Master the past tense conjugation of Japanese verbs
 tags: [grammar, verbs, conjugation, た形, past tense]
@@ -129,7 +129,7 @@ The ta-form depends on the final syllable (same as te-form, just て→た and �
   {
     title: "Present Negative - ない",
     description: "Learn to express negation with the nai form",
-    to: "./nai-form"
+    to: "../present/nai-form"
   },
   {
     title: "Conditional - と / たら",

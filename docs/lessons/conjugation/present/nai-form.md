@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 2
 title: Present Negative - ない
 description: Learn the negative form of Japanese verbs
 tags: [grammar, verbs, conjugation, ない形, negative]
@@ -90,6 +90,6 @@ This is the only verb where the negative form is completely different!
   {
     title: "Past Negative - なかった",
     description: "Learn to express past negation",
-    to: "./nai-past-form"
+    to: "../past/nai-past-form"
   }
 ]} />

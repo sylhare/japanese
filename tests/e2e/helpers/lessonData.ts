@@ -30,6 +30,8 @@ export const INTRO_LINKS: Lesson[] = [
 export const CONJUGATION_LESSONS: Lesson[] = [
   { name: 'Verb Conjugation Basics', path: 'basics',          heading: /verb conjugation|conjugation/i },
   { name: 'Dictionary Form',         path: 'dictionary-form', heading: /introduction/i },
+  { name: 'Present Forms',           path: 'present',         heading: /present forms/i,     partial: true },
+  { name: 'Past Forms',              path: 'past',            heading: /past forms/i,        partial: true },
   { name: 'Potential Form',          path: 'potential-form',  heading: /potential form|できる/i },
   { name: 'Passive Form',            path: 'passive-form',    heading: /passive form|られる/i },
 ];
@@ -108,4 +110,24 @@ export const VOCABULARY_SECTIONS: LessonSection[] = [
     ],
   },
 ];
+
+export const CONJUGATION_SECTIONS: LessonSection[] = [
+  {
+    section: 'Present',
+    basePath: 'present',
+    heading: /present forms/i,
+    subLessons: [
+      { name: 'て form',           path: 'te-form',  heading: /て form/i },
+      { name: 'Negative - ない',   path: 'nai-form', heading: /negative.*ない|ない/i },
+    ],
+  },
+  {
+    section: 'Past',
+    basePath: 'past',
+    heading: /past forms/i,
+    subLessons: [
+      { name: 'た form',               path: 'ta-form',       heading: /た form/i },
+      { name: 'Negative - なかった',    path: 'nai-past-form', heading: /negative.*なかった|なかった/i },
+    ],
+  },
 ];

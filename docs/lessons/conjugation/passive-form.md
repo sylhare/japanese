@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 6
 title: Passive Form - られる
 description: Learn how to express that something is done to the subject in Japanese
 tags: [grammar, verbs, conjugation, られる形, passive]
@@ -114,6 +114,6 @@ The potential form uses the same られる ending for Ichidan verbs. See [Potent
   {
     title: 'て Form',
     description: 'Combine the passive with te-form to chain passive actions',
-    to: './te-form',
+    to: './present/te-form',
   },
 ]} />

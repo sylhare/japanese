@@ -92,7 +92,7 @@ Use **たら** for specific, one-time situations — things that might happen, t
 | Negative | [〜なかった] + ら | いかなかった → いかなかったら |
 
 :::tip Formation Shortcut
-If you know the [た-form](/docs/lessons/conjugation/ta-form), just add **ら**. That's it!
+If you know the [た-form](/docs/lessons/conjugation/past/ta-form), just add **ら**. That's it!
 :::
 
 ### When to Use たら
@@ -152,7 +152,7 @@ Japanese has two more conditional forms: **ば** (general conditions) and **な�
   {
     title: 'Past - た form',
     description: 'Review the ta-form conjugation — たら is built directly from it',
-    to: '/docs/lessons/conjugation/ta-form',
+    to: '/docs/lessons/conjugation/past/ta-form',
   },
   {
     title: 'Expressing Reason',
