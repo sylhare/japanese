@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 title: 📐 Common Adjectives
 description: Learn essential Japanese adjectives for size, quantity, and everyday descriptions
 tags: [vocabulary, adjectives, basic, い-adjective, な-adjective]

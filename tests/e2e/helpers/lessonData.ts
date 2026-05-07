@@ -54,17 +54,15 @@ export const GRAMMAR_LESSONS: Lesson[] = [
 ];
 
 export const VOCABULARY_LESSONS: Lesson[] = [
-  { name: 'Adjectives',      path: 'adjectives',     heading: /adjectives/i },
-  { name: 'Colors',          path: 'colors',         heading: /colors/i },
-  { name: 'Food',            path: 'food',           heading: /food/i,               partial: true },
-  { name: 'Time',            path: 'time',           heading: /time|dates/i,         partial: true },
-  { name: 'Numbers',         path: 'numbers',        heading: /numbers|counting/i,   partial: true },
-  { name: 'Family',          path: 'family',         heading: /family|relationships/i },
-  { name: 'Clothes',         path: 'clothes',        heading: /clothes|wearing/i },
-  { name: 'Weather',         path: 'weather',        heading: /weather/i },
-  { name: 'Health',          path: 'health',         heading: /health|medical/i },
-  { name: 'Confusing Kanji', path: 'confusing-kanji', heading: /confusing kanji/i },
-  { name: 'Linking Words',  path: 'linking-words',   heading: /linking words/i },
+  { name: 'Essentials',  path: 'essentials',  heading: /language essentials/i, partial: true },
+  { name: 'Colors',      path: 'colors',      heading: /colors/i },
+  { name: 'Food',        path: 'food',        heading: /food/i,               partial: true },
+  { name: 'Time',        path: 'time',        heading: /time|dates/i,         partial: true },
+  { name: 'Numbers',     path: 'numbers',     heading: /numbers|counting/i,   partial: true },
+  { name: 'Family',      path: 'family',      heading: /family|relationships/i },
+  { name: 'Clothes',     path: 'clothes',     heading: /clothes|wearing/i },
+  { name: 'Weather',     path: 'weather',     heading: /weather/i },
+  { name: 'Health',      path: 'health',      heading: /health|medical/i },
 ];
 
 export const VOCABULARY_SECTIONS: LessonSection[] = [
@@ -99,4 +97,15 @@ export const VOCABULARY_SECTIONS: LessonSection[] = [
       { name: 'Reading Numbers', path: 'counting', heading: /reading numbers|counting/i },
     ],
   },
+  {
+    section: 'Essentials',
+    basePath: 'essentials',
+    heading: /language essentials/i,
+    subLessons: [
+      { name: 'Adjectives',      path: 'adjectives',      heading: /adjectives/i },
+      { name: 'Linking Words',   path: 'linking-words',   heading: /linking words/i },
+      { name: 'Confusing Kanji', path: 'confusing-kanji', heading: /confusing kanji/i },
+    ],
+  },
+];
 ];

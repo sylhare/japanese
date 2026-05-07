@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 3
 title: 😵‍💫 Confusing Kanji
 description: Learn to distinguish between similar-looking Japanese kanji characters
 tags: [vocabulary, kanji, confusing, visual, reading, writing]
