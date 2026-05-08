@@ -65,20 +65,20 @@ export function getTagPath(tag: string): string {
   const jlptTagMappings: Record<string, string> = {
     'n5': 'docs/reference/n5-vocabulary',
   };
-  const grammarTags = [
-    'actions-and-thinking',
-    'advice',
-    'appearance',
-    'comparison',
-    'conditional',
-    'conjunctions',
-    'desire',
-    'excess',
-    'experience',
-    'obligation',
-    'particle-guide',
-    'reason',
-  ];
+  const grammarTagMappings: Record<string, string> = {
+    'actions-and-thinking': 'grammar/actions-and-events/actions-and-thinking',
+    'advice': 'grammar/feelings-and-intent/advice',
+    'appearance': 'grammar/describing-and-comparing/appearance',
+    'comparison': 'grammar/describing-and-comparing/comparison',
+    'conditional': 'grammar/actions-and-events/conditional',
+    'conjunctions': 'grammar/sentence-building/conjunctions',
+    'desire': 'grammar/feelings-and-intent/desire',
+    'excess': 'grammar/describing-and-comparing/excess',
+    'experience': 'grammar/actions-and-events/experience',
+    'obligation': 'grammar/feelings-and-intent/obligation',
+    'particle-guide': 'grammar/sentence-building/particle-guide',
+    'reason': 'grammar/explaining-and-reasoning/reason',
+  };
 
   const conjugationTags = [
     'future',
@@ -103,6 +103,7 @@ export function getTagPath(tag: string): string {
     'kitchen': 'vocabulary/food/cooking',
     'food': 'vocabulary/food',
     'ingredients': 'vocabulary/food/food-and-ingredients',
+    'confusing-kanji': 'vocabulary/essentials/confusing-kanji',
   };
 
   const lowerTag = tag.toLowerCase();
@@ -115,8 +116,8 @@ export function getTagPath(tag: string): string {
     return `docs/lessons/${tagMappings[lowerTag]}`;
   }
 
-  if (grammarTags.includes(lowerTag)) {
-    return `docs/lessons/grammar/${tag}`;
+  if (grammarTagMappings[lowerTag]) {
+    return `docs/lessons/${grammarTagMappings[lowerTag]}`;
   }
 
   if (conjugationTags.includes(lowerTag)) {

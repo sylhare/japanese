@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 2
 title: Listing Items - と / や
 description: Learn the difference between と (and) and や (or more) for listing items
 tags: [grammar, particles, conjunctions, lists]
@@ -73,14 +73,14 @@ Use **や** when giving **examples** - there are more items not mentioned.
 
 :::info と has another use
 **と** can also connect two clauses to express a natural consequence: *when A happens, B follows*.
-See the [Conditional: と](./conditional) article for more.
+See the [Conditional: と](/docs/lessons/grammar/actions-and-events/conditional) article for more.
 :::
 
 <NextSteps items={[
   {
     title: 'Conditional: と',
     description: 'Learn how to use と to express natural conditionals and automatic consequences',
-    to: './conditional',
+    to: '/docs/lessons/grammar/actions-and-events/conditional',
   },
   {
     title: 'Linking Words',

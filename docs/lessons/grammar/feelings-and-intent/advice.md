@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 2
 title: Giving Advice - ほう が いい
 description: Learn how to give advice using ほう が いい
 tags: [grammar, advice, suggestions, ほう]

@@ -8,11 +8,11 @@ const VOCAB_TAGS = [
 ];
 
 const GRAMMAR_TAGS = [
-  { name: 'Experience', href: '/grammar/experience', heading: /experience/i },
-  { name: 'Advice',     href: '/grammar/advice',     heading: /advice/i },
-  { name: 'Comparison', href: '/grammar/comparison', heading: /comparison/i },
-  { name: 'Desire',     href: '/grammar/desire',     heading: /desire/i },
-  { name: 'Excess',     href: '/grammar/excess',     heading: /excess|too much/i },
+  { name: 'Experience', href: '/grammar/actions-and-events/experience',      heading: /experience/i },
+  { name: 'Advice',     href: '/grammar/feelings-and-intent/advice',         heading: /advice/i },
+  { name: 'Comparison', href: '/grammar/describing-and-comparing/comparison', heading: /comparison/i },
+  { name: 'Desire',     href: '/grammar/feelings-and-intent/desire',         heading: /desire/i },
+  { name: 'Excess',     href: '/grammar/describing-and-comparing/excess',    heading: /excess|too much/i },
 ];
 
 test.describe('Dictionary', () => {
@@ -285,7 +285,7 @@ test.describe('Dictionary', () => {
       await expect(n5Tag).toBeVisible();
 
       await expect(dictionaryFormTag).toHaveAttribute('href', /\/docs\/lessons\/conjugation\/dictionary-form$/);
-      await expect(confusingKanjiTag).toHaveAttribute('href', /\/docs\/lessons\/vocabulary\/confusing-kanji$/);
+      await expect(confusingKanjiTag).toHaveAttribute('href', /\/docs\/lessons\/vocabulary\/essentials\/confusing-kanji$/);
       await expect(n5Tag).toHaveAttribute('href', /\/docs\/reference\/n5-vocabulary$/);
     });
 
@@ -303,7 +303,7 @@ test.describe('Dictionary', () => {
       const confusingKanjiTag = vocabularyCard.locator('a[class*="tag"]').filter({ hasText: /^confusing-kanji$/i });
       await confusingKanjiTag.click();
       await verifyPageIsFound(page);
-      await expect(page).toHaveURL(/\/docs\/lessons\/vocabulary\/confusing-kanji/);
+      await expect(page).toHaveURL(/\/docs\/lessons\/vocabulary\/essentials\/confusing-kanji/);
       await expect(page.getByRole('heading', { name: /confusing kanji/i }).first()).toBeVisible();
 
       await page.goto('./dictionary');

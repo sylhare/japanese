@@ -214,16 +214,16 @@ Here are some example sentences combining multiple linking words:
   {
     title: 'Question Words — 疑問詞',
     description: 'Learn why, what, when, where, how, how many, and more',
-    to: '/docs/lessons/grammar/question-words',
+    to: '/docs/lessons/grammar/sentence-building/question-words',
   },
   {
     title: 'Expressing Reason — ので / から',
     description: 'Dive deeper into the grammar of because with ので and から',
-    to: '/docs/lessons/grammar/reason',
+    to: '/docs/lessons/grammar/explaining-and-reasoning/reason',
   },
   {
     title: 'Listing Items — と / や',
     description: 'Learn how to connect nouns in lists using と and や',
-    to: '/docs/lessons/grammar/conjunctions',
+    to: '/docs/lessons/grammar/sentence-building/conjunctions',
   },
 ]} />

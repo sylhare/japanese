@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 2
 title: Making Comparisons - ほう が / より
 description: Learn how to compare things using ほう が and より
 tags: [grammar, comparison, ほう, より]

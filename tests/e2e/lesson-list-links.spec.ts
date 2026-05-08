@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { CONJUGATION_LESSONS, CONJUGATION_SECTIONS, GRAMMAR_LESSONS, INTRO_LINKS, VOCABULARY_LESSONS, VOCABULARY_SECTIONS } from './helpers/lessonData';
+import { CONJUGATION_LESSONS, CONJUGATION_SECTIONS, GRAMMAR_LESSONS, GRAMMAR_SECTIONS, INTRO_LINKS, VOCABULARY_LESSONS, VOCABULARY_SECTIONS } from './helpers/lessonData';
 import { verifyPageIsFound } from './helpers/pageHelper';
 
 test.describe('LessonList Links', () => {
@@ -92,6 +92,30 @@ test.describe('LessonList Links', () => {
       });
     }
   });
+
+  for (const { section, basePath, heading, subLessons } of GRAMMAR_SECTIONS) {
+    test.describe(`Grammar ${section} Page`, () => {
+      test.beforeEach(async ({ page }) => {
+        await page.goto(`./docs/lessons/grammar/${basePath}`);
+        await page.waitForLoadState('networkidle');
+      });
+
+      test('page loads successfully', async ({ page }) => {
+        await verifyPageIsFound(page);
+        await expect(page.getByRole('heading', { name: heading }).first()).toBeVisible();
+      });
+
+      for (const sub of subLessons) {
+        test(`navigates to ${sub.name}`, async ({ page }) => {
+          const card = page.locator(`a[class*="lessonCard"][href*="${sub.path}"]`).first();
+          await expect(card).toBeVisible();
+          await card.click();
+          await verifyPageIsFound(page);
+          await expect(page.getByRole('heading', { name: sub.heading }).first()).toBeVisible();
+        });
+      }
+    });
+  }
 
   for (const { section, basePath, heading, subLessons } of CONJUGATION_SECTIONS) {
     test.describe(`Conjugation ${section} Page`, () => {

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 15
+sidebar_position: 1
 title: Sequential Actions - てから
 description: Learn how to express actions done after another using てから
 tags: [grammar, te-form, sequence, actions]
@@ -10,7 +10,7 @@ tags: [grammar, te-form, sequence, actions]
 Learn how to express "after doing X, do Y" using the **てから** form.
 
 :::tip Remember
-These patterns require the て-form of the verb. Make sure you know your [て-form conjugations](../conjugation/present/te-form)!
+These patterns require the て-form of the verb. Make sure you know your [て-form conjugations](/docs/lessons/conjugation/present/te-form)!
 :::
 
 ## Key Expression

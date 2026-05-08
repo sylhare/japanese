@@ -1,5 +1,5 @@
 ---
-sidebar_position: 16
+sidebar_position: 4
 title: Prohibition - てはいけません / てはだめ
 description: Learn how to express prohibition using てはいけません and てはだめです
 tags: [grammar, te-form, prohibition, rules]
@@ -10,7 +10,7 @@ tags: [grammar, te-form, prohibition, rules]
 Learn how to say "must not" or "not allowed to" using **てはいけません** and **てはだめです**.
 
 :::tip Remember
-These patterns require the て-form of the verb. Make sure you know your [て-form conjugations](../conjugation/present/te-form)!
+These patterns require the て-form of the verb. Make sure you know your [て-form conjugations](/docs/lessons/conjugation/present/te-form)!
 :::
 
 ## Key Expressions

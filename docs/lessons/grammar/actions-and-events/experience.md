@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 2
 title: Expressing Experience - こと が ある
 description: Learn how to express past experiences using こと が ある
 tags: [grammar, experience, past-tense, verb-conjugation]

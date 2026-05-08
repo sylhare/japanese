@@ -1,5 +1,5 @@
 ---
-sidebar_position: 17
+sidebar_position: 3
 title: Question Words - 疑問詞
 description: Learn Japanese question words — why, what, when, where, who, how, how long, how many, and more
 tags: [grammar, question-words, interrogatives, particles, vocabulary]

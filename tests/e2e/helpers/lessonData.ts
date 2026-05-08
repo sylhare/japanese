@@ -37,22 +37,65 @@ export const CONJUGATION_LESSONS: Lesson[] = [
 ];
 
 export const GRAMMAR_LESSONS: Lesson[] = [
-  { name: 'Particle Guide',       path: 'particle-guide',       heading: /particle/i },
-  { name: 'Experience',           path: 'experience',           heading: /experience/i },
-  { name: 'Conjunctions',         path: 'conjunctions',         heading: /listing items|conjunctions/i },
-  { name: 'Excess',               path: 'excess',               heading: /too much|excess|すぎる/i },
-  { name: 'Comparison',           path: 'comparison',           heading: /comparison/i },
-  { name: 'Advice',               path: 'advice',               heading: /advice/i },
-  { name: 'Obligation',           path: 'obligation',           heading: /obligation/i },
-  { name: 'Reason',               path: 'reason',               heading: /reason/i },
-  { name: 'Desire',               path: 'desire',               heading: /desire/i },
-  { name: 'Intention',            path: 'intend_to',            heading: /intention|つもり/i },
-  { name: 'Appearance',           path: 'appearance',           heading: /appearance/i },
-  { name: 'Actions and Thinking', path: 'actions-and-thinking', heading: /actions|thinking/i },
-  { name: 'Sequential Actions',   path: 'sequential-actions',   heading: /sequential|てから/i },
-  { name: 'Prohibition',          path: 'prohibition',          heading: /prohibition|いけません|だめ/i },
-  { name: 'Question Words',       path: 'question-words',       heading: /question words/i },
-  { name: 'Conditional - と / たら', path: 'conditional',          heading: /conditional/i },
+  { name: 'Sentence Building',        path: 'sentence-building',        heading: /sentence building/i,        partial: true },
+  { name: 'Feelings and Intent',      path: 'feelings-and-intent',      heading: /feelings and intent/i,      partial: true },
+  { name: 'Describing and Comparing', path: 'describing-and-comparing', heading: /describing and comparing/i, partial: true },
+  { name: 'Actions and Events',       path: 'actions-and-events',       heading: /actions and events/i,       partial: true },
+  { name: 'Explaining and Reasoning', path: 'explaining-and-reasoning', heading: /explaining and reasoning/i, partial: true },
+];
+
+export const GRAMMAR_SECTIONS: LessonSection[] = [
+  {
+    section: 'Sentence Building',
+    basePath: 'sentence-building',
+    heading: /sentence building/i,
+    subLessons: [
+      { name: 'Particle Guide',  path: 'particle-guide', heading: /particle/i },
+      { name: 'Conjunctions',    path: 'conjunctions',   heading: /listing items|conjunctions/i },
+      { name: 'Question Words',  path: 'question-words', heading: /question words/i },
+    ],
+  },
+  {
+    section: 'Feelings and Intent',
+    basePath: 'feelings-and-intent',
+    heading: /feelings and intent/i,
+    subLessons: [
+      { name: 'Desire',      path: 'desire',      heading: /desire/i },
+      { name: 'Advice',      path: 'advice',       heading: /advice/i },
+      { name: 'Obligation',  path: 'obligation',   heading: /obligation/i },
+      { name: 'Prohibition', path: 'prohibition',  heading: /prohibition|いけません|だめ/i },
+    ],
+  },
+  {
+    section: 'Describing and Comparing',
+    basePath: 'describing-and-comparing',
+    heading: /describing and comparing/i,
+    subLessons: [
+      { name: 'Appearance',  path: 'appearance',  heading: /appearance/i },
+      { name: 'Comparison',  path: 'comparison',  heading: /comparison/i },
+      { name: 'Excess',      path: 'excess',      heading: /too much|excess|すぎる/i },
+    ],
+  },
+  {
+    section: 'Actions and Events',
+    basePath: 'actions-and-events',
+    heading: /actions and events/i,
+    subLessons: [
+      { name: 'Sequential Actions',   path: 'sequential-actions',   heading: /sequential|てから/i },
+      { name: 'Experience',           path: 'experience',           heading: /experience/i },
+      { name: 'Actions and Thinking', path: 'actions-and-thinking', heading: /actions|thinking/i },
+      { name: 'Conditional',          path: 'conditional',          heading: /conditional/i },
+    ],
+  },
+  {
+    section: 'Explaining and Reasoning',
+    basePath: 'explaining-and-reasoning',
+    heading: /explaining and reasoning/i,
+    subLessons: [
+      { name: 'Reason',    path: 'reason',    heading: /reason/i },
+      { name: 'Intention', path: 'intend_to', heading: /intention|つもり/i },
+    ],
+  },
 ];
 
 export const VOCABULARY_LESSONS: Lesson[] = [

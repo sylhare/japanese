@@ -1,5 +1,5 @@
 ---
-sidebar_position: 12
+sidebar_position: 2
 title: Expressing Intention - つもり
 description: Learn how to express intentions and plans using つもり
 tags: [grammar, intention, plans, つもり, verb-conjugation]

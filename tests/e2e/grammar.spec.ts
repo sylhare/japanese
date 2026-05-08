@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { GRAMMAR_LESSONS } from './helpers/lessonData';
+import { GRAMMAR_LESSONS, GRAMMAR_SECTIONS } from './helpers/lessonData';
 import { validateCardLinks, validateSidebarLinks, verifyPageIsFound } from './helpers/pageHelper';
 
 test.describe('Grammar Pages', () => {
@@ -18,22 +18,10 @@ test.describe('Grammar Pages', () => {
       await page.waitForLoadState('networkidle');
     });
 
-    test.describe('Sidebar Links', () => {
-      for (const lesson of GRAMMAR_LESSONS) {
-        test(`should navigate to ${lesson.name} from sidebar`, async ({ page }) => {
-          const link = page.locator(`a.menu__link[href$="/grammar/${lesson.path}"]`).first();
-          await expect(link).toBeVisible();
-          await link.click();
-          await verifyPageIsFound(page);
-          await expect(page.getByRole('heading', { name: lesson.heading }).first()).toBeVisible();
-        });
-      }
-    });
-
     test.describe('Landing Page Cards (LessonList)', () => {
       for (const lesson of GRAMMAR_LESSONS) {
         test(`should navigate to ${lesson.name} from landing page`, async ({ page }) => {
-          const card = page.locator(`a[class*="lessonCard"][href$="/grammar/${lesson.path}"]`).first();
+          const card = page.locator(`a[class*="lessonCard"][href*="/grammar/${lesson.path}"]`).first();
           await expect(card).toBeVisible();
           await card.click();
           await verifyPageIsFound(page);
@@ -64,12 +52,36 @@ test.describe('Grammar Pages', () => {
     }
   });
 
+  for (const { section, basePath, heading, subLessons } of GRAMMAR_SECTIONS) {
+    test.describe(`Grammar ${section} Page`, () => {
+      test.beforeEach(async ({ page }) => {
+        await page.goto(`./docs/lessons/grammar/${basePath}`);
+        await page.waitForLoadState('networkidle');
+      });
+
+      test('page loads successfully', async ({ page }) => {
+        await verifyPageIsFound(page);
+        await expect(page.getByRole('heading', { name: heading }).first()).toBeVisible();
+      });
+
+      for (const sub of subLessons) {
+        test(`should navigate to ${sub.name} from landing page`, async ({ page }) => {
+          const card = page.locator(`a[class*="lessonCard"][href*="${sub.path}"]`).first();
+          await expect(card).toBeVisible();
+          await card.click();
+          await verifyPageIsFound(page);
+          await expect(page.getByRole('heading', { name: sub.heading }).first()).toBeVisible();
+        });
+      }
+    });
+  }
+
   test.describe('Cross-references', () => {
     test('should navigate from Question Words to Linking Words via NextSteps', async ({ page }) => {
-      await page.goto('./docs/lessons/grammar/question-words');
+      await page.goto('./docs/lessons/grammar/sentence-building/question-words');
       await page.waitForLoadState('networkidle');
 
-      const linkingWordsLink = page.locator('a[href*="vocabulary/linking-words"]').first();
+      const linkingWordsLink = page.locator('a[href*="vocabulary/essentials/linking-words"]').first();
       await expect(linkingWordsLink).toBeVisible();
       await linkingWordsLink.click();
       await verifyPageIsFound(page);
@@ -77,10 +89,10 @@ test.describe('Grammar Pages', () => {
     });
 
     test('should navigate from Question Words to Particle Guide via NextSteps', async ({ page }) => {
-      await page.goto('./docs/lessons/grammar/question-words');
+      await page.goto('./docs/lessons/grammar/sentence-building/question-words');
       await page.waitForLoadState('networkidle');
 
-      const particleLink = page.locator('a[href*="grammar/particle-guide"]').first();
+      const particleLink = page.locator('a[href*="grammar/sentence-building/particle-guide"]').first();
       await expect(particleLink).toBeVisible();
       await particleLink.click();
       await verifyPageIsFound(page);
