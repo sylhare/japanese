@@ -80,12 +80,16 @@ The ta-form depends on the final syllable (same as te-form, just て→た and �
 
 ## Group 3 (Irregular)
 
-### Examples
+| Dictionary Form | Ta Form | English |
+|----------------|---------|---------|
+| する | した | did |
+| くる | きた | came |
 
-- する → した (did)
-- くる → きた (came)
+:::caution する Compounds
+Verbs ending in する follow the same pattern:
 - べんきょうする → べんきょうした (studied)
 - さんぽする → さんぽした (took a walk)
+:::
 
 ## Ta Form in Context
 

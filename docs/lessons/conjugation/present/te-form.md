@@ -75,12 +75,16 @@ The te-form depends on the final syllable:
 
 ## Group 3 (Irregular)
 
-### Examples
+| Dictionary Form | Te Form | English |
+|----------------|---------|---------|
+| する | して | do |
+| くる | きて | come |
 
-- する → して (do)
-- くる → きて (come)
+:::caution する Compounds
+Verbs ending in する follow the same pattern:
 - べんきょうする → べんきょうして (study)
 - さんぽする → さんぽして (take a walk)
+:::
 
 ## Te Form in Context
 

@@ -107,7 +107,7 @@ All three mean "why" but differ in register:
 **どんな (what kind of)**
 - どんな おんがくが すきですか？ — What kind of music do you like?
   - *donna ongaku ga suki desu ka?*
-- どんな ひとですか？ — What kind of person is they?
+- どんな ひとですか？ — What kind of person are they?
   - *donna hito desu ka?*
 
 :::tip どう vs どうやって vs どのように
