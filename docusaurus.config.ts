@@ -69,18 +69,7 @@ const config: Config = {
           editUrl:
             'https://github.com/sylhare/japanese/tree/main/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          editUrl:
-            'https://github.com/sylhare/japanese/tree/main/',
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -114,6 +103,8 @@ const config: Config = {
       logo: {
         alt: 'Japanese Lessons Logo',
         src: 'img/logo.svg',
+        srcDark: 'img/logo-dark.svg',
+        style: {height: '40px'},
       },
       items: [
         {

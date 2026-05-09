@@ -147,6 +147,6 @@ Some verbs end in る but are **Group 1**, not Group 2!
   {
     title: "Present - て form",
     description: "Learn the connecting form of Japanese verbs",
-    to: "./te-form"
+    to: "./present/te-form"
   }
 ]} />

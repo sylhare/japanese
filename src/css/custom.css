@@ -13,19 +13,21 @@
   --ifm-color-primary-light: #33925d;
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
+  --color-primary-foreground: #ffffff;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Yellow/gold palette for dark mode on black background. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #f5c518;
+  --ifm-color-primary-dark: #ddb215;
+  --ifm-color-primary-darker: #d1a813;
+  --ifm-color-primary-darkest: #ac8a10;
+  --ifm-color-primary-light: #f6cb32;
+  --ifm-color-primary-lighter: #f7d03e;
+  --ifm-color-primary-lightest: #f9da65;
+  --color-primary-foreground: #1a1a1a;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -70,7 +72,7 @@
 
 .theme-doc-markdown.markdown table th {
   background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
-  color: white;
+  color: var(--color-primary-foreground);
   font-weight: 600;
   padding: 1rem 0.75rem;
   text-align: center;

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title: Duration Counters
+title: ⏳ Duration Counters
 description: Learn to count days, weeks, months, and years as durations in Japanese
 tags: [vocabulary, time, counters, duration, numbers]
 ---

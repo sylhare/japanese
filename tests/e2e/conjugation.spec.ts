@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { CONJUGATION_LESSONS } from './helpers/lessonData';
+import { CONJUGATION_LESSONS, CONJUGATION_SECTIONS } from './helpers/lessonData';
 import { validateCardLinks, validateSidebarLinks, verifyPageIsFound } from './helpers/pageHelper';
 
 test.describe('Conjugation', () => {
@@ -21,7 +21,8 @@ test.describe('Conjugation', () => {
     test.describe('Sidebar Links', () => {
       for (const lesson of CONJUGATION_LESSONS) {
         test(`should navigate to ${lesson.name} from sidebar`, async ({ page }) => {
-          const link = page.locator(`a.menu__link[href$="/conjugation/${lesson.path}"]`).first();
+          const attr = lesson.partial ? '*=' : '$=';
+          const link = page.locator(`a.menu__link[href${attr}"/conjugation/${lesson.path}"]`).first();
           await expect(link).toBeVisible();
           await link.click();
           await verifyPageIsFound(page);
@@ -33,7 +34,8 @@ test.describe('Conjugation', () => {
     test.describe('Landing Page Links (LessonList)', () => {
       for (const lesson of CONJUGATION_LESSONS) {
         test(`should navigate to ${lesson.name} from landing page`, async ({ page }) => {
-          const card = page.locator(`a[class*="lessonCard"][href$="/conjugation/${lesson.path}"]`).first();
+          const attr = lesson.partial ? '*=' : '$=';
+          const card = page.locator(`a[class*="lessonCard"][href${attr}"/conjugation/${lesson.path}"]`).first();
           await expect(card).toBeVisible();
           await card.click();
           await verifyPageIsFound(page);
@@ -64,12 +66,35 @@ test.describe('Conjugation', () => {
     }
   });
 
+  for (const { section, basePath, heading, subLessons } of CONJUGATION_SECTIONS) {
+    test.describe(`${section} Forms Page`, () => {
+      test.beforeEach(async ({ page }) => {
+        await page.goto(`./docs/lessons/conjugation/${basePath}`);
+        await page.waitForLoadState('networkidle');
+      });
+
+      test('page loads successfully', async ({ page }) => {
+        await verifyPageIsFound(page);
+        await expect(page.getByRole('heading', { name: heading }).first()).toBeVisible();
+      });
+
+      for (const sub of subLessons) {
+        test(`navigates to ${sub.name}`, async ({ page }) => {
+          const card = page.locator(`a[class*="lessonCard"][href*="${sub.path}"]`).first();
+          await expect(card).toBeVisible();
+          await card.click();
+          await verifyPageIsFound(page);
+          await expect(page.getByRole('heading', { name: sub.heading }).first()).toBeVisible();
+        });
+      }
+    });
+  }
+
   test.describe('Cross-references', () => {
     test('should navigate between conjugation lessons', async ({ page }) => {
       await page.goto('./docs/lessons/conjugation/basics');
       await page.waitForLoadState('networkidle');
 
-      // Click the NextSteps link to dictionary (not the navbar Dictionary link)
       const dictionaryLink = page.locator('a[href*="conjugation/dictionary-form"]').first();
       await expect(dictionaryLink).toBeVisible();
       await dictionaryLink.click();

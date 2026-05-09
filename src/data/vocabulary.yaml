@@ -545,6 +545,231 @@ vocabulary:
       - calendar
     type: noun
     kanji: 年
+  - id: clock_0
+    hiragana: いちじ
+    romaji: ichiji
+    meaning: 1 o'clock
+    category: time
+    tags:
+      - clock
+    type: counter
+    kanji: 一時
+  - id: clock_1
+    hiragana: にじ
+    romaji: niji
+    meaning: 2 o'clock
+    category: time
+    tags:
+      - clock
+    type: counter
+    kanji: 二時
+  - id: clock_2
+    hiragana: じゅういちじ
+    romaji: juuichiji
+    meaning: 11 o'clock
+    category: time
+    tags:
+      - clock
+    type: counter
+    kanji: 十一時
+  - id: clock_3
+    hiragana: じゅうにじ
+    romaji: juuniji
+    meaning: 12 o'clock
+    category: time
+    tags:
+      - clock
+    type: counter
+    kanji: 十二時
+  - id: clock_4
+    hiragana: いっぷん
+    romaji: ippun
+    meaning: minute
+    category: time
+    tags:
+      - clock
+    type: counter
+    kanji: 一分
+  - id: clock_5
+    hiragana: にふん
+    romaji: nifun
+    meaning: minutes
+    category: time
+    tags:
+      - clock
+    type: counter
+    kanji: 二分
+  - id: clock_6
+    hiragana: さんぷん
+    romaji: sanpun
+    meaning: minutes
+    category: time
+    tags:
+      - clock
+    type: counter
+    kanji: 三分
+  - id: clock_7
+    hiragana: よんぷん
+    romaji: yonpun
+    meaning: minutes
+    category: time
+    tags:
+      - clock
+    type: counter
+    kanji: 四分
+  - id: clock_8
+    hiragana: ごふん
+    romaji: gofun
+    meaning: minutes
+    category: time
+    tags:
+      - clock
+    type: counter
+    kanji: 五分
+  - id: clock_9
+    hiragana: ろっぷん
+    romaji: roppun
+    meaning: minutes
+    category: time
+    tags:
+      - clock
+    type: counter
+    kanji: 六分
+  - id: clock_10
+    hiragana: ななふん
+    romaji: nanafun
+    meaning: minutes
+    category: time
+    tags:
+      - clock
+    type: counter
+    kanji: 七分
+  - id: clock_11
+    hiragana: はっぷん
+    romaji: happun
+    meaning: minutes
+    category: time
+    tags:
+      - clock
+    type: counter
+    kanji: 八分
+  - id: clock_12
+    hiragana: さんじ
+    romaji: sanji
+    meaning: 3 o'clock
+    category: time
+    tags:
+      - clock
+    type: counter
+    kanji: 三時
+  - id: clock_13
+    hiragana: きゅうふん
+    romaji: kyuufun
+    meaning: minutes
+    category: time
+    tags:
+      - clock
+    type: counter
+    kanji: 九分
+  - id: clock_14
+    hiragana: じゅっぷん
+    romaji: juppun
+    meaning: minutes
+    category: time
+    tags:
+      - clock
+    type: counter
+    kanji: 十分
+  - id: clock_15
+    hiragana: はん
+    romaji: han
+    meaning: half past
+    category: time
+    tags:
+      - clock
+    type: counter
+    kanji: 半
+  - id: clock_16
+    hiragana: ごぜん
+    romaji: gozen
+    meaning: AM / morning
+    category: time
+    tags:
+      - clock
+    type: noun
+    kanji: 午前
+  - id: clock_17
+    hiragana: ごご
+    romaji: gogo
+    meaning: PM / afternoon
+    category: time
+    tags:
+      - clock
+    type: noun
+    kanji: 午後
+  - id: clock_18
+    hiragana: よじ
+    romaji: yoji
+    meaning: 4 o'clock
+    category: time
+    tags:
+      - clock
+    type: counter
+    kanji: 四時
+  - id: clock_19
+    hiragana: ごじ
+    romaji: goji
+    meaning: 5 o'clock
+    category: time
+    tags:
+      - clock
+    type: counter
+    kanji: 五時
+  - id: clock_20
+    hiragana: ろくじ
+    romaji: rokuji
+    meaning: 6 o'clock
+    category: time
+    tags:
+      - clock
+    type: counter
+    kanji: 六時
+  - id: clock_21
+    hiragana: しちじ
+    romaji: shichiji
+    meaning: 7 o'clock
+    category: time
+    tags:
+      - clock
+    type: counter
+    kanji: 七時
+  - id: clock_22
+    hiragana: はちじ
+    romaji: hachiji
+    meaning: 8 o'clock
+    category: time
+    tags:
+      - clock
+    type: counter
+    kanji: 八時
+  - id: clock_23
+    hiragana: くじ
+    romaji: kuji
+    meaning: 9 o'clock
+    category: time
+    tags:
+      - clock
+    type: counter
+    kanji: 九時
+  - id: clock_24
+    hiragana: じゅうじ
+    romaji: juuji
+    meaning: 10 o'clock
+    category: time
+    tags:
+      - clock
+    type: counter
+    kanji: 十時
   - id: clothes_0
     hiragana: きる
     romaji: kiru
@@ -909,6 +1134,14 @@ vocabulary:
     hiragana: '[clause A] + と + [clause B]'
     romaji: to
     meaning: 'when/if A, then B'
+    category: grammar
+    tags:
+      - conditional
+    type: conditional
+  - id: conditional_2
+    hiragana: '[clause A ta-form] + ら + [clause B]'
+    romaji: tara
+    meaning: 'if/when A, then B'
     category: grammar
     tags:
       - conditional
@@ -5662,6 +5895,7 @@ vocabulary:
     type: noun
 categories:
   - all
+  - essentials
   - food
   - grammar
   - lessons

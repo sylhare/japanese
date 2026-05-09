@@ -30,41 +30,84 @@ export const INTRO_LINKS: Lesson[] = [
 export const CONJUGATION_LESSONS: Lesson[] = [
   { name: 'Verb Conjugation Basics', path: 'basics',          heading: /verb conjugation|conjugation/i },
   { name: 'Dictionary Form',         path: 'dictionary-form', heading: /introduction/i },
+  { name: 'Present Forms',           path: 'present',         heading: /present forms/i,     partial: true },
+  { name: 'Past Forms',              path: 'past',            heading: /past forms/i,        partial: true },
   { name: 'Potential Form',          path: 'potential-form',  heading: /potential form|できる/i },
   { name: 'Passive Form',            path: 'passive-form',    heading: /passive form|られる/i },
 ];
 
 export const GRAMMAR_LESSONS: Lesson[] = [
-  { name: 'Particle Guide',       path: 'particle-guide',       heading: /particle/i },
-  { name: 'Experience',           path: 'experience',           heading: /experience/i },
-  { name: 'Conjunctions',         path: 'conjunctions',         heading: /listing items|conjunctions/i },
-  { name: 'Excess',               path: 'excess',               heading: /too much|excess|すぎる/i },
-  { name: 'Comparison',           path: 'comparison',           heading: /comparison/i },
-  { name: 'Advice',               path: 'advice',               heading: /advice/i },
-  { name: 'Obligation',           path: 'obligation',           heading: /obligation/i },
-  { name: 'Reason',               path: 'reason',               heading: /reason/i },
-  { name: 'Desire',               path: 'desire',               heading: /desire/i },
-  { name: 'Intention',            path: 'intend_to',            heading: /intention|つもり/i },
-  { name: 'Appearance',           path: 'appearance',           heading: /appearance/i },
-  { name: 'Actions and Thinking', path: 'actions-and-thinking', heading: /actions|thinking/i },
-  { name: 'Sequential Actions',   path: 'sequential-actions',   heading: /sequential|てから/i },
-  { name: 'Prohibition',          path: 'prohibition',          heading: /prohibition|いけません|だめ/i },
-  { name: 'Question Words',       path: 'question-words',       heading: /question words/i },
-  { name: 'Linking Words',        path: 'linking-words',        heading: /linking words/i },
-  { name: 'Conditional - と',     path: 'conditional',          heading: /conditional|と/i },
+  { name: 'Sentence Building',        path: 'sentence-building',        heading: /sentence building/i,        partial: true },
+  { name: 'Feelings and Intent',      path: 'feelings-and-intent',      heading: /feelings and intent/i,      partial: true },
+  { name: 'Describing and Comparing', path: 'describing-and-comparing', heading: /describing and comparing/i, partial: true },
+  { name: 'Actions and Events',       path: 'actions-and-events',       heading: /actions and events/i,       partial: true },
+  { name: 'Explaining and Reasoning', path: 'explaining-and-reasoning', heading: /explaining and reasoning/i, partial: true },
+];
+
+export const GRAMMAR_SECTIONS: LessonSection[] = [
+  {
+    section: 'Sentence Building',
+    basePath: 'sentence-building',
+    heading: /sentence building/i,
+    subLessons: [
+      { name: 'Particle Guide',  path: 'particle-guide', heading: /particle/i },
+      { name: 'Conjunctions',    path: 'conjunctions',   heading: /listing items|conjunctions/i },
+      { name: 'Question Words',  path: 'question-words', heading: /question words/i },
+    ],
+  },
+  {
+    section: 'Feelings and Intent',
+    basePath: 'feelings-and-intent',
+    heading: /feelings and intent/i,
+    subLessons: [
+      { name: 'Desire',      path: 'desire',      heading: /desire/i },
+      { name: 'Advice',      path: 'advice',       heading: /advice/i },
+      { name: 'Obligation',  path: 'obligation',   heading: /obligation/i },
+      { name: 'Prohibition', path: 'prohibition',  heading: /prohibition|いけません|だめ/i },
+    ],
+  },
+  {
+    section: 'Describing and Comparing',
+    basePath: 'describing-and-comparing',
+    heading: /describing and comparing/i,
+    subLessons: [
+      { name: 'Appearance',  path: 'appearance',  heading: /appearance/i },
+      { name: 'Comparison',  path: 'comparison',  heading: /comparison/i },
+      { name: 'Excess',      path: 'excess',      heading: /too much|excess|すぎる/i },
+    ],
+  },
+  {
+    section: 'Actions and Events',
+    basePath: 'actions-and-events',
+    heading: /actions and events/i,
+    subLessons: [
+      { name: 'Sequential Actions',   path: 'sequential-actions',   heading: /sequential|てから/i },
+      { name: 'Experience',           path: 'experience',           heading: /experience/i },
+      { name: 'Actions and Thinking', path: 'actions-and-thinking', heading: /actions|thinking/i },
+      { name: 'Conditional',          path: 'conditional',          heading: /conditional/i },
+    ],
+  },
+  {
+    section: 'Explaining and Reasoning',
+    basePath: 'explaining-and-reasoning',
+    heading: /explaining and reasoning/i,
+    subLessons: [
+      { name: 'Reason',    path: 'reason',    heading: /reason/i },
+      { name: 'Intention', path: 'intend_to', heading: /intention|つもり/i },
+    ],
+  },
 ];
 
 export const VOCABULARY_LESSONS: Lesson[] = [
-  { name: 'Adjectives',      path: 'adjectives',     heading: /adjectives/i },
-  { name: 'Colors',          path: 'colors',         heading: /colors/i },
-  { name: 'Food',            path: 'food',           heading: /food/i,               partial: true },
-  { name: 'Time',            path: 'time',           heading: /time|dates/i,         partial: true },
-  { name: 'Numbers',         path: 'numbers',        heading: /numbers|counting/i,   partial: true },
-  { name: 'Family',          path: 'family',         heading: /family|relationships/i },
-  { name: 'Clothes',         path: 'clothes',        heading: /clothes|wearing/i },
-  { name: 'Weather',         path: 'weather',        heading: /weather/i },
-  { name: 'Health',          path: 'health',         heading: /health|medical/i },
-  { name: 'Confusing Kanji', path: 'confusing-kanji', heading: /confusing kanji/i },
+  { name: 'Essentials',  path: 'essentials',  heading: /language essentials/i, partial: true },
+  { name: 'Colors',      path: 'colors',      heading: /colors/i },
+  { name: 'Food',        path: 'food',        heading: /food/i,               partial: true },
+  { name: 'Time',        path: 'time',        heading: /time|dates/i,         partial: true },
+  { name: 'Numbers',     path: 'numbers',     heading: /numbers|counting/i,   partial: true },
+  { name: 'Family',      path: 'family',      heading: /family|relationships/i },
+  { name: 'Clothes',     path: 'clothes',     heading: /clothes|wearing/i },
+  { name: 'Weather',     path: 'weather',     heading: /weather/i },
+  { name: 'Health',      path: 'health',      heading: /health|medical/i },
 ];
 
 export const VOCABULARY_SECTIONS: LessonSection[] = [
@@ -87,6 +130,7 @@ export const VOCABULARY_SECTIONS: LessonSection[] = [
       { name: 'Calendar',           path: 'calendar',       heading: /calendar|dates/i },
       { name: 'Duration Counters',  path: 'date-counters',  heading: /duration counters/i },
       { name: 'Frequency Counters', path: 'frequency',      heading: /frequency counters/i },
+      { name: 'Telling Time',       path: 'clock',          heading: /telling time/i },
     ],
   },
   {
@@ -96,6 +140,37 @@ export const VOCABULARY_SECTIONS: LessonSection[] = [
     subLessons: [
       { name: 'Basic Numbers',   path: 'basics',   heading: /basic numbers|numbers/i },
       { name: 'Reading Numbers', path: 'counting', heading: /reading numbers|counting/i },
+    ],
+  },
+  {
+    section: 'Essentials',
+    basePath: 'essentials',
+    heading: /language essentials/i,
+    subLessons: [
+      { name: 'Adjectives',      path: 'adjectives',      heading: /adjectives/i },
+      { name: 'Linking Words',   path: 'linking-words',   heading: /linking words/i },
+      { name: 'Confusing Kanji', path: 'confusing-kanji', heading: /confusing kanji/i },
+    ],
+  },
+];
+
+export const CONJUGATION_SECTIONS: LessonSection[] = [
+  {
+    section: 'Present',
+    basePath: 'present',
+    heading: /present forms/i,
+    subLessons: [
+      { name: 'て form',           path: 'te-form',  heading: /て form/i },
+      { name: 'Negative - ない',   path: 'nai-form', heading: /negative.*ない|ない/i },
+    ],
+  },
+  {
+    section: 'Past',
+    basePath: 'past',
+    heading: /past forms/i,
+    subLessons: [
+      { name: 'た form',               path: 'ta-form',       heading: /た form/i },
+      { name: 'Negative - なかった',    path: 'nai-past-form', heading: /negative.*なかった|なかった/i },
     ],
   },
 ];

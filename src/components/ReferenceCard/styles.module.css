@@ -41,7 +41,7 @@
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   background: var(--ifm-color-primary);
-  color: white;
+  color: var(--color-primary-foreground);
   border-radius: 4px;
   text-decoration: none;
   font-weight: 500;
@@ -50,7 +50,7 @@
 
 .cardLink:hover {
   background: var(--ifm-color-primary-dark);
-  color: white;
+  color: var(--color-primary-foreground);
   text-decoration: none;
 }
 

@@ -234,7 +234,7 @@ describe('Vocabulary Component', () => {
       expect(tastesLink?.getAttribute('href')).toBe('/docs/lessons/vocabulary/food/tastes');
 
       const particleLink = tagLinks.find(link => link.textContent === 'particle-guide');
-      expect(particleLink?.getAttribute('href')).toBe('/docs/lessons/grammar/particle-guide');
+      expect(particleLink?.getAttribute('href')).toBe('/docs/lessons/grammar/sentence-building/particle-guide');
     });
 
     it('adds an N5 tag with the correct reference link for N5 items only', () => {
@@ -365,7 +365,7 @@ describe('getTagPath', () => {
 
   describe('Special characters and edge cases', () => {
     it('should handle tags with hyphens', () => {
-      expect(getTagPath('confusing-kanji')).toBe('docs/lessons/vocabulary/confusing-kanji');
+      expect(getTagPath('confusing-kanji')).toBe('docs/lessons/vocabulary/essentials/confusing-kanji');
     });
 
     it('should handle empty string', () => {

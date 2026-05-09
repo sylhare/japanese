@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-title: Frequency Counters
+title: 🔄 Frequency Counters
 description: Learn Japanese counter suffixes for frequency and repetition
 tags: [vocabulary, time, counters, frequency, numbers]
 ---
