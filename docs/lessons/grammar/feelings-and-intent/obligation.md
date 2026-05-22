@@ -112,6 +112,31 @@ Very casual, shortened form used among friends.
 
 **Note:** Often shortened even more to just **~なきゃ**!
 
+## Past: Had To
+
+To express past obligation, change the ending to its past form.
+
+### Polite
+
+- きのう べんきょうしなければ いけませんでした。 — I had to study yesterday.
+  - *kinou benkyoushinakereba ikemasen deshita*
+- はやく おきなければ なりませんでした。 — I had to wake up early.
+  - *hayaku okinakereba narimasen deshita*
+
+### Casual
+
+- きのう いかなければ いけなかった。 — I had to go yesterday.
+  - *kinou ikanakereba ikenakatta*
+- しゅくだい を しなきゃ いけなかった。 — I had to do my homework.
+  - *shukudai wo shinakya ikenakatta*
+
+| Form | Present | Past |
+|------|---------|------|
+| Polite (いけない) | いけません | いけませんでした |
+| Polite (ならない) | なりません | なりませんでした |
+| Casual (いけない) | いけない | いけなかった |
+| Casual (ならない) | ならない | ならなかった |
+
 ## Negative: Must Not
 
 **[verb て form] + は いけません**
