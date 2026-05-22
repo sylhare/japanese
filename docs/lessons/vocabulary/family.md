@@ -162,7 +162,7 @@ Here's a visual guide to extended family and in-law relationships:
 | むすこ      | 息子    | musuko   | 👦 son              | noun |
 | むすめ      | 娘     | musume   | 👧 daughter         | noun |
 | ぼうや      | 坊や    | bouya    | 👦 boy (young)      | noun |
-| おじょうさん   | お嬢さん  | ojou san | 👧 daughter         | noun |
+| おじょうさん   | お嬢さん  | ojousan  | 👧 daughter         | noun |
 | ぼっちゃん    | 坊ちゃん  | bocchan  | 👦 son              | noun |
 
 **Examples:**
