@@ -77,15 +77,15 @@ test.describe('Grammar Pages', () => {
   }
 
   test.describe('Cross-references', () => {
-    test('should navigate from Question Words to Linking Words via NextSteps', async ({ page }) => {
+    test('should navigate from Question Words to Indirect Questions via NextSteps', async ({ page }) => {
       await page.goto('./docs/lessons/grammar/sentence-building/question-words');
       await page.waitForLoadState('networkidle');
 
-      const linkingWordsLink = page.locator('a[href*="vocabulary/essentials/linking-words"]').first();
-      await expect(linkingWordsLink).toBeVisible();
-      await linkingWordsLink.click();
+      const indirectQuestionsLink = page.locator('a[href*="sentence-building/indirect-questions"]').first();
+      await expect(indirectQuestionsLink).toBeVisible();
+      await indirectQuestionsLink.click();
       await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /linking words/i }).first()).toBeVisible();
+      await expect(page.getByRole('heading', { name: /indirect questions/i }).first()).toBeVisible();
     });
 
     test('should navigate from Question Words to Particle Guide via NextSteps', async ({ page }) => {

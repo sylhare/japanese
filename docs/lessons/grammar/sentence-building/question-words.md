@@ -156,7 +156,7 @@ All three mean "why" but differ in register:
 | なんじかん | 何時間 | nanjikan | how many hours | question word |
 | なんぷん | 何分 | nanpun | how many minutes | question word |
 | なんにち | 何日 | nannichi | how many days | question word |
-| なんしゅうかん | 何週間 | nannshuukan | how many weeks | question word |
+| なんしゅうかん | 何週間 | nanshuukan | how many weeks | question word |
 | なんかげつ | 何ヶ月 | nankagetsu | how many months | question word |
 | なんねん | 何年 | nannen | how many years, what year | question word |
 | どのくらいとおい | どの位遠い | dono kurai tooi | how far away | expression |
@@ -246,9 +246,9 @@ Question words combine with **も** or **か** to shift their meaning:
 
 <NextSteps items={[
   {
-    title: 'Linking Words',
-    description: 'Learn connectors like because, however, and only to build more complete answers',
-    to: '/docs/lessons/vocabulary/essentials/linking-words',
+    title: 'Indirect Questions',
+    description: 'Learn to embed questions with かどうか (whether) and question words',
+    to: './indirect-questions',
   },
   {
     title: 'Particle Guide',

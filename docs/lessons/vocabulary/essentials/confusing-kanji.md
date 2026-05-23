@@ -86,7 +86,7 @@ Many Japanese kanji look very similar but have completely different meanings and
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
 | ひと       | 人     | hito   | person  | noun |
-| はい       | 入     | hairu  | enter   | verb |
+| はいる      | 入     | hairu  | enter   | verb |
 
 **Memory Tips:**
 - **人 (hito)**: Looks like a person with arms at the sides (strokes don't meet)

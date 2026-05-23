@@ -44,7 +44,7 @@ Knowing health-related vocabulary is essential for daily life in Japan. This les
 | びょうき | 病気 | byouki | 🤒 illness, sickness | noun |
 | かぜ | 風邪 | kaze | 🤧 cold (illness) | noun |
 | インフルエンザ | | infuruenza | 🤒 influenza, flu | noun |
-| アレルギー | | arerugi | 🤧 allergy | noun |
+| アレルギー | | arerugii | 🤧 allergy | noun |
 | かふんしょう | 花粉症 | kafunshou | 🌸 hay fever | noun |
 | しょくちゅうどく | 食中毒 | shokuchuudoku | 🤢 food poisoning | noun |
 | ねっちゅうしょう | 熱中症 | necchuushou | 🥵 heatstroke | noun |
