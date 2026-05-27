@@ -1,5 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import fs from 'fs';
+import path from 'path';
 import React from 'react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import Vocabulary, { getTagPath } from '../../src/pages/dictionary';
@@ -51,13 +53,13 @@ describe('Vocabulary Component', () => {
       expect(screen.getByText('あか')).toBeInTheDocument();
       expect(screen.getByText('aka')).toBeInTheDocument();
       expect(screen.getByText('red')).toBeInTheDocument();
-      expect(screen.getAllByText('い-adjective')).toHaveLength(3);
+      expect(screen.getAllByText('い-adjective')).toHaveLength(4);
     });
 
     it('shows correct results count', () => {
       render(<Vocabulary />);
 
-      expect(screen.getByText('Showing 4 of 4 vocabulary items')).toBeInTheDocument();
+      expect(screen.getByText('Showing 5 of 5 vocabulary items')).toBeInTheDocument();
     });
   });
 
@@ -73,7 +75,7 @@ describe('Vocabulary Component', () => {
       expect(screen.queryByText('あお')).not.toBeInTheDocument();
       expect(screen.queryByText('あまい')).not.toBeInTheDocument();
 
-      expect(screen.getByText('Showing 1 of 4 vocabulary items')).toBeInTheDocument();
+      expect(screen.getByText('Showing 1 of 5 vocabulary items')).toBeInTheDocument();
     });
 
     it('filters vocabulary by hiragana search', async () => {
@@ -127,13 +129,84 @@ describe('Vocabulary Component', () => {
       const user = userEvent.setup();
       render(<Vocabulary />);
 
-      const categorySelect = screen.getByDisplayValue('All');
+      const categorySelect = screen.getByDisplayValue('All categories');
       await user.selectOptions(categorySelect, 'vocabulary');
 
       expect(screen.getByText('あか')).toBeInTheDocument();
       expect(screen.getByText('あお')).toBeInTheDocument();
       expect(screen.getByText('あまい')).toBeInTheDocument();
       expect(screen.getByText('コーヒー')).toBeInTheDocument();
+    });
+  });
+
+  describe('Type Filtering', () => {
+    it('renders the type filter dropdown', () => {
+      render(<Vocabulary />);
+
+      expect(screen.getByDisplayValue('All types')).toBeInTheDocument();
+    });
+
+    it('filters vocabulary by type', async () => {
+      const user = userEvent.setup();
+      render(<Vocabulary />);
+
+      const typeSelect = screen.getByDisplayValue('All types');
+      await user.selectOptions(typeSelect, 'noun');
+
+      expect(screen.getByText('コーヒー')).toBeInTheDocument();
+      expect(screen.queryByText('あか')).not.toBeInTheDocument();
+      expect(screen.queryByText('たべる')).not.toBeInTheDocument();
+    });
+
+    it('filters vocabulary by verb type', async () => {
+      const user = userEvent.setup();
+      render(<Vocabulary />);
+
+      const typeSelect = screen.getByDisplayValue('All types');
+      await user.selectOptions(typeSelect, 'verb');
+
+      expect(screen.getByText('たべる')).toBeInTheDocument();
+      expect(screen.queryByText('あか')).not.toBeInTheDocument();
+      expect(screen.queryByText('コーヒー')).not.toBeInTheDocument();
+    });
+
+    it('shows all items when "All types" is selected', async () => {
+      const user = userEvent.setup();
+      render(<Vocabulary />);
+
+      const typeSelect = screen.getByDisplayValue('All types');
+      await user.selectOptions(typeSelect, 'verb');
+      await user.selectOptions(typeSelect, 'all');
+
+      expect(screen.getByText('Showing 5 of 5 vocabulary items')).toBeInTheDocument();
+    });
+
+    it('combines type filter with search', async () => {
+      const user = userEvent.setup();
+      render(<Vocabulary />);
+
+      const typeSelect = screen.getByDisplayValue('All types');
+      await user.selectOptions(typeSelect, 'い-adjective');
+
+      const searchInput = screen.getByPlaceholderText('Search vocabulary...');
+      await user.type(searchInput, 'red');
+
+      expect(screen.getByText('あか')).toBeInTheDocument();
+      expect(screen.queryByText('あお')).not.toBeInTheDocument();
+    });
+
+    it('combines type filter with category filter', async () => {
+      const user = userEvent.setup();
+      render(<Vocabulary />);
+
+      const categorySelect = screen.getByDisplayValue('All categories');
+      await user.selectOptions(categorySelect, 'grammar');
+
+      const typeSelect = screen.getByDisplayValue('All types');
+      await user.selectOptions(typeSelect, 'verb');
+
+      expect(screen.getByText('たべる')).toBeInTheDocument();
+      expect(screen.queryByText('あか')).not.toBeInTheDocument();
     });
   });
 
@@ -172,7 +245,7 @@ describe('Vocabulary Component', () => {
       const user = userEvent.setup();
       render(<Vocabulary />);
 
-      const categorySelect = screen.getByDisplayValue('All');
+      const categorySelect = screen.getByDisplayValue('All categories');
       await user.selectOptions(categorySelect, 'vocabulary');
 
       const searchInput = screen.getByPlaceholderText('Search vocabulary...');
@@ -183,18 +256,18 @@ describe('Vocabulary Component', () => {
       expect(screen.queryByText('あお')).not.toBeInTheDocument();
       expect(screen.queryByText('コーヒー')).not.toBeInTheDocument();
 
-      expect(screen.getByText('Showing 1 of 4 vocabulary items')).toBeInTheDocument();
+      expect(screen.getByText('Showing 1 of 5 vocabulary items')).toBeInTheDocument();
     });
 
     it('updates results count when filters change', async () => {
       const user = userEvent.setup();
       render(<Vocabulary />);
 
-      expect(screen.getByText('Showing 4 of 4 vocabulary items')).toBeInTheDocument();
+      expect(screen.getByText('Showing 5 of 5 vocabulary items')).toBeInTheDocument();
 
       const searchInput = screen.getByPlaceholderText('Search vocabulary...');
       await user.type(searchInput, 'あか');
-      expect(screen.getByText('Showing 1 of 4 vocabulary items')).toBeInTheDocument();
+      expect(screen.getByText('Showing 1 of 5 vocabulary items')).toBeInTheDocument();
     });
 
     it('resets filters when search is cleared', async () => {
@@ -203,10 +276,10 @@ describe('Vocabulary Component', () => {
 
       const searchInput = screen.getByPlaceholderText('Search vocabulary...');
       await user.type(searchInput, 'あか');
-      expect(screen.getByText('Showing 1 of 4 vocabulary items')).toBeInTheDocument();
+      expect(screen.getByText('Showing 1 of 5 vocabulary items')).toBeInTheDocument();
 
       await user.clear(searchInput);
-      expect(screen.getByText('Showing 4 of 4 vocabulary items')).toBeInTheDocument();
+      expect(screen.getByText('Showing 5 of 5 vocabulary items')).toBeInTheDocument();
     });
   });
 
@@ -215,7 +288,7 @@ describe('Vocabulary Component', () => {
       render(<Vocabulary />);
 
       expect(screen.getAllByText('colors')).toHaveLength(2);
-      expect(screen.getAllByText('tastes')).toHaveLength(2);
+      expect(screen.getAllByText('tastes')).toHaveLength(3);
     });
 
     it('renders multiple tags with correct links for a single item', () => {
@@ -300,8 +373,8 @@ describe('getTagPath', () => {
       expect(getTagPath('numbers')).toBe('docs/lessons/vocabulary/numbers');
     });
 
-    it('should map "counting" tag to numbers lesson path', () => {
-      expect(getTagPath('counting')).toBe('docs/lessons/vocabulary/numbers');
+    it('should map "counting" tag to counting lesson path', () => {
+      expect(getTagPath('counting')).toBe('docs/lessons/vocabulary/numbers/counting');
     });
 
     it('should map "counters" tag to numbers lesson path', () => {
@@ -377,6 +450,29 @@ describe('getTagPath', () => {
     });
   });
 
+  describe('All vocabulary tags resolve to existing pages', () => {
+    const yaml = require('js-yaml');
+    const vocabFile = fs.readFileSync(path.resolve(__dirname, '../../src/data/vocabulary.yaml'), 'utf8');
+    const vocabData = yaml.load(vocabFile);
+    const allTags = new Set<string>();
+    vocabData.vocabulary.forEach((item: any) => item.tags.forEach((t: string) => allTags.add(t)));
+
+    allTags.forEach(tag => {
+      it(`tag "${tag}" should link to an existing lesson page`, () => {
+        const tagPath = getTagPath(tag);
+        const basePath = path.resolve(__dirname, '../../', tagPath);
+        const candidates = [
+          basePath + '.md',
+          basePath + '.mdx',
+          path.join(basePath, 'index.md'),
+          path.join(basePath, 'index.mdx'),
+        ];
+        const exists = candidates.some(c => fs.existsSync(c));
+        expect(exists, `Tag "${tag}" maps to "${tagPath}" but no page exists`).toBe(true);
+      });
+    });
+  });
+
   describe('Tag path format', () => {
     it('should always start with "docs/lessons/"', () => {
       const tags = ['numbers', 'colors', 'time', 'counters', 'family'];
@@ -392,7 +488,7 @@ describe('getTagPath', () => {
 
     it('should return correct paths for numbers tags', () => {
       expect(getTagPath('numbers')).toBe('docs/lessons/vocabulary/numbers');
-      expect(getTagPath('counting')).toBe('docs/lessons/vocabulary/numbers');
+      expect(getTagPath('counting')).toBe('docs/lessons/vocabulary/numbers/counting');
       expect(getTagPath('counters')).toBe('docs/lessons/vocabulary/numbers');
     });
 

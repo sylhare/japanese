@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-title: Prohibition - てはいけません / てはだめ
+title: Prohibition - てはだめ
 description: Learn how to express prohibition using てはいけません and てはだめです
 tags: [grammar, te-form, prohibition, rules]
 ---

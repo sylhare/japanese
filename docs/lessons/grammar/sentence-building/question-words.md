@@ -1,13 +1,13 @@
 ---
-sidebar_position: 3
-title: Question Words - 疑問詞
+sidebar_position: 2
+title: Question Words
 description: Learn Japanese question words — why, what, when, where, who, how, how long, how many, and more
 tags: [grammar, question-words, interrogatives, particles, vocabulary]
 ---
 
 import NextSteps from '@site/src/components/NextSteps';
 
-# Question Words — 疑問詞
+# Question Words
 
 疑問詞 (gimonshi) are interrogative words used to ask specific questions. 
 They replace the unknown part of a sentence and always pair with the question particle **か** in polite speech.
@@ -22,22 +22,22 @@ Japanese question words go in the same position as the answer would.
 
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
-| なに / なん | 何 | nani / nan | what | question word |
-| だれ | 誰 | dare | who | question word |
-| どなた | 何方 | donata | who (polite) | question word |
-| いつ | 何時 | itsu | when | question word |
-| どこ | 何処 | doko | where | question word |
-| なぜ | 何故 | naze | why (formal/written) | question word |
-| どうして | - | doushite | why (everyday) | question word |
-| なんで | - | nande | why (casual, spoken) | question word |
-| どう | - | dou | how (in what way) | question word |
-| どうやって | - | dou yatte | how (by what method/means) | question word |
-| どのように | どの様に | dono you ni | how (formal, more detail) | question word |
-| どれ | - | dore | which one (of three or more) | question word |
-| どちら | - | dochira | which one (of two), polite | question word |
-| どっち | - | docchi | which one (of two, casual) | question word |
-| どの | - | dono | which... (before a noun) | question word |
-| どんな | - | donna | what kind of, what sort of | question word |
+| なに / なん | 何 | nani / nan | what | noun |
+| だれ | 誰 | dare | who | noun |
+| どなた | 何方 | donata | who (polite) | noun |
+| いつ | 何時 | itsu | when | noun |
+| どこ | 何処 | doko | where | noun |
+| なぜ | 何故 | naze | why (formal/written) | noun |
+| どうして | - | doushite | why (everyday) | noun |
+| なんで | - | nande | why (casual, spoken) | noun |
+| どう | - | dou | how (in what way) | noun |
+| どうやって | - | dou yatte | how (by what method/means) | noun |
+| どのように | どの様に | dono you ni | how (formal, more detail) | noun |
+| どれ | - | dore | which one (of three or more) | noun |
+| どちら | - | dochira | which one (of two), polite | noun |
+| どっち | - | docchi | which one (of two, casual) | noun |
+| どの | - | dono | which... (before a noun) | noun |
+| どんな | - | donna | what kind of, what sort of | noun |
 
 ### Examples
 
@@ -120,9 +120,9 @@ All three mean "why" but differ in register:
 
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
-| いくら | 幾ら | ikura | how much (price) | question word |
-| いくつ | 幾つ | ikutsu | how many (general), how old | question word |
-| どのくらい | どの位 | dono kurai | how much, how many, approximately how | question word |
+| いくら | 幾ら | ikura | how much (price) | noun |
+| いくつ | 幾つ | ikutsu | how many (general), how old | noun |
+| どのくらい | どの位 | dono kurai | how much, how many, approximately how | noun |
 
 :::note
 **どれくらい** (*dore kurai*) is a casual variant of どのくらい with the same meaning.
@@ -152,13 +152,13 @@ All three mean "why" but differ in register:
 
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
-| どのくらい | どの位 | dono kurai | how long (duration), how far (distance) | question word |
-| なんじかん | 何時間 | nanjikan | how many hours | question word |
-| なんぷん | 何分 | nanpun | how many minutes | question word |
-| なんにち | 何日 | nannichi | how many days | question word |
-| なんしゅうかん | 何週間 | nanshuukan | how many weeks | question word |
-| なんかげつ | 何ヶ月 | nankagetsu | how many months | question word |
-| なんねん | 何年 | nannen | how many years, what year | question word |
+| どのくらい | どの位 | dono kurai | how long (duration), how far (distance) | noun |
+| なんじかん | 何時間 | nanjikan | how many hours | noun |
+| なんぷん | 何分 | nanpun | how many minutes | noun |
+| なんにち | 何日 | nannichi | how many days | noun |
+| なんしゅうかん | 何週間 | nanshuukan | how many weeks | noun |
+| なんかげつ | 何ヶ月 | nankagetsu | how many months | noun |
+| なんねん | 何年 | nannen | how many years, what year | noun |
 | どのくらいとおい | どの位遠い | dono kurai tooi | how far away | expression |
 
 ### Examples
@@ -217,16 +217,16 @@ Question words combine with **も** or **か** to shift their meaning:
 
 | Hiragana | Romaji | English | Type |
 |----------|--------|---------|------|
-| だれも | daremo | no one | negative |
-| だれか | dareka | someone | indefinite |
-| なにも | nanimo | nothing | negative |
-| なにか | nanika | something | indefinite |
-| どこも | dokomo | nowhere | negative |
-| どこか | dokoka | somewhere | indefinite |
-| いつも | itsumo | never | negative |
-| いつか | itsuka | sometime | indefinite |
-| どれも | doremo | none of them | negative |
-| どれか | doreka | one of them | indefinite |
+| だれも | daremo | no one | noun |
+| だれか | dareka | someone | noun |
+| なにも | nanimo | nothing | noun |
+| なにか | nanika | something | noun |
+| どこも | dokomo | nowhere | noun |
+| どこか | dokoka | somewhere | noun |
+| いつも | itsumo | never | noun |
+| いつか | itsuka | sometime | noun |
+| どれも | doremo | none of them | noun |
+| どれか | doreka | one of them | noun |
 
 :::info いつも (always)
 **いつも** without a negative verb is a fixed expression meaning "always/usually":

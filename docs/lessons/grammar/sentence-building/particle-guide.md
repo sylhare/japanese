@@ -11,14 +11,14 @@ Particles are small words that indicate the grammatical relationship between wor
 
 ## Basic Particles
 
-| Hiragana | Kanji | Romaji | English         | Type     |
-|----------|-------|--------|-----------------|----------|
-| は        | -     | wa     | topic marker    | particle |
-| が        | -     | ga     | subject marker  | particle |
-| を        | -     | wo     | object marker   | particle |
-| に        | -     | ni     | to, at, in      | particle |
-| で        | -     | de     | at, by, with    | particle |
-| の        | -     | no     | 's (possession) | particle |
+| Hiragana | Romaji | English         | Type     |
+|----------|--------|-----------------|----------|
+| は        | wa     | topic marker    | particle |
+| が        | ga     | subject marker  | particle |
+| を        | wo     | object marker   | particle |
+| に        | ni     | to, at, in      | particle |
+| で        | de     | at, by, with    | particle |
+| の        | no     | 's (possession) | particle |
 
 ### は (wa) - Topic Marker
 
@@ -112,11 +112,11 @@ Particles are small words that indicate the grammatical relationship between wor
 
 ## Direction and Location Particles
 
-| Hiragana | Kanji | Romaji | English      | Type     |
-|----------|-------|--------|--------------|----------|
-| へ        | -     | e      | to, toward   | particle |
-| から       | -     | kara   | from, since  | particle |
-| まで       | -     | made   | until, up to | particle |
+| Hiragana | Romaji | English      | Type     |
+|----------|--------|--------------|----------|
+| へ        | e      | to, toward   | particle |
+| から       | kara   | from, since  | particle |
+| まで       | made   | until, up to | particle |
 
 ### へ (e) - Direction Marker
 
@@ -152,10 +152,10 @@ Particles are small words that indicate the grammatical relationship between wor
 
 ## Time Particles
 
-| Hiragana | Kanji | Romaji      | English         | Type     |
-|----------|-------|-------------|-----------------|----------|
-| に        | -     | ni          | at, on (time)   | particle |
-| から...まで  | -     | kara...made | from...until    | particle |
+| Hiragana | Romaji      | English         | Type     |
+|----------|-------------|-----------------|----------|
+| に        | ni          | at, on (time)   | particle |
+| から...まで  | kara...made | from...until    | particle |
 
 ### に (ni) - Specific Time
 
@@ -177,11 +177,11 @@ Particles are small words that indicate the grammatical relationship between wor
 
 ## Comparison and Contrast Particles
 
-| Hiragana | Kanji | Romaji | English    | Type     |
-|----------|-------|--------|------------|----------|
-| と        | -     | to     | and, with  | particle |
-| や        | -     | ya     | and so on  | particle |
-| も        | -     | mo     | also, even | particle |
+| Hiragana | Romaji | English    | Type     |
+|----------|--------|------------|----------|
+| と        | to     | and, with  | particle |
+| や        | ya     | and so on  | particle |
+| も        | mo     | also, even | particle |
 
 ### と (to) - And/With Marker
 
@@ -212,11 +212,11 @@ Particles are small words that indicate the grammatical relationship between wor
 
 ## Question Particles
 
-| Hiragana | Kanji | Romaji | English          | Type     |
-|----------|-------|--------|------------------|----------|
-| か        | -     | ka     | ? (question)     | particle |
-| ね        | -     | ne     | isn't it?        | particle |
-| よ        | -     | yo     | you know         | particle |
+| Hiragana | Romaji | English          | Type     |
+|----------|--------|------------------|----------|
+| か        | ka     | ? (question)     | particle |
+| ね        | ne     | isn't it?        | particle |
+| よ        | yo     | you know         | particle |
 
 ### か (ka) - Question Marker
 
@@ -247,10 +247,10 @@ Particles are small words that indicate the grammatical relationship between wor
 
 ## Particle Combinations
 
-| Hiragana | Kanji | Romaji | English              | Type        |
-|----------|-------|--------|----------------------|-------------|
-| には       | -     | ni wa  | for, regarding       | combination |
-| では       | -     | de wa  | in, at (conditional) | combination |
+| Hiragana | Romaji | English              | Type        |
+|----------|--------|----------------------|-------------|
+| には       | ni wa  | for, regarding       | expression |
+| では       | de wa  | in, at (conditional) | expression |
 
 ### には (ni wa) - For/Regarding
 

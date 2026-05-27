@@ -49,7 +49,7 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 | Hiragana | Kanji | Romaji | English     | Type   |
 |----------|-------|--------|-------------|--------|
-| み        | 未     | mi     | not yet/un- | prefix |
+| み        | 未     | mi     | not yet/un- | noun |
 | まつ       | 末     | matsu  | end/tip     | noun   |
 
 **Memory Tips:**

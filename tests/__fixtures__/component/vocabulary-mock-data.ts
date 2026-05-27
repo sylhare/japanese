@@ -41,7 +41,17 @@ export const mockVocabularyData = {
       tags: ['tastes'],
       type: 'noun',
     },
+    {
+      id: 'test_4',
+      hiragana: 'たべる',
+      kanji: '食べる',
+      romaji: 'taberu',
+      meaning: 'to eat',
+      category: 'grammar',
+      tags: ['tastes'],
+      type: 'verb',
+    },
   ],
-  categories: ['all', 'vocabulary'],
+  categories: ['all', 'vocabulary', 'grammar'],
   sortOptions: DEFAULT_SORT_OPTIONS,
 };

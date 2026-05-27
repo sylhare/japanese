@@ -198,7 +198,7 @@ describe('LessonList Component', () => {
       const itemsWithSpecialChars: LessonItem[] = [
         {
           title: 'Using "Quotations" & Symbols',
-          description: "Master expressions like 'probably' &amp; more",
+          description: "Master expressions like 'probably' & more",
           to: './special',
         },
       ];
@@ -207,6 +207,23 @@ describe('LessonList Component', () => {
 
       expect(screen.getByText('Using "Quotations" & Symbols')).toBeInTheDocument();
       expect(screen.getByText("Master expressions like 'probably' & more")).toBeInTheDocument();
+    });
+
+    it('renders **bold** markdown as <strong> elements', () => {
+      const itemsWithBold: LessonItem[] = [
+        {
+          title: 'Bold Test',
+          description: 'Learn how to use **たい** and **ほしい**',
+          to: './bold',
+        },
+      ];
+
+      const { container } = render(<LessonList items={itemsWithBold} />);
+
+      const strongs = container.querySelectorAll('strong');
+      expect(strongs).toHaveLength(2);
+      expect(strongs[0].textContent).toBe('たい');
+      expect(strongs[1].textContent).toBe('ほしい');
     });
   });
 

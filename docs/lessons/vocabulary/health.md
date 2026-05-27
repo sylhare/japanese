@@ -25,9 +25,9 @@ Knowing health-related vocabulary is essential for daily life in Japan. This les
 | のどのいたみ | 喉の痛み | nodo no itami | 😖 sore throat | noun |
 | めまい | 目眩 | memai | 😵 dizziness | noun |
 | はきけ | 吐き気 | hakike | 🤢 nausea | noun |
-| かゆい | 痒い | kayui | 🦟 itchy | adjective |
-| いたい | 痛い | itai | 🤕 painful, hurts | adjective |
-| だるい | | darui | 😩 sluggish, tired | adjective |
+| かゆい | 痒い | kayui | 🦟 itchy | い-adjective |
+| いたい | 痛い | itai | 🤕 painful, hurts | い-adjective |
+| だるい | | darui | 😩 sluggish, tired | い-adjective |
 
 **Examples:**
 - ねつが あります。 — I have a fever.
