@@ -126,24 +126,31 @@ The dictionary page (`src/pages/dictionary.tsx`) maps tags to their correct less
 Some tags have custom path mappings defined in `getTagPath()`:
 
 ```typescript
-const tagMappings: Record<string, string> = {
-  'numbers': 'vocabulary/numbers',
-  'counting': 'vocabulary/numbers',
-  'counters': 'vocabulary/numbers',
-  'dates': 'vocabulary/time',
-  'calendar': 'vocabulary/time',
-  'time': 'vocabulary/time',
-  'days-and-weeks': 'vocabulary/time/days-and-weeks',
-};
+// Vocabulary in subdirectories (tagMappings)
+'numbers', 'counting', 'counters' → vocabulary/numbers
+'dates', 'calendar', 'time'       → vocabulary/time
+'days-and-weeks'                   → vocabulary/time/days-and-weeks
+'clock', 'date-counters', 'frequency' → vocabulary/time/{tag}
+'adjectives', 'linking-words'      → vocabulary/essentials/{tag}
+'food-and-ingredients'             → vocabulary/food/food-and-ingredients
+
+// Grammar lessons (grammarTagMappings)
+'advice' → grammar/feelings-and-intent/advice
+'prohibition' → grammar/feelings-and-intent/prohibition
+'indirect-questions' → grammar/sentence-building/indirect-questions
+// ... see getTagPath() for the full list
 ```
 
 ### Adding New Tag Mappings
 
-When creating new lesson categories, update `src/pages/dictionary.tsx`:
+When creating new lesson files, the extracted tag must map to a valid lesson page. Update `getTagPath()` in `src/pages/dictionary.tsx`:
 
-1. **Grammar lessons**: Add tag to `grammarTags` array
+1. **Grammar lessons**: Add tag to `grammarTagMappings` (e.g. `'prohibition': 'grammar/feelings-and-intent/prohibition'`)
 2. **Conjugation lessons**: Add tag to `conjugationTags` array
-3. **Special paths**: Add to `tagMappings` object
+3. **Vocabulary in subdirectories**: Add to `tagMappings` (e.g. `'clock': 'vocabulary/time/clock'`)
+4. **Top-level vocabulary** (`vocabulary/colors.md`, `vocabulary/family.md`): No mapping needed — the fallback handles it
+
+Run `npm test` after adding a new tag — the test suite verifies that every tag in `vocabulary.yaml` resolves to an existing lesson page.
 
 ## YAML File Structure
 

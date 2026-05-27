@@ -49,6 +49,7 @@ The [`.github/docs/templates/README.md`](docs/templates/README.md) contains the 
 - How to update the e2e test data in `tests/e2e/helpers/lessonData.ts`
 - How to run the e2e tests
 - How to run `npm run build` to regenerate `vocabulary.md` after adding new vocabulary
+- How to update the dictionary tag mappings in `src/pages/dictionary.tsx` (`getTagPath`) when a new tag doesn't map to an existing lesson path
 
 Follow all steps in that checklist before opening a pull request.
 
