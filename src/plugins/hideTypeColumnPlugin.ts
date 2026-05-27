@@ -21,22 +21,30 @@ export default function hideTypeColumnPlugin(): Plugin<void> {
       if (!headerRow) return;
       const headerCells = Array.from(headerRow.querySelectorAll('th'));
       if (headerCells.length === 0) return;
-      const typeColumnIndex = headerCells.findIndex((th) => {
-        return th.textContent.trim().toLowerCase() === 'type';
-      });
-      if (typeColumnIndex !== -1) {
-        table.dataset.typeColumnHidden = 'true';
-        if (headerCells[typeColumnIndex]) {
-          headerCells[typeColumnIndex].style.display = 'none';
+      headerCells.forEach((th, colIndex) => {
+        const name = th.textContent.trim().toLowerCase();
+        if (name === 'type') {
+          table.dataset.typeColumnHidden = 'true';
+          th.style.display = 'none';
+          const allRows = Array.from(table.querySelectorAll('tr'));
+          allRows.forEach((row) => {
+            const cells = Array.from(row.querySelectorAll('td, th'));
+            if (cells[colIndex]) {
+              cells[colIndex].style.display = 'none';
+            }
+          });
         }
-        const allRows = Array.from(table.querySelectorAll('tr'));
-        allRows.forEach((row) => {
-          const cells = Array.from(row.querySelectorAll('td, th'));
-          if (cells[typeColumnIndex]) {
-            cells[typeColumnIndex].style.display = 'none';
-          }
-        });
-      }
+        if (name === 'kanji') {
+          th.classList.add('hide-on-mobile');
+          const allRows = Array.from(table.querySelectorAll('tr'));
+          allRows.forEach((row) => {
+            const cells = Array.from(row.querySelectorAll('td, th'));
+            if (cells[colIndex]) {
+              cells[colIndex].classList.add('hide-on-mobile');
+            }
+          });
+        }
+      });
     });
   }
   
