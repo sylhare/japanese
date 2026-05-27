@@ -198,7 +198,7 @@ describe('LessonList Component', () => {
       const itemsWithSpecialChars: LessonItem[] = [
         {
           title: 'Using "Quotations" & Symbols',
-          description: "Master expressions like 'probably' and <emphasis>",
+          description: "Master expressions like 'probably' &amp; more",
           to: './special',
         },
       ];
@@ -206,7 +206,7 @@ describe('LessonList Component', () => {
       render(<LessonList items={itemsWithSpecialChars} />);
 
       expect(screen.getByText('Using "Quotations" & Symbols')).toBeInTheDocument();
-      expect(screen.getByText("Master expressions like 'probably' and <emphasis>")).toBeInTheDocument();
+      expect(screen.getByText("Master expressions like 'probably' & more")).toBeInTheDocument();
     });
   });
 

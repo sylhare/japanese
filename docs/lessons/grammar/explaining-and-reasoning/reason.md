@@ -34,7 +34,7 @@ Learn how to express reasons and causes using **ので** and **から**.
 
 ### Formation
 
-| Type | Pattern |
+| Form | Pattern |
 |------|---------|
 | Verb | [verb short form] + ので |
 | い-Adjective | [い-adjective] + ので |
@@ -64,7 +64,7 @@ Add **な** before **ので** with な-adjectives and nouns. Do **not** use な 
 
 ### Formation
 
-| Type | Pattern |
+| Form | Pattern |
 |------|---------|
 | Verb | [verb short form] + から |
 | い-Adjective | [い-adjective] + から |
@@ -89,7 +89,7 @@ The final clause states the conclusion or consequence.
 
 ### Formation
 
-| Type | Pattern |
+| Form | Pattern |
 |------|---------|
 | Verb | [verb short form] + し |
 | い-Adjective | [い-adjective] + し |
@@ -111,32 +111,6 @@ Use **し** when you have two or more reasons to give. Use **から** or **の�
 - ❌ あつい から、つかれた から、やすみたい *(unnatural with から repeated)*
 - ✓ あつい し、つかれた し、やすみたい
 :::
-
-## Quick Comparison
-
-**ので** - More formal, written, polite speech, objective tone  
-**から** - Less formal, casual conversation, subjective tone
-
-**な with nouns/な-adj:** ので requires な, から uses だ
-
-### Same Sentence, Both Ways
-
-**Formal (ので):**
-- あめ が ふった ので、いきません - Because it rained, I won't go.
-  - *ame ga futta node, ikimasen*
-
-**Casual (から):**
-- あめ が ふった から、いかない - Because it rained, I'm not going.
-  - *ame ga futta kara, ikanai*
-
-## Summary Table
-
-| Type | ので Pattern | から Pattern |
-|------|-------------|--------------|
-| Verb | たべた ので | たべた から |
-| い-Adj | たかい ので | たかい から |
-| な-Adj | しずか な ので | しずか だ から |
-| Noun | がくせい な ので | がくせい だ から |
 
 <NextSteps items={[
   {

@@ -26,7 +26,7 @@ Use this pattern to express "whether or not" something is the case.
 
 ### Formation
 
-| Type | Pattern |
+| Form | Pattern |
 |------|---------|
 | Verb | [verb short form] + かどうか |
 | い-Adjective | [い-adjective] + かどうか |
@@ -56,7 +56,7 @@ When the embedded question uses a [question word](./question-words.md) (who, wha
 
 ### Formation
 
-| Type | Pattern |
+| Form | Pattern |
 |------|---------|
 | Verb | [question word] + [verb short form] + か |
 | い-Adjective | [question word] + [い-adjective] + か |
