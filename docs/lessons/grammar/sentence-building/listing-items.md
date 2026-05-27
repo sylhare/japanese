@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 title: Listing Items - と / や
 description: Learn the difference between と (and) and や (or more) for listing items
 tags: [grammar, particles, conjunctions, lists]
@@ -60,16 +60,6 @@ Use **や** when giving **examples** - there are more items not mentioned.
 - Implies there are **other similar items** not mentioned
 - More casual and conversational than と
 - Literally means "things like A and B"
-
-## Quick Comparison
-
-**と (Exhaustive):** All items listed, nothing more  
-**や (Examples):** Some items listed, implies more exist
-
-### Example Comparison
-
-- **すし と てんぷら を たべます** → I'll eat sushi and tempura (*only these two*)
-- **すし や てんぷら を たべます** → I'll eat things like sushi and tempura (*and maybe other things too*)
 
 :::info と has another use
 **と** can also connect two clauses to express a natural consequence: *when A happens, B follows*.
