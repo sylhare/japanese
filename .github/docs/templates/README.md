@@ -113,4 +113,4 @@ Never mix grammatically different types (nouns, adjectives, verbs) in one table.
 
 ### File format
 
-Use `.md` for plain markdown. Use `.mdx` when the file imports JSX components (e.g. `NextSteps`, `LessonList`). See [components/](../components/) for all available components.
+Use `.md` for plain markdown. Use `.mdx` when the file imports JSX components (e.g. `NextSteps`, `LessonList`). See [components/](../../../src/components/) for all available components.

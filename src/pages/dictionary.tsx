@@ -87,11 +87,7 @@ export function getTagPath(tag: string): string {
   };
 
   const conjugationTags = [
-    'future',
     'dictionary-form',
-    'verb-groups',
-    'te-nai-form',
-    'ta-form',
   ];
 
   const tagMappings: Record<string, string> = {
