@@ -54,7 +54,7 @@ test.describe('Vocabulary Type Column Visibility', () => {
   });
 
   test('should not affect tables without Type columns', async ({ page }) => {
-    await page.goto('./docs/lessons/vocabulary/colors');
+    await page.goto('./docs/lessons/conjugation/basics');
     const tables = await waitForTables(page);
 
     expect(await tables.count()).toBeGreaterThan(0);

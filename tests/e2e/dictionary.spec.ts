@@ -94,8 +94,26 @@ test.describe('Dictionary', () => {
       await expect(vocabularyCards.first()).toBeVisible();
     });
 
+    test('should filter vocabulary by type', async ({ page }) => {
+      const typeSelect = page.locator('select').nth(1);
+      await expect(typeSelect).toBeVisible();
+
+      await typeSelect.selectOption('verb');
+
+      await page.waitForTimeout(500);
+
+      const vocabularyCards = page.locator('[class*="vocabularyCard"]');
+      await expect(vocabularyCards.first()).toBeVisible();
+
+      const resultsText = page.locator('[class*="resultsCount"]');
+      const text = await resultsText.textContent();
+      const match = text?.match(/Showing (\d+) of (\d+)/);
+      expect(match).toBeTruthy();
+      expect(Number(match![1])).toBeLessThan(Number(match![2]));
+    });
+
     test('should sort vocabulary by different options', async ({ page }) => {
-      const sortSelect = page.locator('select').nth(1);
+      const sortSelect = page.locator('select').nth(2);
       await expect(sortSelect).toBeVisible();
 
       await sortSelect.selectOption('romaji');

@@ -36,6 +36,8 @@ A complete reference for hiragana characters and their romaji readings.
 
 ## Voiced Sounds (濁音)
 
+濁音 (dakuon) are created by adding two small strokes (゛) to the base character, changing the consonant sound.
+
 | a  | i  | u  | e  | o  |
 |----|----|----|----|----|
 | が  | ぎ  | ぐ  | げ  | ご  |
@@ -49,12 +51,16 @@ A complete reference for hiragana characters and their romaji readings.
 
 ## Half-Voiced Sounds (半濁音)
 
+半濁音 (handakuon) are created by adding a small circle (゜) to the は-row, producing "p" sounds.
+
 | a  | i  | u  | e  | o  |
 |----|----|----|----|----|
 | ぱ  | ぴ  | ぷ  | ぺ  | ぽ  |
 | pa | pi | pu | pe | po |
 
 ## Contracted Sounds (拗音)
+
+拗音 (youon) combine a consonant character with a small や, ゆ, or よ to create blended sounds.
 
 | a   | i   | u   | e | o |
 |-----|-----|-----|---|---|
@@ -73,23 +79,3 @@ A complete reference for hiragana characters and their romaji readings.
 | りゃ  | りゅ  | りょ  |
 | rya | ryu | ryo |
 
-## Tips for Learning Hiragana
-
-1. **Practice writing**: Write each character multiple times to build muscle memory
-2. **Use mnemonics**: Create visual associations for each character
-3. **Practice reading**: Read simple words and sentences in hiragana
-4. **Use flashcards**: Regular spaced repetition helps with retention
-5. **Learn stroke order**: Proper stroke order makes writing more natural
-
-## Common Words to Practice
-
-- あい (ai) - love
-- いえ (ie) - house
-- うえ (ue) - up, above
-- えい (ei) - yes
-- おお (oo) - big
-- かお (kao) - face
-- きく (kiku) - to listen
-- くる (kuru) - to come
-- けい (kei) - system
-- こい (koi) - love (romantic)

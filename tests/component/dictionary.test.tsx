@@ -1,7 +1,7 @@
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import fs from 'fs';
 import path from 'path';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import Vocabulary, { getTagPath } from '../../src/pages/dictionary';
@@ -462,8 +462,8 @@ describe('getTagPath', () => {
         const tagPath = getTagPath(tag);
         const basePath = path.resolve(__dirname, '../../', tagPath);
         const candidates = [
-          basePath + '.md',
-          basePath + '.mdx',
+          `${basePath}.md`,
+          `${basePath}.mdx`,
           path.join(basePath, 'index.md'),
           path.join(basePath, 'index.mdx'),
         ];
