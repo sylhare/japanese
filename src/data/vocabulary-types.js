@@ -1,3 +1,4 @@
+// See .github/docs/vocabulary-extraction.md for full documentation
 const VALID_TYPES = [
   'noun',
   'verb',

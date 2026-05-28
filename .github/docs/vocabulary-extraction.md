@@ -69,17 +69,18 @@ npm start
 
 ### Valid Type Values
 
-- `い-adjective` - い-adjectives
-- `の-adjective` - の-adjectives
+Defined in `src/data/vocabulary-types.js` (the single source of truth, used by both the extraction script and the dictionary page):
+
 - `noun` - Regular nouns
 - `verb` - Verbs
+- `い-adjective` - い-adjectives
+- `な-adjective` - な-adjectives
 - `adverb` - Adverbs
-- `particle` - Particles (note: particles are filtered out from dictionary)
-- `conjunction` - Conjunctions
-- `interjection` - Interjections
-- `pronoun` - Pronouns
 - `counter` - Counters
+- `conjunction` - Conjunctions
 - `expression` - Grammar expressions
+
+> Rows with a valid type of `particle` are silently skipped during extraction (not added to the dictionary).
 
 ## How It Works
 
@@ -112,34 +113,15 @@ Tags are automatically generated from the lesson file name and enable navigation
 
 ### Tag Path Resolution
 
-The dictionary page (`src/pages/dictionary.tsx`) maps tags to their correct lesson paths:
+All tag-to-path resolution is handled by `getTagPath()` in `src/pages/dictionary.tsx`. Tags are resolved in this order of priority:
 
-| Tag Type | Example Tags | Path Pattern |
-|----------|-------------|--------------|
-| Grammar | `advice`, `comparison`, `desire` | `/docs/lessons/grammar/{tag}` |
-| Conjugation | `future`, `ta-form`, `te-nai-form` | `/docs/lessons/conjugation/{tag}` |
-| Vocabulary | `colors`, `family`, `tastes` | `/docs/lessons/vocabulary/{tag}` |
-| Special | `time`, `numbers`, `days-and-weeks` | Custom mappings (see below) |
+1. **`jlptTagMappings`** — JLPT-level tags (e.g. `n5` → `docs/reference/n5-vocabulary`)
+2. **`tagMappings`** — vocabulary tags in subdirectories (e.g. `counting` → `vocabulary/numbers/counting`)
+3. **`grammarTagMappings`** — grammar tags, all require explicit mappings (e.g. `advice` → `grammar/feelings-and-intent/advice`)
+4. **`conjugationTags`** — conjugation tags (e.g. `future` → `conjugation/future`)
+5. **Fallback** — anything unmatched resolves to `vocabulary/{tag}`
 
-### Special Tag Mappings
-
-Some tags have custom path mappings defined in `getTagPath()`:
-
-```typescript
-// Vocabulary in subdirectories (tagMappings)
-'numbers', 'counting', 'counters' → vocabulary/numbers
-'dates', 'calendar', 'time'       → vocabulary/time
-'days-and-weeks'                   → vocabulary/time/days-and-weeks
-'clock', 'date-counters', 'frequency' → vocabulary/time/{tag}
-'adjectives', 'linking-words'      → vocabulary/essentials/{tag}
-'food-and-ingredients'             → vocabulary/food/food-and-ingredients
-
-// Grammar lessons (grammarTagMappings)
-'advice' → grammar/feelings-and-intent/advice
-'prohibition' → grammar/feelings-and-intent/prohibition
-'indirect-questions' → grammar/sentence-building/indirect-questions
-// ... see getTagPath() for the full list
-```
+> Since grammar lessons live in subdirectories, every grammar tag **must** have an entry in `grammarTagMappings` — there is no automatic `grammar/{tag}` fallback.
 
 ### Adding New Tag Mappings
 
@@ -280,7 +262,7 @@ vocabulary:
 
 **Vocabulary not extracted?**
 
-- Check table has exactly 5 columns (Hiragana, Kanji, Romaji, English, Type)
+- Check table has at least the mandatory columns (Hiragana, Romaji, English). Kanji, Type, and extra columns like Usage are optional.
 - Verify file is in `docs/lessons/` directory
 - Run `npm run extract-vocabulary` manually
 - Check console output for errors
@@ -304,10 +286,18 @@ vocabulary:
 
 **Wrong category?**
 
-- Categories are based on file path:
-  - `vocabulary/*.md` → category: `vocabulary`
+- Categories are based on the immediate parent directory name (see `extractFromTable()` in `scripts/extract-vocabulary.js`):
+  - `vocabulary/colors.md` → category: `vocabulary`
+  - `vocabulary/food/tastes.md` → category: `food`
+  - `vocabulary/time/clock.md` → category: `time`
   - `grammar/*.md` → category: `grammar`
   - `conjugation/*.md` → category: `lessons`
+
+**Wrong subcategory for vocabulary?**
+
+- Vocabulary items use the immediate parent folder as category, not always `vocabulary`
+- Move the file to a different subdirectory if the category is wrong
+- Or restructure the folder hierarchy to match the desired categories
 
 ## Data Flow
 
