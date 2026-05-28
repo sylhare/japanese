@@ -12,6 +12,7 @@
 const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
+const { VALID_TYPES } = require('../src/data/vocabulary-types');
 
 const DEFAULT_LESSONS_DIR = path.join(__dirname, '../docs/lessons');
 const VOCABULARY_FILE = path.join(__dirname, '../src/data/vocabulary.yaml');
@@ -93,7 +94,7 @@ function isParticle(type) {
 function stripEmojis(text) {
   if (!text) return text;
   text = text.replace(/[^\p{L}\p{N}\s.,'():;/&-]/gu, '');
-  text = text.replace(/^\p{N}+(\s+)?/u, '');
+  text = text.replace(/^\d+\s+/, '');
   text = text.replace(/\(\s+/g, '(').replace(/\s+\)/g, ')');
   text = text.replace(/\s+/g, ' ');
   return text.trim();
@@ -252,7 +253,8 @@ function extractFromTable(tableContent, filePath, startIndex = 0) {
 
     const hiragana = hiraganaIdx >= 0 && hiraganaIdx < cells.length ? cells[hiraganaIdx].trim() : '';
     const kanji = kanjiIdx >= 0 && kanjiIdx < cells.length ? cells[kanjiIdx].trim() : '';
-    const romaji = romajiIdx >= 0 && romajiIdx < cells.length ? cells[romajiIdx].trim() : '';
+    const romajiRaw = romajiIdx >= 0 && romajiIdx < cells.length ? cells[romajiIdx].trim() : '';
+    const romaji = stripEmojis(romajiRaw);
     const englishRaw = englishIdx >= 0 && englishIdx < cells.length ? cells[englishIdx].trim() : '';
     const english = stripEmojis(englishRaw);
     const type = typeIdx >= 0 && typeIdx < cells.length ? cells[typeIdx].trim() : '';
@@ -263,6 +265,10 @@ function extractFromTable(tableContent, filePath, startIndex = 0) {
 
     if (isParticle(type)) {
       continue;
+    }
+
+    if (type && !VALID_TYPES.includes(type)) {
+      console.warn(`⚠️  Unknown type "${type}" in ${path.basename(filePath)} (row: ${hiragana})`);
     }
 
     if (hiragana.match(/^[\p{Emoji}\s]+$/u)) {
@@ -585,6 +591,7 @@ if (require.main === module) {
 
 module.exports = {
   DEFAULT_SORT_OPTIONS,
+  VALID_TYPES,
   extractVocabularyFromFile,
   extractN5VocabularyTokens,
   scanAllLessons,

@@ -2,6 +2,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import React, { useMemo, useState } from 'react';
 import n5VocabularyData from '../data/n5-vocabulary.json';
+import { VALID_TYPES } from '../data/vocabulary-types';
 import vocabularyYamlData from '../data/vocabulary.yaml';
 import styles from './dictionary.module.css';
 
@@ -144,10 +145,7 @@ export default function Vocabulary(): React.JSX.Element {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedType, setSelectedType] = useState('all');
   const [sortBy, setSortBy] = useState('hiragana');
-  const types = useMemo(() => {
-    const typeSet = new Set(vocabularyData.map(item => item.type).filter(Boolean));
-    return ['all', ...Array.from(typeSet).sort()];
-  }, []);
+  const types = ['all', ...VALID_TYPES];
   const vocabularyWithJlptTags = useMemo(
     () =>
       vocabularyData.map(item => {
