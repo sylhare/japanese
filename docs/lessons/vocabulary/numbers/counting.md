@@ -17,29 +17,6 @@ Make sure you've learned the [Basic Numbers](./basics) (1-10 and place value uni
 
 
 
-## Quick Reference: Basic Numbers (1-10)
-
-| Number | Hiragana | Romaji | English |
-|--------|----------|--------|---------|
-| 1 | いち | ichi | one |
-| 2 | に | ni | two |
-| 3 | さん | san | three |
-| 4 | よん / し | yon / shi | four |
-| 5 | ご | go | five |
-| 6 | ろく | roku | six |
-| 7 | なな / しち | nana / shichi | seven |
-| 8 | はち | hachi | eight |
-| 9 | きゅう / く | kyuu / ku | nine |
-| 10 | じゅう | juu | ten |
-
-:::tip Choosing Between Readings
-For **4**, prefer **よん** over し in most everyday contexts.
-For **7**, prefer **なな** over しち in most everyday contexts.
-し and しち are sometimes avoided because し sounds like death (死).
-:::
-
-
-
 ## Place Values
 
 ### Key Units
@@ -145,12 +122,12 @@ Watch for sound changes at 3,000 and 8,000!
 
 In Japanese, 10,000 is a single unit called **まん** (man).
 
-| Number | Hiragana | Romaji | English |
-|--------|----------|--------|---------|
-| 10,000 | いちまん | ichiman | ten thousand |
-| 20,000 | にまん | niman | twenty thousand |
-| 50,000 | ごまん | goman | fifty thousand |
-| 100,000 | じゅうまん | juuman | one hundred thousand |
+| Number | Hiragana | Kanji | Romaji | English | Type |
+|--------|----------|-------|--------|---------|------|
+| 10,000 | いちまん | 一万 | ichiman | ten thousand | counter |
+| 20,000 | にまん | 二万 | niman | twenty thousand | counter |
+| 50,000 | ごまん | 五万 | goman | fifty thousand | counter |
+| 100,000 | じゅうまん | 十万 | juuman | one hundred thousand | counter |
 
 ### Combining Units
 

@@ -5,7 +5,14 @@
  */
 
 /* You can override the default Infima variables here. */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 :root {
+  --ifm-font-family-base: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans', sans-serif;
+  --ifm-line-height-base: 1.4;
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -35,7 +42,7 @@
 .theme-doc-markdown.markdown table {
   border-collapse: separate;
   border-spacing: 0;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin: 1.5rem 0;
@@ -128,12 +135,22 @@
   .theme-doc-markdown.markdown table {
     font-size: 0.9rem;
   }
-  
+
   .theme-doc-markdown.markdown table th,
   .theme-doc-markdown.markdown table td {
     padding: 0.75rem 0.5rem;
   }
+
+  .theme-doc-markdown.markdown table .hide-on-mobile {
+    display: none;
+  }
 }
+
+/* Lesson article body text — matches Duolingo blog's 17px article content */
+.theme-doc-markdown.markdown {
+  font-size: 17px;
+}
+
 
 /* ASCII art and code block styling - ensure monospace and no wrapping */
 .theme-doc-markdown.markdown pre {
@@ -158,8 +175,46 @@
     font-size: 0.75rem;
     padding: 0.75rem;
   }
-  
+
   .theme-doc-markdown.markdown pre code {
     font-size: 0.75rem;
+  }
+}
+
+/* Duolingo-style press effect — shared by all cards and nav buttons */
+.press-card {
+  border: 2px solid var(--ifm-color-emphasis-200);
+  border-radius: 16px;
+  box-shadow: 0 3px 0 0 var(--ifm-color-emphasis-200);
+  transition: all 0.2s ease;
+}
+.press-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 0 0 var(--ifm-color-emphasis-300);
+  border-color: var(--ifm-color-primary);
+}
+.press-card:active {
+  transform: translateY(3px);
+  box-shadow: none;
+  transition-duration: 0.05s;
+}
+
+.pagination-nav__link {
+  composes: press-card;
+}
+
+/* Text selection highlight */
+::selection {
+  background: rgba(46, 133, 85, 0.2);
+}
+[data-theme='dark'] ::selection {
+  background: rgba(245, 197, 24, 0.25);
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
 }

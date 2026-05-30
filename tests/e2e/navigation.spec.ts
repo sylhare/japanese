@@ -111,6 +111,10 @@ test.describe('Site Navigation', () => {
     test('should display sidebar on docs pages', async ({ page }) => {
       const sidebar = page.locator('aside.theme-doc-sidebar-container');
       await expect(sidebar).toBeVisible();
+
+      const dictionaryLink = sidebar.locator('a').filter({ hasText: /^Dictionary$/i });
+      await expect(dictionaryLink).toBeVisible();
+      await expect(dictionaryLink).toHaveAttribute('href', /\/dictionary$/);
     });
 
     test('should have expandable categories in sidebar', async ({ page }) => {

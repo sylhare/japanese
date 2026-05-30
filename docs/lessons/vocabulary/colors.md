@@ -17,13 +17,13 @@ Learning colors is essential for describing objects and expressing preferences i
 | あか       | 赤     | aka      | 🔴 red    | い-adjective |
 | あお       | 青     | ao       | 🔵 blue   | い-adjective |
 | きいろ      | 黄色    | kiiro    | 🟡 yellow | い-adjective |
-| みどり      | 緑     | midori   | 🟢 green  | noun (の)    |
-| むらさき     | 紫     | murasaki | 🟣 purple | noun (の)    |
-| だいだい     | 橙     | daidai   | 🟠 orange | noun (の)    |
+| みどり      | 緑     | midori   | 🟢 green  | な-adjective |
+| むらさき     | 紫     | murasaki | 🟣 purple | な-adjective |
+| だいだい     | 橙     | daidai   | 🟠 orange | な-adjective |
 | しろ       | 白     | shiro    | ⚪ white   | い-adjective |
 | くろ       | 黒     | kuro     | ⚫ black   | い-adjective |
-| はいいろ     | 灰色    | haiiro   | ⬜ gray    | noun (の)    |
-| ちゃいろ     | 茶色    | chairo   | 🟤 brown  | noun (の)    |
+| はいいろ     | 灰色    | haiiro   | ⬜ gray    | な-adjective |
+| ちゃいろ     | 茶色    | chairo   | 🟤 brown  | な-adjective |
 
 **Examples:**
 
@@ -108,9 +108,9 @@ To describe dark shades, add **こい** (koi - thick/dark) before the color.
 
 ### Traditional Colors
 
-| Hiragana | Kanji | Romaji      | English          | Cultural Significance |
-|----------|-------|-------------|------------------|-----------------------|
-| ももいろ     | 桃色    | momoiro     | 🩷 peach color   | Traditional, feminine |
-| やまぶきいろ   | 山吹色   | yamabukiiro | 🟨 golden yellow | Spring, flowers       |
-| べにいろ     | 紅     | beniiro     | 🔴 crimson       | Traditional red       |
+| Hiragana | Kanji | Romaji      | English          | Type |
+|----------|-------|-------------|------------------|------|
+| ももいろ     | 桃色    | momoiro     | 🩷 peach color   | noun |
+| やまぶきいろ   | 山吹色   | yamabukiiro | 🟨 golden yellow | noun |
+| べにいろ     | 紅     | beniiro     | 🔴 crimson       | noun |
 

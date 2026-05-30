@@ -40,6 +40,7 @@ export default [
         // Browser globals
         window: 'readonly',
         document: 'readonly',
+        HTMLElement: 'readonly',
         console: 'readonly',
         // Node globals
         process: 'readonly',

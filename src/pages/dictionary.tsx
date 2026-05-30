@@ -2,6 +2,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import React, { useMemo, useState } from 'react';
 import n5VocabularyData from '../data/n5-vocabulary.json';
+import { VALID_TYPES } from '../data/vocabulary-types';
 import vocabularyYamlData from '../data/vocabulary.yaml';
 import styles from './dictionary.module.css';
 
@@ -75,23 +76,24 @@ export function getTagPath(tag: string): string {
     'desire': 'grammar/feelings-and-intent/desire',
     'excess': 'grammar/describing-and-comparing/excess',
     'experience': 'grammar/actions-and-events/experience',
+    'indirect-questions': 'grammar/sentence-building/indirect-questions',
+    'intend_to': 'grammar/explaining-and-reasoning/intend_to',
     'obligation': 'grammar/feelings-and-intent/obligation',
     'particle-guide': 'grammar/sentence-building/particle-guide',
+    'prohibition': 'grammar/feelings-and-intent/prohibition',
+    'question-words': 'grammar/sentence-building/question-words',
     'reason': 'grammar/explaining-and-reasoning/reason',
+    'sequential-actions': 'grammar/actions-and-events/sequential-actions',
   };
 
   const conjugationTags = [
-    'future',
-    'basics',
     'dictionary-form',
-    'verb-groups',
-    'te-nai-form',
-    'ta-form',
   ];
 
   const tagMappings: Record<string, string> = {
+    'basics': 'vocabulary/numbers/basics',
     'numbers': 'vocabulary/numbers',
-    'counting': 'vocabulary/numbers',
+    'counting': 'vocabulary/numbers/counting',
     'counters': 'vocabulary/numbers',
     'dates': 'vocabulary/time',
     'calendar': 'vocabulary/time',
@@ -103,7 +105,13 @@ export function getTagPath(tag: string): string {
     'kitchen': 'vocabulary/food/cooking',
     'food': 'vocabulary/food',
     'ingredients': 'vocabulary/food/food-and-ingredients',
+    'adjectives': 'vocabulary/essentials/adjectives',
     'confusing-kanji': 'vocabulary/essentials/confusing-kanji',
+    'linking-words': 'vocabulary/essentials/linking-words',
+    'clock': 'vocabulary/time/clock',
+    'date-counters': 'vocabulary/time/date-counters',
+    'frequency': 'vocabulary/time/frequency',
+    'food-and-ingredients': 'vocabulary/food/food-and-ingredients',
   };
 
   const lowerTag = tag.toLowerCase();
@@ -131,7 +139,9 @@ export default function Vocabulary(): React.JSX.Element {
   const baseUrl = useBaseUrl('/');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedType, setSelectedType] = useState('all');
   const [sortBy, setSortBy] = useState('hiragana');
+  const types = ['all', ...VALID_TYPES];
   const vocabularyWithJlptTags = useMemo(
     () =>
       vocabularyData.map(item => {
@@ -157,8 +167,9 @@ export default function Vocabulary(): React.JSX.Element {
         item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
 
       const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
+      const matchesType = selectedType === 'all' || item.type === selectedType;
 
-      return matchesSearch && matchesCategory;
+      return matchesSearch && matchesCategory && matchesType;
     });
 
     filtered.sort((a, b) => {
@@ -180,6 +191,7 @@ export default function Vocabulary(): React.JSX.Element {
   }, [
     searchTerm,
     selectedCategory,
+    selectedType,
     sortBy,
     vocabularyWithJlptTags,
   ]);
@@ -211,7 +223,19 @@ export default function Vocabulary(): React.JSX.Element {
                 >
                   {categories.map(category => (
                     <option key={category} value={category}>
-                      {category.charAt(0).toUpperCase() + category.slice(1)}
+                      {category === 'all' ? 'All categories' : category.charAt(0).toUpperCase() + category.slice(1)}
+                    </option>
+                  ))}
+                </select>
+
+                <select
+                  value={selectedType}
+                  onChange={(e) => setSelectedType(e.target.value)}
+                  className={styles.filterSelect}
+                >
+                  {types.map(type => (
+                    <option key={type} value={type}>
+                      {type === 'all' ? 'All types' : type}
                     </option>
                   ))}
                 </select>

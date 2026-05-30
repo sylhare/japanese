@@ -69,11 +69,12 @@ Two types of docs pages are used:
 
 ```
 docs/
-├── intro.md                        # "Getting Started" entry at the top of the sidebar
+├── intro.mdx                       # "Getting Started" entry at the top of the sidebar
 ├── lessons/
 │   ├── grammar/
 │   │   ├── index.mdx               # Grammar section landing page (sidebar_position: 0)
-│   │   ├── reason.md               # Individual lesson (sidebar_position: 10)
+│   │   ├── explaining-and-reasoning/
+│   │   │   └── reason.md           # Individual lesson (sidebar_position: 10)
 │   │   └── ...
 │   ├── conjugation/
 │   │   ├── index.mdx

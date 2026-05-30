@@ -42,6 +42,7 @@ Japanese festivals often take place at or near **じんじゃ** (神社, shrine)
 | えんげき | 演劇 | engeki | 🎭 theater, play | noun |
 | てんらんかい | 展覧会 | tenrankai | 🖼️ exhibition | noun |
 | しき | 式 | shiki | 📜 ceremony | noun |
+| じゅんび | 準備 | junbi | 📋 preparation | noun |
 
 ### Performances and Dance
 
@@ -72,6 +73,8 @@ Japanese festivals often take place at or near **じんじゃ** (神社, shrine)
 | うけつけ | 受付 | uketsuke | 🛎️ reception, front desk | noun |
 | いりぐち | 入口 | iriguchi | 🚪 entrance | noun |
 | でぐち | 出口 | deguchi | 🚪 exit | noun |
+| にゅうじょうりょう | 入場料 | nyuujouryou | 🎟️ entrance fee | noun |
+| むりょう | 無料 | muryou | 🆓 free (no charge) | noun |
 
 **Examples:**
 

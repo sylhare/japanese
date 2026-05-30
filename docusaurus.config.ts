@@ -93,6 +93,13 @@ const config: Config = {
     hideTypeColumnPlugin,
   ],
 
+  stylesheets: [
+    {
+      href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap',
+      type: 'text/css',
+    },
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',

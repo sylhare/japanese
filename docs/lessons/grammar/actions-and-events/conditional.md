@@ -21,7 +21,7 @@ Use **と** to express that when clause A happens, clause B naturally or automat
 
 | Hiragana | Romaji | English | Type |
 |----------|--------|---------|------|
-| [clause A] + と + [clause B] | to | when/if A, then B | conditional |
+| [clause A] + と + [clause B] | to | when/if A, then B | expression |
 
 ### Structure
 
@@ -61,7 +61,7 @@ Use **たら** for specific, one-time situations — things that might happen, t
 
 | Hiragana | Romaji | English | Type |
 |----------|--------|---------|------|
-| [clause A ta-form] + ら + [clause B] | tara | if/when A, then B | conditional |
+| [clause A ta-form] + ら + [clause B] | tara | if/when A, then B | expression |
 
 ### Formation
 

@@ -36,6 +36,8 @@ A complete reference for katakana characters and their romaji readings. Katakana
 
 ## Voiced Sounds (濁音)
 
+濁音 (dakuon) are created by adding two small strokes (゛) to the base character, changing the consonant sound.
+
 | a  | i  | u  | e  | o  |
 |----|----|----|----|----|
 | ガ  | ギ  | グ  | ゲ  | ゴ  |
@@ -49,12 +51,16 @@ A complete reference for katakana characters and their romaji readings. Katakana
 
 ## Half-Voiced Sounds (半濁音)
 
+半濁音 (handakuon) are created by adding a small circle (゜) to the ハ-row, producing "p" sounds.
+
 | a  | i  | u  | e  | o  |
 |----|----|----|----|----|
 | パ  | ピ  | プ  | ペ  | ポ  |
 | pa | pi | pu | pe | po |
 
 ## Contracted Sounds (拗音)
+
+拗音 (youon) combine a consonant character with a small ヤ, ユ, or ヨ to create blended sounds.
 
 | a   | i   | u   | e | o |
 |-----|-----|-----|---|---|
@@ -117,14 +123,6 @@ A complete reference for katakana characters and their romaji readings. Katakana
 - スポーツ (supootsu) - sports
 - ダンス (dansu) - dance
 - ゲーム (geemu) - game
-
-## Tips for Learning Katakana
-
-1. **Focus on differences**: Pay attention to how katakana differs from hiragana
-2. **Learn common words**: Many katakana words are borrowed from English
-3. **Practice with loanwords**: Use your knowledge of English to help remember katakana
-4. **Write regularly**: Practice writing katakana characters
-5. **Read labels**: Look for katakana on product labels and signs
 
 ## Katakana vs Hiragana
 

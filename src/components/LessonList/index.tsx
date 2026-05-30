@@ -12,12 +12,17 @@ interface LessonListProps {
   items: LessonItem[];
 }
 
+function parseBold(text: string): ReactNode[] {
+  const parts = text.split(/\*\*(.+?)\*\*/g);
+  return parts.map((part, i) => (i % 2 === 1 ? <strong key={i}>{part}</strong> : part));
+}
+
 function LessonCard({title, description, to}: LessonItem) {
   return (
     <Link to={to} className={styles.lessonCard}>
       <div className={styles.cardContent}>
         <h3 className={styles.cardTitle}>{title}</h3>
-        <p className={styles.cardDescription}>{description}</p>
+        <p className={styles.cardDescription}>{parseBold(description)}</p>
       </div>
       <div className={styles.cardArrow}>→</div>
     </Link>

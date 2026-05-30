@@ -9,67 +9,73 @@ import NextSteps from '@site/src/components/NextSteps';
 
 # Past Negative - なかった
 
-To say "didn't do" something, change ない to **なかった**.
+The past negative expresses that something did not happen — change ない to **なかった**.
 
-**Past Negative = Nai form with ない → なかった**
+## Group 1 (Godan) — ない → なかった
 
-| Present Negative | Past Negative |
-|-----------------|---------------|
-| 〜ない | 〜なかった |
+Change the ない ending to なかった for each pattern:
+
+| Nai Form | Present Pattern | Past Pattern | Romaji |
+|----------|-----------------|--------------|--------|
+| かない | か + ない | か + なかった | ka + nakatta |
+| がない | が + ない | が + なかった | ga + nakatta |
+| さない | さ + ない | さ + なかった | sa + nakatta |
+| たない | た + ない | た + なかった | ta + nakatta |
+| なない | な + ない | な + なかった | na + nakatta |
+| まない | ま + ない | ま + なかった | ma + nakatta |
+| らない | ら + ない | ら + なかった | ra + nakatta |
+| わない | わ + ない | わ + なかった | wa + nakatta |
 
 ### Examples
+- かかない → かかなかった (didn't write)
+- およがない → およがなかった (didn't swim)
+- はなさない → はなさなかった (didn't speak)
+- またない → またなかった (didn't wait)
+- よまない → よまなかった (didn't read)
+- つくらない → つくらなかった (didn't make)
+- かわない → かわなかった (didn't buy)
 
-**Group 1 (Godan)**
+## Group 2 (Ichidan) — Simple!
 
-- かかない → かか**なかった** (didn't write)
-- およがない → およが**なかった** (didn't swim)
-- はなさない → はなさ**なかった** (didn't speak)
-- またない → また**なかった** (didn't wait)
-- よまない → よま**なかった** (didn't read)
-- つくらない → つくら**なかった** (didn't make)
-- かわない → かわ**なかった** (didn't buy)
+| Nai Form | Past Negative | Pattern |
+|----------|---------------|---------|
+| ない | なかった | nai → nakatta |
 
-**Group 2 (Ichidan)**
+- たべない → たべなかった (didn't eat)
+- みない → みなかった (didn't see)
+- おきない → おきなかった (didn't wake up)
+- ねない → ねなかった (didn't sleep)
 
-- たべない → たべ**なかった** (didn't eat)
-- みない → み**なかった** (didn't see)
-- おきない → おき**なかった** (didn't wake up)
-- ねない → ね**なかった** (didn't sleep)
+## Group 3 (Irregular)
 
-**Group 3 (Irregular)**
+- しない → しなかった (didn't do)
+- こない → こなかった (didn't come)
 
-- しない → し**なかった** (didn't do)
-- こない → こ**なかった** (didn't come)
+:::caution Special Case: ある
+The verb ある has an irregular negative, so its past negative is also irregular:
+- ある → ない → **なかった** (not あらなかった)
+:::
 
-### Past Negative in Context
+## Past Negative in Context
 
 **Simple past negation:**
 > きのう、べんきょう**しなかった**。
-> - *I didn't study yesterday.*
+> *I didn't study yesterday.*
 
 **Explaining why:**
 > でんしゃ に **のれなかった** から、おくれた。
-> - *I was late because I couldn't get on the train.*
+> *I was late because I couldn't get on the train.*
 
 **Asking about past:**
 > あさごはん を **たべなかった** の？
-> - *Didn't you eat breakfast?*
+> *Didn't you eat breakfast?*
 
-
-## Polite Past Negative
-
-Use Masu-stem + **ませんでした** for polite speech.
-
-| Present Negative (Polite) | Past Negative (Polite) |
-|---------------------------|------------------------|
-| 〜ません | 〜ませんでした |
-
-### Examples
-
-- たべ**なかった** → たべ**ませんでした** (didn't eat)
-- み**なかった** → み**ませんでした** (didn't see)
-- し**なかった** → し**ませんでした** (didn't do)
-- こ**なかった** → き**ませんでした** (didn't come)
+:::info Common Past Negative Patterns
+- **〜なかったから** — because didn't: いかなかったから (because I didn't go)
+- **〜なかったのに** — even though didn't: たべなかったのに (even though I didn't eat)
+- **〜なかったら** — if didn't: こなかったら (if you didn't come)
+- **〜ませんでした** — polite past negative: たべませんでした (didn't eat)
+:::
 
 <NextSteps items={[
   {

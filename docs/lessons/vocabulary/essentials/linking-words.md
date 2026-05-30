@@ -224,6 +224,6 @@ Here are some example sentences combining multiple linking words:
   {
     title: 'Listing Items — と / や',
     description: 'Learn how to connect nouns in lists using と and や',
-    to: '/docs/lessons/grammar/sentence-building/conjunctions',
+    to: '/docs/lessons/grammar/sentence-building/listing-items',
   },
 ]} />
