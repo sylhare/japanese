@@ -101,8 +101,15 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/social-card.jpg',
+    metadata: [
+      {name: 'og:type', content: 'website'},
+      {name: 'og:site_name', content: 'Japanese Lessons'},
+      {name: 'og:description', content: 'Learn Japanese with structured lessons, vocabulary, grammar, and kana references.'},
+      {name: 'twitter:card', content: 'summary_large_image'},
+      {name: 'twitter:title', content: 'Japanese Lessons'},
+      {name: 'twitter:description', content: 'Learn Japanese with structured lessons, vocabulary, grammar, and kana references.'},
+    ],
     colorMode: {
       respectPrefersColorScheme: true,
     },
