@@ -86,6 +86,7 @@ export const GRAMMAR_SECTIONS: LessonSection[] = [
       { name: 'Experience',           path: 'experience',           heading: /experience/i },
       { name: 'Actions and Thinking', path: 'actions-and-thinking', heading: /actions|thinking/i },
       { name: 'Conditional',          path: 'conditional',          heading: /conditional/i },
+      { name: 'Listing Actions',      path: 'listing-actions',      heading: /listing actions|たり/i },
     ],
   },
   {
