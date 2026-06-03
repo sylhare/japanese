@@ -85,16 +85,15 @@ function isParticle(type) {
 }
 
 /**
- * Strip emoji characters from a string.
- * Uses a whitelist approach: keep only letters (including accented), numbers, spaces, and common punctuation.
- * Also removes leading numbers with optional spaces (e.g., "8 August" becomes "August").
+ * Remove emoji from a string, keeping letters, numbers, spaces, and common punctuation.
+ * Keycap emoji (e.g. "8️⃣") are removed as whole sequences so their base digit doesn't leak through.
  * @param {string} text - The text to strip emojis from
  * @returns {string} The text with emojis removed
  */
 function stripEmojis(text) {
   if (!text) return text;
+  text = text.replace(/[0-9#*]️?⃣/g, '');
   text = text.replace(/[^\p{L}\p{N}\s.,'():;/&-]/gu, '');
-  text = text.replace(/^\d+\s+/, '');
   text = text.replace(/\(\s+/g, '(').replace(/\s+\)/g, ')');
   text = text.replace(/\s+/g, ' ');
   return text.trim();
@@ -559,10 +558,9 @@ function main(options = {}) {
   }
   console.log(`📖 Total vocabulary items: ${totalItems}`);
 
-  const existingContent = force
-    ? ''
-    : yaml.dump(existing, { indent: 2, lineWidth: -1, noRefs: true });
-  const newContent = yaml.dump(merged, { indent: 2, lineWidth: -1, noRefs: true });
+  const dumpOptions = { indent: 2, lineWidth: -1, noRefs: true, forceQuotes: true, quotingType: "'" };
+  const existingContent = force ? '' : yaml.dump(existing, dumpOptions);
+  const newContent = yaml.dump(merged, dumpOptions);
 
   if (force || existingContent !== newContent) {
     fs.writeFileSync(VOCABULARY_FILE, newContent);

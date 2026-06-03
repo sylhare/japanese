@@ -208,6 +208,19 @@ describe('Vocabulary Extraction', () => {
       });
     });
 
+    it('should keep meaningful plain-digit numbers on counters while removing keycap-emoji prefixes', () => {
+      const vocabulary = extractVocabularyFromFile(path.join(fixturesDir, 'counters-with-numbers.md'));
+
+      expect(vocabulary).toHaveLength(6);
+
+      expect(vocabulary.find(item => item.hiragana === 'いっぷん')?.meaning).toBe('1 minute');
+      expect(vocabulary.find(item => item.hiragana === 'にふん')?.meaning).toBe('2 minutes');
+      expect(vocabulary.find(item => item.hiragana === 'じゅっぷん')?.meaning).toBe('10 minutes');
+      expect(vocabulary.find(item => item.hiragana === 'いちにち')?.meaning).toBe('1 day');
+      expect(vocabulary.find(item => item.hiragana === 'ふつか')?.meaning).toBe('2 days');
+      expect(vocabulary.find(item => item.hiragana === 'はちがつ')?.meaning).toBe('August');
+    });
+
     it('should extract vocabulary from tables without Kanji column', () => {
       const filePath = path.join(fixturesDir, 'no-kanji-column.md');
       const vocabulary = extractVocabularyFromFile(filePath);
