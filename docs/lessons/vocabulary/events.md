@@ -36,6 +36,7 @@ Japanese festivals often take place at or near **じんじゃ** (神社, shrine)
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
 | イベント | - | ibento | 📅 event | noun |
+| さんかしゃ | 参加者 | sankasha | 🙋 participant | noun |
 | たいかい | 大会 | taikai | 🏆 competition, tournament | noun |
 | しあい | 試合 | shiai | 🏅 match, game | noun |
 | コンサート | - | konsaato | 🎵 concert | noun |
