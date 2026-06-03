@@ -223,10 +223,11 @@ Question words combine with **も** or **か** to shift their meaning:
 | なにか | nanika | something | noun |
 | どこも | dokomo | nowhere | noun |
 | どこか | dokoka | somewhere | noun |
-| いつも | itsumo | never | noun |
+| いつも | itsumo | always | noun |
 | いつか | itsuka | sometime | noun |
 | どれも | doremo | none of them | noun |
 | どれか | doreka | one of them | noun |
+| いちども | ichido mo | never (not once) | adverb |
 
 :::info いつも (always)
 **いつも** without a negative verb is a fixed expression meaning "always/usually":
@@ -243,6 +244,8 @@ Question words combine with **も** or **か** to shift their meaning:
   - *dokoka ni ikimashou.*
 - いつか にほんに いきたいです。 — I want to go to Japan someday.
   - *itsuka nihon ni ikitai desu.*
+- いちども いったことが ありません。 — I have never been there.
+  - *ichido mo itta koto ga arimasen.*
 
 <NextSteps items={[
   {

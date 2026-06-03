@@ -65,6 +65,10 @@ Particles are small words that indicate the grammatical relationship between wor
 - Can be omitted in casual conversation
 - Never used with intransitive verbs
 
+:::info Why を is sometimes written "o"
+As a particle, **を** is pronounced exactly like **お** — the old "w" sound is silent in modern Japanese. That's why you'll see it romanized **"o"** elsewhere; this site writes **"wo"** to match the kana. Both point to the same particle.
+:::
+
 ### に (ni) - Direction/Time Marker
 
 **Function**: Indicates direction, time, or indirect object

@@ -83,7 +83,7 @@ For accessories, use **はずす（外す）** or **とる（取る）**:
 | とけい | 時計 | tokei | ⌚ watch/clock | noun |
 | ネクタイ | | nekutai | 👔 tie | noun |
 | ベルト | | beruto | 🪢 belt | noun |
-| イヤリング | | iyaringu | 💍 earrings | noun |
+| イヤリング | | iyaringu | 💎 earrings | noun |
 | てぶくろ | 手袋 | tebukuro | 🧤 gloves | noun |
 
 ## Examples

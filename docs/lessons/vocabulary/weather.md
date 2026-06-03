@@ -155,8 +155,8 @@ Example:
 | ゆきだるま | 雪だるま | yukidaruma | ⛄ snowman | noun |
 
 **Examples:**
-- さむいから、コートを きてください。 — It's cold, so please wear a coat.
-  - *samui kara, kooto o kite kudasai.*
+- そとは ゆきが ふっています。 — It's snowing outside.
+  - *soto wa yuki ga futte imasu.*
 - てぶくろを わすれました。 — I forgot my gloves.
   - *tebukuro o wasuremashita.*
 - ゆきが たくさん つもりました。 — A lot of snow accumulated.

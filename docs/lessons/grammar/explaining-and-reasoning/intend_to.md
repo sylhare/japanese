@@ -70,7 +70,7 @@ There are two ways to express negative intention:
 - あした は でかけない つもり です - I intend not to go out tomorrow.
   - *ashita wa dekakenai tsumori desu*
 
-### Pattern 1: [verb dictionary form] + つもり は ない
+### Pattern 2: [verb dictionary form] + つもり は ない
 
 **Meaning:** "I have no intention of [verb]"
 
