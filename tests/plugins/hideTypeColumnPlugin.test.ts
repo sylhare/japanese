@@ -82,16 +82,16 @@ describe('hideTypeColumnPlugin', () => {
       hideTypeColumns();
 
       const ths = container.querySelectorAll('th');
-      expect(ths[0].style.display).not.toBe('none');
-      expect(ths[1].style.display).not.toBe('none');
-      expect(ths[2].style.display).toBe('none');
+      expect(ths[0].classList.contains('hide-column')).toBe(false);
+      expect(ths[1].classList.contains('hide-column')).toBe(false);
+      expect(ths[2].classList.contains('hide-column')).toBe(true);
 
       const rows = container.querySelectorAll('tbody tr');
       rows.forEach((row) => {
         const cells = row.querySelectorAll('td');
-        expect(cells[0].style.display).not.toBe('none');
-        expect(cells[1].style.display).not.toBe('none');
-        expect(cells[2].style.display).toBe('none');
+        expect(cells[0].classList.contains('hide-column')).toBe(false);
+        expect(cells[1].classList.contains('hide-column')).toBe(false);
+        expect(cells[2].classList.contains('hide-column')).toBe(true);
       });
     });
 
@@ -156,11 +156,11 @@ describe('hideTypeColumnPlugin', () => {
 
       const ths = container.querySelectorAll('th');
       expect(ths[1].classList.contains('hide-on-mobile')).toBe(true);
-      expect(ths[3].style.display).toBe('none');
+      expect(ths[3].classList.contains('hide-column')).toBe(true);
 
       const cells = container.querySelectorAll<HTMLElement>('tbody td');
       expect(cells[1].classList.contains('hide-on-mobile')).toBe(true);
-      expect(cells[3].style.display).toBe('none');
+      expect(cells[3].classList.contains('hide-column')).toBe(true);
     });
 
     it('should ignore tables outside .theme-doc-markdown.markdown', () => {
@@ -186,9 +186,9 @@ describe('hideTypeColumnPlugin', () => {
       hideTypeColumns();
 
       const table = container.querySelector('table')!;
-      expect(table.dataset.typeColumnHidden).toBeUndefined();
+      expect(table.dataset.typeColumnHidden).toBe('true');
       container.querySelectorAll('th, td').forEach((cell) => {
-        expect((cell as HTMLElement).style.display).not.toBe('none');
+        expect(cell.classList.contains('hide-column')).toBe(false);
         expect(cell.classList.contains('hide-on-mobile')).toBe(false);
       });
     });

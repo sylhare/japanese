@@ -21,111 +21,31 @@ export default function hideTypeColumnPlugin(): Plugin<void> {
       if (!headerRow) return;
       const headerCells = Array.from(headerRow.querySelectorAll('th'));
       if (headerCells.length === 0) return;
+      table.dataset.typeColumnHidden = 'true';
       headerCells.forEach((th, colIndex) => {
         const name = th.textContent.trim().toLowerCase();
-        if (name === 'type') {
-          table.dataset.typeColumnHidden = 'true';
-          th.style.display = 'none';
-          const allRows = Array.from(table.querySelectorAll('tr'));
-          allRows.forEach((row) => {
-            const cells = Array.from(row.querySelectorAll('td, th'));
-            if (cells[colIndex]) {
-              cells[colIndex].style.display = 'none';
-            }
-          });
-        }
-        if (name === 'kanji') {
-          th.classList.add('hide-on-mobile');
-          const allRows = Array.from(table.querySelectorAll('tr'));
-          allRows.forEach((row) => {
-            const cells = Array.from(row.querySelectorAll('td, th'));
-            if (cells[colIndex]) {
-              cells[colIndex].classList.add('hide-on-mobile');
-            }
-          });
-        }
-      });
-    });
-  }
-  
-  function runWithRetry(maxAttempts = 10, delay = 50) {
-    let attempts = 0;
-    const tryHide = () => {
-      attempts++;
-      const tables = document.querySelectorAll('.theme-doc-markdown.markdown table');
-      if (tables.length > 0) {
-        hideTypeColumns();
-        if (attempts < maxAttempts) {
-          requestAnimationFrame(() => {
-            setTimeout(tryHide, delay);
-          });
-        }
-      } else if (attempts < maxAttempts) {
-        requestAnimationFrame(() => {
-          setTimeout(tryHide, delay);
+        const cls = name === 'type' ? 'hide-column' : name === 'kanji' ? 'hide-on-mobile' : null;
+        if (!cls) return;
+        Array.from(table.querySelectorAll('tr')).forEach((row) => {
+          const cell = row.querySelectorAll('td, th')[colIndex];
+          if (cell) cell.classList.add(cls);
         });
-      }
-    };
-    requestAnimationFrame(tryHide);
-  }
-  
-  function initialize() {
-    hideTypeColumns();
-    runWithRetry();
-  }
-  
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initialize);
-  } else {
-    initialize();
-  }
-  
-  const observer = new MutationObserver(() => {
-    requestAnimationFrame(() => {
-      hideTypeColumns();
-    });
-  });
-  
-  function setupObserver() {
-    const mainWrapper = document.querySelector('.main-wrapper');
-    if (mainWrapper) {
-      observer.observe(mainWrapper, { childList: true, subtree: true });
-    } else {
-      setTimeout(setupObserver, 100);
-    }
-  }
-  
-  setupObserver();
-  
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setupObserver);
-  } else {
-    setupObserver();
-  }
-  
-  window.addEventListener('popstate', () => {
-    requestAnimationFrame(() => {
-      setTimeout(hideTypeColumns, 100);
-      runWithRetry();
-    });
-  });
-  
-  window.addEventListener('hashchange', () => {
-    requestAnimationFrame(() => {
-      setTimeout(hideTypeColumns, 100);
-      runWithRetry();
-    });
-  });
-  
-  if (window.history && window.history.pushState) {
-    const originalPushState = window.history.pushState;
-    window.history.pushState = function() {
-      originalPushState.apply(window.history, arguments);
-      requestAnimationFrame(() => {
-        setTimeout(hideTypeColumns, 100);
-        runWithRetry();
       });
-    };
+    });
+  }
+
+  function run() { requestAnimationFrame(hideTypeColumns); }
+
+  function start() {
+    run();
+    const target = document.querySelector('.main-wrapper') || document.body;
+    new MutationObserver(run).observe(target, { childList: true, subtree: true });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start);
+  } else {
+    start();
   }
 })();
             `,
