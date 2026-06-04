@@ -7,19 +7,17 @@ Complete guide for the vocabulary extraction, tag system, and dictionary page.
 ### For Content Creators
 
 1. **Add vocabulary to lesson files** using this format:
-
-```markdown
-## Any Section Name
-
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| あまい | 甘い | amai | sweet | い-adjective |
-```
-
+    ```markdown
+    ## Any Section Name
+    
+    | Hiragana | Kanji | Romaji | English | Type         |
+    |----------|-------|--------|---------|--------------|
+    | あまい    | 甘い   | amai   | sweet   | い-adjective |
+    ```
 2. **Run extraction**: `npm run extract-vocabulary`
 3. **Check results**: Visit `/dictionary` page
 
-### For Developers
+### Local development commands
 
 ```bash
 # Manual extraction (merges with existing)
@@ -42,12 +40,13 @@ npm start
 
 ### Command Line Options
 
-| Option | Short | Description |
-|--------|-------|-------------|
-| `--force` | `-f` | Recreate vocabulary from scratch, ignoring existing entries |
-| `--help` | `-h` | Show help message |
+| Option    | Short | Description                                                 |
+|-----------|-------|-------------------------------------------------------------|
+| `--force` | `-f`  | Recreate vocabulary from scratch, ignoring existing entries |
+| `--help`  | `-h`  | Show help message                                           |
 
 **When to use `--force`:**
+
 - After major restructuring of lesson files
 - To clean up orphaned or outdated entries
 - When tag mappings have changed significantly
@@ -59,17 +58,25 @@ npm start
 
 **Any section heading works!** The script finds tables with the correct column structure:
 
-| Column   | Required    | Example     | Notes                 |
-|----------|-------------|-------------|-----------------------|
-| Hiragana | ✅ Yes       | あまい         | Cannot be empty       |
-| Kanji    | ⚠️ Optional | 甘い          | Use `-` if no kanji   |
-| Romaji   | ✅ Yes       | amai        | Cannot be empty       |
-| English  | ✅ Yes       | sweet       | Cannot be empty       |
-| Type     | ✅ Yes       | い-adjective | See valid types below |
+| Column   | Required    | Example     | Notes                                     |
+|----------|-------------|-------------|-------------------------------------------|
+| Hiragana | ✅ Yes       | あまい         | Cannot be empty                           |
+| Kanji    | ⚠️ Optional | 甘い          | Use `-` if no kanji                       |
+| Romaji   | ✅ Yes       | amai        | Cannot be empty                           |
+| English  | ✅ Yes       | sweet       | Cannot be empty                           |
+| Type     | ✅ Yes       | い-adjective | (Hidden on runtime) See valid types below |
+            
+Emoji rules:
+
+- Nouns and adjectives: you may include an emoji in the English column (e.g. `👨 father`), they will be filtered off on extraction.
+- Verbs: avoid emoji in the English column
+
+Try to keep tables to ≤10 rows. Split into subsections if more words are needed.
 
 ### Valid Type Values
 
-The valid values live in [`src/data/vocabulary-types.js`](../../src/data/vocabulary-types.js) (the single source of truth, used by both the extraction and the dictionary):
+The valid values live in [`src/data/vocabulary-types.js`](../../src/data/vocabulary-types.ts) 
+(the single source of truth, used by both the extraction and the dictionary):
 
 - `noun` - Regular nouns
 - `verb` - Verbs
@@ -97,34 +104,44 @@ The system automatically:
 
 ## Tag System
 
-Tags are automatically generated from the lesson file name and enable navigation from the dictionary back to the source lessons.
+Tags are automatically generated from the lesson file name and enable navigation from the dictionary back to the source
+lessons.
 
 ### How Tags Work
 
 1. **Automatic Generation**: When vocabulary is extracted, the lesson filename becomes a tag
-   - `docs/lessons/vocabulary/colors.md` → tag: `colors`
-   - `docs/lessons/grammar/advice.md` → tag: `advice`
-   - `docs/lessons/conjugation/future.md` → tag: `future`
+    - `docs/lessons/vocabulary/colors.md` → tag: `colors`
+    - `docs/lessons/grammar/advice.md` → tag: `advice`
+    - `docs/lessons/conjugation/future.md` → tag: `future`
 
 2. **Tag Merging**: When the same word appears in multiple lessons, all tags are merged
-   - Example: "tomorrow" (あした) appears in both `days-and-weeks.md` and `future.md`
-   - Result: tags: `['days-and-weeks', 'future', 'time']`
+    - Example: "tomorrow" (あした) appears in both `days-and-weeks.md` and `future.md`
+    - Result: tags: `['days-and-weeks', 'future', 'time']`
 
 3. **Clickable Navigation**: Each tag in the dictionary links to its source lesson
 
 ### Tag Path Resolution
 
-Each tag links from the dictionary back to its source lesson, and those links are derived automatically from the lesson files on disk — there is no hand-maintained list to keep in sync. Extraction records where every lesson lives in [`src/data/lesson-paths.json`](../../src/data/lesson-paths.json), and the [dictionary page](../../src/pages/dictionary.tsx) resolves each tag through it (for example, the `listing-actions` tag points at `docs/lessons/grammar/actions-and-events/listing-actions`). Anything unmatched falls back to the vocabulary folder.
+Each tag links from the dictionary back to its source lesson, and those links are derived automatically from the lesson
+files on disk — there is no hand-maintained list to keep in sync. Extraction records where every lesson lives in [
+`src/data/lesson-paths.json`](../../src/data/lesson-paths.json), and
+the [dictionary page](../../src/pages/dictionary.tsx) resolves each tag through it (for example, the `listing-actions`
+tag points at `docs/lessons/grammar/actions-and-events/listing-actions`). Anything unmatched falls back to the
+vocabulary folder.
 
-The `n5` tag maps to the [reference article](../../docs/reference/n5-vocabulary.md) explicitly. If two lesson files share a basename they collide on the same tag, so basenames must stay unique across folders.
+The `n5` tag maps to the [reference article](../../docs/reference/n5-vocabulary.md) explicitly. If two lesson files
+share a basename they collide on the same tag, so basenames must stay unique across folders.
 
-The [e2e helpers](../../tests/e2e/helpers/lessonData.ts) resolve lesson URLs through the same manifest, and a [consistency test](../../tests/scripts/lesson-paths.test.ts) keeps the two from drifting apart.
+The [e2e helpers](../../tests/e2e/helpers/lessonData.ts) resolve lesson URLs through the same manifest, and
+a [consistency test](../../tests/scripts/lesson-paths.test.ts) keeps the two from drifting apart.
 
 ### Adding a New Lesson
 
-Nothing extra to wire up — add a lesson file under `docs/lessons/` and run `npm run extract-vocabulary`. The manifest regenerates, so the new tag links automatically.
+Nothing extra to wire up — add a lesson file under `docs/lessons/` and run `npm run extract-vocabulary`. The manifest
+regenerates, so the new tag links automatically.
 
-Run `npm test` afterwards: the suite verifies that every tag in [`vocabulary.yaml`](../../src/data/vocabulary.yaml) resolves to a real lesson page.
+Run `npm test` afterward: the suite verifies that every tag in [`vocabulary.yaml`](../../src/data/vocabulary.yaml)
+resolves to a real lesson page.
 
 ## YAML File Structure
 
@@ -168,16 +185,16 @@ sortOptions:
 
 ### Vocabulary Item Fields
 
-| Field      | Required    | Description             | Example       |
-|------------|-------------|-------------------------|---------------|
-| `id`       | ✅ Yes       | Unique identifier       | `colors_2`    |
-| `hiragana` | ✅ Yes       | Hiragana reading        | `あか`          |
-| `kanji`    | ⚠️ Optional | Kanji characters        | `赤`           |
-| `romaji`   | ✅ Yes       | Romanized pronunciation | `aka`         |
-| `meaning`  | ✅ Yes       | English meaning         | `red`         |
-| `category` | ✅ Yes       | Content category        | `vocabulary`  |
-| `tags`     | ✅ Yes       | Lesson-based tags (array) | `['colors', 'basic']` |
-| `type`     | ✅ Yes       | Word type               | `い-adjective` |
+| Field      | Description               | Example               |
+|------------|---------------------------|-----------------------|
+| `id`       | Unique identifier         | `colors_2`            |
+| `hiragana` | Hiragana reading          | `あか`                  |
+| `kanji`    | Kanji characters          | `赤`                   |
+| `romaji`   | Romanized pronunciation   | `aka`                 |
+| `meaning`  | English meaning           | `red`                 |
+| `category` | Content category          | `vocabulary`          |
+| `tags`     | Lesson-based tags (array) | `['colors', 'basic']` |
+| `type`     | Word type                 | `い-adjective`         |
 
 ### Automatic ID Generation
 
@@ -192,24 +209,29 @@ IDs are generated as `{lesson}_{row_number}`:
 The dictionary page (`/dictionary`) provides:
 
 ### Search
+
 - Search by hiragana, katakana, kanji, romaji, or English meaning
 - Search by tag name
 - Real-time filtering as you type
 
 ### Filters
+
 - **Category filter**: Filter by content category (all, vocabulary, grammar, etc.)
 - **Sort options**: Sort by hiragana, romaji, meaning, or category
 - **Hiragana only**: Show only items with hiragana
 - **Katakana only**: Show only items with katakana
 
 ### Vocabulary Cards
+
 Each card displays:
+
 - **Japanese**: Kanji (if available), hiragana, and romaji
 - **Meaning**: English translation
 - **Type badge**: Word type (noun, verb, adjective, etc.)
 - **Tags**: Clickable links to source lessons
 
 ### Tag Navigation
+
 - Click any tag to navigate to the source lesson
 - Words appearing in multiple lessons show all related tags
 - Tags are color-coded and sorted alphabetically
@@ -254,7 +276,8 @@ vocabulary:
 
 **Vocabulary not extracted?**
 
-- Check table has at least the mandatory columns (Hiragana, Romaji, English). Kanji, Type, and extra columns like Usage are optional.
+- Check table has at least the mandatory columns (Hiragana, Romaji, English). Kanji, Type, and extra columns like Usage
+  are optional.
 - Verify file is in `docs/lessons/` directory
 - Run `npm run extract-vocabulary` manually
 - Check console output for errors
@@ -267,7 +290,8 @@ vocabulary:
 
 **Tag links to wrong page?**
 
-- Lesson links come from [`src/data/lesson-paths.json`](../../src/data/lesson-paths.json), regenerated on every run — re-run `npm run extract-vocabulary` after adding or moving a lesson.
+- Lesson links come from [`src/data/lesson-paths.json`](../../src/data/lesson-paths.json), regenerated on every run —
+  re-run `npm run extract-vocabulary` after adding or moving a lesson.
 - Make sure the lesson's filename is unique across folders; lessons that share a basename collide on the same tag.
 
 **Duplicate entries?**
@@ -278,11 +302,11 @@ vocabulary:
 **Wrong category?**
 
 - Categories are based on the immediate parent directory name:
-  - `vocabulary/colors.md` → category: `vocabulary`
-  - `vocabulary/food/tastes.md` → category: `food`
-  - `vocabulary/time/clock.md` → category: `time`
-  - `grammar/*.md` → category: `grammar`
-  - `conjugation/*.md` → category: `lessons`
+    - `vocabulary/colors.md` → category: `vocabulary`
+    - `vocabulary/food/tastes.md` → category: `food`
+    - `vocabulary/time/clock.md` → category: `time`
+    - `grammar/*.md` → category: `grammar`
+    - `conjugation/*.md` → category: `lessons`
 
 **Wrong subcategory for vocabulary?**
 
@@ -302,9 +326,12 @@ Lesson Files → Extraction Script → vocabulary.yaml → Dictionary Page
                 Merges Tags         Merged Tags      Clickable Tags
 ```
 
-**`src/data/vocabulary.yaml`** — main vocabulary database consumed by the Dictionary page (`/dictionary`) and the Vocabulary page (`/vocabulary`). Contains all extracted entries with merged tags, categories, and sort options.
+**`src/data/vocabulary.yaml`** — main vocabulary database consumed by the Dictionary page (`/dictionary`) and the
+Vocabulary page (`/vocabulary`). Contains all extracted entries with merged tags, categories, and sort options.
 
-**`src/data/n5-vocabulary.json`** — flat list of normalized tokens (hiragana, kanji, romaji) extracted from `docs/reference/n5-vocabulary.md`. Used by the dictionary to highlight N5-level words. Updated in the same run as `vocabulary.yaml`.
+**`src/data/n5-vocabulary.json`** — flat list of normalized tokens (hiragana, kanji, romaji) extracted from
+`docs/reference/n5-vocabulary.md`. Used by the dictionary to highlight N5-level words. Updated in the same run as
+`vocabulary.yaml`.
 
 ## Testing
 
