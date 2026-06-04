@@ -5,6 +5,7 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import Vocabulary, { getTagPath } from '../../src/pages/dictionary';
+import { loadVocabularyData } from '../test-utils';
 
 vi.mock('../../src/data/vocabulary.yaml', async () => {
   const { mockVocabularyData } = await import('../__fixtures__/component/vocabulary-mock-data');
@@ -369,52 +370,32 @@ describe('getTagPath', () => {
   });
 
   describe('Numbers-related tags', () => {
-    it('should map "numbers" tag to numbers lesson path', () => {
-      expect(getTagPath('numbers')).toBe('docs/lessons/vocabulary/numbers');
+    it('should map "basics" tag to the numbers basics lesson', () => {
+      expect(getTagPath('basics')).toBe('docs/lessons/vocabulary/numbers/basics');
     });
 
     it('should map "counting" tag to counting lesson path', () => {
       expect(getTagPath('counting')).toBe('docs/lessons/vocabulary/numbers/counting');
     });
-
-    it('should map "counters" tag to numbers lesson path', () => {
-      expect(getTagPath('counters')).toBe('docs/lessons/vocabulary/numbers');
-    });
   });
 
   describe('Time-related tags', () => {
-    it('should map "dates" tag to time vocabulary lesson path', () => {
-      expect(getTagPath('dates')).toBe('docs/lessons/vocabulary/time');
+    it('should map "calendar" tag to the calendar lesson page', () => {
+      expect(getTagPath('calendar')).toBe('docs/lessons/vocabulary/time/calendar');
     });
 
-    it('should map "calendar" tag to time vocabulary lesson path', () => {
-      expect(getTagPath('calendar')).toBe('docs/lessons/vocabulary/time');
-    });
-
-    it('should map "time" tag to time vocabulary lesson path', () => {
-      expect(getTagPath('time')).toBe('docs/lessons/vocabulary/time');
+    it('should map "clock" tag to the telling-time lesson page', () => {
+      expect(getTagPath('clock')).toBe('docs/lessons/vocabulary/time/clock');
     });
   });
 
   describe('Case insensitivity', () => {
-    it('should handle uppercase "NUMBERS" tag', () => {
-      expect(getTagPath('NUMBERS')).toBe('docs/lessons/vocabulary/numbers');
+    it('should resolve an uppercase real-lesson tag to its lowercase path', () => {
+      expect(getTagPath('COLORS')).toBe('docs/lessons/vocabulary/colors');
     });
 
-    it('should handle mixed case "Numbers" tag', () => {
-      expect(getTagPath('Numbers')).toBe('docs/lessons/vocabulary/numbers');
-    });
-
-    it('should handle mixed case "CouNTers" tag', () => {
-      expect(getTagPath('CouNTers')).toBe('docs/lessons/vocabulary/numbers');
-    });
-
-    it('should handle uppercase vocabulary tag "COLORS"', () => {
-      expect(getTagPath('COLORS')).toBe('docs/lessons/vocabulary/COLORS');
-    });
-
-    it('should handle uppercase time tag "TIME"', () => {
-      expect(getTagPath('TIME')).toBe('docs/lessons/vocabulary/time');
+    it('should resolve a mixed-case real-lesson tag', () => {
+      expect(getTagPath('Family')).toBe('docs/lessons/vocabulary/family');
     });
   });
 
@@ -451,11 +432,8 @@ describe('getTagPath', () => {
   });
 
   describe('All vocabulary tags resolve to existing pages', () => {
-    const yaml = require('js-yaml');
-    const vocabFile = fs.readFileSync(path.resolve(__dirname, '../../src/data/vocabulary.yaml'), 'utf8');
-    const vocabData = yaml.load(vocabFile);
     const allTags = new Set<string>();
-    vocabData.vocabulary.forEach((item: any) => item.tags.forEach((t: string) => allTags.add(t)));
+    loadVocabularyData().vocabulary.forEach(item => item.tags.forEach(t => allTags.add(t)));
 
     allTags.forEach(tag => {
       it(`tag "${tag}" should link to an existing lesson page`, () => {
@@ -487,15 +465,14 @@ describe('getTagPath', () => {
     });
 
     it('should return correct paths for numbers tags', () => {
-      expect(getTagPath('numbers')).toBe('docs/lessons/vocabulary/numbers');
+      expect(getTagPath('basics')).toBe('docs/lessons/vocabulary/numbers/basics');
       expect(getTagPath('counting')).toBe('docs/lessons/vocabulary/numbers/counting');
-      expect(getTagPath('counters')).toBe('docs/lessons/vocabulary/numbers');
     });
 
     it('should return correct paths for time-related tags', () => {
-      expect(getTagPath('time')).toBe('docs/lessons/vocabulary/time');
-      expect(getTagPath('dates')).toBe('docs/lessons/vocabulary/time');
-      expect(getTagPath('calendar')).toBe('docs/lessons/vocabulary/time');
+      expect(getTagPath('calendar')).toBe('docs/lessons/vocabulary/time/calendar');
+      expect(getTagPath('clock')).toBe('docs/lessons/vocabulary/time/clock');
+      expect(getTagPath('frequency')).toBe('docs/lessons/vocabulary/time/frequency');
     });
   });
 });
