@@ -135,11 +135,11 @@ Think of ので as "it's because" — slightly softer than から.
 
 ## Custom Plugins
 
-### `hideTypeColumnPlugin`
+### `hideColumnPlugin`
 
-Source: `src/plugins/hideTypeColumnPlugin.ts`
+Source: `src/plugins/hideColumnPlugin.ts`
 
-A Docusaurus plugin that injects a CSS rule to hide the **Type** column in vocabulary tables on mobile. The Type column (always the last column) is decorative metadata — hiding it on small screens keeps tables readable without horizontal scrolling.
+A Docusaurus plugin that injects a small script to hide table columns in rendered lessons: the **Type** column on all screens, and the **Kanji** column on mobile (via the `hide-on-mobile` CSS class). Both columns stay in the markdown source so the vocabulary extractor can still read them — they're just hidden in the page.
 
 ### `yaml-loader`
 

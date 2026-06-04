@@ -1,11 +1,13 @@
 import type {Plugin} from '@docusaurus/types';
 
 /**
- * Plugin to inject the hideTypeColumn script into all pages
+ * Injects a script that hides table columns in rendered lessons: the Type column
+ * everywhere, and the Kanji column on mobile. Both stay in the markdown source for
+ * the vocabulary extractor.
  */
-export default function hideTypeColumnPlugin(): Plugin<void> {
+export default function hideColumnPlugin(): Plugin<void> {
   return {
-    name: 'hide-type-column-plugin',
+    name: 'hide-column-plugin',
     injectHtmlTags() {
       return {
         postBodyTags: [
@@ -13,15 +15,15 @@ export default function hideTypeColumnPlugin(): Plugin<void> {
             tagName: 'script',
             innerHTML: `
 (function() {
-  function hideTypeColumns() {
+  function hideColumns() {
     const tables = document.querySelectorAll('.theme-doc-markdown.markdown table');
     tables.forEach((table) => {
-      if (table.dataset.typeColumnHidden) return;
+      if (table.dataset.columnsHidden) return;
       const headerRow = table.querySelector('thead tr') || table.querySelector('tr');
       if (!headerRow) return;
       const headerCells = Array.from(headerRow.querySelectorAll('th'));
       if (headerCells.length === 0) return;
-      table.dataset.typeColumnHidden = 'true';
+      table.dataset.columnsHidden = 'true';
       headerCells.forEach((th, colIndex) => {
         const name = th.textContent.trim().toLowerCase();
         const cls = name === 'type' ? 'hide-column' : name === 'kanji' ? 'hide-on-mobile' : null;
@@ -34,7 +36,7 @@ export default function hideTypeColumnPlugin(): Plugin<void> {
     });
   }
 
-  function run() { requestAnimationFrame(hideTypeColumns); }
+  function run() { requestAnimationFrame(hideColumns); }
 
   function start() {
     run();
@@ -55,4 +57,3 @@ export default function hideTypeColumnPlugin(): Plugin<void> {
     },
   };
 }
-

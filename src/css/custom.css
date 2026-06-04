@@ -130,6 +130,11 @@
   font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
 }
 
+/* Type column: present in source for the vocabulary extractor, hidden in the rendered page. */
+.theme-doc-markdown.markdown table .hide-column {
+  display: none;
+}
+
 /* Responsive table styling */
 @media (max-width: 768px) {
   .theme-doc-markdown.markdown table {
