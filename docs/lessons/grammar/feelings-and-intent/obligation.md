@@ -86,7 +86,7 @@ To create the な-form needed for these patterns:
 More polite form used in formal situations.
 
 - しゅくだい を しなければ いけません - I must do my homework.
-  - *shukudai wo shinakereba ikemasen*
+  - *shukudai o shinakereba ikemasen*
 
 :::tip Polite Refusal: つごうが わるい
 When you can't fulfill an obligation or attend something, **つごうが わるい** (inconvenient / doesn't work for me) is the natural polite explanation:
@@ -128,7 +128,7 @@ To express past obligation, change the ending to its past form.
 - きのう いかなければ いけなかった。 — I had to go yesterday.
   - *kinou ikanakereba ikenakatta*
 - しゅくだい を しなきゃ いけなかった。 — I had to do my homework.
-  - *shukudai wo shinakya ikenakatta*
+  - *shukudai o shinakya ikenakatta*
 
 | Form | Present | Past |
 |------|---------|------|

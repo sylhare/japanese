@@ -47,7 +47,7 @@ Remove **る** from る-verbs or **う** sound from う-verbs, then add **すぎ
 - たべすぎます - Ate too much
   - *tabesugimasu*
 - ゲーム を しすぎます - Played too much (games)
-  - *geemu wo shisugimasu*
+  - *geemu o shisugimasu*
 - はたらきすぎます - Working too much
   - *hatarakisugimasu*
 

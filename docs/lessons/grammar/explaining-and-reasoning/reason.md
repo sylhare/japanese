@@ -48,7 +48,7 @@ Add **な** before **ので** with な-adjectives and nouns. Do **not** use な 
 ### Examples
 
 - とても あつかった ので、アイスクリーム を たべました — Because it was so hot, I ate an ice cream.
-  - *totemo atsukatta node, aisukuriimu wo tabemashita*
+  - *totemo atsukatta node, aisukuriimu o tabemashita*
 - あめ が ふった ので、うち に いました — Because it rained, I stayed home.
   - *ame ga futta node, uchi ni imashita*
 - しずか な ので、べんきょう できます — Because it's quiet, I can study.
@@ -74,7 +74,7 @@ Add **な** before **ので** with な-adjectives and nouns. Do **not** use な 
 ### Examples
 
 - あつい から、アイスクリーム を たべる ん です — Because it's hot, I'm eating ice cream.
-  - *atsui kara, aisukuriimu wo taberu n desu*
+  - *atsui kara, aisukuriimu o taberu n desu*
 - びょうき だ から、がっこう に いかない ん です — Because I'm sick, I'm not going to school.
   - *byouki da kara, gakkou ni ikanai n desu*
 - おかね が ない から、かえない ん です — Because I don't have money, I can't buy it.

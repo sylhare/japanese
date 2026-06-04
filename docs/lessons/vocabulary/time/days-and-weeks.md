@@ -43,7 +43,7 @@ The kanji for days of the week represent the five elements: 月(moon), 火(fire)
 **Examples:**
 - きょうは しごとが あります (kyou wa shigoto ga arimasu) - I have work today
 - きのう ともだちと あいました (kinou tomodachi to aimashita) - I met my friend yesterday
-- あした えいがを みます (ashita eiga wo mimasu) - I will watch a movie tomorrow
+- あした えいがを みます (ashita eiga o mimasu) - I will watch a movie tomorrow
 
 
 
@@ -60,7 +60,7 @@ The kanji for days of the week represent the five elements: 月(moon), 火(fire)
 **Examples:**
 
 - こんしゅうは いそがしいです (konshuu wa isogashii desu) - This week is busy
-- せんしゅう えいがを みました (senshuu eiga wo mimashita) - I watched a movie last week
+- せんしゅう えいがを みました (senshuu eiga o mimashita) - I watched a movie last week
 - しゅうまつに りょこうに いきます (shuumatsu ni ryokou ni ikimasu) - I'm going on a trip this weekend
 - まいしゅう げつようびに かいものに いきます (maishuu getsuyoubi ni kaimono ni ikimasu) - I go shopping every Monday
 
@@ -80,8 +80,8 @@ When talking about time periods, Japanese often uses に (ni) particle to indica
 
 **Examples:**
 - あさ はやく おきます (asa hayaku okimasu) - I wake up early in the morning
-- ひるに ごはんを たべます (hiru ni gohan wo tabemasu) - I eat lunch at noon
+- ひるに ごはんを たべます (hiru ni gohan o tabemasu) - I eat lunch at noon
 - ゆうがた ともだちと あいます (yuugata tomodachi to aimasu) - I meet my friend in the evening
 - よる おそくまで べんきょうします (yoru osoku made benkyou shimasu) - I study until late at night
-- よるに ほんを よみます (yoru ni hon wo yomimasu) - I read books at night
+- よるに ほんを よみます (yoru ni hon o yomimasu) - I read books at night
 

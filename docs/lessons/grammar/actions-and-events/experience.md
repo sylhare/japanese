@@ -35,7 +35,7 @@ This pattern is used to express whether you have experienced something before.
 - ふじやま に のぼった こと が ありません - I have never climbed Mount Fuji.
   - *fujiyama ni nobotta koto ga arimasen*
 - すし を たべた こと が あります - I have eaten sushi before.
-  - *sushi wo tabeta koto ga arimasu*
+  - *sushi o tabeta koto ga arimasu*
 - にほん に いった こと が あります - I have been to Japan.
   - *nihon ni itta koto ga arimasu*
 
@@ -60,11 +60,11 @@ This pattern is used to express whether you have experienced something before.
 ### Examples
 
 - スカイダイビング を やった こと が ある - I have tried skydiving.
-  - *sukaidaibingu wo yatta koto ga aru*
+  - *sukaidaibingu o yatta koto ga aru*
 - このゲーム を やった こと が ない - I have never played this game.
-  - *kono geemu wo yatta koto ga nai*
+  - *kono geemu o yatta koto ga nai*
 - キャンプ を やった こと が ある？ - Have you ever been camping?
-  - *kyanpu wo yatta koto ga aru?*
+  - *kyanpu o yatta koto ga aru?*
 
 :::tip やった vs した
 Both やった こと が ある and した こと が ある mean "have done/experienced," but:
