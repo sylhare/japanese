@@ -14,7 +14,7 @@ Learn how to express ongoing actions, trying things, and thoughts.
 | Hiragana | Romaji | English | Type |
 |----------|--------|---------|------|
 | [verb て] + いる | te iru | currently doing | expression |
-| [noun] + を かんがえる | wo kangaeru | think about (something) | expression |
+| [noun] + を かんがえる | o kangaeru | think about (something) | expression |
 | [sentence] + と おもう | to omou | think that | expression |
 | [verb て] + みる | te miru | try doing | expression |
 | [verb て] + みよう | te miyou | let's try doing | expression |
@@ -37,7 +37,7 @@ Learn how to express ongoing actions, trying things, and thoughts.
 ### In Sentences
 
 - いま テレビ を みている - I'm watching TV now.
-  - *ima terebi wo miteiru*
+  - *ima terebi o miteiru*
 - ともだち が きている - My friend is here/has come.
   - *tomodachi ga kiteiru*
 - まいにち べんきょうしている - I study every day.
@@ -54,9 +54,9 @@ Learn how to express ongoing actions, trying things, and thoughts.
 #### Examples
 
 - みらい を かんがえる - Think about the future
-  - *mirai wo kangaeru*
+  - *mirai o kangaeru*
 - もんだい を かんがえる - Think about the problem
-  - *mondai wo kangaeru*
+  - *mondai o kangaeru*
 
 ### Think That: と おもう
 
@@ -93,9 +93,9 @@ Learn how to express ongoing actions, trying things, and thoughts.
 #### In Sentences
 
 - この りょうり を たべてみて - Try eating this dish.
-  - *kono ryouri wo tabetemite*
+  - *kono ryouri o tabetemite*
 - にほんご を はなしてみます - I'll try speaking Japanese.
-  - *nihongo wo hanashitemimasu*
+  - *nihongo o hanashitemimasu*
 
 ### Let's Try: て form + みよう
 
@@ -115,7 +115,7 @@ Learn how to express ongoing actions, trying things, and thoughts.
 #### In Sentences
 
 - この ゲーム を してみよう - Let's try playing this game.
-  - *kono geemu wo shitemiyou*
+  - *kono geemu o shitemiyou*
 - あたらしい レストラン に いってみよう - Let's try going to the new restaurant.
   - *atarashii resutoran ni ittemiyou*
 

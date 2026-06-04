@@ -45,7 +45,7 @@ Adding **よ** softens and warms the advice — it signals that you're being hel
 - はやく ねた ほう が いい です よ - You should go to bed early.
   - *hayaku neta hou ga ii desu yo*
 - みず を のんだ ほう が いい です よ - You should drink water.
-  - *mizu wo nonda hou ga ii desu yo*
+  - *mizu o nonda hou ga ii desu yo*
 - べんきょうした ほう が いい です よ - You should study.
   - *benkyoushita hou ga ii desu yo*
 - いしゃ に いった ほう が いい です よ - You should go to the doctor.
@@ -102,11 +102,11 @@ Literally: "The direction of [not doing] is good."
 ### Health Advice
 
 - くすり を のんだ ほう が いい です よ - You should take medicine.
-  - *kusuri wo nonda hou ga ii desu yo*
+  - *kusuri o nonda hou ga ii desu yo*
 - やすんだ ほう が いい です よ - You should rest.
   - *yasunda hou ga ii desu yo*
 - いしゃ に アドバイス を もらった ほう が いい です よ — You should get advice from a doctor.
-  - *isha ni adobaisu wo moratta hou ga ii desu yo*
+  - *isha ni adobaisu o moratta hou ga ii desu yo*
 
 ### Study Advice
 
@@ -115,13 +115,13 @@ Literally: "The direction of [not doing] is good."
 - あした の テスト の ために べんきょうした ほう が いい です よ - You should study for tomorrow's test.
   - *ashita no tesuto no tame ni benkyoushita hou ga ii desu yo*
 - せんせい に アドバイス を もらった ほう が いい です よ — You should get advice from your teacher.
-  - *sensei ni adobaisu wo moratta hou ga ii desu yo*
+  - *sensei ni adobaisu o moratta hou ga ii desu yo*
 
 ### Warnings
 
 - そこ に いかない ほう が いい です よ - You shouldn't go there.
   - *soko ni ikanai hou ga ii desu yo*
 - それ を しない ほう が いい です よ - You shouldn't do that.
-  - *sore wo shinai hou ga ii desu yo*
+  - *sore o shinai hou ga ii desu yo*
 - そんな アドバイス を あげない ほう が いい です よ — You shouldn't give that kind of advice.
-  - *sonna adobaisu wo agenai hou ga ii desu yo*
+  - *sonna adobaisu o agenai hou ga ii desu yo*

@@ -55,9 +55,9 @@ To form the stem:
 - にほん に いきたい です - I want to go to Japan.
   - *nihon ni ikitai desu*
 - すし を たべたい です - I want to eat sushi.
-  - *sushi wo tabetai desu*
+  - *sushi o tabetai desu*
 - えいが を みたい です - I want to watch a movie.
-  - *eiga wo mitai desu*
+  - *eiga o mitai desu*
 - なに が したい です か？ - What do you want to do?
   - *nani ga shitai desu ka?*
 - どこ に いきたい です か？ - Where do you want to go?
@@ -109,7 +109,7 @@ To form the stem:
 - にほん に いきたかった です - I wanted to go to Japan.
   - *nihon ni ikitakatta desu*
 - すし を たべたかった です - I wanted to eat sushi.
-  - *sushi wo tabetakatta desu*
+  - *sushi o tabetakatta desu*
 - とても みたかった です - I really wanted to see (it).
   - *totemo mitakatta desu*
 

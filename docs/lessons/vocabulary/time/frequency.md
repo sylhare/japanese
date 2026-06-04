@@ -59,9 +59,9 @@ Use **なんかい (何回)** to ask "how many times?":
 ### Examples
 
 - しゅうかん に いっかい えいが を みます — I watch a movie once a week.
-  - *shuukan ni ikkai eiga wo mimasu*
+  - *shuukan ni ikkai eiga o mimasu*
 - にち に さんかい は を みがきます — I brush my teeth three times a day.
-  - *nichi ni sankai ha wo migakimasu*
+  - *nichi ni sankai ha o migakimasu*
 - ねん に いっかい にほん に いきます — I go to Japan once a year.
   - *nen ni ikkai nihon ni ikimasu*
 - つき に いっかい りょうしん に でんわ します — I call my parents once a month.
