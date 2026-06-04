@@ -69,13 +69,14 @@ npm start
 
 ### Valid Type Values
 
-Defined in `src/data/vocabulary-types.js` (the single source of truth, used by both the extraction script and the dictionary page):
+The valid values live in [`src/data/vocabulary-types.js`](../../src/data/vocabulary-types.js) (the single source of truth, used by both the extraction and the dictionary):
 
 - `noun` - Regular nouns
 - `verb` - Verbs
 - `い-adjective` - い-adjectives
 - `な-adjective` - な-adjectives
 - `adverb` - Adverbs
+- `onomatopoeia` - Mimetic / sound words (e.g. さくさく)
 - `counter` - Counters
 - `conjunction` - Conjunctions
 - `expression` - Grammar expressions
@@ -113,26 +114,17 @@ Tags are automatically generated from the lesson file name and enable navigation
 
 ### Tag Path Resolution
 
-All tag-to-path resolution is handled by `getTagPath()` in `src/pages/dictionary.tsx`. Tags are resolved in this order of priority:
+Each tag links from the dictionary back to its source lesson, and those links are derived automatically from the lesson files on disk — there is no hand-maintained list to keep in sync. Extraction records where every lesson lives in [`src/data/lesson-paths.json`](../../src/data/lesson-paths.json), and the [dictionary page](../../src/pages/dictionary.tsx) resolves each tag through it (for example, the `listing-actions` tag points at `docs/lessons/grammar/actions-and-events/listing-actions`). Anything unmatched falls back to the vocabulary folder.
 
-1. **`jlptTagMappings`** — JLPT-level tags (e.g. `n5` → `docs/reference/n5-vocabulary`)
-2. **`tagMappings`** — vocabulary tags in subdirectories (e.g. `counting` → `vocabulary/numbers/counting`)
-3. **`grammarTagMappings`** — grammar tags, all require explicit mappings (e.g. `advice` → `grammar/feelings-and-intent/advice`)
-4. **`conjugationTags`** — conjugation tags (e.g. `future` → `conjugation/future`)
-5. **Fallback** — anything unmatched resolves to `vocabulary/{tag}`
+The `n5` tag maps to the [reference article](../../docs/reference/n5-vocabulary.md) explicitly. If two lesson files share a basename they collide on the same tag, so basenames must stay unique across folders.
 
-> Since grammar lessons live in subdirectories, every grammar tag **must** have an entry in `grammarTagMappings` — there is no automatic `grammar/{tag}` fallback.
+The [e2e helpers](../../tests/e2e/helpers/lessonData.ts) resolve lesson URLs through the same manifest, and a [consistency test](../../tests/scripts/lesson-paths.test.ts) keeps the two from drifting apart.
 
-### Adding New Tag Mappings
+### Adding a New Lesson
 
-When creating new lesson files, the extracted tag must map to a valid lesson page. Update `getTagPath()` in `src/pages/dictionary.tsx`:
+Nothing extra to wire up — add a lesson file under `docs/lessons/` and run `npm run extract-vocabulary`. The manifest regenerates, so the new tag links automatically.
 
-1. **Grammar lessons**: Add tag to `grammarTagMappings` (e.g. `'prohibition': 'grammar/feelings-and-intent/prohibition'`)
-2. **Conjugation lessons**: Add tag to `conjugationTags` array
-3. **Vocabulary in subdirectories**: Add to `tagMappings` (e.g. `'clock': 'vocabulary/time/clock'`)
-4. **Top-level vocabulary** (`vocabulary/colors.md`, `vocabulary/family.md`): No mapping needed — the fallback handles it
-
-Run `npm test` after adding a new tag — the test suite verifies that every tag in `vocabulary.yaml` resolves to an existing lesson page.
+Run `npm test` afterwards: the suite verifies that every tag in [`vocabulary.yaml`](../../src/data/vocabulary.yaml) resolves to a real lesson page.
 
 ## YAML File Structure
 
@@ -275,9 +267,8 @@ vocabulary:
 
 **Tag links to wrong page?**
 
-- Check `getTagPath()` in `src/pages/dictionary.tsx`
-- Add tag to appropriate array (grammarTags, conjugationTags)
-- Or add custom mapping to `tagMappings` object
+- Lesson links come from [`src/data/lesson-paths.json`](../../src/data/lesson-paths.json), regenerated on every run — re-run `npm run extract-vocabulary` after adding or moving a lesson.
+- Make sure the lesson's filename is unique across folders; lessons that share a basename collide on the same tag.
 
 **Duplicate entries?**
 
@@ -286,7 +277,7 @@ vocabulary:
 
 **Wrong category?**
 
-- Categories are based on the immediate parent directory name (see `extractFromTable()` in `scripts/extract-vocabulary.js`):
+- Categories are based on the immediate parent directory name:
   - `vocabulary/colors.md` → category: `vocabulary`
   - `vocabulary/food/tastes.md` → category: `food`
   - `vocabulary/time/clock.md` → category: `time`

@@ -1,23 +1,18 @@
 /**
  * Shared test utilities for vocabulary extraction tests
  */
+import fs from 'fs';
+import path from 'path';
+import yaml from 'js-yaml';
 import { DEFAULT_SORT_OPTIONS } from '../scripts/extract-vocabulary';
+import type { VocabularyData, VocabularyItem } from '../src/data/vocabulary-types';
 
-export interface VocabularyItem {
-  id: string;
-  hiragana: string;
-  kanji?: string;
-  romaji: string;
-  meaning: string;
-  type: string;
-  category: string;
-  tags: string[];
-}
+export type { VocabularyData, VocabularyItem };
 
-export interface VocabularyData {
-  vocabulary: VocabularyItem[];
-  categories: string[];
-  sortOptions: Array<{ value: string; label: string }>;
+/** Load and parse the real vocabulary.yaml from disk. */
+export function loadVocabularyData(): VocabularyData {
+  const file = path.join(__dirname, '../src/data/vocabulary.yaml');
+  return yaml.load(fs.readFileSync(file, 'utf8')) as VocabularyData;
 }
 
 export function createTestVocabularyItem(overrides: Partial<VocabularyItem> = {}): VocabularyItem {
