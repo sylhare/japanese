@@ -25,7 +25,7 @@ const config: Config = {
   organizationName: 'sylhare',
   projectName: 'japanese',
 
-  onBrokenLinks: 'warn',
+  onBrokenLinks: 'throw',
 
   i18n: {
     defaultLocale: 'en',
@@ -98,6 +98,19 @@ const config: Config = {
     },
   ],
 
+  themes: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,
+        indexBlog: false,
+        docsRouteBasePath: '/docs',
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+      },
+    ],
+  ],
+
   stylesheets: [
     {
       href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap',
@@ -143,6 +156,10 @@ const config: Config = {
         {
           href: 'https://github.com/sylhare/japanese',
           label: 'GitHub',
+          position: 'right',
+        },
+        {
+          type: 'search',
           position: 'right',
         },
       ],
