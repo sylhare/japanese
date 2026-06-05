@@ -124,7 +124,7 @@ Verbs ending in する follow the same pattern:
 - **〜たあとで** — after doing: たべたあとで (after eating)
 - **〜たばかり** — just did: きたばかり (just arrived)
 - **〜たら** — if/when: いったら (if/when I go) → see [Conditional - と / たら](/docs/lessons/grammar/actions-and-events/conditional)
-- **〜たり〜たりする** — do things like: たべたりのんだりする (eat, drink, etc.)
+- **〜たり〜たりする** — do things like: たべたりのんだりする → see [Listing Actions - たり](/docs/lessons/grammar/actions-and-events/listing-actions)
 - **〜たほうがいい** — should do: いったほうがいい (you should go)
 - **〜たことがない** — have never: みたことがない (have never seen)
 :::

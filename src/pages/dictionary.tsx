@@ -78,6 +78,7 @@ export function getTagPath(tag: string): string {
     'experience': 'grammar/actions-and-events/experience',
     'indirect-questions': 'grammar/sentence-building/indirect-questions',
     'intend_to': 'grammar/explaining-and-reasoning/intend_to',
+    'listing-actions': 'grammar/actions-and-events/listing-actions',
     'obligation': 'grammar/feelings-and-intent/obligation',
     'particle-guide': 'grammar/sentence-building/particle-guide',
     'prohibition': 'grammar/feelings-and-intent/prohibition',
