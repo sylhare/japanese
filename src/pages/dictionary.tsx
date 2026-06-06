@@ -1,22 +1,12 @@
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import React, { useMemo, useState } from 'react';
+import lessonPaths from '../data/lesson-paths.json';
 import n5VocabularyData from '../data/n5-vocabulary.json';
-import { VALID_TYPES } from '../data/vocabulary-types';
+import { VALID_TYPES, normalizeToken } from '../data/vocabulary-types';
+import type { VocabularyItem } from '../data/vocabulary-types';
 import vocabularyYamlData from '../data/vocabulary.yaml';
 import styles from './dictionary.module.css';
-
-interface VocabularyItem {
-  id: string;
-  hiragana: string;
-  katakana?: string;
-  kanji?: string;
-  romaji: string;
-  meaning: string;
-  category: string;
-  tags: string[];
-  type?: string;
-}
 
 const vocabularyData: VocabularyItem[] = vocabularyYamlData.vocabulary;
 const categories = vocabularyYamlData.categories;
@@ -24,17 +14,6 @@ const sortOptions = vocabularyYamlData.sortOptions;
 
 const N5_TAG = 'N5';
 const n5VocabularyTokens = new Set<string>(n5VocabularyData.tokens);
-
-function normalizeToken(value?: string): string {
-  if (!value) {
-    return '';
-  }
-  return value
-    .replace(/[()（）]/g, '')
-    .replace(/[~～]/g, '')
-    .replace(/\s+/g, '')
-    .toLowerCase();
-}
 
 function isN5VocabularyItem(item: VocabularyItem): boolean {
   const primaryCandidates = [
@@ -59,81 +38,15 @@ function addN5Tag(tags: string[]): string[] {
 }
 
 /**
- * Get the correct lesson path for a tag.
- * Maps tags to their correct lesson folders.
+ * Get the lesson path for a tag.
+ *
+ * Paths are derived from the lesson files on disk by the extraction script
+ * (`src/data/lesson-paths.json`), so new lessons are linked automatically with
+ * no manual mapping. Unknown tags fall back to the vocabulary folder.
  */
 export function getTagPath(tag: string): string {
-  const jlptTagMappings: Record<string, string> = {
-    'n5': 'docs/reference/n5-vocabulary',
-  };
-  const grammarTagMappings: Record<string, string> = {
-    'actions-and-thinking': 'grammar/actions-and-events/actions-and-thinking',
-    'advice': 'grammar/feelings-and-intent/advice',
-    'appearance': 'grammar/describing-and-comparing/appearance',
-    'comparison': 'grammar/describing-and-comparing/comparison',
-    'conditional': 'grammar/actions-and-events/conditional',
-    'conjunctions': 'grammar/sentence-building/conjunctions',
-    'desire': 'grammar/feelings-and-intent/desire',
-    'excess': 'grammar/describing-and-comparing/excess',
-    'experience': 'grammar/actions-and-events/experience',
-    'indirect-questions': 'grammar/sentence-building/indirect-questions',
-    'intend_to': 'grammar/explaining-and-reasoning/intend_to',
-    'listing-actions': 'grammar/actions-and-events/listing-actions',
-    'obligation': 'grammar/feelings-and-intent/obligation',
-    'particle-guide': 'grammar/sentence-building/particle-guide',
-    'prohibition': 'grammar/feelings-and-intent/prohibition',
-    'question-words': 'grammar/sentence-building/question-words',
-    'reason': 'grammar/explaining-and-reasoning/reason',
-    'sequential-actions': 'grammar/actions-and-events/sequential-actions',
-  };
-
-  const conjugationTags = [
-    'dictionary-form',
-  ];
-
-  const tagMappings: Record<string, string> = {
-    'basics': 'vocabulary/numbers/basics',
-    'numbers': 'vocabulary/numbers',
-    'counting': 'vocabulary/numbers/counting',
-    'counters': 'vocabulary/numbers',
-    'dates': 'vocabulary/time',
-    'calendar': 'vocabulary/time',
-    'time': 'vocabulary/time',
-    'days-and-weeks': 'vocabulary/time/days-and-weeks',
-    'tastes': 'vocabulary/food/tastes',
-    'flavors': 'vocabulary/food/tastes',
-    'cooking': 'vocabulary/food/cooking',
-    'kitchen': 'vocabulary/food/cooking',
-    'food': 'vocabulary/food',
-    'ingredients': 'vocabulary/food/food-and-ingredients',
-    'adjectives': 'vocabulary/essentials/adjectives',
-    'confusing-kanji': 'vocabulary/essentials/confusing-kanji',
-    'linking-words': 'vocabulary/essentials/linking-words',
-    'clock': 'vocabulary/time/clock',
-    'date-counters': 'vocabulary/time/date-counters',
-    'frequency': 'vocabulary/time/frequency',
-    'food-and-ingredients': 'vocabulary/food/food-and-ingredients',
-  };
-
-  const lowerTag = tag.toLowerCase();
-
-  if (jlptTagMappings[lowerTag]) {
-    return jlptTagMappings[lowerTag];
-  }
-
-  if (tagMappings[lowerTag]) {
-    return `docs/lessons/${tagMappings[lowerTag]}`;
-  }
-
-  if (grammarTagMappings[lowerTag]) {
-    return `docs/lessons/${grammarTagMappings[lowerTag]}`;
-  }
-
-  if (conjugationTags.includes(lowerTag)) {
-    return `docs/lessons/conjugation/${tag}`;
-  }
-
-  return `docs/lessons/vocabulary/${tag}`;
+  const paths = lessonPaths as Record<string, string>;
+  return paths[tag.toLowerCase()] ?? `docs/lessons/vocabulary/${tag}`;
 }
 
 export default function Vocabulary(): React.JSX.Element {

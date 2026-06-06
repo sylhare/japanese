@@ -1,30 +1,31 @@
-#!/usr/bin/env node
 /**
  * Vocabulary extraction script.
  *
  * Scans all lesson files in docs/lessons/ for vocabulary tables, merges the
  * results into src/data/vocabulary.yaml, and regenerates src/data/n5-vocabulary.json
- * from the N5 reference article.
+ * from the N5 reference article. Run via tsx (see the npm scripts).
  *
  * Full documentation: .github/docs/vocabulary-extraction.md
  */
 
-const fs = require('fs');
-const path = require('path');
-const yaml = require('js-yaml');
-const { VALID_TYPES } = require('../src/data/vocabulary-types');
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import yaml from 'js-yaml';
+import { VALID_TYPES, normalizeToken } from '../src/data/vocabulary-types';
+import type { VocabularyData, VocabularyItem } from '../src/data/vocabulary-types';
 
-const DEFAULT_LESSONS_DIR = path.join(__dirname, '../docs/lessons');
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+const DOCS_DIR = path.join(__dirname, '../docs');
+const DEFAULT_LESSONS_DIR = path.join(DOCS_DIR, 'lessons');
 const VOCABULARY_FILE = path.join(__dirname, '../src/data/vocabulary.yaml');
-const N5_REFERENCE_FILE = path.join(__dirname, '../docs/reference/n5-vocabulary.md');
+const N5_REFERENCE_FILE = path.join(DOCS_DIR, 'reference/n5-vocabulary.md');
 const N5_VOCABULARY_FILE = path.join(__dirname, '../src/data/n5-vocabulary.json');
+const LESSON_PATHS_FILE = path.join(__dirname, '../src/data/lesson-paths.json');
 const VOCAB_TABLE_PATTERN = /## [^#\n]+[\s\S]*?(\|.*?Hiragana.*?\|[\s\S]*?)(?=\n##|\n## Next Steps|\n## Tips|\n## Remember|$)/gi;
 
-/**
- * Extract vocabulary from a single lesson file.
- * @param {string} filePath - Path to the lesson file
- * @returns {Array<Object>} Array of vocabulary items
- */
+/** Extract vocabulary from a single lesson file. */
 function extractVocabularyFromFile(filePath) {
   const content = fs.readFileSync(filePath, 'utf8');
   const vocabulary = [];
@@ -44,13 +45,7 @@ function extractVocabularyFromFile(filePath) {
   return vocabulary;
 }
 
-/**
- * Check if a table content has the expected vocabulary structure.
- * Must have Hiragana, Romaji, English, and Type columns.
- * Columns can have emoji prefixes or be in any position.
- * @param {string} tableContent - The table content to check
- * @returns {boolean} True if it's a vocabulary table
- */
+/** True if the table has the expected Hiragana / Romaji / English columns. */
 function isVocabularyTable(tableContent) {
   const lines = tableContent.trim().split('\n');
   if (lines.length === 0) {
@@ -58,28 +53,15 @@ function isVocabularyTable(tableContent) {
   }
 
   const headerRow = lines[0];
-  const hasHiragana = /Hiragana/i.test(headerRow);
-  const hasRomaji = /Romaji/i.test(headerRow);
-  const hasEnglish = /English/i.test(headerRow);
-
-  return hasHiragana && hasRomaji && hasEnglish;
+  return /Hiragana/i.test(headerRow) && /Romaji/i.test(headerRow) && /English/i.test(headerRow);
 }
 
-/**
- * Parse a table row into an array of cells.
- * @param {string} row - The row string
- * @returns {Array<string>} Array of cell contents
- */
+/** Parse a table row into an array of trimmed cells. */
 function parseRow(row) {
-  const cells = row.replace(/^\||\|$/g, '').split('|').map(cell => cell.trim());
-  return cells;
+  return row.replace(/^\||\|$/g, '').split('|').map(cell => cell.trim());
 }
 
-/**
- * Check if a vocabulary item is a particle and should be filtered out.
- * @param {string} type - The type field of the vocabulary item
- * @returns {boolean} True if it's a particle that should be filtered out
- */
+/** True for particle rows, which are filtered out of the dictionary. */
 function isParticle(type) {
   return type && type.toLowerCase().includes('particle');
 }
@@ -87,8 +69,6 @@ function isParticle(type) {
 /**
  * Remove emoji from a string, keeping letters, numbers, spaces, and common punctuation.
  * Keycap emoji (e.g. "8️⃣") are removed as whole sequences so their base digit doesn't leak through.
- * @param {string} text - The text to strip emojis from
- * @returns {string} The text with emojis removed
  */
 function stripEmojis(text) {
   if (!text) return text;
@@ -99,25 +79,10 @@ function stripEmojis(text) {
   return text.trim();
 }
 
-/**
- * Normalize a vocabulary token for matching across sources.
- * @param {string} token - Raw token
- * @returns {string} Normalized token
- */
-function normalizeToken(token) {
-  if (!token) return '';
-  return token
-    .replace(/[()（）]/g, '')
-    .replace(/[~～]/g, '')
-    .replace(/\s+/g, '')
-    .toLowerCase();
-}
-
 function addTokensFromCell(cell, tokens) {
   if (!cell) return;
   const cleaned = cell.replace(/（.*?）/g, '').replace(/\(.*?\)/g, '').trim();
-  const parts = cleaned.split(/[/／]/);
-  parts.forEach(part => {
+  cleaned.split(/[/／]/).forEach(part => {
     const normalized = normalizeToken(part);
     if (normalized) {
       tokens.add(normalized);
@@ -125,17 +90,14 @@ function addTokensFromCell(cell, tokens) {
   });
 }
 
-/**
- * Extract N5 vocabulary tokens from the N5 reference article.
- * @returns {string[]} Array of normalized tokens
- */
-function extractN5VocabularyTokens() {
+/** Extract N5 vocabulary tokens from the N5 reference article. */
+function extractN5VocabularyTokens(): string[] {
   if (!fs.existsSync(N5_REFERENCE_FILE)) {
     return [];
   }
 
   const content = fs.readFileSync(N5_REFERENCE_FILE, 'utf8');
-  const tokens = new Set();
+  const tokens = new Set<string>();
   const lines = content.split('\n');
 
   for (let index = 0; index < lines.length; index++) {
@@ -181,10 +143,46 @@ function extractN5VocabularyTokens() {
   return Array.from(tokens).sort();
 }
 
+/** Map of lesson slug → doc path, derived from the lesson files on disk so new lessons link automatically. */
+function buildLessonPaths(): Record<string, string> {
+  const paths: Record<string, string> = {};
+  const walk = (dir) => {
+    for (const file of fs.readdirSync(dir).sort()) {
+      const full = path.join(dir, file);
+      if (fs.statSync(full).isDirectory()) {
+        walk(full);
+      } else if (/\.mdx?$/.test(file)) {
+        const slug = file.replace(/\.mdx?$/, '');
+        if (slug === 'index') {
+          continue;
+        }
+        const rel = path.relative(DOCS_DIR, full).replace(/\.mdx?$/, '').split(path.sep).join('/');
+        paths[slug.toLowerCase()] = `docs/${rel}`;
+      }
+    }
+  };
+  walk(DEFAULT_LESSONS_DIR);
+  paths.n5 = 'docs/reference/n5-vocabulary';
+  return paths;
+}
+
+function updateLessonPaths() {
+  const nextContent = `${JSON.stringify(buildLessonPaths(), null, 2)}\n`;
+  const existingContent = fs.existsSync(LESSON_PATHS_FILE)
+    ? fs.readFileSync(LESSON_PATHS_FILE, 'utf8')
+    : '';
+
+  if (existingContent !== nextContent) {
+    fs.writeFileSync(LESSON_PATHS_FILE, nextContent);
+    console.log('✅ Lesson paths updated successfully!');
+  } else {
+    console.log('✅ Lesson paths are up to date (no changes needed)');
+  }
+}
+
 function updateN5VocabularyData() {
-  const tokens = extractN5VocabularyTokens();
-  const payload = { tokens };
-  const nextContent = `${JSON.stringify(payload, null, 2)  }\n`;
+  const payload = { tokens: extractN5VocabularyTokens() };
+  const nextContent = `${JSON.stringify(payload, null, 2)}\n`;
   const existingContent = fs.existsSync(N5_VOCABULARY_FILE)
     ? fs.readFileSync(N5_VOCABULARY_FILE, 'utf8')
     : '';
@@ -197,27 +195,15 @@ function updateN5VocabularyData() {
   }
 }
 
-/**
- * Find the index of a column by name (case-insensitive, allows for emoji prefixes).
- * @param {Array<string>} headerCells - The header row cells
- * @param {string} columnName - The column name to find
- * @returns {number} The column index, or -1 if not found
- */
+/** Find a column index by name (case-insensitive, tolerant of emoji prefixes); -1 if absent. */
 function findColumnIndex(headerCells, columnName) {
   return headerCells.findIndex(cell => {
-    const normalized = cell.toLowerCase();
-    const cleaned = normalized.replace(/^\s*\||\|\s*$/, '').trim();
+    const cleaned = cell.toLowerCase().replace(/^\s*\||\|\s*$/, '').trim();
     return cleaned.includes(columnName.toLowerCase());
   });
 }
 
-/**
- * Extract vocabulary from table content, filtering out particles.
- * @param {string} tableContent - The table content to extract from
- * @param {string} filePath - The file path for generating unique IDs
- * @param {number} startIndex - The starting index for ID generation (to ensure uniqueness across tables)
- * @returns {Array<Object>} Array of vocabulary items
- */
+/** Extract vocabulary items from a table, filtering out particles. */
 function extractFromTable(tableContent, filePath, startIndex = 0) {
   const vocabulary = [];
   const rows = tableContent.trim().split('\n');
@@ -226,9 +212,7 @@ function extractFromTable(tableContent, filePath, startIndex = 0) {
     return vocabulary;
   }
 
-  const headerRow = rows[0];
-  const headerCells = parseRow(headerRow);
-
+  const headerCells = parseRow(rows[0]);
   const hiraganaIdx = findColumnIndex(headerCells, 'Hiragana');
   const kanjiIdx = findColumnIndex(headerCells, 'Kanji');
   const romajiIdx = findColumnIndex(headerCells, 'Romaji');
@@ -249,14 +233,13 @@ function extractFromTable(tableContent, filePath, startIndex = 0) {
     }
 
     const cells = parseRow(row);
+    const cellAt = (idx) => (idx >= 0 && idx < cells.length ? cells[idx].trim() : '');
 
-    const hiragana = hiraganaIdx >= 0 && hiraganaIdx < cells.length ? cells[hiraganaIdx].trim() : '';
-    const kanji = kanjiIdx >= 0 && kanjiIdx < cells.length ? cells[kanjiIdx].trim() : '';
-    const romajiRaw = romajiIdx >= 0 && romajiIdx < cells.length ? cells[romajiIdx].trim() : '';
-    const romaji = stripEmojis(romajiRaw);
-    const englishRaw = englishIdx >= 0 && englishIdx < cells.length ? cells[englishIdx].trim() : '';
-    const english = stripEmojis(englishRaw);
-    const type = typeIdx >= 0 && typeIdx < cells.length ? cells[typeIdx].trim() : '';
+    const hiragana = cellAt(hiraganaIdx);
+    const kanji = cellAt(kanjiIdx);
+    const romaji = stripEmojis(cellAt(romajiIdx));
+    const english = stripEmojis(cellAt(englishIdx));
+    const type = cellAt(typeIdx);
 
     if (!hiragana || !romaji || !english || hiragana.includes('---') || hiragana.match(/Hiragana|Kanji|Romaji|English/i)) {
       continue;
@@ -275,29 +258,23 @@ function extractFromTable(tableContent, filePath, startIndex = 0) {
     }
 
     const fileId = path.basename(filePath).replace(/\.mdx?$/, '').replace(/[^a-zA-Z0-9]/g, '');
-    const id = `${fileId}_${itemIndex}`;
 
     let category = 'general';
     if (filePath.includes('/vocabulary/')) {
-      const folderName = path.basename(path.dirname(filePath));
-      category = folderName;
+      category = path.basename(path.dirname(filePath));
     } else if (filePath.includes('/grammar/')) {
       category = 'grammar';
     } else if (filePath.includes('/lessons/')) {
       category = 'lessons';
     }
 
-    const tags = [];
-    const lessonName = path.basename(filePath).replace(/\.mdx?$/, '');
-    tags.push(lessonName);
-
-    const item = {
-      id,
-      hiragana: hiragana || '',
-      romaji: romaji || '',
-      meaning: english || '',
+    const item: VocabularyItem = {
+      id: `${fileId}_${itemIndex}`,
+      hiragana,
+      romaji,
+      meaning: english,
       category,
-      tags,
+      tags: [path.basename(filePath).replace(/\.mdx?$/, '')],
       type: type || 'unknown',
     };
 
@@ -306,17 +283,12 @@ function extractFromTable(tableContent, filePath, startIndex = 0) {
     }
 
     vocabulary.push(item);
-
     itemIndex++;
   }
 
   return vocabulary;
 }
 
-/**
- * Scan all lesson files for vocabulary.
- * @returns {Object} Vocabulary data with categories and sort options
- */
 const DEFAULT_SORT_OPTIONS = [
   { value: 'hiragana', label: 'Hiragana (あ→ん)' },
   { value: 'romaji', label: 'Romaji (A-Z)' },
@@ -324,27 +296,20 @@ const DEFAULT_SORT_OPTIONS = [
   { value: 'category', label: 'Category (A-Z)' },
 ];
 
-function scanAllLessons() {
+/** Scan all lesson files for vocabulary. */
+function scanAllLessons(): VocabularyData {
   const vocabulary = [];
   const categories = new Set(['all']);
-  const sortOptions = DEFAULT_SORT_OPTIONS;
 
   function scanDirectory(dir) {
-    const files = fs.readdirSync(dir).sort();
-
-    for (const file of files) {
+    for (const file of fs.readdirSync(dir).sort()) {
       const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
-
-      if (stat.isDirectory()) {
+      if (fs.statSync(filePath).isDirectory()) {
         scanDirectory(filePath);
       } else if (file.endsWith('.md') || file.endsWith('.mdx')) {
         const lessonVocabulary = extractVocabularyFromFile(filePath);
         vocabulary.push(...lessonVocabulary);
-
-        lessonVocabulary.forEach(item => {
-          categories.add(item.category);
-        });
+        lessonVocabulary.forEach(item => categories.add(item.category));
       }
     }
   }
@@ -353,51 +318,41 @@ function scanAllLessons() {
 
   vocabulary.sort((a, b) => {
     const fileCompare = a.tags[0].localeCompare(b.tags[0]);
-    if (fileCompare !== 0) {
-      return fileCompare;
-    }
-    return a.id.localeCompare(b.id);
+    return fileCompare !== 0 ? fileCompare : a.id.localeCompare(b.id);
   });
 
   return {
     vocabulary,
     categories: Array.from(categories).sort(),
-    sortOptions,
+    sortOptions: DEFAULT_SORT_OPTIONS,
   };
 }
 
-/**
- * Load existing vocabulary to preserve manually added items.
- * @returns {Object} Vocabulary data
- */
-function loadExistingVocabulary() {
+/** An empty vocabulary dataset (the base for force mode and missing/corrupt files). */
+function emptyVocabulary(): VocabularyData {
+  return { vocabulary: [], categories: ['all'], sortOptions: [] };
+}
+
+/** Load existing vocabulary to preserve manually added items. */
+function loadExistingVocabulary(): VocabularyData {
   if (!fs.existsSync(VOCABULARY_FILE)) {
-    return { vocabulary: [], categories: ['all'], sortOptions: [] };
+    return emptyVocabulary();
   }
 
   try {
-    const content = fs.readFileSync(VOCABULARY_FILE, 'utf8');
-    return yaml.load(content);
+    return yaml.load(fs.readFileSync(VOCABULARY_FILE, 'utf8')) as VocabularyData;
   } catch (error) {
     console.error('Error loading existing vocabulary:', error);
-    return { vocabulary: [], categories: ['all'], sortOptions: [] };
+    return emptyVocabulary();
   }
 }
 
-/**
- * Compare two IDs with natural sorting (handles numeric suffixes correctly).
- * Example: "tastes_5" < "tastes_12" (not "tastes_12" < "tastes_5").
- * @param {string} idA - First ID to compare
- * @param {string} idB - Second ID to compare
- * @returns {number} Negative if idA < idB, positive if idA > idB, 0 if equal
- */
+/** Compare two IDs with natural numeric ordering, e.g. "tastes_5" < "tastes_12". */
 function compareIds(idA, idB) {
   const partsA = idA.split('_');
   const partsB = idB.split('_');
 
-  const prefixA = partsA.slice(0, -1).join('_');
-  const prefixB = partsB.slice(0, -1).join('_');
-  const prefixCompare = prefixA.localeCompare(prefixB);
+  const prefixCompare = partsA.slice(0, -1).join('_').localeCompare(partsB.slice(0, -1).join('_'));
   if (prefixCompare !== 0) {
     return prefixCompare;
   }
@@ -410,23 +365,18 @@ function compareIds(idA, idB) {
   if (!isNaN(numA) && !isNaN(numB)) {
     return numA - numB;
   }
-
   return suffixA.localeCompare(suffixB);
 }
 
-/**
- * Merge extracted vocabulary with existing vocabulary, filtering out particles.
- * This function is idempotent - running it multiple times produces the same result.
- * When duplicates are found (same hiragana-romaji-meaning), tags are merged.
- * @param {Object} existing - Existing vocabulary data
- * @param {Object} extracted - Newly extracted vocabulary data
- * @returns {Object} Merged vocabulary data
- */
 function contentKeyFor(item) {
   return `${item.hiragana}-${item.romaji}-${stripEmojis(item.meaning)}`.toLowerCase();
 }
 
-function mergeVocabulary(existing, extracted) {
+/**
+ * Merge extracted vocabulary with existing vocabulary, filtering out particles.
+ * Idempotent: rerunning produces the same result. Duplicates (same hiragana-romaji-meaning) merge their tags.
+ */
+function mergeVocabulary(existing: VocabularyData, extracted: VocabularyData): VocabularyData {
   const contentToExistingId = new Map();
   for (const item of existing.vocabulary) {
     const key = contentKeyFor(item);
@@ -456,10 +406,7 @@ function mergeVocabulary(existing, extracted) {
     if (contentMap.has(contentKey)) {
       const existingItem = contentMap.get(contentKey);
       const mergedTags = [...new Set([...existingItem.tags, ...item.tags])].sort();
-      contentMap.set(contentKey, {
-        ...existingItem,
-        tags: mergedTags,
-      });
+      contentMap.set(contentKey, { ...existingItem, tags: mergedTags });
     } else {
       let id;
       if (contentToExistingId.has(contentKey)) {
@@ -479,7 +426,6 @@ function mergeVocabulary(existing, extracted) {
   extracted.vocabulary.forEach(mergeItem);
 
   const extractedKeys = new Set(extracted.vocabulary.map(contentKeyFor));
-
   const allCategories = new Set([...existing.categories, ...extracted.categories]);
 
   const mergedVocabulary = Array.from(contentMap.values())
@@ -493,10 +439,7 @@ function mergeVocabulary(existing, extracted) {
   };
 }
 
-/**
- * Parse command line arguments.
- * @returns {Object} Parsed arguments
- */
+/** Parse command line arguments. */
 function parseArgs() {
   const args = process.argv.slice(2);
   return {
@@ -505,31 +448,22 @@ function parseArgs() {
   };
 }
 
-/**
- * Display help message.
- */
 function showHelp() {
   console.log(`
-Usage: node extract-vocabulary.js [options]
+Usage: npm run extract-vocabulary [-- options]
 
 Options:
   -f, --force    Force recreate vocabulary from scratch (ignore existing entries)
   -h, --help     Show this help message
 
 Examples:
-  node extract-vocabulary.js           # Merge with existing vocabulary
-  node extract-vocabulary.js --force   # Recreate vocabulary from scratch
-  npm run extract-vocabulary           # Merge with existing vocabulary
-  npm run extract-vocabulary -- --force # Recreate vocabulary from scratch
+  npm run extract-vocabulary            # Merge with existing vocabulary
+  npm run extract-vocabulary:force      # Recreate vocabulary from scratch
 `);
 }
 
-/**
- * Main execution function to extract and merge vocabulary.
- * @param {Object} options - Execution options
- * @param {boolean} options.force - If true, recreate vocabulary from scratch
- */
-function main(options = {}) {
+/** Extract and merge vocabulary, then refresh the generated data files. */
+function main(options: { force?: boolean } = {}) {
   const { force = false } = options;
 
   if (force) {
@@ -537,61 +471,55 @@ function main(options = {}) {
   }
   console.log('🔍 Scanning lesson files for vocabulary...');
 
-  const existing = force
-    ? { vocabulary: [], categories: ['all'], sortOptions: [] }
-    : loadExistingVocabulary();
+  const existing = force ? emptyVocabulary() : loadExistingVocabulary();
   const extracted = scanAllLessons();
   const merged = mergeVocabulary(existing, extracted);
 
-  const previousCount = force ? 0 : existing.vocabulary.length;
   const totalItems = merged.vocabulary.length;
 
   if (force) {
     console.log(`📚 Extracted ${totalItems} vocabulary items`);
   } else {
     const existingIds = new Set(existing.vocabulary.map(i => i.id));
+    const mergedIds = new Set(merged.vocabulary.map(i => i.id));
     const addedCount = merged.vocabulary.filter(i => !existingIds.has(i.id)).length;
-    const removedCount = previousCount - (totalItems - addedCount);
+    const removedCount = existing.vocabulary.filter(i => !mergedIds.has(i.id)).length;
     if (addedCount) console.log(`📚 Found ${addedCount} new vocabulary items`);
     if (removedCount) console.log(`🗑️  Removed ${removedCount} vocabulary items from deleted lesson files`);
     if (!addedCount && !removedCount) console.log('📚 No vocabulary changes found');
   }
   console.log(`📖 Total vocabulary items: ${totalItems}`);
 
-  const dumpOptions = { indent: 2, lineWidth: -1, noRefs: true, forceQuotes: true, quotingType: "'" };
+  const dumpOptions = { indent: 2, lineWidth: -1, noRefs: true, forceQuotes: true, quotingType: "'" as const };
   const existingContent = force ? '' : yaml.dump(existing, dumpOptions);
   const newContent = yaml.dump(merged, dumpOptions);
 
   if (force || existingContent !== newContent) {
     fs.writeFileSync(VOCABULARY_FILE, newContent);
-    if (force) {
-      console.log('✅ Vocabulary file recreated successfully!');
-    } else {
-      console.log('✅ Vocabulary file updated successfully!');
-    }
+    console.log(force ? '✅ Vocabulary file recreated successfully!' : '✅ Vocabulary file updated successfully!');
   } else {
     console.log('✅ Vocabulary file is up to date (no changes needed)');
   }
 
   updateN5VocabularyData();
+  updateLessonPaths();
 }
 
-if (require.main === module) {
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const args = parseArgs();
-
   if (args.help) {
     showHelp();
     process.exit(0);
   }
-
   main({ force: args.force });
 }
 
-module.exports = {
+export {
   DEFAULT_SORT_OPTIONS,
   VALID_TYPES,
   extractVocabularyFromFile,
   extractN5VocabularyTokens,
+  buildLessonPaths,
   scanAllLessons,
   mergeVocabulary,
   parseArgs,

@@ -33,11 +33,11 @@ Many Japanese kanji look very similar but have completely different meanings and
 | Hiragana | Kanji | Romaji | English  | Type |
 |----------|-------|--------|----------|------|
 | せん       | 千     | sen    | thousand | noun |
-| かん       | 干     | kan    | to dry   | verb |
+| ほす       | 干す    | hosu   | to dry   | verb |
 
 **Memory Tips:**
 - **千 (sen)**: Looks like a rising number (thousands are higher numbers!). The upward curve represents going up in value
-- **干 (kan)**: Flat like something drying flat in the sun
+- **干 (hosu)**: Flat like something drying flat in the sun
 
 **Key Difference:** 千 (thousand) has a top stroke that curves upward, while 干 (dry) has a flat top stroke.
 
@@ -313,7 +313,7 @@ Many Japanese kanji look very similar but have completely different meanings and
 | Hiragana | Kanji | Romaji | English        | Type   |
 |----------|-------|--------|----------------|--------|
 | おのれ      | 己     | onore  | self/oneself   | noun   |
-| い        | 已     | i      | already        | adverb |
+| い        | 已     | i      | already (archaic, rarely used) | adverb |
 | み        | 巳     | mi     | snake (zodiac) | noun   |
 
 **Memory Tips:**
@@ -369,13 +369,13 @@ Many Japanese kanji look very similar but have completely different meanings and
 | た        | 田     | ta     | rice field     | noun |
 | ゆう       | 由     | yuu    | reason/from    | noun |
 | こう       | 甲     | kou    | first/armor    | noun |
-| しん       | 申     | shin   | to say/explain | verb |
+| もうす      | 申す    | mousu  | to say (humble) | verb |
 
 **Memory Tips:**
 - **田 (ta)**: Has a + in the middle like crossing paths in a field
 - **由 (yuu)**: Points UP for where it comes FROM
 - **甲 (kou)**: Points DOWN like protecting below
-- **申 (shin)**: Has lines UP and DOWN - you're explaining in both directions!
+- **申 (mousu)**: Has lines UP and DOWN - you're explaining in both directions!
 
 **Key Difference:** 田 has a cross in the middle, 由 has a line going up, 甲 has a line going down, and 申 has lines going both up and down.
 

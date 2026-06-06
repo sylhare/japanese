@@ -31,6 +31,10 @@ Learning colors is essential for describing objects and expressing preferences i
 - あおい (aoi) - blue (adjective)
 - きいろい (kiiroi) - yellow (adjective)
 
+:::info About the Type column
+Colors like みどり and むらさき are also nouns, but this lesson labels them **な-adjective** because we consider their adjective form — how they describe things. あか・あお・きいろ・しろ・くろ have true **い-adjective** forms (あかい, あおい…), while the rest attach with **の** (or, casually, な).
+:::
+
 ### Color Symbolism in Japan
 
 - **Red (赤)**: Associated with energy, passion, and celebration

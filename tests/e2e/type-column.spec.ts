@@ -82,4 +82,33 @@ test.describe('Vocabulary Type Column Visibility', () => {
       await expect(headers.first()).toBeVisible();
     }
   });
+
+  test('hides Type (always) and Kanji (mobile-only) on a mobile viewport', async ({ page }) => {
+    await page.setViewportSize({ width: 375, height: 800 });
+    await page.goto('./docs/lessons/vocabulary/colors');
+    const tables = await waitForTables(page);
+
+    const tableIndicesWithType = await findTablesWithTypeColumn(tables);
+    expect(tableIndicesWithType.length).toBeGreaterThan(0);
+
+    for (const tableIndex of tableIndicesWithType) {
+      const table = tables.nth(tableIndex);
+
+      const typeColumnIndex = await findTypeColumnIndex(table);
+      await verifyColumnIsHidden(table, typeColumnIndex);
+
+      const headers = table.locator('thead tr th, tr:first-child th');
+      const headerCount = await headers.count();
+      let kanjiColumnIndex = -1;
+      for (let i = 0; i < headerCount; i++) {
+        const text = (await headers.nth(i).textContent())?.trim().toLowerCase();
+        if (text === 'kanji') {
+          kanjiColumnIndex = i;
+          break;
+        }
+      }
+      expect(kanjiColumnIndex).toBeGreaterThan(-1);
+      await verifyColumnIsHidden(table, kanjiColumnIndex);
+    }
+  });
 });

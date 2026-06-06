@@ -1,17 +1,17 @@
 import {beforeEach, describe, expect, it} from 'vitest';
-import hideTypeColumnPlugin from '../../src/plugins/hideTypeColumnPlugin';
+import hideColumnPlugin from '../../src/plugins/hideColumnPlugin';
 
 function getScriptContent(): string {
-  const plugin = hideTypeColumnPlugin();
+  const plugin = hideColumnPlugin();
   const htmlTags = plugin.injectHtmlTags?.({} as any);
   return htmlTags?.postBodyTags?.[0]?.innerHTML ?? '';
 }
 
-function extractHideTypeColumns(): () => void {
+function extractHideColumns(): () => void {
   const script = getScriptContent();
-  const match = script.match(/function hideTypeColumns\(\) \{[\s\S]*?\n {2}\}/);
-  if (!match) throw new Error('Could not extract hideTypeColumns function');
-  return new Function(`${match[0]}; hideTypeColumns();`) as () => void;
+  const match = script.match(/function hideColumns\(\) \{[\s\S]*?\n {2}\}/);
+  if (!match) throw new Error('Could not extract hideColumns function');
+  return new Function(`${match[0]}; hideColumns();`) as () => void;
 }
 
 function createTable(headers: string[], rows: string[][]): HTMLElement {
@@ -46,28 +46,28 @@ function createTable(headers: string[], rows: string[][]): HTMLElement {
   return container;
 }
 
-describe('hideTypeColumnPlugin', () => {
+describe('hideColumnPlugin', () => {
   it('should return a valid Docusaurus plugin', () => {
-    const plugin = hideTypeColumnPlugin();
+    const plugin = hideColumnPlugin();
 
-    expect(plugin.name).toBe('hide-type-column-plugin');
+    expect(plugin.name).toBe('hide-column-plugin');
     expect(typeof plugin.injectHtmlTags).toBe('function');
   });
 
   it('should inject a single script tag in postBodyTags', () => {
-    const plugin = hideTypeColumnPlugin();
+    const plugin = hideColumnPlugin();
     const htmlTags = plugin.injectHtmlTags?.({} as any);
 
     expect(htmlTags?.postBodyTags).toHaveLength(1);
     expect(htmlTags?.postBodyTags?.[0]).toMatchObject({tagName: 'script'});
   });
 
-  describe('hideTypeColumns behavior', () => {
-    let hideTypeColumns: () => void;
+  describe('hideColumns behavior', () => {
+    let hideColumns: () => void;
 
     beforeEach(() => {
       document.body.innerHTML = '';
-      hideTypeColumns = extractHideTypeColumns();
+      hideColumns = extractHideColumns();
     });
 
     it('should hide the Type column in tables', () => {
@@ -79,32 +79,32 @@ describe('hideTypeColumnPlugin', () => {
         ],
       );
 
-      hideTypeColumns();
+      hideColumns();
 
       const ths = container.querySelectorAll('th');
-      expect(ths[0].style.display).not.toBe('none');
-      expect(ths[1].style.display).not.toBe('none');
-      expect(ths[2].style.display).toBe('none');
+      expect(ths[0].classList.contains('hide-column')).toBe(false);
+      expect(ths[1].classList.contains('hide-column')).toBe(false);
+      expect(ths[2].classList.contains('hide-column')).toBe(true);
 
       const rows = container.querySelectorAll('tbody tr');
       rows.forEach((row) => {
         const cells = row.querySelectorAll('td');
-        expect(cells[0].style.display).not.toBe('none');
-        expect(cells[1].style.display).not.toBe('none');
-        expect(cells[2].style.display).toBe('none');
+        expect(cells[0].classList.contains('hide-column')).toBe(false);
+        expect(cells[1].classList.contains('hide-column')).toBe(false);
+        expect(cells[2].classList.contains('hide-column')).toBe(true);
       });
     });
 
-    it('should mark the table with typeColumnHidden dataset', () => {
+    it('should mark the table with columnsHidden dataset', () => {
       const container = createTable(
         ['Hiragana', 'Type'],
         [['はい', 'Word']],
       );
 
-      hideTypeColumns();
+      hideColumns();
 
       const table = container.querySelector('table')!;
-      expect(table.dataset.typeColumnHidden).toBe('true');
+      expect(table.dataset.columnsHidden).toBe('true');
     });
 
     it('should skip tables already processed', () => {
@@ -113,9 +113,9 @@ describe('hideTypeColumnPlugin', () => {
         [['はい', 'Word']],
       );
       const table = container.querySelector('table')!;
-      table.dataset.typeColumnHidden = 'true';
+      table.dataset.columnsHidden = 'true';
 
-      hideTypeColumns();
+      hideColumns();
 
       const ths = container.querySelectorAll('th');
       expect(ths[1].style.display).not.toBe('none');
@@ -130,7 +130,7 @@ describe('hideTypeColumnPlugin', () => {
         ],
       );
 
-      hideTypeColumns();
+      hideColumns();
 
       const ths = container.querySelectorAll('th');
       expect(ths[0].classList.contains('hide-on-mobile')).toBe(false);
@@ -152,15 +152,15 @@ describe('hideTypeColumnPlugin', () => {
         [['いぬ', '犬', 'Dog', 'Noun']],
       );
 
-      hideTypeColumns();
+      hideColumns();
 
       const ths = container.querySelectorAll('th');
       expect(ths[1].classList.contains('hide-on-mobile')).toBe(true);
-      expect(ths[3].style.display).toBe('none');
+      expect(ths[3].classList.contains('hide-column')).toBe(true);
 
       const cells = container.querySelectorAll<HTMLElement>('tbody td');
       expect(cells[1].classList.contains('hide-on-mobile')).toBe(true);
-      expect(cells[3].style.display).toBe('none');
+      expect(cells[3].classList.contains('hide-column')).toBe(true);
     });
 
     it('should ignore tables outside .theme-doc-markdown.markdown', () => {
@@ -172,7 +172,7 @@ describe('hideTypeColumnPlugin', () => {
       table.appendChild(tr);
       document.body.appendChild(table);
 
-      hideTypeColumns();
+      hideColumns();
 
       expect(th.style.display).not.toBe('none');
     });
@@ -183,12 +183,12 @@ describe('hideTypeColumnPlugin', () => {
         [['はい', 'Yes']],
       );
 
-      hideTypeColumns();
+      hideColumns();
 
       const table = container.querySelector('table')!;
-      expect(table.dataset.typeColumnHidden).toBeUndefined();
+      expect(table.dataset.columnsHidden).toBe('true');
       container.querySelectorAll('th, td').forEach((cell) => {
-        expect((cell as HTMLElement).style.display).not.toBe('none');
+        expect(cell.classList.contains('hide-column')).toBe(false);
         expect(cell.classList.contains('hide-on-mobile')).toBe(false);
       });
     });

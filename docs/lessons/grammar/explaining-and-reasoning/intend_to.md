@@ -39,7 +39,7 @@ The **つもり** pattern expresses a firm personal intention or plan to do some
 ### Examples
 
 - あした にほんご を べんきょうする つもり です - I intend to study Japanese tomorrow.
-  - *ashita nihongo wo benkyousuru tsumori desu*
+  - *ashita nihongo o benkyousuru tsumori desu*
 - らいねん にほん に いく つもり です - I plan to go to Japan next year.
   - *rainen nihon ni iku tsumori desu*
 - けっこんする つもり です - I intend to get married.
@@ -47,7 +47,7 @@ The **つもり** pattern expresses a firm personal intention or plan to do some
 - だいがく に はいる つもり です - I intend to enter university.
   - *daigaku ni hairu tsumori desu*
 - あたらしい くるま を かう つもり です - I plan to buy a new car.
-  - *atarashii kuruma wo kau tsumori desu*
+  - *atarashii kuruma o kau tsumori desu*
 - いつ いく つもり です か？ - When do you intend to go?
   - *itsu iku tsumori desu ka?*
 - どうする つもり です か？ - What do you intend to do?
@@ -70,7 +70,7 @@ There are two ways to express negative intention:
 - あした は でかけない つもり です - I intend not to go out tomorrow.
   - *ashita wa dekakenai tsumori desu*
 
-### Pattern 1: [verb dictionary form] + つもり は ない
+### Pattern 2: [verb dictionary form] + つもり は ない
 
 **Meaning:** "I have no intention of [verb]"
 
@@ -96,7 +96,7 @@ This pattern often implies that the intention was not fulfilled.
 - はやく かえる つもり だった - I intended to go home early (but didn't).
   - *hayaku kaeru tsumori datta*
 - てがみ を かく つもり だった - I intended to write a letter (but didn't).
-  - *tegami wo kaku tsumori datta*
+  - *tegami o kaku tsumori datta*
 
 ## つもり vs よてい
 
