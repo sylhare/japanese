@@ -150,15 +150,22 @@ Think of ので as "it's because" — slightly softer than から.
 :::
 ```
 
+The `:::type Title` form (title on the same line as the opener) depends on `markdown.mdx1Compat.admonitions`
+being enabled in `docusaurus.config.ts`. The `future.v4` flag turns that compat off by default, which — under
+Docusaurus Faster (Rspack) — makes every admonition render as literal `:::tip` text. The config re-enables it
+explicitly; don't remove that setting.
+
 ## Custom Plugins
 
-### `hideColumnPlugin`
+### `hideColumnRehype`
 
-Source: `src/plugins/hideColumnPlugin.ts`
+Source: `src/plugins/hideColumnRehype.ts`
 
-A Docusaurus plugin that injects a small script to hide table columns in rendered lessons: the **Type** column on all
-screens, and the **Kanji** column on mobile (via the `hide-on-mobile` CSS class). Both columns stay in the markdown
-source so the vocabulary extractor can still read them — they're just hidden in the page.
+A rehype plugin that adds CSS classes to lesson table columns **at build time**: `hide-column` to the **Type**
+column (hidden on all screens) and `hide-on-mobile` to the **Kanji** column (hidden on mobile). Both columns stay
+in the markdown source so the vocabulary extractor can still read them — they're just hidden in the page. The
+classes live in the static HTML, so the columns are hidden on first paint with no flash before hydration (a
+client-side script would only hide them after render).
 
 ### `yaml-loader`
 
