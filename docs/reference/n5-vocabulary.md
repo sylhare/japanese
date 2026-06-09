@@ -30,31 +30,29 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | これ | kore | this (near speaker) | pronoun |
 | それ | sore | that (near listener) | pronoun |
 | あれ | are | that (far from both) | pronoun |
-| どれ | dore | which one | pronoun |
 | この | kono | this (modifier) | pronoun |
 | その | sono | that (modifier) | pronoun |
 | あの | ano | that (modifier) | pronoun |
-| どの | dono | which (modifier) | pronoun |
 | ここ | koko | here (near speaker) | pronoun |
 | そこ | soko | there (near listener) | pronoun |
 | あそこ | asoko | over there | pronoun |
-| どこ | doko | where | pronoun |
 
 ## Question Words
 
 | Kanji | Hiragana | Romaji | Meaning | Type |
 | ---------- | ---------- | ---------- | ---------- | ---------- |
-| 何 | なに/なん | nani/nan | what | pronoun |
-| 誰 | だれ | dare | who | pronoun |
-|  | いつ | itsu | when | pronoun |
-|  | どこ | doko | where | pronoun |
-|  | なぜ | naze | why | pronoun |
-|  | どう | dou | how | pronoun |
-|  | どうして | doushite | why, how come | pronoun |
-|  | どうやって | douyatte | how (method) | pronoun |
-|  | どれ | dore | which one | pronoun |
-|  | いくつ | ikutsu | how many, how old | pronoun |
-|  | いくら | ikura | how much (price) | pronoun |
+| 何 | なに/なん | nani/nan | what | noun |
+| 誰 | だれ | dare | who | noun |
+|  | いつ | itsu | when | noun |
+|  | どこ | doko | where | noun |
+|  | なぜ | naze | why | adverb |
+|  | どう | dou | how | adverb |
+|  | どうして | doushite | why, how come | adverb |
+|  | どうやって | douyatte | how (method) | adverb |
+|  | どれ | dore | which one | noun |
+|  | どの | dono | which (modifier) | noun |
+|  | いくつ | ikutsu | how many, how old | noun |
+|  | いくら | ikura | how much (price) | noun |
 
 ## Numbers & Counting
 
@@ -93,6 +91,23 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | 十 | とお | too | ten (things) | counter |
 | 一人 | ひとり | hitori | one person | counter |
 | 二人 | ふたり | futari | two people | counter |
+
+### Ordinal Numbers
+
+| Kanji | Hiragana | Romaji | Meaning | Type |
+| ---------- | ---------- | ---------- | ---------- | ---------- |
+| 一番 | いちばん | ichiban | first, number one; the most, best | noun |
+| 二番 | にばん | niban | second, number two | noun |
+| 三番 | さんばん | sanban | third, number three | noun |
+
+### Frequency
+
+| Kanji | Hiragana | Romaji | Meaning | Type |
+| ---------- | ---------- | ---------- | ---------- | ---------- |
+| 一回 | いっかい | ikkai | once, one time | adverb |
+| 二回 | にかい | nikai | twice, two times | adverb |
+| 三回 | さんかい | sankai | three times | adverb |
+| 何回 | なんかい | nankai | how many times | adverb |
 
 ## Time Expressions
 
@@ -149,7 +164,6 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | 去年 | きょねん | kyonen | last year | noun |
 | 来年 | らいねん | rainen | next year | noun |
 | 今 | いま | ima | now | noun |
-| 前 | まえ | mae | before, front | noun |
 | 後 | あと | ato | after | noun |
 | 時 | とき | toki | time, when | noun |
 | 毎日 | まいにち | mainichi | every day | noun |
@@ -219,7 +233,7 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | ご主人 | ごしゅじん | goshujin | husband (someone else's) | noun |
 | 奥さん | おくさん | okusan | wife (someone else's) | noun |
 | 息子さん | むすこさん | musukosan | son (someone else's) | noun |
-| 娘さん | むすめさん | musumesann | daughter (someone else's) | noun |
+| 娘さん | むすめさん | musumesan | daughter (someone else's) | noun |
 | 子供 | こども | kodomo | child, children | noun |
 
 ## Colors
@@ -287,35 +301,33 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | 明るい | あかるい | akarui | bright | い-adjective |
 | 暗い | くらい | kurai | dark | い-adjective |
 |  | うるさい | urusai | noisy | い-adjective |
-| 静か | しずか | shizuka | quiet | い-adjective |
 | 忙しい | いそがしい | isogashii | busy | い-adjective |
 |  | かわいい | kawaii | cute | い-adjective |
-|  | きれい | kirei | pretty, clean | い-adjective |
 | 危ない | あぶない | abunai | dangerous | い-adjective |
 
 ### な-Adjectives
 
 | Kanji | Hiragana | Romaji | Meaning | Type |
 | ---------- | ---------- | ---------- | ---------- | ---------- |
-| 元気 | げんき | genki | healthy, energetic | の-adjective |
-| 静か | しずか | shizuka | quiet | の-adjective |
-| 賑やか | にぎやか | nigiyaka | lively, bustling | の-adjective |
-|  | きれい | kirei | pretty, clean | の-adjective |
-| 有名 | ゆうめい | yuumei | famous | の-adjective |
-| 便利 | べんり | benri | convenient | の-adjective |
-| 不便 | ふべん | fuben | inconvenient | の-adjective |
-| 好き | すき | suki | liked, favorite | の-adjective |
-| 嫌い | きらい | kirai | disliked | の-adjective |
-| 大好き | だいすき | daisuki | love, really like | の-adjective |
-| 大嫌い | だいきらい | daikirai | hate, really dislike | の-adjective |
-| 上手 | じょうず | jouzu | skillful, good at | の-adjective |
-| 下手 | へた | heta | unskillful, bad at | の-adjective |
-| 大変 | たいへん | taihen | tough, hard | の-adjective |
-| 簡単 | かんたん | kantan | simple, easy | の-adjective |
-| 親切 | しんせつ | shinsetsu | kind | の-adjective |
-| 安全 | あんぜん | anzen | safe | の-adjective |
-| 大切 | たいせつ | taisetsu | important | の-adjective |
-| 必要 | ひつよう | hitsuyou | necessary | の-adjective |
+| 元気 | げんき | genki | healthy, energetic | な-adjective |
+| 静か | しずか | shizuka | quiet | な-adjective |
+| 賑やか | にぎやか | nigiyaka | lively, bustling | な-adjective |
+|  | きれい | kirei | pretty, clean | な-adjective |
+| 有名 | ゆうめい | yuumei | famous | な-adjective |
+| 便利 | べんり | benri | convenient | な-adjective |
+| 不便 | ふべん | fuben | inconvenient | な-adjective |
+| 好き | すき | suki | liked, favorite | な-adjective |
+| 嫌い | きらい | kirai | disliked | な-adjective |
+| 大好き | だいすき | daisuki | love, really like | な-adjective |
+| 大嫌い | だいきらい | daikirai | hate, really dislike | な-adjective |
+| 上手 | じょうず | jouzu | skillful, good at | な-adjective |
+| 下手 | へた | heta | unskillful, bad at | な-adjective |
+| 大変 | たいへん | taihen | tough, hard | な-adjective |
+| 簡単 | かんたん | kantan | simple, easy | な-adjective |
+| 親切 | しんせつ | shinsetsu | kind | な-adjective |
+| 安全 | あんぜん | anzen | safe | な-adjective |
+| 大切 | たいせつ | taisetsu | important | な-adjective |
+| 必要 | ひつよう | hitsuyou | necessary | な-adjective |
 
 ## Common Verbs
 
@@ -453,7 +465,7 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | ---------- | ---------- | ---------- | ---------- | ---------- |
 | 先生 | せんせい | sensei | teacher | noun |
 | 生徒 | せいと | seito | student (elementary/secondary) | noun |
-| 学生 | がくせい | gakusei | student (university) | noun |
+| 学生 | がくせい | gakusei | student | noun |
 | 教室 | きょうしつ | kyoushitsu | classroom | noun |
 | 本 | ほん | hon | book | noun |
 |  | ノート | nooto | notebook | noun |
@@ -484,7 +496,6 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | 料理人 | りょうりにん | ryourinin | cook, chef | noun |
 | 店員 | てんいん | tenin | shop clerk | noun |
 | 運転手 | うんてんしゅ | untenshu | driver | noun |
-| 学生 | がくせい | gakusei | student | noun |
 
 ## Food & Drinks
 
@@ -670,7 +681,7 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | 行ってきます | いってきます | ittekimasu | I'm leaving (home) | expression |
 |  | いってらっしゃい | itterasshai | have a good trip | expression |
 |  | ただいま | tadaima | I'm home | expression |
-|  | おかえりなさい | okaerirnasai | welcome home | expression |
+|  | おかえりなさい | okaerinasai | welcome home | expression |
 |  | いらっしゃいませ | irasshaimase | welcome (店で) | expression |
 | 初めまして | はじめまして | hajimemashite | nice to meet you | expression |
 |  | どうぞよろしく | douzo yoroshiku | pleased to meet you | expression |
@@ -685,7 +696,6 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | 少し | すこし | sukoshi | a little, few | adverb |
 | 沢山 | たくさん | takusan | a lot, many | adverb |
 |  | もっと | motto | more | adverb |
-| 一番 | いちばん | ichiban | most, best | adverb |
 |  | だけ | dake | only | adverb |
 | 全然 | ぜんぜん | zenzen | (not) at all | adverb |
 |  | あまり | amari | (not) very | adverb |
@@ -705,26 +715,6 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 |  | すぐ | sugu | immediately | adverb |
 | 一緒に | いっしょに | issho ni | together | adverb |
 | 一人で | ひとりで | hitori de | alone, by oneself | adverb |
-
-## Numbers & More
-
-### Ordinal Numbers
-
-| Kanji | Hiragana | Romaji | Meaning | Type |
-| ---------- | ---------- | ---------- | ---------- | ---------- |
-| 一番 | いちばん | ichiban | first, number one | noun |
-| 二番 | にばん | niban | second, number two | noun |
-| 三番 | さんばん | sanban | third, number three | noun |
-
-### Frequency
-
-| Kanji | Hiragana | Romaji | Meaning | Type |
-| ---------- | ---------- | ---------- | ---------- | ---------- |
-| 一回 | いっかい | ikkai | once, one time | adverb |
-| 二回 | にかい | nikai | twice, two times | adverb |
-| 三回 | さんかい | sankai | three times | adverb |
-| 何回 | なんかい | nankai | how many times | adverb |
-
 
 ## Resources
 

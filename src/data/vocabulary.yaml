@@ -1404,7 +1404,7 @@ vocabulary:
     tags:
       - 'colors'
       - 'confusing-kanji'
-    type: 'い-adjective'
+    type: 'noun'
     kanji: '白'
   - id: 'colors_12'
     hiragana: 'くろ'
@@ -3244,14 +3244,6 @@ vocabulary:
       - 'events'
     type: 'noun'
     kanji: '参加者'
-  - id: 'excess_0'
-    hiragana: '[verb stem] + すぎる'
-    romaji: 'sugiru'
-    meaning: 'did too much'
-    category: 'grammar'
-    tags:
-      - 'excess'
-    type: 'expression'
   - id: 'excess_1'
     hiragana: '[い-adj without い] + すぎる'
     romaji: 'sugiru'
@@ -3264,6 +3256,14 @@ vocabulary:
     hiragana: '[な-adj] + すぎる'
     romaji: 'sugiru'
     meaning: 'too adj'
+    category: 'grammar'
+    tags:
+      - 'excess'
+    type: 'expression'
+  - id: 'excess_3'
+    hiragana: '[verb stem] + すぎる'
+    romaji: 'sugiru'
+    meaning: 'do too much'
     category: 'grammar'
     tags:
       - 'excess'
@@ -5323,10 +5323,10 @@ vocabulary:
     tags:
       - 'particle-guide'
     type: 'expression'
-  - id: 'particleguide_1'
+  - id: 'particleguide_2'
     hiragana: 'では'
     romaji: 'de wa'
-    meaning: 'in, at (conditional)'
+    meaning: 'in/at, as for (で は)'
     category: 'grammar'
     tags:
       - 'particle-guide'
@@ -5380,7 +5380,7 @@ vocabulary:
     category: 'grammar'
     tags:
       - 'question-words'
-    type: 'noun'
+    type: 'adverb'
     kanji: 'どの様に'
   - id: 'questionwords_3'
     hiragana: 'どれ'
@@ -5627,7 +5627,7 @@ vocabulary:
     category: 'grammar'
     tags:
       - 'question-words'
-    type: 'noun'
+    type: 'adverb'
     kanji: '何故'
   - id: 'questionwords_33'
     hiragana: 'どうして'
@@ -5636,7 +5636,7 @@ vocabulary:
     category: 'grammar'
     tags:
       - 'question-words'
-    type: 'noun'
+    type: 'adverb'
   - id: 'questionwords_34'
     hiragana: 'なんで'
     romaji: 'nande'
@@ -5644,7 +5644,7 @@ vocabulary:
     category: 'grammar'
     tags:
       - 'question-words'
-    type: 'noun'
+    type: 'adverb'
   - id: 'questionwords_35'
     hiragana: 'どう'
     romaji: 'dou'
@@ -5652,7 +5652,7 @@ vocabulary:
     category: 'grammar'
     tags:
       - 'question-words'
-    type: 'noun'
+    type: 'adverb'
   - id: 'questionwords_36'
     hiragana: 'どうやって'
     romaji: 'dou yatte'
@@ -5660,7 +5660,7 @@ vocabulary:
     category: 'grammar'
     tags:
       - 'question-words'
-    type: 'noun'
+    type: 'adverb'
   - id: 'questionwords_37'
     hiragana: 'いつも'
     romaji: 'itsumo'
@@ -5734,7 +5734,7 @@ vocabulary:
     category: 'food'
     tags:
       - 'tastes'
-    type: 'adverb'
+    type: 'onomatopoeia'
   - id: 'tastes_3'
     hiragana: 'ねばねば'
     romaji: 'nebaneba'
@@ -5742,7 +5742,7 @@ vocabulary:
     category: 'food'
     tags:
       - 'tastes'
-    type: 'adverb'
+    type: 'onomatopoeia'
   - id: 'tastes_4'
     hiragana: 'こい'
     romaji: 'koi'
