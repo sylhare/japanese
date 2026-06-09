@@ -223,7 +223,7 @@ Question words combine with **も** or **か** to shift their meaning:
 | なにか | nanika | something | noun |
 | どこも | dokomo | nowhere | noun |
 | どこか | dokoka | somewhere | noun |
-| いつも | itsumo | always | noun |
+| いつも | itsumo | always | adverb |
 | いつか | itsuka | sometime | noun |
 | どれも | doremo | none of them | noun |
 | どれか | doreka | one of them | noun |

@@ -32,7 +32,7 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 | Hiragana | Kanji | Romaji | English  | Type |
 |----------|-------|--------|----------|------|
-| せん       | 千     | sen    | thousand | noun |
+| せん       | 千     | sen    | thousand | counter |
 | ほす       | 干す    | hosu   | to dry   | verb |
 
 **Memory Tips:**
@@ -174,7 +174,7 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
-| しろ       | 白     | shiro  | white   | noun |
+| しろ       | 白     | shiro  | white   | い-adjective |
 | じ        | 自     | ji     | oneself | noun |
 
 **Memory Tips:**
@@ -224,7 +224,7 @@ Many Japanese kanji look very similar but have completely different meanings and
 | Hiragana | Kanji | Romaji | English          | Type |
 |----------|-------|--------|------------------|------|
 | ほう       | 方     | hou    | direction/method | noun |
-| まん       | 万     | man    | ten thousand     | noun |
+| まん       | 万     | man    | ten thousand     | counter |
 
 **Memory Tips:**
 - **方 (hou)**: Has an arrow or pointer on top to show which way to go - looks like a person pointing

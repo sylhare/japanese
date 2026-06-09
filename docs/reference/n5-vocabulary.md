@@ -60,20 +60,20 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 
 | Kanji | Hiragana | Romaji | Meaning | Type |
 | ---------- | ---------- | ---------- | ---------- | ---------- |
-| 零 | れい/ぜろ | rei/zero | zero | noun |
-| 一 | いち | ichi | one | noun |
-| 二 | に | ni | two | noun |
-| 三 | さん | san | three | noun |
-| 四 | よん/し | yon/shi | four | noun |
-| 五 | ご | go | five | noun |
-| 六 | ろく | roku | six | noun |
-| 七 | なな/しち | nana/shichi | seven | noun |
-| 八 | はち | hachi | eight | noun |
-| 九 | きゅう/く | kyuu/ku | nine | noun |
-| 十 | じゅう | juu | ten | noun |
-| 百 | ひゃく | hyaku | hundred | noun |
-| 千 | せん | sen | thousand | noun |
-| 万 | まん | man | ten thousand | noun |
+| 零 | れい/ぜろ | rei/zero | zero | counter |
+| 一 | いち | ichi | one | counter |
+| 二 | に | ni | two | counter |
+| 三 | さん | san | three | counter |
+| 四 | よん/し | yon/shi | four | counter |
+| 五 | ご | go | five | counter |
+| 六 | ろく | roku | six | counter |
+| 七 | なな/しち | nana/shichi | seven | counter |
+| 八 | はち | hachi | eight | counter |
+| 九 | きゅう/く | kyuu/ku | nine | counter |
+| 十 | じゅう | juu | ten | counter |
+| 百 | ひゃく | hyaku | hundred | counter |
+| 千 | せん | sen | thousand | counter |
+| 万 | まん | man | ten thousand | counter |
 
 ### Counters
 
@@ -104,10 +104,10 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 
 | Kanji | Hiragana | Romaji | Meaning | Type |
 | ---------- | ---------- | ---------- | ---------- | ---------- |
-| 一回 | いっかい | ikkai | once, one time | adverb |
-| 二回 | にかい | nikai | twice, two times | adverb |
-| 三回 | さんかい | sankai | three times | adverb |
-| 何回 | なんかい | nankai | how many times | adverb |
+| 一回 | いっかい | ikkai | once, one time | counter |
+| 二回 | にかい | nikai | twice, two times | counter |
+| 三回 | さんかい | sankai | three times | counter |
+| 何回 | なんかい | nankai | how many times | counter |
 
 ## Time Expressions
 
@@ -127,18 +127,18 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 
 | Kanji | Hiragana | Romaji | Meaning | Type |
 | ---------- | ---------- | ---------- | ---------- | ---------- |
-| 一月 | いちがつ | ichigatsu | January | noun |
-| 二月 | にがつ | nigatsu | February | noun |
-| 三月 | さんがつ | sangatsu | March | noun |
-| 四月 | しがつ | shigatsu | April | noun |
-| 五月 | ごがつ | gogatsu | May | noun |
-| 六月 | ろくがつ | rokugatsu | June | noun |
-| 七月 | しちがつ | shichigatsu | July | noun |
-| 八月 | はちがつ | hachigatsu | August | noun |
-| 九月 | くがつ | kugatsu | September | noun |
-| 十月 | じゅうがつ | juugatsu | October | noun |
-| 十一月 | じゅういちがつ | juuichigatsu | November | noun |
-| 十二月 | じゅうにがつ | juunigatsu | December | noun |
+| 一月 | いちがつ | ichigatsu | January | counter |
+| 二月 | にがつ | nigatsu | February | counter |
+| 三月 | さんがつ | sangatsu | March | counter |
+| 四月 | しがつ | shigatsu | April | counter |
+| 五月 | ごがつ | gogatsu | May | counter |
+| 六月 | ろくがつ | rokugatsu | June | counter |
+| 七月 | しちがつ | shichigatsu | July | counter |
+| 八月 | はちがつ | hachigatsu | August | counter |
+| 九月 | くがつ | kugatsu | September | counter |
+| 十月 | じゅうがつ | juugatsu | October | counter |
+| 十一月 | じゅういちがつ | juuichigatsu | November | counter |
+| 十二月 | じゅうにがつ | juunigatsu | December | counter |
 
 ### Time & Temporal Expressions
 
@@ -177,19 +177,19 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 
 | Kanji | Hiragana | Romaji | Meaning | Type |
 | ---------- | ---------- | ---------- | ---------- | ---------- |
-| 一時 | いちじ | ichiji | 1 o'clock | noun |
-| 二時 | にじ | niji | 2 o'clock | noun |
-| 三時 | さんじ | sanji | 3 o'clock | noun |
-| 四時 | よじ | yoji | 4 o'clock | noun |
-| 五時 | ごじ | goji | 5 o'clock | noun |
-| 六時 | ろくじ | rokuji | 6 o'clock | noun |
-| 七時 | しちじ | shichiji | 7 o'clock | noun |
-| 八時 | はちじ | hachiji | 8 o'clock | noun |
-| 九時 | くじ | kuji | 9 o'clock | noun |
-| 十時 | じゅうじ | juuji | 10 o'clock | noun |
-| 十一時 | じゅういちじ | juuichiji | 11 o'clock | noun |
-| 十二時 | じゅうにじ | juuniji | 12 o'clock | noun |
-| ～分 | ～ふん/～ぷん | ~fun/~pun | ~minute(s) | noun |
+| 一時 | いちじ | ichiji | 1 o'clock | counter |
+| 二時 | にじ | niji | 2 o'clock | counter |
+| 三時 | さんじ | sanji | 3 o'clock | counter |
+| 四時 | よじ | yoji | 4 o'clock | counter |
+| 五時 | ごじ | goji | 5 o'clock | counter |
+| 六時 | ろくじ | rokuji | 6 o'clock | counter |
+| 七時 | しちじ | shichiji | 7 o'clock | counter |
+| 八時 | はちじ | hachiji | 8 o'clock | counter |
+| 九時 | くじ | kuji | 9 o'clock | counter |
+| 十時 | じゅうじ | juuji | 10 o'clock | counter |
+| 十一時 | じゅういちじ | juuichiji | 11 o'clock | counter |
+| 十二時 | じゅうにじ | juuniji | 12 o'clock | counter |
+| ～分 | ～ふん/～ぷん | ~fun/~pun | ~minute(s) | counter |
 | 半 | はん | han | half (30 minutes) | noun |
 
 ## Family & Relationships
@@ -241,15 +241,15 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | Kanji | Hiragana | Romaji | Meaning | Type |
 | ---------- | ---------- | ---------- | ---------- | ---------- |
 | 色 | いろ | iro | color | noun |
-| 赤 | あか | aka | red | noun |
-| 青 | あお | ao | blue | noun |
-| 黄色 | きいろ | kiiro | yellow | noun |
-| 緑 | みどり | midori | green | noun |
-| 白 | しろ | shiro | white | noun |
-| 黒 | くろ | kuro | black | noun |
-| 茶色 | ちゃいろ | chairo | brown | noun |
+| 赤 | あか | aka | red | い-adjective |
+| 青 | あお | ao | blue | い-adjective |
+| 黄色 | きいろ | kiiro | yellow | い-adjective |
+| 緑 | みどり | midori | green | な-adjective |
+| 白 | しろ | shiro | white | い-adjective |
+| 黒 | くろ | kuro | black | い-adjective |
+| 茶色 | ちゃいろ | chairo | brown | な-adjective |
 |  | ピンク | pinku | pink | noun |
-| 紫 | むらさき | murasaki | purple | noun |
+| 紫 | むらさき | murasaki | purple | な-adjective |
 |  | オレンジ | orenji | orange | noun |
 |  | グレー | guree | gray | noun |
 
