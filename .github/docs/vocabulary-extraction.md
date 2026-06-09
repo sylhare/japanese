@@ -79,6 +79,7 @@ The valid values live in [`src/data/vocabulary-types.js`](../../src/data/vocabul
 (the single source of truth, used by both the extraction and the dictionary):
 
 - `noun` - Regular nouns
+- `pronoun` - Pronouns (personal and demonstrative)
 - `verb` - Verbs
 - `い-adjective` - い-adjectives
 - `な-adjective` - な-adjectives

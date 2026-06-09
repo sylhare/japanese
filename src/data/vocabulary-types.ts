@@ -3,6 +3,7 @@
 
 export const VALID_TYPES: string[] = [
   'noun',
+  'pronoun',
   'verb',
   'い-adjective',
   'な-adjective',

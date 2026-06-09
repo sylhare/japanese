@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import yaml from 'js-yaml';
-import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   extractN5VocabularyTokens,
   extractVocabularyFromFile,
@@ -357,7 +357,7 @@ describe('Vocabulary Extraction', () => {
       expect(redItem?.tags).toContain('adjectives');
     });
 
-    it('should preserve the first occurrence data when merging duplicates', () => {
+    it('should preserve the first occurrence data (except type) when merging duplicates', () => {
       const existing = createTestVocabularyData([
         createTestVocabularyItem({
           id: 'existing_1',
@@ -387,11 +387,70 @@ describe('Vocabulary Extraction', () => {
       const merged = mergeVocabulary(existing, extracted);
 
       const redItem = merged.vocabulary.find(item => item.hiragana === 'あか');
+      expect(redItem?.id).toBe('existing_1');
       expect(redItem?.kanji).toBe('赤');
-      expect(redItem?.type).toBe('い-adjective');
+      expect(redItem?.type).toBe('noun');
       expect(redItem?.category).toBe('colors');
       expect(redItem?.tags).toContain('existing-tag');
       expect(redItem?.tags).toContain('extracted-tag');
+    });
+
+    it('should override the existing type with the extracted type and warn', () => {
+      const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+      const existing = createTestVocabularyData([
+        createTestVocabularyItem({ id: 'existing_0', type: 'い-adjective', tags: ['existing-tag'] }),
+      ], { categories: ['colors'] });
+      const extracted = createTestVocabularyData([
+        createTestVocabularyItem({ id: 'extracted_0', type: 'noun', tags: ['extracted-tag'] }),
+      ], { categories: ['vocabulary'] });
+
+      const merged = mergeVocabulary(existing, extracted);
+
+      expect(merged.vocabulary.find(item => item.hiragana === 'あか')?.type).toBe('noun');
+      expect(warnSpy).toHaveBeenCalledWith(
+        expect.stringContaining('Type changed for "あか"'),
+      );
+      expect(warnSpy).toHaveBeenCalledWith(
+        expect.stringContaining('"い-adjective" → "noun"'),
+      );
+
+      warnSpy.mockRestore();
+    });
+
+    it('should adopt the extracted type without warning when no existing type is set', () => {
+      const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+      const existing = createTestVocabularyData([
+        createTestVocabularyItem({ id: 'existing_0', type: undefined, tags: ['existing-tag'] }),
+      ], { categories: ['colors'] });
+      const extracted = createTestVocabularyData([
+        createTestVocabularyItem({ id: 'extracted_0', type: 'noun', tags: ['extracted-tag'] }),
+      ], { categories: ['vocabulary'] });
+
+      const merged = mergeVocabulary(existing, extracted);
+
+      expect(merged.vocabulary.find(item => item.hiragana === 'あか')?.type).toBe('noun');
+      expect(warnSpy).not.toHaveBeenCalled();
+
+      warnSpy.mockRestore();
+    });
+
+    it('should not warn when the same word is merged with the same type', () => {
+      const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+      const existing = createTestVocabularyData([
+        createTestVocabularyItem({ id: 'existing_0', type: 'noun', tags: ['existing-tag'] }),
+      ], { categories: ['colors'] });
+      const extracted = createTestVocabularyData([
+        createTestVocabularyItem({ id: 'extracted_0', type: 'noun', tags: ['extracted-tag'] }),
+      ], { categories: ['vocabulary'] });
+
+      mergeVocabulary(existing, extracted);
+
+      expect(warnSpy).not.toHaveBeenCalled();
+
+      warnSpy.mockRestore();
     });
 
     it('should merge categories correctly', () => {

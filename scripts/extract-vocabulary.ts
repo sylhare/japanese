@@ -405,8 +405,11 @@ function mergeVocabulary(existing: VocabularyData, extracted: VocabularyData): V
 
     if (contentMap.has(contentKey)) {
       const existingItem = contentMap.get(contentKey);
+      if (existingItem.type && item.type && existingItem.type !== item.type) {
+        console.warn(`⚠️  Type changed for "${item.hiragana}" (${item.romaji}): "${existingItem.type}" → "${item.type}"`);
+      }
       const mergedTags = [...new Set([...existingItem.tags, ...item.tags])].sort();
-      contentMap.set(contentKey, { ...existingItem, tags: mergedTags });
+      contentMap.set(contentKey, { ...existingItem, type: item.type ?? existingItem.type, tags: mergedTags });
     } else {
       let id;
       if (contentToExistingId.has(contentKey)) {
