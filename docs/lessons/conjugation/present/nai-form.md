@@ -22,6 +22,7 @@ Change the final う-sound to the あ-column equivalent, then add ない:
 | す | さない | su → sa |
 | つ | たない | tsu → ta |
 | ぬ | なない | nu → na |
+| ぶ | ばない | bu → ba |
 | む | まない | mu → ma |
 | る | らない | ru → ra |
 | う | **わない** | u → wa |
@@ -38,6 +39,7 @@ Verbs ending in う become **わない**, not ~~あない~~
 - はなす → はなさない (don't speak)
 - まつ → またない (don't wait)
 - よむ → よまない (don't read)
+- あそぶ → あそばない (don't play)
 - つくる → つくらない (don't make)
 - かう → かわない (don't buy)
 

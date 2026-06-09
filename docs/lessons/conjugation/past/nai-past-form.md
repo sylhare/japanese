@@ -22,6 +22,7 @@ Change the ない ending to なかった for each pattern:
 | さない | さ + ない | さ + なかった | sa + nakatta |
 | たない | た + ない | た + なかった | ta + nakatta |
 | なない | な + ない | な + なかった | na + nakatta |
+| ばない | ば + ない | ば + なかった | ba + nakatta |
 | まない | ま + ない | ま + なかった | ma + nakatta |
 | らない | ら + ない | ら + なかった | ra + nakatta |
 | わない | わ + ない | わ + なかった | wa + nakatta |
@@ -32,6 +33,7 @@ Change the ない ending to なかった for each pattern:
 - はなさない → はなさなかった (didn't speak)
 - またない → またなかった (didn't wait)
 - よまない → よまなかった (didn't read)
+- あそばない → あそばなかった (didn't play)
 - つくらない → つくらなかった (didn't make)
 - かわない → かわなかった (didn't buy)
 

@@ -58,9 +58,13 @@ Add **な** before **ので** with な-adjectives and nouns. Do **not** use な 
 
 ## Pattern 2: から (Less Formal)
 
-**A から, B short form + ん です**
+**A から, B**
 
 **Meaning:** "Because of A (reason), B (consequence)"
+
+:::tip ん です is optional
+**から** attaches to a plain clause on its own. The explanatory **ん です** ending used in the examples below is optional — it just adds a "here's the explanation" tone.
+:::
 
 ### Formation
 
@@ -97,11 +101,11 @@ The final clause states the conclusion or consequence.
 
 ### Examples
 
-- やすい し、おいしい し、このみせがすきです — It's cheap and also delicious, so I like this restaurant.
+- やすい し、おいしい し、この みせ が すき です — It's cheap and also delicious, so I like this restaurant.
   - *yasui shi, oishii shi, kono mise ga suki desu*
-- さむい し、つかれた し、うちにいたい — It's cold and I'm tired, so I want to stay home.
+- さむい し、つかれた し、うち に いたい — It's cold and I'm tired, so I want to stay home.
   - *samui shi, tsukareta shi, uchi ni itai*
-- しずか だ し、きれい だ し、このまちがすきです — It's quiet and beautiful, so I like this town.
+- しずか だ し、きれい だ し、この まち が すき です — It's quiet and beautiful, so I like this town.
   - *shizuka da shi, kirei da shi, kono machi ga suki desu*
 - べんきょう する し、しゅくだい も する し、いそがしい — I have to study and do homework, so I'm busy.
   - *benkyou suru shi, shukudai mo suru shi, isogashii*

@@ -29,6 +29,7 @@ The **たい** form expresses personal desire or wanting to do something.
 To form the stem:
 - **る-verbs:** Remove **る** → たべる → たべ
 - **う-verbs:** Change **u-sound** to **i-sound** → のむ → のみ
+- **Irregulars:** する → し (したい), くる → き (きたい)
 
 ## Present Tense
 

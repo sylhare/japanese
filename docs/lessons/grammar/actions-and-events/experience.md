@@ -32,12 +32,16 @@ This pattern is used to express whether you have experienced something before.
 
 ### Examples
 
-- ふじやま に のぼった こと が ありません - I have never climbed Mount Fuji.
-  - *fujiyama ni nobotta koto ga arimasen*
+- ふじさん に のぼった こと が ありません - I have never climbed Mount Fuji.
+  - *fujisan ni nobotta koto ga arimasen*
 - すし を たべた こと が あります - I have eaten sushi before.
   - *sushi o tabeta koto ga arimasu*
 - にほん に いった こと が あります - I have been to Japan.
   - *nihon ni itta koto ga arimasu*
+
+:::tip Reading 富士山
+Mount Fuji is read **ふじさん** (*Fujisan*), not ふじやま. The character 山 reads やま on its own, but in the proper name 富士山 the on'yomi reading さん is standard — ふじやま is technically a valid reading but sounds wrong to native speakers as the mountain's name.
+:::
 
 ### Key Points
 

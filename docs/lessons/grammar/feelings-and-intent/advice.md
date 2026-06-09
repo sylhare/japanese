@@ -97,6 +97,8 @@ Literally: "The direction of [not doing] is good."
 - **あげる** — you or someone gives to another person: アドバイス を あげました (I gave advice)
 - **もらう** — you receive from someone: アドバイス を もらいました (I received advice)
 - **くれる** — someone gives to you: アドバイス を くれました (They gave me advice)
+- **いただく** — humble form of もらう, receiving from a superior: せんせい に アドバイス を いただきました
+- **さしあげる** — humble form of あげる, giving to a superior: せんせい に プレゼント を さしあげました
 :::
 
 ### Health Advice
@@ -114,8 +116,8 @@ Literally: "The direction of [not doing] is good."
   - *mainichi renshuushita hou ga ii desu yo*
 - あした の テスト の ために べんきょうした ほう が いい です よ - You should study for tomorrow's test.
   - *ashita no tesuto no tame ni benkyoushita hou ga ii desu yo*
-- せんせい に アドバイス を もらった ほう が いい です よ — You should get advice from your teacher.
-  - *sensei ni adobaisu o moratta hou ga ii desu yo*
+- せんせい に アドバイス を いただいた ほう が いい です よ — You should get advice from your teacher. (polite)
+  - *sensei ni adobaisu o itadaita hou ga ii desu yo*
 
 ### Warnings
 

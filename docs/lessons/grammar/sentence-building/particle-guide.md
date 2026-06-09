@@ -254,9 +254,9 @@ As a particle, **を** is pronounced exactly like **お** — the old "w" sound 
 | Hiragana | Romaji | English              | Type        |
 |----------|--------|----------------------|-------------|
 | には       | ni wa  | for, regarding       | expression |
-| では       | de wa  | in, at (conditional) | expression |
+| では       | de wa  | in/at, as for (で + は) | expression |
 
-### には (ni wa) - For/Regarding
+### には (ni wa) - For/Regarding (に + topic は)
 
 **Function**: Indicates purpose or target
 **Usage**: Shows what something is for
@@ -265,14 +265,14 @@ As a particle, **を** is pronounced exactly like **お** — the old "w" sound 
 - これはこども**には**むずかしいです。 (Kore wa kodomo ni wa muzukashii desu.) - This is difficult for children.
 - べんきょう**には**じかんがひつようです。 (Benkyou ni wa jikan ga hitsuyou desu.) - Time is necessary for studying.
 
-### では (de wa) - In/At (Conditional)
+### では (de wa) - In/At (で + topic は)
 
-**Function**: Indicates condition or situation
-**Usage**: Shows under what circumstances
+**Function**: Marks a location or means (で) as the topic, often with contrast (は)
+**Usage**: "as for in/at..." — highlights or contrasts the circumstance
 
 #### Examples:
-- にほん**では**にほんごをはなします。 (Nihon de wa nihongo o hanashimasu.) - In Japan, I speak Japanese.
-- あめ**では**いけません。 (Ame de wa ikemasen.) - If it's raining, I can't go.
+- にほん**では**にほんごをはなします。 (Nihon de wa nihongo o hanashimasu.) - In Japan, (people) speak Japanese.
+- この へや**では**たばこ は すえません。 (Kono heya de wa tabako wa suemasen.) - You can't smoke in this room.
 
 ## Common Particle Mistakes
 
