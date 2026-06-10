@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url';
 import yaml from 'js-yaml';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
-  extractN5VocabularyTokens,
+  extractJlptEntries,
   extractVocabularyFromFile,
   main,
   mergeVocabulary,
@@ -39,6 +39,24 @@ describe('Vocabulary Extraction', () => {
   });
 
   describe('extractVocabularyFromFile', () => {
+    it('should extract a reference table with a Meaning column and source override', () => {
+      const filePath = path.join(fixturesDir, 'meaning-column-reference.md');
+      const vocabulary = extractVocabularyFromFile(filePath, { tag: 'N5', category: 'reference' });
+
+      expect(vocabulary).toHaveLength(2);
+
+      const miru = vocabulary.find(item => item.hiragana === 'みる');
+      expect(miru).toMatchObject({
+        hiragana: 'みる',
+        kanji: '見る',
+        romaji: 'miru',
+        meaning: 'to see',
+        type: 'verb',
+        category: 'reference',
+        tags: ['N5'],
+      });
+    });
+
     it('should extract vocabulary from basic colors lesson', () => {
       const filePath = path.join(fixturesDir, 'basic-colors.md');
       const vocabulary = extractVocabularyFromFile(filePath);
@@ -1021,13 +1039,32 @@ title: Custom Section Test
     });
   });
 
-  describe('extractN5VocabularyTokens', () => {
-    it('should include miru tokens from the N5 reference article', () => {
-      const tokens = extractN5VocabularyTokens();
+  describe('extractJlptEntries', () => {
+    const n5Article = path.join(__dirname, '../../docs/reference/n5-vocabulary.md');
 
-      expect(tokens).toContain('みる');
-      expect(tokens).toContain('見る');
-      expect(tokens).toContain('miru');
+    it('should extract a structured entry for 見る from the N5 reference article', () => {
+      const entries = extractJlptEntries(n5Article);
+
+      expect(entries).toContainEqual({ kanji: '見る', hiragana: 'みる', romaji: 'miru' });
+    });
+
+    it('should split multi-reading rows and pair them (なに/なん, nani/nan)', () => {
+      const entries = extractJlptEntries(n5Article);
+
+      expect(entries).toContainEqual({ kanji: '何', hiragana: 'なに', romaji: 'nani' });
+      expect(entries).toContainEqual({ kanji: '何', hiragana: 'なん', romaji: 'nan' });
+    });
+
+    it('should omit kanji for kana-only words', () => {
+      const entries = extractJlptEntries(n5Article);
+      const kirei = entries.find(e => e.hiragana === 'きれい');
+
+      expect(kirei).toBeDefined();
+      expect(kirei?.kanji).toBeUndefined();
+    });
+
+    it('should return an empty list for a missing article', () => {
+      expect(extractJlptEntries(path.join(__dirname, 'does-not-exist.md'))).toEqual([]);
     });
   });
 

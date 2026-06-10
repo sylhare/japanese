@@ -1,9 +1,8 @@
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import React, { useMemo, useState } from 'react';
-import lessonPaths from '../data/lesson-paths.json';
-import n5VocabularyData from '../data/n5-vocabulary.json';
-import { VALID_TYPES, normalizeToken } from '../data/vocabulary-types';
+import jlptVocabularyData from '../data/jlpt-vocabulary.json';
+import { VALID_TYPES, getTagPath, normalizeToken } from '../data/vocabulary-types';
 import type { VocabularyItem } from '../data/vocabulary-types';
 import vocabularyYamlData from '../data/vocabulary.yaml';
 import styles from './dictionary.module.css';
@@ -12,42 +11,48 @@ const vocabularyData: VocabularyItem[] = vocabularyYamlData.vocabulary;
 const categories = vocabularyYamlData.categories;
 const sortOptions = vocabularyYamlData.sortOptions;
 
-const N5_TAG = 'N5';
-const n5VocabularyTokens = new Set<string>(n5VocabularyData.tokens);
-
-function isN5VocabularyItem(item: VocabularyItem): boolean {
-  const primaryCandidates = [
-    normalizeToken(item.hiragana),
-    normalizeToken(item.katakana),
-    normalizeToken(item.kanji),
-  ].filter(Boolean);
-
-  if (primaryCandidates.some(candidate => n5VocabularyTokens.has(candidate))) {
-    return true;
-  }
-
-  const romajiCandidate = normalizeToken(item.romaji);
-  return romajiCandidate ? n5VocabularyTokens.has(romajiCandidate) : false;
+interface JlptEntry {
+  kanji?: string;
+  hiragana: string;
+  romaji: string;
 }
-
-function addN5Tag(tags: string[]): string[] {
-  if (tags.some(tag => tag.toLowerCase() === 'n5')) {
-    return tags;
-  }
-  return [...tags, N5_TAG];
-}
+const jlptLevelEntries: Array<[string, JlptEntry[]]> = Object.entries(
+  jlptVocabularyData as Record<string, JlptEntry[]>,
+);
 
 /**
- * Get the lesson path for a tag.
- *
- * Paths are derived from the lesson files on disk by the extraction script
- * (`src/data/lesson-paths.json`), so new lessons are linked automatically with
- * no manual mapping. Unknown tags fall back to the vocabulary folder.
+ * An item matches a JLPT entry when the reading matches (hiragana/katakana or
+ * romaji) and, when both have a kanji, the kanji matches too — so same-reading
+ * homonyms (花 vs 鼻) are not badged from each other.
  */
-export function getTagPath(tag: string): string {
-  const paths = lessonPaths as Record<string, string>;
-  return paths[tag.toLowerCase()] ?? `docs/lessons/vocabulary/${tag}`;
+export function matchesJlptEntry(item: VocabularyItem, entry: JlptEntry): boolean {
+  const readingMatch =
+    (item.hiragana && normalizeToken(item.hiragana) === entry.hiragana) ||
+    (item.katakana && normalizeToken(item.katakana) === entry.hiragana) ||
+    (item.romaji && normalizeToken(item.romaji) === entry.romaji);
+  if (!readingMatch) {
+    return false;
+  }
+  const itemKanji = normalizeToken(item.kanji);
+  if (itemKanji && entry.kanji) {
+    return itemKanji === entry.kanji;
+  }
+  return true;
 }
+
+function jlptLevelsForItem(item: VocabularyItem): string[] {
+  return jlptLevelEntries
+    .filter(([, entries]) => entries.some(entry => matchesJlptEntry(item, entry)))
+    .map(([level]) => level);
+}
+
+function withTags(tags: string[], extra: string[]): string[] {
+  const present = new Set(tags.map(tag => tag.toLowerCase()));
+  const additions = extra.filter(tag => !present.has(tag.toLowerCase()));
+  return additions.length > 0 ? [...tags, ...additions] : tags;
+}
+
+export { getTagPath };
 
 export default function Vocabulary(): React.JSX.Element {
   const baseUrl = useBaseUrl('/');
@@ -59,13 +64,8 @@ export default function Vocabulary(): React.JSX.Element {
   const vocabularyWithJlptTags = useMemo(
     () =>
       vocabularyData.map(item => {
-        if (!isN5VocabularyItem(item)) {
-          return item;
-        }
-        return {
-          ...item,
-          tags: addN5Tag(item.tags),
-        };
+        const levels = jlptLevelsForItem(item);
+        return levels.length > 0 ? { ...item, tags: withTags(item.tags, levels) } : item;
       }),
     [],
   );
