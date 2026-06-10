@@ -1,9 +1,10 @@
 /**
  * Vocabulary extraction script.
  *
- * Scans all lesson files in docs/lessons/ for vocabulary tables, merges the
- * results into src/data/vocabulary.yaml, and regenerates src/data/n5-vocabulary.json
- * from the N5 reference article. Run via tsx (see the npm scripts).
+ * Scans all lesson files in docs/lessons/ (and the JLPT reference articles) for
+ * vocabulary tables, merges the results into src/data/vocabulary.yaml, and
+ * regenerates src/data/jlpt-vocabulary.json (the per-level token sets used to
+ * badge dictionary entries). Run via tsx (see the npm scripts).
  *
  * Full documentation: .github/docs/vocabulary-extraction.md
  */
@@ -12,6 +13,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import yaml from 'js-yaml';
+import { JLPT_LEVELS } from '../src/data/jlpt-levels';
 import { VALID_TYPES, normalizeToken } from '../src/data/vocabulary-types';
 import type { VocabularyData, VocabularyItem } from '../src/data/vocabulary-types';
 
@@ -20,13 +22,23 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DOCS_DIR = path.join(__dirname, '../docs');
 const DEFAULT_LESSONS_DIR = path.join(DOCS_DIR, 'lessons');
 const VOCABULARY_FILE = path.join(__dirname, '../src/data/vocabulary.yaml');
-const N5_REFERENCE_FILE = path.join(DOCS_DIR, 'reference/n5-vocabulary.md');
-const N5_VOCABULARY_FILE = path.join(__dirname, '../src/data/n5-vocabulary.json');
+const JLPT_VOCABULARY_FILE = path.join(__dirname, '../src/data/jlpt-vocabulary.json');
 const LESSON_PATHS_FILE = path.join(__dirname, '../src/data/lesson-paths.json');
+
+/** Absolute path to a JLPT reference article, given its docs-relative path. */
+function jlptArticlePath(article: string): string {
+  return path.join(DOCS_DIR, article);
+}
 const VOCAB_TABLE_PATTERN = /## [^#\n]+[\s\S]*?(\|.*?Hiragana.*?\|[\s\S]*?)(?=\n##|\n## Next Steps|\n## Tips|\n## Remember|$)/gi;
 
-/** Extract vocabulary from a single lesson file. */
-function extractVocabularyFromFile(filePath) {
+/**
+ * Extract vocabulary from a single lesson or reference file.
+ *
+ * `source` overrides the derived tag/category, used for the JLPT reference
+ * articles so their rows are tagged with the level (e.g. 'N5') rather than the
+ * file name. Everything else follows the same flow as lesson files.
+ */
+function extractVocabularyFromFile(filePath, source?: { tag?: string; category?: string }) {
   const content = fs.readFileSync(filePath, 'utf8');
   const vocabulary = [];
   let itemCounter = 0;
@@ -36,7 +48,7 @@ function extractVocabularyFromFile(filePath) {
     const tableContent = match[1];
 
     if (isVocabularyTable(tableContent)) {
-      const extracted = extractFromTable(tableContent, filePath, itemCounter);
+      const extracted = extractFromTable(tableContent, filePath, itemCounter, source);
       vocabulary.push(...extracted);
       itemCounter += extracted.length;
     }
@@ -53,7 +65,7 @@ function isVocabularyTable(tableContent) {
   }
 
   const headerRow = lines[0];
-  return /Hiragana/i.test(headerRow) && /Romaji/i.test(headerRow) && /English/i.test(headerRow);
+  return /Hiragana/i.test(headerRow) && /Romaji/i.test(headerRow) && /English|Meaning/i.test(headerRow);
 }
 
 /** Parse a table row into an array of trimmed cells. */
@@ -79,34 +91,45 @@ function stripEmojis(text) {
   return text.trim();
 }
 
-function addTokensFromCell(cell, tokens) {
-  if (!cell) return;
+/** Split a table cell into normalized alternatives ("a/b" and parentheticals), dropping dashes. */
+function normalizedAlternatives(cell: string): string[] {
+  if (!cell) return [];
   const cleaned = cell.replace(/（.*?）/g, '').replace(/\(.*?\)/g, '').trim();
-  cleaned.split(/[/／]/).forEach(part => {
-    const normalized = normalizeToken(part);
-    if (normalized) {
-      tokens.add(normalized);
-    }
-  });
+  return cleaned
+    .split(/[/／]/)
+    .map(normalizeToken)
+    .filter(part => part && !/^-+$/.test(part));
 }
 
-/** Extract N5 vocabulary tokens from the N5 reference article. */
-function extractN5VocabularyTokens(): string[] {
-  if (!fs.existsSync(N5_REFERENCE_FILE)) {
+/** A JLPT reference entry; kanji is omitted for kana-only words. */
+interface JlptEntry {
+  kanji?: string;
+  hiragana: string;
+  romaji: string;
+}
+
+/**
+ * Extract structured entries ({ kanji?, hiragana, romaji }) from a JLPT reference
+ * article. Reading alternatives (なに/なん) are paired by position; multiple kanji
+ * (叔父/伯父) yield one entry each. The dictionary uses these to badge words by
+ * reading while requiring kanji to agree when both sides have one.
+ */
+function extractJlptEntries(articleFile: string): JlptEntry[] {
+  if (!fs.existsSync(articleFile)) {
     return [];
   }
 
-  const content = fs.readFileSync(N5_REFERENCE_FILE, 'utf8');
-  const tokens = new Set<string>();
+  const content = fs.readFileSync(articleFile, 'utf8');
+  const seen = new Set<string>();
+  const entries: JlptEntry[] = [];
   const lines = content.split('\n');
 
   for (let index = 0; index < lines.length; index++) {
-    const line = lines[index];
-    if (!line.startsWith('|')) {
+    if (!lines[index].startsWith('|')) {
       continue;
     }
 
-    const headerCells = parseRow(line);
+    const headerCells = parseRow(lines[index]);
     const hiraganaIdx = findColumnIndex(headerCells, 'Hiragana');
     const kanjiIdx = findColumnIndex(headerCells, 'Kanji');
     const romajiIdx = findColumnIndex(headerCells, 'Romaji');
@@ -126,21 +149,32 @@ function extractN5VocabularyTokens(): string[] {
       }
 
       const cells = parseRow(row);
-      const hiragana = cells[hiraganaIdx] || '';
-      const kanji = kanjiIdx >= 0 ? cells[kanjiIdx] : '';
-      const romaji = cells[romajiIdx] || '';
+      const hiraganas = normalizedAlternatives(cells[hiraganaIdx] || '');
+      const romajis = normalizedAlternatives(romajiIdx >= 0 ? cells[romajiIdx] || '' : '');
+      const kanjis = normalizedAlternatives(kanjiIdx >= 0 ? cells[kanjiIdx] || '' : '');
 
-      if (!hiragana || hiragana.match(/^-+$/)) {
-        continue;
+      const readingCount = Math.max(hiraganas.length, romajis.length);
+      for (let i = 0; i < readingCount; i++) {
+        const hiragana = hiraganas[i] ?? hiraganas[0] ?? '';
+        const romaji = romajis[i] ?? romajis[0] ?? '';
+        if (!hiragana && !romaji) {
+          continue;
+        }
+        for (const kanji of kanjis.length > 0 ? kanjis : [undefined]) {
+          const key = `${kanji ?? ''}|${hiragana}|${romaji}`;
+          if (seen.has(key)) {
+            continue;
+          }
+          seen.add(key);
+          entries.push(kanji ? { kanji, hiragana, romaji } : { hiragana, romaji });
+        }
       }
-
-      addTokensFromCell(hiragana, tokens);
-      addTokensFromCell(kanji, tokens);
-      addTokensFromCell(romaji, tokens);
     }
   }
 
-  return Array.from(tokens).sort();
+  return entries.sort((a, b) =>
+    `${a.hiragana}${a.romaji}${a.kanji ?? ''}`.localeCompare(`${b.hiragana}${b.romaji}${b.kanji ?? ''}`),
+  );
 }
 
 /** Map of lesson slug → doc path, derived from the lesson files on disk so new lessons link automatically. */
@@ -162,7 +196,9 @@ function buildLessonPaths(): Record<string, string> {
     }
   };
   walk(DEFAULT_LESSONS_DIR);
-  paths.n5 = 'docs/reference/n5-vocabulary';
+  for (const level of JLPT_LEVELS) {
+    paths[level.tag.toLowerCase()] = `docs/${level.article.replace(/\.mdx?$/, '')}`;
+  }
   return paths;
 }
 
@@ -180,18 +216,21 @@ function updateLessonPaths() {
   }
 }
 
-function updateN5VocabularyData() {
-  const payload = { tokens: extractN5VocabularyTokens() };
+function updateJlptVocabularyData() {
+  const payload: Record<string, JlptEntry[]> = {};
+  for (const level of JLPT_LEVELS) {
+    payload[level.tag] = extractJlptEntries(jlptArticlePath(level.article));
+  }
   const nextContent = `${JSON.stringify(payload, null, 2)}\n`;
-  const existingContent = fs.existsSync(N5_VOCABULARY_FILE)
-    ? fs.readFileSync(N5_VOCABULARY_FILE, 'utf8')
+  const existingContent = fs.existsSync(JLPT_VOCABULARY_FILE)
+    ? fs.readFileSync(JLPT_VOCABULARY_FILE, 'utf8')
     : '';
 
   if (existingContent !== nextContent) {
-    fs.writeFileSync(N5_VOCABULARY_FILE, nextContent);
-    console.log('✅ N5 vocabulary data updated successfully!');
+    fs.writeFileSync(JLPT_VOCABULARY_FILE, nextContent);
+    console.log('✅ JLPT vocabulary data updated successfully!');
   } else {
-    console.log('✅ N5 vocabulary data is up to date (no changes needed)');
+    console.log('✅ JLPT vocabulary data is up to date (no changes needed)');
   }
 }
 
@@ -204,7 +243,7 @@ function findColumnIndex(headerCells, columnName) {
 }
 
 /** Extract vocabulary items from a table, filtering out particles. */
-function extractFromTable(tableContent, filePath, startIndex = 0) {
+function extractFromTable(tableContent, filePath, startIndex = 0, source?: { tag?: string; category?: string }) {
   const vocabulary = [];
   const rows = tableContent.trim().split('\n');
 
@@ -217,9 +256,10 @@ function extractFromTable(tableContent, filePath, startIndex = 0) {
   const kanjiIdx = findColumnIndex(headerCells, 'Kanji');
   const romajiIdx = findColumnIndex(headerCells, 'Romaji');
   const englishIdx = findColumnIndex(headerCells, 'English');
+  const glossIdx = englishIdx !== -1 ? englishIdx : findColumnIndex(headerCells, 'Meaning');
   const typeIdx = findColumnIndex(headerCells, 'Type');
 
-  if (hiraganaIdx === -1 || romajiIdx === -1 || englishIdx === -1) {
+  if (hiraganaIdx === -1 || romajiIdx === -1 || glossIdx === -1) {
     return vocabulary;
   }
 
@@ -238,7 +278,7 @@ function extractFromTable(tableContent, filePath, startIndex = 0) {
     const hiragana = cellAt(hiraganaIdx);
     const kanji = cellAt(kanjiIdx);
     const romaji = stripEmojis(cellAt(romajiIdx));
-    const english = stripEmojis(cellAt(englishIdx));
+    const english = stripEmojis(cellAt(glossIdx));
     const type = cellAt(typeIdx);
 
     if (!hiragana || !romaji || !english || hiragana.includes('---') || hiragana.match(/Hiragana|Kanji|Romaji|English/i)) {
@@ -260,7 +300,9 @@ function extractFromTable(tableContent, filePath, startIndex = 0) {
     const fileId = path.basename(filePath).replace(/\.mdx?$/, '').replace(/[^a-zA-Z0-9]/g, '');
 
     let category = 'general';
-    if (filePath.includes('/vocabulary/')) {
+    if (source?.category) {
+      category = source.category;
+    } else if (filePath.includes('/vocabulary/')) {
       category = path.basename(path.dirname(filePath));
     } else if (filePath.includes('/grammar/')) {
       category = 'grammar';
@@ -274,7 +316,7 @@ function extractFromTable(tableContent, filePath, startIndex = 0) {
       romaji,
       meaning: english,
       category,
-      tags: [path.basename(filePath).replace(/\.mdx?$/, '')],
+      tags: [source?.tag ?? path.basename(filePath).replace(/\.mdx?$/, '')],
       type: type || 'unknown',
     };
 
@@ -314,7 +356,19 @@ function scanAllLessons(): VocabularyData {
     }
   }
 
-  scanDirectory(process.env.TEST_LESSONS_DIR || DEFAULT_LESSONS_DIR);
+  const lessonsDir = process.env.TEST_LESSONS_DIR || DEFAULT_LESSONS_DIR;
+  scanDirectory(lessonsDir);
+
+  const docsDir = path.dirname(lessonsDir);
+  for (const level of JLPT_LEVELS) {
+    const articleFile = path.join(docsDir, level.article);
+    if (!fs.existsSync(articleFile)) {
+      continue;
+    }
+    const articleVocabulary = extractVocabularyFromFile(articleFile, { tag: level.tag, category: 'reference' });
+    vocabulary.push(...articleVocabulary);
+    articleVocabulary.forEach(item => categories.add(item.category));
+  }
 
   vocabulary.sort((a, b) => {
     const fileCompare = a.tags[0].localeCompare(b.tags[0]);
@@ -504,7 +558,7 @@ function main(options: { force?: boolean } = {}) {
     console.log('✅ Vocabulary file is up to date (no changes needed)');
   }
 
-  updateN5VocabularyData();
+  updateJlptVocabularyData();
   updateLessonPaths();
 }
 
@@ -521,7 +575,7 @@ export {
   DEFAULT_SORT_OPTIONS,
   VALID_TYPES,
   extractVocabularyFromFile,
-  extractN5VocabularyTokens,
+  extractJlptEntries,
   buildLessonPaths,
   scanAllLessons,
   mergeVocabulary,

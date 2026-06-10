@@ -95,8 +95,9 @@ The valid values live in [`src/data/vocabulary-types.js`](../../src/data/vocabul
 
 The system automatically:
 
-- **Scans** all lesson files in `docs/lessons/`
-- **Extracts** vocabulary from tables with correct structure
+- **Scans** all lesson files in `docs/lessons/`, plus the JLPT reference articles configured in
+  [`src/data/jlpt-levels.ts`](../../src/data/jlpt-levels.ts) (e.g. `docs/reference/n5-vocabulary.md`)
+- **Extracts** vocabulary from tables with correct structure (the `English` column may also be named `Meaning`)
 - **Updates** `src/data/vocabulary.yaml`
 - **Merges tags** when the same word appears in multiple lessons
 - **Prevents** duplicates by content (hiragana + romaji + meaning)
@@ -130,8 +131,10 @@ the [dictionary page](../../src/pages/dictionary.tsx) resolves each tag through 
 tag points at `docs/lessons/grammar/actions-and-events/listing-actions`). Anything unmatched falls back to the
 vocabulary folder.
 
-The `n5` tag maps to the [reference article](../../docs/reference/n5-vocabulary.md) explicitly. If two lesson files
-share a basename they collide on the same tag, so basenames must stay unique across folders.
+Each JLPT level from [`src/data/jlpt-levels.ts`](../../src/data/jlpt-levels.ts) maps its tag to its reference article
+(e.g. the `n5` tag → [`docs/reference/n5-vocabulary.md`](../../docs/reference/n5-vocabulary.md)); adding an `N4` level
+links its `n4` tag automatically. If two lesson files share a basename they collide on the same tag, so basenames must
+stay unique across folders.
 
 The [e2e helpers](../../tests/e2e/helpers/lessonData.ts) resolve lesson URLs through the same manifest, and
 a [consistency test](../../tests/scripts/lesson-paths.test.ts) keeps the two from drifting apart.
@@ -330,9 +333,10 @@ Lesson Files → Extraction Script → vocabulary.yaml → Dictionary Page
 **`src/data/vocabulary.yaml`** — main vocabulary database consumed by the Dictionary page (`/dictionary`) and the
 Vocabulary page (`/vocabulary`). Contains all extracted entries with merged tags, categories, and sort options.
 
-**`src/data/n5-vocabulary.json`** — flat list of normalized tokens (hiragana, kanji, romaji) extracted from
-`docs/reference/n5-vocabulary.md`. Used by the dictionary to highlight N5-level words. Updated in the same run as
-`vocabulary.yaml`.
+**`src/data/jlpt-vocabulary.json`** — normalized tokens (hiragana, kanji, romaji) per JLPT level, keyed by level tag
+(e.g. `{ "N5": [...] }`), extracted from the reference articles in [`jlpt-levels.ts`](../../src/data/jlpt-levels.ts).
+The dictionary loads this file and badges each entry with every level whose token set it matches, so adding an `N4`
+level needs no dictionary change. Updated in the same run as `vocabulary.yaml`.
 
 ## Testing
 
