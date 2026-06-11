@@ -382,7 +382,7 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | 食べる | たべる | taberu | to eat | verb |
 | 寝る | ねる | neru | to sleep | verb |
 | 起きる | おきる | okiru | to wake up, get up | verb |
-| 見る | みる | miru | to see, watch | verb |
+| 見る | みる | miru | to see | verb |
 |  | いる | iru | to exist (animate) | verb |
 | 出る | でる | deru | to go out, exit | verb |
 | 開ける | あける | akeru | to open | verb |

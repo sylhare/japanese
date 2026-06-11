@@ -1794,6 +1794,7 @@ vocabulary:
     meaning: 'to see'
     category: 'essentials'
     tags:
+      - 'N5'
       - 'confusing-kanji'
       - 'dictionary-form'
     type: 'verb'
