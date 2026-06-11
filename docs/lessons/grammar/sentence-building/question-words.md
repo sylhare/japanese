@@ -2,7 +2,7 @@
 sidebar_position: 2
 title: Question Words
 description: Learn Japanese question words — why, what, when, where, who, how, how long, how many, and more
-tags: [grammar, question-words, interrogatives, particles, vocabulary]
+tags: [grammar, questions, question-words, interrogatives, particles]
 ---
 
 import NextSteps from '@site/src/components/NextSteps';

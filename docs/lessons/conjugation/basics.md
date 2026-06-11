@@ -2,7 +2,7 @@
 sidebar_position: 1
 title: Introduction to Verb Conjugation
 description: A gentle introduction to Japanese verb conjugation
-tags: [grammar, verbs, conjugation, basics]
+tags: [grammar, conjugation, verbs, basic]
 ---
 
 import NextSteps from '@site/src/components/NextSteps';

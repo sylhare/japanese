@@ -2,7 +2,7 @@
 sidebar_position: 1
 title: Appearance - そう / みたい
 description: Learn expressions for describing how things look (そう, みたい)
-tags: [grammar, appearance, そう, みたい]
+tags: [grammar, appearance, describing]
 ---
 
 # Appearance: そう / みたい

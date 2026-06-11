@@ -2,7 +2,7 @@
 sidebar_position: 1
 title: Expressing Desire - たい
 description: Learn how to express wanting to do something using たい
-tags: [grammar, desire, want, たい, verb-conjugation]
+tags: [grammar, desire, want, conjugation]
 ---
 
 # Expressing Desire: たい

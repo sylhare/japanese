@@ -2,7 +2,7 @@
 sidebar_position: 2
 title: Dictionary form
 description: Understanding Godan, Ichidan, and irregular verbs
-tags: [grammar, verbs, conjugation, 活用]
+tags: [grammar, conjugation, verbs, dictionary-form]
 ---
 
 import NextSteps from '@site/src/components/NextSteps';

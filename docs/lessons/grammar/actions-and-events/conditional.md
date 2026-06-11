@@ -2,7 +2,7 @@
 sidebar_position: 4
 title: Conditional - と / たら
 description: Learn how to express conditionals using と for natural consequences and たら for specific situations
-tags: [grammar, conditional, と, たら, particles]
+tags: [grammar, conditional, particles]
 ---
 
 import NextSteps from '@site/src/components/NextSteps';

@@ -2,7 +2,7 @@
 sidebar_position: 6
 title: Passive Form - られる
 description: Learn how to express that something is done to the subject in Japanese
-tags: [grammar, verbs, conjugation, られる形, passive]
+tags: [grammar, conjugation, verbs, passive-form]
 ---
 
 import NextSteps from '@site/src/components/NextSteps';
