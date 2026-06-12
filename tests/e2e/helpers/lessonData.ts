@@ -43,7 +43,7 @@ export const INTRO_LINKS: Lesson[] = [
 
 export const CONJUGATION_LESSONS: Lesson[] = [
   { name: 'Verb Conjugation Basics', path: 'basics',          heading: /verb conjugation|conjugation/i },
-  { name: 'Dictionary Form',         path: 'dictionary-form', heading: /introduction/i },
+  { name: 'Dictionary Form',         path: 'dictionary-form', heading: /dictionary form/i },
   { name: 'Present Forms',           path: 'present',         heading: /present forms/i,     partial: true },
   { name: 'Past Forms',              path: 'past',            heading: /past forms/i,        partial: true },
   { name: 'Potential Form',          path: 'potential-form',  heading: /potential form|できる/i },
@@ -109,7 +109,7 @@ export const GRAMMAR_SECTIONS: LessonSection[] = [
     heading: /explaining and reasoning/i,
     subLessons: [
       { name: 'Reason',    path: 'reason',    heading: /reason/i },
-      { name: 'Intention', path: 'intend_to', heading: /intention|つもり/i },
+      { name: 'Intention', path: 'intend-to', heading: /intention|つもり/i },
     ],
   },
 ];

@@ -48,10 +48,10 @@ test.describe('Homepage', () => {
       expect(cardCount).toBe(4);
     });
 
-    test('should display Lessons card', async ({ page }) => {
-      const lessonsCard = page.locator('a[class*="featureCard"]').filter({ hasText: /lessons/i }).first();
-      await expect(lessonsCard).toBeVisible();
-      await expect(lessonsCard).toContainText(/structured learning path/i);
+    test('should display Conjugation card', async ({ page }) => {
+      const conjugationCard = page.locator('a[class*="featureCard"]').filter({ hasText: /conjugation/i }).first();
+      await expect(conjugationCard).toBeVisible();
+      await expect(conjugationCard).toContainText(/verb forms/i);
     });
 
     test('should display Grammar card', async ({ page }) => {

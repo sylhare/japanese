@@ -25,6 +25,6 @@ test.describe('Conjugation Cross-references', () => {
     await expect(dictionaryLink).toBeVisible();
     await dictionaryLink.click();
     await verifyPageIsFound(page);
-    await expect(page.getByRole('heading', { name: /introduction/i }).first()).toBeVisible();
+    await expect(page.getByRole('heading', { name: /dictionary form/i }).first()).toBeVisible();
   });
 });
