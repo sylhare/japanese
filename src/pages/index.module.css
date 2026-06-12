@@ -39,6 +39,7 @@
 }
 
 .getStartedButton {
+  composes: press-card from global;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -47,26 +48,17 @@
   font-weight: 600;
   color: #1a1a1a;
   background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
-  border: 2px solid rgba(0, 0, 0, 0.1);
-  border-radius: 16px;
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.15);
   text-decoration: none;
-  transition: all 0.2s ease;
-  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.15);
 }
 
 .getStartedButton:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.15);
   text-decoration: none;
   color: #000000;
   background: linear-gradient(135deg, #ffffff 0%, #eeeeee 100%);
   border-color: rgba(0, 0, 0, 0.15);
-}
-
-.getStartedButton:active {
-  transform: translateY(4px);
-  box-shadow: none;
-  transition-duration: 0.05s;
 }
 
 .arrow {

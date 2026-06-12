@@ -187,25 +187,51 @@
 }
 
 /* Duolingo-style press effect — shared by all cards and nav buttons */
-.press-card {
+.press-card,
+.pagination-nav__link {
   border: 2px solid var(--ifm-color-emphasis-200);
   border-radius: 16px;
   box-shadow: 0 3px 0 0 var(--ifm-color-emphasis-200);
   transition: all 0.2s ease;
 }
-.press-card:hover {
+.press-card:hover,
+.pagination-nav__link:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 0 0 var(--ifm-color-emphasis-300);
   border-color: var(--ifm-color-primary);
 }
-.press-card:active {
+.press-card:active,
+.pagination-nav__link:active {
   transform: translateY(3px);
   box-shadow: none;
   transition-duration: 0.05s;
 }
 
+/* Slightly more squared, thinner-bordered, and flatter than the default press-card */
 .pagination-nav__link {
-  composes: press-card;
+  border-radius: 10px;
+  border-width: 1px;
+  box-shadow: 0 2px 0 0 var(--ifm-color-emphasis-200);
+}
+.pagination-nav__link:hover {
+  box-shadow: 0 3px 0 0 var(--ifm-color-emphasis-300);
+}
+
+/* Tag pills — same border and hover style as the pagination links */
+.press-tag,
+.theme-doc-footer-tags-row a[class*='tag'],
+.docs-tags-list-page main a[class*='tag'] {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+.press-tag:hover,
+.theme-doc-footer-tags-row a[class*='tag']:hover,
+.docs-tags-list-page main a[class*='tag']:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 0 0 var(--ifm-color-emphasis-300);
+  border-color: var(--ifm-color-primary);
+  text-decoration: none;
 }
 
 /* Text selection highlight */
