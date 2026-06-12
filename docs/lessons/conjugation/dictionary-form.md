@@ -7,7 +7,7 @@ tags: [grammar, verbs, conjugation, 活用]
 
 import NextSteps from '@site/src/components/NextSteps';
 
-# Introduction
+# Dictionary form
 
 All Japanese verbs belong to one of three groups. Learning to identify which group a verb belongs to is the first step to conjugating it correctly.
 
@@ -21,7 +21,7 @@ Also called **u-verbs** or **consonant-stem verbs**.
 
 ### Identification
 
-- End in an う (u) sound: く, ぐ, す, つ, ぬ, む, る, う
+- End in an う (u) sound: く, ぐ, す, つ, ぬ, ぶ, む, る, う
 - The **most common** type of verb
 
 ### Common Examples
@@ -46,6 +46,7 @@ The stem changes based on the final syllable:
 | す → し | + ます | 話す → はなします |
 | つ → ち | + ます | 待つ → まちます |
 | ぬ → に | + ます | 死ぬ → しにます |
+| ぶ → び | + ます | 遊ぶ → あそびます |
 | む → み | + ます | 読む → よみます |
 | る → り | + ます | 作る → つくります |
 | う → い | + ます | 買う → かいます |
@@ -100,9 +101,9 @@ There are only **two** irregular verbs in Japanese!
 | Nai | しない |
 
 **Compound verbs with する:**
-- 勉強する (benkyō suru) — to study
-- 運動する (undō suru) — to exercise
-- 料理する (ryōri suru) — to cook
+- 勉強する (benkyou suru) — to study
+- 運動する (undou suru) — to exercise
+- 料理する (ryouri suru) — to cook
 
 ### 来る (kuru) — to come
 

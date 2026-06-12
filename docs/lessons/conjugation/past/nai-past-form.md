@@ -11,6 +11,15 @@ import NextSteps from '@site/src/components/NextSteps';
 
 The past negative expresses that something did not happen — change ない to **なかった**.
 
+:::tip Polite Form
+In polite speech, the past negative uses **ませんでした**:
+- たべる → たべませんでした (didn't eat)
+- いく → いきませんでした (didn't go)
+- する → しませんでした (didn't do)
+
+The なかった form below is the casual equivalent.
+:::
+
 ## Group 1 (Godan) — ない → なかった
 
 Change the ない ending to なかった for each pattern:
