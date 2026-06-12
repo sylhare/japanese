@@ -1,8 +1,11 @@
 // Shared vocabulary helpers: valid types, the token normalizer, and the item shape.
 // See .github/docs/vocabulary-extraction.md for full documentation.
 
+import lessonPaths from './lesson-paths.json';
+
 export const VALID_TYPES: string[] = [
   'noun',
+  'pronoun',
   'verb',
   'い-adjective',
   'な-adjective',
@@ -41,4 +44,16 @@ export function normalizeToken(value?: string): string {
     .replace(/[~～]/g, '')
     .replace(/\s+/g, '')
     .toLowerCase();
+}
+
+/**
+ * Get the lesson path for a tag.
+ *
+ * Paths are derived from the lesson files on disk by the extraction script
+ * (`src/data/lesson-paths.json`), so new lessons are linked automatically with
+ * no manual mapping. Unknown tags fall back to the vocabulary folder.
+ */
+export function getTagPath(tag: string): string {
+  const paths = lessonPaths as Record<string, string>;
+  return paths[tag.toLowerCase()] ?? `docs/lessons/vocabulary/${tag}`;
 }

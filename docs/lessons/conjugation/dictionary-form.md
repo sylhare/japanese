@@ -128,7 +128,7 @@ Some verbs end in る but are **Group 1**, not Group 2!
 |------|-------|------|
 | 食べる | 2 | べ has an え-sound before る |
 | 見る | 2 | み has an い-sound before る |
-| 作る | 1 | く doesn't have い or え sound |
+| 作る | 1 | く has an う-sound before る (not い/え) |
 | 帰る | 1 | え sound, but it's an exception |
 | 入る | 1 | い sound, but it's an exception |
 

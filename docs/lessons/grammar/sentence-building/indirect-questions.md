@@ -26,6 +26,10 @@ The **か** marks where the inner question ends, and the main verb at the very e
 - えきが どこにあるか しっていますか。 — Do you know where the station is?
   - *eki ga doko ni aru ka shitte imasu ka.*
 
+:::tip は → が inside the clause
+Notice えき**は** became えき**が**. The topic marker は often shifts to が once a question is embedded — the inner clause marks えき as its own subject rather than the sentence's topic.
+:::
+
 ### From direct to embedded
 
 The embedded clause always drops the polite ending and keeps か at the end:

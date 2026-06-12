@@ -77,7 +77,7 @@ Remove **な** and add **そう**.
   - *ame ga furu mitai desu*
 - がくせい みたい です - (He/She) looks like a student.
   - *gakusei mitai desu*
-- おいしい みたい です - It looks delicious.
+- おいしい みたい です - It seems delicious.
   - *oishii mitai desu*
 
 :::tip そう vs みたい

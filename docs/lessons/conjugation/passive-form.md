@@ -88,8 +88,8 @@ The potential form uses the same られる ending for Ichidan verbs. See [Potent
 > *I was praised by my teacher.*
 
 **Honorific use:**
-> しゃちょうが**いわれました**。
-> *The president said... (respectful)*
+> しゃちょうが**こられました**。
+> *The president came. (respectful)*
 
 **Ability (potential reading of られる):**
 > ダンスを **おしえられる** ひとを さがしています。

@@ -28,20 +28,20 @@ Learn how to express ongoing actions, trying things, and thoughts.
 ### Examples
 
 - たべる → たべている - Currently eating
-  - *tabeteiru*
+  - *tabete iru*
 - よむ → よんでいる - Currently reading
-  - *yondeiru*
+  - *yonde iru*
 - はしる → はしっている - Currently running
-  - *hashitteiru*
+  - *hashitte iru*
 
 ### In Sentences
 
 - いま テレビ を みている - I'm watching TV now.
-  - *ima terebi o miteiru*
+  - *ima terebi o mite iru*
 - ともだち が きている - My friend is here/has come.
-  - *tomodachi ga kiteiru*
+  - *tomodachi ga kite iru*
 - まいにち べんきょうしている - I study every day.
-  - *mainichi benkyoushiteiru*
+  - *mainichi benkyou shite iru*
 
 ## Thinking
 
@@ -84,16 +84,16 @@ Learn how to express ongoing actions, trying things, and thoughts.
 #### Examples
 
 - たべる → たべてみる - Try eating
-  - *tabetemiru*
+  - *tabete miru*
 - きく → きいてみる - Try asking/listening
-  - *kiitemiru*
+  - *kiite miru*
 - する → してみる - Try doing
-  - *shitemiru*
+  - *shite miru*
 
 #### In Sentences
 
 - この りょうり を たべてみて - Try eating this dish.
-  - *kono ryouri o tabetemite*
+  - *kono ryouri o tabete mite*
 - にほんご を はなしてみます - I'll try speaking Japanese.
   - *nihongo o hanashitemimasu*
 
@@ -106,16 +106,16 @@ Learn how to express ongoing actions, trying things, and thoughts.
 #### Examples
 
 - たべる → たべてみよう - Let's try eating
-  - *tabetemiyou*
+  - *tabete miyou*
 - いく → いってみよう - Let's try going
-  - *ittemiyou*
+  - *itte miyou*
 - する → してみよう - Let's try doing
-  - *shitemiyou*
+  - *shite miyou*
 
 #### In Sentences
 
 - この ゲーム を してみよう - Let's try playing this game.
-  - *kono geemu o shitemiyou*
+  - *kono geemu o shite miyou*
 - あたらしい レストラン に いってみよう - Let's try going to the new restaurant.
-  - *atarashii resutoran ni ittemiyou*
+  - *atarashii resutoran ni itte miyou*
 

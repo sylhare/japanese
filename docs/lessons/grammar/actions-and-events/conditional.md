@@ -42,8 +42,8 @@ The verb in clause A must be in the **dictionary (plain)** form.
 
 - ふゆに なると、さむくなります — When winter comes, it gets cold.
   - *fuyu ni naru to, samuku narimasu*
-- みずを あたためると、ゆに なります — When you heat water, it becomes hot water.
-  - *mizu o atatameru to, yu ni narimasu*
+- みずを あたためると、おゆに なります — When you heat water, it becomes hot water.
+  - *mizu o atatameru to, o-yu ni narimasu*
 
 **Directions and predictable outcomes:**
 

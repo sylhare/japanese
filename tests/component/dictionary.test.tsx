@@ -4,7 +4,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import Vocabulary, { getTagPath } from '../../src/pages/dictionary';
+import Vocabulary, { getTagPath, matchesJlptEntry } from '../../src/pages/dictionary';
 import { loadVocabularyData } from '../test-utils';
 
 vi.mock('../../src/data/vocabulary.yaml', async () => {
@@ -14,9 +14,9 @@ vi.mock('../../src/data/vocabulary.yaml', async () => {
   };
 });
 
-vi.mock('../../src/data/n5-vocabulary.json', () => ({
+vi.mock('../../src/data/jlpt-vocabulary.json', () => ({
   default: {
-    tokens: ['あか', 'aka', '赤'],
+    N5: [{ kanji: '赤', hiragana: 'あか', romaji: 'aka' }],
   },
 }));
 
@@ -473,6 +473,34 @@ describe('getTagPath', () => {
       expect(getTagPath('calendar')).toBe('docs/lessons/vocabulary/time/calendar');
       expect(getTagPath('clock')).toBe('docs/lessons/vocabulary/time/clock');
       expect(getTagPath('frequency')).toBe('docs/lessons/vocabulary/time/frequency');
+    });
+  });
+
+  describe('matchesJlptEntry (homonym handling)', () => {
+    const hanaFlower = { id: 'h1', hiragana: 'はな', kanji: '花', romaji: 'hana', meaning: 'flower', category: 'vocabulary', tags: [], type: 'noun' };
+    const hanaNose = { id: 'h2', hiragana: 'はな', kanji: '鼻', romaji: 'hana', meaning: 'nose', category: 'vocabulary', tags: [], type: 'noun' };
+
+    it('matches when reading and kanji both agree', () => {
+      expect(matchesJlptEntry(hanaFlower, { kanji: '花', hiragana: 'はな', romaji: 'hana' })).toBe(true);
+    });
+
+    it('does NOT match a same-reading homonym with a different kanji', () => {
+      expect(matchesJlptEntry(hanaFlower, { kanji: '鼻', hiragana: 'はな', romaji: 'hana' })).toBe(false);
+      expect(matchesJlptEntry(hanaNose, { kanji: '花', hiragana: 'はな', romaji: 'hana' })).toBe(false);
+    });
+
+    it('matches a kana-only entry by reading alone', () => {
+      const kirei = { id: 'k1', hiragana: 'きれい', romaji: 'kirei', meaning: 'pretty', category: 'vocabulary', tags: [], type: 'な-adjective' };
+      expect(matchesJlptEntry(kirei, { hiragana: 'きれい', romaji: 'kirei' })).toBe(true);
+    });
+
+    it('matches by reading when the item has no kanji even if the entry does', () => {
+      const hanaKana = { id: 'h3', hiragana: 'はな', romaji: 'hana', meaning: 'flower', category: 'vocabulary', tags: [], type: 'noun' };
+      expect(matchesJlptEntry(hanaKana, { kanji: '花', hiragana: 'はな', romaji: 'hana' })).toBe(true);
+    });
+
+    it('does not match when the reading differs', () => {
+      expect(matchesJlptEntry(hanaFlower, { kanji: '水', hiragana: 'みず', romaji: 'mizu' })).toBe(false);
     });
   });
 });

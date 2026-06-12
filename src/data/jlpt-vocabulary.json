@@ -1,0 +1,2600 @@
+{
+  "N5": [
+    {
+      "hiragana": "tシャツ",
+      "romaji": "tiishatsu"
+    },
+    {
+      "kanji": "青",
+      "hiragana": "あお",
+      "romaji": "ao"
+    },
+    {
+      "kanji": "赤",
+      "hiragana": "あか",
+      "romaji": "aka"
+    },
+    {
+      "kanji": "明るい",
+      "hiragana": "あかるい",
+      "romaji": "akarui"
+    },
+    {
+      "kanji": "上げる",
+      "hiragana": "あげる",
+      "romaji": "ageru"
+    },
+    {
+      "kanji": "開ける",
+      "hiragana": "あける",
+      "romaji": "akeru"
+    },
+    {
+      "kanji": "朝",
+      "hiragana": "あさ",
+      "romaji": "asa"
+    },
+    {
+      "kanji": "朝ご飯",
+      "hiragana": "あさごはん",
+      "romaji": "asagohan"
+    },
+    {
+      "kanji": "明後日",
+      "hiragana": "あさって",
+      "romaji": "asatte"
+    },
+    {
+      "kanji": "足",
+      "hiragana": "あし",
+      "romaji": "ashi"
+    },
+    {
+      "kanji": "明日",
+      "hiragana": "あした",
+      "romaji": "ashita"
+    },
+    {
+      "hiragana": "あそこ",
+      "romaji": "asoko"
+    },
+    {
+      "kanji": "遊ぶ",
+      "hiragana": "あそぶ",
+      "romaji": "asobu"
+    },
+    {
+      "kanji": "暖かい",
+      "hiragana": "あたたかい",
+      "romaji": "atatakai"
+    },
+    {
+      "kanji": "頭",
+      "hiragana": "あたま",
+      "romaji": "atama"
+    },
+    {
+      "kanji": "新しい",
+      "hiragana": "あたらしい",
+      "romaji": "atarashii"
+    },
+    {
+      "kanji": "暑い",
+      "hiragana": "あつい",
+      "romaji": "atsui"
+    },
+    {
+      "kanji": "熱い",
+      "hiragana": "あつい",
+      "romaji": "atsui"
+    },
+    {
+      "kanji": "後",
+      "hiragana": "あと",
+      "romaji": "ato"
+    },
+    {
+      "hiragana": "あなた",
+      "romaji": "anata"
+    },
+    {
+      "kanji": "兄",
+      "hiragana": "あに",
+      "romaji": "ani"
+    },
+    {
+      "kanji": "姉",
+      "hiragana": "あね",
+      "romaji": "ane"
+    },
+    {
+      "hiragana": "あの",
+      "romaji": "ano"
+    },
+    {
+      "kanji": "危ない",
+      "hiragana": "あぶない",
+      "romaji": "abunai"
+    },
+    {
+      "kanji": "甘い",
+      "hiragana": "あまい",
+      "romaji": "amai"
+    },
+    {
+      "hiragana": "あまり",
+      "romaji": "amari"
+    },
+    {
+      "kanji": "雨",
+      "hiragana": "あめ",
+      "romaji": "ame"
+    },
+    {
+      "hiragana": "ありがとう",
+      "romaji": "arigatou"
+    },
+    {
+      "hiragana": "ある",
+      "romaji": "aru"
+    },
+    {
+      "kanji": "歩く",
+      "hiragana": "あるく",
+      "romaji": "aruku"
+    },
+    {
+      "hiragana": "あれ",
+      "romaji": "are"
+    },
+    {
+      "kanji": "安全",
+      "hiragana": "あんぜん",
+      "romaji": "anzen"
+    },
+    {
+      "hiragana": "いい",
+      "romaji": "ii"
+    },
+    {
+      "hiragana": "いいえ",
+      "romaji": "iie"
+    },
+    {
+      "kanji": "言う",
+      "hiragana": "いう",
+      "romaji": "iu"
+    },
+    {
+      "kanji": "家",
+      "hiragana": "いえ",
+      "romaji": "ie"
+    },
+    {
+      "kanji": "行く",
+      "hiragana": "いく",
+      "romaji": "iku"
+    },
+    {
+      "hiragana": "いくつ",
+      "romaji": "ikutsu"
+    },
+    {
+      "hiragana": "いくら",
+      "romaji": "ikura"
+    },
+    {
+      "kanji": "医者",
+      "hiragana": "いしゃ",
+      "romaji": "isha"
+    },
+    {
+      "kanji": "椅子",
+      "hiragana": "いす",
+      "romaji": "isu"
+    },
+    {
+      "kanji": "忙しい",
+      "hiragana": "いそがしい",
+      "romaji": "isogashii"
+    },
+    {
+      "hiragana": "いただきます",
+      "romaji": "itadakimasu"
+    },
+    {
+      "kanji": "一",
+      "hiragana": "いち",
+      "romaji": "ichi"
+    },
+    {
+      "kanji": "一月",
+      "hiragana": "いちがつ",
+      "romaji": "ichigatsu"
+    },
+    {
+      "kanji": "苺",
+      "hiragana": "いちご",
+      "romaji": "ichigo"
+    },
+    {
+      "kanji": "一時",
+      "hiragana": "いちじ",
+      "romaji": "ichiji"
+    },
+    {
+      "kanji": "一番",
+      "hiragana": "いちばん",
+      "romaji": "ichiban"
+    },
+    {
+      "hiragana": "いつ",
+      "romaji": "itsu"
+    },
+    {
+      "kanji": "一回",
+      "hiragana": "いっかい",
+      "romaji": "ikkai"
+    },
+    {
+      "kanji": "一緒に",
+      "hiragana": "いっしょに",
+      "romaji": "isshoni"
+    },
+    {
+      "kanji": "五つ",
+      "hiragana": "いつつ",
+      "romaji": "itsutsu"
+    },
+    {
+      "kanji": "行ってきます",
+      "hiragana": "いってきます",
+      "romaji": "ittekimasu"
+    },
+    {
+      "hiragana": "いってらっしゃい",
+      "romaji": "itterasshai"
+    },
+    {
+      "hiragana": "いつも",
+      "romaji": "itsumo"
+    },
+    {
+      "kanji": "従兄弟",
+      "hiragana": "いとこ",
+      "romaji": "itoko"
+    },
+    {
+      "kanji": "犬",
+      "hiragana": "いぬ",
+      "romaji": "inu"
+    },
+    {
+      "kanji": "今",
+      "hiragana": "いま",
+      "romaji": "ima"
+    },
+    {
+      "kanji": "妹",
+      "hiragana": "いもうと",
+      "romaji": "imouto"
+    },
+    {
+      "kanji": "妹さん",
+      "hiragana": "いもうとさん",
+      "romaji": "imoutosan"
+    },
+    {
+      "hiragana": "いらっしゃいませ",
+      "romaji": "irasshaimase"
+    },
+    {
+      "kanji": "入口",
+      "hiragana": "いりぐち",
+      "romaji": "iriguchi"
+    },
+    {
+      "hiragana": "いる",
+      "romaji": "iru"
+    },
+    {
+      "kanji": "要る",
+      "hiragana": "いる",
+      "romaji": "iru"
+    },
+    {
+      "kanji": "入れる",
+      "hiragana": "いれる",
+      "romaji": "ireru"
+    },
+    {
+      "kanji": "色",
+      "hiragana": "いろ",
+      "romaji": "iro"
+    },
+    {
+      "kanji": "上",
+      "hiragana": "うえ",
+      "romaji": "ue"
+    },
+    {
+      "kanji": "後ろ",
+      "hiragana": "うしろ",
+      "romaji": "ushiro"
+    },
+    {
+      "kanji": "歌う",
+      "hiragana": "うたう",
+      "romaji": "utau"
+    },
+    {
+      "hiragana": "うち",
+      "romaji": "uchi"
+    },
+    {
+      "kanji": "腕",
+      "hiragana": "うで",
+      "romaji": "ude"
+    },
+    {
+      "kanji": "海",
+      "hiragana": "うみ",
+      "romaji": "umi"
+    },
+    {
+      "kanji": "売る",
+      "hiragana": "うる",
+      "romaji": "uru"
+    },
+    {
+      "hiragana": "うるさい",
+      "romaji": "urusai"
+    },
+    {
+      "kanji": "嬉しい",
+      "hiragana": "うれしい",
+      "romaji": "ureshii"
+    },
+    {
+      "kanji": "運転手",
+      "hiragana": "うんてんしゅ",
+      "romaji": "untenshu"
+    },
+    {
+      "kanji": "映画",
+      "hiragana": "えいが",
+      "romaji": "eiga"
+    },
+    {
+      "kanji": "駅",
+      "hiragana": "えき",
+      "romaji": "eki"
+    },
+    {
+      "hiragana": "エンジニア",
+      "romaji": "enjinia"
+    },
+    {
+      "kanji": "鉛筆",
+      "hiragana": "えんぴつ",
+      "romaji": "enpitsu"
+    },
+    {
+      "kanji": "美味しい",
+      "hiragana": "おいしい",
+      "romaji": "oishii"
+    },
+    {
+      "kanji": "大きい",
+      "hiragana": "おおきい",
+      "romaji": "ookii"
+    },
+    {
+      "kanji": "お母さん",
+      "hiragana": "おかあさん",
+      "romaji": "okaasan"
+    },
+    {
+      "hiragana": "おかえりなさい",
+      "romaji": "okaerinasai"
+    },
+    {
+      "kanji": "お金",
+      "hiragana": "おかね",
+      "romaji": "okane"
+    },
+    {
+      "kanji": "起きる",
+      "hiragana": "おきる",
+      "romaji": "okiru"
+    },
+    {
+      "kanji": "奥さん",
+      "hiragana": "おくさん",
+      "romaji": "okusan"
+    },
+    {
+      "kanji": "送る",
+      "hiragana": "おくる",
+      "romaji": "okuru"
+    },
+    {
+      "kanji": "お酒",
+      "hiragana": "おさけ",
+      "romaji": "osake"
+    },
+    {
+      "kanji": "伯父",
+      "hiragana": "おじ",
+      "romaji": "oji"
+    },
+    {
+      "kanji": "叔父",
+      "hiragana": "おじ",
+      "romaji": "oji"
+    },
+    {
+      "kanji": "お爺さん",
+      "hiragana": "おじいさん",
+      "romaji": "ojiisan"
+    },
+    {
+      "kanji": "教える",
+      "hiragana": "おしえる",
+      "romaji": "oshieru"
+    },
+    {
+      "kanji": "押す",
+      "hiragana": "おす",
+      "romaji": "osu"
+    },
+    {
+      "kanji": "遅い",
+      "hiragana": "おそい",
+      "romaji": "osoi"
+    },
+    {
+      "kanji": "お茶",
+      "hiragana": "おちゃ",
+      "romaji": "ocha"
+    },
+    {
+      "kanji": "夫",
+      "hiragana": "おっと",
+      "romaji": "otto"
+    },
+    {
+      "kanji": "お父さん",
+      "hiragana": "おとうさん",
+      "romaji": "otousan"
+    },
+    {
+      "kanji": "弟",
+      "hiragana": "おとうと",
+      "romaji": "otouto"
+    },
+    {
+      "kanji": "弟さん",
+      "hiragana": "おとうとさん",
+      "romaji": "otoutosan"
+    },
+    {
+      "kanji": "一昨日",
+      "hiragana": "おととい",
+      "romaji": "ototoi"
+    },
+    {
+      "kanji": "お腹",
+      "hiragana": "おなか",
+      "romaji": "onaka"
+    },
+    {
+      "kanji": "お兄さん",
+      "hiragana": "おにいさん",
+      "romaji": "oniisan"
+    },
+    {
+      "kanji": "お姉さん",
+      "hiragana": "おねえさん",
+      "romaji": "oneesan"
+    },
+    {
+      "kanji": "お願いします",
+      "hiragana": "おねがいします",
+      "romaji": "onegaishimasu"
+    },
+    {
+      "kanji": "伯母",
+      "hiragana": "おば",
+      "romaji": "oba"
+    },
+    {
+      "kanji": "叔母",
+      "hiragana": "おば",
+      "romaji": "oba"
+    },
+    {
+      "kanji": "お婆さん",
+      "hiragana": "おばあさん",
+      "romaji": "obaasan"
+    },
+    {
+      "hiragana": "おはよう",
+      "romaji": "ohayou"
+    },
+    {
+      "kanji": "覚える",
+      "hiragana": "おぼえる",
+      "romaji": "oboeru"
+    },
+    {
+      "kanji": "重い",
+      "hiragana": "おもい",
+      "romaji": "omoi"
+    },
+    {
+      "kanji": "思う",
+      "hiragana": "おもう",
+      "romaji": "omou"
+    },
+    {
+      "kanji": "面白い",
+      "hiragana": "おもしろい",
+      "romaji": "omoshiroi"
+    },
+    {
+      "hiragana": "おやすみなさい",
+      "romaji": "oyasuminasai"
+    },
+    {
+      "kanji": "泳ぐ",
+      "hiragana": "およぐ",
+      "romaji": "oyogu"
+    },
+    {
+      "hiragana": "オレンジ",
+      "romaji": "orenji"
+    },
+    {
+      "kanji": "音楽",
+      "hiragana": "おんがく",
+      "romaji": "ongaku"
+    },
+    {
+      "hiragana": "が",
+      "romaji": "ga"
+    },
+    {
+      "hiragana": "か",
+      "romaji": "ka"
+    },
+    {
+      "kanji": "会社",
+      "hiragana": "かいしゃ",
+      "romaji": "kaisha"
+    },
+    {
+      "kanji": "会社員",
+      "hiragana": "かいしゃいん",
+      "romaji": "kaishain"
+    },
+    {
+      "kanji": "買い物する",
+      "hiragana": "かいものする",
+      "romaji": "kaimonosuru"
+    },
+    {
+      "kanji": "買う",
+      "hiragana": "かう",
+      "romaji": "kau"
+    },
+    {
+      "kanji": "帰る",
+      "hiragana": "かえる",
+      "romaji": "kaeru"
+    },
+    {
+      "kanji": "顔",
+      "hiragana": "かお",
+      "romaji": "kao"
+    },
+    {
+      "kanji": "書く",
+      "hiragana": "かく",
+      "romaji": "kaku"
+    },
+    {
+      "kanji": "学生",
+      "hiragana": "がくせい",
+      "romaji": "gakusei"
+    },
+    {
+      "kanji": "掛ける",
+      "hiragana": "かける",
+      "romaji": "kakeru"
+    },
+    {
+      "kanji": "風",
+      "hiragana": "かぜ",
+      "romaji": "kaze"
+    },
+    {
+      "kanji": "家族",
+      "hiragana": "かぞく",
+      "romaji": "kazoku"
+    },
+    {
+      "kanji": "肩",
+      "hiragana": "かた",
+      "romaji": "kata"
+    },
+    {
+      "kanji": "硬い",
+      "hiragana": "かたい",
+      "romaji": "katai"
+    },
+    {
+      "kanji": "学校",
+      "hiragana": "がっこう",
+      "romaji": "gakkou"
+    },
+    {
+      "kanji": "悲しい",
+      "hiragana": "かなしい",
+      "romaji": "kanashii"
+    },
+    {
+      "kanji": "彼女",
+      "hiragana": "かのじょ",
+      "romaji": "kanojo"
+    },
+    {
+      "kanji": "鞄",
+      "hiragana": "かばん",
+      "romaji": "kaban"
+    },
+    {
+      "kanji": "紙",
+      "hiragana": "かみ",
+      "romaji": "kami"
+    },
+    {
+      "hiragana": "カメラ",
+      "romaji": "kamera"
+    },
+    {
+      "kanji": "火曜日",
+      "hiragana": "かようび",
+      "romaji": "kayoubi"
+    },
+    {
+      "hiragana": "から",
+      "romaji": "kara"
+    },
+    {
+      "kanji": "辛い",
+      "hiragana": "からい",
+      "romaji": "karai"
+    },
+    {
+      "kanji": "体",
+      "hiragana": "からだ",
+      "romaji": "karada"
+    },
+    {
+      "kanji": "借りる",
+      "hiragana": "かりる",
+      "romaji": "kariru"
+    },
+    {
+      "kanji": "軽い",
+      "hiragana": "かるい",
+      "romaji": "karui"
+    },
+    {
+      "hiragana": "カレー",
+      "romaji": "karee"
+    },
+    {
+      "kanji": "彼",
+      "hiragana": "かれ",
+      "romaji": "kare"
+    },
+    {
+      "kanji": "彼ら",
+      "hiragana": "かれら",
+      "romaji": "karera"
+    },
+    {
+      "kanji": "川",
+      "hiragana": "かわ",
+      "romaji": "kawa"
+    },
+    {
+      "hiragana": "かわいい",
+      "romaji": "kawaii"
+    },
+    {
+      "kanji": "看護師",
+      "hiragana": "かんごし",
+      "romaji": "kangoshi"
+    },
+    {
+      "kanji": "簡単",
+      "hiragana": "かんたん",
+      "romaji": "kantan"
+    },
+    {
+      "kanji": "木",
+      "hiragana": "き",
+      "romaji": "ki"
+    },
+    {
+      "kanji": "黄色",
+      "hiragana": "きいろ",
+      "romaji": "kiiro"
+    },
+    {
+      "kanji": "聞く",
+      "hiragana": "きく",
+      "romaji": "kiku"
+    },
+    {
+      "kanji": "喫茶店",
+      "hiragana": "きっさてん",
+      "romaji": "kissaten"
+    },
+    {
+      "hiragana": "きっと",
+      "romaji": "kitto"
+    },
+    {
+      "kanji": "切符",
+      "hiragana": "きっぷ",
+      "romaji": "kippu"
+    },
+    {
+      "kanji": "昨日",
+      "hiragana": "きのう",
+      "romaji": "kinou"
+    },
+    {
+      "kanji": "九",
+      "hiragana": "きゅう",
+      "romaji": "kyuu"
+    },
+    {
+      "kanji": "牛肉",
+      "hiragana": "ぎゅうにく",
+      "romaji": "gyuuniku"
+    },
+    {
+      "kanji": "牛乳",
+      "hiragana": "ぎゅうにゅう",
+      "romaji": "gyuunyuu"
+    },
+    {
+      "kanji": "今日",
+      "hiragana": "きょう",
+      "romaji": "kyou"
+    },
+    {
+      "kanji": "教室",
+      "hiragana": "きょうしつ",
+      "romaji": "kyoushitsu"
+    },
+    {
+      "kanji": "去年",
+      "hiragana": "きょねん",
+      "romaji": "kyonen"
+    },
+    {
+      "kanji": "嫌い",
+      "hiragana": "きらい",
+      "romaji": "kirai"
+    },
+    {
+      "hiragana": "きれい",
+      "romaji": "kirei"
+    },
+    {
+      "kanji": "銀行",
+      "hiragana": "ぎんこう",
+      "romaji": "ginkou"
+    },
+    {
+      "kanji": "金曜日",
+      "hiragana": "きんようび",
+      "romaji": "kinyoubi"
+    },
+    {
+      "kanji": "九",
+      "hiragana": "く",
+      "romaji": "ku"
+    },
+    {
+      "kanji": "空港",
+      "hiragana": "くうこう",
+      "romaji": "kuukou"
+    },
+    {
+      "kanji": "九月",
+      "hiragana": "くがつ",
+      "romaji": "kugatsu"
+    },
+    {
+      "kanji": "九時",
+      "hiragana": "くじ",
+      "romaji": "kuji"
+    },
+    {
+      "kanji": "薬屋",
+      "hiragana": "くすりや",
+      "romaji": "kusuriya"
+    },
+    {
+      "kanji": "果物",
+      "hiragana": "くだもの",
+      "romaji": "kudamono"
+    },
+    {
+      "kanji": "口",
+      "hiragana": "くち",
+      "romaji": "kuchi"
+    },
+    {
+      "kanji": "靴",
+      "hiragana": "くつ",
+      "romaji": "kutsu"
+    },
+    {
+      "kanji": "靴下",
+      "hiragana": "くつした",
+      "romaji": "kutsushita"
+    },
+    {
+      "kanji": "国",
+      "hiragana": "くに",
+      "romaji": "kuni"
+    },
+    {
+      "kanji": "首",
+      "hiragana": "くび",
+      "romaji": "kubi"
+    },
+    {
+      "kanji": "雲",
+      "hiragana": "くも",
+      "romaji": "kumo"
+    },
+    {
+      "kanji": "暗い",
+      "hiragana": "くらい",
+      "romaji": "kurai"
+    },
+    {
+      "kanji": "来る",
+      "hiragana": "くる",
+      "romaji": "kuru"
+    },
+    {
+      "kanji": "車",
+      "hiragana": "くるま",
+      "romaji": "kuruma"
+    },
+    {
+      "hiragana": "グレー",
+      "romaji": "guree"
+    },
+    {
+      "kanji": "黒",
+      "hiragana": "くろ",
+      "romaji": "kuro"
+    },
+    {
+      "kanji": "警察官",
+      "hiragana": "けいさつかん",
+      "romaji": "keisatsukan"
+    },
+    {
+      "kanji": "携帯",
+      "hiragana": "けいたい",
+      "romaji": "keitai"
+    },
+    {
+      "kanji": "今朝",
+      "hiragana": "けさ",
+      "romaji": "kesa"
+    },
+    {
+      "kanji": "消しゴム",
+      "hiragana": "けしゴム",
+      "romaji": "keshigomu"
+    },
+    {
+      "kanji": "消す",
+      "hiragana": "けす",
+      "romaji": "kesu"
+    },
+    {
+      "kanji": "結婚する",
+      "hiragana": "けっこんする",
+      "romaji": "kekkonsuru"
+    },
+    {
+      "kanji": "月曜日",
+      "hiragana": "げつようび",
+      "romaji": "getsuyoubi"
+    },
+    {
+      "kanji": "元気",
+      "hiragana": "げんき",
+      "romaji": "genki"
+    },
+    {
+      "hiragana": "コーヒー",
+      "romaji": "koohii"
+    },
+    {
+      "kanji": "五",
+      "hiragana": "ご",
+      "romaji": "go"
+    },
+    {
+      "kanji": "公園",
+      "hiragana": "こうえん",
+      "romaji": "kouen"
+    },
+    {
+      "kanji": "紅茶",
+      "hiragana": "こうちゃ",
+      "romaji": "koucha"
+    },
+    {
+      "kanji": "ご家族",
+      "hiragana": "ごかぞく",
+      "romaji": "gokazoku"
+    },
+    {
+      "kanji": "五月",
+      "hiragana": "ごがつ",
+      "romaji": "gogatsu"
+    },
+    {
+      "hiragana": "ここ",
+      "romaji": "koko"
+    },
+    {
+      "kanji": "九つ",
+      "hiragana": "ここのつ",
+      "romaji": "kokonotsu"
+    },
+    {
+      "kanji": "五時",
+      "hiragana": "ごじ",
+      "romaji": "goji"
+    },
+    {
+      "kanji": "ご主人",
+      "hiragana": "ごしゅじん",
+      "romaji": "goshujin"
+    },
+    {
+      "kanji": "答える",
+      "hiragana": "こたえる",
+      "romaji": "kotaeru"
+    },
+    {
+      "hiragana": "ごちそうさまでした",
+      "romaji": "gochisousamadeshita"
+    },
+    {
+      "kanji": "今年",
+      "hiragana": "ことし",
+      "romaji": "kotoshi"
+    },
+    {
+      "kanji": "子供",
+      "hiragana": "こども",
+      "romaji": "kodomo"
+    },
+    {
+      "hiragana": "この",
+      "romaji": "kono"
+    },
+    {
+      "kanji": "ご飯",
+      "hiragana": "ごはん",
+      "romaji": "gohan"
+    },
+    {
+      "hiragana": "ごめんなさい",
+      "romaji": "gomennasai"
+    },
+    {
+      "kanji": "ご両親",
+      "hiragana": "ごりょうしん",
+      "romaji": "goryoushin"
+    },
+    {
+      "hiragana": "これ",
+      "romaji": "kore"
+    },
+    {
+      "kanji": "今週",
+      "hiragana": "こんしゅう",
+      "romaji": "konshuu"
+    },
+    {
+      "kanji": "今日は",
+      "hiragana": "こんにちは",
+      "romaji": "konnichiwa"
+    },
+    {
+      "kanji": "今晩",
+      "hiragana": "こんばん",
+      "romaji": "konban"
+    },
+    {
+      "kanji": "今晩は",
+      "hiragana": "こんばんは",
+      "romaji": "konbanwa"
+    },
+    {
+      "hiragana": "コンビニ",
+      "romaji": "konbini"
+    },
+    {
+      "kanji": "魚",
+      "hiragana": "さかな",
+      "romaji": "sakana"
+    },
+    {
+      "kanji": "寒い",
+      "hiragana": "さむい",
+      "romaji": "samui"
+    },
+    {
+      "hiragana": "さようなら",
+      "romaji": "sayounara"
+    },
+    {
+      "hiragana": "サラダ",
+      "romaji": "sarada"
+    },
+    {
+      "kanji": "三",
+      "hiragana": "さん",
+      "romaji": "san"
+    },
+    {
+      "kanji": "三回",
+      "hiragana": "さんかい",
+      "romaji": "sankai"
+    },
+    {
+      "kanji": "三月",
+      "hiragana": "さんがつ",
+      "romaji": "sangatsu"
+    },
+    {
+      "kanji": "三時",
+      "hiragana": "さんじ",
+      "romaji": "sanji"
+    },
+    {
+      "kanji": "三番",
+      "hiragana": "さんばん",
+      "romaji": "sanban"
+    },
+    {
+      "kanji": "散歩する",
+      "hiragana": "さんぽする",
+      "romaji": "sanposuru"
+    },
+    {
+      "kanji": "四",
+      "hiragana": "し",
+      "romaji": "shi"
+    },
+    {
+      "kanji": "四月",
+      "hiragana": "しがつ",
+      "romaji": "shigatsu"
+    },
+    {
+      "kanji": "試験",
+      "hiragana": "しけん",
+      "romaji": "shiken"
+    },
+    {
+      "kanji": "仕事",
+      "hiragana": "しごと",
+      "romaji": "shigoto"
+    },
+    {
+      "kanji": "仕事する",
+      "hiragana": "しごとする",
+      "romaji": "shigotosuru"
+    },
+    {
+      "kanji": "辞書",
+      "hiragana": "じしょ",
+      "romaji": "jisho"
+    },
+    {
+      "kanji": "静か",
+      "hiragana": "しずか",
+      "romaji": "shizuka"
+    },
+    {
+      "kanji": "下",
+      "hiragana": "した",
+      "romaji": "shita"
+    },
+    {
+      "kanji": "七",
+      "hiragana": "しち",
+      "romaji": "shichi"
+    },
+    {
+      "kanji": "七月",
+      "hiragana": "しちがつ",
+      "romaji": "shichigatsu"
+    },
+    {
+      "kanji": "七時",
+      "hiragana": "しちじ",
+      "romaji": "shichiji"
+    },
+    {
+      "kanji": "自転車",
+      "hiragana": "じてんしゃ",
+      "romaji": "jitensha"
+    },
+    {
+      "kanji": "死ぬ",
+      "hiragana": "しぬ",
+      "romaji": "shinu"
+    },
+    {
+      "kanji": "閉める",
+      "hiragana": "しめる",
+      "romaji": "shimeru"
+    },
+    {
+      "hiragana": "じゃあね",
+      "romaji": "jaane"
+    },
+    {
+      "kanji": "写真",
+      "hiragana": "しゃしん",
+      "romaji": "shashin"
+    },
+    {
+      "hiragana": "シャツ",
+      "romaji": "shatsu"
+    },
+    {
+      "hiragana": "ジュース",
+      "romaji": "juusu"
+    },
+    {
+      "kanji": "十",
+      "hiragana": "じゅう",
+      "romaji": "juu"
+    },
+    {
+      "kanji": "十一月",
+      "hiragana": "じゅういちがつ",
+      "romaji": "juuichigatsu"
+    },
+    {
+      "kanji": "十一時",
+      "hiragana": "じゅういちじ",
+      "romaji": "juuichiji"
+    },
+    {
+      "kanji": "十月",
+      "hiragana": "じゅうがつ",
+      "romaji": "juugatsu"
+    },
+    {
+      "kanji": "十時",
+      "hiragana": "じゅうじ",
+      "romaji": "juuji"
+    },
+    {
+      "kanji": "十二月",
+      "hiragana": "じゅうにがつ",
+      "romaji": "juunigatsu"
+    },
+    {
+      "kanji": "十二時",
+      "hiragana": "じゅうにじ",
+      "romaji": "juuniji"
+    },
+    {
+      "kanji": "週末",
+      "hiragana": "しゅうまつ",
+      "romaji": "shuumatsu"
+    },
+    {
+      "kanji": "授業",
+      "hiragana": "じゅぎょう",
+      "romaji": "jugyou"
+    },
+    {
+      "kanji": "宿題",
+      "hiragana": "しゅくだい",
+      "romaji": "shukudai"
+    },
+    {
+      "kanji": "上手",
+      "hiragana": "じょうず",
+      "romaji": "jouzu"
+    },
+    {
+      "kanji": "知る",
+      "hiragana": "しる",
+      "romaji": "shiru"
+    },
+    {
+      "kanji": "白",
+      "hiragana": "しろ",
+      "romaji": "shiro"
+    },
+    {
+      "kanji": "親切",
+      "hiragana": "しんせつ",
+      "romaji": "shinsetsu"
+    },
+    {
+      "hiragana": "スーパー",
+      "romaji": "suupaa"
+    },
+    {
+      "hiragana": "スープ",
+      "romaji": "suupu"
+    },
+    {
+      "kanji": "水曜日",
+      "hiragana": "すいようび",
+      "romaji": "suiyoubi"
+    },
+    {
+      "hiragana": "スカート",
+      "romaji": "sukaato"
+    },
+    {
+      "kanji": "好き",
+      "hiragana": "すき",
+      "romaji": "suki"
+    },
+    {
+      "hiragana": "すぐ",
+      "romaji": "sugu"
+    },
+    {
+      "hiragana": "すごく",
+      "romaji": "sugoku"
+    },
+    {
+      "kanji": "少し",
+      "hiragana": "すこし",
+      "romaji": "sukoshi"
+    },
+    {
+      "kanji": "寿司",
+      "hiragana": "すし",
+      "romaji": "sushi"
+    },
+    {
+      "kanji": "涼しい",
+      "hiragana": "すずしい",
+      "romaji": "suzushii"
+    },
+    {
+      "kanji": "酸っぱい",
+      "hiragana": "すっぱい",
+      "romaji": "suppai"
+    },
+    {
+      "kanji": "捨てる",
+      "hiragana": "すてる",
+      "romaji": "suteru"
+    },
+    {
+      "hiragana": "スポーツ",
+      "romaji": "supootsu"
+    },
+    {
+      "hiragana": "ズボン",
+      "romaji": "zubon"
+    },
+    {
+      "hiragana": "すみません",
+      "romaji": "sumimasen"
+    },
+    {
+      "kanji": "住む",
+      "hiragana": "すむ",
+      "romaji": "sumu"
+    },
+    {
+      "hiragana": "する",
+      "romaji": "suru"
+    },
+    {
+      "kanji": "座る",
+      "hiragana": "すわる",
+      "romaji": "suwaru"
+    },
+    {
+      "kanji": "生徒",
+      "hiragana": "せいと",
+      "romaji": "seito"
+    },
+    {
+      "kanji": "背中",
+      "hiragana": "せなか",
+      "romaji": "senaka"
+    },
+    {
+      "kanji": "狭い",
+      "hiragana": "せまい",
+      "romaji": "semai"
+    },
+    {
+      "kanji": "零",
+      "hiragana": "ぜろ",
+      "romaji": "zero"
+    },
+    {
+      "kanji": "千",
+      "hiragana": "せん",
+      "romaji": "sen"
+    },
+    {
+      "kanji": "先週",
+      "hiragana": "せんしゅう",
+      "romaji": "senshuu"
+    },
+    {
+      "kanji": "先生",
+      "hiragana": "せんせい",
+      "romaji": "sensei"
+    },
+    {
+      "kanji": "全然",
+      "hiragana": "ぜんぜん",
+      "romaji": "zenzen"
+    },
+    {
+      "kanji": "洗濯する",
+      "hiragana": "せんたくする",
+      "romaji": "sentakusuru"
+    },
+    {
+      "kanji": "全部",
+      "hiragana": "ぜんぶ",
+      "romaji": "zenbu"
+    },
+    {
+      "kanji": "掃除する",
+      "hiragana": "そうじする",
+      "romaji": "soujisuru"
+    },
+    {
+      "hiragana": "そこ",
+      "romaji": "soko"
+    },
+    {
+      "kanji": "外",
+      "hiragana": "そと",
+      "romaji": "soto"
+    },
+    {
+      "hiragana": "その",
+      "romaji": "sono"
+    },
+    {
+      "kanji": "祖父",
+      "hiragana": "そふ",
+      "romaji": "sofu"
+    },
+    {
+      "kanji": "祖母",
+      "hiragana": "そぼ",
+      "romaji": "sobo"
+    },
+    {
+      "kanji": "空",
+      "hiragana": "そら",
+      "romaji": "sora"
+    },
+    {
+      "hiragana": "それ",
+      "romaji": "sore"
+    },
+    {
+      "kanji": "大学",
+      "hiragana": "だいがく",
+      "romaji": "daigaku"
+    },
+    {
+      "kanji": "大嫌い",
+      "hiragana": "だいきらい",
+      "romaji": "daikirai"
+    },
+    {
+      "kanji": "大好き",
+      "hiragana": "だいすき",
+      "romaji": "daisuki"
+    },
+    {
+      "kanji": "大切",
+      "hiragana": "たいせつ",
+      "romaji": "taisetsu"
+    },
+    {
+      "kanji": "大体",
+      "hiragana": "だいたい",
+      "romaji": "daitai"
+    },
+    {
+      "kanji": "大抵",
+      "hiragana": "たいてい",
+      "romaji": "taitei"
+    },
+    {
+      "kanji": "大変",
+      "hiragana": "たいへん",
+      "romaji": "taihen"
+    },
+    {
+      "kanji": "太陽",
+      "hiragana": "たいよう",
+      "romaji": "taiyou"
+    },
+    {
+      "kanji": "高い",
+      "hiragana": "たかい",
+      "romaji": "takai"
+    },
+    {
+      "kanji": "沢山",
+      "hiragana": "たくさん",
+      "romaji": "takusan"
+    },
+    {
+      "hiragana": "だけ",
+      "romaji": "dake"
+    },
+    {
+      "hiragana": "ただいま",
+      "romaji": "tadaima"
+    },
+    {
+      "kanji": "立つ",
+      "hiragana": "たつ",
+      "romaji": "tatsu"
+    },
+    {
+      "kanji": "楽しい",
+      "hiragana": "たのしい",
+      "romaji": "tanoshii"
+    },
+    {
+      "kanji": "多分",
+      "hiragana": "たぶん",
+      "romaji": "tabun"
+    },
+    {
+      "kanji": "食べる",
+      "hiragana": "たべる",
+      "romaji": "taberu"
+    },
+    {
+      "kanji": "卵",
+      "hiragana": "たまご",
+      "romaji": "tamago"
+    },
+    {
+      "kanji": "誰",
+      "hiragana": "だれ",
+      "romaji": "dare"
+    },
+    {
+      "kanji": "小さい",
+      "hiragana": "ちいさい",
+      "romaji": "chiisai"
+    },
+    {
+      "kanji": "近く",
+      "hiragana": "ちかく",
+      "romaji": "chikaku"
+    },
+    {
+      "kanji": "父",
+      "hiragana": "ちち",
+      "romaji": "chichi"
+    },
+    {
+      "kanji": "茶色",
+      "hiragana": "ちゃいろ",
+      "romaji": "chairo"
+    },
+    {
+      "hiragana": "ちょっと",
+      "romaji": "chotto"
+    },
+    {
+      "kanji": "使う",
+      "hiragana": "つかう",
+      "romaji": "tsukau"
+    },
+    {
+      "kanji": "月",
+      "hiragana": "つき",
+      "romaji": "tsuki"
+    },
+    {
+      "kanji": "机",
+      "hiragana": "つくえ",
+      "romaji": "tsukue"
+    },
+    {
+      "kanji": "付ける",
+      "hiragana": "つける",
+      "romaji": "tsukeru"
+    },
+    {
+      "kanji": "妻",
+      "hiragana": "つま",
+      "romaji": "tsuma"
+    },
+    {
+      "hiragana": "つまらない",
+      "romaji": "tsumaranai"
+    },
+    {
+      "kanji": "冷たい",
+      "hiragana": "つめたい",
+      "romaji": "tsumetai"
+    },
+    {
+      "hiragana": "テーブル",
+      "romaji": "teeburu"
+    },
+    {
+      "hiragana": "で",
+      "romaji": "de"
+    },
+    {
+      "kanji": "手",
+      "hiragana": "て",
+      "romaji": "te"
+    },
+    {
+      "kanji": "手紙",
+      "hiragana": "てがみ",
+      "romaji": "tegami"
+    },
+    {
+      "kanji": "出口",
+      "hiragana": "でぐち",
+      "romaji": "deguchi"
+    },
+    {
+      "hiragana": "デザイナー",
+      "romaji": "dezainaa"
+    },
+    {
+      "hiragana": "デパート",
+      "romaji": "depaato"
+    },
+    {
+      "kanji": "出る",
+      "hiragana": "でる",
+      "romaji": "deru"
+    },
+    {
+      "hiragana": "テレビ",
+      "romaji": "terebi"
+    },
+    {
+      "kanji": "店員",
+      "hiragana": "てんいん",
+      "romaji": "tenin"
+    },
+    {
+      "kanji": "天気",
+      "hiragana": "てんき",
+      "romaji": "tenki"
+    },
+    {
+      "kanji": "電車",
+      "hiragana": "でんしゃ",
+      "romaji": "densha"
+    },
+    {
+      "kanji": "天ぷら",
+      "hiragana": "てんぷら",
+      "romaji": "tenpura"
+    },
+    {
+      "kanji": "電話",
+      "hiragana": "でんわ",
+      "romaji": "denwa"
+    },
+    {
+      "hiragana": "と",
+      "romaji": "to"
+    },
+    {
+      "hiragana": "ドア",
+      "romaji": "doa"
+    },
+    {
+      "hiragana": "トイレ",
+      "romaji": "toire"
+    },
+    {
+      "hiragana": "どう",
+      "romaji": "dou"
+    },
+    {
+      "hiragana": "どうして",
+      "romaji": "doushite"
+    },
+    {
+      "hiragana": "どうぞよろしく",
+      "romaji": "douzoyoroshiku"
+    },
+    {
+      "hiragana": "どうやって",
+      "romaji": "douyatte"
+    },
+    {
+      "kanji": "十",
+      "hiragana": "とお",
+      "romaji": "too"
+    },
+    {
+      "kanji": "遠く",
+      "hiragana": "とおく",
+      "romaji": "tooku"
+    },
+    {
+      "kanji": "時",
+      "hiragana": "とき",
+      "romaji": "toki"
+    },
+    {
+      "kanji": "時々",
+      "hiragana": "ときどき",
+      "romaji": "tokidoki"
+    },
+    {
+      "kanji": "時計",
+      "hiragana": "とけい",
+      "romaji": "tokei"
+    },
+    {
+      "hiragana": "どこ",
+      "romaji": "doko"
+    },
+    {
+      "kanji": "図書館",
+      "hiragana": "としょかん",
+      "romaji": "toshokan"
+    },
+    {
+      "hiragana": "とても",
+      "romaji": "totemo"
+    },
+    {
+      "kanji": "隣",
+      "hiragana": "となり",
+      "romaji": "tonari"
+    },
+    {
+      "hiragana": "どの",
+      "romaji": "dono"
+    },
+    {
+      "hiragana": "トマト",
+      "romaji": "tomato"
+    },
+    {
+      "kanji": "土曜日",
+      "hiragana": "どようび",
+      "romaji": "doyoubi"
+    },
+    {
+      "kanji": "鳥",
+      "hiragana": "とり",
+      "romaji": "tori"
+    },
+    {
+      "kanji": "鶏肉",
+      "hiragana": "とりにく",
+      "romaji": "toriniku"
+    },
+    {
+      "kanji": "取る",
+      "hiragana": "とる",
+      "romaji": "toru"
+    },
+    {
+      "hiragana": "どれ",
+      "romaji": "dore"
+    },
+    {
+      "kanji": "中",
+      "hiragana": "なか",
+      "romaji": "naka"
+    },
+    {
+      "kanji": "長い",
+      "hiragana": "ながい",
+      "romaji": "nagai"
+    },
+    {
+      "kanji": "泣く",
+      "hiragana": "なく",
+      "romaji": "naku"
+    },
+    {
+      "hiragana": "なぜ",
+      "romaji": "naze"
+    },
+    {
+      "kanji": "七",
+      "hiragana": "なな",
+      "romaji": "nana"
+    },
+    {
+      "kanji": "七つ",
+      "hiragana": "ななつ",
+      "romaji": "nanatsu"
+    },
+    {
+      "kanji": "何",
+      "hiragana": "なに",
+      "romaji": "nani"
+    },
+    {
+      "kanji": "名前",
+      "hiragana": "なまえ",
+      "romaji": "namae"
+    },
+    {
+      "kanji": "何",
+      "hiragana": "なん",
+      "romaji": "nan"
+    },
+    {
+      "kanji": "何回",
+      "hiragana": "なんかい",
+      "romaji": "nankai"
+    },
+    {
+      "hiragana": "に",
+      "romaji": "ni"
+    },
+    {
+      "kanji": "二",
+      "hiragana": "に",
+      "romaji": "ni"
+    },
+    {
+      "kanji": "苦い",
+      "hiragana": "にがい",
+      "romaji": "nigai"
+    },
+    {
+      "kanji": "二回",
+      "hiragana": "にかい",
+      "romaji": "nikai"
+    },
+    {
+      "kanji": "二月",
+      "hiragana": "にがつ",
+      "romaji": "nigatsu"
+    },
+    {
+      "kanji": "賑やか",
+      "hiragana": "にぎやか",
+      "romaji": "nigiyaka"
+    },
+    {
+      "kanji": "肉",
+      "hiragana": "にく",
+      "romaji": "niku"
+    },
+    {
+      "kanji": "二時",
+      "hiragana": "にじ",
+      "romaji": "niji"
+    },
+    {
+      "kanji": "日曜日",
+      "hiragana": "にちようび",
+      "romaji": "nichiyoubi"
+    },
+    {
+      "kanji": "二番",
+      "hiragana": "にばん",
+      "romaji": "niban"
+    },
+    {
+      "hiragana": "ね",
+      "romaji": "ne"
+    },
+    {
+      "kanji": "猫",
+      "hiragana": "ねこ",
+      "romaji": "neko"
+    },
+    {
+      "kanji": "寝る",
+      "hiragana": "ねる",
+      "romaji": "neru"
+    },
+    {
+      "hiragana": "ノート",
+      "romaji": "nooto"
+    },
+    {
+      "hiragana": "の",
+      "romaji": "no"
+    },
+    {
+      "kanji": "飲む",
+      "hiragana": "のむ",
+      "romaji": "nomu"
+    },
+    {
+      "kanji": "乗る",
+      "hiragana": "のる",
+      "romaji": "noru"
+    },
+    {
+      "kanji": "歯",
+      "hiragana": "は",
+      "romaji": "ha"
+    },
+    {
+      "hiragana": "は",
+      "romaji": "wa"
+    },
+    {
+      "hiragana": "はい",
+      "romaji": "hai"
+    },
+    {
+      "kanji": "初めまして",
+      "hiragana": "はじめまして",
+      "romaji": "hajimemashite"
+    },
+    {
+      "kanji": "走る",
+      "hiragana": "はしる",
+      "romaji": "hashiru"
+    },
+    {
+      "hiragana": "バス",
+      "romaji": "basu"
+    },
+    {
+      "hiragana": "パソコン",
+      "romaji": "pasokon"
+    },
+    {
+      "kanji": "働く",
+      "hiragana": "はたらく",
+      "romaji": "hataraku"
+    },
+    {
+      "kanji": "八",
+      "hiragana": "はち",
+      "romaji": "hachi"
+    },
+    {
+      "kanji": "八月",
+      "hiragana": "はちがつ",
+      "romaji": "hachigatsu"
+    },
+    {
+      "kanji": "八時",
+      "hiragana": "はちじ",
+      "romaji": "hachiji"
+    },
+    {
+      "kanji": "花",
+      "hiragana": "はな",
+      "romaji": "hana"
+    },
+    {
+      "kanji": "鼻",
+      "hiragana": "はな",
+      "romaji": "hana"
+    },
+    {
+      "kanji": "話す",
+      "hiragana": "はなす",
+      "romaji": "hanasu"
+    },
+    {
+      "hiragana": "バナナ",
+      "romaji": "banana"
+    },
+    {
+      "kanji": "母",
+      "hiragana": "はは",
+      "romaji": "haha"
+    },
+    {
+      "kanji": "早い",
+      "hiragana": "はやい",
+      "romaji": "hayai"
+    },
+    {
+      "kanji": "速い",
+      "hiragana": "はやい",
+      "romaji": "hayai"
+    },
+    {
+      "kanji": "早く",
+      "hiragana": "はやく",
+      "romaji": "hayaku"
+    },
+    {
+      "kanji": "半",
+      "hiragana": "はん",
+      "romaji": "han"
+    },
+    {
+      "hiragana": "パン",
+      "romaji": "pan"
+    },
+    {
+      "kanji": "晩ご飯",
+      "hiragana": "ばんごはん",
+      "romaji": "bangohan"
+    },
+    {
+      "hiragana": "ビール",
+      "romaji": "biiru"
+    },
+    {
+      "kanji": "引く",
+      "hiragana": "ひく",
+      "romaji": "hiku"
+    },
+    {
+      "kanji": "低い",
+      "hiragana": "ひくい",
+      "romaji": "hikui"
+    },
+    {
+      "kanji": "飛行機",
+      "hiragana": "ひこうき",
+      "romaji": "hikouki"
+    },
+    {
+      "kanji": "左",
+      "hiragana": "ひだり",
+      "romaji": "hidari"
+    },
+    {
+      "kanji": "必要",
+      "hiragana": "ひつよう",
+      "romaji": "hitsuyou"
+    },
+    {
+      "kanji": "人",
+      "hiragana": "ひと",
+      "romaji": "hito"
+    },
+    {
+      "kanji": "一つ",
+      "hiragana": "ひとつ",
+      "romaji": "hitotsu"
+    },
+    {
+      "kanji": "一人",
+      "hiragana": "ひとり",
+      "romaji": "hitori"
+    },
+    {
+      "kanji": "一人で",
+      "hiragana": "ひとりで",
+      "romaji": "hitoride"
+    },
+    {
+      "kanji": "百",
+      "hiragana": "ひゃく",
+      "romaji": "hyaku"
+    },
+    {
+      "kanji": "病院",
+      "hiragana": "びょういん",
+      "romaji": "byouin"
+    },
+    {
+      "kanji": "昼",
+      "hiragana": "ひる",
+      "romaji": "hiru"
+    },
+    {
+      "kanji": "昼ご飯",
+      "hiragana": "ひるごはん",
+      "romaji": "hirugohan"
+    },
+    {
+      "kanji": "広い",
+      "hiragana": "ひろい",
+      "romaji": "hiroi"
+    },
+    {
+      "hiragana": "ピンク",
+      "romaji": "pinku"
+    },
+    {
+      "kanji": "服",
+      "hiragana": "ふく",
+      "romaji": "fuku"
+    },
+    {
+      "kanji": "二つ",
+      "hiragana": "ふたつ",
+      "romaji": "futatsu"
+    },
+    {
+      "kanji": "豚肉",
+      "hiragana": "ぶたにく",
+      "romaji": "butaniku"
+    },
+    {
+      "kanji": "二人",
+      "hiragana": "ふたり",
+      "romaji": "futari"
+    },
+    {
+      "kanji": "船",
+      "hiragana": "ふね",
+      "romaji": "fune"
+    },
+    {
+      "kanji": "不便",
+      "hiragana": "ふべん",
+      "romaji": "fuben"
+    },
+    {
+      "kanji": "降る",
+      "hiragana": "ふる",
+      "romaji": "furu"
+    },
+    {
+      "kanji": "古い",
+      "hiragana": "ふるい",
+      "romaji": "furui"
+    },
+    {
+      "kanji": "風呂",
+      "hiragana": "ふろ",
+      "romaji": "furo"
+    },
+    {
+      "kanji": "分",
+      "hiragana": "ふん",
+      "romaji": "fun"
+    },
+    {
+      "kanji": "分",
+      "hiragana": "ぷん",
+      "romaji": "pun"
+    },
+    {
+      "hiragana": "へ",
+      "romaji": "e"
+    },
+    {
+      "kanji": "下手",
+      "hiragana": "へた",
+      "romaji": "heta"
+    },
+    {
+      "hiragana": "ベッド",
+      "romaji": "beddo"
+    },
+    {
+      "kanji": "部屋",
+      "hiragana": "へや",
+      "romaji": "heya"
+    },
+    {
+      "hiragana": "ペン",
+      "romaji": "pen"
+    },
+    {
+      "kanji": "勉強する",
+      "hiragana": "べんきょうする",
+      "romaji": "benkyousuru"
+    },
+    {
+      "kanji": "弁護士",
+      "hiragana": "べんごし",
+      "romaji": "bengoshi"
+    },
+    {
+      "kanji": "便利",
+      "hiragana": "べんり",
+      "romaji": "benri"
+    },
+    {
+      "kanji": "帽子",
+      "hiragana": "ぼうし",
+      "romaji": "boushi"
+    },
+    {
+      "kanji": "星",
+      "hiragana": "ほし",
+      "romaji": "hoshi"
+    },
+    {
+      "hiragana": "ホテル",
+      "romaji": "hoteru"
+    },
+    {
+      "kanji": "本",
+      "hiragana": "ほん",
+      "romaji": "hon"
+    },
+    {
+      "kanji": "本屋",
+      "hiragana": "ほんや",
+      "romaji": "honya"
+    },
+    {
+      "kanji": "毎朝",
+      "hiragana": "まいあさ",
+      "romaji": "maiasa"
+    },
+    {
+      "kanji": "毎週",
+      "hiragana": "まいしゅう",
+      "romaji": "maishuu"
+    },
+    {
+      "kanji": "毎月",
+      "hiragana": "まいつき",
+      "romaji": "maitsuki"
+    },
+    {
+      "kanji": "毎年",
+      "hiragana": "まいとし",
+      "romaji": "maitoshi"
+    },
+    {
+      "kanji": "毎日",
+      "hiragana": "まいにち",
+      "romaji": "mainichi"
+    },
+    {
+      "kanji": "毎晩",
+      "hiragana": "まいばん",
+      "romaji": "maiban"
+    },
+    {
+      "kanji": "前",
+      "hiragana": "まえ",
+      "romaji": "mae"
+    },
+    {
+      "kanji": "不味い",
+      "hiragana": "まずい",
+      "romaji": "mazui"
+    },
+    {
+      "hiragana": "まだ",
+      "romaji": "mada"
+    },
+    {
+      "kanji": "又",
+      "hiragana": "また",
+      "romaji": "mata"
+    },
+    {
+      "hiragana": "またね",
+      "romaji": "matane"
+    },
+    {
+      "kanji": "町",
+      "hiragana": "まち",
+      "romaji": "machi"
+    },
+    {
+      "kanji": "待つ",
+      "hiragana": "まつ",
+      "romaji": "matsu"
+    },
+    {
+      "hiragana": "まで",
+      "romaji": "made"
+    },
+    {
+      "kanji": "窓",
+      "hiragana": "まど",
+      "romaji": "mado"
+    },
+    {
+      "kanji": "真夜中",
+      "hiragana": "まよなか",
+      "romaji": "mayonaka"
+    },
+    {
+      "kanji": "万",
+      "hiragana": "まん",
+      "romaji": "man"
+    },
+    {
+      "hiragana": "みかん",
+      "romaji": "mikan"
+    },
+    {
+      "kanji": "右",
+      "hiragana": "みぎ",
+      "romaji": "migi"
+    },
+    {
+      "kanji": "短い",
+      "hiragana": "みじかい",
+      "romaji": "mijikai"
+    },
+    {
+      "kanji": "水",
+      "hiragana": "みず",
+      "romaji": "mizu"
+    },
+    {
+      "kanji": "店",
+      "hiragana": "みせ",
+      "romaji": "mise"
+    },
+    {
+      "kanji": "見せる",
+      "hiragana": "みせる",
+      "romaji": "miseru"
+    },
+    {
+      "kanji": "三つ",
+      "hiragana": "みっつ",
+      "romaji": "mittsu"
+    },
+    {
+      "kanji": "緑",
+      "hiragana": "みどり",
+      "romaji": "midori"
+    },
+    {
+      "kanji": "耳",
+      "hiragana": "みみ",
+      "romaji": "mimi"
+    },
+    {
+      "kanji": "見る",
+      "hiragana": "みる",
+      "romaji": "miru"
+    },
+    {
+      "kanji": "難しい",
+      "hiragana": "むずかしい",
+      "romaji": "muzukashii"
+    },
+    {
+      "kanji": "息子",
+      "hiragana": "むすこ",
+      "romaji": "musuko"
+    },
+    {
+      "kanji": "息子さん",
+      "hiragana": "むすこさん",
+      "romaji": "musukosan"
+    },
+    {
+      "kanji": "娘",
+      "hiragana": "むすめ",
+      "romaji": "musume"
+    },
+    {
+      "kanji": "娘さん",
+      "hiragana": "むすめさん",
+      "romaji": "musumesan"
+    },
+    {
+      "kanji": "六つ",
+      "hiragana": "むっつ",
+      "romaji": "muttsu"
+    },
+    {
+      "kanji": "村",
+      "hiragana": "むら",
+      "romaji": "mura"
+    },
+    {
+      "kanji": "紫",
+      "hiragana": "むらさき",
+      "romaji": "murasaki"
+    },
+    {
+      "kanji": "目",
+      "hiragana": "め",
+      "romaji": "me"
+    },
+    {
+      "kanji": "眼鏡",
+      "hiragana": "めがね",
+      "romaji": "megane"
+    },
+    {
+      "hiragana": "も",
+      "romaji": "mo"
+    },
+    {
+      "hiragana": "もう",
+      "romaji": "mou"
+    },
+    {
+      "kanji": "木曜日",
+      "hiragana": "もくようび",
+      "romaji": "mokuyoubi"
+    },
+    {
+      "kanji": "持つ",
+      "hiragana": "もつ",
+      "romaji": "motsu"
+    },
+    {
+      "hiragana": "もっと",
+      "romaji": "motto"
+    },
+    {
+      "kanji": "物",
+      "hiragana": "もの",
+      "romaji": "mono"
+    },
+    {
+      "hiragana": "や",
+      "romaji": "ya"
+    },
+    {
+      "kanji": "野菜",
+      "hiragana": "やさい",
+      "romaji": "yasai"
+    },
+    {
+      "kanji": "優しい",
+      "hiragana": "やさしい",
+      "romaji": "yasashii"
+    },
+    {
+      "kanji": "易しい",
+      "hiragana": "やさしい",
+      "romaji": "yasashii"
+    },
+    {
+      "kanji": "休む",
+      "hiragana": "やすむ",
+      "romaji": "yasumu"
+    },
+    {
+      "kanji": "八つ",
+      "hiragana": "やっつ",
+      "romaji": "yattsu"
+    },
+    {
+      "kanji": "山",
+      "hiragana": "やま",
+      "romaji": "yama"
+    },
+    {
+      "kanji": "辞める",
+      "hiragana": "やめる",
+      "romaji": "yameru"
+    },
+    {
+      "kanji": "柔らかい",
+      "hiragana": "やわらかい",
+      "romaji": "yawarakai"
+    },
+    {
+      "kanji": "夕方",
+      "hiragana": "ゆうがた",
+      "romaji": "yuugata"
+    },
+    {
+      "kanji": "郵便局",
+      "hiragana": "ゆうびんきょく",
+      "romaji": "yuubinkyoku"
+    },
+    {
+      "kanji": "有名",
+      "hiragana": "ゆうめい",
+      "romaji": "yuumei"
+    },
+    {
+      "kanji": "雪",
+      "hiragana": "ゆき",
+      "romaji": "yuki"
+    },
+    {
+      "hiragana": "ゆっくり",
+      "romaji": "yukkuri"
+    },
+    {
+      "kanji": "指",
+      "hiragana": "ゆび",
+      "romaji": "yubi"
+    },
+    {
+      "hiragana": "よ",
+      "romaji": "yo"
+    },
+    {
+      "hiragana": "よい",
+      "romaji": "yoi"
+    },
+    {
+      "hiragana": "よく",
+      "romaji": "yoku"
+    },
+    {
+      "kanji": "横",
+      "hiragana": "よこ",
+      "romaji": "yoko"
+    },
+    {
+      "kanji": "四時",
+      "hiragana": "よじ",
+      "romaji": "yoji"
+    },
+    {
+      "kanji": "四つ",
+      "hiragana": "よっつ",
+      "romaji": "yottsu"
+    },
+    {
+      "kanji": "読む",
+      "hiragana": "よむ",
+      "romaji": "yomu"
+    },
+    {
+      "kanji": "夜",
+      "hiragana": "よる",
+      "romaji": "yoru"
+    },
+    {
+      "kanji": "四",
+      "hiragana": "よん",
+      "romaji": "yon"
+    },
+    {
+      "hiragana": "ラーメン",
+      "romaji": "raamen"
+    },
+    {
+      "kanji": "来週",
+      "hiragana": "らいしゅう",
+      "romaji": "raishuu"
+    },
+    {
+      "kanji": "来年",
+      "hiragana": "らいねん",
+      "romaji": "rainen"
+    },
+    {
+      "hiragana": "ラジオ",
+      "romaji": "rajio"
+    },
+    {
+      "kanji": "両親",
+      "hiragana": "りょうしん",
+      "romaji": "ryoushin"
+    },
+    {
+      "kanji": "料理する",
+      "hiragana": "りょうりする",
+      "romaji": "ryourisuru"
+    },
+    {
+      "kanji": "料理人",
+      "hiragana": "りょうりにん",
+      "romaji": "ryourinin"
+    },
+    {
+      "kanji": "旅行する",
+      "hiragana": "りょこうする",
+      "romaji": "ryokousuru"
+    },
+    {
+      "kanji": "林檎",
+      "hiragana": "りんご",
+      "romaji": "ringo"
+    },
+    {
+      "kanji": "零",
+      "hiragana": "れい",
+      "romaji": "rei"
+    },
+    {
+      "hiragana": "レストラン",
+      "romaji": "resutoran"
+    },
+    {
+      "kanji": "六",
+      "hiragana": "ろく",
+      "romaji": "roku"
+    },
+    {
+      "kanji": "六月",
+      "hiragana": "ろくがつ",
+      "romaji": "rokugatsu"
+    },
+    {
+      "kanji": "六時",
+      "hiragana": "ろくじ",
+      "romaji": "rokuji"
+    },
+    {
+      "hiragana": "ワイン",
+      "romaji": "wain"
+    },
+    {
+      "kanji": "分かる",
+      "hiragana": "わかる",
+      "romaji": "wakaru"
+    },
+    {
+      "kanji": "忘れる",
+      "hiragana": "わすれる",
+      "romaji": "wasureru"
+    },
+    {
+      "kanji": "私",
+      "hiragana": "わたし",
+      "romaji": "watashi"
+    },
+    {
+      "kanji": "私達",
+      "hiragana": "わたしたち",
+      "romaji": "watashitachi"
+    },
+    {
+      "kanji": "渡る",
+      "hiragana": "わたる",
+      "romaji": "wataru"
+    },
+    {
+      "kanji": "笑う",
+      "hiragana": "わらう",
+      "romaji": "warau"
+    },
+    {
+      "kanji": "悪い",
+      "hiragana": "わるい",
+      "romaji": "warui"
+    },
+    {
+      "hiragana": "を",
+      "romaji": "o"
+    },
+    {
+      "hiragana": "を",
+      "romaji": "wo"
+    }
+  ]
+}

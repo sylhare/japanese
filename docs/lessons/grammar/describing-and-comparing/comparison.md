@@ -46,16 +46,21 @@ Use this pattern to ask "Which is more...?" between two options.
   - *natsu to fuyu to dochira no hou ga suki?*
 - とうきょう と おおさか と どちら の ほう が おおきい ですか？ - Which is bigger, Tokyo or Osaka?
   - *toukyou to oosaka to dochira no hou ga ookii desu ka?*
-- この みっつ の なか で どれ が いちばん いい ですか？ - Which one is the best among these three?
-  - *kono mittsu no naka de dore ga ichiban ii desu ka?*
-- この クラス で だれ が いちばん せ が たかい ですか？ - Who is the tallest in this class?
-  - *kono kurasu de dare ga ichiban se ga takai desu ka?*
 
 :::tip どちら vs どれ
 - **どちら** - which one (between **two** options)
 - **どれ** - which one (among **three or more** options)
 - **だれ** - who (for people)
 :::
+
+### Superlatives: いちばん
+
+Use **いちばん** ("number one / the most") to pick the top item among three or more.
+
+- この みっつ の なか で どれ が いちばん いい ですか？ - Which one is the best among these three?
+  - *kono mittsu no naka de dore ga ichiban ii desu ka?*
+- この クラス で だれ が いちばん せ が たかい ですか？ - Who is the tallest in this class?
+  - *kono kurasu de dare ga ichiban se ga takai desu ka?*
 
 ## Making Comparisons
 
