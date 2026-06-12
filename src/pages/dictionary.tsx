@@ -1,58 +1,15 @@
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import React, { useMemo, useState } from 'react';
-import jlptVocabularyData from '../data/jlpt-vocabulary.json';
-import { VALID_TYPES, getTagPath, normalizeToken } from '../data/vocabulary-types';
+import { VALID_TYPES, getTagPath } from '../data/vocabulary-types';
 import type { VocabularyItem } from '../data/vocabulary-types';
 import vocabularyYamlData from '../data/vocabulary.yaml';
+import { withJlptTags } from '../lib/dictionary';
 import styles from './dictionary.module.css';
 
 const vocabularyData: VocabularyItem[] = vocabularyYamlData.vocabulary;
 const categories = vocabularyYamlData.categories;
 const sortOptions = vocabularyYamlData.sortOptions;
-
-interface JlptEntry {
-  kanji?: string;
-  hiragana: string;
-  romaji: string;
-}
-const jlptLevelEntries: Array<[string, JlptEntry[]]> = Object.entries(
-  jlptVocabularyData as Record<string, JlptEntry[]>,
-);
-
-/**
- * An item matches a JLPT entry when the reading matches (hiragana/katakana or
- * romaji) and, when both have a kanji, the kanji matches too — so same-reading
- * homonyms (花 vs 鼻) are not badged from each other.
- */
-export function matchesJlptEntry(item: VocabularyItem, entry: JlptEntry): boolean {
-  const readingMatch =
-    (item.hiragana && normalizeToken(item.hiragana) === entry.hiragana) ||
-    (item.katakana && normalizeToken(item.katakana) === entry.hiragana) ||
-    (item.romaji && normalizeToken(item.romaji) === entry.romaji);
-  if (!readingMatch) {
-    return false;
-  }
-  const itemKanji = normalizeToken(item.kanji);
-  if (itemKanji && entry.kanji) {
-    return itemKanji === entry.kanji;
-  }
-  return true;
-}
-
-function jlptLevelsForItem(item: VocabularyItem): string[] {
-  return jlptLevelEntries
-    .filter(([, entries]) => entries.some(entry => matchesJlptEntry(item, entry)))
-    .map(([level]) => level);
-}
-
-function withTags(tags: string[], extra: string[]): string[] {
-  const present = new Set(tags.map(tag => tag.toLowerCase()));
-  const additions = extra.filter(tag => !present.has(tag.toLowerCase()));
-  return additions.length > 0 ? [...tags, ...additions] : tags;
-}
-
-export { getTagPath };
 
 export default function Vocabulary(): React.JSX.Element {
   const baseUrl = useBaseUrl('/');
@@ -61,14 +18,7 @@ export default function Vocabulary(): React.JSX.Element {
   const [selectedType, setSelectedType] = useState('all');
   const [sortBy, setSortBy] = useState('hiragana');
   const types = ['all', ...VALID_TYPES];
-  const vocabularyWithJlptTags = useMemo(
-    () =>
-      vocabularyData.map(item => {
-        const levels = jlptLevelsForItem(item);
-        return levels.length > 0 ? { ...item, tags: withTags(item.tags, levels) } : item;
-      }),
-    [],
-  );
+  const vocabularyWithJlptTags = useMemo(() => withJlptTags(vocabularyData), []);
 
   const filteredAndSortedVocabulary = useMemo(() => {
     const filtered = vocabularyWithJlptTags.filter(item => {

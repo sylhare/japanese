@@ -4,7 +4,8 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import Vocabulary, { getTagPath, matchesJlptEntry } from '../../src/pages/dictionary';
+import Vocabulary from '../../src/pages/dictionary';
+import { getTagPath, matchesJlptEntry } from '../../src/lib/dictionary';
 import { loadVocabularyData } from '../test-utils';
 
 vi.mock('../../src/data/vocabulary.yaml', async () => {
