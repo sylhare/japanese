@@ -32,11 +32,11 @@ This pattern is used to express whether you have experienced something before.
 
 ### Examples
 
-- ふじさん に のぼった こと が ありません - I have never climbed Mount Fuji.
+- ふじさん に のぼった こと が ありません — I have never climbed Mount Fuji.
   - *fujisan ni nobotta koto ga arimasen*
-- すし を たべた こと が あります - I have eaten sushi before.
+- すし を たべた こと が あります — I have eaten sushi before.
   - *sushi o tabeta koto ga arimasu*
-- にほん に いった こと が あります - I have been to Japan.
+- にほん に いった こと が あります — I have been to Japan.
   - *nihon ni itta koto ga arimasu*
 
 :::tip Reading 富士山
@@ -63,11 +63,11 @@ Mount Fuji is read **ふじさん** (*Fujisan*), not ふじやま. The character
 
 ### Examples
 
-- スカイダイビング を やった こと が ある - I have tried skydiving.
+- スカイダイビング を やった こと が ある — I have tried skydiving.
   - *sukaidaibingu o yatta koto ga aru*
-- このゲーム を やった こと が ない - I have never played this game.
+- このゲーム を やった こと が ない — I have never played this game.
   - *kono geemu o yatta koto ga nai*
-- キャンプ を やった こと が ある？ - Have you ever been camping?
+- キャンプ を やった こと が ある？ — Have you ever been camping?
   - *kyanpu o yatta koto ga aru?*
 
 :::tip やった vs した

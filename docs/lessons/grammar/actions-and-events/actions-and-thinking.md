@@ -27,20 +27,20 @@ Learn how to express ongoing actions, trying things, and thoughts.
 
 ### Examples
 
-- たべる → たべている - Currently eating
+- たべる → たべている — Currently eating.
   - *tabete iru*
-- よむ → よんでいる - Currently reading
+- よむ → よんでいる — Currently reading.
   - *yonde iru*
-- はしる → はしっている - Currently running
+- はしる → はしっている — Currently running.
   - *hashitte iru*
 
 ### In Sentences
 
-- いま テレビ を みている - I'm watching TV now.
+- いま テレビ を みている — I'm watching TV now.
   - *ima terebi o mite iru*
-- ともだち が きている - My friend is here/has come.
+- ともだち が きている — My friend is here/has come.
   - *tomodachi ga kite iru*
-- まいにち べんきょうしている - I study every day.
+- まいにち べんきょうしている — I study every day.
   - *mainichi benkyou shite iru*
 
 ## Thinking
@@ -53,9 +53,9 @@ Learn how to express ongoing actions, trying things, and thoughts.
 
 #### Examples
 
-- みらい を かんがえる - Think about the future
+- みらい を かんがえる — Think about the future.
   - *mirai o kangaeru*
-- もんだい を かんがえる - Think about the problem
+- もんだい を かんがえる — Think about the problem.
   - *mondai o kangaeru*
 
 ### Think That: と おもう
@@ -66,11 +66,11 @@ Learn how to express ongoing actions, trying things, and thoughts.
 
 #### Examples
 
-- いい と おもう - I think it's good
+- いい と おもう — I think it's good.
   - *ii to omou*
-- むずかしい と おもう - I think it's difficult
+- むずかしい と おもう — I think it's difficult.
   - *muzukashii to omou*
-- あした あめ が ふる と おもう - I think it will rain tomorrow
+- あした あめ が ふる と おもう — I think it will rain tomorrow.
   - *ashita ame ga furu to omou*
 
 ## Trying: てみる
@@ -83,19 +83,19 @@ Learn how to express ongoing actions, trying things, and thoughts.
 
 #### Examples
 
-- たべる → たべてみる - Try eating
+- たべる → たべてみる — Try eating.
   - *tabete miru*
-- きく → きいてみる - Try asking/listening
+- きく → きいてみる — Try asking/listening.
   - *kiite miru*
-- する → してみる - Try doing
+- する → してみる — Try doing.
   - *shite miru*
 
 #### In Sentences
 
-- この りょうり を たべてみて - Try eating this dish.
+- この りょうり を たべてみて — Try eating this dish.
   - *kono ryouri o tabete mite*
-- にほんご を はなしてみます - I'll try speaking Japanese.
-  - *nihongo o hanashitemimasu*
+- にほんご を はなしてみます — I'll try speaking Japanese.
+  - *nihongo o hanashite mimasu*
 
 ### Let's Try: て form + みよう
 
@@ -105,17 +105,17 @@ Learn how to express ongoing actions, trying things, and thoughts.
 
 #### Examples
 
-- たべる → たべてみよう - Let's try eating
+- たべる → たべてみよう — Let's try eating.
   - *tabete miyou*
-- いく → いってみよう - Let's try going
+- いく → いってみよう — Let's try going.
   - *itte miyou*
-- する → してみよう - Let's try doing
+- する → してみよう — Let's try doing.
   - *shite miyou*
 
 #### In Sentences
 
-- この ゲーム を してみよう - Let's try playing this game.
+- この ゲーム を してみよう — Let's try playing this game.
   - *kono geemu o shite miyou*
-- あたらしい レストラン に いってみよう - Let's try going to the new restaurant.
+- あたらしい レストラン に いってみよう — Let's try going to the new restaurant.
   - *atarashii resutoran ni itte miyou*
 
