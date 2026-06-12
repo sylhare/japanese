@@ -116,5 +116,5 @@ To describe dark shades, add **こい** (koi - thick/dark) before the color.
 |----------|-------|-------------|------------------|------|
 | ももいろ     | 桃色    | momoiro     | 🩷 peach color   | noun |
 | やまぶきいろ   | 山吹色   | yamabukiiro | 🟨 golden yellow | noun |
-| べにいろ     | 紅     | beniiro     | 🔴 crimson       | noun |
+| べにいろ     | 紅色    | beniiro     | 🔴 crimson       | noun |
 
