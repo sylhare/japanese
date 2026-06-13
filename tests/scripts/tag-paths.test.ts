@@ -11,7 +11,7 @@ import path from 'path';
 import { describe, expect, it } from 'vitest';
 import { buildLessonPaths } from '../../scripts/extract-vocabulary';
 import lessonPaths from '../../src/data/lesson-paths.json';
-import { getTagPath } from '../../src/pages/dictionary';
+import { getTagPath } from '../../src/lib/dictionary';
 import { loadVocabularyData } from '../test-utils';
 
 const REPO_ROOT = path.join(__dirname, '../..');

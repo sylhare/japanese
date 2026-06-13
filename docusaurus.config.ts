@@ -134,6 +134,7 @@ const config: Config = {
           label: 'Lessons',
         },
         {to: '/dictionary', label: 'Dictionary', position: 'left'},
+        {to: '/study', label: 'Study', position: 'left'},
         {
           type: 'doc',
           docId: 'reference/index',
