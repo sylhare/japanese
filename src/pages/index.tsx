@@ -5,14 +5,6 @@ import Layout from '@theme/Layout';
 import type {ReactNode} from 'react';
 import styles from './index.module.css';
 
-function IconLessons() {
-  return (
-    <svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor">
-      <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z" />
-    </svg>
-  );
-}
-
 function IconGrammar() {
   return (
     <svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor">
@@ -21,10 +13,10 @@ function IconGrammar() {
   );
 }
 
-function IconVocabulary() {
+function IconConjugation() {
   return (
     <svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor">
-      <path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z" />
+      <path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z" />
     </svg>
   );
 }
@@ -37,18 +29,26 @@ function IconReferences() {
   );
 }
 
+function IconVocabulary() {
+  return (
+    <svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor">
+      <path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z" />
+    </svg>
+  );
+}
+
 const mainFeatures = [
-  {
-    title: 'Lessons',
-    Icon: IconLessons,
-    description: 'Structured learning path',
-    link: '/docs/intro',
-  },
   {
     title: 'Grammar',
     Icon: IconGrammar,
     description: 'Grammar rules & structure',
     link: '/docs/lessons/grammar',
+  },
+  {
+    title: 'Conjugation',
+    Icon: IconConjugation,
+    description: 'Verb forms & endings',
+    link: '/docs/lessons/conjugation',
   },
   {
     title: 'Vocabulary',

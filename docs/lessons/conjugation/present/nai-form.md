@@ -11,6 +11,15 @@ import NextSteps from '@site/src/components/NextSteps';
 
 The nai-form expresses negation — it means "not doing" something.
 
+:::tip Polite Form
+In polite speech, the negative uses **ません** (the negative of ます):
+- たべる → たべません (don't eat)
+- いく → いきません (don't go)
+- する → しません (don't do)
+
+The nai-form below is the casual equivalent.
+:::
+
 ## Group 1 (Godan) — Change to あ-column + ない
 
 Change the final う-sound to the あ-column equivalent, then add ない:

@@ -51,17 +51,17 @@ This lesson focuses on time-based counters for expressing "how often" something 
 
 Use **なんかい (何回)** to ask "how many times?":
 
-- しゅうかん に なんかい？ — How many times per week?
-  - *shuukan ni nankai?*
+- しゅう に なんかい？ — How many times per week?
+  - *shuu ni nankai?*
 - ねん に なんかい いきます か？ — How many times a year do you go?
   - *nen ni nankai ikimasu ka?*
 
 ### Examples
 
-- しゅうかん に いっかい えいが を みます — I watch a movie once a week.
-  - *shuukan ni ikkai eiga o mimasu*
-- にち に さんかい は を みがきます — I brush my teeth three times a day.
-  - *nichi ni sankai ha o migakimasu*
+- しゅう に いっかい えいが を みます — I watch a movie once a week.
+  - *shuu ni ikkai eiga o mimasu*
+- いちにち に さんかい は を みがきます — I brush my teeth three times a day.
+  - *ichinichi ni sankai ha o migakimasu*
 - ねん に いっかい にほん に いきます — I go to Japan once a year.
   - *nen ni ikkai nihon ni ikimasu*
 - つき に いっかい りょうしん に でんわ します — I call my parents once a month.

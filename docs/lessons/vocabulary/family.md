@@ -177,10 +177,10 @@ Here's a visual guide to extended family and in-law relationships:
 
 | Hiragana | Kanji  | Romaji           | English                 | Type |
 |----------|--------|------------------|-------------------------|------|
-| ひとり      | 一人     | hitori           | 👤 single/unmarried     | noun |
+| ひとり      | 一人     | hitori           | 👤 one person, alone    | noun |
 | けっこん     | 結婚     | kekkon           | 💑 marriage             | noun |
 | けっこんしている | 結婚している | kekkon shite iru | 💑 married              | verb |
-| どくしん     | 独身     | dokushin         | 👤 single               | noun |
+| どくしん     | 独身     | dokushin         | 👤 single/unmarried     | noun |
 | りこん      | 離婚     | rikon            | 💔 divorce              | noun |
 | やもめ      | 寡婦     | yamome           | 👤🪦 widowed            | noun |
 | こいびと     | 恋人     | koibito          | 💕 boyfriend/girlfriend | noun |
@@ -191,6 +191,10 @@ Here's a visual guide to extended family and in-law relationships:
 - けっこんしています (kekkon shite imasu) - I am married
 - どくしんです (dokushin desu) - I am single
 - こいびとが います (koibito ga imasu) - I have a boyfriend/girlfriend
+
+:::tip ひとり vs どくしん
+**一人 (ひとり)** counts people — "one person" or "alone" (一人で行く, *iku* — go alone). To say you're **single/unmarried**, use **独身 (どくしん)**: 独身です (dokushin desu) — *I'm single*.
+:::
 
 ## When Talking About Others' Families
 

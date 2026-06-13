@@ -131,12 +131,11 @@
 }
 
 .tag {
+  composes: press-tag from global;
   background: var(--ifm-color-emphasis-100);
   color: var(--ifm-color-emphasis-700);
   padding: 0.25rem 0.5rem;
-  border-radius: 12px;
   font-size: 0.8rem;
-  border: 1px solid var(--ifm-color-emphasis-200);
   text-decoration: none;
   transition: all 0.2s ease;
   cursor: pointer;

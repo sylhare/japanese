@@ -35,20 +35,20 @@ Attach **すぎる** to the verb's **stem** (the same stem used for ます): る
 
 ### Examples
 
-- たべる → たべすぎます - Overeat / eat too much
+- たべる → たべすぎます — Overeat / eat too much.
   - *tabesugimasu*
-- のむ → のみすぎます - Drink too much
+- のむ → のみすぎます — Drink too much.
   - *nomisugimasu*
-- する → しすぎます - Do too much
+- する → しすぎます — Do too much.
   - *shisugimasu*
 
 ### In Sentences
 
-- たべすぎます - Eat too much
-  - *tabesugimasu*
-- ゲーム を しすぎます - Play too much (games)
+- きのう の よる、たべすぎました — I ate too much last night.
+  - *kinou no yoru, tabesugimashita*
+- ゲーム を しすぎます — Play too much (games).
   - *geemu o shisugimasu*
-- はたらきすぎます - Work too much
+- はたらきすぎます — Work too much.
   - *hatarakisugimasu*
 
 ## With い-Adjectives
@@ -59,11 +59,11 @@ Remove the final **い** and add **すぎる**.
 
 ### Examples
 
-- さむい → さむすぎます - Too cold
+- さむい → さむすぎます — Too cold.
   - *samusugimasu*
-- たかい → たかすぎます - Too expensive
+- たかい → たかすぎます — Too expensive.
   - *takasugimasu*
-- はやい → はやすぎます - Too fast
+- はやい → はやすぎます — Too fast.
   - *hayasugimasu*
 
 ### In Sentences
@@ -81,17 +81,17 @@ Simply add **すぎる** directly to the adjective stem (without な).
 
 ### Examples
 
-- しずか(な) → しずかすぎます - Too quiet
+- しずか(な) → しずかすぎます — Too quiet.
   - *shizukasugimasu*
-- きれい(な) → きれいすぎます - Too beautiful/clean
+- きれい(な) → きれいすぎます — Too beautiful/clean.
   - *kireisugimasu*
-- べんり(な) → べんりすぎます - Too convenient
+- べんり(な) → べんりすぎます — Too convenient.
   - *benrisugimasu*
 
 ### In Sentences
 
-- しずかすぎます - Too quiet
-  - *shizukasugimasu*
-- この へや は きれいすぎます - This room is too clean
+- この まち は よる に なると しずかすぎます — This town is too quiet at night.
+  - *kono machi wa yoru ni naru to shizukasugimasu*
+- この へや は きれいすぎます — This room is too clean.
   - *kono heya wa kireisugimasu*
 

@@ -206,7 +206,7 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
-| おお       | 大     | oo     | big     | noun |
+| おおきい     | 大きい   | ookii  | big     | い-adjective |
 | いぬ       | 犬     | inu    | dog     | noun |
 
 **Memory Tips:**
@@ -259,8 +259,8 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 | Hiragana | Kanji | Romaji | English            | Type |
 |----------|-------|--------|--------------------|------|
-| ひろ       | 拾     | hiro   | pick up            | verb |
-| すて       | 捨     | sute   | discard/throw away | verb |
+| ひろう      | 拾う    | hirou  | to pick up            | verb |
+| すてる      | 捨てる   | suteru | to discard/throw away | verb |
 
 **Memory Tips:**
 - **拾 (hiro)**: One line - you're picking up one item

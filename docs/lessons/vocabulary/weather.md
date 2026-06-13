@@ -23,8 +23,6 @@ Weather is a universal conversation topic in Japan, where seasons play an import
 | かみなり | 雷 | kaminari | ⚡ thunder, lightning | noun |
 | たいふう | 台風 | taifuu | 🌀 typhoon | noun |
 | きり | 霧 | kiri | 🌫️ fog | noun |
-| むしあつい | 蒸し暑い | mushiatsui | 🥵 humid and hot | い-adjective |
-| じめじめした | | jimejime shita | 💧 damp, humid | な-adjective |
 | はれる | 晴れる | hareru | ☀️ to clear up | verb |
 | くもる | 曇る | kumoru | ☁️ to become cloudy | verb |
 | ふる | 降る | furu | 🌧️ to fall (rain/snow) | verb |
@@ -52,6 +50,12 @@ Weather is a universal conversation topic in Japan, where seasons play an import
 | さむい | 寒い | samui | 🥶 cold (weather) | い-adjective |
 | あたたかい | 暖かい | atatakai | 🌸 warm | い-adjective |
 | すずしい | 涼しい | suzushii | 🍃 cool, refreshing | い-adjective |
+| むしあつい | 蒸し暑い | mushiatsui | 🥵 humid and hot | い-adjective |
+| じめじめした | | jimejime shita | 💧 damp, humid | expression |
+
+**Examples:**
+- きょうは むしあつい ですね。 — It's humid and hot today, isn't it?
+  - *kyou wa mushiatsui desu ne.*
 
 :::info Weather Forecast Vocabulary
 When watching Japanese weather forecasts:

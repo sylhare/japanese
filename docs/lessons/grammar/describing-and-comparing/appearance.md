@@ -27,21 +27,29 @@ Remove the final **い** and add **そう** to express how something looks or ap
 
 #### Examples
 
-- おいしい → おいしそう - Looks tasty
+- おいしい → おいしそう — Looks tasty.
   - *oishisou*
-- たかい → たかそう - Looks expensive
+- たかい → たかそう — Looks expensive.
   - *takasou*
-- たのしい → たのしそう - Looks fun
+- たのしい → たのしそう — Looks fun.
   - *tanoshisou*
-- あぶない → あぶなそう - Looks dangerous
+- あぶない → あぶなそう — Looks dangerous.
   - *abunasou*
 
 #### In Sentences
 
-- この ケーキ は おいしそう です - This cake looks delicious.
+- この ケーキ は おいしそう です — This cake looks delicious.
   - *kono keeki wa oishisou desu*
-- その かばん は たかそう です - That bag looks expensive.
+- その かばん は たかそう です — That bag looks expensive.
   - *sono kaban wa takasou desu*
+
+:::caution Exceptions: いい and ない
+Two adjectives form そう irregularly:
+- **いい → よさそう** (not いそう): この ほん は よさそう です — This book looks good.
+  - *kono hon wa yosasou desu*
+- **ない → なさそう** (not なそう): もんだい は なさそう です — There seems to be no problem.
+  - *mondai wa nasasou desu*
+:::
 
 ### With な-Adjectives
 
@@ -51,18 +59,18 @@ Remove **な** and add **そう**.
 
 #### Examples
 
-- しんせつ な → しんせつそう - Looks kind
+- しんせつ な → しんせつそう — Looks kind.
   - *shinsetsusou*
-- げんき な → げんきそう - Looks healthy/energetic
+- げんき な → げんきそう — Looks healthy/energetic.
   - *genkisou*
-- しずか な → しずかそう - Looks quiet
+- しずか な → しずかそう — Looks quiet.
   - *shizukasou*
 
 #### In Sentences
 
-- あの ひと は しんせつそう です - That person looks kind.
+- あの ひと は しんせつそう です — That person looks kind.
   - *ano hito wa shinsetsusou desu*
-- この こ は げんきそう です - This child looks healthy.
+- この こ は げんきそう です — This child looks healthy.
   - *kono ko wa genkisou desu*
 
 ## みたい - Seems Like
@@ -73,11 +81,11 @@ Remove **な** and add **そう**.
 
 ### Examples
 
-- あめ が ふる みたい です - It looks like it will rain.
+- あめ が ふる みたい です — It looks like it will rain.
   - *ame ga furu mitai desu*
-- がくせい みたい です - (He/She) looks like a student.
+- がくせい みたい です — (He/She) looks like a student.
   - *gakusei mitai desu*
-- おいしい みたい です - It seems delicious.
+- おいしい みたい です — It seems delicious.
   - *oishii mitai desu*
 
 :::tip そう vs みたい
