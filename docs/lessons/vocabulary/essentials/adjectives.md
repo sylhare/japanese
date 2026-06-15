@@ -19,7 +19,7 @@ Essential adjectives for describing size, quantity, and everyday things.
 | せまい | 狭い | semai | 📏 narrow/cramped | い-adjective |
 | ながい | 長い | nagai | 〰️ long | い-adjective |
 | みじかい | 短い | mijikai | ✂️ short | い-adjective |
-| たかい | 高い | takai | 🏔️ tall/high | い-adjective |
+| たかい | 高い | takai | 🏔️ tall/high/expensive | い-adjective |
 | ひくい | 低い | hikui | ⬇️ low/short | い-adjective |
 
 **Examples:**

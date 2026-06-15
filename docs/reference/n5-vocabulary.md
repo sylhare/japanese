@@ -46,11 +46,11 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 |  | いつ | itsu | when | noun |
 |  | どこ | doko | where | noun |
 |  | なぜ | naze | why | adverb |
-|  | どう | dou | how | adverb |
-|  | どうして | doushite | why, how come | adverb |
-|  | どうやって | douyatte | how (method) | adverb |
-|  | どれ | dore | which one | noun |
-|  | どの | dono | which (modifier) | noun |
+|  | どう | dou | how (in what way) | adverb |
+|  | どうして | doushite | why (everyday) | adverb |
+|  | どうやって | dou yatte | how (by what method/means) | adverb |
+|  | どれ | dore | which one (of three or more) | noun |
+|  | どの | dono | which... (before a noun) | noun |
 |  | いくつ | ikutsu | how many, how old | noun |
 |  | いくら | ikura | how much (price) | noun |
 
@@ -89,7 +89,7 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | 八つ | やっつ | yattsu | eight (things) | counter |
 | 九つ | ここのつ | kokonotsu | nine (things) | counter |
 | 十 | とお | too | ten (things) | counter |
-| 一人 | ひとり | hitori | one person | counter |
+| 一人 | ひとり | hitori | one person, alone | noun |
 | 二人 | ふたり | futari | two people | counter |
 
 ### Ordinal Numbers
@@ -104,8 +104,8 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 
 | Kanji | Hiragana | Romaji | Meaning | Type |
 | ---------- | ---------- | ---------- | ---------- | ---------- |
-| 一回 | いっかい | ikkai | once, one time | counter |
-| 二回 | にかい | nikai | twice, two times | counter |
+| 一回 | いっかい | ikkai | once | counter |
+| 二回 | にかい | nikai | twice | counter |
 | 三回 | さんかい | sankai | three times | counter |
 | 何回 | なんかい | nankai | how many times | counter |
 
@@ -152,7 +152,7 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | 今朝 | けさ | kesa | this morning | noun |
 | 今晩 | こんばん | konban | tonight | noun |
 | 朝 | あさ | asa | morning | noun |
-| 昼 | ひる | hiru | noon, daytime | noun |
+| 昼 | ひる | hiru | noon/daytime | noun |
 | 夕方 | ゆうがた | yuugata | evening | noun |
 | 夜 | よる | yoru | night | noun |
 | 真夜中 | まよなか | mayonaka | midnight | noun |
@@ -190,7 +190,7 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | 十一時 | じゅういちじ | juuichiji | 11 o'clock | counter |
 | 十二時 | じゅうにじ | juuniji | 12 o'clock | counter |
 | ～分 | ～ふん/～ぷん | ~fun/~pun | ~minute(s) | counter |
-| 半 | はん | han | half (30 minutes) | noun |
+| 半 | はん | han | half past | counter |
 
 ## Family & Relationships
 
@@ -200,19 +200,19 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | ---------- | ---------- | ---------- | ---------- | ---------- |
 | 家族 | かぞく | kazoku | family | noun |
 | 両親 | りょうしん | ryoushin | parents | noun |
-| 父 | ちち | chichi | father (my) | noun |
-| 母 | はは | haha | mother (my) | noun |
-| 兄 | あに | ani | older brother (my) | noun |
-| 姉 | あね | ane | older sister (my) | noun |
-| 弟 | おとうと | otouto | younger brother (my) | noun |
-| 妹 | いもうと | imouto | younger sister (my) | noun |
-| 祖父 | そふ | sofu | grandfather (my) | noun |
-| 祖母 | そぼ | sobo | grandmother (my) | noun |
+| 父 | ちち | chichi | father | noun |
+| 母 | はは | haha | mother | noun |
+| 兄 | あに | ani | older brother | noun |
+| 姉 | あね | ane | older sister | noun |
+| 弟 | おとうと | otouto | younger brother | noun |
+| 妹 | いもうと | imouto | younger sister | noun |
+| 祖父 | そふ | sofu | grandfather | noun |
+| 祖母 | そぼ | sobo | grandmother | noun |
 | 叔父/伯父 | おじ | oji | uncle | noun |
 | 叔母/伯母 | おば | oba | aunt | noun |
 | 従兄弟 | いとこ | itoko | cousin | noun |
-| 夫 | おっと | otto | husband (my) | noun |
-| 妻 | つま | tsuma | wife (my) | noun |
+| 夫 | おっと | otto | husband | noun |
+| 妻 | つま | tsuma | wife | noun |
 | 息子 | むすこ | musuko | son | noun |
 | 娘 | むすめ | musume | daughter | noun |
 
@@ -230,11 +230,11 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | 妹さん | いもうとさん | imoutosan | younger sister | noun |
 | お爺さん | おじいさん | ojiisan | grandfather | noun |
 | お婆さん | おばあさん | obaasan | grandmother | noun |
-| ご主人 | ごしゅじん | goshujin | husband (someone else's) | noun |
-| 奥さん | おくさん | okusan | wife (someone else's) | noun |
+| ご主人 | ごしゅじん | goshujin | husband | noun |
+| 奥さん | おくさん | okusan | wife | noun |
 | 息子さん | むすこさん | musukosan | son (someone else's) | noun |
 | 娘さん | むすめさん | musumesan | daughter (someone else's) | noun |
-| 子供 | こども | kodomo | child, children | noun |
+| 子供 | こども | kodomo | child/children | noun |
 
 ## Colors
 
@@ -259,45 +259,45 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 
 | Kanji | Hiragana | Romaji | Meaning | Type |
 | ---------- | ---------- | ---------- | ---------- | ---------- |
-| 大きい | おおきい | ookii | big, large | い-adjective |
-| 小さい | ちいさい | chiisai | small, little | い-adjective |
-| 高い | たかい | takai | high, tall, expensive | い-adjective |
-| 低い | ひくい | hikui | low, short (height) | い-adjective |
+| 大きい | おおきい | ookii | big/large | い-adjective |
+| 小さい | ちいさい | chiisai | small | い-adjective |
+| 高い | たかい | takai | tall/high/expensive | い-adjective |
+| 低い | ひくい | hikui | low/short | い-adjective |
 | 長い | ながい | nagai | long | い-adjective |
 | 短い | みじかい | mijikai | short | い-adjective |
 | 新しい | あたらしい | atarashii | new | い-adjective |
-| 古い | ふるい | furui | old (things) | い-adjective |
+| 古い | ふるい | furui | old (objects) | い-adjective |
 |  | いい/よい | ii/yoi | good | い-adjective |
 | 悪い | わるい | warui | bad | い-adjective |
 | 暑い | あつい | atsui | hot (weather) | い-adjective |
 | 熱い | あつい | atsui | hot (temperature) | い-adjective |
 | 寒い | さむい | samui | cold (weather) | い-adjective |
-| 冷たい | つめたい | tsumetai | cold (touch) | い-adjective |
+| 冷たい | つめたい | tsumetai | cold (to touch) | い-adjective |
 | 暖かい | あたたかい | atatakai | warm | い-adjective |
-| 涼しい | すずしい | suzushii | cool | い-adjective |
+| 涼しい | すずしい | suzushii | cool/refreshing | い-adjective |
 | 難しい | むずかしい | muzukashii | difficult | い-adjective |
 | 易しい | やさしい | yasashii | easy | い-adjective |
 | 優しい | やさしい | yasashii | kind, gentle | い-adjective |
 | 面白い | おもしろい | omoshiroi | interesting, fun | い-adjective |
 |  | つまらない | tsumaranai | boring | い-adjective |
-| 楽しい | たのしい | tanoshii | fun, enjoyable | い-adjective |
+| 楽しい | たのしい | tanoshii | fun/enjoyable | い-adjective |
 | 嬉しい | うれしい | ureshii | happy, glad | い-adjective |
 | 悲しい | かなしい | kanashii | sad | い-adjective |
 | 早い | はやい | hayai | early | い-adjective |
 | 速い | はやい | hayai | fast | い-adjective |
-| 遅い | おそい | osoi | late, slow | い-adjective |
-| 美味しい | おいしい | oishii | delicious | い-adjective |
-| 不味い | まずい | mazui | bad-tasting | い-adjective |
+| 遅い | おそい | osoi | slow/late | い-adjective |
+| 美味しい | おいしい | oishii | delicious, tasty | い-adjective |
+| 不味い | まずい | mazui | bad-tasting, awful | い-adjective |
 | 甘い | あまい | amai | sweet | い-adjective |
-| 辛い | からい | karai | spicy, salty | い-adjective |
+| 辛い | からい | karai | spicy/hot | い-adjective |
 | 酸っぱい | すっぱい | suppai | sour | い-adjective |
 | 苦い | にがい | nigai | bitter | い-adjective |
 | 重い | おもい | omoi | heavy | い-adjective |
-| 軽い | かるい | karui | light (weight) | い-adjective |
-| 硬い | かたい | katai | hard, stiff | い-adjective |
-| 柔らかい | やわらかい | yawarakai | soft | い-adjective |
-| 広い | ひろい | hiroi | spacious, wide | い-adjective |
-| 狭い | せまい | semai | narrow, cramped | い-adjective |
+| 軽い | かるい | karui | light | い-adjective |
+| 硬い | かたい | katai | hard, firm | い-adjective |
+| 柔らかい | やわらかい | yawarakai | soft, tender | い-adjective |
+| 広い | ひろい | hiroi | wide/spacious | い-adjective |
+| 狭い | せまい | semai | narrow/cramped | い-adjective |
 | 明るい | あかるい | akarui | bright | い-adjective |
 | 暗い | くらい | kurai | dark | い-adjective |
 |  | うるさい | urusai | noisy | い-adjective |
@@ -310,9 +310,9 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | Kanji | Hiragana | Romaji | Meaning | Type |
 | ---------- | ---------- | ---------- | ---------- | ---------- |
 | 元気 | げんき | genki | healthy, energetic | な-adjective |
-| 静か | しずか | shizuka | quiet | な-adjective |
+| 静か | しずか | shizuka | quiet, peaceful | な-adjective |
 | 賑やか | にぎやか | nigiyaka | lively, bustling | な-adjective |
-|  | きれい | kirei | pretty, clean | な-adjective |
+|  | きれい | kirei | clean/pretty | な-adjective |
 | 有名 | ゆうめい | yuumei | famous | な-adjective |
 | 便利 | べんり | benri | convenient | な-adjective |
 | 不便 | ふべん | fuben | inconvenient | な-adjective |
@@ -336,7 +336,7 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | Kanji | Hiragana | Romaji | Meaning | Type |
 | ---------- | ---------- | ---------- | ---------- | ---------- |
 | 行く | いく | iku | to go | verb |
-| 帰る | かえる | kaeru | to return, go home | verb |
+| 帰る | かえる | kaeru | to return | verb |
 |  | ある | aru | to exist (inanimate) | verb |
 | 書く | かく | kaku | to write | verb |
 | 読む | よむ | yomu | to read | verb |
@@ -345,7 +345,7 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | 飲む | のむ | nomu | to drink | verb |
 | 買う | かう | kau | to buy | verb |
 | 売る | うる | uru | to sell | verb |
-| 取る | とる | toru | to take | verb |
+| 取る | とる | toru | to take, to pick up | verb |
 | 待つ | まつ | matsu | to wait | verb |
 | 立つ | たつ | tatsu | to stand | verb |
 | 座る | すわる | suwaru | to sit | verb |
@@ -381,24 +381,24 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | ---------- | ---------- | ---------- | ---------- | ---------- |
 | 食べる | たべる | taberu | to eat | verb |
 | 寝る | ねる | neru | to sleep | verb |
-| 起きる | おきる | okiru | to wake up, get up | verb |
+| 起きる | おきる | okiru | to wake up | verb |
 | 見る | みる | miru | to see | verb |
 |  | いる | iru | to exist (animate) | verb |
-| 出る | でる | deru | to go out, exit | verb |
+| 出る | でる | deru | to exit | verb |
 | 開ける | あける | akeru | to open | verb |
 | 閉める | しめる | shimeru | to close | verb |
 | 付ける | つける | tsukeru | to turn on, attach | verb |
 | 教える | おしえる | oshieru | to teach | verb |
 | 覚える | おぼえる | oboeru | to memorize | verb |
 | 忘れる | わすれる | wasureru | to forget | verb |
-| 借りる | かりる | kariru | to borrow | verb |
+| 借りる | かりる | kariru | to rent, to borrow | verb |
 | 入れる | いれる | ireru | to put in | verb |
-| 上げる | あげる | ageru | to give, raise | verb |
+| 上げる | あげる | ageru | to give (to someone else) | verb |
 | 見せる | みせる | miseru | to show | verb |
 | 答える | こたえる | kotaeru | to answer | verb |
 | 掛ける | かける | kakeru | to hang, make a call | verb |
 | 辞める | やめる | yameru | to quit | verb |
-| 捨てる | すてる | suteru | to throw away | verb |
+| 捨てる | すてる | suteru | to discard/throw away | verb |
 
 ### Irregular Verbs
 
@@ -407,11 +407,11 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 |  | する | suru | to do | verb |
 | 来る | くる | kuru | to come | verb |
 | 勉強する | べんきょうする | benkyousuru | to study | verb |
-| 料理する | りょうりする | ryourisuru | to cook | verb |
+| 料理する | りょうりする | ryouri suru | to cook | verb |
 | 掃除する | そうじする | soujisuru | to clean | verb |
 | 洗濯する | せんたくする | sentakusuru | to do laundry | verb |
 | 買い物する | かいものする | kaimonosuru | to shop | verb |
-| 散歩する | さんぽする | sanposuru | to take a walk | verb |
+| 散歩する | さんぽする | sanpo suru | to take a walk | verb |
 | 旅行する | りょこうする | ryokousuru | to travel | verb |
 | 結婚する | けっこんする | kekkonsuru | to marry | verb |
 | 仕事する | しごとする | shigotosuru | to work | verb |
@@ -467,7 +467,7 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | 生徒 | せいと | seito | student (elementary/secondary) | noun |
 | 学生 | がくせい | gakusei | student | noun |
 | 教室 | きょうしつ | kyoushitsu | classroom | noun |
-| 本 | ほん | hon | book | noun |
+| 本 | ほん | hon | book/root | noun |
 |  | ノート | nooto | notebook | noun |
 |  | ペン | pen | pen | noun |
 | 鉛筆 | えんぴつ | enpitsu | pencil | noun |
@@ -506,7 +506,7 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | 朝ご飯 | あさごはん | asagohan | breakfast | noun |
 | 昼ご飯 | ひるごはん | hirugohan | lunch | noun |
 | 晩ご飯 | ばんごはん | bangohan | dinner | noun |
-| ご飯 | ごはん | gohan | rice, meal | noun |
+| ご飯 | ごはん | gohan | cooked rice, meal | noun |
 |  | パン | pan | bread | noun |
 | 卵 | たまご | tamago | egg | noun |
 
@@ -531,7 +531,7 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 |  | カレー | karee | curry | noun |
 |  | ラーメン | raamen | ramen | noun |
 | 寿司 | すし | sushi | sushi | noun |
-| 天ぷら | てんぷら | tenpura | tempura | noun |
+| 天ぷら | てんぷら | tenpura | tempura (battered, deep-fried) | noun |
 
 ### Drinks
 
@@ -564,8 +564,8 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | 腕 | うで | ude | arm | noun |
 | 手 | て | te | hand | noun |
 | 指 | ゆび | yubi | finger | noun |
-| 足 | あし | ashi | leg, foot | noun |
-| お腹 | おなか | onaka | stomach | noun |
+| 足 | あし | ashi | foot, leg | noun |
+| お腹 | おなか | onaka | stomach, belly | noun |
 | 背中 | せなか | senaka | back | noun |
 
 ## Clothing
@@ -575,13 +575,13 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | 服 | ふく | fuku | clothes | noun |
 |  | シャツ | shatsu | shirt | noun |
 |  | Tシャツ | tiishatsu | T-shirt | noun |
-|  | ズボン | zubon | pants, trousers | noun |
+|  | ズボン | zubon | pants | noun |
 |  | スカート | sukaato | skirt | noun |
 | 靴 | くつ | kutsu | shoes | noun |
 | 靴下 | くつした | kutsushita | socks | noun |
-| 帽子 | ぼうし | boushi | hat, cap | noun |
+| 帽子 | ぼうし | boushi | hat | noun |
 | 眼鏡 | めがね | megane | glasses | noun |
-| 時計 | とけい | tokei | watch, clock | noun |
+| 時計 | とけい | tokei | watch/clock | noun |
 
 ## Nature & Weather
 
@@ -693,20 +693,20 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 |  | とても | totemo | very | adverb |
 |  | すごく | sugoku | very, extremely | adverb |
 |  | ちょっと | chotto | a little | adverb |
-| 少し | すこし | sukoshi | a little, few | adverb |
-| 沢山 | たくさん | takusan | a lot, many | adverb |
+| 少し | すこし | sukoshi | a little/few | adverb |
+| 沢山 | たくさん | takusan | many/a lot | adverb |
 |  | もっと | motto | more | adverb |
 |  | だけ | dake | only | adverb |
 | 全然 | ぜんぜん | zenzen | (not) at all | adverb |
 |  | あまり | amari | (not) very | adverb |
 |  | もう | mou | already, anymore | adverb |
 |  | まだ | mada | still, not yet | adverb |
-| 又 | また | mata | again | adverb |
+| 又 | また | mata | also, again, moreover | adverb |
 |  | いつも | itsumo | always | adverb |
 |  | よく | yoku | often, well | adverb |
 | 時々 | ときどき | tokidoki | sometimes | adverb |
 | 大抵 | たいてい | taitei | usually | adverb |
-| 全部 | ぜんぶ | zenbu | all, everything | adverb |
+| 全部 | ぜんぶ | zenbu | all/everything | noun |
 | 大体 | だいたい | daitai | mostly, roughly | adverb |
 |  | きっと | kitto | surely, certainly | adverb |
 | 多分 | たぶん | tabun | probably, maybe | adverb |

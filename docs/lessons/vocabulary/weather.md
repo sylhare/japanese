@@ -49,7 +49,7 @@ Weather is a universal conversation topic in Japan, where seasons play an import
 | あつい | 暑い | atsui | 🥵 hot (weather) | い-adjective |
 | さむい | 寒い | samui | 🥶 cold (weather) | い-adjective |
 | あたたかい | 暖かい | atatakai | 🌸 warm | い-adjective |
-| すずしい | 涼しい | suzushii | 🍃 cool, refreshing | い-adjective |
+| すずしい | 涼しい | suzushii | 🍃 cool/refreshing | い-adjective |
 | むしあつい | 蒸し暑い | mushiatsui | 🥵 humid and hot | い-adjective |
 | じめじめした | | jimejime shita | 💧 damp, humid | expression |
 
@@ -116,7 +116,7 @@ Example:
 
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
-| ぼうし | 帽子 | boushi | 🧢 hat, cap | noun |
+| ぼうし | 帽子 | boushi | 🧢 hat | noun |
 | サングラス | | sangurasu | 🕶️ sunglasses | noun |
 | ひやけどめ | 日焼け止め | hiyakedome | 🧴 sunscreen | noun |
 | せんす | 扇子 | sensu | 🪭 folding fan | noun |

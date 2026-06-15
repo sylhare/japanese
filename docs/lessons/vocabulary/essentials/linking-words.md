@@ -74,7 +74,7 @@ Use these to add more information — *also*, *moreover*, *in addition*.
 |----------|-------|--------|---------|------|
 | そして | - | soshite | and, and then | conjunction |
 | それに | - | soreni | moreover, in addition | conjunction |
-| また | 又 | mata | also, again, moreover | conjunction |
+| また | 又 | mata | also, again, moreover | adverb |
 | も | - | mo | also, too | particle |
 | さらに | 更に | sara ni | furthermore, even more | conjunction |
 

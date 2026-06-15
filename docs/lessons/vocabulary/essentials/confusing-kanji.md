@@ -206,7 +206,7 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
-| おおきい     | 大きい   | ookii  | big     | い-adjective |
+| おおきい     | 大きい   | ookii  | big/large     | い-adjective |
 | いぬ       | 犬     | inu    | dog     | noun |
 
 **Memory Tips:**
@@ -350,7 +350,7 @@ Many Japanese kanji look very similar but have completely different meanings and
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
 | め        | 目     | me     | eye     | noun |
-| じ        | 自     | ji     | self    | noun |
+| じ        | 自     | ji     | oneself    | noun |
 
 **Memory Tips:**
 - **目 (me)**: Just a simple EYE looking at things
