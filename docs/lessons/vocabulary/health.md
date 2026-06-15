@@ -67,7 +67,6 @@ Knowing health-related vocabulary is essential for daily life in Japan. This les
 |----------|-------|--------|---------|------|
 | くすり | 薬 | kusuri | 💊 medicine | noun |
 | くすりをのむ | 薬を飲む | kusuri o nomu | to take medicine | verb |
-| くすりをのまない | 薬を飲まない | kusuri o nomanai | to not take medicine | verb |
 | びょういん | 病院 | byouin | 🏥 hospital | noun |
 | いしゃ | 医者 | isha | 👨‍⚕️ doctor | noun |
 | かんごし | 看護師 | kangoshi | 👩‍⚕️ nurse | noun |
@@ -144,7 +143,7 @@ Knowing health-related vocabulary is essential for daily life in Japan. This les
 
 :::tip Common Phrases
 - おだいじに (お大事に) — Take care / Get well soon
-  - Said to someone who is sick
+  - *odaiji ni* — said on its own to someone who is sick; short for お大事になさってください (*odaiji ni nasatte kudasai*)
 - ぐあいが わるい (具合が悪い) — Feeling unwell
   - *guai ga warui*
 :::
