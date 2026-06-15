@@ -192,10 +192,10 @@ describe('shuffle', () => {
 
 describe('pickDistractors', () => {
   const pool = [
-    item({ id: 'a', meaning: 'red', type: 'noun' }),
-    item({ id: 'b', meaning: 'blue', type: 'noun' }),
-    item({ id: 'c', meaning: 'green', type: 'noun' }),
-    item({ id: 'd', meaning: 'fast', type: 'い-adjective' }),
+    item({ id: 'a', hiragana: 'あか', kanji: '赤', meaning: 'red', type: 'noun' }),
+    item({ id: 'b', hiragana: 'あお', kanji: '青', meaning: 'blue', type: 'noun' }),
+    item({ id: 'c', hiragana: 'みどり', kanji: '緑', meaning: 'green', type: 'noun' }),
+    item({ id: 'd', hiragana: 'はやい', kanji: '速い', meaning: 'fast', type: 'い-adjective' }),
   ];
 
   it('prefers same-type items with different meanings', () => {
@@ -208,25 +208,41 @@ describe('pickDistractors', () => {
   });
 
   it('never repeats a meaning', () => {
-    const withDup = [...pool, item({ id: 'e', meaning: 'blue', type: 'noun' })];
+    const withDup = [...pool, item({ id: 'e', hiragana: 'そら', kanji: '空', meaning: 'blue', type: 'noun' })];
     const distractors = pickDistractors(withDup[0], withDup, 3, seqRng([0]));
     const meanings = distractors.map(d => d.meaning);
     expect(new Set(meanings).size).toBe(meanings.length);
   });
 
   it('falls back to other types when not enough same-type items exist', () => {
-    const small = [item({ id: 'a', meaning: 'red', type: 'noun' }), pool[3]];
+    const small = [item({ id: 'a', hiragana: 'あか', kanji: '赤', meaning: 'red', type: 'noun' }), pool[3]];
     const distractors = pickDistractors(small[0], small, 3, seqRng([0]));
     expect(distractors.map(d => d.meaning)).toEqual(['fast']);
+  });
+
+  it('excludes homonyms that share the same reading', () => {
+    const kiru = item({ id: 'cut', hiragana: 'きる', kanji: '切る', meaning: 'to cut', type: 'verb' });
+    const wear = item({ id: 'wear', hiragana: 'きる', kanji: '着る', meaning: 'to wear', type: 'verb' });
+    const other = item({ id: 'eat', hiragana: 'たべる', kanji: '食べる', meaning: 'to eat', type: 'verb' });
+    const distractors = pickDistractors(kiru, [kiru, wear, other], 3, seqRng([0]));
+    expect(distractors.map(d => d.meaning)).toEqual(['to eat']);
+  });
+
+  it('excludes entries that share the same kanji', () => {
+    const a = item({ id: 'a', hiragana: 'おおきい', kanji: '大きい', meaning: 'big/large', type: 'い-adjective' });
+    const dup = item({ id: 'b', hiragana: 'おおきい', kanji: '大きい', meaning: 'big', type: 'い-adjective' });
+    const small = item({ id: 'c', hiragana: 'ちいさい', kanji: '小さい', meaning: 'small', type: 'い-adjective' });
+    const distractors = pickDistractors(a, [a, dup, small], 3, seqRng([0]));
+    expect(distractors.map(d => d.meaning)).toEqual(['small']);
   });
 });
 
 describe('buildQuestion', () => {
   const pool = [
-    item({ id: 'a', meaning: 'red', type: 'noun' }),
-    item({ id: 'b', meaning: 'blue', type: 'noun' }),
-    item({ id: 'c', meaning: 'green', type: 'noun' }),
-    item({ id: 'd', meaning: 'yellow', type: 'noun' }),
+    item({ id: 'a', hiragana: 'あか', kanji: '赤', meaning: 'red', type: 'noun' }),
+    item({ id: 'b', hiragana: 'あお', kanji: '青', meaning: 'blue', type: 'noun' }),
+    item({ id: 'c', hiragana: 'みどり', kanji: '緑', meaning: 'green', type: 'noun' }),
+    item({ id: 'd', hiragana: 'きいろ', kanji: '黄色', meaning: 'yellow', type: 'noun' }),
   ];
 
   it('produces OPTION_COUNT distinct options including the answer', () => {
