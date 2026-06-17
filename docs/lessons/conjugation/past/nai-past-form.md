@@ -2,7 +2,7 @@
 sidebar_position: 2
 title: Past Negative - なかった
 description: Learn to express past negation in Japanese
-tags: [grammar, verbs, conjugation, ない形, negative, past tense]
+tags: [grammar, conjugation, verbs, nai-form, negative, past-tense]
 ---
 
 import NextSteps from '@site/src/components/NextSteps';

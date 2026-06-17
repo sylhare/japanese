@@ -2,7 +2,7 @@
 sidebar_position: 1
 title: Present - て form
 description: Learn the connecting form of Japanese verbs
-tags: [grammar, verbs, conjugation, て形]
+tags: [grammar, conjugation, verbs, te-form]
 ---
 
 import NextSteps from '@site/src/components/NextSteps';

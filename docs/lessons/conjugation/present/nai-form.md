@@ -2,7 +2,7 @@
 sidebar_position: 2
 title: Present Negative - ない
 description: Learn the negative form of Japanese verbs
-tags: [grammar, verbs, conjugation, ない形, negative]
+tags: [grammar, conjugation, verbs, nai-form, negative]
 ---
 
 import NextSteps from '@site/src/components/NextSteps';

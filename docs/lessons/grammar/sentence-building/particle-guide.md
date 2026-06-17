@@ -2,7 +2,7 @@
 sidebar_position: 1
 title: Particle Guide
 description: Complete guide to Japanese particles and their usage
-tags: [reference, particles, grammar]
+tags: [grammar, particles, reference]
 ---
 
 # Japanese Particle Guide

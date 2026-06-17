@@ -2,7 +2,7 @@
 sidebar_position: 1
 title: 📖 Reading Numbers
 description: Learn how to read and group Japanese numbers
-tags: [numbers, counting, basics]
+tags: [vocabulary, numbers, counting, basic]
 ---
 
 import NextSteps from '@site/src/components/NextSteps';

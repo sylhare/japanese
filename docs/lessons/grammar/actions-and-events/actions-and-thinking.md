@@ -2,7 +2,7 @@
 sidebar_position: 3
 title: Actions and Thinking - ている / てみる
 description: Learn expressions for continuous actions (ている), trying (てみる), and thinking (おもう, かんがえる)
-tags: [grammar, actions, thinking, て-form, ている, てみる]
+tags: [grammar, actions, thinking, te-form]
 ---
 
 # Actions and Thinking: ている / てみる

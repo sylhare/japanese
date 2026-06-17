@@ -2,7 +2,7 @@
 sidebar_position: 5
 title: Potential Form - できる
 description: Learn how to express ability in Japanese
-tags: [grammar, verbs, conjugation, できる形, potential]
+tags: [grammar, conjugation, verbs, potential-form]
 ---
 
 import NextSteps from '@site/src/components/NextSteps';

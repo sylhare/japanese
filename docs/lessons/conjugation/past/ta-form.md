@@ -2,7 +2,7 @@
 sidebar_position: 1
 title: Past - た form
 description: Master the past tense conjugation of Japanese verbs
-tags: [grammar, verbs, conjugation, た形, past tense]
+tags: [grammar, conjugation, verbs, ta-form, past-tense]
 ---
 
 import NextSteps from '@site/src/components/NextSteps';

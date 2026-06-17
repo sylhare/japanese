@@ -2,7 +2,7 @@
 sidebar_position: 4
 title: Indirect Questions
 description: Learn how to form an indirect question by putting the question in plain form and attaching か
-tags: [grammar, questions, indirect-questions, ka-douka, embedded-questions]
+tags: [grammar, questions, indirect-questions, embedded-questions]
 ---
 
 import NextSteps from '@site/src/components/NextSteps';
@@ -110,10 +110,5 @@ If the inner question has a yes-or-no answer and no question word, use **かど�
     title: 'Question Words',
     description: 'Review the question words used in embedded questions',
     to: './question-words',
-  },
-  {
-    title: 'Expressing Reason',
-    description: 'Learn to explain why with ので and から',
-    to: '/docs/lessons/grammar/explaining-and-reasoning/reason',
   },
 ]} />
