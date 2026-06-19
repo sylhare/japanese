@@ -19,6 +19,13 @@ Learn how to describe how things look or seem.
 
 ## そう - Looking...
 
+### How to Form
+
+| Form | Affirmative | Negative |
+|------|-------------|----------|
+| い-Adjective | [い-adj without い] + そう | [い-adj without い] + くなさそう |
+| な-Adjective | [な-adj without な] + そう | [な-adj without な] + じゃなさそう |
+
 ### With い-Adjectives
 
 **[い-adjective without い] + そう**
@@ -73,11 +80,41 @@ Remove **な** and add **そう**.
 - この こ は げんきそう です — This child looks healthy.
   - *kono ko wa genkisou desu*
 
+### Negative: Doesn't Look...
+
+Make the adjective negative first, then add そう. Because the negative ending **ない** becomes **なさそう**, both い- and な-adjectives end in **〜なさそう**.
+
+#### Examples
+
+- おいしい → おいしくなさそう — Doesn't look tasty.
+  - *oishikunasasou*
+- たのしい → たのしくなさそう — Doesn't look fun.
+  - *tanoshikunasasou*
+- げんき な → げんき じゃなさそう — Doesn't look healthy.
+  - *genki janasasou*
+
+#### In Sentences
+
+- この りょうり は おいしくなさそう です — This dish doesn't look tasty.
+  - *kono ryouri wa oishikunasasou desu*
+- あの ひと は げんき じゃなさそう です — That person doesn't look healthy.
+  - *ano hito wa genki janasasou desu*
+
 ## みたい - Seems Like
 
 **A みたい です**
 
 **Meaning:** "It looks like A" or "It seems like A"
+
+### How to Form
+
+Attach みたい です to the plain form of A. For the negative, make A negative first — みたい です stays the same.
+
+| Form | Affirmative | Negative |
+|------|-------------|----------|
+| Verb | [plain form] + みたい です | [plain negative] + みたい です |
+| Noun | [noun] + みたい です | [noun] + じゃない + みたい です |
+| い-Adjective | [い-adj] + みたい です | [〜くない] + みたい です |
 
 ### Examples
 
@@ -87,6 +124,17 @@ Remove **な** and add **そう**.
   - *gakusei mitai desu*
 - おいしい みたい です — It seems delicious.
   - *oishii mitai desu*
+
+### Negative: Doesn't Seem Like
+
+Make the word or clause **before** みたい negative — **みたい です** itself stays the same.
+
+- あめ が ふらない みたい です — It looks like it won't rain.
+  - *ame ga furanai mitai desu*
+- がくせい じゃない みたい です — (He/She) doesn't seem to be a student.
+  - *gakusei janai mitai desu*
+- おいしくない みたい です — It doesn't seem delicious.
+  - *oishikunai mitai desu*
 
 :::tip そう vs みたい
 Use **そう** for visual appearance based on direct observation — you can see it.
