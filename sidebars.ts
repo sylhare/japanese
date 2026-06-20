@@ -49,6 +49,11 @@ const sharedSidebarItems: SidebarsConfig[string] = [
     label: 'Dictionary',
     href: '/japanese/dictionary',
   },
+  {
+    type: 'link',
+    label: 'Study',
+    href: '/japanese/study',
+  },
 ];
 
 /**

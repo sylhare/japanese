@@ -138,6 +138,10 @@ export function shuffle<T>(items: T[], rng: Rng): T[] {
  * Pick `count` distractor items with meanings different from `item`. Same-type
  * items are preferred; if there aren't enough, other types fill the remainder.
  * Meanings are de-duplicated so the four options are always distinct.
+ *
+ * Homonyms are excluded: a candidate that shares the item's reading or kanji
+ * would be a legitimate answer to the same prompt (e.g. きる → 切る "to cut"
+ * vs 着る "to wear"), so it can never appear as a wrong option.
  */
 export function pickDistractors(
   item: VocabularyItem,
@@ -146,8 +150,13 @@ export function pickDistractors(
   rng: Rng,
 ): VocabularyItem[] {
   const takenMeanings = new Set([item.meaning]);
+  const reading = baseScript(item);
   const eligible = pool.filter(
-    candidate => candidate.id !== item.id && candidate.meaning !== item.meaning,
+    candidate =>
+      candidate.id !== item.id &&
+      candidate.meaning !== item.meaning &&
+      baseScript(candidate) !== reading &&
+      !(item.kanji && candidate.kanji === item.kanji),
   );
   const sameType = eligible.filter(candidate => candidate.type === item.type);
   const otherType = eligible.filter(candidate => candidate.type !== item.type);
