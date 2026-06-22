@@ -58,14 +58,18 @@ Use **なんかい (何回)** to ask "how many times?":
 
 ### Examples
 
-- しゅう に いっかい えいが を みます — I watch a movie once a week.
-  - *shuu ni ikkai eiga o mimasu*
+- ろくしゅうかん、しゅう に いっかい ヨガ に かよいます — I go to yoga once a week for six weeks.
+  - *rokushuukan, shuu ni ikkai yoga ni kayoimasu*
 - いちにち に さんかい は を みがきます — I brush my teeth three times a day.
   - *ichinichi ni sankai ha o migakimasu*
 - ねん に いっかい にほん に いきます — I go to Japan once a year.
   - *nen ni ikkai nihon ni ikimasu*
 - つき に いっかい りょうしん に でんわ します — I call my parents once a month.
   - *tsuki ni ikkai ryoushin ni denwa shimasu*
+
+:::info Saying "for X weeks"
+To frame a frequency over a bounded period — "once a week **for six weeks**" — use **〜間 (あいだ)**: ろくしゅうかんの あいだ、しゅう に いっかい... See [Sequential and Concurrent Actions](/docs/lessons/grammar/actions-and-events/sequential-actions) for 間 / 間に.
+:::
 
 <NextSteps items={[
   {

@@ -406,7 +406,7 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | ---------- | ---------- | ---------- | ---------- | ---------- |
 |  | する | suru | to do | verb |
 | 来る | くる | kuru | to come | verb |
-| 勉強する | べんきょうする | benkyousuru | to study | verb |
+| 勉強する | べんきょうする | benkyou suru | to study | verb |
 | 料理する | りょうりする | ryouri suru | to cook | verb |
 | 掃除する | そうじする | soujisuru | to clean | verb |
 | 洗濯する | せんたくする | sentakusuru | to do laundry | verb |
@@ -465,7 +465,7 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | ---------- | ---------- | ---------- | ---------- | ---------- |
 | 先生 | せんせい | sensei | teacher | noun |
 | 生徒 | せいと | seito | student (elementary/secondary) | noun |
-| 学生 | がくせい | gakusei | student | noun |
+| 学生 | がくせい | gakusei | student (college) | noun |
 | 教室 | きょうしつ | kyoushitsu | classroom | noun |
 | 本 | ほん | hon | book/root | noun |
 |  | ノート | nooto | notebook | noun |
