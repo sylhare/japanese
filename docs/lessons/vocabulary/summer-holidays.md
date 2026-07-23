@@ -77,6 +77,9 @@ For general festival, performance, and event words (まつり, もよおし...),
 
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
+| うみ | 海 | umi | 🌊 sea, seaside | noun |
+| ビーチ | - | biichi | 🏖️ beach | noun |
+| しぜん | 自然 | shizen | 🌿 nature | noun |
 | かいすいよく | 海水浴 | kaisuiyoku | 🏊 sea bathing, swimming at the beach | noun |
 | むしとり | 虫取り | mushitori | 🦋 insect catching | noun |
 | せみ | 蝉 | semi | 🦗 cicada | noun |
@@ -92,8 +95,32 @@ For general festival, performance, and event words (まつり, もよおし...),
   - *kodomotachi wa kouen de mushitori o shite imasu.*
 
 :::info Travel and Outdoor Vocabulary
-For beaches, mountains, hot springs, and trip-planning words (うみ, やま, おんせん, よやく...), see the [Travel and Tourism](./travel) article.
+For mountains, hot springs, and trip-planning words (やま, おんせん, よやく...), see the [Travel and Tourism](./travel) article.
 :::
+
+## Talking About Your Trip
+
+Back from the break, everyone swaps stories about where they went. Many people head south (みなみ) for warmer seas and sunny weather.
+
+| Hiragana | Kanji | Romaji | English | Type |
+|----------|-------|--------|---------|------|
+| りょこう | 旅行 | ryokou | 🧳 trip, travel | noun |
+| みなみ | 南 | minami | 🧭 south | noun |
+| おもいで | 思い出 | omoide | 💭 memory | noun |
+| おとずれる | 訪れる | otozureru | to visit | verb |
+| たのしむ | 楽しむ | tanoshimu | to enjoy | verb |
+| くつろぐ | - | kutsurogu | to relax, to unwind | verb |
+
+**Examples:**
+
+- なつやすみに みなみの しまを おとずれました。 — I visited a southern island during the summer holidays.
+  - *natsuyasumi ni minami no shima o otozuremashita.*
+- うみで およいで、アイスクリームを たべました。 — I swam in the sea and ate ice cream.
+  - *umi de oyoide, aisukuriimu o tabemashita.*
+- とても たのしかったです。 — It was a lot of fun.
+  - *totemo tanoshikatta desu.*
+- ゆっくり くつろげて よかったです。 — It was nice to relax and take it easy.
+  - *yukkuri kutsurogete yokatta desu.*
 
 ## Useful Expressions
 
