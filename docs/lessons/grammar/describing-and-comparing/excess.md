@@ -44,12 +44,12 @@ Attach **すぎる** to the verb's **stem** (the same stem used for ます): る
 
 ### In Sentences
 
-- きのう の よる、たべすぎました — I ate too much last night.
-  - *kinou no yoru, tabesugimashita*
-- ゲーム を しすぎます — Play too much (games).
-  - *geemu o shisugimasu*
-- はたらきすぎます — Work too much.
-  - *hatarakisugimasu*
+- きのう の よる、たべすぎました。 — I ate too much last night.
+  - *kinou no yoru, tabesugimashita.*
+- ゲーム を しすぎます。 — Play too much (games).
+  - *geemu o shisugimasu.*
+- はたらきすぎます。 — Work too much.
+  - *hatarakisugimasu.*
 
 ## With い-Adjectives
 
@@ -68,10 +68,10 @@ Remove the final **い** and add **すぎる**.
 
 ### In Sentences
 
-- さむすぎます - Too cold
-  - *samusugimasu*
-- この くるま は たかすぎます - This car is too expensive
-  - *kono kuruma wa takasugimasu*
+- さむすぎます。 — Too cold.
+  - *samusugimasu.*
+- この くるま は たかすぎます。 — This car is too expensive.
+  - *kono kuruma wa takasugimasu.*
 
 ## With な-Adjectives
 
@@ -90,8 +90,8 @@ Simply add **すぎる** directly to the adjective stem (without な).
 
 ### In Sentences
 
-- この まち は よる に なると しずかすぎます — This town is too quiet at night.
-  - *kono machi wa yoru ni naru to shizukasugimasu*
-- この へや は きれいすぎます — This room is too clean.
-  - *kono heya wa kireisugimasu*
+- この まち は よる に なると しずかすぎます。 — This town is too quiet at night.
+  - *kono machi wa yoru ni naru to shizukasugimasu.*
+- この へや は きれいすぎます。 — This room is too clean.
+  - *kono heya wa kireisugimasu.*
 

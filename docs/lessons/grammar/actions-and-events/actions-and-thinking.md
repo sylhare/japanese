@@ -36,12 +36,12 @@ Learn how to express ongoing actions, trying things, and thoughts.
 
 ### In Sentences
 
-- いま テレビ を みている — I'm watching TV now.
-  - *ima terebi o mite iru*
-- ともだち が きている — My friend is here/has come.
-  - *tomodachi ga kite iru*
-- まいにち べんきょうしている — I study every day.
-  - *mainichi benkyou shite iru*
+- いま テレビ を みている。 — I'm watching TV now.
+  - *ima terebi o mite iru.*
+- ともだち が きている。 — My friend is here/has come.
+  - *tomodachi ga kite iru.*
+- まいにち べんきょうしている。 — I study every day.
+  - *mainichi benkyou shite iru.*
 
 ## Thinking
 
@@ -53,10 +53,10 @@ Learn how to express ongoing actions, trying things, and thoughts.
 
 #### Examples
 
-- みらい を かんがえる — Think about the future.
-  - *mirai o kangaeru*
-- もんだい を かんがえる — Think about the problem.
-  - *mondai o kangaeru*
+- みらい を かんがえる。 — Think about the future.
+  - *mirai o kangaeru.*
+- もんだい を かんがえる。 — Think about the problem.
+  - *mondai o kangaeru.*
 
 ### Think That: と おもう
 
@@ -66,12 +66,12 @@ Learn how to express ongoing actions, trying things, and thoughts.
 
 #### Examples
 
-- いい と おもう — I think it's good.
-  - *ii to omou*
-- むずかしい と おもう — I think it's difficult.
-  - *muzukashii to omou*
-- あした あめ が ふる と おもう — I think it will rain tomorrow.
-  - *ashita ame ga furu to omou*
+- いい と おもう。 — I think it's good.
+  - *ii to omou.*
+- むずかしい と おもう。 — I think it's difficult.
+  - *muzukashii to omou.*
+- あした あめ が ふる と おもう。 — I think it will rain tomorrow.
+  - *ashita ame ga furu to omou.*
 
 ## Trying: てみる
 
@@ -92,10 +92,10 @@ Learn how to express ongoing actions, trying things, and thoughts.
 
 #### In Sentences
 
-- この りょうり を たべてみて — Try eating this dish.
-  - *kono ryouri o tabete mite*
-- にほんご を はなしてみます — I'll try speaking Japanese.
-  - *nihongo o hanashite mimasu*
+- この りょうり を たべてみて。 — Try eating this dish.
+  - *kono ryouri o tabete mite.*
+- にほんご を はなしてみます。 — I'll try speaking Japanese.
+  - *nihongo o hanashite mimasu.*
 
 ### Let's Try: て form + みよう
 
@@ -114,8 +114,8 @@ Learn how to express ongoing actions, trying things, and thoughts.
 
 #### In Sentences
 
-- この ゲーム を してみよう — Let's try playing this game.
-  - *kono geemu o shite miyou*
-- あたらしい レストラン に いってみよう — Let's try going to the new restaurant.
-  - *atarashii resutoran ni itte miyou*
+- この ゲーム を してみよう。 — Let's try playing this game.
+  - *kono geemu o shite miyou.*
+- あたらしい レストラン に いってみよう。 — Let's try going to the new restaurant.
+  - *atarashii resutoran ni itte miyou.*
 

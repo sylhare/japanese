@@ -33,24 +33,24 @@ The verb in clause A must be in the **dictionary (plain)** form.
 
 **Natural consequences** — something that always happens when A occurs:
 
-- はるに なると、はなが さきます — When spring comes, the flowers bloom.
-  - *haru ni naru to, hana ga sakimasu*
-- このボタンを おすと、でんきが つきます — When you press this button, the light turns on.
-  - *kono botan o osu to, denki ga tsukimasu*
+- はるに なると、はなが さきます。 — When spring comes, the flowers bloom.
+  - *haru ni naru to, hana ga sakimasu.*
+- このボタンを おすと、でんきが つきます。 — When you press this button, the light turns on.
+  - *kono botan o osu to, denki ga tsukimasu.*
 
 **Universal truths and facts:**
 
-- ふゆに なると、さむくなります — When winter comes, it gets cold.
-  - *fuyu ni naru to, samuku narimasu*
-- みずを あたためると、おゆに なります — When you heat water, it becomes hot water.
-  - *mizu o atatameru to, o-yu ni narimasu*
+- ふゆに なると、さむくなります。 — When winter comes, it gets cold.
+  - *fuyu ni naru to, samuku narimasu.*
+- みずを あたためると、おゆに なります。 — When you heat water, it becomes hot water.
+  - *mizu o atatameru to, o-yu ni narimasu.*
 
 **Directions and predictable outcomes:**
 
-- まっすぐ いくと、こうえんが みえます — If you go straight, you'll see the park.
-  - *massugu iku to, kouen ga miemasu*
-- みぎに まがると、えきが あります — If you turn right, there's a station.
-  - *migi ni magaru to, eki ga arimasu*
+- まっすぐ いくと、こうえんが みえます。 — If you go straight, you'll see the park.
+  - *massugu iku to, kouen ga miemasu.*
+- みぎに まがると、えきが あります。 — If you turn right, there's a station.
+  - *migi ni magaru to, eki ga arimasu.*
 
 
 ## Conditional: たら
@@ -83,31 +83,31 @@ If you know the [た-form](/docs/lessons/conjugation/past/ta-form), just add **�
 
 **Requests and suggestions** — when you want someone to do something after a condition:
 
-- えきに ついたら、でんわしてください — When you arrive at the station, please call me.
-  - *eki ni tsuitara, denwa shite kudasai*
-- じかんが あったら、あそびに きてね — If you have time, come hang out.
-  - *jikan ga attara, asobi ni kite ne*
+- えきに ついたら、でんわしてください。 — When you arrive at the station, please call me.
+  - *eki ni tsuitara, denwa shite kudasai.*
+- じかんが あったら、あそびに きてね。 — If you have time, come hang out.
+  - *jikan ga attara, asobi ni kite ne.*
 
 **Hypothetical situations** — imagining "what if":
 
-- たからくじに あたったら、にほんに いきたい — If I won the lottery, I'd want to go to Japan.
-  - *takarakuji ni atattara, nihon ni ikitai*
-- あめが ふったら、うちに いよう — If it rains, let's stay home.
-  - *ame ga futtara, uchi ni iyou*
+- たからくじに あたったら、にほんに いきたい。 — If I won the lottery, I'd want to go to Japan.
+  - *takarakuji ni atattara, nihon ni ikitai.*
+- あめが ふったら、うちに いよう。 — If it rains, let's stay home.
+  - *ame ga futtara, uchi ni iyou.*
 
 **Discovery** — when you did something and found an unexpected result:
 
-- まどを あけたら、ゆきが ふっていた — When I opened the window, it was snowing.
-  - *mado o aketara, yuki ga futte ita*
-- いえに かえったら、ともだちが いた — When I got home, my friend was there.
-  - *ie ni kaettara, tomodachi ga ita*
+- まどを あけたら、ゆきが ふっていた。 — When I opened the window, it was snowing.
+  - *mado o aketara, yuki ga futte ita.*
+- いえに かえったら、ともだちが いた。 — When I got home, my friend was there.
+  - *ie ni kaettara, tomodachi ga ita.*
 
 **Advice:**
 
-- わからなかったら、せんせいに きいてください — If you don't understand, please ask the teacher.
-  - *wakaranakattara, sensei ni kiite kudasai*
-- つかれたら、やすんだ ほうが いい — If you're tired, you should rest.
-  - *tsukaretara, yasunda hou ga ii*
+- わからなかったら、せんせいに きいてください。 — If you don't understand, please ask the teacher.
+  - *wakaranakattara, sensei ni kiite kudasai.*
+- つかれたら、やすんだ ほうが いい。 — If you're tired, you should rest.
+  - *tsukaretara, yasunda hou ga ii.*
 
 
 :::info Other Conditionals
