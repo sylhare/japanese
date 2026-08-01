@@ -32,12 +32,12 @@ These patterns express strong obligation or necessity.
 
 #### Examples
 
-- べんきょうしなければ いけない - I must study.
-  - *benkyoushinakereba ikenai*
-- いかなければ いけない - I have to go.
-  - *ikanakereba ikenai*
-- たべなければ いけない - I must eat.
-  - *tabenakereba ikenai*
+- べんきょうしなければ いけない。 — I must study.
+  - *benkyoushinakereba ikenai.*
+- いかなければ いけない。 — I have to go.
+  - *ikanakereba ikenai.*
+- たべなければ いけない。 — I must eat.
+  - *tabenakereba ikenai.*
 
 ### Pattern 2: なければ ならない
 
@@ -47,12 +47,12 @@ These patterns express strong obligation or necessity.
 
 #### Examples
 
-- べんきょうしなければ ならない - I must study.
-  - *benkyoushinakereba naranai*
-- いかなければ ならない - I have to go.
-  - *ikanakereba naranai*
-- たべなければ ならない - I must eat.
-  - *tabenakereba naranai*
+- べんきょうしなければ ならない。 — I must study.
+  - *benkyoushinakereba naranai.*
+- いかなければ ならない。 — I have to go.
+  - *ikanakereba naranai.*
+- たべなければ ならない。 — I must eat.
+  - *tabenakereba naranai.*
 
 :::tip ならない vs いけない
 Both patterns mean the same thing and are largely interchangeable.
@@ -85,8 +85,8 @@ To create the な-form needed for these patterns:
 
 More polite form used in formal situations.
 
-- しゅくだい を しなければ いけません - I must do my homework.
-  - *shukudai o shinakereba ikemasen*
+- しゅくだい を しなければ いけません。 — I must do my homework.
+  - *shukudai o shinakereba ikemasen.*
 
 :::tip Polite Refusal: つごうが わるい
 When you can't fulfill an obligation or attend something, **つごうが わるい** (inconvenient / doesn't work for me) is the natural polite explanation:
@@ -103,12 +103,12 @@ The opposite, **つごうが いい**, means it works / is convenient:
 
 Very casual, shortened form used among friends.
 
-- いかなきゃ いけない - I gotta go.
-  - *ikanakya ikenai*
-- たべなきゃ いけない - I gotta eat.
-  - *tabenakya ikenai*
-- べんきょうしなきゃ - I gotta study.
-  - *benkyoushinakya*
+- いかなきゃ いけない。 — I gotta go.
+  - *ikanakya ikenai.*
+- たべなきゃ いけない。 — I gotta eat.
+  - *tabenakya ikenai.*
+- べんきょうしなきゃ。 — I gotta study.
+  - *benkyoushinakya.*
 
 **Note:** Often shortened even more to just **~なきゃ**!
 
@@ -119,16 +119,16 @@ To express past obligation, change the ending to its past form.
 ### Polite
 
 - きのう べんきょうしなければ いけませんでした。 — I had to study yesterday.
-  - *kinou benkyoushinakereba ikemasen deshita*
+  - *kinou benkyoushinakereba ikemasen deshita.*
 - はやく おきなければ なりませんでした。 — I had to wake up early.
-  - *hayaku okinakereba narimasen deshita*
+  - *hayaku okinakereba narimasen deshita.*
 
 ### Casual
 
 - きのう いかなければ いけなかった。 — I had to go yesterday.
-  - *kinou ikanakereba ikenakatta*
+  - *kinou ikanakereba ikenakatta.*
 - しゅくだい を しなきゃ いけなかった。 — I had to do my homework.
-  - *shukudai o shinakya ikenakatta*
+  - *shukudai o shinakya ikenakatta.*
 
 | Form | Present | Past |
 |------|---------|------|
@@ -145,10 +145,10 @@ Use this pattern to express prohibition - something you must not do.
 
 ### Examples
 
-- たべては いけません - You must not eat.
-  - *tabete wa ikemasen*
-- いっては いけません - You must not go.
-  - *itte wa ikemasen*
-- しては いけません - You must not do (that).
-  - *shite wa ikemasen*
+- たべては いけません。 — You must not eat.
+  - *tabete wa ikemasen.*
+- いっては いけません。 — You must not go.
+  - *itte wa ikemasen.*
+- しては いけません。 — You must not do (that).
+  - *shite wa ikemasen.*
 

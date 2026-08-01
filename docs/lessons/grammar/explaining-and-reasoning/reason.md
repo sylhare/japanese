@@ -47,14 +47,14 @@ Add **な** before **ので** with な-adjectives and nouns. Do **not** use な 
 
 ### Examples
 
-- とても あつかった ので、アイスクリーム を たべました — Because it was so hot, I ate an ice cream.
-  - *totemo atsukatta node, aisukuriimu o tabemashita*
-- あめ が ふった ので、うち に いました — Because it rained, I stayed home.
-  - *ame ga futta node, uchi ni imashita*
-- しずか な ので、べんきょう できます — Because it's quiet, I can study.
-  - *shizuka na node, benkyou dekimasu*
-- がくせい な ので、わりびき が あります — Because I'm a student, there is a discount.
-  - *gakusei na node, waribiki ga arimasu*
+- とても あつかった ので、アイスクリーム を たべました。 — Because it was so hot, I ate an ice cream.
+  - *totemo atsukatta node, aisukuriimu o tabemashita.*
+- あめ が ふった ので、うち に いました。 — Because it rained, I stayed home.
+  - *ame ga futta node, uchi ni imashita.*
+- しずか な ので、べんきょう できます。 — Because it's quiet, I can study.
+  - *shizuka na node, benkyou dekimasu.*
+- がくせい な ので、わりびき が あります。 — Because I'm a student, there is a discount.
+  - *gakusei na node, waribiki ga arimasu.*
 
 ## Pattern 2: から (Less Formal)
 
@@ -77,12 +77,12 @@ Add **な** before **ので** with な-adjectives and nouns. Do **not** use な 
 
 ### Examples
 
-- あつい から、アイスクリーム を たべる ん です — Because it's hot, I'm eating ice cream.
-  - *atsui kara, aisukuriimu o taberu n desu*
-- びょうき だ から、がっこう に いかない ん です — Because I'm sick, I'm not going to school.
-  - *byouki da kara, gakkou ni ikanai n desu*
-- おかね が ない から、かえない ん です — Because I don't have money, I can't buy it.
-  - *okane ga nai kara, kaenai n desu*
+- あつい から、アイスクリーム を たべる ん です。 — Because it's hot, I'm eating ice cream.
+  - *atsui kara, aisukuriimu o taberu n desu.*
+- びょうき だ から、がっこう に いかない ん です。 — Because I'm sick, I'm not going to school.
+  - *byouki da kara, gakkou ni ikanai n desu.*
+- おかね が ない から、かえない ん です。 — Because I don't have money, I can't buy it.
+  - *okane ga nai kara, kaenai n desu.*
 
 ## Pattern 3: し (Multiple Reasons)
 
@@ -101,14 +101,14 @@ The final clause states the conclusion or consequence.
 
 ### Examples
 
-- やすい し、おいしい し、この みせ が すき です — It's cheap and also delicious, so I like this restaurant.
-  - *yasui shi, oishii shi, kono mise ga suki desu*
-- さむい し、つかれた し、うち に いたい — It's cold and I'm tired, so I want to stay home.
-  - *samui shi, tsukareta shi, uchi ni itai*
-- しずか だ し、きれい だ し、この まち が すき です — It's quiet and beautiful, so I like this town.
-  - *shizuka da shi, kirei da shi, kono machi ga suki desu*
-- べんきょう する し、しゅくだい も する し、いそがしい — I have to study and do homework, so I'm busy.
-  - *benkyou suru shi, shukudai mo suru shi, isogashii*
+- やすい し、おいしい し、この みせ が すき です。 — It's cheap and also delicious, so I like this restaurant.
+  - *yasui shi, oishii shi, kono mise ga suki desu.*
+- さむい し、つかれた し、うち に いたい。 — It's cold and I'm tired, so I want to stay home.
+  - *samui shi, tsukareta shi, uchi ni itai.*
+- しずか だ し、きれい だ し、この まち が すき です。 — It's quiet and beautiful, so I like this town.
+  - *shizuka da shi, kirei da shi, kono machi ga suki desu.*
+- べんきょう する し、しゅくだい も する し、いそがしい。 — I have to study and do homework, so I'm busy.
+  - *benkyou suru shi, shukudai mo suru shi, isogashii.*
 
 :::tip し vs から / ので
 Use **し** when you have two or more reasons to give. Use **から** or **ので** when there is a single clear cause.

@@ -40,9 +40,9 @@ Use this pattern to ask "Which is more...?" between two options.
 
 ### Examples
 
-- コーヒー と ちゃ と どちら の ほう？ - Which is better, coffee or tea?
+- コーヒー と ちゃ と どちら の ほう？ — Which is better, coffee or tea?
   - *koohii to cha to dochira no hou?*
-- なつ と ふゆ と どちら の ほう が すき？ - Which do you like more, summer or winter?
+- なつ と ふゆ と どちら の ほう が すき？ — Which do you like more, summer or winter?
   - *natsu to fuyu to dochira no hou ga suki?*
 - とうきょう と おおさか と どちら の ほう が おおきい ですか？ — Which is bigger, Tokyo or Osaka?
   - *toukyou to oosaka to dochira no hou ga ookii desu ka?*
@@ -78,12 +78,12 @@ This pattern means "A is more ... than B."
 
 #### Examples
 
-- コーヒー の ほう が おちゃ より おいしい です — Coffee is more delicious than tea.
-  - *koohii no hou ga ocha yori oishii desu*
-- とうきょう の ほう が おおさか より おおきい です — Tokyo is bigger than Osaka.
-  - *toukyou no hou ga oosaka yori ookii desu*
-- くるま の ほう が でんしゃ より はやい です — Cars are faster than trains.
-  - *kuruma no hou ga densha yori hayai desu*
+- コーヒー の ほう が おちゃ より おいしい です。 — Coffee is more delicious than tea.
+  - *koohii no hou ga ocha yori oishii desu.*
+- とうきょう の ほう が おおさか より おおきい です。 — Tokyo is bigger than Osaka.
+  - *toukyou no hou ga oosaka yori ookii desu.*
+- くるま の ほう が でんしゃ より はやい です。 — Cars are faster than trains.
+  - *kuruma no hou ga densha yori hayai desu.*
 
 ## Implicit Comparison
 
@@ -93,9 +93,9 @@ When the comparison is clear from context, you can omit **B より**.
 
 ### Examples
 
-- コーヒー の ほう が おいしい です — Coffee is more delicious.
-  - *koohii no hou ga oishii desu*
-- なつ の ほう が すき です — I like summer more.
-  - *natsu no hou ga suki desu*
+- コーヒー の ほう が おいしい です。 — Coffee is more delicious.
+  - *koohii no hou ga oishii desu.*
+- なつ の ほう が すき です。 — I like summer more.
+  - *natsu no hou ga suki desu.*
 
 

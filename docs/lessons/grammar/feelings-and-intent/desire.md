@@ -40,28 +40,28 @@ To form the stem:
 **Meaning:** "I want to [verb]"
 
 **Formation examples:**
-- たべる → たべたい です - I want to eat
+- たべる → たべたい です — I want to eat.
   - *tabetai desu*
-- いく → いきたい です - I want to go
+- いく → いきたい です — I want to go.
   - *ikitai desu*
-- のむ → のみたい です - I want to drink
+- のむ → のみたい です — I want to drink.
   - *nomitai desu*
-- する → したい です - I want to do
+- する → したい です — I want to do.
   - *shitai desu*
-- くる → きたい です - I want to come
+- くる → きたい です — I want to come.
   - *kitai desu*
 
 #### Examples in Sentences
 
-- にほん に いきたい です - I want to go to Japan.
-  - *nihon ni ikitai desu*
-- すし を たべたい です - I want to eat sushi.
-  - *sushi o tabetai desu*
-- えいが を みたい です - I want to watch a movie.
-  - *eiga o mitai desu*
-- なに が したい です か？ - What do you want to do?
+- にほん に いきたい です。 — I want to go to Japan.
+  - *nihon ni ikitai desu.*
+- すし を たべたい です。 — I want to eat sushi.
+  - *sushi o tabetai desu.*
+- えいが を みたい です。 — I want to watch a movie.
+  - *eiga o mitai desu.*
+- なに が したい です か？ — What do you want to do?
   - *nani ga shitai desu ka?*
-- どこ に いきたい です か？ - Where do you want to go?
+- どこ に いきたい です か？ — Where do you want to go?
   - *doko ni ikitai desu ka?*
 
 ### Negative: たくない です
@@ -71,23 +71,23 @@ To form the stem:
 **Meaning:** "I don't want to [verb]"
 
 **Formation examples:**
-- たべる → たべたくない です - I don't want to eat
+- たべる → たべたくない です — I don't want to eat.
   - *tabetakunai desu*
-- いく → いきたくない です - I don't want to go
+- いく → いきたくない です — I don't want to go.
   - *ikitakunai desu*
-- のむ → のみたくない です - I don't want to drink
+- のむ → のみたくない です — I don't want to drink.
   - *nomitakunai desu*
 
 #### Examples in Sentences
 
-- べんきょうしたくない です - I don't want to study.
-  - *benkyoushitakunai desu*
-- いきたくない です - I don't want to go.
-  - *ikitakunai desu*
-- はたらきたくない です - I don't want to work.
-  - *hatarakitakunai desu*
-- あまり たべたくない です - I don't really want to eat.
-  - *amari tabetakunai desu*
+- べんきょうしたくない です。 — I don't want to study.
+  - *benkyoushitakunai desu.*
+- いきたくない です。 — I don't want to go.
+  - *ikitakunai desu.*
+- はたらきたくない です。 — I don't want to work.
+  - *hatarakitakunai desu.*
+- あまり たべたくない です。 — I don't really want to eat.
+  - *amari tabetakunai desu.*
 
 ## Past Tense
 
@@ -98,21 +98,21 @@ To form the stem:
 **Meaning:** "I wanted to [verb]"
 
 **Formation examples:**
-- たべる → たべたかった です - I wanted to eat
+- たべる → たべたかった です — I wanted to eat.
   - *tabetakatta desu*
-- いく → いきたかった です - I wanted to go
+- いく → いきたかった です — I wanted to go.
   - *ikitakatta desu*
-- のむ → のみたかった です - I wanted to drink
+- のむ → のみたかった です — I wanted to drink.
   - *nomitakatta desu*
 
 #### Examples in Sentences
 
-- にほん に いきたかった です - I wanted to go to Japan.
-  - *nihon ni ikitakatta desu*
-- すし を たべたかった です - I wanted to eat sushi.
-  - *sushi o tabetakatta desu*
-- とても みたかった です - I really wanted to see (it).
-  - *totemo mitakatta desu*
+- にほん に いきたかった です。 — I wanted to go to Japan.
+  - *nihon ni ikitakatta desu.*
+- すし を たべたかった です。 — I wanted to eat sushi.
+  - *sushi o tabetakatta desu.*
+- とても みたかった です。 — I really wanted to see (it).
+  - *totemo mitakatta desu.*
 
 ### Negative Past: たくなかった です
 
@@ -121,19 +121,19 @@ To form the stem:
 **Meaning:** "I didn't want to [verb]"
 
 **Formation examples:**
-- たべる → たべたくなかった です - I didn't want to eat
+- たべる → たべたくなかった です — I didn't want to eat.
   - *tabetakunakatta desu*
-- いく → いきたくなかった です - I didn't want to go
+- いく → いきたくなかった です — I didn't want to go.
   - *ikitakunakatta desu*
-- のむ → のみたくなかった です - I didn't want to drink
+- のむ → のみたくなかった です — I didn't want to drink.
   - *nomitakunakatta desu*
 
 #### Examples in Sentences
 
-- がっこう に いきたくなかった です - I didn't want to go to school.
-  - *gakkou ni ikitakunakatta desu*
-- べんきょうしたくなかった です - I didn't want to study.
-  - *benkyoushitakunakatta desu*
+- がっこう に いきたくなかった です。 — I didn't want to go to school.
+  - *gakkou ni ikitakunakatta desu.*
+- べんきょうしたくなかった です。 — I didn't want to study.
+  - *benkyoushitakunakatta desu.*
 
 :::tip たい conjugates like an い-adjective
 Use all い-adjective endings: たい → たくない (negative), たかった (past), たくなかった (past negative). The Key Expressions table above shows all four forms.

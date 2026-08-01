@@ -26,12 +26,12 @@ Use **と** when listing ALL items - it's an exhaustive list.
 
 ### Examples
 
-- すし と てんぷら が あります - There's sushi and tempura.
-  - *sushi to tempura ga arimasu*
-- りんご と みかん を かいました - I bought apples and oranges.
-  - *ringo to mikan o kaimashita*
-- いぬ と ねこ が います - There's a dog and a cat.
-  - *inu to neko ga imasu*
+- すし と てんぷら が あります。 — There's sushi and tempura.
+  - *sushi to tempura ga arimasu.*
+- りんご と みかん を かいました。 — I bought apples and oranges.
+  - *ringo to mikan o kaimashita.*
+- いぬ と ねこ が います。 — There's a dog and a cat.
+  - *inu to neko ga imasu.*
 
 ### Key Points
 
@@ -47,12 +47,12 @@ Use **や** when giving **examples** - there are more items not mentioned.
 
 ### Examples
 
-- パスタ や ピザ を たべません - I can't eat food like pasta or pizza.
-  - *pasuta ya piza o tabemasen*
-- すし や みそ が あります - There's sushi or miso or more...
-  - *sushi ya miso ga arimasu*
-- ほん や ざっし を よみます - I read books, magazines, and such.
-  - *hon ya zasshi o yomimasu*
+- パスタ や ピザ を たべません。 — I can't eat food like pasta or pizza.
+  - *pasuta ya piza o tabemasen.*
+- すし や みそ が あります。 — There's sushi or miso or more...
+  - *sushi ya miso ga arimasu.*
+- ほん や ざっし を よみます。 — I read books, magazines, and such.
+  - *hon ya zasshi o yomimasu.*
 
 ### Key Points
 
