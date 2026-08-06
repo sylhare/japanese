@@ -43,6 +43,10 @@ Both mean a wooded area, but **もり** (森) is a large, dense forest, while **
 For seasons, weather conditions, and temperature vocabulary (あつい, さむい, おんど...), see the [Weather](./weather) article.
 :::
 
+:::info Going to the Beach?
+For seaside activities, beach gear, summer food, and staying safe in the sun (すなはま, みずぎ, かきごおり, くらげ...), see the [Beach and Holidays](./beach) article.
+:::
+
 ## Culture and Sightseeing
 
 | Hiragana | Kanji | Romaji | English | Type |
