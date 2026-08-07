@@ -202,6 +202,31 @@ function buildLessonPaths(): Record<string, string> {
   return paths;
 }
 
+/**
+ * Tags real articles can still produce (lesson basenames + JLPT level tags), so deleted-article tags can be pruned.
+ */
+function buildValidArticleTags(lessonsDir: string = DEFAULT_LESSONS_DIR): Set<string> {
+  const tags = new Set<string>();
+  const walk = (dir) => {
+    for (const file of fs.readdirSync(dir).sort()) {
+      const full = path.join(dir, file);
+      if (fs.statSync(full).isDirectory()) {
+        walk(full);
+      } else if (/\.mdx?$/.test(file)) {
+        const slug = file.replace(/\.mdx?$/, '');
+        if (slug !== 'index') {
+          tags.add(slug);
+        }
+      }
+    }
+  };
+  walk(lessonsDir);
+  for (const level of JLPT_LEVELS) {
+    tags.add(level.tag);
+  }
+  return tags;
+}
+
 function updateLessonPaths() {
   const nextContent = `${JSON.stringify(buildLessonPaths(), null, 2)}\n`;
   const existingContent = fs.existsSync(LESSON_PATHS_FILE)
@@ -427,10 +452,24 @@ function contentKeyFor(item) {
 }
 
 /**
+ * Drop tags whose source article no longer exists, keeping only tags in `validTags`.
+ * Tagless (manually added) items are left untouched.
+ */
+function pruneStaleTags(item, validTags: Set<string>) {
+  if (item.tags.length === 0) {
+    return item;
+  }
+  const kept = item.tags.filter(tag => validTags.has(tag));
+  return kept.length === item.tags.length ? item : { ...item, tags: kept };
+}
+
+/**
  * Merge extracted vocabulary with existing vocabulary, filtering out particles.
  * Idempotent: rerunning produces the same result. Duplicates (same hiragana-romaji-meaning) merge their tags.
+ * When `validTags` is provided, tags left behind by deleted articles are pruned so every
+ * surviving tag still resolves to a real lesson page.
  */
-function mergeVocabulary(existing: VocabularyData, extracted: VocabularyData): VocabularyData {
+function mergeVocabulary(existing: VocabularyData, extracted: VocabularyData, validTags?: Set<string>): VocabularyData {
   const contentToExistingId = new Map();
   for (const item of existing.vocabulary) {
     const key = contentKeyFor(item);
@@ -487,6 +526,7 @@ function mergeVocabulary(existing: VocabularyData, extracted: VocabularyData): V
 
   const mergedVocabulary = Array.from(contentMap.values())
     .filter(item => item.tags.length === 0 || extractedKeys.has(contentKeyFor(item)))
+    .map(item => (validTags ? pruneStaleTags(item, validTags) : item))
     .sort((a, b) => compareIds(a.id, b.id));
 
   return {
@@ -528,9 +568,10 @@ function main(options: { force?: boolean } = {}) {
   }
   console.log('🔍 Scanning lesson files for vocabulary...');
 
+  const lessonsDir = process.env.TEST_LESSONS_DIR || DEFAULT_LESSONS_DIR;
   const existing = force ? emptyVocabulary() : loadExistingVocabulary();
   const extracted = scanAllLessons();
-  const merged = mergeVocabulary(existing, extracted);
+  const merged = mergeVocabulary(existing, extracted, buildValidArticleTags(lessonsDir));
 
   const totalItems = merged.vocabulary.length;
 
@@ -577,6 +618,7 @@ export {
   extractVocabularyFromFile,
   extractJlptEntries,
   buildLessonPaths,
+  buildValidArticleTags,
   scanAllLessons,
   mergeVocabulary,
   parseArgs,
