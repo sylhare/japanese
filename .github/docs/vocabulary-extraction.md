@@ -120,7 +120,12 @@ lessons.
     - Example: "tomorrow" (あした) appears in both `days-and-weeks.md` and `future.md`
     - Result: tags: `['days-and-weeks', 'future', 'time']`
 
-3. **Clickable Navigation**: Each tag in the dictionary links to its source lesson
+3. **Stale Tag Pruning**: A tag whose lesson file no longer exists is removed on every run (not just `--force`)
+    - Delete `cooking.md` and a word shared with `adjectives.md` keeps only `['adjectives']`
+    - Words that lived *only* in the deleted lesson are dropped entirely (orphan removal)
+    - Keeps the "every tag resolves to a real lesson page" invariant intact automatically
+
+4. **Clickable Navigation**: Each tag in the dictionary links to its source lesson
 
 ### Tag Path Resolution
 
