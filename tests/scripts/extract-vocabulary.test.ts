@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 import yaml from 'js-yaml';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
+  buildValidArticleTags,
   extractJlptEntries,
   extractVocabularyFromFile,
   main,
@@ -667,6 +668,32 @@ describe('Vocabulary Extraction', () => {
         expect(merged.vocabulary).toHaveLength(1);
         expect(merged.vocabulary[0].hiragana).toBe('たくさん');
       });
+
+      it('should prune a deleted article tag from a word shared with an active lesson', () => {
+        const existing = createTestVocabularyData([
+          createTestVocabularyItem({ id: 'word_0', hiragana: 'たくさん', romaji: 'takusan', meaning: 'many', type: 'adverb', tags: ['adjectives', 'cooking'] }),
+        ]);
+        const extracted = createTestVocabularyData([
+          createTestVocabularyItem({ id: 'word_0', hiragana: 'たくさん', romaji: 'takusan', meaning: 'many', type: 'adverb', tags: ['adjectives'] }),
+        ]);
+
+        const merged = mergeVocabulary(existing, extracted, new Set(['adjectives']));
+
+        expect(merged.vocabulary).toHaveLength(1);
+        expect(merged.vocabulary[0].tags).toEqual(['adjectives']);
+      });
+
+      it('should leave tagless manual entries untouched when pruning', () => {
+        const existing = createTestVocabularyData([
+          createTestVocabularyItem({ id: 'manual_0', hiragana: 'テスト', romaji: 'tesuto', meaning: 'test', type: 'noun', tags: [] }),
+        ]);
+        const extracted = createTestVocabularyData([]);
+
+        const merged = mergeVocabulary(existing, extracted, new Set(['adjectives']));
+
+        expect(merged.vocabulary).toHaveLength(1);
+        expect(merged.vocabulary[0].tags).toEqual([]);
+      });
     });
 
     describe('Multiple extraction runs', () => {
@@ -1065,6 +1092,31 @@ title: Custom Section Test
 
     it('should return an empty list for a missing article', () => {
       expect(extractJlptEntries(path.join(__dirname, 'does-not-exist.md'))).toEqual([]);
+    });
+  });
+
+  describe('buildValidArticleTags', () => {
+    const testLessonsDir = path.join(__dirname, 'test-lessons');
+    const testVocabDir = path.join(testLessonsDir, 'vocabulary');
+
+    beforeEach(() => {
+      fs.mkdirSync(testVocabDir, { recursive: true });
+      fs.copyFileSync(path.join(fixturesDir, 'basic-colors.md'), path.join(testVocabDir, 'colors.md'));
+      fs.copyFileSync(path.join(fixturesDir, 'tastes.md'), path.join(testVocabDir, 'tastes.md'));
+      fs.writeFileSync(path.join(testVocabDir, 'index.mdx'), '# Index\n');
+    });
+
+    afterEach(() => {
+      fs.rmSync(testLessonsDir, { recursive: true, force: true });
+    });
+
+    it('should collect lesson basenames plus JLPT level tags, excluding index files', () => {
+      const tags = buildValidArticleTags(testLessonsDir);
+
+      expect(tags.has('colors')).toBe(true);
+      expect(tags.has('tastes')).toBe(true);
+      expect(tags.has('N5')).toBe(true);
+      expect(tags.has('index')).toBe(false);
     });
   });
 
