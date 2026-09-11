@@ -1,10 +1,11 @@
 ---
-sidebar_position: 13
 title: 🏖️ Beach and Holidays
-description: Learn Japanese vocabulary for the beach, summer holidays, seaside activities, food, and staying safe in the sun
+created: "2026-09-10T22:46:15.882Z"
+modified: "2026-09-11T21:28:08.464828Z"
 tags: [vocabulary, beach, holidays, summer, activities, nouns, verbs]
+sidebar_position: 13.0
+description: "Learn Japanese vocabulary for the beach, summer holidays, seaside activities, food, and staying safe in the sun"
 ---
-
 # Beach and Holidays
 
 Summer in Japan means heading to the **うみ** (sea) for a day of swimming, snacks, and sandcastles. This lesson covers vocabulary for the beach setting, the gear you bring, seaside activities, festival-style food, and the nuisances best avoided.
@@ -15,10 +16,10 @@ Summer in Japan means heading to the **うみ** (sea) for a day of swimming, sna
 |----------|-------|--------|---------|------|
 | ビーチ | - | biichi | 🏖️ beach | noun |
 | うみ | 海 | umi | 🌊 sea, ocean | noun |
-| かいがん | 海岸 | kaigan | 🌊 coast, seashore | noun |
-| すなはま | 砂浜 | sunahama | 🏖️ sandy beach | noun |
-| すな | 砂 | suna | 🏖️ sand | noun |
-| なみ | 波 | nami | 🌊 wave | noun |
+| かいがん | 海岸 | kaigan | coast, seashore | noun |
+| すなはま | 砂浜 | sunahama | sandy beach | noun |
+| すな | 砂 | suna | sand | noun |
+| なみ | 波 | nami | wave | noun |
 | たいよう | 太陽 | taiyou | ☀️ sun | noun |
 | ひざし | 日差し | hizashi | 🌅 sunlight, sun's rays | noun |
 | かい | 貝 | kai | 🐚 seashell | noun |
@@ -66,12 +67,12 @@ For broader nature words (やま, かわ, みずうみ) see the [Travel and Tour
 
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
-| かいすいよく | 海水浴 | kaisuiyoku | 🏖️ sea bathing, swimming in the sea | noun |
+| かいすいよく | 海水浴 | kaisuiyoku | sea bathing, swimming in the sea | noun |
 | すいえい | 水泳 | suiei | 🏊 swimming | noun |
 | サーフィン | - | saafin | 🏄 surfing | noun |
 | シュノーケリング | - | shunookeringu | 🤿 snorkeling | noun |
-| ひなたぼっこ | 日向ぼっこ | hinatabokko | ☀️ sunbathing, basking in the sun | noun |
-| すいかわり | スイカ割り | suikawari | 🍉 watermelon splitting (game) | noun |
+| ひなたぼっこ | 日向ぼっこ | hinatabokko | sunbathing, basking in the sun | noun |
+| すいかわり | スイカ割り | suikawari | watermelon splitting (game) | noun |
 | ビーチボール | - | biichi booru | 🏐 beach ball | noun |
 | たのしい | 楽しい | tanoshii | 😄 fun, enjoyable | い-adjective |
 
@@ -87,7 +88,7 @@ For broader nature words (やま, かわ, みずうみ) see the [Travel and Tour
   - *ii desu ne, ikimashou!*
 
 :::tip スイカ割り (Watermelon Splitting)
-A classic summer beach game: blindfolded, spun around, and handed a stick, you try to smash a watermelon while friends shout directions. Afterwards everyone eats it — practical *and* fun!
+A classic summer beach game: blindfolded, spun around, and handed a stick, you try to smash a watermelon while friends shout directions. Afterwards everyone eats it.
 :::
 
 ## Verbs
@@ -112,7 +113,7 @@ A classic summer beach game: blindfolded, spun around, and handed a stick, you t
 
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
-| うみのいえ | 海の家 | umi no ie | 🏖️ beach hut (seaside food stall) | noun |
+| うみのいえ | 海の家 | umi no ie | beach hut (seaside food stall) | noun |
 | かきごおり | かき氷 | kakigoori | 🍧 shaved ice | noun |
 | アイスクリーム | - | aisukuriimu | 🍦 ice cream | noun |
 | やきそば | 焼きそば | yakisoba | 🍜 fried noodles | noun |
@@ -136,11 +137,11 @@ The **海の家** are temporary huts that pop up on Japanese beaches every summe
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
 | か | 蚊 | ka | 🦟 mosquito | noun |
-| むしさされ | 虫刺され | mushisasare | 🩹 insect bite | noun |
+| むしさされ | 虫刺され | mushisasare | insect bite | noun |
 | くらげ | - | kurage | 🪼 jellyfish | noun |
-| ひやけ | 日焼け | hiyake | 🔴 sunburn, suntan | noun |
+| ひやけ | 日焼け | hiyake | sunburn, suntan | noun |
 | ねっちゅうしょう | 熱中症 | necchuushou | 🥵 heatstroke | noun |
-| むしよけ | 虫除け | mushiyoke | 🧴 insect repellent | noun |
+| むしよけ | 虫除け | mushiyoke | insect repellent | noun |
 
 **Examples:**
 
