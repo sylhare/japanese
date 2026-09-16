@@ -20,6 +20,7 @@ These patterns require the て-form of the verb. Make sure you know your [て-fo
 | [verb て] + から | te kara | after doing | expression |
 | [noun] の + あいだ | no aida | during / while (throughout) | expression |
 | [noun] の + あいだに | no aida ni | during / while (at some point) | expression |
+| [plain form] + うちに | uchi ni | while (before it changes) | expression |
 
 ## How It Works
 
@@ -116,4 +117,26 @@ The main action is a **one-time event** that happens somewhere within the span:
 **間 (あいだ)** — the action lasts the **whole** span (continuous): ねている あいだ、ゆめを みた (*I dreamed the whole time I was asleep*).
 **間に (あいだに)** — the action happens at **one point** within the span (punctual): ねている あいだに、じしんが あった (*an earthquake happened while I was asleep*).
 The difference is **に**: add it when the action is a single, completed event.
+:::
+
+## While it lasts: 〜うちに
+
+**[Plain form] + うちに + [Action]**
+
+Use **うちに** to do something **while a condition still holds — before it changes**. Unlike 間に (a neutral "at some point during"), うちに carries a sense of seizing the chance before the window closes. It attaches to the plain form; nouns take の and な-adjectives take な.
+
+- あかるい うちに、かえりましょう。 — Let's head home while it's still light (before it gets dark).
+  - *akarui uchi ni, kaerimashou.*
+- にほんに いる うちに、ふじさんに のぼりたい。 — While I'm in Japan, I want to climb Mt. Fuji.
+  - *nihon ni iru uchi ni, fujisan ni noboritai.*
+
+With a **negative** verb, 〜ない うちに means "before X happens":
+
+- わすれない うちに、メモします。 — I'll jot it down before I forget.
+  - *wasurenai uchi ni, memo shimasu.*
+- あめが ふらない うちに、かえりましょう。 — Let's go home before it rains.
+  - *ame ga furanai uchi ni, kaerimashou.*
+
+:::tip 間に vs うちに
+Both put an action inside a span, but **間に** is neutral timing, while **うちに** stresses doing it *before the chance is gone*. With a negative (〜ない うちに), only うちに works — "before it happens."
 :::

@@ -181,7 +181,7 @@ const config: Config = {
             },
             {
               label: 'Vocabulary',
-              to: 'docs/lessons/vocabulary/',
+              to: '/docs/lessons/vocabulary/',
             },
           ],
         },
