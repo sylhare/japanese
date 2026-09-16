@@ -79,6 +79,7 @@ export const GRAMMAR_SECTIONS: LessonSection[] = [
       { name: 'Advice',      path: 'advice',       heading: /advice/i },
       { name: 'Obligation',  path: 'obligation',   heading: /obligation/i },
       { name: 'Prohibition', path: 'prohibition',  heading: /prohibition|いけません|だめ/i },
+      { name: 'Possibility', path: 'possibility',  heading: /possibility|かもしれない|でしょう/i },
     ],
   },
   {
