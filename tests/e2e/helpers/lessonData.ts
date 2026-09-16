@@ -102,6 +102,7 @@ export const GRAMMAR_SECTIONS: LessonSection[] = [
       { name: 'Actions and Thinking', path: 'actions-and-thinking', heading: /actions|thinking/i },
       { name: 'Conditional',          path: 'conditional',          heading: /conditional/i },
       { name: 'Listing Actions',      path: 'listing-actions',      heading: /listing actions|たり/i },
+      { name: 'Simultaneous Actions', path: 'simultaneous-actions', heading: /simultaneous|ながら/i },
     ],
   },
   {
