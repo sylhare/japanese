@@ -140,12 +140,15 @@ Both mean "only" but are used differently:
 Use these to give *examples* or *refer back* to something.
 
 | Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
+|---|---|---|---|---|
 | たとえば | 例えば | tatoeba | for example | adverb |
 | など | - | nado | and so on, etc. | particle |
 | そのほか | その他 | sonohoka | other, the rest, etc. | expression |
 | つまり | - | tsumari | in other words, that is to say | conjunction |
-| すなわち | 即ち | sunawachi | namely, that is (formal) | conjunction |
+
+:::note Formal Written Transitions
+In formal essays or academic writing, **即ち (すなわち, sunawachi)** is used for *namely / that is to say*. In everyday spoken Japanese, **つまり (tsumari)** is much more common.
+:::
 
 **Examples:**
 

@@ -90,13 +90,13 @@ Literally: "The direction of [not doing] is good."
 | あげる | 上げる | ageru | to give (to someone else) | verb |
 | もらう | 貰う | morau | to receive (from someone) | verb |
 | くれる | 呉れる | kureru | to give (to me/my side) | verb |
-| さしあげる | 差し上げる | sashiageru | to give (very polite) | verb |
-| いただく | 頂く | itadaku | to receive (polite) | verb |
+| わたす | 渡す | watasu | to hand over / to pass | verb |
 
 :::tip Which verb to use
 - **あげる** — you or someone gives to another person: アドバイス を あげました (I gave advice)
 - **もらう** — you receive from someone: アドバイス を もらいました (I received advice)
 - **くれる** — someone gives to you: アドバイス を くれました (They gave me advice)
+- **わたす** — physically hand over or pass to someone: しりょう を わたしました (I handed over the document)
 - **いただく** — humble form of もらう, receiving from a superior: せんせい に アドバイス を いただきました
 - **さしあげる** — humble form of あげる, giving to a superior: せんせい に プレゼント を さしあげました
 :::
@@ -118,6 +118,8 @@ Literally: "The direction of [not doing] is good."
   - *ashita no tesuto no tame ni benkyoushita hou ga ii desu yo.*
 - せんせい に アドバイス を いただいた ほう が いい です よ。 — You should get advice from your teacher. (polite)
   - *sensei ni adobaisu o itadaita hou ga ii desu yo.*
+- せんせい に しりょう を わたした ほう が いい です よ。 — You should hand over the documents to the teacher.
+  - *sensei ni shiryou o watashita hou ga ii desu yo.*
 
 ### Warnings
 

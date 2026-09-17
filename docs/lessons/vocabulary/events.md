@@ -94,7 +94,7 @@ Japanese festivals often take place at or near **じんじゃ** (神社, shrine)
 |----------|-------|--------|---------|------|
 | さんかする | 参加する | sanka suru | to participate | verb |
 | おどる | 踊る | odoru | to dance | verb |
-| もよおす | 催す | moyoosu | to hold (an event) | verb |
+| ひらく | 開く | hiraku | to hold (an event) | verb |
 | あつまる | 集まる | atsumaru | to gather, to meet up | verb |
 | てつだう | 手伝う | tetsudau | to help, to assist | verb |
 | じゅんびする | 準備する | junbi suru | to prepare | verb |

@@ -46,11 +46,11 @@ Here's a visual guide to Japanese family relationships:
 
 ### General Family Terms
 
-| Hiragana | Kanji | Romaji   | English          | Type |
+| Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|----------|------------------|------|
-| かぞく      | 家族    | kazoku   | 👨‍👩‍👧‍👦 family | noun |
-| りょうしん    | 両親    | ryoushin | 👨👩 parents     | noun |
-| きょうだい    | 兄弟    | kyoudai  | 👦👧 siblings    | noun |
+| かぞく | 家族 | kazoku | 👨‍👩‍👧‍👦 family | noun |
+| りょうしん | 両親 | ryoushin | 👨👩 parents | noun |
+| きょうだい | 兄弟 | kyoudai | 👦👧 siblings | noun |
 
 **Examples:**
 
@@ -119,7 +119,7 @@ Here's a visual guide to extended family and in-law relationships:
 
 ### Grandparents and Relatives
 
-| Hiragana | Kanji | Romaji  | English        | Type |
+| Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|---------|----------------|------|
 | そふ       | 祖父    | sofu    | 👴 grandfather | noun |
 | おじいさん    | お爺さん  | ojiisan | 👴 grandfather | noun |
@@ -127,9 +127,9 @@ Here's a visual guide to extended family and in-law relationships:
 | おばあさん    | お婆さん  | obaasan | 👵 grandmother | noun |
 | おじ       | 叔父    | oji     | 👨 uncle       | noun |
 | おば       | 叔母    | oba     | 👩 aunt        | noun |
-| いとこ      | 従兄弟   | itoko   | 👦👧 cousin    | noun |
-| おい       | 甥     | oi      | 👦 nephew      | noun |
-| めい       | 姪     | mei     | 👧 niece       | noun |
+| いとこ | 従兄弟 | itoko | 👦👧 cousin | noun |
+| おい | 甥 | oi | 👦 nephew | noun |
+| めい | 姪 | mei | 👧 niece | noun |
 
 **Notes:**
 
@@ -139,10 +139,10 @@ Here's a visual guide to extended family and in-law relationships:
 
 ### In-Laws (義理の家族)
 
-| Hiragana | Kanji | Romaji      | English                          | Type |
+| Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|-------------|----------------------------------|------|
-| ぎりのあに    | 義理の兄  | giri no ani | 👨 brother-in-law                | noun |
-| ぎりのあね    | 義理の姉  | giri no ane | 👩 sister-in-law                 | noun |
+| ぎりのあに | 義理の兄 | giri no ani | 👨 brother-in-law | noun |
+| ぎりのあね | 義理の姉 | giri no ane | 👩 sister-in-law | noun |
 | しゅうと     | 舅     | shuuto      | 👴 father-in-law (wife's father) | noun |
 | しゅうとめ    | 姑     | shuutome    | 👵 mother-in-law (wife's mother) | noun |
 | むこ       | 婿     | muko        | 👦 son-in-law                    | noun |
@@ -152,18 +152,20 @@ Here's a visual guide to extended family and in-law relationships:
 
 ### Spouse and Children
 
-| Hiragana | Kanji | Romaji   | English             | Type |
+| Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|----------|---------------------|------|
 | つま       | 妻     | tsuma    | 👰 wife             | noun |
 | おっと      | 夫     | otto     | 🤵 husband          | noun |
 | おくさん     | 奥さん   | okusan   | 👰 wife             | noun |
 | ごしゅじん    | ご主人   | goshujin | 🤵 husband          | noun |
-| こども      | 子供    | kodomo   | 👦👧 child/children | noun |
+| こども | 子供 | kodomo | 👦👧 child/children | noun |
 | むすこ      | 息子    | musuko   | 👦 son              | noun |
 | むすめ      | 娘     | musume   | 👧 daughter         | noun |
 | ぼうや      | 坊や    | bouya    | 👦 boy (young)      | noun |
-| おじょうさん   | お嬢さん  | ojousan  | 👧 daughter         | noun |
-| ぼっちゃん    | 坊ちゃん  | bocchan  | 👦 son              | noun |
+
+:::note Referring to Others' Children
+When referring to someone else's children politely in conversation, standard terms include **お嬢さん (おじょうさん, ojousan)** for *daughter* or **坊ちゃん (ぼっちゃん, bocchan)** / **息子さん (むすこさん, musukosan)** for *son*.
+:::
 
 **Examples:**
 
@@ -175,16 +177,16 @@ Here's a visual guide to extended family and in-law relationships:
 
 ### Relationship Terms
 
-| Hiragana | Kanji  | Romaji           | English                 | Type |
+| Hiragana | Kanji | Romaji | English | Type |
 |----------|--------|------------------|-------------------------|------|
-| ひとり      | 一人     | hitori           | 👤 one person, alone    | noun |
-| けっこん     | 結婚     | kekkon           | 💑 marriage             | noun |
-| けっこんしている | 結婚している | kekkon shite iru | 💑 married              | verb |
-| どくしん     | 独身     | dokushin         | 👤 single/unmarried     | noun |
-| りこん      | 離婚     | rikon            | 💔 divorce              | noun |
+| ひとり | 一人 | hitori | 👤 one person, alone | noun |
+| けっこん | 結婚 | kekkon | 💑 marriage | noun |
+| けっこんしている | 結婚している | kekkon shite iru | 💑 married | verb |
+| どくしん | 独身 | dokushin | 👤 single/unmarried | noun |
+| りこん | 離婚 | rikon | 💔 divorce | noun |
 | やもめ      | 寡婦     | yamome           | 👤🪦 widowed            | noun |
-| こいびと     | 恋人     | koibito          | 💕 boyfriend/girlfriend | noun |
-| ふうふ      | 夫婦     | fuufu            | 👨‍👩 married couple    | noun |
+| こいびと | 恋人 | koibito | 💕 boyfriend/girlfriend | noun |
+| ふうふ | 夫婦 | fuufu | 👨‍👩 married couple | noun |
 
 **Examples:**
 

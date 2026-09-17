@@ -17,9 +17,9 @@ Japanese uses different verbs for "wear" depending on where the item goes. This 
 |----------|-------|--------|---------|------|
 | かぶる | 被る | kaburu | wear (🎩 head) | verb |
 | かける | 掛ける | kakeru | wear (👓 glasses, headphones) | verb |
-| つける | 付ける | tsukeru | wear (💎 small items) | verb |
 | しめる | 締める | shimeru | wear (👔 tie, 🪢 belt) | verb |
 | きる | 着る | kiru | wear (👕 upper body) | verb |
+| つける | 付ける | tsukeru | wear (💎 small accessories) | verb |
 | する | | suru | wear/do (⌚ accessories) | verb |
 | はめる | | hameru | wear (🧤 gloves, rings) | verb |
 | はく | 履く | haku | wear (👖 lower body / 👟 shoes) | verb |

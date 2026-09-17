@@ -32,12 +32,12 @@ Essential adjectives for describing size, quantity, and everyday things.
 ## Quantity
 
 | Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| おおい | 多い | ooi | 📈 many/a lot | い-adjective |
-| すくない | 少ない | sukunai | 📉 few/little | い-adjective |
-| たくさん | 沢山 | takusan | 📦 many/a lot | adverb |
-| すこし | 少し | sukoshi | 🤏 a little/few | adverb |
-| ぜんぶ | 全部 | zenbu | 💯 all/everything | noun |
+|---|---|---|---|---|
+| おおい | 多い | ooi | 📈 many / abundant | い-adjective |
+| すくない | 少ない | sukunai | 📉 few / little | い-adjective |
+| たくさん | 沢山 | takusan | 📦 a lot / in large quantity | adverb |
+| すこし | 少し | sukoshi | 🤏 a little / few | adverb |
+| ぜんぶ | 全部 | zenbu | 💯 all / everything | noun |
 
 :::caution おおい vs たくさん
 **おおい** is an adjective and modifies nouns indirectly: ひとが おおい (there are many people).
