@@ -28,6 +28,8 @@ Knowing health-related vocabulary is essential for daily life in Japan. This les
 | かゆい | 痒い | kayui | 🦟 itchy | い-adjective |
 | いたい | 痛い | itai | 🤕 painful, hurts | い-adjective |
 | だるい | | darui | 😩 sluggish, tired | い-adjective |
+| とまる | 止まる | tomaru | 🛑 to stop (intransitive) | verb |
+| とめる | 止める | tomeru | 🛑 to stop something (transitive) | verb |
 
 **Examples:**
 - ねつが あります。 — I have a fever.
@@ -35,7 +37,7 @@ Knowing health-related vocabulary is essential for daily life in Japan. This les
 - あたまが いたい です。 — My head hurts.
   - *atama ga itai desu.*
 - くしゃみが とまりません。 — I can't stop sneezing.
-  - *kushami ga tomarimasen.*
+  - *kushami ga tomarimasen.* — 止まる (tomaru, intransitive): the sneezing won't stop on its own
 
 ## Illnesses
 

@@ -87,18 +87,21 @@ Literally: "The direction of [not doing] is good."
 
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
-| あげる | 上げる | ageru | to give (to someone else) | verb |
+| あげる | 上げる | ageru | to give (speaker → other person) | verb |
+| くれる | 呉れる | kureru | to give (other person → speaker) | verb |
+| わたす | 渡す | watasu | to hand over / pass | verb |
 | もらう | 貰う | morau | to receive (from someone) | verb |
-| くれる | 呉れる | kureru | to give (to me/my side) | verb |
-| わたす | 渡す | watasu | to hand over / to pass | verb |
 
 :::tip Which verb to use
-- **あげる** — you or someone gives to another person: アドバイス を あげました (I gave advice)
-- **もらう** — you receive from someone: アドバイス を もらいました (I received advice)
-- **くれる** — someone gives to you: アドバイス を くれました (They gave me advice)
-- **わたす** — physically hand over or pass to someone: しりょう を わたしました (I handed over the document)
-- **いただく** — humble form of もらう, receiving from a superior: せんせい に アドバイス を いただきました
-- **さしあげる** — humble form of あげる, giving to a superior: せんせい に プレゼント を さしあげました
+**Give (あたえる側 — the giver)**
+- **あげる** — I/someone gives to another person: アドバイス を **あげました** (I gave them advice)
+- **くれる** — someone gives to me/my side: アドバイス を **くれました** (They gave me advice)
+- **わたす** — physically hand over to someone: しりょう を **わたしました** (I handed over the document)
+- **さしあげる** — humble あげる, giving to a superior: せんせい に プレゼント を **さしあげました** (I gave a gift to the teacher)
+
+**Receive (もらう側 — the receiver)**
+- **もらう** — I receive from someone: アドバイス を **もらいました** (I received advice)
+- **いただく** — humble もらう, receiving from a superior: せんせい に アドバイス を **いただきました** (I received advice from the teacher)
 :::
 
 ### Health Advice
