@@ -197,27 +197,20 @@ export default function Study(): React.JSX.Element {
                 </div>
                 <div className={styles.promptType}>{question.item.type}</div>
 
-                <div className={styles.options}>
-                  {question.options.map(option => {
-                    const isAnswer = option === question.answer;
-                    const isPicked = option === selected;
-                    return (
+                {!selected && (
+                  <div className={styles.options}>
+                    {question.options.map(option => (
                       <button
                         type="button"
                         key={option}
-                        className={clsx(
-                          styles.option,
-                          selected && isAnswer && styles.optionCorrect,
-                          selected && isPicked && !isAnswer && styles.optionIncorrect,
-                        )}
-                        disabled={Boolean(selected)}
+                        className={styles.option}
                         onClick={() => handleAnswer(option)}
                       >
                         {option}
                       </button>
-                    );
-                  })}
-                </div>
+                    ))}
+                  </div>
+                )}
 
                 {selected && (
                   <div className={styles.reveal}>

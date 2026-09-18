@@ -81,6 +81,33 @@ describe('Study page', () => {
     expect(screen.queryByText('Correct!')).not.toBeInTheDocument();
   });
 
+  it('hides choices and shows explanation after an answer is selected', async () => {
+    const user = userEvent.setup();
+    render(<Study />);
+    const correct = shownMeaning();
+    const optionButtons = screen.getAllByRole('button').filter(b => meanings.includes(b.textContent ?? ''));
+    expect(optionButtons.length).toBeGreaterThan(0);
+
+    await user.click(screen.getByRole('button', { name: correct }));
+
+    const choicesAfter = screen.queryAllByRole('button').filter(b => meanings.includes(b.textContent ?? ''));
+    expect(choicesAfter).toHaveLength(0);
+    expect(screen.getByRole('button', { name: 'Next' })).toBeInTheDocument();
+    expect(screen.getByText('Correct!')).toBeInTheDocument();
+  });
+
+  it('shows choices again after pressing Next', async () => {
+    const user = userEvent.setup();
+    render(<Study />);
+    await user.click(screen.getByRole('button', { name: shownMeaning() }));
+    await user.click(screen.getByRole('button', { name: 'Next' }));
+
+    expect(screen.queryByText('Correct!')).not.toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'Next' })).not.toBeInTheDocument();
+    const choicesBack = screen.getAllByRole('button').filter(b => meanings.includes(b.textContent ?? ''));
+    expect(choicesBack.length).toBeGreaterThan(0);
+  });
+
   it('shows an empty state when all word types are excluded', async () => {
     const user = userEvent.setup();
     render(<Study />);
