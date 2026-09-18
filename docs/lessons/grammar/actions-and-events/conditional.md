@@ -142,7 +142,7 @@ Use **ば** for general conditions, logical results, and hypotheticals — "if A
 | Group 2 Verbs (Ichidan) | drop る, add れば | たべる → たべれば |
 | Irregular Verbs | する → すれば / くる → くれば | する → すれば |
 | い-Adjective | drop い, add ければ | やすい → やすければ |
-| な-Adjective / Noun | add なら(ば) or であれば | しずか → しずかなら |
+| な-Adjective / Noun | add なら(ば) or であれば | しずか → しずかなら(ば) / であれば |
 | Negative | ない → なければ | いかない → いかなければ |
 
 :::tip いい is irregular
@@ -228,6 +228,9 @@ To see how the four conditionals differ in practice, compare how they change the
 
 ### Scenario 2: Buying something cheap
 
+- **と (Automatic habit/reaction):**
+  - やすいと、かいます。 — When/if it's cheap, I buy it. *(habitual reaction)*
+    - *yasui to, kaimasu.*
 - **ば (General logical rule):**
   - やすければ、かいます。 — If it's cheap, I'll buy it. *(a general personal rule)*
     - *yasukereba, kaimasu.*

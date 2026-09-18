@@ -72,7 +72,7 @@ For accessories, use **はずす（外す）** or **とる（取る）**:
 | ようふく | 洋服 | youfuku | 🧥 western clothes | noun |
 | シャツ | | shatsu | 👕 shirt | noun |
 | ズボン | | zubon | 👖 pants | noun |
-| スカート | | sukaato | 🩱 skirt | noun |
+| スカート | | sukaato | 👗 skirt | noun |
 | くつ | 靴 | kutsu | 👟 shoes | noun |
 | くつした | 靴下 | kutsushita | 🧦 socks | noun |
 | ぼうし | 帽子 | boushi | 🎩 hat | noun |
@@ -91,24 +91,20 @@ For accessories, use **はずす（外す）** or **とる（取る）**:
 
 All "wear" verbs use the particle **を** to mark the clothing item:
 
-- シャツをきる — *shatsu o kiru* — wear a shirt
-- ズボンをはく — *zubon o haku* — wear pants
-- くつをはく — *kutsu o haku* — wear shoes
-- ぼうしをかぶる — *boushi o kaburu* — wear a hat
-- めがねをかける — *megane o kakeru* — wear glasses
-- イヤリングをつける — *iyaringu o tsukeru* — wear earrings
-- ネクタイをしめる — *nekutai o shimeru* — wear a tie
-- ベルトをしめる — *beruto o shimeru* — wear a belt
-- てぶくろをはめる — *tebukuro o hameru* — wear gloves
-- とけいをする — *tokei o suru* — wear a watch
+- シャツを きる — *shatsu o kiru* — wear a shirt (upper body)
+- ズボンを はく — *zubon o haku* — wear pants (lower body/feet)
+- ぼうしを かぶる — *boushi o kaburu* — wear a hat (head)
+- めがねを かける — *megane o kakeru* — wear glasses (face)
+- ネクタイを しめる — *nekutai o shimeru* — wear a tie (neck/waist)
+- とけいを する — *tokei o suru* — wear a watch (accessory)
 
 ### In Context
 
 - わたしは あかい シャツを きます。 — *watashi wa akai shatsu o kimasu.* — I wear a red shirt.
 - かれは めがねを かけています。 — *kare wa megane o kakete imasu.* — He is wearing glasses.
-- さむいから、コートを きてください。 — *samui kara, kooto o kite kudasai.* — It's cold, so please wear a coat.
+- あついから、ぼうしを かぶってください。 — *atsui kara, boushi o kabutte kudasai.* — It's hot, so please wear a hat.
 - まいにち くつしたを はきます。 — *mainichi kutsushita o hakimasu.* — I wear socks every day.
-- かのじょは きれいな ドレスを きている。 — *kanojo wa kirei na doresu o kite iru.* — She is wearing a beautiful dress.
+- かのじょは きれいな ドレスを きています。 — *kanojo wa kirei na doresu o kite imasu.* — She is wearing a beautiful dress.
 
 :::info Special Cases
 
