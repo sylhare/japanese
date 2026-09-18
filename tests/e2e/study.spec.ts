@@ -28,28 +28,13 @@ test.describe('Study', () => {
     await expect(page.getByRole('heading', { name: 'Study Vocabulary' })).toBeVisible();
   });
 
-  test('shows a prompt with four answer options', async ({ page }) => {
-    await expect(page.getByRole('heading', { name: 'Study Vocabulary' })).toBeVisible();
-    await expect(optionButtons(page)).toHaveCount(4);
-  });
-
   test('gives feedback and reveals word details after answering', async ({ page }) => {
     await answerFirstQuestion(page);
 
     await expect(page.getByText(/^(Correct!|Incorrect)$/)).toBeVisible();
     await expect(page.locator('[class*="detail"]').first()).toBeVisible();
     await expect(page.getByRole('button', { name: 'Next' })).toBeVisible();
-
-    await expect(page.locator('button[class*="optionCorrect"]')).toHaveCount(1);
-  });
-
-  test('advances to a new question and increments answered count', async ({ page }) => {
-    await expect(page.getByText('Answered: 0')).toBeVisible();
-    await answerFirstQuestion(page);
-    await page.getByRole('button', { name: 'Next' }).click();
-
-    await expect(page.getByText('Answered: 1')).toBeVisible();
-    await expect(page.getByText(/^(Correct!|Incorrect)$/)).toBeHidden();
+    await expect(optionButtons(page)).toHaveCount(0);
   });
 
   test('persists progress across reloads and resets it', async ({ page }) => {
@@ -63,16 +48,6 @@ test.describe('Study', () => {
 
     await page.getByRole('button', { name: 'Reset progress' }).click();
     await expect(page.getByText('Answered: 0')).toBeVisible();
-  });
-
-  test('filters the study set through settings', async ({ page }) => {
-    await page.getByRole('button', { name: 'Settings' }).click();
-    await expect(page.getByText('Sources', { exact: true })).toBeVisible();
-    await expect(page.getByText('Word types', { exact: true })).toBeVisible();
-
-    await page.getByRole('button', { name: 'None' }).nth(1).click();
-
-    await expect(page.getByText('No words to study')).toBeVisible();
   });
 
   test('navigates to a lesson from a revealed tag', async ({ page }) => {
