@@ -114,6 +114,17 @@ describe('Vocabulary Component', () => {
       expect(screen.queryByText('ao')).not.toBeInTheDocument();
     });
 
+    it('trims leading and trailing spaces from search term', async () => {
+      const user = userEvent.setup();
+      render(<Vocabulary />);
+
+      const searchInput = screen.getByPlaceholderText('Search vocabulary...');
+      await user.type(searchInput, ' red ');
+
+      expect(screen.getByText('red')).toBeInTheDocument();
+      expect(screen.queryByText('blue')).not.toBeInTheDocument();
+    });
+
     it('shows no results when search finds nothing', async () => {
       const user = userEvent.setup();
       render(<Vocabulary />);
