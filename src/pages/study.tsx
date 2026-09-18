@@ -37,12 +37,11 @@ export default function Study(): React.JSX.Element {
   const [showSettings, setShowSettings] = useState(false);
 
   const progressRef = useRef(progress);
-  useEffect(() => {
-    progressRef.current = progress;
-  }, [progress]);
 
   useEffect(() => {
-    setProgress(loadProgress(window.localStorage));
+    const stored = loadProgress(window.localStorage);
+    progressRef.current = stored;
+    setProgress(stored);
     setSettings(loadSettings(window.localStorage));
     setMounted(true);
   }, []);
@@ -59,70 +58,44 @@ export default function Study(): React.JSX.Element {
   );
 
   useEffect(() => {
-    if (mounted) {
-      newQuestion();
-    }
+    if (mounted) newQuestion();
   }, [mounted, newQuestion]);
 
   const stats = useMemo(() => computeStats(progress), [progress]);
   const accuracy = stats.answered > 0 ? Math.round((stats.correct / stats.answered) * 100) : 0;
 
   const handleAnswer = (option: string) => {
-    if (selected || !question) {
-      return;
-    }
+    if (selected || !question) return;
     setSelected(option);
-    const correct = option === question.answer;
     setProgress(prev => {
-      const updated = recordAnswer(prev, question.item.id, correct);
+      const updated = recordAnswer(prev, question.item.id, option === question.answer);
       saveProgress(window.localStorage, updated);
+      progressRef.current = updated;
       return updated;
     });
   };
-
-  const handleNext = () => newQuestion(question?.item.id);
-
-  const toggleExcluded = (list: string[], value: string): string[] =>
-    list.includes(value) ? list.filter(entry => entry !== value) : [...list, value];
 
   const updateSettings = (next: StudySettings) => {
     setSettings(next);
     saveSettings(window.localStorage, next);
   };
 
-  const toggleSource = (source: string) =>
-    updateSettings({ ...settings, excludedSources: toggleExcluded(settings.excludedSources, source) });
-
-  const toggleType = (type: string) =>
-    updateSettings({ ...settings, excludedTypes: toggleExcluded(settings.excludedTypes, type) });
+  const toggleFilter = (key: 'excludedSources' | 'excludedTypes', value: string) => {
+    const list = settings[key];
+    updateSettings({
+      ...settings,
+      [key]: list.includes(value) ? list.filter(e => e !== value) : [...list, value],
+    });
+  };
 
   const handleReset = () => {
     resetProgress(window.localStorage);
-    setProgress({});
     progressRef.current = {};
+    setProgress({});
     newQuestion();
   };
 
-  const renderTags = (tags: string[]) => (
-    <div className={styles.tags}>
-      {tags.map(tag => {
-        const tagUrl = `${baseUrl}${getTagPath(tag)}`;
-        return (
-          <a
-            key={tag}
-            href={tagUrl}
-            className={styles.tag}
-            onClick={e => {
-              e.preventDefault();
-              window.location.href = tagUrl;
-            }}
-          >
-            {tag}
-          </a>
-        );
-      })}
-    </div>
-  );
+  const isCorrect = selected === question?.answer;
 
   return (
     <Layout title="Study" description="Practice Japanese vocabulary with multiple-choice flashcards">
@@ -130,10 +103,6 @@ export default function Study(): React.JSX.Element {
         <div className="row">
           <div className="col col--8 col--offset-2">
             <h1>Study Vocabulary</h1>
-            <p>
-              Pick the right meaning for each word. Get a word right and it comes back in kanji —
-              hiragana → English, then kanji → English. Your progress is saved on this device.
-            </p>
 
             <div className={styles.statsBar}>
               <span className={styles.stat}>Answered: {stats.answered}</span>
@@ -162,7 +131,7 @@ export default function Study(): React.JSX.Element {
                   title="Sources"
                   values={allSources}
                   excluded={settings.excludedSources}
-                  onToggle={toggleSource}
+                  onToggle={v => toggleFilter('excludedSources', v)}
                   onAll={() => updateSettings({ ...settings, excludedSources: [] })}
                   onNone={() => updateSettings({ ...settings, excludedSources: [...allSources] })}
                 />
@@ -170,7 +139,7 @@ export default function Study(): React.JSX.Element {
                   title="Word types"
                   values={allTypes}
                   excluded={settings.excludedTypes}
-                  onToggle={toggleType}
+                  onToggle={v => toggleFilter('excludedTypes', v)}
                   onAll={() => updateSettings({ ...settings, excludedTypes: [] })}
                   onNone={() => updateSettings({ ...settings, excludedTypes: [...allTypes] })}
                 />
@@ -188,10 +157,7 @@ export default function Study(): React.JSX.Element {
               <div className={styles.quizCard}>
                 <div className={styles.promptLabel}>What does this mean?</div>
                 <div
-                  className={clsx(
-                    styles.prompt,
-                    question.promptMode === 'kanji' && styles.promptKanji,
-                  )}
+                  className={clsx(styles.prompt, question.promptMode === 'kanji' && styles.promptKanji)}
                 >
                   {question.prompt}
                 </div>
@@ -217,12 +183,10 @@ export default function Study(): React.JSX.Element {
                     <div
                       className={clsx(
                         styles.feedback,
-                        selected === question.answer
-                          ? styles.feedbackCorrect
-                          : styles.feedbackIncorrect,
+                        isCorrect ? styles.feedbackCorrect : styles.feedbackIncorrect,
                       )}
                     >
-                      {selected === question.answer ? 'Correct!' : 'Incorrect'}
+                      {isCorrect ? 'Correct!' : 'Incorrect'}
                     </div>
 
                     <div className={styles.detail}>
@@ -235,10 +199,27 @@ export default function Study(): React.JSX.Element {
                       <div className={styles.detailRomaji}>{question.item.romaji}</div>
                       <div className={styles.detailMeaning}>{question.item.meaning}</div>
                       <div className={styles.detailType}>{question.item.type}</div>
-                      {renderTags(question.item.tags)}
+                      <div className={styles.tags}>
+                        {question.item.tags.map(tag => {
+                          const tagUrl = `${baseUrl}${getTagPath(tag)}`;
+                          return (
+                            <a
+                              key={tag}
+                              href={tagUrl}
+                              className={styles.tag}
+                              onClick={e => {
+                                e.preventDefault();
+                                window.location.href = tagUrl;
+                              }}
+                            >
+                              {tag}
+                            </a>
+                          );
+                        })}
+                      </div>
                     </div>
 
-                    <button type="button" className={styles.nextButton} onClick={handleNext}>
+                    <button type="button" className={styles.nextButton} onClick={() => newQuestion(question.item.id)}>
                       Next
                     </button>
                   </div>
@@ -261,36 +242,21 @@ interface SettingsGroupProps {
   onNone: () => void;
 }
 
-function SettingsGroup({
-  title,
-  values,
-  excluded,
-  onToggle,
-  onAll,
-  onNone,
-}: SettingsGroupProps): React.JSX.Element {
+function SettingsGroup({ title, values, excluded, onToggle, onAll, onNone }: SettingsGroupProps): React.JSX.Element {
   const excludedSet = new Set(excluded);
   return (
     <div className={styles.settingsGroup}>
       <div className={styles.settingsHeader}>
         <strong>{title}</strong>
         <span className={styles.settingsActions}>
-          <button type="button" className={styles.linkButton} onClick={onAll}>
-            All
-          </button>
-          <button type="button" className={styles.linkButton} onClick={onNone}>
-            None
-          </button>
+          <button type="button" className={styles.linkButton} onClick={onAll}>All</button>
+          <button type="button" className={styles.linkButton} onClick={onNone}>None</button>
         </span>
       </div>
       <div className={styles.checklist}>
         {values.map(value => (
           <label key={value} className={styles.checkboxLabel}>
-            <input
-              type="checkbox"
-              checked={!excludedSet.has(value)}
-              onChange={() => onToggle(value)}
-            />
+            <input type="checkbox" checked={!excludedSet.has(value)} onChange={() => onToggle(value)} />
             {value}
           </label>
         ))}
