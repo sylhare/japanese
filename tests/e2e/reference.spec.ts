@@ -18,7 +18,7 @@ test.describe('Reference Pages', () => {
       await referenceCard.click();
       await verifyPageIsFound(page);
 
-      await expect(page.getByRole('heading', { name: /kana reference/i }).first()).toBeVisible();
+      await expect(page.getByRole('heading', { name: /reference/i }).first()).toBeVisible();
     });
   });
 
@@ -61,14 +61,26 @@ test.describe('Reference Pages', () => {
       await expect(page.locator('[class*="vocabularyCard"]').first()).toBeVisible();
     });
 
-    test('should display all three reference cards', async ({ page }) => {
+    test('should have working N5 Vocabulary link', async ({ page }) => {
+      const n5VocabLink = page.getByRole('link', { name: /View N5 Vocabulary/i });
+      await expect(n5VocabLink).toBeVisible();
+
+      await n5VocabLink.click();
+      await verifyPageIsFound(page);
+
+      await expect(page.getByRole('heading', { name: /n5 vocabulary/i }).first()).toBeVisible();
+    });
+
+    test('should display all four reference cards', async ({ page }) => {
       const hiraganaCard = page.locator('h3:has-text("Hiragana Chart")').locator('..');
       const katakanaCard = page.locator('h3:has-text("Katakana Chart")').locator('..');
       const dictionaryCard = page.locator('h3:has-text("Dictionary")').locator('..');
+      const n5VocabCard = page.locator('h3:has-text("N5 Vocabulary")').locator('..');
 
       await expect(hiraganaCard).toBeVisible();
       await expect(katakanaCard).toBeVisible();
       await expect(dictionaryCard).toBeVisible();
+      await expect(n5VocabCard).toBeVisible();
     });
   });
 
@@ -79,7 +91,7 @@ test.describe('Reference Pages', () => {
     });
 
     test('should display page title and description', async ({ page }) => {
-      await expect(page.getByRole('heading', { name: /kana reference/i }).first()).toBeVisible();
+      await expect(page.getByRole('heading', { name: /reference/i }).first()).toBeVisible();
       await expect(page.getByRole('heading', { name: /what are kana/i })).toBeVisible();
     });
 
@@ -103,7 +115,7 @@ test.describe('Reference Pages', () => {
       await referenceLink.click();
       await verifyPageIsFound(page);
 
-      await expect(page.getByRole('heading', { name: /kana reference/i }).first()).toBeVisible();
+      await expect(page.getByRole('heading', { name: /reference/i }).first()).toBeVisible();
     });
 
     test('should navigate from katakana chart back to reference index', async ({ page }) => {
@@ -116,8 +128,22 @@ test.describe('Reference Pages', () => {
       await referenceLink.click();
       await verifyPageIsFound(page);
 
-      await expect(page.getByRole('heading', { name: /kana reference/i }).first()).toBeVisible();
+      await expect(page.getByRole('heading', { name: /reference/i }).first()).toBeVisible();
+    });
+
+    test('should navigate from n5 vocabulary back to reference index', async ({ page }) => {
+      await page.goto('./docs/reference/n5-vocabulary');
+      await page.waitForLoadState('networkidle');
+
+      const referenceLink = page.locator('a.menu__link[href$="/reference/"]').first();
+      await expect(referenceLink).toBeVisible();
+
+      await referenceLink.click();
+      await verifyPageIsFound(page);
+
+      await expect(page.getByRole('heading', { name: /reference/i }).first()).toBeVisible();
     });
   });
 });
+
 
