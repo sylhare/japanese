@@ -14,10 +14,9 @@ Summer in Japan means heading to the **うみ** (sea) for a day of swimming, sna
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
 | ビーチ | - | biichi | 🏖️ beach | noun |
-| うみ | 海 | umi | 🌊 sea, ocean | noun |
-| かいがん | 海岸 | kaigan | 🌊 coast, seashore | noun |
-| すなはま | 砂浜 | sunahama | 🏖️ sandy beach | noun |
-| すな | 砂 | suna | 🏖️ sand | noun |
+| うみ | 海 | umi | sea, ocean | noun |
+| かいがん | 海岸 | kaigan | 🏝️ coast, seashore | noun |
+| すな | 砂 | suna | sand | noun |
 | なみ | 波 | nami | 🌊 wave | noun |
 | たいよう | 太陽 | taiyou | ☀️ sun | noun |
 | ひざし | 日差し | hizashi | 🌅 sunlight, sun's rays | noun |
@@ -66,11 +65,11 @@ For broader nature words (やま, かわ, みずうみ) see the [Travel and Tour
 
 | Hiragana | Kanji | Romaji | English | Type |
 |---|---|---|---|---|
-| かいすいよく | 海水浴 | kaisuiyoku | 🏖️ sea bathing, swimming in the sea | noun |
 | すいえい | 水泳 | suiei | 🏊 swimming | noun |
 | サーフィン | - | saafin | 🏄 surfing | noun |
 | シュノーケリング | - | shunookeringu | 🤿 snorkeling | noun |
 | ビーチボール | - | biichi booru | 🏐 beach ball | noun |
+| ふね | 船 | fune | 🚣 boat | noun |
 | たのしい | 楽しい | tanoshii | 😄 fun, enjoyable | い-adjective |
 
 :::note Sunbathing and Beach Fun
@@ -79,8 +78,6 @@ Relaxing in the sun is called **日向ぼっこ (ひなたぼっこ, hinatabokko
 
 **Examples:**
 
-- なつやすみに かいすいよくに いきます。 — I'm going swimming in the sea during summer vacation.
-  - *natsuyasumi ni kaisuiyoku ni ikimasu.*
 - ともだちと すいかわりを しました。 — I played watermelon splitting with my friends.
   - *tomodachi to suikawari o shimashita.*
 - いっしょに およぎませんか。 — Won't you swim with me?
@@ -159,4 +156,3 @@ The **海の家** are temporary huts that pop up on Japanese beaches every summe
 :::warning くらげ (Jellyfish) Season
 Jellyfish become common on Japanese beaches from mid-August (after お盆, Obon). Locals often say once お盆 passes, it's time to stop swimming in the sea.
 :::
-

@@ -397,7 +397,7 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | 見せる | みせる | miseru | to show | verb |
 | 答える | こたえる | kotaeru | to answer | verb |
 | 掛ける | かける | kakeru | to hang, make a call | verb |
-| 辞める | やめる | yameru | to quit | verb |
+| 辞める | やめる | yameru | to quit, to stop doing (a job, habit, activity) | verb |
 | 捨てる | すてる | suteru | to discard/throw away | verb |
 
 ### Irregular Verbs

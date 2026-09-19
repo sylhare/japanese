@@ -107,7 +107,15 @@ For seaside activities, beach gear, summer food, and staying safe in the sun (�
 | パスポート | - | pasupooto | 🛂 passport | noun |
 | よやくする | 予約する | yoyaku suru | to reserve, to book | verb |
 | かりる | 借りる | kariru | to rent, to borrow | verb |
-| とまる | 泊まる | tomaru | to stay (overnight) | verb |
+| とまる | 泊まる | tomaru | 🏨 to stay (overnight) | verb |
+
+:::tip とまる — two different kanji, two different meanings
+
+**泊まる** (tomaru) means to stay/lodge overnight — used for hotels, ryokan, a friend's place.
+It is **not** the same as **止まる** (tomaru) which means to come to a halt or stop moving (e.g. a train stopping).
+The pair 止まる / 止める also exists: 止まる is intransitive (something stops), 止める is transitive (you stop something).
+
+:::
 
 **Examples:**
 

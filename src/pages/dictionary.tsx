@@ -21,14 +21,16 @@ export default function Vocabulary(): React.JSX.Element {
   const vocabularyWithJlptTags = useMemo(() => withJlptTags(vocabularyData), []);
 
   const filteredAndSortedVocabulary = useMemo(() => {
+    const trimmedSearchTerm = searchTerm.trim().toLowerCase();
     const filtered = vocabularyWithJlptTags.filter(item => {
       const matchesSearch =
-        item.hiragana?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.katakana?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.kanji?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.romaji.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.meaning.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+        !trimmedSearchTerm ||
+        item.hiragana?.toLowerCase().includes(trimmedSearchTerm) ||
+        item.katakana?.toLowerCase().includes(trimmedSearchTerm) ||
+        item.kanji?.toLowerCase().includes(trimmedSearchTerm) ||
+        item.romaji.toLowerCase().includes(trimmedSearchTerm) ||
+        item.meaning.toLowerCase().includes(trimmedSearchTerm) ||
+        item.tags.some(tag => tag.toLowerCase().includes(trimmedSearchTerm));
 
       const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
       const matchesType = selectedType === 'all' || item.type === selectedType;
