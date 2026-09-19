@@ -122,10 +122,9 @@ Use **学生** for yourself if you're at university, but **生徒** for a high s
 | ふでばこ | 筆箱 | fudebako | ✏️ pencil case | noun |
 | じょうぎ | 定規 | jougi | 📏 ruler | noun |
 | かばん | 鞄 | kaban | 🎒 bag | noun |
-| ランドセル | | randoseru | 🎒 school backpack (elementary) | noun |
 
 :::tip ランドセル
-The **ランドセル** is the sturdy leather backpack carried by Japanese elementary schoolers. It's a cultural icon — often bought by grandparents and used for all six years of elementary school.
+The **ランドセル (randoseru)** is the sturdy leather backpack carried by Japanese elementary schoolers. It's a cultural icon — often bought by grandparents and used for all six years of elementary school.
 :::
 
 ## School Life and Activities

@@ -310,15 +310,14 @@ Many Japanese kanji look very similar but have completely different meanings and
 
 ### 己 vs 已 vs 巳
 
-| Hiragana | Kanji | Romaji | English        | Type   |
-|----------|-------|--------|----------------|--------|
-| おのれ      | 己     | onore  | self/oneself   | noun   |
-| い        | 已     | i      | already (archaic, rarely used) | adverb |
-| み        | 巳     | mi     | snake (zodiac) | noun   |
+| Hiragana | Kanji | Romaji | English | Type |
+|---|---|---|---|---|
+| おのれ | 己 | onore | self/oneself | noun |
+| み | 巳 | mi | snake (zodiac) | noun |
 
 **Memory Tips:**
-- **己 (onore)**: Open at the top - you're free
-- **已 (i)**: Partially closed - you're already there but still moving
+- **己 (onore)**: Open at the top (oneself)
+- **已 (i - *already*, archaic)**: Partially closed - included here purely for visual distinction
 - **巳 (mi)**: Completely closed at the top - like a snake coiling shut
 
 **Key Difference:** 己 is open at the top, 已 is partially closed, and 巳 is completely closed at the top.

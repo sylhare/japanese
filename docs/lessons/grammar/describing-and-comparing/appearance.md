@@ -140,3 +140,7 @@ Make the word or clause **before** みたい negative — **みたい です** i
 Use **そう** for visual appearance based on direct observation — you can see it.
 Use **みたい** for resemblance or likelihood — it reminds you of something, or you infer it.
 :::
+
+:::info Expressing Possibility
+To say something *might* happen or *probably will* happen — rather than how it looks — see the [Expressing Possibility](/docs/lessons/grammar/feelings-and-intent/possibility) article (かもしれない / でしょう).
+:::

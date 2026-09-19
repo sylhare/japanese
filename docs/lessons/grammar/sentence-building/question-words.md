@@ -27,15 +27,14 @@ Japanese question words go in the same position as the answer would.
 | どなた | 何方 | donata | who (polite) | noun |
 | いつ | 何時 | itsu | when | noun |
 | どこ | 何処 | doko | where | noun |
-| なぜ | 何故 | naze | why (formal/written) | adverb |
-| どうして | - | doushite | why (everyday) | adverb |
-| なんで | - | nande | why (casual, spoken) | adverb |
+| なぜ | 何故 | naze | why (formal / written) | adverb |
+| どうして | - | doushite | why (everyday / general) | adverb |
+| なんで | - | nande | why (casual spoken) | adverb |
 | どう | - | dou | how (in what way) | adverb |
 | どうやって | - | dou yatte | how (by what method/means) | adverb |
 | どのように | どの様に | dono you ni | how (formal, more detail) | adverb |
-| どれ | - | dore | which one (of three or more) | noun |
-| どちら | - | dochira | which one (of two), polite | noun |
-| どっち | - | docchi | which one (of two, casual) | noun |
+| どれ | - | dore | which one (of 3 or more items) | noun |
+| どちら | - | dochira | which one (of 2 items, polite) | noun |
 | どの | - | dono | which... (before a noun) | noun |
 | どんな | - | donna | what kind of, what sort of | noun |
 

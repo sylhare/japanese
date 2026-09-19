@@ -11,19 +11,19 @@ Learning colors is essential for describing objects and expressing preferences i
 
 ## Basic Colors
 
-| Hiragana | Kanji | Romaji   | English   | Type        |
+| Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|----------|-----------|-------------|
-| いろ       | 色     | iro      | 🎨 color  | noun        |
-| あか       | 赤     | aka      | 🔴 red    | い-adjective |
-| あお       | 青     | ao       | 🔵 blue   | い-adjective |
-| きいろ      | 黄色    | kiiro    | 🟡 yellow | い-adjective |
-| みどり      | 緑     | midori   | 🟢 green  | な-adjective |
-| むらさき     | 紫     | murasaki | 🟣 purple | な-adjective |
-| だいだい     | 橙     | daidai   | 🟠 orange | な-adjective |
-| しろ       | 白     | shiro    | ⚪ white   | い-adjective |
-| くろ       | 黒     | kuro     | ⚫ black   | い-adjective |
-| はいいろ     | 灰色    | haiiro   | ⬜ gray    | な-adjective |
-| ちゃいろ     | 茶色    | chairo   | 🟤 brown  | な-adjective |
+| いろ | 色 | iro | 🎨 color | noun |
+| あか | 赤 | aka | 🔴 red | い-adjective |
+| あお | 青 | ao | 🔵 blue | い-adjective |
+| きいろ | 黄色 | kiiro | 🟡 yellow | い-adjective |
+| みどり | 緑 | midori | 🟢 green | な-adjective |
+| むらさき | 紫 | murasaki | 🟣 purple | な-adjective |
+| オレンジ | - | orenji | 🟠 orange | な-adjective |
+| しろ | 白 | shiro | ⚪ white | い-adjective |
+| くろ | 黒 | kuro | ⚫ black | い-adjective |
+| はいいろ | 灰色 | haiiro | ⬜ gray | な-adjective |
+| ちゃいろ | 茶色 | chairo | 🟤 brown | な-adjective |
 
 **Examples:**
 
@@ -110,11 +110,7 @@ To describe dark shades, add **こい** (koi - thick/dark) before the color.
 - 🟦 こいあおいくつ (koi aoi kutsu) - dark blue shoes
 - 🟩 こいみどりのふく (koi midori no fuku) - dark green clothing
 
-### Traditional Colors
-
-| Hiragana | Kanji | Romaji      | English          | Type |
-|----------|-------|-------------|------------------|------|
-| ももいろ     | 桃色    | momoiro     | 🩷 peach color   | noun |
-| やまぶきいろ   | 山吹色   | yamabukiiro | 🟨 golden yellow | noun |
-| べにいろ     | 紅色    | beniiro     | 🔴 crimson       | noun |
+:::note Traditional Japanese Colors
+Traditional literature and arts use specialized shade names such as **桃色 (ももいろ, momoiro)** for *peach/pink*, **山吹色 (やまぶきいろ, yamabukiiro)** for *golden yellow*, and **紅色 (べにいろ, beniiro)** for *crimson*.
+:::
 

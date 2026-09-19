@@ -65,15 +65,17 @@ For broader nature words (やま, かわ, みずうみ) see the [Travel and Tour
 ## Beach Activities
 
 | Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
+|---|---|---|---|---|
 | かいすいよく | 海水浴 | kaisuiyoku | 🏖️ sea bathing, swimming in the sea | noun |
 | すいえい | 水泳 | suiei | 🏊 swimming | noun |
 | サーフィン | - | saafin | 🏄 surfing | noun |
 | シュノーケリング | - | shunookeringu | 🤿 snorkeling | noun |
-| ひなたぼっこ | 日向ぼっこ | hinatabokko | ☀️ sunbathing, basking in the sun | noun |
-| すいかわり | スイカ割り | suikawari | 🍉 watermelon splitting (game) | noun |
 | ビーチボール | - | biichi booru | 🏐 beach ball | noun |
 | たのしい | 楽しい | tanoshii | 😄 fun, enjoyable | い-adjective |
+
+:::note Sunbathing and Beach Fun
+Relaxing in the sun is called **日向ぼっこ (ひなたぼっこ, hinatabokko)** (*sunbathing / basking in the sun*).
+:::
 
 **Examples:**
 
@@ -111,14 +113,17 @@ A classic summer beach game: blindfolded, spun around, and handed a stick, you t
 ## Food and Drinks
 
 | Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| うみのいえ | 海の家 | umi no ie | 🏖️ beach hut (seaside food stall) | noun |
+|---|---|---|---|---|
 | かきごおり | かき氷 | kakigoori | 🍧 shaved ice | noun |
 | アイスクリーム | - | aisukuriimu | 🍦 ice cream | noun |
 | やきそば | 焼きそば | yakisoba | 🍜 fried noodles | noun |
 | やきとうもろこし | 焼きとうもろこし | yaki toumorokoshi | 🌽 grilled corn | noun |
-| すいか | - | suika | 🍉 watermelon | noun |
+| スイカ | 西瓜 | suika | 🍉 watermelon | noun |
 | ジュース | - | juusu | 🧃 juice | noun |
+
+:::note 海の家 (Umi no Ie - Beach Huts)
+**海の家 (うみのいえ, umi no ie)** are seasonal seaside shacks open during summer months. They provide food, drinks, rental gear, and changing rooms right on the sand.
+:::
 
 **Examples:**
 
