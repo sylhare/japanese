@@ -97,6 +97,14 @@ All three mean "why" but differ in register:
 - どの でんしゃに のりますか？ — Which train do you take? (before a noun)
   - *dono densha ni norimasu ka?*
 
+**どちら / どっち demo (which one / which way)**
+- どちらが すきですか？ — Which one do you like more?
+  - *dochira ga suki desu ka?*
+- どちらへ いきますか？ — Which way are you going?
+  - *dochira e ikimasu ka?*
+- えきは どちらですか？ — Which way is the station? / Which direction is the station?
+  - *eki wa dochira desu ka?*
+
 :::tip どれ vs どちら vs どの
 - **どれ** — standalone pronoun for 3 or more items: どれが いいですか？
 - **どちら** — standalone pronoun for exactly 2 items, also used as polite "where/which direction": どちらに なさいますか？
