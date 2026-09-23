@@ -30,12 +30,12 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | これ | kore | this (near speaker) | pronoun |
 | それ | sore | that (near listener) | pronoun |
 | あれ | are | that (far from both) | pronoun |
-| この | kono | this (modifier) | pronoun |
-| その | sono | that (modifier) | pronoun |
-| あの | ano | that (modifier) | pronoun |
+| この | kono | this (before a noun) | pronoun |
+| その | sono | that (near listener, before a noun) | pronoun |
+| あの | ano | that (far from both, before a noun) | pronoun |
 | ここ | koko | here (near speaker) | pronoun |
 | そこ | soko | there (near listener) | pronoun |
-| あそこ | asoko | over there | pronoun |
+| あそこ | asoko | over there (far from both) | pronoun |
 
 ## Question Words
 
@@ -298,6 +298,8 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | 柔らかい | やわらかい | yawarakai | soft, tender | い-adjective |
 | 広い | ひろい | hiroi | wide/spacious | い-adjective |
 | 狭い | せまい | semai | narrow/cramped | い-adjective |
+| 近い | ちかい | chikai | near, close | い-adjective |
+| 遠い | とおい | tooi | far, distant | い-adjective |
 | 明るい | あかるい | akarui | bright | い-adjective |
 | 暗い | くらい | kurai | dark | い-adjective |
 |  | うるさい | urusai | noisy | い-adjective |

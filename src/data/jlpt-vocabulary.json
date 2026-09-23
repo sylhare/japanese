@@ -1511,6 +1511,11 @@
       "romaji": "chiisai"
     },
     {
+      "kanji": "近い",
+      "hiragana": "ちかい",
+      "romaji": "chikai"
+    },
+    {
       "kanji": "近く",
       "hiragana": "ちかく",
       "romaji": "chikaku"
@@ -1660,6 +1665,11 @@
       "kanji": "十",
       "hiragana": "とお",
       "romaji": "too"
+    },
+    {
+      "kanji": "遠い",
+      "hiragana": "とおい",
+      "romaji": "tooi"
     },
     {
       "kanji": "遠く",
