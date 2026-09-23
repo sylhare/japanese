@@ -71,16 +71,28 @@ test.describe('Reference Pages', () => {
       await expect(page.getByRole('heading', { name: /n5 vocabulary/i }).first()).toBeVisible();
     });
 
-    test('should display all four reference cards', async ({ page }) => {
+    test('should have working N4 Vocabulary link', async ({ page }) => {
+      const n4VocabLink = page.getByRole('link', { name: /View N4 Vocabulary/i });
+      await expect(n4VocabLink).toBeVisible();
+
+      await n4VocabLink.click();
+      await verifyPageIsFound(page);
+
+      await expect(page.getByRole('heading', { name: /n4 vocabulary/i }).first()).toBeVisible();
+    });
+
+    test('should display all reference cards', async ({ page }) => {
       const hiraganaCard = page.locator('h3:has-text("Hiragana Chart")').locator('..');
       const katakanaCard = page.locator('h3:has-text("Katakana Chart")').locator('..');
       const dictionaryCard = page.locator('h3:has-text("Dictionary")').locator('..');
       const n5VocabCard = page.locator('h3:has-text("N5 Vocabulary")').locator('..');
+      const n4VocabCard = page.locator('h3:has-text("N4 Vocabulary")').locator('..');
 
       await expect(hiraganaCard).toBeVisible();
       await expect(katakanaCard).toBeVisible();
       await expect(dictionaryCard).toBeVisible();
       await expect(n5VocabCard).toBeVisible();
+      await expect(n4VocabCard).toBeVisible();
     });
   });
 
@@ -143,7 +155,19 @@ test.describe('Reference Pages', () => {
 
       await expect(page.getByRole('heading', { name: /reference/i }).first()).toBeVisible();
     });
+
+    test('should navigate from n4 vocabulary back to reference index', async ({ page }) => {
+      await page.goto('./docs/reference/n4-vocabulary');
+      await page.waitForLoadState('networkidle');
+
+      const referenceLink = page.locator('a.menu__link[href$="/reference/"]').first();
+      await expect(referenceLink).toBeVisible();
+
+      await referenceLink.click();
+      await verifyPageIsFound(page);
+
+      await expect(page.getByRole('heading', { name: /reference/i }).first()).toBeVisible();
+    });
   });
 });
-
 

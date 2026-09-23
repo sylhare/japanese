@@ -7,4 +7,5 @@ export interface JlptLevel {
 
 export const JLPT_LEVELS: JlptLevel[] = [
   { tag: 'N5', article: 'reference/n5-vocabulary.md' },
+  { tag: 'N4', article: 'reference/n4-vocabulary.md' },
 ];

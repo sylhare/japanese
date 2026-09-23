@@ -379,6 +379,14 @@ describe('getTagPath', () => {
     it('should map lowercase "n5" tag to the N5 reference page', () => {
       expect(getTagPath('n5')).toBe('docs/reference/n5-vocabulary');
     });
+
+    it('should map "N4" tag to the N4 reference page', () => {
+      expect(getTagPath('N4')).toBe('docs/reference/n4-vocabulary');
+    });
+
+    it('should map lowercase "n4" tag to the N4 reference page', () => {
+      expect(getTagPath('n4')).toBe('docs/reference/n4-vocabulary');
+    });
   });
 
   describe('Numbers-related tags', () => {
