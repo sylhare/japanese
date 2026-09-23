@@ -7,22 +7,6 @@ import {
 } from './helpers/tableHelper';
 
 test.describe('Vocabulary Type Column Visibility', () => {
-  test('should hide Type column in colors article tables', async ({ page }) => {
-    await page.goto('./docs/lessons/vocabulary/colors');
-    const tables = await waitForTables(page);
-
-    expect(await tables.count()).toBeGreaterThan(0);
-
-    const tableIndicesWithType = await findTablesWithTypeColumn(tables);
-    expect(tableIndicesWithType.length).toBeGreaterThan(0);
-
-    for (const tableIndex of tableIndicesWithType) {
-      const table = tables.nth(tableIndex);
-      const typeColumnIndex = await findTypeColumnIndex(table);
-      await verifyColumnIsHidden(table, typeColumnIndex);
-    }
-  });
-
   test('should hide Type column in tables across multiple vocabulary articles', async ({ page }) => {
     const articles = [
       '/japanese/docs/lessons/vocabulary/colors',

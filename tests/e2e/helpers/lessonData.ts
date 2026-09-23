@@ -32,15 +32,6 @@ export interface LessonSection {
   subLessons: SubLesson[];
 }
 
-export const INTRO_LINKS: Lesson[] = [
-  { name: 'Grammar',        path: '/grammar',       heading: /grammar/i },
-  { name: 'Vocabulary',     path: '/vocabulary',    heading: /vocabulary/i },
-  { name: 'Conjugation',    path: '/conjugation',   heading: /conjugation/i },
-  { name: 'Dictionary',     path: '/dictionary',    heading: /vocabulary|dictionary/i },
-  { name: 'Hiragana Chart', path: 'hiragana-chart', heading: /hiragana/i },
-  { name: 'Katakana Chart', path: 'katakana-chart', heading: /katakana/i },
-];
-
 export const CONJUGATION_LESSONS: Lesson[] = [
   { name: 'Verb Conjugation Basics', path: 'basics',          heading: /verb conjugation|conjugation/i },
   { name: 'Dictionary Form',         path: 'dictionary-form', heading: /dictionary form/i },

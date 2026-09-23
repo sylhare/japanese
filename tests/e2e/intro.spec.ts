@@ -58,7 +58,7 @@ test.describe('Intro Page', () => {
     });
   });
 
-  test.describe('Learning Resources Tiles', () => {
+  test.describe('Explore Lessons Tiles', () => {
     test('should display all resource tiles', async ({ page }) => {
       const tiles = page.locator('a[class*="lessonCard"]');
       const tileCount = await tiles.count();
@@ -74,13 +74,22 @@ test.describe('Intro Page', () => {
       await expect(page.getByRole('heading', { name: /grammar/i }).first()).toBeVisible();
     });
 
-    test('should navigate to Hiragana Chart from tile', async ({ page }) => {
-      const hiraganaCard = page.locator('a[class*="lessonCard"][href*="hiragana-chart"]').first();
-      await expect(hiraganaCard).toBeVisible();
-      await expect(hiraganaCard).toContainText(/hiragana/i);
-      await hiraganaCard.click();
+    test('should navigate to Vocabulary from tile', async ({ page }) => {
+      const vocabularyCard = page.locator('a[class*="lessonCard"][href*="/vocabulary"]').first();
+      await expect(vocabularyCard).toBeVisible();
+      await expect(vocabularyCard).toContainText(/vocabulary/i);
+      await vocabularyCard.click();
       await verifyPageIsFound(page);
-      await expect(page.getByRole('heading', { name: /hiragana/i }).first()).toBeVisible();
+      await expect(page.getByRole('heading', { name: /vocabulary/i }).first()).toBeVisible();
+    });
+
+    test('should navigate to Conjugation from tile', async ({ page }) => {
+      const conjugationCard = page.locator('a[class*="lessonCard"][href*="/conjugation"]').first();
+      await expect(conjugationCard).toBeVisible();
+      await expect(conjugationCard).toContainText(/conjugation/i);
+      await conjugationCard.click();
+      await verifyPageIsFound(page);
+      await expect(page.getByRole('heading', { name: /conjugation/i }).first()).toBeVisible();
     });
   });
 
@@ -110,6 +119,8 @@ test.describe('Intro Page', () => {
         const href = await tile.getAttribute('href');
         expect(href).toBeTruthy();
         expect(href).toMatch(/\/(docs\/lessons|docs\/reference|reference|vocabulary|dictionary|japanese\/docs)/);
+        const resp = await page.request.get(href!);
+        expect(resp.status(), `Tile link ${href} returned ${resp.status()} (expected 200)`).toBe(200);
       }
     });
 
