@@ -1097,6 +1097,13 @@ title: Custom Section Test
       expect(kirei?.kanji).toBeUndefined();
     });
 
+    it('should extract words with hyphen for kanji as kana-only entries', () => {
+      const entries = extractJlptEntries(n4Article);
+      const keeki = entries.find(e => e.hiragana === 'ケーキ');
+
+      expect(keeki).toEqual({ hiragana: 'ケーキ', romaji: 'keeki' });
+    });
+
     it('should return an empty list for a missing article', () => {
       expect(extractJlptEntries(path.join(__dirname, 'does-not-exist.md'))).toEqual([]);
     });

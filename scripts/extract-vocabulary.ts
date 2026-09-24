@@ -144,7 +144,7 @@ function extractJlptEntries(articleFile: string): JlptEntry[] {
       if (!row.startsWith('|')) {
         break;
       }
-      if (row.match(/^\|\s*[-:]+/)) {
+      if (row.match(/^[\s|:-]+$/)) {
         continue;
       }
 
