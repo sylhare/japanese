@@ -48,5 +48,6 @@
   "frequency": "docs/lessons/vocabulary/time/frequency",
   "travel": "docs/lessons/vocabulary/travel",
   "weather": "docs/lessons/vocabulary/weather",
-  "n5": "docs/reference/n5-vocabulary"
+  "n5": "docs/reference/n5-vocabulary",
+  "n4": "docs/reference/n4-vocabulary"
 }

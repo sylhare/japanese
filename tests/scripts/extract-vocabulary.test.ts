@@ -1068,11 +1068,18 @@ title: Custom Section Test
 
   describe('extractJlptEntries', () => {
     const n5Article = path.join(__dirname, '../../docs/reference/n5-vocabulary.md');
+    const n4Article = path.join(__dirname, '../../docs/reference/n4-vocabulary.md');
 
     it('should extract a structured entry for 見る from the N5 reference article', () => {
       const entries = extractJlptEntries(n5Article);
 
       expect(entries).toContainEqual({ kanji: '見る', hiragana: 'みる', romaji: 'miru' });
+    });
+
+    it('should extract a structured entry for 集める from the N4 reference article', () => {
+      const entries = extractJlptEntries(n4Article);
+
+      expect(entries).toContainEqual({ kanji: '集める', hiragana: 'あつめる', romaji: 'atsumeru' });
     });
 
     it('should split multi-reading rows and pair them (なに/なん, nani/nan)', () => {
@@ -1088,6 +1095,13 @@ title: Custom Section Test
 
       expect(kirei).toBeDefined();
       expect(kirei?.kanji).toBeUndefined();
+    });
+
+    it('should extract words with hyphen for kanji as kana-only entries', () => {
+      const entries = extractJlptEntries(n4Article);
+      const keeki = entries.find(e => e.hiragana === 'ケーキ');
+
+      expect(keeki).toEqual({ hiragana: 'ケーキ', romaji: 'keeki' });
     });
 
     it('should return an empty list for a missing article', () => {
@@ -1116,6 +1130,7 @@ title: Custom Section Test
       expect(tags.has('colors')).toBe(true);
       expect(tags.has('tastes')).toBe(true);
       expect(tags.has('N5')).toBe(true);
+      expect(tags.has('N4')).toBe(true);
       expect(tags.has('index')).toBe(false);
     });
   });

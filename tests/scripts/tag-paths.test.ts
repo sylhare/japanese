@@ -22,13 +22,14 @@ function docExists(relPathNoExt: string): boolean {
   return fs.existsSync(`${full}.md`) || fs.existsSync(`${full}.mdx`);
 }
 
-/** Every tag the dictionary can render, including the dynamically added N5 tag. */
+/** Every tag the dictionary can render, including the dynamically added JLPT tags. */
 function collectDictionaryTags(): string[] {
   const tags = new Set<string>();
   for (const item of loadVocabularyData().vocabulary) {
     (item.tags ?? []).forEach(tag => tags.add(tag));
   }
   tags.add('N5');
+  tags.add('N4');
   return [...tags].sort();
 }
 

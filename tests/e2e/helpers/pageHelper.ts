@@ -26,6 +26,8 @@ export async function validateSidebarLinks(page: Page, section: string) {
     const href = await links.nth(i).getAttribute('href');
     expect(href).toBeTruthy();
     expect(href).toMatch(new RegExp(`${section}/`));
+    const resp = await page.request.get(href!);
+    expect(resp.status(), `Sidebar link ${href} returned ${resp.status()} (expected 200)`).toBe(200);
   }
 }
 
@@ -39,5 +41,7 @@ export async function validateCardLinks(page: Page, section: string) {
     const href = await link.getAttribute('href');
     expect(href).toBeTruthy();
     expect(href).toMatch(/\/(docs\/lessons|japanese\/docs\/lessons)/);
+    const resp = await page.request.get(href!);
+    expect(resp.status(), `Card link ${href} returned ${resp.status()} (expected 200)`).toBe(200);
   }
 }
