@@ -41,38 +41,24 @@ Japanese question words go in the same position as the answer would.
 ### Examples
 
 **なに / なん (what)**
-- なにを たべますか？ — What are you eating?
-  - *nani o tabemasu ka?*
-- なんじですか？ — What time is it? (*なん* before a counter)
-  - *nanji desu ka?*
 - これは なんですか？ — What is this?
   - *kore wa nan desu ka?*
 
 **だれ / どなた (who)**
 - あの ひとは だれですか？ — Who is that person?
   - *ano hito wa dare desu ka?*
-- どなたですか？ — Who is it? (polite, e.g. answering the door)
-  - *donata desu ka?*
 
 **いつ (when)**
 - たんじょうびは いつですか？ — When is your birthday?
   - *tanjoubi wa itsu desu ka?*
-- いつ にほんに きましたか？ — When did you come to Japan?
-  - *itsu nihon ni kimashita ka?*
 
 **どこ (where)**
 - トイレは どこですか？ — Where is the toilet?
   - *toire wa doko desu ka?*
-- どこに すんでいますか？ — Where do you live?
-  - *doko ni sunde imasu ka?*
 
 **なぜ / どうして / なんで (why)**
-- なぜ にほんごを べんきょうしていますか？ — Why are you studying Japanese? (formal)
-  - *naze nihongo o benkyou shite imasu ka?*
-- どうして おくれましたか？ — Why were you late? (everyday)
+- どうして おくれましたか？ — Why were you late?
   - *doushite okuremashita ka?*
-- なんで ないているの？ — Why are you crying? (very casual)
-  - *nande naite iru no?*
 
 :::tip なぜ vs どうして vs なんで
 All three mean "why" but differ in register:
@@ -86,8 +72,6 @@ All three mean "why" but differ in register:
   - *nihongo no benkyou wa dou desu ka?*
 - これは どうやって つかいますか？ — How do you use this?
   - *kore wa dou yatte tsukaimasu ka?*
-- えきまで どうやって いきますか？ — How do you get to the station?
-  - *eki made dou yatte ikimasu ka?*
 
 **どれ / どちら / どの (which)**
 - どれが すきですか？ — Which one do you like? (of 3 or more)
@@ -97,12 +81,8 @@ All three mean "why" but differ in register:
 - どの でんしゃに のりますか？ — Which train do you take? (before a noun)
   - *dono densha ni norimasu ka?*
 
-**どちら / どっち demo (which one / which way)**
-- どちらが すきですか？ — Which one do you like more?
-  - *dochira ga suki desu ka?*
-- どちらへ いきますか？ — Which way are you going?
-  - *dochira e ikimasu ka?*
-- えきは どちらですか？ — Which way is the station? / Which direction is the station?
+**どちら / どっち (which one / which way)**
+- えきは どちらですか？ — Which way is the station?
   - *eki wa dochira desu ka?*
 
 :::tip どれ vs どちら vs どの
@@ -114,8 +94,6 @@ All three mean "why" but differ in register:
 **どんな (what kind of)**
 - どんな おんがくが すきですか？ — What kind of music do you like?
   - *donna ongaku ga suki desu ka?*
-- どんな ひとですか？ — What kind of person are they?
-  - *donna hito desu ka?*
 
 :::tip どう vs どうやって vs どのように
 - **どう** — asks about state or impression: どうですか？ (How is it? / What do you think?)
@@ -123,13 +101,20 @@ All three mean "why" but differ in register:
 - **どのように** — formal version of どうやって, used in writing or polite speech
 :::
 
-## How Much and How Many
+## How Much, How Many and How Far
 
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
 | いくら | 幾ら | ikura | how much (price) | noun |
 | いくつ | 幾つ | ikutsu | how many (general), how old | noun |
-| どのくらい | どの位 | dono kurai | how much, how many, approximately how | noun |
+| どのくらい | どの位 | dono kurai | how much / how long / how far (approximate) | noun |
+| なんじかん | 何時間 | nanjikan | how many hours | noun |
+| なんぷん | 何分 | nanpun | how many minutes | noun |
+| なんにち | 何日 | nannichi | how many days | noun |
+| なんしゅうかん | 何週間 | nanshuukan | how many weeks | noun |
+| なんかげつ | 何ヶ月 | nankagetsu | how many months | noun |
+| なんねん | 何年 | nannen | how many years, what year | noun |
+| どのくらいとおい | どの位遠い | dono kurai tooi | how far away | expression |
 
 :::note
 **どれくらい** (*dore kurai*) is a casual variant of どのくらい with the same meaning.
@@ -140,36 +125,12 @@ All three mean "why" but differ in register:
 **いくら (how much — price)**
 - これは いくらですか？ — How much is this?
   - *kore wa ikura desu ka?*
-- ぜんぶで いくらですか？ — How much is it altogether?
-  - *zenbu de ikura desu ka?*
 
 **いくつ (how many / how old)**
 - りんごは いくつ ありますか？ — How many apples are there?
   - *ringo wa ikutsu arimasu ka?*
-- おいくつですか？ — How old are you? (polite)
-  - *oikutsu desu ka?*
 
-**どのくらい (how much / how many in general)**
-- どのくらい かかりますか？ — How long does it take? / How much does it cost?
-  - *dono kurai kakarimasu ka?*
-- どのくらい べんきょうしましたか？ — How much did you study?
-  - *dono kurai benkyou shimashita ka?*
-
-## How Long and How Far
-
-| Hiragana | Kanji | Romaji | English | Type |
-|----------|-------|--------|---------|------|
-| どのくらい | どの位 | dono kurai | how long (duration), how far (distance) | noun |
-| なんじかん | 何時間 | nanjikan | how many hours | noun |
-| なんぷん | 何分 | nanpun | how many minutes | noun |
-| なんにち | 何日 | nannichi | how many days | noun |
-| なんしゅうかん | 何週間 | nanshuukan | how many weeks | noun |
-| なんかげつ | 何ヶ月 | nankagetsu | how many months | noun |
-| なんねん | 何年 | nannen | how many years, what year | noun |
-| どのくらいとおい | どの位遠い | dono kurai tooi | how far away | expression |
-
-### Examples
-
+**どのくらい (how long / how far / approximately how much)**
 - とうきょうから おおさかまで どのくらい かかりますか？ — How long does it take from Tokyo to Osaka?
   - *toukyou kara oosaka made dono kurai kakarimasu ka?*
 - なんじかん ねましたか？ — How many hours did you sleep?
