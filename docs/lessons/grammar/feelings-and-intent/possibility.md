@@ -15,11 +15,11 @@ Learn how to talk about things you are not certain about using **かもしれな
 
 | Hiragana | Romaji | English | Type |
 |----------|--------|---------|------|
-| [short form] + かもしれない | kamoshirenai | might, maybe (casual) | expression |
-| [short form] + かもしれません | kamoshiremasen | might, maybe (polite) | expression |
-| [short form] + でしょう | deshou | probably, I think (polite) | expression |
-| [short form] + だろう | darou | probably (casual) | expression |
-| [short form] + かな | kana | I wonder, maybe (casual) | particle |
+| [short form] + かもしれない | [short form] kamoshirenai | might, maybe (casual) | expression |
+| [short form] + かもしれません | [short form] kamoshiremasen | might, maybe (polite) | expression |
+| [short form] + でしょう | [short form] deshou | probably, I think (polite) | expression |
+| [short form] + だろう | [short form] darou | probably (casual) | expression |
+| [short form] + かな | [short form] kana | I wonder, maybe (casual) | particle |
 
 ## Certainty: かもしれない vs でしょう
 

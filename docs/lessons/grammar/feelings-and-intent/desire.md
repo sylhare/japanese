@@ -13,10 +13,10 @@ Learn how to express what you want or don't want to do using **たい**.
 
 | Hiragana | Romaji | English | Type |
 |----------|--------|---------|------|
-| [verb stem] + たい です | tai desu | want to | expression |
-| [verb stem] + たくない です | takunai desu | don't want to | expression |
-| [verb stem] + たかった です | takatta desu | wanted to | expression |
-| [verb stem] + たくなかった です | takunakatta desu | didn't want to | expression |
+| [verb stem] + たい です | [verb stem] tai desu | want to | expression |
+| [verb stem] + たくない です | [verb stem] takunai desu | don't want to | expression |
+| [verb stem] + たかった です | [verb stem] takatta desu | wanted to | expression |
+| [verb stem] + たくなかった です | [verb stem] takunakatta desu | didn't want to | expression |
 
 ## Pattern: [verb] + たい
 

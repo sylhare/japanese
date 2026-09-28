@@ -13,9 +13,9 @@ Learn how to describe how things look or seem.
 
 | Hiragana | Romaji | English | Type |
 |----------|--------|---------|------|
-| [い-adj without い] + そう | sou | looks [adj] | expression |
-| [な-adj] + そう | sou | looks [adj] | expression |
-| [noun/sentence] + みたい です | mitai desu | it looks like, seems like | expression |
+| [い-adj without い] + そう | [i-adj stem] sou | looks [adj] | expression |
+| [な-adj] + そう | [na-adj] sou | looks [adj] | expression |
+| [noun/sentence] + みたい です | [noun/sentence] mitai desu | it looks like, seems like | expression |
 
 ## そう - Looking...
 

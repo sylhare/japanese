@@ -15,9 +15,9 @@ Learn how to express reasons and causes using **ので** and **から**.
 
 | Hiragana | Romaji | English | Type |
 |----------|--------|---------|------|
-| [reason] + ので | node | because (formal) | conjunction |
-| [reason] + から | kara | because (casual) | conjunction |
-| [sentence] + ん です | n desu | explanatory ending | expression |
+| [reason] + ので | [reason] node | because (formal) | conjunction |
+| [reason] + から | [reason] kara | because (casual) | conjunction |
+| [sentence] + ん です | [sentence] n desu | explanatory ending | expression |
 
 ## Formality: ので vs から
 

@@ -13,10 +13,10 @@ Learn how to express firm intentions and plans using **つもり**.
 
 | Hiragana | Romaji | English | Type |
 |----------|--------|---------|------|
-| [verb dictionary] + つもり です | tsumori desu | intend to, plan to | expression |
-| [verb ない] + つもり です | tsumori desu | intend not to | expression |
-| [verb dictionary] + つもり は ない | tsumori wa nai | have no intention of | expression |
-| [verb dictionary] + つもり だった | tsumori datta | intended to (but didn't) | expression |
+| [verb dictionary] + つもり です | [dict-form] tsumori desu | intend to, plan to | expression |
+| [verb ない] + つもり です | [nai-form] tsumori desu | intend not to | expression |
+| [verb dictionary] + つもり は ない | [dict-form] tsumori wa nai | have no intention of | expression |
+| [verb dictionary] + つもり だった | [dict-form] tsumori datta | intended to (but didn't) | expression |
 
 ## Pattern: [verb] + つもり です
 

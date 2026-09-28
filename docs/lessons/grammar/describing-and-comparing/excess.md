@@ -13,9 +13,9 @@ Learn how to express that something is **too much** or **excessive** using **す
 
 | Hiragana | Romaji | English | Type |
 |----------|--------|---------|------|
-| [verb stem] + すぎる | sugiru | do too much | expression |
-| [い-adj without い] + すぎる | sugiru | too [adj] | expression |
-| [な-adj] + すぎる | sugiru | too [adj] | expression |
+| [verb stem] + すぎる | [verb stem] sugiru | do too much | expression |
+| [い-adj without い] + すぎる | [i-adj stem] sugiru | too [adj] | expression |
+| [な-adj] + すぎる | [na-adj] sugiru | too [adj] | expression |
 
 ## Pattern: [verb/adjective] + すぎる
 
