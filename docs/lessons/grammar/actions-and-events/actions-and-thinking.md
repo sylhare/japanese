@@ -103,6 +103,11 @@ Learn how to express ongoing actions, trying things, and thoughts.
 
 **Meaning:** "Let's try doing something"
 
+:::tip Volitional Form
+**みよう** is the volitional form of **みる** (to see/try). 
+Check the [Future tense](/docs/lessons/conjugation/future) conjugation lesson.
+:::
+
 #### Examples
 
 - たべる → たべてみよう — Let's try eating.

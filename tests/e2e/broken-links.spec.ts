@@ -53,7 +53,7 @@ test('crawls and verifies all app links automatically', async ({ page }) => {
   }
 
   if (errors.length > 0) {
-    console.error('\n❌ Broken Links Found:\n' + errors.join('\n') + '\n');
+    console.error(`\n❌ Broken Links Found:\n${  errors.join('\n')  }\n`);
   }
 
   expect(errors).toEqual([]);

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 title: Potential Form - できる
 description: Learn how to express ability in Japanese
 tags: [grammar, conjugation, verbs, potential-form]
@@ -119,13 +119,13 @@ Both are understood, but られる is more formal and traditionally correct.
 
 <NextSteps items={[
   {
-    title: "Present Negative - ない",
-    description: "Learn to express negation with the nai form",
-    to: "./present/nai-form"
+    title: "Future in Japanese",
+    description: "Learn how the future is expressed with non-past verbs and the volitional form",
+    to: "./future"
   },
   {
-    title: "Past - た form",
-    description: "Use the ta-form to express what you could do in the past",
-    to: "./past/ta-form"
+    title: "Passive Form - られる",
+    description: "Learn how to express passive actions in Japanese",
+    to: "./passive-form"
   }
 ]} />
