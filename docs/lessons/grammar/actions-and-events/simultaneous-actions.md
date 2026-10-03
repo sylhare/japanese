@@ -15,7 +15,7 @@ Learn how to say you are doing two things **at the same time** — "while doing 
 
 | Hiragana | Romaji | English | Type |
 |----------|--------|---------|------|
-| [verb ますstem] + ながら | nagara | while doing | expression |
+| [verb ますstem] + ながら | [masu-stem] nagara | while doing | expression |
 
 ## How It Works
 

@@ -17,10 +17,10 @@ These patterns require the て-form of the verb. Make sure you know your [て-fo
 
 | Hiragana | Romaji | English | Type |
 |----------|--------|---------|------|
-| [verb て] + から | te kara | after doing | expression |
-| [noun] の + あいだ | no aida | during / while (throughout) | expression |
-| [noun] の + あいだに | no aida ni | during / while (at some point) | expression |
-| [plain form] + うちに | uchi ni | while (before it changes) | expression |
+| [verb て] + から | [te-form] kara | after doing | expression |
+| [noun] の + あいだ | [noun] no aida | during / while (throughout) | expression |
+| [noun] の + あいだに | [noun] no aida ni | during / while (at some point) | expression |
+| [plain form] + うちに | [plain form] uchi ni | while (before it changes) | expression |
 
 ## How It Works
 

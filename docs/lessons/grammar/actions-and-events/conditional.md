@@ -20,10 +20,10 @@ Learn how to express "if" and "when" in Japanese using the four conditional patt
 
 | Hiragana | Romaji | English | Type |
 |----------|--------|---------|------|
-| [clause A] + と + [clause B] | to | when/if A, then B | expression |
-| [clause A ta-form] + ら + [clause B] | tara | if/when A, then B | expression |
-| [clause A ば-form] + [clause B] | ba | if A (generally / hypothetically), then B | expression |
-| [clause A plain] + なら + [clause B] | nara | if it's the case that A, then B | expression |
+| [clause A] + と + [clause B] | [A] to [B] | when/if A, then B | expression |
+| [clause A ] + [verb たら-form] + [clause B] | [A] tara [B] | if/when A, then B | expression |
+| [clause A] + [verb ば-form] + [clause B] | [A] ba [B] | if A (generally / hypothetically), then B | expression |
+| [clause A plain] + なら + [clause B] | [A] nara [B] | if it's the case that A, then B | expression |
 
 ## Pattern 1: と (Natural Consequences)
 

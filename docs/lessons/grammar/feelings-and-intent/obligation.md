@@ -13,10 +13,10 @@ Learn how to express obligation and necessity - saying you "must" or "have to" d
 
 | Hiragana | Romaji | English | Type |
 |----------|--------|---------|------|
-| [verb ない without い] + なければ いけない | nakereba ikenai | must, have to | expression |
-| [verb ない without い] + なければ ならない | nakereba naranai | must, have to | expression |
-| [verb ない without い] + なきゃ | nakya | gotta (casual) | expression |
-| [verb て] + は いけません | te wa ikemasen | must not, not allowed to | expression |
+| [verb ない without い] + なければ いけない | [nai-stem] nakereba ikenai | must, have to | expression |
+| [verb ない without い] + なければ ならない | [nai-stem] nakereba naranai | must, have to | expression |
+| [verb ない without い] + なきゃ | [nai-stem] nakya | gotta (casual) | expression |
+| [verb て] + は いけません | [te-form] wa ikemasen | must not, not allowed to | expression |
 
 ## Pattern: なければ (ならない/いけない)
 

@@ -37,6 +37,7 @@ export const CONJUGATION_LESSONS: Lesson[] = [
   { name: 'Dictionary Form',         path: 'dictionary-form', heading: /dictionary form/i },
   { name: 'Present Forms',           path: 'present',         heading: /present forms/i,     partial: true },
   { name: 'Past Forms',              path: 'past',            heading: /past forms/i,        partial: true },
+  { name: 'Future in Japanese',      path: 'future',          heading: /future|volitional/i },
   { name: 'Potential Form',          path: 'potential-form',  heading: /potential form|できる/i },
   { name: 'Passive Form',            path: 'passive-form',    heading: /passive form|られる/i },
 ];

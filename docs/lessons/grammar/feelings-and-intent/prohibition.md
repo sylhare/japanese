@@ -17,9 +17,9 @@ These patterns require the て-form of the verb. Make sure you know your [て-fo
 
 | Hiragana | Romaji | English | Type |
 |----------|--------|---------|------|
-| [verb て] + は いけません | te wa ikemasen | must not, not allowed to | expression |
-| [verb て] + は だめです | te wa dame desu | must not, not allowed to | expression |
-| [verb て] + じゃ だめです | te ja dame desu | must not (casual) | expression |
+| [verb て] + は いけません | [te-form] wa ikemasen | must not, not allowed to | expression |
+| [verb て] + は だめです | [te-form] wa dame desu | must not, not allowed to | expression |
+| [verb て] + じゃ だめです | [te-form] ja dame desu | must not (casual) | expression |
 
 ## How It Works
 
