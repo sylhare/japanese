@@ -2,24 +2,24 @@
 sidebar_position: 5
 title: Future in Japanese
 description: Learn how to express future actions and master the volitional form in Japanese
-tags: [grammar, verbs, conjugation, future, volitional-form, 意向形]
+tags: [grammar, verbs, conjugation, future, volitional-form]
 ---
 
 import NextSteps from '@site/src/components/NextSteps';
 
 # Future in Japanese
 
-Japanese does not have a separate future tense. Verbs have only two grammatical tenses: **past** (過去) and **non-past** (非過去).
+Japanese does not have a separate future tense. Verbs have only two grammatical tenses: **past** (かこ / 過去 - *kako*) and **non-past** (ひかこ / 非過去 - *hikako*).
 
 The present or non-past form (dictionary form in casual speech, ます form in polite speech) expresses both habitual actions and future events when paired with time words or clear context.
 
-To explicitly express **will**, **intention**, or an invitation ("let's...", "I will..."), Japanese uses the **volitional form** (意向形 - *ikoukei*).
+To explicitly express **will**, **intention**, or an invitation ("let's...", "I will..."), Japanese uses the **volitional form** (いこうけい / 意向形 - *ikoukei*).
 
 The future and volitional form are used to:
 - Express planned or scheduled future actions
 - Express personal will or determination ("I will...", "I'm going to...")
 - Make casual invitations or suggestions ("Let's...")
-- Express future plans with 〜と思う ("I think I will...")
+- Express future plans with 〜と おもう ("I think I will...")
 
 :::tip Polite Form Equivalent
 For polite speech, use the **〜ましょう** (-mashou) ending instead of the plain volitional form:
@@ -116,9 +116,9 @@ Both irregular verbs change their stem vowel before adding the volitional ending
 - する → **しよう** (shiyou - let's do / will do)
 - くる → **こよう** (koyou - let's come / will come)
 
-:::warning Irregular Reading: 来る (くる)
-**くる** (kuru - to come) changes its kanji reading to **こ** in the volitional form:
-- 来る (くる) → **来よう (こよう)**, NOT ~~くよう~~ or ~~きよう~~
+:::warning Irregular Reading: くる (to come)
+The verb **くる** (*kuru* - to come, kanji 来る) changes its reading to **こ** in the volitional form:
+- くる (来る) → **こよう (来よう)**, NOT ~~くよう~~ or ~~きよう~~
 :::
 
 ### Examples with する Compounds
@@ -140,7 +140,7 @@ Compound verbs with する follow the exact same pattern:
 > こんしゅう は まいにち **はしろう**。
 > *I'm going to run every day this week.*
 
-**Intention with 〜と思う ("I think I will..."):**
+**Intention with 〜と おもう ("I think I will..."):**
 > あした は はやく **おきよう** と おもいます。
 > *I think I'll wake up early tomorrow.*
 
@@ -155,12 +155,12 @@ Compound verbs with する follow the exact same pattern:
 :::info Common Future Patterns
 While verb conjugation provides the base through non-past and volitional forms, Japanese also uses specialized grammar patterns for expressing future intentions and plans:
 
-- **〜ようと思う / と思っている** — thinking of doing (volitional + と思う): 日本へ行こうと思っている (I'm thinking of going to Japan) → see [Actions and Thinking](/docs/lessons/grammar/actions-and-events/actions-and-thinking)
-- **[Dictionary form] + つもり** — firm personal intention: 来年留学するつもりです (I intend to study abroad next year) → see [Expressing Intention - つもり](/docs/lessons/grammar/explaining-and-reasoning/intend-to)
-- **[Dictionary form] + 予定 (よてい)** — scheduled plan: 明日出発する予定です (I'm scheduled to depart tomorrow) → see [Scheduled Plans](/docs/lessons/grammar/explaining-and-reasoning/intend-to#scheduled-plans-よてい-予定)
-- **[Dictionary form] + ことにする** — decide to do: 毎日運動することにする (I decide to exercise every day)
-- **〜ましょうか** — shall we? / shall I?: 手伝いましょうか (Shall I help?)
-- **Negative Future** — use the negative non-past (**ない** / **ません**): 明日は行きません (I will not go tomorrow) → see [Present Negative - ない](./present/nai-form)
+- **〜よう と おもう / と おもっている** — thinking of doing (volitional + と おもう): にほん へ いこう と おもっている (I'm thinking of going to Japan) → see [Actions and Thinking](/docs/lessons/grammar/actions-and-events/actions-and-thinking)
+- **[Dictionary form] + つもり** — firm personal intention: らいねん りゅうがくする つもり です (I intend to study abroad next year) → see [Expressing Intention - つもり](/docs/lessons/grammar/explaining-and-reasoning/intend-to)
+- **[Dictionary form] + よてい** — scheduled plan: あした しゅっぱつする よてい です (I'm scheduled to depart tomorrow) → see [つもり vs よてい](/docs/lessons/grammar/explaining-and-reasoning/intend-to#つもり-vs-よてい)
+- **[Dictionary form] + ことにする** — decide to do: まいにち うんどう することにする (I decide to exercise every day)
+- **〜ましょうか** — shall we? / shall I?: てつだいましょうか (Shall I help?)
+- **Negative future** — use the negative non-past (**ない** / **ません**): あした は いきません (I will not go tomorrow) → see [Present Negative - ない](./present/nai-form)
 :::
 
 <NextSteps items={[
