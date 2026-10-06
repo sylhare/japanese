@@ -16,8 +16,6 @@
     "typecheck": "tsc",
     "extract-vocabulary": "tsx scripts/extract-vocabulary.ts",
     "extract-vocabulary:force": "tsx scripts/extract-vocabulary.ts --force",
-    "prebuild": "npm run extract-vocabulary",
-    "prestart": "npm run extract-vocabulary",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
