@@ -250,7 +250,7 @@ A comprehensive reference for all essential vocabulary needed for the Japanese L
 | 茶色 | ちゃいろ | chairo | brown | な-adjective |
 |  | ピンク | pinku | pink | noun |
 | 紫 | むらさき | murasaki | purple | な-adjective |
-|  | オレンジ | orenji | orange | noun |
+|  | オレンジ | orenji | orange | な-adjective |
 |  | グレー | guree | gray | noun |
 
 ## Common Adjectives

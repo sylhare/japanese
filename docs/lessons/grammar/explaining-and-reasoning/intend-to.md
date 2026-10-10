@@ -2,8 +2,10 @@
 sidebar_position: 2
 title: Expressing Intention - つもり
 description: Learn how to express intentions and plans using つもり
-tags: [grammar, intention, plans, conjugation]
+tags: [grammar, intention, plans]
 ---
+
+import NextSteps from '@site/src/components/NextSteps';
 
 # Expressing Intention: つもり
 
@@ -42,18 +44,10 @@ The **つもり** pattern expresses a firm personal intention or plan to do some
   - *ashita nihongo o benkyousuru tsumori desu.*
 - らいねん にほん に いく つもり です。 — I plan to go to Japan next year.
   - *rainen nihon ni iku tsumori desu.*
-- けっこんする つもり です。 — I intend to get married.
-  - *kekkonsuru tsumori desu.*
-- だいがく に はいる つもり です。 — I intend to enter university.
-  - *daigaku ni hairu tsumori desu.*
 - あたらしい くるま を かう つもり です。 — I plan to buy a new car.
   - *atarashii kuruma o kau tsumori desu.*
-- いつ いく つもり です か？ — When do you intend to go?
-  - *itsu iku tsumori desu ka?*
 - どうする つもり です か？ — What do you intend to do?
   - *dou suru tsumori desu ka?*
-- ずっと ここ に いる つもり です。 — I intend to stay here forever.
-  - *zutto koko ni iru tsumori desu.*
 
 ## Negative Intention
 
@@ -65,8 +59,6 @@ There are two ways to express negative intention:
 
 - いかない つもり です。 — I intend not to go.
   - *ikanai tsumori desu.*
-- たべない つもり です。 — I intend not to eat.
-  - *tabenai tsumori desu.*
 - あした は でかけない つもり です。 — I intend not to go out tomorrow.
   - *ashita wa dekakenai tsumori desu.*
 
@@ -95,8 +87,6 @@ This pattern often implies that the intention was not fulfilled.
   - *kinou benkyousuru tsumori datta.*
 - はやく かえる つもり だった。 — I intended to go home early (but didn't).
   - *hayaku kaeru tsumori datta.*
-- てがみ を かく つもり だった。 — I intended to write a letter (but didn't).
-  - *tegami o kaku tsumori datta.*
 
 ## つもり vs よてい
 
@@ -106,11 +96,24 @@ Both express future plans, but they differ:
 - あした やすむ つもり です。 — I intend to rest tomorrow (my decision).
   - *ashita yasumu tsumori desu.*
 
-**よてい** — Scheduled plan, can be external or formal
+**よてい** (予定 - plan/schedule) — Scheduled plan, can be external or formal
 - あした かいぎ が ある よてい です。 — There's a meeting scheduled tomorrow.
   - *ashita kaigi ga aru yotei desu.*
 
 :::caution Third person
 **つもり** is mainly for your own intentions. For third person, use it only when reporting what someone said: かれ は やめる つもり だ そうです — I heard he intends to quit.
 :::
+
+<NextSteps items={[
+  {
+    title: 'Future in Japanese',
+    description: 'Learn about the volitional form and expressing the future',
+    to: '/docs/lessons/conjugation/future',
+  },
+  {
+    title: 'Actions and Thinking',
+    description: 'Learn how to express thoughts and intentions with と おもう',
+    to: '/docs/lessons/grammar/actions-and-events/actions-and-thinking',
+  },
+]} />
 
