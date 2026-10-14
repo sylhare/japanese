@@ -7,7 +7,7 @@ tags: [grammar, particles, reference]
 
 # Japanese Particle Guide
 
-Particles are small words that indicate the grammatical relationship between words in a sentence. They are essential for understanding Japanese sentence structure.
+Particles (助詞 - *joshi*) are small postpositional words that mark grammatical relationships between words in a sentence — indicating the topic, subject, direct object, destination, or means.
 
 ## Basic Particles
 

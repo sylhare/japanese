@@ -82,8 +82,9 @@ Literally: "The direction of [not doing] is good."
 **Very polite:** ~た ほう が よろしい です → いった ほう が よろしい です
 
 ## Examples in Context
+## Related Vocabulary: Giving and Receiving Advice
 
-### Vocabulary
+When talking about *giving*, *receiving*, or *asking for* advice (アドバイス), pair it with giving and receiving verbs:
 
 | Hiragana | Kanji | Romaji | English | Type |
 |----------|-------|--------|---------|------|
@@ -103,32 +104,9 @@ Literally: "The direction of [not doing] is good."
 - **もらう** — I receive from someone: アドバイス を **もらいました** (I received advice)
 - **いただく** — humble もらう, receiving from a superior: せんせい に アドバイス を **いただきました** (I received advice from the teacher)
 :::
-
-### Health Advice
-
-- くすり を のんだ ほう が いい です よ。 — You should take medicine.
-  - *kusuri o nonda hou ga ii desu yo.*
-- やすんだ ほう が いい です よ。 — You should rest.
-  - *yasunda hou ga ii desu yo.*
-- いしゃ に アドバイス を もらった ほう が いい です よ。 — You should get advice from a doctor.
-  - *isha ni adobaisu o moratta hou ga ii desu yo.*
-
-### Study Advice
-
-- まいにち れんしゅうした ほう が いい です よ。 — You should practice every day.
-  - *mainichi renshuushita hou ga ii desu yo.*
-- あした の テスト の ために べんきょうした ほう が いい です よ。 — You should study for tomorrow's test.
-  - *ashita no tesuto no tame ni benkyoushita hou ga ii desu yo.*
-- せんせい に アドバイス を いただいた ほう が いい です よ。 — You should get advice from your teacher. (polite)
-  - *sensei ni adobaisu o itadaita hou ga ii desu yo.*
-- せんせい に しりょう を わたした ほう が いい です よ。 — You should hand over the documents to the teacher.
-  - *sensei ni shiryou o watashita hou ga ii desu yo.*
-
-### Warnings
-
-- そこ に いかない ほう が いい です よ。 — You shouldn't go there.
-  - *soko ni ikanai hou ga ii desu yo.*
-- それ を しない ほう が いい です よ。 — You shouldn't do that.
-  - *sore o shinai hou ga ii desu yo.*
-- そんな アドバイス を あげない ほう が いい です よ。 — You shouldn't give that kind of advice.
-  - *sonna adobaisu o agenai hou ga ii desu yo.*
+- せんせい に アドバイス を もらった ほう が いい です よ。 — You should get advice from your teacher.
+  - *sensei ni adobaisu o moratta hou ga ii desu yo.*
+- ともだち に アドバイス を あげました。 — I gave advice to my friend.
+  - *tomodachi ni adobaisu o agemashita.*
+- せんせい が いい アドバイス を くれました。 — The teacher gave me good advice.
+  - *sensei ga ii adobaisu o kuremashita.*

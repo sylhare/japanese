@@ -92,12 +92,12 @@ April and September use different number readings that must be memorized — the
 Simply read the year as a number followed by ねん.
 
 **Example: 1983**
-- **せん きゅうひゃく はちじゅう さん ねん**
-- sen kyuuhyaku hachijuu san nen
+- せん きゅうひゃく はちじゅう さん ねん。 — Year 1983.
+  - *sen kyuuhyaku hachijuu san nen.*
 
 **Example: 2025**
-- **にせん にじゅう ご ねん**
-- nisen nijuu go nen
+- にせん にじゅう ご ねん。 — Year 2025.
+  - *nisen nijuu go nen.*
 
 ## Year References
 
@@ -109,8 +109,6 @@ Simply read the year as a number followed by ねん.
 | 毎年    | まいとし     | maitoshi     | 🔁 every year         | noun |
 | 一年中  | いちねんじゅう | ichinenjuu   | 📆 all year (long)    | noun |
 | 年     | ねん       | nen          | 📆 year               | noun |
-
-
 
 ## Saying Dates
 
@@ -134,12 +132,21 @@ Japanese dates follow the order: **Year → Month → Day**
 
 ### Asking About Dates
 
-- **なん がつ なん にち です か？** - *What month and day is it?*
-  - く がつ にじゅうよっか です (*September 24th*)
-- **たんじょうび は いつ です か？** - *When is your birthday?*
-  - く がつ じゅうよっか です (*September 14th*)
-- **なん ねん うまれ です か？** - *What year were you born?*
-  - せん きゅうひゃく はちじゅう さん ねん うまれ です (*1983*)
+- きょう は なんがつ なんにち ですか？ — What month and day is it today?
+  - *kyou wa nangatsu nannichi desu ka?*
+- たんじょうび は いつ ですか？ — When is your birthday?
+  - *tanjoubi wa itsu desu ka?*
+- なんねん うまれ ですか？ — What year were you born?
+  - *nannen umare desu ka?*
+
+:::tip Common Phrases
+- きょう は くがつ じゅうよっか です。 — Today is September 14th.
+  - *kyou wa kugatsu juuyokka desu.*
+- らいねん の はる に にほん へ いきます。 — I'm going to Japan next year in spring.
+  - *rainen no haru ni nihon e ikimasu.*
+- たんじょうび は ついたち です。 — My birthday is on the first of the month.
+  - *tanjoubi wa tsuitachi desu.*
+:::
 
 
 

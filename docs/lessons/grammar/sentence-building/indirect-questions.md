@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
-title: Indirect Questions
-description: Learn how to form an indirect question by putting the question in plain form and attaching か
+title: Indirect Questions - か / かどうか
+description: Learn how to form embedded indirect questions using か and かどうか
 tags: [grammar, questions, indirect-questions, embedded-questions]
 ---
 
