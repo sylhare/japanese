@@ -11,7 +11,7 @@ import NextSteps from '@site/src/components/NextSteps';
 
 Learn how to say you are doing two things **at the same time** — "while doing X, (do) Y" — using **ながら**.
 
-## Key Expression
+## Key Expressions
 
 | Hiragana | Romaji | English | Type |
 |----------|--------|---------|------|

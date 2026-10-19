@@ -2,7 +2,7 @@
 sidebar_position: 5
 title: Future in Japanese
 description: Learn how to express future actions and master the volitional form in Japanese
-tags: [grammar, verbs, conjugation, future, volitional-form]
+tags: [verbs, conjugation, future, volitional-form]
 ---
 
 import NextSteps from '@site/src/components/NextSteps';
