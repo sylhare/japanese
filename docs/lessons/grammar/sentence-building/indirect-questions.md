@@ -7,108 +7,116 @@ tags: [grammar, questions, indirect-questions, embedded-questions]
 
 import NextSteps from '@site/src/components/NextSteps';
 
-# Indirect Questions
+# Indirect Questions: か / かどうか
 
-An indirect question is a question tucked inside a larger sentence — *Do you know **where the station is**?* or *I'm not sure **whether it's true**.* Instead of asking on its own, the question becomes a clause that another verb (know, ask, understand…) acts on.
+Learn how to tuck a question inside a larger sentence — such as *"Do you know **where the station is**?"* or *"I don't know **whether it will rain**"* — using **か** and **かどうか**.
 
-## How to form an indirect question
+## Key Expressions
 
-Turning a direct question into an embedded one takes three steps:
+| Hiragana | Romaji | English | Type |
+|----------|--------|---------|------|
+| [question word] ... か | ... ka | who / what / where / when ... (indirect question) | particle |
+| [plain form] + かどうか | ka dou ka | whether or not | expression |
 
-1. **Take the question** you want to embed — えきは どこですか (Where is the station?).
-2. **Put the clause in plain (short) form**, dropping です/ます — どこですか → どこにある.
-3. **Attach か** to close the embedded question, then add the main verb — どこにある**か** しっていますか.
-
-**[embedded question in plain form] + か + [main clause]**
-
-The **か** marks where the inner question ends, and the main verb at the very end carries the politeness.
-
-- えきが どこにあるか しっていますか。 — Do you know where the station is?
-  - *eki ga doko ni aru ka shitte imasu ka.*
-
-:::tip は → が inside the clause
-Notice えき**は** became えき**が**. The topic marker は often shifts to が once a question is embedded — the inner clause marks えき as its own subject rather than the sentence's topic.
+:::tip When to Use Which? か vs かどうか
+- **〜か** — Used when the embedded question contains a [question word](./question-words) (なに, だれ, どこ, いつ, どう): だれ が くる か しっていますか (*Do you know who is coming?*).
+- **〜かどうか** — Used for **yes/no questions** without a question word: あした あめ が ふる かどうか わかりません (*I don't know whether or not it will rain tomorrow*).
 :::
 
-### From direct to embedded
+## Pattern 1: Question Word Clauses (〜か)
 
-The embedded clause always drops the polite ending and keeps か at the end:
+**[Question Word] + [Plain-Form Clause] + か + [Main Verb]**
 
-| Direct question | Embedded form |
-|-----------------|---------------|
-| なんじですか (What time is it?) | なんじか (what time it is) |
-| だれが きますか (Who is coming?) | だれが くるか (who is coming) |
-| ほんとうですか (Is it true?) | ほんとうかどうか (whether it is true) |
+**Meaning:** "Do you know / tell me / I don't know [who / what / where / why / how]..."
 
-Each embedded form then slots in front of a main verb:
+The embedded clause uses the **short/plain form**. Politeness (です / ます) belongs only to the final verb of the whole sentence.
 
-- いま なんじか しっていますか。 — Do you know what time it is now?
-  - *ima nanji ka shitte imasu ka.*
-- だれが くるか おしえてください。 — Please tell me who is coming.
-  - *dare ga kuru ka oshiete kudasai.*
-- それが ほんとうかどうか わかりません。 — I don't know whether that is true.
-  - *sore ga hontou ka dou ka wakarimasen.*
+| Type | Formation |
+|------|-----------|
+| Verb | [verb plain form] + か |
+| い-Adj | [い-adjective plain form] + か |
+| な-Adj | [な-adjective stem] (drop だ) + か |
+| Noun | [noun] (drop だ) + か |
 
-### Keep the short form before か
+:::caution Drop だ for Nouns and な-Adjectives before か
+Unlike `〜と おもう` which requires `だ`, embedded questions with `か` drop `だ` in standard modern Japanese:
+- ✓ あの ひと は だれ **か** しっていますか。 (*Do you know who that person is?*)
+- ✗ あの ひと は だれ **だか** しっていますか。 (Unnatural in standard speech)
+:::
 
-The embedded clause uses the **short form**, not the polite form. The politeness comes from the main verb at the end.
+:::tip Particle Shift: は → が inside the embedded clause
+When embedding a sentence, the topic particle **は** of the original question shifts to the subject particle **が**:
+- Direct: えき **は** どこ です か？
+- Embedded: えき **が** どこ に ある **か** しって います か？
+:::
 
-- ✓ だれが できる**か** しっていますか？
-- ✗ だれが できます**か** しっていますか？
+### Examples
 
-With nouns and な-adjectives, **です** drops. Using **だ** before か is possible but less common:
-
-- ✓ あのひとが にほんじん**か** しっていますか？
-- △ あのひとが にほんじん**だか** しっていますか？
-- ✗ あのひとが にほんじんです**か** しっていますか？
-
-## When there is a question word
-
-If the embedded question uses a [question word](./question-words.md) (だれ, なに, どこ, いつ, どう…), keep the question word and attach **か** to the plain-form clause.
-
-| Pattern | English equivalent |
-|---------|--------------------|
-| [question word] + [plain form] + か + [main clause] | [main clause] + [question word] + [statement] |
-
-- だれが できるか しっていますか？ — Do you know who can do it?
-  - *dare ga dekiru ka shitte imasu ka?*
-- なにが おきたか わかりません。 — I don't know what happened.
-  - *nani ga okita ka wakarimasen.*
-- えきが どこにあるか おしえてください。 — Please tell me where the station is.
-  - *eki ga doko ni aru ka oshiete kudasai.*
-- どうやって つくるか しらべました。 — I looked up how to make it.
+- えき が どこ に ある か しって います か？ — Do you know where the station is?
+  - *eki ga doko ni aru ka shitte imasu ka?*
+- いま なんじ か おしえて ください。 — Please tell me what time it is now.
+  - *ima nanji ka oshiete kudasai.*
+- だれ が くる か わかりません。 — I don't know who is coming.
+  - *dare ga kuru ka wakarimasen.*
+- なに が おきた か きいて みました。 — I asked what happened.
+  - *nani ga okita ka kiite mimashita.*
+- どうやって つくる か しらべました。 — I looked up how to make it.
   - *dou yatte tsukuru ka shirabemashita.*
 
-### いつか: "sometime" vs. "when"
+## Pattern 2: Yes/No Embedded Questions (〜かどうか)
 
-**いつか** can mean "sometime" (indefinite) or "when" (embedded question) depending on context:
+**[Plain-Form Clause] + かどうか + [Main Verb]**
 
-- **いつか** にほんに いきたい。 — I want to go to Japan **sometime**. (indefinite)
-- **いつ** くる**か** しっていますか？ — Do you know **when** they are coming? (embedded question)
+**Meaning:** "Whether or not..."
 
-In writing, the embedded question is usually spaced as いつ...か (with か attached to the verb, not to いつ).
+When embedding a question that has a yes-or-no answer (and no question word), attach **かどうか** ("or not") directly to the plain form.
 
-## When there is no question word
+| Type | Formation |
+|------|-----------|
+| Verb | [verb plain form] + かどうか |
+| い-Adj | [い-adjective plain form] + かどうか |
+| な-Adj | [な-adjective stem] (drop だ) + かどうか |
+| Noun | [noun] (drop だ) + かどうか |
 
-If the inner question has a yes-or-no answer and no question word, use **かどうか** ("whether or not") instead of bare か.
+### Examples
 
-| Pattern | English equivalent |
-|---------|--------------------|
-| [plain form] + かどうか + [main clause] | [main clause] + whether + [statement] |
-
-- いるかどうか しっていますか？ — Do you know whether they are there?
-  - *iru ka dou ka shitte imasu ka?*
-- あした あめが ふるかどうか わかりません。 — I don't know whether it will rain tomorrow.
+- あした あめ が ふる かどうか わかりません。 — I don't know whether or not it will rain tomorrow.
   - *ashita ame ga furu ka dou ka wakarimasen.*
-- このみせが やすいかどうか しらべました。 — I checked whether this shop is cheap.
+- たなかさん が くる かどうか しって います か？ — Do you know whether Mr. Tanaka is coming or not?
+  - *tanakasan ga kuru ka dou ka shitte imasu ka?*
+- この みせ が やすい かどうか しらべました。 — I checked whether this shop is cheap or not.
   - *kono mise ga yasui ka dou ka shirabemashita.*
-- にほんじんかどうか わかりません。 — I don't know whether they are Japanese.
-  - *nihonjin ka dou ka wakarimasen.*
+- それ が ほんとう かどうか わかりません。 — I don't know whether that is true or not.
+  - *sore ga hontou ka dou ka wakarimasen.*
+- かれ が にほんじん かどうか しりません。 — I do not know whether he is Japanese.
+  - *kare ga nihonjin ka dou ka shirimasen.*
+
+## Same Sentence, Both Ways
+
+**With Question Word (か — open question):**
+- だれ が くる か わかりません。 — I don't know who is coming.
+  - *dare ga kuru ka wakarimasen.*
+
+**Without Question Word (かどうか — yes/no condition):**
+- たなかさん が くる かどうか わかりません。 — I don't know whether Mr. Tanaka is coming or not.
+  - *tanakasan ga kuru ka dou ka wakarimasen.*
+
+## Quick Comparison
+
+**[Question Word] ... か** — Used when asking *who*, *what*, *when*, *where*, *why*, or *how*. The question word provides the missing piece of information.
+**... かどうか** — Used when the question is binary (yes or no). Literally translates to "whether or what".
+
+**Key structural difference:** Both drop `です / だ` for nouns and な-adjectives. Use `か` when an interrogative pronoun is present; use `かどうか` when there is no interrogative pronoun.
 
 <NextSteps items={[
   {
     title: 'Question Words',
     description: 'Review the question words used in embedded questions',
     to: './question-words',
+  },
+  {
+    title: 'Actions and Thinking',
+    description: 'Learn how to quote thoughts and opinions using とおもう',
+    to: '/docs/lessons/grammar/actions-and-events/actions-and-thinking',
   },
 ]} />

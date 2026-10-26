@@ -5,150 +5,138 @@ description: Learn how to express obligation and necessity using なければ
 tags: [grammar, obligation, necessity, must, have-to]
 ---
 
+import NextSteps from '@site/src/components/NextSteps';
+
 # Expressing Obligation: なければ
 
-Learn how to express obligation and necessity - saying you "must" or "have to" do something.
+Learn how to express obligation and necessity — saying you "must" or "have to" do something using **なければ いけない** and **なければ ならない**.
 
 ## Key Expressions
 
 | Hiragana | Romaji | English | Type |
 |----------|--------|---------|------|
-| [verb ない without い] + なければ いけない | [nai-stem] nakereba ikenai | must, have to | expression |
-| [verb ない without い] + なければ ならない | [nai-stem] nakereba naranai | must, have to | expression |
-| [verb ない without い] + なきゃ | [nai-stem] nakya | gotta (casual) | expression |
-| [verb て] + は いけません | [te-form] wa ikemasen | must not, not allowed to | expression |
+| [verb ない stem] + なければ いけません | [nai-stem] nakereba ikemasen | must / have to (conversational) | expression |
+| [verb ない stem] + なければ なりません | [nai-stem] nakereba narimasen | must / have to (formal / rules) | expression |
+| [verb ない stem] + なきゃ | [nai-stem] nakya | gotta (casual contraction) | expression |
 
-## Pattern: なければ (ならない/いけない)
-
-These patterns express strong obligation or necessity.
-
-## Two Main Patterns
-
-### Pattern 1: なければ いけない
-
-**[verb ない form without い] + なければ いけない**
-
-**Literal meaning:** "If (something) does not happen, you can't go."
-
-#### Examples
-
-- べんきょうしなければ いけない。 — I must study.
-  - *benkyoushinakereba ikenai.*
-- いかなければ いけない。 — I have to go.
-  - *ikanakereba ikenai.*
-- たべなければ いけない。 — I must eat.
-  - *tabenakereba ikenai.*
-
-### Pattern 2: なければ ならない
-
-**[verb ない form without い] + なければ ならない**
-
-**Literal meaning:** "If (something) does not happen, it won't do."
-
-#### Examples
-
-- べんきょうしなければ ならない。 — I must study.
-  - *benkyoushinakereba naranai.*
-- いかなければ ならない。 — I have to go.
-  - *ikanakereba naranai.*
-- たべなければ ならない。 — I must eat.
-  - *tabenakereba naranai.*
-
-:::tip ならない vs いけない
-Both patterns mean the same thing and are largely interchangeable.
-- **いけない** is slightly more common in everyday speech
-- **ならない** sounds slightly more formal or literary
+:::tip When to Use Which? いけない vs ならない
+- **〜なければ いけない** — Focuses on personal obligation, immediate necessity, or practical consequences ("it won't do / won't work out"). This is the standard choice in everyday conversation.
+- **〜なければ ならない** — Focuses on external rules, laws, duty, or inescapable principles ("it will not stand"). Preferred in formal speech, official announcements, and written Japanese.
 :::
 
-## How to Form: [verb な-form]
+## Pattern 1: 〜なければ いけない (Personal Obligation)
 
-To create the な-form needed for these patterns:
+**[verb stem] + なければ いけない / いけません**
 
-1. Start with the **ない form** of the verb
-2. Remove the final **い**
-3. Add **ければ**
+**Meaning:** "Must do", "have to do"
+
+This pattern builds on the negative [nai-form](/docs/lessons/conjugation/present/nai-form) of the verb: drop the final **い** and attach **ければ いけない**.
+
+| Type | Formation |
+|------|-----------|
+| Verb | [verb ない without い] + なければ いけない / いけません |
+| い-Adj | [い-adj くない without い] + ければ いけない |
+| な-Adj | [な-adj stem] + でなければ いけない |
+| Noun | [noun] + でなければ いけない |
 
 ### Examples
 
-| Dictionary Form | ない Form | な-Form | With Obligation |
-|----------------|----------|---------|-----------------|
-| たべる | たべない | たべなければ | たべなければ いけない |
-| いく | いかない | いかなければ | いかなければ いけない |
-| する | しない | しなければ | しなければ いけない |
-| くる | こない | こなければ | こなければ いけない |
-
-## Formal and Casual Forms
-
-### Formal
-
-**[verb な] + なければ いけません**
-
-More polite form used in formal situations.
-
+- びょういん に いかなければ いけません。 — I have to go to the hospital.
+  - *byouin ni ikanakereba ikemasen.*
+- くすり を のまなければ いけない。 — I must take medicine.
+  - *kusuri o nomanakereba ikenai.*
+- はやく ねなければ いけません。 — I have to go to bed early.
+  - *hayaku nenakereba ikemasen.*
 - しゅくだい を しなければ いけません。 — I must do my homework.
   - *shukudai o shinakereba ikemasen.*
+- ぜんぶ たべなければ いけない？ — Do I have to eat all of it?
+  - *zenbu tabenakereba ikenai?*
+
+### Casual Contraction: 〜なきゃ
+
+In casual speech with friends and family, **〜なければ いけない** is frequently contracted to **〜なきゃ (いけない)**, or just **〜なきゃ**:
+
+- もう いかなきゃ。 — I gotta go now.
+  - *mou ikanakya.*
+- あした べんきょうしなきゃ いけない。 — I gotta study tomorrow.
+  - *ashita benkyoushinakya ikenai.*
+- ごはん を たべなきゃ。 — Gotta eat lunch.
+  - *gohan o tabenakya.*
 
 :::tip Polite Refusal: つごうが わるい
-When you can't fulfill an obligation or attend something, **つごうが わるい** (inconvenient / doesn't work for me) is the natural polite explanation:
-- つごうが わるい です - It's not convenient for me.
-- つごうが わるい ので、いけません - I can't go because it's inconvenient.
-
-The opposite, **つごうが いい**, means it works / is convenient:
-- つごうが いい 時間 は いつ ですか？ - When is a convenient time for you?
+When you cannot fulfill an obligation or invitation, Japanese speakers avoid blunt refusals. Instead, use **つごう が わるい** (it is inconvenient / doesn't work for me):
+- きょう は つごう が わるい ので、いけません。 — I cannot go because the timing is bad for me today.
+  - *kyou wa tsugou ga warui node, ikemasen.*
 :::
 
-### Casual
+## Pattern 2: 〜なければ ならない (Rules and Duty)
 
-**[verb な] + きゃ いけない**
+**[verb stem] + なければ ならない / なりません**
 
-Very casual, shortened form used among friends.
+**Meaning:** "Must do (by rule/duty)", "have an obligation to"
 
-- いかなきゃ いけない。 — I gotta go.
-  - *ikanakya ikenai.*
-- たべなきゃ いけない。 — I gotta eat.
-  - *tabenakya ikenai.*
-- べんきょうしなきゃ。 — I gotta study.
-  - *benkyoushinakya.*
-
-**Note:** Often shortened even more to just **~なきゃ**!
-
-## Past: Had To
-
-To express past obligation, change the ending to its past form.
-
-### Polite
-
-- きのう べんきょうしなければ いけませんでした。 — I had to study yesterday.
-  - *kinou benkyoushinakereba ikemasen deshita.*
-- はやく おきなければ なりませんでした。 — I had to wake up early.
-  - *hayaku okinakereba narimasen deshita.*
-
-### Casual
-
-- きのう いかなければ いけなかった。 — I had to go yesterday.
-  - *kinou ikanakereba ikenakatta.*
-- しゅくだい を しなきゃ いけなかった。 — I had to do my homework.
-  - *shukudai o shinakya ikenakatta.*
-
-| Form | Present | Past |
-|------|---------|------|
-| Polite (いけない) | いけません | いけませんでした |
-| Polite (ならない) | なりません | なりませんでした |
-| Casual (いけない) | いけない | いけなかった |
-| Casual (ならない) | ならない | ならなかった |
-
-## Negative: Must Not
-
-**[verb て form] + は いけません**
-
-Use this pattern to express prohibition - something you must not do.
+| Type | Formation |
+|------|-----------|
+| Verb | [verb ない without い] + なければ ならない / なりません |
+| い-Adj | [い-adj くない without い] + ければ ならない |
+| な-Adj | [な-adj stem] + でなければ ならない |
+| Noun | [noun] + でなければ ならない |
 
 ### Examples
 
-- たべては いけません。 — You must not eat.
-  - *tabete wa ikemasen.*
-- いっては いけません。 — You must not go.
-  - *itte wa ikemasen.*
-- しては いけません。 — You must not do (that).
-  - *shite wa ikemasen.*
+- パスポート を みせなければ なりません。 — You must show your passport.
+  - *pasupooto o misenakereba narimasen.*
+- がくせい は じかん を まもらなければ なりません。 — Students must observe the time (be punctual).
+  - *gakusei wa jikan o mamoranakereba narimasen.*
+- じゅうはっさい に なったら、ぜいきん を はらわなければ ならない。 — When you turn 18, you must pay taxes.
+  - *juuhassai ni nattara, zeikin o harawanakereba naranai.*
+- ほんとう の こと を いわなければ なりません。 — You must tell the truth.
+  - *hontou no koto o iwanakereba narimasen.*
 
+## Same Sentence, Both Ways
+
+**なければ いけません (everyday personal necessity):**
+- あした はやく おきなければ いけません。 — I have to wake up early tomorrow.
+  - *ashita hayaku okinakereba ikemasen.*
+
+**なければ なりません (duty / schedule requirement):**
+- あした はやく おきなければ なりません。 — I must wake up early tomorrow.
+  - *ashita hayaku okinakereba narimasen.*
+
+## Quick Comparison
+
+**〜なければ いけない** — Personal necessity or practical trouble if skipped ("I gotta do this").
+**〜なければ ならない** — Objective duty, institutional rules, or moral requirement ("One must do this").
+
+**Key structural difference:** Both replace the final **い** of any plain negative form with **ければ**. The distinction lies entirely in the concluding verb: **いけない** (social/personal outcome) vs. **ならない** (objective principle).
+
+## Past Tense: Expressing "Had To"
+
+To express past obligation, conjugate the ending verb into its past form:
+
+| Pattern | Present Polite | Past Polite | Casual Present | Casual Past |
+|---------|----------------|-------------|----------------|-------------|
+| **いけない** | いけません | いけませんでした | いけない | いけなかった |
+| **ならない** | なりません | なりませんでした | ならない | ならなかった |
+
+- きのう ざんぎょう しなければ いけませんでした。 — I had to work overtime yesterday.
+  - *kinou zangyou shinakereba ikemasen deshita.*
+- はやく おきなければ ならなかった。 — I had to wake up early.
+  - *hayaku okinakereba naranatta.*
+
+:::info What about "must not"?
+To say you **must not** do something (prohibition), Japanese uses **[verb て] + は いけません / だめです**, not なければ. See the dedicated [Prohibition](./prohibition) lesson for full details.
+:::
+
+<NextSteps items={[
+  {
+    title: 'Prohibition - てはだめ',
+    description: 'Learn how to express "must not" and "not allowed to" using てはいけません',
+    to: './prohibition',
+  },
+  {
+    title: 'Present Negative - ない form',
+    description: 'Review the base negative form used to build なければ',
+    to: '/docs/lessons/conjugation/present/nai-form',
+  },
+]} />
