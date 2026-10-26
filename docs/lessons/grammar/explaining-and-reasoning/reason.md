@@ -1,5 +1,4 @@
 ---
-sidebar_position: 1
 title: Expressing Reason - ので / から
 description: Learn how to express reasons and causes using ので and から
 tags: [grammar, reason, cause, particles]

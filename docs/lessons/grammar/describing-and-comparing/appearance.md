@@ -1,5 +1,4 @@
 ---
-sidebar_position: 1
 title: Appearance - そう / みたい
 description: Learn how to describe appearance and resemblance using そう and みたい
 tags: [grammar, appearance, describing]

@@ -1,5 +1,4 @@
 ---
-sidebar_position: 2
 title: Making Comparisons - ほう が / より / ほど
 description: Learn how to compare things using ほう が, より, and ほど ない
 tags: [grammar, comparison, describing]

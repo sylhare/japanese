@@ -1,5 +1,4 @@
 ---
-sidebar_position: 5
 title: Expressing Possibility - かもしれない / でしょう
 description: Learn how to express possibility and probability using かもしれない (might) and でしょう (probably)
 tags: [grammar, possibility, probability, guessing]

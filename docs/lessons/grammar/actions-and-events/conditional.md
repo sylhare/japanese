@@ -1,5 +1,4 @@
 ---
-sidebar_position: 4
 title: Conditionals - と / たら / ば / なら
 description: Learn Japanese's four conditionals — と for natural consequences, たら for specific situations, ば for general hypotheticals, and なら for context-based conditions
 tags: [grammar, conditional, particles]

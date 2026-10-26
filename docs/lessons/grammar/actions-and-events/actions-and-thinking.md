@@ -1,5 +1,4 @@
 ---
-sidebar_position: 3
 title: Actions and Thinking - ている / とおもう / てみる
 description: Learn how to express continuous actions (ている), thoughts and opinions (とおもう), and trying things (てみる)
 tags: [grammar, actions, thinking, te-form]

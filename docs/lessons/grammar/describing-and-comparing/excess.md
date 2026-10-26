@@ -1,5 +1,4 @@
 ---
-sidebar_position: 3
 title: Too Much - すぎる
 description: Learn how to express excess using すぎる (too much, too many)
 tags: [grammar, adjectives, verbs, excess, describing]

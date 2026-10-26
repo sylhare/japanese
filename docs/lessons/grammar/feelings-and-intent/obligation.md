@@ -1,5 +1,4 @@
 ---
-sidebar_position: 3
 title: Expressing Obligation - なければ
 description: Learn how to express obligation and necessity using なければ
 tags: [grammar, obligation, necessity, must, have-to]

@@ -1,5 +1,4 @@
 ---
-sidebar_position: 6
 title: Simultaneous Actions - ながら
 description: Learn how to express doing two actions at the same time using ながら
 tags: [grammar, nagara, simultaneous, actions]
