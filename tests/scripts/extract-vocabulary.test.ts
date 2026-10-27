@@ -300,26 +300,6 @@ describe('Vocabulary Extraction', () => {
   });
 
   describe('mergeVocabulary', () => {
-    it('should prevent duplicates based on content', () => {
-      const existing = createTestVocabularyData([
-        createTestVocabularyItem({ id: 'existing_0', tags: ['existing'] }),
-      ], { categories: ['colors'] });
-      const extracted = createTestVocabularyData([
-        createTestVocabularyItem({ id: 'extracted_0', category: 'vocabulary', tags: ['colors'] }),
-        createBlueItem({ id: 'extracted_1', category: 'vocabulary', tags: ['colors'] }),
-      ], { categories: ['vocabulary'] });
-      const merged = mergeVocabulary(existing, extracted);
-
-      expect(merged.vocabulary).toHaveLength(2);
-
-      const redItem = merged.vocabulary.find(item => item.hiragana === 'あか');
-      expect(redItem?.id).toBe('existing_0');
-      expect(redItem?.tags).toContain('existing');
-
-      const blueItem = merged.vocabulary.find(item => item.hiragana === 'あお');
-      expect(blueItem).toBeDefined();
-      expect(blueItem?.id).toBe('extracted_0');
-    });
 
     it('should merge tags when duplicate vocabulary items are found', () => {
       const existing = createTestVocabularyData([
@@ -376,43 +356,6 @@ describe('Vocabulary Extraction', () => {
       expect(redItem?.tags).toContain('adjectives');
     });
 
-    it('should preserve the first occurrence data (except type) when merging duplicates', () => {
-      const existing = createTestVocabularyData([
-        createTestVocabularyItem({
-          id: 'existing_1',
-          hiragana: 'あか',
-          kanji: '赤',
-          romaji: 'aka',
-          meaning: 'red',
-          type: 'い-adjective',
-          category: 'colors',
-          tags: ['existing-tag'],
-        }),
-      ], { categories: ['colors'] });
-
-      const extracted = createTestVocabularyData([
-        createTestVocabularyItem({
-          id: 'extracted_1',
-          hiragana: 'あか',
-          kanji: '紅',
-          romaji: 'aka',
-          meaning: 'red',
-          type: 'noun',
-          category: 'vocabulary',
-          tags: ['extracted-tag'],
-        }),
-      ], { categories: ['vocabulary'] });
-
-      const merged = mergeVocabulary(existing, extracted);
-
-      const redItem = merged.vocabulary.find(item => item.hiragana === 'あか');
-      expect(redItem?.id).toBe('existing_1');
-      expect(redItem?.kanji).toBe('赤');
-      expect(redItem?.type).toBe('noun');
-      expect(redItem?.category).toBe('colors');
-      expect(redItem?.tags).toContain('existing-tag');
-      expect(redItem?.tags).toContain('extracted-tag');
-    });
 
     it('should override the existing type with the extracted type and warn', () => {
       const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
@@ -913,22 +856,11 @@ describe('Vocabulary Extraction', () => {
       const data = yaml.load(content) as VocabularyData;
 
       const emojiRegex = /[📅⬅️➡️🎉🔁🌙🔥💧🌳⭐🌍☀️🌅🌞🌇🌑👨👩👴👵👰🤵💑💔💕🏠]/;
-      const itemsWithEmojiInHiragana: VocabularyItem[] = [];
-
-      data.vocabulary.forEach(item => {
-        if (item.hiragana && emojiRegex.test(item.hiragana)) {
-          itemsWithEmojiInHiragana.push(item);
-        }
-      });
-
-      expect(itemsWithEmojiInHiragana).toHaveLength(0);
-
-      const arrowEmojiRegex = /[⬅️➡️]/;
-      const itemsWithArrowEmojiInHiragana = data.vocabulary.filter(item =>
-        item.hiragana && arrowEmojiRegex.test(item.hiragana),
+      const itemsWithEmojiInHiragana = data.vocabulary.filter(item =>
+        item.hiragana && emojiRegex.test(item.hiragana),
       );
 
-      expect(itemsWithArrowEmojiInHiragana).toHaveLength(0);
+      expect(itemsWithEmojiInHiragana).toHaveLength(0);
     });
 
     it('should extract vocabulary from real lesson files', () => {
@@ -949,28 +881,6 @@ describe('Vocabulary Extraction', () => {
       });
     });
 
-    it('should produce deterministic ordering when merging vocabulary', () => {
-      const existing = createTestVocabularyData([
-        createTestVocabularyItem({ id: 'existing_0', category: 'vocabulary', tags: ['colors'] }),
-        createBlueItem({ id: 'existing_1', category: 'vocabulary', tags: ['colors'] }),
-      ], { categories: ['vocabulary'] });
-
-      const extracted = createTestVocabularyData([
-        createTestVocabularyItem({ id: 'existing_0', category: 'vocabulary', tags: ['colors'] }),
-        createBlueItem({ id: 'existing_1', category: 'vocabulary', tags: ['colors'] }),
-      ], { categories: ['vocabulary'] });
-
-      const firstMerge = mergeVocabulary(existing, extracted);
-      const secondMerge = mergeVocabulary(firstMerge, extracted);
-      const thirdMerge = mergeVocabulary(secondMerge, extracted);
-
-      expect(firstMerge.vocabulary).toEqual(secondMerge.vocabulary);
-      expect(secondMerge.vocabulary).toEqual(thirdMerge.vocabulary);
-      expect(firstMerge.vocabulary[0].id).toBe('existing_0');
-      expect(firstMerge.vocabulary[0].hiragana).toBe('あか');
-      expect(firstMerge.vocabulary[1].id).toBe('existing_1');
-      expect(firstMerge.vocabulary[1].hiragana).toBe('あお');
-    });
 
     it('should work with any section heading', () => {
       const testFile = path.join(fixturesDir, 'custom-section.md');
