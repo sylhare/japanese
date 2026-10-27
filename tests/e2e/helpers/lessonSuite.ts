@@ -121,7 +121,7 @@ export function runLessonSuite(cfg: LessonSuiteConfig): void {
 
         for (const sub of subLessons) {
           test(`should navigate to ${sub.name} from landing page`, async ({ page }) => {
-            await clickAndVerify(page, `a[class*="lessonCard"][href*="${sub.path}"]`, sub.heading);
+            await clickAndVerify(page, `a[class*="lessonCard"][href*="${basePath}/${sub.path}"]`, sub.heading);
           });
         }
 
