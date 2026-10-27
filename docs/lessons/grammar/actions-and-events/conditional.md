@@ -34,13 +34,13 @@ Use **と** to express that when clause A happens, clause B naturally, automatic
 
 ### Formation
 
-| Type | Formation | Example |
-|------|-----------|---------|
-| Verb | [dictionary form] + と | いく → いくと |
-| い-Adjective | [い-adjective] + と | やすい → やすいと |
-| な-Adjective | [な-adjective] + **だ** + と | しずかだ → しずかだと |
-| Noun | [noun] + **だ** + と | あめだ → あめだと |
-| Negative | [plain negative] + と | いかない → いかないと |
+| Usecase | Formation |
+|------|-----------|
+| Verb | [dictionary form] + と |
+| い-Adjective | [い-adjective] + と |
+| な-Adjective | [な-adjective] + **だ** + と |
+| Noun | [noun] + **だ** + と |
+| Negative | [plain negative] + と |
 
 :::caution No commands, requests, or intentions with と
 Because **と** expresses an automatic, natural result beyond the speaker's control, clause B **cannot** be a request, command, suggestion, or expression of personal intention (e.g. 〜てください, 〜ましょう, 〜たい).
@@ -71,6 +71,17 @@ Because **と** expresses an automatic, natural result beyond the speaker's cont
 - みぎに まがると、えきが あります。 — If you turn right, there's a station.
   - *migi ni magaru to, eki ga arimasu.*
 
+**Adjectives, nouns, and negatives:**
+
+- やすい と、たくさん かいます。 — If it is cheap, I buy a lot.
+  - *yasui to, takusan kaimasu.*
+- しずかだ と、よく ねむれます。 — When it is quiet, I can sleep well.
+  - *shizuka da to, yoku nemuremasu.*
+- あめだ と、みち が こみます。 — When it rains, the roads get crowded.
+  - *ame da to, michi ga komimasu.*
+- はやく いかない と、ちこく します。 — If I don't go quickly, I'll be late.
+  - *hayaku ikanai to, chikoku shimasu.*
+
 
 ## Pattern 2: たら (Specific & Hypothetical Situations)
 
@@ -82,13 +93,13 @@ Use **たら** for specific, one-time situations — things that might happen, c
 
 ### Formation
 
-| Type | Formation | Example |
-|------|-----------|---------|
-| Verb | [た-form] + ら | いった → いったら |
-| い-Adjective | [〜かった] + ら | たかかった → たかかったら |
-| な-Adjective | [〜だった] + ら | しずかだった → しずかだったら |
-| Noun | [noun + だった] + ら | あめだった → あめだったら |
-| Negative | [〜なかった] + ら | いかなかった → いかなかったら |
+| Usecase | Formation |
+|------|-----------|
+| Verb | [た-form] + ら |
+| い-Adjective | [〜かった] + ら |
+| な-Adjective | [〜だった] + ら |
+| Noun | [noun + だった] + ら |
+| Negative | [〜なかった] + ら |
 
 :::tip Formation Shortcut
 If you know the [た-form](/docs/lessons/conjugation/past/ta-form), just add **ら**. That's all!
@@ -124,6 +135,15 @@ If you know the [た-form](/docs/lessons/conjugation/past/ta-form), just add **�
 - つかれたら、やすんだ ほうが いい。 — If you're tired, you should rest.
   - *tsukaretara, yasunda hou ga ii.*
 
+**Adjectives and nouns:**
+
+- たかかったら、かいません。 — If it's expensive, I won't buy it.
+  - *takakattara, kaimasen.*
+- しずか だったら、ここで べんきょうします。 — If it's quiet, I'll study here.
+  - *shizuka dattara, koko de benkyou shimasu.*
+- あめ だったら、いきません。 — If it rains (if it's rain), I won't go.
+  - *ame dattara, ikimasen.*
+
 
 ## Pattern 3: ば (General & Logical Conditions)
 
@@ -135,14 +155,14 @@ Use **ば** for general conditions, logical results, and hypotheticals — "if A
 
 ### Formation
 
-| Type | Formation | Example |
-|------|-----------|---------|
-| Group 1 Verbs (Godan) | final *-u* → *-eba* | のむ → のめば |
-| Group 2 Verbs (Ichidan) | drop る, add れば | たべる → たべれば |
-| Irregular Verbs | する → すれば / くる → くれば | する → すれば |
-| い-Adjective | drop い, add ければ | やすい → やすければ |
-| な-Adjective / Noun | add なら(ば) or であれば | しずか → しずかなら(ば) / であれば |
-| Negative | ない → なければ | いかない → いかなければ |
+| Usecase | Formation |
+|------|-----------|
+| Group 1 Verbs (Godan) | final *-u* → *-eba* |
+| Group 2 Verbs (Ichidan) | drop る, add れば |
+| Irregular Verbs | する → すれば / くる → くれば |
+| い-Adjective | drop い, add ければ |
+| な-Adjective / Noun | add なら(ば) or であれば |
+| Negative | ない → なければ |
 
 :::tip いい is irregular
 The adjective **いい** (good) becomes **よければ**, not ~~いければ~~ — it uses its original stem **よい**.
@@ -158,6 +178,8 @@ The adjective **いい** (good) becomes **よければ**, not ~~いければ~~ �
   - *renshuu sureba, jouzu ni narimasu.*
 - じかんが なければ、いかなくても いいです。 — If you don't have time, you don't have to go.
   - *jikan ga nakereba, ikanakute mo ii desu.*
+- しずかなら、べんきょう できます。 — If it's quiet, I can study.
+  - *shizuka nara, benkyou dekimasu.*
 
 :::tip 〜ば〜ほど — "the more… the more"
 Repeat the verb with **ほど** to show that as one thing increases, so does another:
@@ -182,13 +204,13 @@ Use **なら** when the condition is based on **context** — something the othe
 
 ### Formation
 
-| Type | Formation | Example |
-|------|-----------|---------|
-| Verb | [plain form] + なら | いく → いくなら |
-| い-Adjective | [い-adjective] + なら | やすい → やすいなら |
-| な-Adjective | [stem] + なら | ひま → ひまなら |
-| Noun | [noun] + なら | ビール → ビールなら |
-| Negative | [plain negative] + なら | いかない → いかないなら |
+| Usecase | Formation |
+|------|-----------|
+| Verb | [plain form] + なら |
+| い-Adjective | [い-adjective] + なら |
+| な-Adjective | [stem] + なら |
+| Noun | [noun] + なら |
+| Negative | [plain negative] + なら |
 
 ### Examples
 
@@ -198,6 +220,12 @@ Use **なら** when the condition is based on **context** — something the othe
   - *anata ga iku nara, watashi mo ikimasu.*
 - ビールなら、れいぞうこに あります。 — If it's beer (you want), there's some in the fridge.
   - *biiru nara, reizouko ni arimasu.*
+- やすいなら、かいたいです。 — If it's cheap, I want to buy it.
+  - *yasui nara, kaitai desu.*
+- ひまなら、いっしょに おちゃ を しませんか。 — If you're free, won't you have tea with me?
+  - *hima nara, issho ni o-cha o shimasen ka.*
+- いかないなら、わたしも いきません。 — If you're not going, I won't go either.
+  - *ikanai nara, watashi mo ikimasen.*
 
 :::info なら can put B before A in time
 Unlike と / たら / ば — where A always happens first — with **なら** the main action in clause B can happen **before** clause A:

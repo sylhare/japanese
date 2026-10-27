@@ -14,16 +14,16 @@ Learn how to compare things in Japanese using **ほう が** (more), **より** 
 
 | Hiragana | Romaji | English | Type |
 |----------|--------|---------|------|
-| A の ほう が B より [adj] | no hou ga ... yori | A is more [adj] than B | expression |
+| [A] の ほう が [B] より ... | [A] no hou ga [B] yori ... | [A] is more ... than [B] | expression |
 | より | yori | than / compared to | particle |
-| A は B ほど [adj] ない | hodo ... nai | A is not as [adj] as B | expression |
+| [A] は [B] ほど ... ない | [A] wa [B] hodo ... nai | [A] is not as ... as [B] | expression |
 | どちら / どっち | dochira / docchi | which one (of two) | pronoun |
 | いちばん | ichiban | the most / number one | adverb |
 
 :::tip When to Use Which? ほう が vs より
-- **〜の ほう が** marks the **winner / superior option** ("the side of A").
-- **〜より** marks the **comparison benchmark** ("compared to B").
-- Word order is flexible: **A の ほう が B より たかい** and **B より A の ほう が たかい** have the identical meaning ("A is more expensive than B").
+- **〜の ほう が** marks the **winner / superior option** ("the side of [A]").
+- **〜より** marks the **comparison benchmark** ("compared to [B]").
+- Word order is flexible: **[A] の ほう が [B] より たかい** and **[B] より [A] の ほう が たかい** have the identical meaning ("[A] is more expensive than [B]").
 :::
 
 :::note Famous Proverb
@@ -32,16 +32,17 @@ Learn how to compare things in Japanese using **ほう が** (more), **より** 
 - **Meaning:** Practical substance 🍡 is more important than mere appearance 🌸.
 :::
 
-## Pattern 1: Direct Comparison (A の ほう が B より ...)
+## Pattern 1: Direct Comparison ([A] の ほう が [B] より ...)
 
-**A の ほう が B より [Adjective] です**
+**[A] の ほう が [B] より ... です**
 
-**Meaning:** "A is more [adjective] than B"
+**Meaning:** "[A] is more ... than [B]"
 
-| Type | Formation |
+| Usecase | Formation |
 |------|-----------|
-| Noun Comparison | [noun A] の ほう が [noun B] より [adjective] |
-| Verb Comparison | [verb plain A] ほう が [verb plain B] より [adjective] |
+| い-Adj Comparison | [noun A] の ほう が [noun B] より [い-adj] (です) |
+| な-Adj Comparison | [noun A] の ほう が [noun B] より [な-adj] です |
+| Verb Comparison | [verb plain A] ほう が [verb plain B] より [adj / verb] |
 
 ### Examples
 
@@ -57,23 +58,24 @@ Learn how to compare things in Japanese using **ほう が** (more), **より** 
   - *aruku hou ga basu ni noru yori kenkou ni ii desu.*
 
 :::tip Omitting the comparison baseline
-When the context is obvious, you can omit **B より**:
+When the context is obvious, you can omit **[B] より**:
 - コーヒー の ほう が おいしい です。 — Coffee is more delicious (I prefer coffee).
   - *koohii no hou ga oishii desu.*
 :::
 
-## Pattern 2: Negative Comparison (A は B ほど ... ない)
+## Pattern 2: Negative Comparison ([A] は [B] ほど ... ない)
 
-**A は B ほど [Adjective Negative]**
+**[A] は [B] ほど ... ない**
 
-**Meaning:** "A is not as [adjective] as B"
+**Meaning:** "[A] is not as ... as [B]"
 
 To express that something falls short of a benchmark, use **ほど** paired with a **negative predicate**.
 
-| Type | Formation |
+| Usecase | Formation |
 |------|-----------|
-| い-Adj Negative | [noun A] は [noun B] ほど [い-adj くない] |
-| な-Adj Negative | [noun A] は [noun B] ほど [な-adj ではない / じゃない] |
+| い-Adj Negative | [noun A] は [noun B] ほど [い-adj くない] (です) |
+| な-Adj Negative | [noun A] は [noun B] ほど [な-adj ではない / じゃない] (です) |
+| Verb Negative | [noun A] は [noun B] ほど [verb negative] |
 
 ### Examples
 
@@ -92,18 +94,18 @@ To express that something falls short of a benchmark, use **ほど** paired with
 
 Expressing the exact same relationship from both perspectives:
 
-**Using より (Affirmative — A is more than B):**
+**Using より (Affirmative — [A] is more than [B]):**
 - とうきょう の ほう が おおさか より おおきい です。 — Tokyo is bigger than Osaka.
   - *toukyou no hou ga oosaka yori ookii desu.*
 
-**Using ほど ... ない (Negative — B is not as much as A):**
+**Using ほど ... ない (Negative — [B] is not as much as [A]):**
 - おおさか は とうきょう ほど おおきくない です。 — Osaka is not as big as Tokyo.
   - *oosaka wa toukyou hodo ookikunai desu.*
 
 ## Quick Comparison
 
-**A の ほう が B より [adj]** — Emphasizes that A exceeds B (affirmative focus on the superior choice).
-**A は B ほど [adj] ない** — Emphasizes that A does not reach B's level (negative benchmark comparison).
+**[A] の ほう が [B] より ...** — Emphasizes that [A] exceeds [B] (affirmative focus on the superior choice).
+**[A] は [B] ほど ... ない** — Emphasizes that [A] does not reach [B]'s level (negative benchmark comparison).
 
 **Key difference:** **より** takes an affirmative adjective/verb, while **ほど** in comparisons always requires a negative predicate (**ない / ありません**).
 
@@ -113,7 +115,7 @@ Expressing the exact same relationship from both perspectives:
 
 Use **どちら** (polite) or **どっち** (casual) to ask "which one":
 
-**A と B と どちら の ほう が [adjective] です か？**
+**[A] と [B] と どちら の ほう が ... です か？**
 
 - コーヒー と おちゃ と どちら の ほう が すき です か？ — Which do you like better, coffee or tea?
   - *koohii to ocha to dochira no hou ga suki desu ka?*
@@ -124,7 +126,7 @@ Use **どちら** (polite) or **どっち** (casual) to ask "which one":
 
 Use **いちばん** ("the most" / "number one") to select the top item:
 
-**[Category] の なか で [Question Word] が いちばん [adjective] です か？**
+**[category] の なか で [question word] が いちばん ... です か？**
 
 - この みっつ の なか で どれ が いちばん いい です か？ — Which one is the best among these three?
   - *kono mittsu no naka de dore ga ichiban ii desu ka?*

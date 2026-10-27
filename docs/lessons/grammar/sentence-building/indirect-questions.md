@@ -30,7 +30,7 @@ Learn how to tuck a question inside a larger sentence — such as *"Do you know 
 
 The embedded clause uses the **short/plain form**. Politeness (です / ます) belongs only to the final verb of the whole sentence.
 
-| Type | Formation |
+| Usecase | Formation |
 |------|-----------|
 | Verb | [verb plain form] + か |
 | い-Adj | [い-adjective plain form] + か |
@@ -70,7 +70,7 @@ When embedding a sentence, the topic particle **は** of the original question s
 
 When embedding a question that has a yes-or-no answer (and no question word), attach **かどうか** ("or not") directly to the plain form.
 
-| Type | Formation |
+| Usecase | Formation |
 |------|-----------|
 | Verb | [verb plain form] + かどうか |
 | い-Adj | [い-adjective plain form] + かどうか |

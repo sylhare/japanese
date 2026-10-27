@@ -32,7 +32,7 @@ Learn how to express [concept] using **[form 1]** and **[form 2]**.
 
 <!-- Formation by word type — omit if all word types attach identically. -->
 
-| Type | Formation |
+| Usecase | Formation |
 |------|-----------|
 | Verb | [verb short form] + [pattern] |
 | い-Adj | [い-adjective] + [pattern] |

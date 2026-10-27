@@ -28,11 +28,11 @@ Learn how to describe how things look, seem, or appear using **そう** and **�
 
 ### Formation
 
-| Type | Formation | Example |
-|------|-----------|---------|
-| Verb | [verb stem] + そう | ふりそう (looks like it will rain) |
-| い-Adj | [い-adj without い] + そう | おいしそう (looks delicious) |
-| な-Adj | [な-adj without な] + そう | げんきそう (looks energetic / healthy) |
+| Usecase | Formation |
+|------|-----------|
+| Verb | [verb stem] + そう |
+| い-Adj | [い-adj without い] + そう |
+| な-Adj | [な-adj without な] + そう |
 
 - Attach to the **verb stem** (the ます stem) to express that an event looks imminent or about to happen.
 - Drop the final **い** from **い-adjectives** (e.g. おいしい → おいしそう).
@@ -72,10 +72,10 @@ Two adjectives form **そう** irregularly:
 
 To express that something does *not* look like a certain quality, make the adjective negative first before adding **そう**. Because the negative **ない** becomes **なさそう**, both い-adjectives and な-adjectives end in **〜なさそう**:
 
-| Type | Negative Formation | Example |
-|------|--------------------|---------|
-| い-Adj | [い-adj without い] + くなさそう | おいしくなさそう (doesn't look tasty) |
-| な-Adj | [な-adj] + じゃなさそう | げんき じゃなさそう (doesn't look healthy) |
+| Usecase | Negative Formation |
+|------|--------------------|
+| い-Adj | [い-adj without い] + くなさそう |
+| な-Adj | [な-adj] + じゃなさそう |
 
 - この りょうり は おいしくなさそう です。 — This dish doesn't look tasty.
   - *kono ryouri wa oishikunasasou desu.*
@@ -92,12 +92,12 @@ To express that something does *not* look like a certain quality, make the adjec
 
 ### Formation
 
-| Type | Formation | Example |
-|------|-----------|---------|
-| Verb | [plain form] + みたい | ふる みたい (seems like it will rain) |
-| い-Adj | [い-adj plain] + みたい | おいしい みたい (seems delicious) |
-| な-Adj | [な-adj stem] + みたい | げんき みたい (seems energetic) |
-| Noun | [noun] + みたい | がくせい みたい (looks like a student) |
+| Usecase | Formation |
+|------|-----------|
+| Verb | [plain form] + みたい |
+| い-Adj | [い-adj plain] + みたい |
+| な-Adj | [な-adj stem] + みたい |
+| Noun | [noun] + みたい |
 
 - Attach directly to the **plain form** of verbs and い-adjectives.
 - Attach directly to **nouns** and the stem of **な-adjectives** (drop だ: e.g. げんき みたい, がくせい みたい).
@@ -112,6 +112,8 @@ To express that something does *not* look like a certain quality, make the adjec
   - *kono ringo wa oishii mitai desu.*
 - たなかさん は いそがしい みたい です。 — Tanaka-san seems busy.
   - *tanaka-san wa isogashii mitai desu.*
+- あの ひと は げんき みたい です。 — That person seems energetic.
+  - *ano hito wa genki mitai desu.*
 - かれ は にほんじん みたい に にほんご を はなします。 — He speaks Japanese like a native Japanese person.
   - *kare wa nihonjin mitai ni nihongo o hanashimasu.*
 
@@ -119,17 +121,19 @@ To express that something does *not* look like a certain quality, make the adjec
 
 To form the negative, make the word or clause **before** みたい negative. **みたい です** itself does not change:
 
-| Type | Negative Formation | Example |
-|------|--------------------|---------|
-| Verb | [plain negative] + みたい | ふらない みたい (seems like it won't rain) |
-| い-Adj | [〜くない] + みたい | おいしくない みたい (doesn't seem delicious) |
-| な-Adj | [〜じゃない] + みたい | げんき じゃない みたい (doesn't seem energetic) |
-| Noun | [noun] + じゃない + みたい | がくせい じゃない みたい (doesn't seem like a student) |
+| Usecase | Negative Formation |
+|------|--------------------|
+| Verb | [plain negative] + みたい |
+| い-Adj | [〜くない] + みたい |
+| な-Adj | [〜じゃない] + みたい |
+| Noun | [noun] + じゃない + みたい |
 
 - あめ が ふらない みたい です。 — It looks like it won't rain.
   - *ame ga furanai mitai desu.*
 - あの ひと は がくせい じゃない みたい です。 — That person doesn't seem to be a student.
   - *ano hito wa gakusei janai mitai desu.*
+- かれ は げんき じゃない みたい です。 — He doesn't seem energetic.
+  - *kare wa genki janai mitai desu.*
 - この りょうり は おいしくない みたい です。 — This food doesn't seem delicious.
   - *kono ryouri wa oishikunai mitai desu.*
 

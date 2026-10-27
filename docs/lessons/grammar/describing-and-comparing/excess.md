@@ -13,18 +13,18 @@ Learn how to express that an action or quality is **too much**, **excessive**, o
 | Hiragana | Romaji | English | Type |
 |----------|--------|---------|------|
 | [verb stem] + すぎる | [verb stem] sugiru | do too much / overdo | expression |
-| [い-adj stem] + すぎる | [i-adj stem] sugiru | too [adjective] | expression |
-| [な-adj stem] + すぎる | [na-adj stem] sugiru | too [adjective] | expression |
+| [い-adj stem] + すぎる | [stem] sugiru | too ... (excessive quality) | expression |
+| [な-adj stem] + すぎる | [stem] sugiru | too ... (excessive quality) | expression |
 
 ## Pattern: 〜すぎる
 
 **[stem] + すぎる**
 
-**Meaning:** "Too much", "too [adjective]", "over-"
+**Meaning:** "Too much", "too ...", "over-"
 
 Attach **すぎる** directly to the verb stem (the form before ます) or the adjective base:
 
-| Type | Formation |
+| Usecase | Formation |
 |------|-----------|
 | Verb | [verb ますstem] + すぎる |
 | い-Adj | [い-adjective without い] + すぎる |
@@ -101,7 +101,7 @@ Sentences:
 
 To express that something is **not too excessive**, or to describe past excess:
 
-| Form | Verb (たべる) | い-Adj (たかい) | な-Adj (しずか) |
+| Usecase | Verb (たべる) | い-Adj (たかい) | な-Adj (しずか) |
 |------|---------------|-----------------|-----------------|
 | Present Affirmative | たべすぎる | たかすぎる | しずかすぎる |
 | Present Negative | たべすぎない | たかすぎない | しずかすぎない |

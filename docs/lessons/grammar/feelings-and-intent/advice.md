@@ -30,7 +30,7 @@ Learn how to give advice and recommendations using **ほう が いい** ("it's 
 
 Attach **ほう が いい** to the past plain [ta-form](/docs/lessons/conjugation/past/ta-form) of the verb. Literally, it means "the direction/choice of having done [X] is good."
 
-| Type | Formation |
+| Usecase | Formation |
 |------|-----------|
 | Verb (Affirmative) | [verb た-form] + ほう が いい (です) |
 | Noun | [noun] + の + ほう が いい (です) |
@@ -64,7 +64,7 @@ Because **〜た ほう が いい** implies that the speaker knows what is best
 
 To advise *against* doing something, attach **ほう が いい** directly to the present negative [nai-form](/docs/lessons/conjugation/present/nai-form). (Do NOT use the past negative *〜なかった*).
 
-| Type | Formation |
+| Usecase | Formation |
 |------|-----------|
 | Verb (Negative) | [verb ない-form] + ほう が いい (です) |
 

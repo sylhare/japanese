@@ -1,5 +1,4 @@
 ---
-sidebar_position: 1
 title: Timing Actions - てから / あいだ
 description: Learn how to express actions done after another using てから, and actions happening during a span using 間 / 間に
 tags: [grammar, te-form, sequence, actions, during]
@@ -85,7 +84,7 @@ When used with time expressions, てから can mean "since":
 
 While **てから** connects actions in sequence ("after"), **間 (あいだ)** expresses that something happens *within* a span of time — "during" or "while". The span can be a noun (with の), a duration, or an ongoing action.
 
-| Type | Formation |
+| Usecase | Formation |
 |------|-----------|
 | Noun | [noun] + の + 間(に) |
 | Duration | [duration] + 間(に) |

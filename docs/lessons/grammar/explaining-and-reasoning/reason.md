@@ -33,7 +33,7 @@ Learn how to express reasons and causes using **ので** and **から**.
 
 ### Formation
 
-| Form | Pattern |
+| Usecase | Pattern |
 |------|---------|
 | Verb | [verb short form] + ので |
 | い-Adjective | [い-adjective] + ので |
@@ -67,7 +67,7 @@ Add **な** before **ので** with な-adjectives and nouns. Do **not** use な 
 
 ### Formation
 
-| Form | Pattern |
+| Usecase | Pattern |
 |------|---------|
 | Verb | [verb short form] + から |
 | い-Adjective | [い-adjective] + から |
@@ -92,7 +92,7 @@ The final clause states the conclusion or consequence.
 
 ### Formation
 
-| Form | Pattern |
+| Usecase | Pattern |
 |------|---------|
 | Verb | [verb short form] + し |
 | い-Adjective | [い-adjective] + し |

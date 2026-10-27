@@ -27,7 +27,7 @@ Learn how to say you are doing two things **at the same time** — "while doing 
 
 **Meaning:** "While doing [action 1], (do) [action 2]"
 
-| Type | Formation |
+| Usecase | Formation |
 |------|-----------|
 | Verb | [verb ますstem] + ながら |
 

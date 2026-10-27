@@ -31,7 +31,7 @@ Learn how to express obligation and necessity — saying you "must" or "have to"
 
 This pattern builds on the negative [nai-form](/docs/lessons/conjugation/present/nai-form) of the verb: drop the final **い** and attach **ければ いけない**.
 
-| Type | Formation |
+| Usecase | Formation |
 |------|-----------|
 | Verb | [verb ない without い] + なければ いけない / いけません |
 | い-Adj | [い-adj くない without い] + ければ いけない |
@@ -74,7 +74,7 @@ When you cannot fulfill an obligation or invitation, Japanese speakers avoid blu
 
 **Meaning:** "Must do (by rule/duty)", "have an obligation to"
 
-| Type | Formation |
+| Usecase | Formation |
 |------|-----------|
 | Verb | [verb ない without い] + なければ ならない / なりません |
 | い-Adj | [い-adj くない without い] + ければ ならない |

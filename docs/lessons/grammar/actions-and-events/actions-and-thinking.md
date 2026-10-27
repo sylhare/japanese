@@ -27,17 +27,17 @@ Learn three essential sentence patterns: describing ongoing actions and states w
 
 ## Pattern 1: Ongoing Actions and States (〜ている)
 
-**[Verb て-form] + いる / います**
+**[Verb て-form] + いる**
 
 **Meaning:** "Currently doing [verb]", "in the state of having done [verb]"
 
-Attach **いる** to the verb's [て-form](/docs/lessons/conjugation/present/te-form). Depending on the verb type, **ている** conveys either an ongoing action (continuous) or an ongoing result of a past change (resulting state).
-
-| Type | Formation |
+| Usecase | Formation |
 |------|-----------|
 | Verb (Affirmative) | [verb て-form] + いる / います |
 | Verb (Negative) | [verb て-form] + いない / いません |
 | Verb (Past) | [verb て-form] + いた / いました |
+
+Attach **いる** to the verb's [て-form](/docs/lessons/conjugation/present/te-form). Depending on the verb type, **ている** conveys either an ongoing action (continuous) or an ongoing result of a past change (resulting state).
 
 ### Examples
 
@@ -70,14 +70,14 @@ In casual conversation, the **い** in **ている** is frequently dropped:
 
 **Meaning:** "I think that...", "In my opinion..."
 
-Attach the quotation particle **と** followed by **おもう** (or polite **おもいます**) to a short/plain-form sentence.
-
-| Type | Formation |
+| Usecase | Formation |
 |------|-----------|
 | Verb | [verb plain form] + と おもう |
 | い-Adj | [い-adjective plain form] + と おもう |
 | な-Adj | [な-adjective stem] + **だ** + と おもう |
 | Noun | [noun] + **だ** + と おもう |
+
+Attach the quotation particle **と** followed by **おもう** (or polite **おもいます**) to a short/plain-form sentence.
 
 :::caution Don't forget だ for Nouns and な-Adjectives
 With verbs and い-adjectives, attach **と おもう** directly to the dictionary form. But with **nouns** and **な-adjectives**, you must include **だ**:
@@ -110,7 +110,7 @@ When describing what someone else is thinking, use **〜と おもっている /
 
 Attach **みる** (which conjugates like a normal Ichidan verb) to the [て-form](/docs/lessons/conjugation/present/te-form). Unlike "trying hard" (がんばる), **てみる** means sampling or experimenting.
 
-| Type | Formation |
+| Usecase | Formation |
 |------|-----------|
 | Present Polite | [verb て-form] + みます |
 | Casual / Imperative | [verb て-form] + みて (ください) |
@@ -129,6 +129,8 @@ Attach **みる** (which conjugates like a normal Ichidan verb) to the [て-form
   - *mou ichido kangaetemimasu.*
 - ふじさん に のぼってみた こと が あります。 — I have tried climbing Mt. Fuji before.
   - *fujisan ni nobottemita koto ga arimasu.*
+- この ゲーム を してみよう。 — Let's try playing this game.
+  - *kono geemu o shite miyou.*
 
 <NextSteps items={[
   {
