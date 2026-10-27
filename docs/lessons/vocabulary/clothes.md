@@ -1,5 +1,4 @@
 ---
-sidebar_position: 6
 title: 👕 Clothes and Wearing
 description: Learn basic clothing vocabulary and which verb to use for "wear"
 tags: [vocabulary, clothes, clothing, wear]

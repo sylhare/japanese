@@ -1,5 +1,4 @@
 ---
-sidebar_position: 12
 title: 🏫 School and Education
 description: Learn Japanese vocabulary for schools, the levels from kindergarten to university, students, and school life
 tags: [vocabulary, school, education, students, nouns]

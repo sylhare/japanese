@@ -1,5 +1,4 @@
 ---
-sidebar_position: 1
 title: 📖 Reading Numbers
 description: Learn how to read and group Japanese numbers
 tags: [vocabulary, numbers, counting, basic]

@@ -1,5 +1,4 @@
 ---
-sidebar_position: 11
 title: ✈️ Travel and Tourism
 description: Learn Japanese vocabulary for travel, nature, sightseeing, and outdoor activities
 tags: [vocabulary, travel, tourism, nature, sightseeing, nouns, verbs]
