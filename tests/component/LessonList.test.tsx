@@ -250,4 +250,60 @@ describe('LessonList Component', () => {
       });
     });
   });
+
+  describe('Alphabetical Ordering', () => {
+    it('renders items sorted alphabetically by title regardless of input order', () => {
+      const unorderedItems: LessonItem[] = [
+        { title: 'Zebra Lesson', description: 'Last alphabetically', to: './zebra' },
+        { title: 'Apple Lesson', description: 'First alphabetically', to: './apple' },
+        { title: 'Mango Lesson', description: 'Middle alphabetically', to: './mango' },
+      ];
+
+      const { container } = render(<LessonList items={unorderedItems} />);
+      const titles = container.querySelectorAll('h3');
+
+      expect(titles[0]).toHaveTextContent('Apple Lesson');
+      expect(titles[1]).toHaveTextContent('Mango Lesson');
+      expect(titles[2]).toHaveTextContent('Zebra Lesson');
+    });
+
+    it('does not mutate the original items array', () => {
+      const items: LessonItem[] = [
+        { title: 'Z Lesson', description: 'Z', to: './z' },
+        { title: 'A Lesson', description: 'A', to: './a' },
+      ];
+      const originalOrder = items.map(i => i.title);
+
+      render(<LessonList items={items} />);
+
+      expect(items.map(i => i.title)).toEqual(originalOrder);
+    });
+
+    it('renders a single item without error', () => {
+      const singleItem: LessonItem[] = [
+        { title: 'Only Lesson', description: 'Just one', to: './only' },
+      ];
+
+      render(<LessonList items={singleItem} />);
+
+      const titles = screen.getAllByRole('heading', { level: 3 });
+      expect(titles).toHaveLength(1);
+      expect(titles[0]).toHaveTextContent('Only Lesson');
+    });
+
+    it('handles items that are already in alphabetical order', () => {
+      const orderedItems: LessonItem[] = [
+        { title: 'Alpha', description: 'First', to: './alpha' },
+        { title: 'Beta', description: 'Second', to: './beta' },
+        { title: 'Gamma', description: 'Third', to: './gamma' },
+      ];
+
+      const { container } = render(<LessonList items={orderedItems} />);
+      const titles = container.querySelectorAll('h3');
+
+      expect(titles[0]).toHaveTextContent('Alpha');
+      expect(titles[1]).toHaveTextContent('Beta');
+      expect(titles[2]).toHaveTextContent('Gamma');
+    });
+  });
 });
