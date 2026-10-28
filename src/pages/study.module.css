@@ -145,6 +145,15 @@
   color: var(--ifm-color-primary);
 }
 
+.promptKanji:has(.promptTargetKanji) {
+  color: var(--ifm-color-emphasis-800);
+}
+
+.promptTargetKanji {
+  color: var(--ifm-color-primary);
+  font-weight: bold;
+}
+
 .promptType {
   display: inline-block;
   font-size: 0.8rem;
@@ -241,6 +250,17 @@
   font-weight: bold;
   color: var(--ifm-color-primary);
   margin-bottom: 0.25rem;
+}
+
+.detailReadingBreakdown {
+  font-size: 1.15rem;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.detailReadingBreakdown strong {
+  color: var(--ifm-color-primary);
 }
 
 .detailHiragana {

@@ -42,6 +42,8 @@ export default [
         document: 'readonly',
         HTMLElement: 'readonly',
         console: 'readonly',
+        URL: 'readonly',
+        URLSearchParams: 'readonly',
         // Node globals
         process: 'readonly',
         __dirname: 'readonly',

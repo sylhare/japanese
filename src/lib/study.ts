@@ -48,6 +48,7 @@ export interface Question {
   answer: string;
   /** Mapping of option text to the source item for "Why?" explanations. */
   optionItems?: Record<string, VocabularyItem>;
+  kanjiParts?: KanjiWordParts;
 }
 
 export interface StudyStats {
@@ -55,6 +56,13 @@ export interface StudyStats {
   correct: number;
   /** Items whose current streak has reached MASTER_STREAK consecutive correct answers. */
   mastered: number;
+}
+
+export interface KanjiWordParts {
+  prefix: string;
+  targetKanji: string;
+  okurigana: string;
+  targetReading: string;
 }
 
 /** Correct answers needed before a word with kanji is shown in kanji. */
@@ -80,9 +88,65 @@ export function baseScript(item: VocabularyItem): string {
   return item.hiragana || item.katakana || '';
 }
 
+const KANA_REGEX = /^[\u3040-\u309F\u30A0-\u30FF]$/;
+const KANJI_REGEX = /[\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF]/;
+
 /** Whether an item has kanji text. */
 export function hasKanji(item: VocabularyItem): boolean {
   return Boolean(item.kanji && item.kanji.trim().length > 0);
+}
+
+/**
+ * Splits a kanji word into its prefix kana, target kanji, okurigana and target reading.
+ */
+export function splitKanjiWord(kanji: string, reading: string): KanjiWordParts {
+  const cleanKanji = (kanji || '').replace(/[\s\u3000]+/g, '');
+  const cleanReading = (reading || '').replace(/[\s\u3000]+/g, '');
+
+  const fallback: KanjiWordParts = {
+    prefix: '',
+    targetKanji: cleanKanji,
+    okurigana: '',
+    targetReading: cleanReading,
+  };
+
+  if (!cleanKanji || !cleanReading || !KANJI_REGEX.test(cleanKanji)) {
+    return fallback;
+  }
+
+  let prefixLen = 0;
+  while (
+    prefixLen < cleanKanji.length &&
+    prefixLen < cleanReading.length &&
+    cleanKanji[prefixLen] === cleanReading[prefixLen] &&
+    KANA_REGEX.test(cleanKanji[prefixLen])
+  ) {
+    prefixLen++;
+  }
+
+  let okuriLen = 0;
+  while (
+    cleanKanji.length - 1 - okuriLen >= prefixLen &&
+    cleanReading.length - 1 - okuriLen >= prefixLen &&
+    cleanKanji[cleanKanji.length - 1 - okuriLen] === cleanReading[cleanReading.length - 1 - okuriLen] &&
+    KANA_REGEX.test(cleanKanji[cleanKanji.length - 1 - okuriLen])
+  ) {
+    okuriLen++;
+  }
+
+  const targetKanji = cleanKanji.slice(prefixLen, cleanKanji.length - okuriLen);
+  const targetReading = cleanReading.slice(prefixLen, cleanReading.length - okuriLen);
+
+  if (!targetKanji || !targetReading || !KANJI_REGEX.test(targetKanji)) {
+    return fallback;
+  }
+
+  return {
+    prefix: cleanKanji.slice(0, prefixLen),
+    targetKanji,
+    okurigana: cleanKanji.slice(cleanKanji.length - okuriLen),
+    targetReading,
+  };
 }
 
 /** An item can be studied only if it has a base reading, a meaning and a usable type. */
@@ -211,9 +275,8 @@ export function pickDistractors(
 
 /**
  * Pick `count` distractor items with hiragana readings different from `item`.
- * Candidates that share tags or the same type with `item` are prioritized (related);
- * remaining slots are filled with other candidates (randomized).
- * Hiragana readings are de-duplicated so the options are always distinct.
+ * Candidates are prioritized by stem / okurigana matching and type / tag relevance.
+ * Target readings are de-duplicated so the options are always distinct.
  */
 export function pickKanjiDistractors(
   item: VocabularyItem,
@@ -221,40 +284,79 @@ export function pickKanjiDistractors(
   count: number,
   rng: Rng,
 ): VocabularyItem[] {
-  const targetReading = baseScript(item);
-  const takenReadings = new Set([targetReading]);
+  const targetParts = splitKanjiWord(item.kanji || '', baseScript(item));
+  const takenReadings = new Set([targetParts.targetReading]);
   const itemTags = new Set(item.tags);
+  const itemHasOkuri = Boolean(targetParts.okurigana);
 
-  const eligible = pool.filter(
-    candidate =>
-      candidate.id !== item.id &&
-      Boolean(baseScript(candidate)) &&
-      baseScript(candidate) !== targetReading &&
-      !(item.kanji && candidate.kanji === item.kanji),
-  );
+  const eligible: { candidate: VocabularyItem; candParts: KanjiWordParts }[] = [];
+  for (const candidate of pool) {
+    if (!hasKanji(candidate)) {
+      continue;
+    }
+    if (candidate.id === item.id) {
+      continue;
+    }
+    if (item.kanji && candidate.kanji === item.kanji) {
+      continue;
+    }
 
-  const sameTag = eligible.filter(candidate => candidate.tags.some(tag => itemTags.has(tag)));
-  const sameTypeOnly = eligible.filter(
-    candidate => candidate.type === item.type && !candidate.tags.some(tag => itemTags.has(tag)),
-  );
-  const others = eligible.filter(
-    candidate => candidate.type !== item.type && !candidate.tags.some(tag => itemTags.has(tag)),
-  );
+    const candParts = splitKanjiWord(candidate.kanji || '', baseScript(candidate));
+    if (!candParts.targetReading || candParts.targetReading === targetParts.targetReading) {
+      continue;
+    }
+
+    eligible.push({ candidate, candParts });
+  }
+
+  const g1: { candidate: VocabularyItem; candParts: KanjiWordParts }[] = [];
+  const g2: { candidate: VocabularyItem; candParts: KanjiWordParts }[] = [];
+  const g3: { candidate: VocabularyItem; candParts: KanjiWordParts }[] = [];
+  const g4: { candidate: VocabularyItem; candParts: KanjiWordParts }[] = [];
+
+  for (const entry of eligible) {
+    const sameType = entry.candidate.type === item.type;
+    const candHasOkuri = Boolean(entry.candParts.okurigana);
+    const sharesTag = entry.candidate.tags.some(tag => itemTags.has(tag));
+
+    if (itemHasOkuri) {
+      if (sameType && candHasOkuri) {
+        g1.push(entry);
+      } else if (sameType && !candHasOkuri) {
+        g2.push(entry);
+      } else if (sharesTag) {
+        g3.push(entry);
+      } else {
+        g4.push(entry);
+      }
+    } else {
+      if (sameType && !candHasOkuri) {
+        g1.push(entry);
+      } else if (sameType && candHasOkuri) {
+        g2.push(entry);
+      } else if (sharesTag) {
+        g3.push(entry);
+      } else {
+        g4.push(entry);
+      }
+    }
+  }
 
   const ordered = [
-    ...shuffle(sameTag, rng),
-    ...shuffle(sameTypeOnly, rng),
-    ...shuffle(others, rng),
+    ...shuffle(g1, rng),
+    ...shuffle(g2, rng),
+    ...shuffle(g3, rng),
+    ...shuffle(g4, rng),
   ];
+
   const distractors: VocabularyItem[] = [];
-  for (const candidate of ordered) {
+  for (const entry of ordered) {
     if (distractors.length >= count) {
       break;
     }
-    const reading = baseScript(candidate);
-    if (!takenReadings.has(reading)) {
-      takenReadings.add(reading);
-      distractors.push(candidate);
+    if (!takenReadings.has(entry.candParts.targetReading)) {
+      takenReadings.add(entry.candParts.targetReading);
+      distractors.push(entry.candidate);
     }
   }
   return distractors;
@@ -270,24 +372,32 @@ export function buildQuestion(
   const effectiveMode: StudyMode = studyMode ?? 'meaning';
 
   if (effectiveMode === 'kanji') {
+    const kanjiParts = splitKanjiWord(item.kanji || '', baseScript(item));
+    const prompt = kanjiParts.targetKanji
+      ? `${kanjiParts.prefix}【${kanjiParts.targetKanji}】${kanjiParts.okurigana}`
+      : item.kanji || baseScript(item);
+    const answer = kanjiParts.targetReading;
     const distractors = pickKanjiDistractors(item, pool, OPTION_COUNT - 1, rng);
-    const answer = baseScript(item);
-    const options = shuffle([answer, ...distractors.map(d => baseScript(d))], rng);
+    const distractorReadings = distractors.map(
+      d => splitKanjiWord(d.kanji || '', baseScript(d)).targetReading,
+    );
+    const options = shuffle([answer, ...distractorReadings], rng);
     const optionItems: Record<string, VocabularyItem> = {
       [answer]: item,
     };
-    for (const d of distractors) {
-      optionItems[baseScript(d)] = d;
+    for (let i = 0; i < distractors.length; i++) {
+      optionItems[distractorReadings[i]] = distractors[i];
     }
     return {
       item,
       studyMode: 'kanji',
       promptMode: 'kanji',
-      prompt: item.kanji || baseScript(item),
+      prompt,
       promptLabel: 'How do you read this kanji?',
       options,
       answer,
       optionItems,
+      kanjiParts,
     };
   }
 

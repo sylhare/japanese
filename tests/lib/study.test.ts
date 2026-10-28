@@ -26,6 +26,7 @@ import {
   saveSettings,
   selectItem,
   shuffle,
+  splitKanjiWord,
   studyableItems,
 } from '../../src/lib/study';
 import type { Rng, StudyProgress, StudyStorage } from '../../src/lib/study';
@@ -278,7 +279,13 @@ describe('pickKanjiDistractors', () => {
   it('picks distinct readings and prioritizes related items', () => {
     const distractors = pickKanjiDistractors(pool[0], pool, 2, seqRng([0]));
     expect(distractors).toHaveLength(2);
-    expect(distractors.map(d => d.hiragana).sort()).toEqual(['あお', 'みどり']);
+    const targetReadings = distractors.map(d => splitKanjiWord(d.kanji || '', baseScript(d)).targetReading);
+    expect(new Set(targetReadings).size).toBe(2);
+    expect(targetReadings).not.toContain('あか');
+    distractors.forEach(d => {
+      expect(d.type).toBe('noun');
+      expect(splitKanjiWord(d.kanji || '', baseScript(d)).okurigana).toBe('');
+    });
   });
 
   it('excludes candidates with identical reading or identical kanji', () => {
@@ -287,6 +294,38 @@ describe('pickKanjiDistractors', () => {
     const other = item({ id: 'eat', hiragana: 'たべる', kanji: '食べる', meaning: 'to eat', type: 'verb' });
     const distractors = pickKanjiDistractors(kiru, [kiru, wear, other], 2, seqRng([0]));
     expect(distractors.map(d => d.hiragana)).toEqual(['たべる']);
+  });
+
+  it('yields stems for words like 食べる and prioritizes verbs with okurigana', () => {
+    const taberu = item({ id: 'eat', hiragana: 'たべる', kanji: '食べる', meaning: 'to eat', type: 'verb', tags: ['actions'] });
+    const nomu = item({ id: 'drink', hiragana: 'のむ', kanji: '飲む', meaning: 'to drink', type: 'verb', tags: ['actions'] });
+    const iku = item({ id: 'go', hiragana: 'いく', kanji: '行く', meaning: 'to go', type: 'verb', tags: ['actions'] });
+    const hanasu = item({ id: 'speak', hiragana: 'はなす', kanji: '話す', meaning: 'to speak', type: 'verb', tags: ['communication'] });
+    const hon = item({ id: 'book', hiragana: 'ほん', kanji: '本', meaning: 'book', type: 'noun', tags: ['education'] });
+
+    const distractors = pickKanjiDistractors(taberu, [taberu, nomu, iku, hanasu, hon], 3, seqRng([0]));
+    expect(distractors).toHaveLength(3);
+    const stems = distractors.map(d => splitKanjiWord(d.kanji || '', baseScript(d)).targetReading);
+    expect(new Set(stems).size).toBe(3);
+    expect(stems).not.toContain('た');
+    distractors.forEach(d => {
+      expect(d.type).toBe('verb');
+      const parts = splitKanjiWord(d.kanji || '', baseScript(d));
+      expect(parts.okurigana).not.toBe('');
+    });
+  });
+
+  it('ensures targetReading uniqueness when multiple candidates share a stem reading', () => {
+    const taberu = item({ id: 'eat', hiragana: 'たべる', kanji: '食べる', meaning: 'to eat', type: 'verb' });
+    const kiru = item({ id: 'cut', hiragana: 'きる', kanji: '切る', meaning: 'to cut', type: 'verb' });
+    const wear = item({ id: 'wear', hiragana: 'きる', kanji: '着る', meaning: 'to wear', type: 'verb' });
+    const nomu = item({ id: 'drink', hiragana: 'のむ', kanji: '飲む', meaning: 'to drink', type: 'verb' });
+
+    const distractors = pickKanjiDistractors(taberu, [taberu, kiru, wear, nomu], 3, seqRng([0]));
+    expect(distractors).toHaveLength(2);
+    const stems = distractors.map(d => splitKanjiWord(d.kanji || '', baseScript(d)).targetReading);
+    expect(new Set(stems).size).toBe(2);
+    expect(stems.sort()).toEqual(['き', 'の']);
   });
 });
 
@@ -316,11 +355,43 @@ describe('buildQuestion', () => {
   it('builds a kanji question with kanji prompt and hiragana options', () => {
     const question = buildQuestion(pool[0], pool, {}, seqRng([0]), 'kanji');
     expect(question.studyMode).toBe('kanji');
-    expect(question.prompt).toBe('赤');
+    expect(question.prompt).toBe('【赤】');
     expect(question.promptLabel).toBe('How do you read this kanji?');
     expect(question.answer).toBe('あか');
+    expect(question.options).toHaveLength(OPTION_COUNT);
     expect(question.options).toContain('あか');
+    expect(new Set(question.options).size).toBe(OPTION_COUNT);
     expect(question.optionItems?.['あか']?.meaning).toBe('red');
+    expect(question.kanjiParts).toEqual({
+      prefix: '',
+      targetKanji: '赤',
+      okurigana: '',
+      targetReading: 'あか',
+    });
+  });
+
+  it('builds a kanji question for words with okurigana (e.g. 食べる) with bracketed prompt and stem options', () => {
+    const verbPool = [
+      item({ id: 'v1', hiragana: 'たべる', kanji: '食べる', meaning: 'to eat', type: 'verb' }),
+      item({ id: 'v2', hiragana: 'のむ', kanji: '飲む', meaning: 'to drink', type: 'verb' }),
+      item({ id: 'v3', hiragana: 'いく', kanji: '行く', meaning: 'to go', type: 'verb' }),
+      item({ id: 'v4', hiragana: 'はなす', kanji: '話す', meaning: 'to speak', type: 'verb' }),
+    ];
+    const question = buildQuestion(verbPool[0], verbPool, {}, seqRng([0]), 'kanji');
+    expect(question.studyMode).toBe('kanji');
+    expect(question.prompt).toBe('【食】べる');
+    expect(question.promptLabel).toBe('How do you read this kanji?');
+    expect(question.answer).toBe('た');
+    expect(question.options).toHaveLength(OPTION_COUNT);
+    expect(question.options).toContain('た');
+    expect(new Set(question.options).size).toBe(OPTION_COUNT);
+    expect(question.optionItems?.['た']?.meaning).toBe('to eat');
+    expect(question.kanjiParts).toEqual({
+      prefix: '',
+      targetKanji: '食',
+      okurigana: 'べる',
+      targetReading: 'た',
+    });
   });
 
   it('builds a meaning question with hiragana prompt and meaning options', () => {
@@ -440,5 +511,147 @@ describe('persistence', () => {
     expect(loadProgress(storage)).toEqual({});
     expect(loadSettings(storage).excludedSources).toEqual(['colors']);
     expect(loadSettings(storage).studyMode).toEqual('kanji');
+  });
+});
+
+describe('splitKanjiWord', () => {
+  it('splits verbs with multi-kana okurigana', () => {
+    expect(splitKanjiWord('食べる', 'たべる')).toEqual({
+      prefix: '',
+      targetKanji: '食',
+      okurigana: 'べる',
+      targetReading: 'た',
+    });
+  });
+
+  it('splits verbs with single-kana okurigana', () => {
+    expect(splitKanjiWord('行く', 'いく')).toEqual({
+      prefix: '',
+      targetKanji: '行',
+      okurigana: 'く',
+      targetReading: 'い',
+    });
+  });
+
+  it('splits adjectives ending with multiple kana', () => {
+    expect(splitKanjiWord('新しい', 'あたらしい')).toEqual({
+      prefix: '',
+      targetKanji: '新',
+      okurigana: 'しい',
+      targetReading: 'あたら',
+    });
+  });
+
+  it('splits adjectives with double vowel kana', () => {
+    expect(splitKanjiWord('大きい', 'おおきい')).toEqual({
+      prefix: '',
+      targetKanji: '大',
+      okurigana: 'きい',
+      targetReading: 'おお',
+    });
+  });
+
+  it('splits compound and suru verbs', () => {
+    expect(splitKanjiWord('勉強する', 'べんきょうする')).toEqual({
+      prefix: '',
+      targetKanji: '勉強',
+      okurigana: 'する',
+      targetReading: 'べんきょう',
+    });
+  });
+
+  it('handles words with prefix kana', () => {
+    expect(splitKanjiWord('お茶', 'おちゃ')).toEqual({
+      prefix: 'お',
+      targetKanji: '茶',
+      okurigana: '',
+      targetReading: 'ちゃ',
+    });
+  });
+
+  it('handles pure kanji words with no kana', () => {
+    expect(splitKanjiWord('学校', 'がっこう')).toEqual({
+      prefix: '',
+      targetKanji: '学校',
+      okurigana: '',
+      targetReading: 'がっこう',
+    });
+  });
+
+  describe('edge cases', () => {
+    it('normalizes internal whitespace in reading', () => {
+      expect(splitKanjiWord('砂の城', 'すなの しろ')).toEqual({
+        prefix: '',
+        targetKanji: '砂の城',
+        okurigana: '',
+        targetReading: 'すなのしろ',
+      });
+    });
+
+    it('falls back gracefully on kana-only words', () => {
+      expect(splitKanjiWord('ここ', 'ここ')).toEqual({
+        prefix: '',
+        targetKanji: 'ここ',
+        okurigana: '',
+        targetReading: 'ここ',
+      });
+      expect(splitKanjiWord('ありがとう', 'ありがとう')).toEqual({
+        prefix: '',
+        targetKanji: 'ありがとう',
+        okurigana: '',
+        targetReading: 'ありがとう',
+      });
+    });
+
+    it('handles empty strings and whitespace-only inputs', () => {
+      expect(splitKanjiWord('', '')).toEqual({
+        prefix: '',
+        targetKanji: '',
+        okurigana: '',
+        targetReading: '',
+      });
+      expect(splitKanjiWord('   ', '   ')).toEqual({
+        prefix: '',
+        targetKanji: '',
+        okurigana: '',
+        targetReading: '',
+      });
+      expect(splitKanjiWord('', 'たべる')).toEqual({
+        prefix: '',
+        targetKanji: '',
+        okurigana: '',
+        targetReading: 'たべる',
+      });
+      expect(splitKanjiWord('食べる', '')).toEqual({
+        prefix: '',
+        targetKanji: '食べる',
+        okurigana: '',
+        targetReading: '',
+      });
+    });
+
+    it('handles words with both prefix kana and okurigana', () => {
+      expect(splitKanjiWord('お話しする', 'おはなしする')).toEqual({
+        prefix: 'お',
+        targetKanji: '話',
+        okurigana: 'しする',
+        targetReading: 'はな',
+      });
+    });
+
+    it('strips leading, trailing, and full-width spaces from both kanji and reading', () => {
+      expect(splitKanjiWord(' 食べる ', ' たべる ')).toEqual({
+        prefix: '',
+        targetKanji: '食',
+        okurigana: 'べる',
+        targetReading: 'た',
+      });
+      expect(splitKanjiWord('砂の\u3000城', 'すなの\u3000しろ')).toEqual({
+        prefix: '',
+        targetKanji: '砂の城',
+        okurigana: '',
+        targetReading: 'すなのしろ',
+      });
+    });
   });
 });

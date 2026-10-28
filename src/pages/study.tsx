@@ -200,7 +200,15 @@ export default function Study(): React.JSX.Element {
                 <div
                   className={clsx(styles.prompt, question.promptMode === 'kanji' && styles.promptKanji)}
                 >
-                  {question.prompt}
+                  {question.kanjiParts && question.studyMode === 'kanji' ? (
+                    <>
+                      {question.kanjiParts.prefix}
+                      <span className={styles.promptTargetKanji}>【{question.kanjiParts.targetKanji}】</span>
+                      {question.kanjiParts.okurigana}
+                    </>
+                  ) : (
+                    question.prompt
+                  )}
                 </div>
                 <div className={styles.promptType}>{question.item.type}</div>
 
@@ -234,6 +242,12 @@ export default function Study(): React.JSX.Element {
                       {!isCorrect && <div className={styles.detailHeading}>Correct answer</div>}
                       {question.item.kanji && (
                         <div className={styles.detailKanji}>{question.item.kanji}</div>
+                      )}
+                      {question.studyMode === 'kanji' && question.kanjiParts?.okurigana && (
+                        <div className={styles.detailReadingBreakdown}>
+                          {question.kanjiParts.prefix}
+                          <strong>{question.kanjiParts.targetKanji}</strong> ({question.answer}) + {question.kanjiParts.okurigana}
+                        </div>
                       )}
                       <div className={styles.detailHiragana}>
                         {question.item.hiragana || question.item.katakana}
@@ -287,7 +301,9 @@ export default function Study(): React.JSX.Element {
                                 <div className={styles.whyType}>Type: {badItem.type}</div>
                                 <div className={styles.whyExplanation}>
                                   {question.studyMode === 'kanji'
-                                    ? `"${selected}" (${badItem.kanji || badItem.hiragana}) means "${badItem.meaning}", not "${question.item.meaning}".`
+                                    ? badItem.kanji
+                                      ? `"${selected}" is the reading for ${badItem.kanji} (${badItem.hiragana || badItem.katakana}, "${badItem.meaning}"), not ${question.item.kanji}.`
+                                      : `"${selected}" (${badItem.hiragana || badItem.katakana}) means "${badItem.meaning}", not "${question.item.meaning}".`
                                     : `"${selected}" is the meaning of ${badItem.hiragana || badItem.katakana}${badItem.kanji ? ` (${badItem.kanji})` : ''}.`}
                                 </div>
                               </div>
