@@ -8,6 +8,8 @@ import {
   baseScript,
   buildQuestion,
   computeStats,
+  filterPoolForMode,
+  hasKanji,
   isStudyable,
   itemWeight,
   listSources,
@@ -15,6 +17,7 @@ import {
   loadProgress,
   loadSettings,
   pickDistractors,
+  pickKanjiDistractors,
   promptModeFor,
   promptTextFor,
   recordAnswer,
@@ -41,13 +44,11 @@ function item(overrides: Partial<VocabularyItem> = {}): VocabularyItem {
   };
 }
 
-/** Deterministic rng that cycles through the provided values. */
 function seqRng(values: number[]): Rng {
   let i = 0;
   return () => values[i++ % values.length];
 }
 
-/** A simple in-memory storage stand-in for the persistence helpers. */
 function memoryStorage(): StudyStorage {
   const map = new Map<string, string>();
   return {
@@ -101,6 +102,34 @@ describe('studyableItems', () => {
   it('filters out non-studyable items', () => {
     const items = [item({ id: 'a' }), item({ id: 'b', type: 'unknown' }), item({ id: 'c', meaning: '' })];
     expect(studyableItems(items).map(i => i.id)).toEqual(['a']);
+  });
+});
+
+describe('hasKanji', () => {
+  it('returns true when item has kanji', () => {
+    expect(hasKanji(item({ kanji: '赤' }))).toBe(true);
+  });
+
+  it('returns false when kanji is empty or missing', () => {
+    expect(hasKanji(item({ kanji: undefined }))).toBe(false);
+    expect(hasKanji(item({ kanji: '' }))).toBe(false);
+    expect(hasKanji(item({ kanji: '   ' }))).toBe(false);
+  });
+});
+
+describe('filterPoolForMode', () => {
+  const items = [
+    item({ id: 'a', kanji: '赤' }),
+    item({ id: 'b', kanji: undefined }),
+    item({ id: 'c', kanji: '青' }),
+  ];
+
+  it('returns all items in meaning mode', () => {
+    expect(filterPoolForMode(items, 'meaning')).toEqual(items);
+  });
+
+  it('retains only items with kanji in kanji mode', () => {
+    expect(filterPoolForMode(items, 'kanji').map(i => i.id)).toEqual(['a', 'c']);
   });
 });
 
@@ -237,6 +266,30 @@ describe('pickDistractors', () => {
   });
 });
 
+describe('pickKanjiDistractors', () => {
+  const pool = [
+    item({ id: 'a', hiragana: 'あか', kanji: '赤', meaning: 'red', type: 'noun', tags: ['colors'] }),
+    item({ id: 'b', hiragana: 'あお', kanji: '青', meaning: 'blue', type: 'noun', tags: ['colors'] }),
+    item({ id: 'c', hiragana: 'みどり', kanji: '緑', meaning: 'green', type: 'noun', tags: ['colors'] }),
+    item({ id: 'd', hiragana: 'いぬ', kanji: '犬', meaning: 'dog', type: 'noun', tags: ['animals'] }),
+    item({ id: 'e', hiragana: 'たべる', kanji: '食べる', meaning: 'to eat', type: 'verb', tags: ['actions'] }),
+  ];
+
+  it('picks distinct readings and prioritizes related items', () => {
+    const distractors = pickKanjiDistractors(pool[0], pool, 2, seqRng([0]));
+    expect(distractors).toHaveLength(2);
+    expect(distractors.map(d => d.hiragana).sort()).toEqual(['あお', 'みどり']);
+  });
+
+  it('excludes candidates with identical reading or identical kanji', () => {
+    const kiru = item({ id: 'cut', hiragana: 'きる', kanji: '切る', meaning: 'to cut', type: 'verb' });
+    const wear = item({ id: 'wear', hiragana: 'きる', kanji: '着る', meaning: 'to wear', type: 'verb' });
+    const other = item({ id: 'eat', hiragana: 'たべる', kanji: '食べる', meaning: 'to eat', type: 'verb' });
+    const distractors = pickKanjiDistractors(kiru, [kiru, wear, other], 2, seqRng([0]));
+    expect(distractors.map(d => d.hiragana)).toEqual(['たべる']);
+  });
+});
+
 describe('buildQuestion', () => {
   const pool = [
     item({ id: 'a', hiragana: 'あか', kanji: '赤', meaning: 'red', type: 'noun' }),
@@ -253,11 +306,31 @@ describe('buildQuestion', () => {
     expect(question.answer).toBe('red');
   });
 
-  it('uses the prompt mode derived from progress', () => {
+  it('uses the prompt mode derived from progress when studyMode is omitted', () => {
     const progress: StudyProgress = { a: { correct: 1, incorrect: 0, streak: PROMOTE_STREAK } };
     const question = buildQuestion(pool[0], pool, progress, seqRng([0]));
     expect(question.promptMode).toBe('kanji');
     expect(question.prompt).toBe('赤');
+  });
+
+  it('builds a kanji question with kanji prompt and hiragana options', () => {
+    const question = buildQuestion(pool[0], pool, {}, seqRng([0]), 'kanji');
+    expect(question.studyMode).toBe('kanji');
+    expect(question.prompt).toBe('赤');
+    expect(question.promptLabel).toBe('How do you read this kanji?');
+    expect(question.answer).toBe('あか');
+    expect(question.options).toContain('あか');
+    expect(question.optionItems?.['あか']?.meaning).toBe('red');
+  });
+
+  it('builds a meaning question with hiragana prompt and meaning options', () => {
+    const question = buildQuestion(pool[0], pool, {}, seqRng([0]), 'meaning');
+    expect(question.studyMode).toBe('meaning');
+    expect(question.prompt).toBe('あか');
+    expect(question.promptLabel).toBe('What does this mean?');
+    expect(question.answer).toBe('red');
+    expect(question.options).toContain('red');
+    expect(question.optionItems?.['red']?.hiragana).toBe('あか');
   });
 });
 
@@ -349,8 +422,8 @@ describe('persistence', () => {
 
   it('round-trips settings and defaults missing fields', () => {
     const storage = memoryStorage();
-    saveSettings(storage, { excludedSources: ['colors'], excludedTypes: ['verb'] });
-    expect(loadSettings(storage)).toEqual({ excludedSources: ['colors'], excludedTypes: ['verb'] });
+    saveSettings(storage, { excludedSources: ['colors'], excludedTypes: ['verb'], studyMode: 'kanji' });
+    expect(loadSettings(storage)).toEqual({ excludedSources: ['colors'], excludedTypes: ['verb'], studyMode: 'kanji' });
   });
 
   it('returns default settings when fields are not arrays', () => {
@@ -362,9 +435,10 @@ describe('persistence', () => {
   it('clears progress on reset without touching settings', () => {
     const storage = memoryStorage();
     saveProgress(storage, { x: { correct: 1, incorrect: 0, streak: 1 } });
-    saveSettings(storage, { excludedSources: ['colors'], excludedTypes: [] });
+    saveSettings(storage, { excludedSources: ['colors'], excludedTypes: [], studyMode: 'kanji' });
     resetProgress(storage);
     expect(loadProgress(storage)).toEqual({});
     expect(loadSettings(storage).excludedSources).toEqual(['colors']);
+    expect(loadSettings(storage).studyMode).toEqual('kanji');
   });
 });
