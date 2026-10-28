@@ -179,9 +179,6 @@ describe('Vocabulary Extraction', () => {
     });
 
     it('should normalize spaces inside parentheses after stripping emojis', () => {
-      // Wear-verb tables use "wear (👕 upper body)" format.
-      // Stripping the emoji leaves a leading space: "wear ( upper body)".
-      // The normalization step removes it to produce "wear (upper body)".
       const vocabulary = extractVocabularyFromFile(path.join(fixturesDir, 'wear-verbs-emoji.md'));
 
       expect(vocabulary).toHaveLength(3);
@@ -355,7 +352,6 @@ describe('Vocabulary Extraction', () => {
       expect(redItem?.tags).toContain('basics');
       expect(redItem?.tags).toContain('adjectives');
     });
-
 
     it('should override the existing type with the extracted type and warn', () => {
       const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
@@ -540,14 +536,10 @@ describe('Vocabulary Extraction', () => {
         expect(merged.vocabulary).toHaveLength(2);
       });
 
-      // Helper for the emoji-space deduplication tests below.
-      // All fields are fixed; only id and meaning vary between scenarios.
       const wearVerb = (id: string, meaning: string) =>
         createTestVocabularyItem({ id, hiragana: 'きる', romaji: 'kiru', type: 'verb', tags: ['clothes'], meaning });
 
       it('should treat meanings that differ only by spaces left from emoji stripping as duplicates', () => {
-        // "wear (👕 upper body)" → before normalization: "wear ( upper body)"
-        // Both resolve to the same content key, so no duplicate entry is created.
         const existing = createTestVocabularyData([wearVerb('clothes_0', 'wear (upper body)')]);
         const extracted = createTestVocabularyData([wearVerb('clothes_0', 'wear ( upper body)')]);
 
@@ -558,10 +550,6 @@ describe('Vocabulary Extraction', () => {
       });
 
       it('should consolidate pre-existing duplicate entries with emoji-space variants, keeping lowest ID', () => {
-        // vocabulary.yaml can accumulate duplicate pairs across extraction runs:
-        //   clothes_0: "wear (upper body)"   ← original, no emoji in lesson
-        //   clothes_1: "wear ( upper body)"  ← created after emoji added, space remained
-        // Both normalize to the same content key; merge should collapse them to clothes_0.
         const existing = createTestVocabularyData([
           wearVerb('clothes_0', 'wear (upper body)'),
           wearVerb('clothes_1', 'wear ( upper body)'),
@@ -577,14 +565,10 @@ describe('Vocabulary Extraction', () => {
 
     describe('Orphan removal (deleted lesson files)', () => {
       it('should remove vocabulary items whose lesson file no longer exists', () => {
-        // When a lesson file is deleted (e.g. counters.mdx → frequency.md, date-counters.md),
-        // its vocabulary items are orphaned: they have tags that no active lesson produces.
-        // The merge should drop those items so vocabulary.yaml stays clean.
         const existing = createTestVocabularyData([
           createTestVocabularyItem({ id: 'counters_0', hiragana: 'いっぽん', romaji: 'ippon', meaning: 'one (long thing)', type: 'counter', tags: ['counters'] }),
           createTestVocabularyItem({ id: 'counters_1', hiragana: 'にほん', romaji: 'nihon', meaning: 'two (long things)', type: 'counter', tags: ['counters'] }),
         ]);
-        // Extracted has no items with tag 'counters' because the lesson file was deleted
         const extracted = createTestVocabularyData([
           createTestVocabularyItem({ id: 'datecounters_0', hiragana: 'いちにち', romaji: 'ichinichi', meaning: 'one day', type: 'counter', tags: ['date-counters'] }),
         ]);
@@ -597,11 +581,9 @@ describe('Vocabulary Extraction', () => {
       });
 
       it('should keep vocabulary items that appear in at least one still-active lesson', () => {
-        // A word that appears in both an active and a deleted lesson should be kept.
         const existing = createTestVocabularyData([
           createTestVocabularyItem({ id: 'word_0', hiragana: 'たくさん', romaji: 'takusan', meaning: 'many', type: 'adverb', tags: ['adjectives', 'cooking'] }),
         ]);
-        // 'adjectives' is still active, 'cooking' was deleted — item must survive
         const extracted = createTestVocabularyData([
           createTestVocabularyItem({ id: 'word_0', hiragana: 'たくさん', romaji: 'takusan', meaning: 'many', type: 'adverb', tags: ['adjectives'] }),
         ]);
@@ -729,8 +711,8 @@ describe('Vocabulary Extraction', () => {
       expect(result.vocabulary).toHaveLength(12);
 
       const hiraganaList = result.vocabulary.map(i => i.hiragana);
-      expect(hiraganaList).toContain('あか');  // .md file still scanned
-      expect(hiraganaList).toContain('あじ');  // .mdx file scanned alongside
+      expect(hiraganaList).toContain('あか');
+      expect(hiraganaList).toContain('あじ');
 
       const ajiItem = result.vocabulary.find(i => i.hiragana === 'あじ');
       expect(ajiItem?.tags).toContain('food-basics');
@@ -880,7 +862,6 @@ describe('Vocabulary Extraction', () => {
         expect(item).toHaveProperty('tags');
       });
     });
-
 
     it('should work with any section heading', () => {
       const testFile = path.join(fixturesDir, 'custom-section.md');

@@ -58,7 +58,6 @@ test.describe('Study', () => {
     await tag.click();
 
     await verifyPageIsFound(page);
-    // Tags resolve to lesson pages or reference articles (e.g. the N5 tag).
     await expect(page).toHaveURL(/\/docs\//);
   });
 });

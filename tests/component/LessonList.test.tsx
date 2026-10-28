@@ -158,7 +158,6 @@ describe('LessonList Component', () => {
       const basicTitle = screen.getByText('Basic Conjugation');
       const basicDesc = screen.getByText('Learn the fundamentals of Japanese verb conjugation');
 
-      // Both should be within the same link
       const link = basicTitle.closest('a');
       expect(link).toContainElement(basicDesc);
     });
@@ -244,7 +243,6 @@ describe('LessonList Component', () => {
       const links = screen.getAllByRole('link');
       expect(links).toHaveLength(2);
 
-      // Each link should contain visible text
       links.forEach(link => {
         expect(link).toHaveTextContent(/./);
       });

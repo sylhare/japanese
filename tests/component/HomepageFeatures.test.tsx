@@ -3,7 +3,6 @@ import React from 'react';
 import { describe, expect, it, vi } from 'vitest';
 import HomepageFeatures from '../../src/components/HomepageFeatures';
 
-// SVG mocks are handled via vitest config aliases pointing to mock files
 vi.mock('../../src/components/HomepageFeatures/styles.module.css', () => ({
   default: {
     features: 'features',
@@ -141,7 +140,6 @@ describe('HomepageFeatures Component', () => {
       const { container } = render(<HomepageFeatures />);
 
       const textCenterElements = container.querySelectorAll('.text--center');
-      // Each feature has 2 text-center divs (one for SVG, one for text)
       expect(textCenterElements.length).toBe(6);
     });
   });
