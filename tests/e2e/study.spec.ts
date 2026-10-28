@@ -61,4 +61,47 @@ test.describe('Study', () => {
     // Tags resolve to lesson pages or reference articles (e.g. the N5 tag).
     await expect(page).toHaveURL(/\/docs\//);
   });
+
+  test('switches to kanji mode and answers a kanji reading question', async ({ page }) => {
+    const kanjiTab = page.getByRole('tab', { name: 'Learn Kanji' });
+    await kanjiTab.click();
+    await expect(kanjiTab).toHaveAttribute('aria-selected', 'true');
+    await expect(page.getByText('How do you read this kanji?')).toBeVisible();
+
+    const options = optionButtons(page);
+    await expect(options).toHaveCount(4);
+    await options.first().click();
+
+    await expect(page.getByText(/^(Correct!|Incorrect)$/)).toBeVisible();
+    await expect(page.getByRole('button', { name: 'Next' })).toBeVisible();
+  });
+
+  test('reveals Why button and shows bad answer explanation on incorrect answer', async ({ page }) => {
+    let hitIncorrect = false;
+    for (let attempt = 0; attempt < 5; attempt++) {
+      const options = optionButtons(page);
+      await expect(options.first()).toBeVisible();
+      await options.first().click();
+
+      const feedback = page.getByText(/^(Correct!|Incorrect)$/);
+      await expect(feedback).toBeVisible();
+      const text = await feedback.textContent();
+
+      if (text === 'Incorrect') {
+        hitIncorrect = true;
+        break;
+      }
+      await page.getByRole('button', { name: 'Next' }).click();
+    }
+
+    expect(hitIncorrect).toBe(true);
+    const whyButton = page.getByRole('button', { name: 'Why?' });
+    await expect(whyButton).toBeVisible();
+    await whyButton.click();
+    await expect(page.getByText(/Your answer:/)).toBeVisible();
+    await expect(page.getByRole('button', { name: 'Hide explanation' })).toBeVisible();
+
+    await page.getByRole('button', { name: 'Hide explanation' }).click();
+    await expect(page.getByText(/Your answer:/)).not.toBeVisible();
+  });
 });

@@ -15,8 +15,6 @@ vi.mock('../../src/pages/study.module.css', () => ({ default: {} }));
 const mockItems = studyMockItems;
 const meanings = mockItems.map(i => i.meaning);
 
-/** The only Japanese text on screen before answering is the prompt, so we can
- * map it back to the item being asked about. */
 function shownMeaning(): string {
   const found = mockItems.find(i => screen.queryAllByText(i.hiragana).length > 0);
   if (!found) {
@@ -136,5 +134,50 @@ describe('Study page', () => {
     await user.click(screen.getByRole('button', { name: shownMeaning() }));
 
     expect(window.localStorage.getItem('japanese-study-progress-v1')).toBeTruthy();
+  });
+
+  it('switches between Learn Meaning and Learn Kanji modes', async () => {
+    const user = userEvent.setup();
+    render(<Study />);
+
+    const meaningTab = screen.getByRole('tab', { name: 'Learn Meaning' });
+    const kanjiTab = screen.getByRole('tab', { name: 'Learn Kanji' });
+    expect(meaningTab).toHaveAttribute('aria-selected', 'true');
+    expect(kanjiTab).toHaveAttribute('aria-selected', 'false');
+
+    await user.click(kanjiTab);
+    expect(kanjiTab).toHaveAttribute('aria-selected', 'true');
+    expect(screen.getByText('How do you read this kanji?')).toBeInTheDocument();
+
+    const hiraganaReadings = mockItems.map(i => i.hiragana);
+    const optionButtons = screen
+      .getAllByRole('button')
+      .filter(b => hiraganaReadings.includes(b.textContent ?? ''));
+    expect(optionButtons).toHaveLength(4);
+  });
+
+  it('reveals Why button on wrong answer and toggles bad answer details', async () => {
+    const user = userEvent.setup();
+    render(<Study />);
+    const correct = shownMeaning();
+    const wrongButton = screen
+      .getAllByRole('button')
+      .find(b => meanings.includes(b.textContent ?? '') && b.textContent !== correct);
+    expect(wrongButton).toBeDefined();
+
+    await user.click(wrongButton as HTMLElement);
+
+    expect(screen.getByText('Incorrect')).toBeInTheDocument();
+    expect(screen.getByText('Correct answer')).toBeInTheDocument();
+
+    const whyButton = screen.getByRole('button', { name: 'Why?' });
+    expect(whyButton).toBeInTheDocument();
+
+    await user.click(whyButton);
+    expect(screen.getByText(new RegExp(`Your answer: ${wrongButton?.textContent}`))).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Hide explanation' })).toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', { name: 'Hide explanation' }));
+    expect(screen.queryByText(new RegExp(`Your answer: ${wrongButton?.textContent}`))).not.toBeInTheDocument();
   });
 });
