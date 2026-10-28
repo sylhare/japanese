@@ -152,7 +152,7 @@ const config: Config = {
           type: 'doc',
           docId: 'reference/index',
           position: 'left',
-          label: 'Kana',
+          label: 'Reference',
         },
         {
           href: 'https://github.com/sylhare/japanese',

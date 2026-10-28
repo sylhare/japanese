@@ -13,7 +13,7 @@ test.describe('Reference Pages', () => {
       await expect(referenceCard).toBeVisible();
 
       const cardTitle = referenceCard.locator('h3');
-      await expect(cardTitle).toHaveText('References');
+      await expect(cardTitle).toHaveText('Reference');
 
       await referenceCard.click();
       await verifyPageIsFound(page);
