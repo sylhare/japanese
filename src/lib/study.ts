@@ -3,6 +3,9 @@ import type { VocabularyItem } from '../data/vocabulary-types';
 /** Which script the learner is shown when guessing the meaning. */
 export type PromptMode = 'hiragana' | 'kanji';
 
+/** Study mode: learning meaning from hiragana, or learning kanji readings. */
+export type StudyMode = 'meaning' | 'kanji';
+
 /** A source-of-randomness in the [0, 1) range, injectable for testing. */
 export type Rng = () => number;
 
@@ -23,6 +26,8 @@ export interface ItemProgress {
 export type StudyProgress = Record<string, ItemProgress>;
 
 export interface StudySettings {
+  /** Mode to study in: meaning (hiragana -> English) or kanji (kanji -> hiragana). */
+  studyMode?: StudyMode;
   /** Source tags the learner has switched off. */
   excludedSources: string[];
   /** Word types the learner has switched off. */
@@ -31,13 +36,19 @@ export interface StudySettings {
 
 export interface Question {
   item: VocabularyItem;
+  studyMode: StudyMode;
   promptMode: PromptMode;
   /** The text shown to the learner (hiragana/katakana or kanji). */
   prompt: string;
-  /** Four English meanings, shuffled. */
+  /** Question prompt label. */
+  promptLabel: string;
+  /** Four options, shuffled. */
   options: string[];
-  /** The correct meaning, always present in `options`. */
+  /** The correct answer, always present in `options`. */
   answer: string;
+  /** Mapping of option text to the source item for "Why?" explanations. */
+  optionItems?: Record<string, VocabularyItem>;
+  kanjiParts?: KanjiWordParts;
 }
 
 export interface StudyStats {
@@ -45,6 +56,13 @@ export interface StudyStats {
   correct: number;
   /** Items whose current streak has reached MASTER_STREAK consecutive correct answers. */
   mastered: number;
+}
+
+export interface KanjiWordParts {
+  prefix: string;
+  targetKanji: string;
+  okurigana: string;
+  targetReading: string;
 }
 
 /** Correct answers needed before a word with kanji is shown in kanji. */
@@ -58,6 +76,7 @@ export const PROGRESS_KEY = `japanese-study-progress-${STORAGE_VERSION}`;
 export const SETTINGS_KEY = `japanese-study-settings-${STORAGE_VERSION}`;
 
 export const DEFAULT_SETTINGS: StudySettings = {
+  studyMode: 'meaning',
   excludedSources: [],
   excludedTypes: [],
 };
@@ -69,6 +88,67 @@ export function baseScript(item: VocabularyItem): string {
   return item.hiragana || item.katakana || '';
 }
 
+const KANA_REGEX = /^[\u3040-\u309F\u30A0-\u30FF]$/;
+const KANJI_REGEX = /[\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF]/;
+
+/** Whether an item has kanji text. */
+export function hasKanji(item: VocabularyItem): boolean {
+  return Boolean(item.kanji && item.kanji.trim().length > 0);
+}
+
+/**
+ * Splits a kanji word into its prefix kana, target kanji, okurigana and target reading.
+ */
+export function splitKanjiWord(kanji: string, reading: string): KanjiWordParts {
+  const cleanKanji = (kanji || '').replace(/[\s\u3000]+/g, '');
+  const cleanReading = (reading || '').replace(/[\s\u3000]+/g, '');
+
+  const fallback: KanjiWordParts = {
+    prefix: '',
+    targetKanji: cleanKanji,
+    okurigana: '',
+    targetReading: cleanReading,
+  };
+
+  if (!cleanKanji || !cleanReading || !KANJI_REGEX.test(cleanKanji)) {
+    return fallback;
+  }
+
+  let prefixLen = 0;
+  while (
+    prefixLen < cleanKanji.length &&
+    prefixLen < cleanReading.length &&
+    cleanKanji[prefixLen] === cleanReading[prefixLen] &&
+    KANA_REGEX.test(cleanKanji[prefixLen])
+  ) {
+    prefixLen++;
+  }
+
+  let okuriLen = 0;
+  while (
+    cleanKanji.length - 1 - okuriLen >= prefixLen &&
+    cleanReading.length - 1 - okuriLen >= prefixLen &&
+    cleanKanji[cleanKanji.length - 1 - okuriLen] === cleanReading[cleanReading.length - 1 - okuriLen] &&
+    KANA_REGEX.test(cleanKanji[cleanKanji.length - 1 - okuriLen])
+  ) {
+    okuriLen++;
+  }
+
+  const targetKanji = cleanKanji.slice(prefixLen, cleanKanji.length - okuriLen);
+  const targetReading = cleanReading.slice(prefixLen, cleanReading.length - okuriLen);
+
+  if (!targetKanji || !targetReading || !KANJI_REGEX.test(targetKanji)) {
+    return fallback;
+  }
+
+  return {
+    prefix: cleanKanji.slice(0, prefixLen),
+    targetKanji,
+    okurigana: cleanKanji.slice(cleanKanji.length - okuriLen),
+    targetReading,
+  };
+}
+
 /** An item can be studied only if it has a base reading, a meaning and a usable type. */
 export function isStudyable(item: VocabularyItem): boolean {
   return Boolean(baseScript(item) && item.meaning && item.type && item.type !== 'unknown');
@@ -76,6 +156,14 @@ export function isStudyable(item: VocabularyItem): boolean {
 
 export function studyableItems(items: VocabularyItem[]): VocabularyItem[] {
   return items.filter(isStudyable);
+}
+
+/** Filter candidates based on the active study mode (kanji mode requires a kanji character). */
+export function filterPoolForMode(items: VocabularyItem[], mode: StudyMode): VocabularyItem[] {
+  if (mode === 'kanji') {
+    return items.filter(hasKanji);
+  }
+  return items;
 }
 
 /** De-duplicate and sort alphabetically, ignoring empty values. */
@@ -109,7 +197,17 @@ export function applySettings(items: VocabularyItem[], settings: StudySettings):
   });
 }
 
-export function promptModeFor(item: VocabularyItem, progress: StudyProgress): PromptMode {
+export function promptModeFor(
+  item: VocabularyItem,
+  progress: StudyProgress,
+  mode?: StudyMode,
+): PromptMode {
+  if (mode === 'meaning') {
+    return 'hiragana';
+  }
+  if (mode === 'kanji') {
+    return 'kanji';
+  }
   const entry = progress[item.id];
   if (item.kanji && entry && entry.streak >= PROMOTE_STREAK) {
     return 'kanji';
@@ -175,21 +273,153 @@ export function pickDistractors(
   return distractors;
 }
 
+/**
+ * Pick `count` distractor items with hiragana readings different from `item`.
+ * Candidates are prioritized by stem / okurigana matching and type / tag relevance.
+ * Target readings are de-duplicated so the options are always distinct.
+ */
+export function pickKanjiDistractors(
+  item: VocabularyItem,
+  pool: VocabularyItem[],
+  count: number,
+  rng: Rng,
+): VocabularyItem[] {
+  const targetParts = splitKanjiWord(item.kanji || '', baseScript(item));
+  const takenReadings = new Set([targetParts.targetReading]);
+  const itemTags = new Set(item.tags);
+  const itemHasOkuri = Boolean(targetParts.okurigana);
+
+  const eligible: { candidate: VocabularyItem; candParts: KanjiWordParts }[] = [];
+  for (const candidate of pool) {
+    if (!hasKanji(candidate)) {
+      continue;
+    }
+    if (candidate.id === item.id) {
+      continue;
+    }
+    if (item.kanji && candidate.kanji === item.kanji) {
+      continue;
+    }
+
+    const candParts = splitKanjiWord(candidate.kanji || '', baseScript(candidate));
+    if (!candParts.targetReading || candParts.targetReading === targetParts.targetReading) {
+      continue;
+    }
+
+    eligible.push({ candidate, candParts });
+  }
+
+  const g1: { candidate: VocabularyItem; candParts: KanjiWordParts }[] = [];
+  const g2: { candidate: VocabularyItem; candParts: KanjiWordParts }[] = [];
+  const g3: { candidate: VocabularyItem; candParts: KanjiWordParts }[] = [];
+  const g4: { candidate: VocabularyItem; candParts: KanjiWordParts }[] = [];
+
+  for (const entry of eligible) {
+    const sameType = entry.candidate.type === item.type;
+    const candHasOkuri = Boolean(entry.candParts.okurigana);
+    const sharesTag = entry.candidate.tags.some(tag => itemTags.has(tag));
+
+    if (itemHasOkuri) {
+      if (sameType && candHasOkuri) {
+        g1.push(entry);
+      } else if (sameType && !candHasOkuri) {
+        g2.push(entry);
+      } else if (sharesTag) {
+        g3.push(entry);
+      } else {
+        g4.push(entry);
+      }
+    } else {
+      if (sameType && !candHasOkuri) {
+        g1.push(entry);
+      } else if (sameType && candHasOkuri) {
+        g2.push(entry);
+      } else if (sharesTag) {
+        g3.push(entry);
+      } else {
+        g4.push(entry);
+      }
+    }
+  }
+
+  const ordered = [
+    ...shuffle(g1, rng),
+    ...shuffle(g2, rng),
+    ...shuffle(g3, rng),
+    ...shuffle(g4, rng),
+  ];
+
+  const distractors: VocabularyItem[] = [];
+  for (const entry of ordered) {
+    if (distractors.length >= count) {
+      break;
+    }
+    if (!takenReadings.has(entry.candParts.targetReading)) {
+      takenReadings.add(entry.candParts.targetReading);
+      distractors.push(entry.candidate);
+    }
+  }
+  return distractors;
+}
+
 export function buildQuestion(
   item: VocabularyItem,
   pool: VocabularyItem[],
   progress: StudyProgress,
   rng: Rng,
+  studyMode?: StudyMode,
 ): Question {
-  const promptMode = promptModeFor(item, progress);
+  const effectiveMode: StudyMode = studyMode ?? 'meaning';
+
+  if (effectiveMode === 'kanji') {
+    const kanjiParts = splitKanjiWord(item.kanji || '', baseScript(item));
+    const prompt = kanjiParts.targetKanji
+      ? `${kanjiParts.prefix}【${kanjiParts.targetKanji}】${kanjiParts.okurigana}`
+      : item.kanji || baseScript(item);
+    const answer = kanjiParts.targetReading;
+    const distractors = pickKanjiDistractors(item, pool, OPTION_COUNT - 1, rng);
+    const distractorReadings = distractors.map(
+      d => splitKanjiWord(d.kanji || '', baseScript(d)).targetReading,
+    );
+    const options = shuffle([answer, ...distractorReadings], rng);
+    const optionItems: Record<string, VocabularyItem> = {
+      [answer]: item,
+    };
+    for (let i = 0; i < distractors.length; i++) {
+      optionItems[distractorReadings[i]] = distractors[i];
+    }
+    return {
+      item,
+      studyMode: 'kanji',
+      promptMode: 'kanji',
+      prompt,
+      promptLabel: 'How do you read this kanji?',
+      options,
+      answer,
+      optionItems,
+      kanjiParts,
+    };
+  }
+
+  const promptMode = studyMode === 'meaning' ? 'hiragana' : promptModeFor(item, progress);
   const distractors = pickDistractors(item, pool, OPTION_COUNT - 1, rng);
-  const options = shuffle([item.meaning, ...distractors.map(d => d.meaning)], rng);
+  const answer = item.meaning;
+  const options = shuffle([answer, ...distractors.map(d => d.meaning)], rng);
+  const optionItems: Record<string, VocabularyItem> = {
+    [answer]: item,
+  };
+  for (const d of distractors) {
+    optionItems[d.meaning] = d;
+  }
   return {
     item,
+    studyMode: 'meaning',
     promptMode,
     prompt: promptTextFor(item, promptMode),
+    promptLabel: 'What does this mean?',
     options,
-    answer: item.meaning,
+    answer,
+    optionItems,
   };
 }
 
@@ -269,10 +499,14 @@ export function saveProgress(storage: StudyStorage, progress: StudyProgress): vo
 
 export function loadSettings(storage: StudyStorage): StudySettings {
   const parsed = readJson<Partial<StudySettings>>(storage, SETTINGS_KEY, {});
-  return {
+  const settings: StudySettings = {
     excludedSources: Array.isArray(parsed.excludedSources) ? parsed.excludedSources : [],
     excludedTypes: Array.isArray(parsed.excludedTypes) ? parsed.excludedTypes : [],
   };
+  if (parsed.studyMode === 'kanji' || parsed.studyMode === 'meaning') {
+    settings.studyMode = parsed.studyMode;
+  }
+  return settings;
 }
 
 export function saveSettings(storage: StudyStorage, settings: StudySettings): void {

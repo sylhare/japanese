@@ -9,6 +9,7 @@ import {
   applySettings,
   buildQuestion,
   computeStats,
+  filterPoolForMode,
   listSources,
   listTypes,
   loadProgress,
@@ -20,7 +21,7 @@ import {
   selectItem,
   studyableItems,
 } from '../lib/study';
-import type { Question, StudyProgress, StudySettings } from '../lib/study';
+import type { Question, StudyMode, StudyProgress, StudySettings } from '../lib/study';
 import styles from './study.module.css';
 
 const allStudyable: VocabularyItem[] = studyableItems(vocabularyYamlData.vocabulary);
@@ -32,8 +33,10 @@ export default function Study(): React.JSX.Element {
   const [mounted, setMounted] = useState(false);
   const [progress, setProgress] = useState<StudyProgress>({});
   const [settings, setSettings] = useState<StudySettings>(DEFAULT_SETTINGS);
+  const [studyMode, setStudyMode] = useState<StudyMode>(DEFAULT_SETTINGS.studyMode);
   const [question, setQuestion] = useState<Question | null>(null);
   const [selected, setSelected] = useState<string | null>(null);
+  const [showWhy, setShowWhy] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
 
   const progressRef = useRef(progress);
@@ -42,19 +45,23 @@ export default function Study(): React.JSX.Element {
     const stored = loadProgress(window.localStorage);
     progressRef.current = stored;
     setProgress(stored);
-    setSettings(loadSettings(window.localStorage));
+    const loadedSettings = loadSettings(window.localStorage);
+    setSettings(loadedSettings);
+    setStudyMode(loadedSettings.studyMode ?? 'meaning');
     setMounted(true);
   }, []);
 
-  const pool = useMemo(() => applySettings(allStudyable, settings), [settings]);
+  const basePool = useMemo(() => applySettings(allStudyable, settings), [settings]);
+  const pool = useMemo(() => filterPoolForMode(basePool, studyMode), [basePool, studyMode]);
 
   const newQuestion = useCallback(
     (excludeId?: string) => {
       const item = selectItem(pool, progressRef.current, Math.random, excludeId);
       setSelected(null);
-      setQuestion(item ? buildQuestion(item, pool, progressRef.current, Math.random) : null);
+      setShowWhy(false);
+      setQuestion(item ? buildQuestion(item, pool, progressRef.current, Math.random, studyMode) : null);
     },
-    [pool],
+    [pool, studyMode],
   );
 
   useEffect(() => {
@@ -63,6 +70,14 @@ export default function Study(): React.JSX.Element {
 
   const stats = useMemo(() => computeStats(progress), [progress]);
   const accuracy = stats.answered > 0 ? Math.round((stats.correct / stats.answered) * 100) : 0;
+
+  const handleModeChange = (nextMode: StudyMode) => {
+    if (nextMode === studyMode) return;
+    setStudyMode(nextMode);
+    setSelected(null);
+    setShowWhy(false);
+    updateSettings({ ...settings, studyMode: nextMode });
+  };
 
   const handleAnswer = (option: string) => {
     if (selected || !question) return;
@@ -96,6 +111,7 @@ export default function Study(): React.JSX.Element {
   };
 
   const isCorrect = selected === question?.answer;
+  const badItem = selected && !isCorrect ? question?.optionItems?.[selected] : undefined;
 
   return (
     <Layout title="Study" description="Practice Japanese vocabulary with multiple-choice flashcards">
@@ -103,6 +119,27 @@ export default function Study(): React.JSX.Element {
         <div className="row">
           <div className="col col--8 col--offset-2">
             <h1>Study Vocabulary</h1>
+
+            <div className={styles.modeTabs} role="tablist" aria-label="Study mode">
+              <button
+                type="button"
+                role="tab"
+                aria-selected={studyMode === 'meaning'}
+                className={clsx(styles.modeTab, studyMode === 'meaning' && styles.modeTabActive)}
+                onClick={() => handleModeChange('meaning')}
+              >
+                Learn Meaning
+              </button>
+              <button
+                type="button"
+                role="tab"
+                aria-selected={studyMode === 'kanji'}
+                className={clsx(styles.modeTab, studyMode === 'kanji' && styles.modeTabActive)}
+                onClick={() => handleModeChange('kanji')}
+              >
+                Learn Kanji
+              </button>
+            </div>
 
             <div className={styles.statsBar}>
               <span className={styles.stat}>Answered: {stats.answered}</span>
@@ -149,17 +186,29 @@ export default function Study(): React.JSX.Element {
             {mounted && !question && (
               <div className={styles.empty}>
                 <h3>No words to study</h3>
-                <p>Enable at least one source and word type in the settings to start.</p>
+                <p>
+                  {studyMode === 'kanji'
+                    ? 'Enable at least one source and word type with kanji in the settings to start.'
+                    : 'Enable at least one source and word type in the settings to start.'}
+                </p>
               </div>
             )}
 
             {question && (
               <div className={styles.quizCard}>
-                <div className={styles.promptLabel}>What does this mean?</div>
+                <div className={styles.promptLabel}>{question.promptLabel}</div>
                 <div
                   className={clsx(styles.prompt, question.promptMode === 'kanji' && styles.promptKanji)}
                 >
-                  {question.prompt}
+                  {question.kanjiParts && question.studyMode === 'kanji' ? (
+                    <>
+                      {question.kanjiParts.prefix}
+                      <span className={styles.promptTargetKanji}>【{question.kanjiParts.targetKanji}】</span>
+                      {question.kanjiParts.okurigana}
+                    </>
+                  ) : (
+                    question.prompt
+                  )}
                 </div>
                 <div className={styles.promptType}>{question.item.type}</div>
 
@@ -190,8 +239,15 @@ export default function Study(): React.JSX.Element {
                     </div>
 
                     <div className={styles.detail}>
+                      {!isCorrect && <div className={styles.detailHeading}>Correct answer</div>}
                       {question.item.kanji && (
                         <div className={styles.detailKanji}>{question.item.kanji}</div>
+                      )}
+                      {question.studyMode === 'kanji' && question.kanjiParts?.okurigana && (
+                        <div className={styles.detailReadingBreakdown}>
+                          {question.kanjiParts.prefix}
+                          <strong>{question.kanjiParts.targetKanji}</strong> ({question.answer}) + {question.kanjiParts.okurigana}
+                        </div>
                       )}
                       <div className={styles.detailHiragana}>
                         {question.item.hiragana || question.item.katakana}
@@ -219,9 +275,57 @@ export default function Study(): React.JSX.Element {
                       </div>
                     </div>
 
-                    <button type="button" className={styles.nextButton} onClick={() => newQuestion(question.item.id)}>
-                      Next
-                    </button>
+                    {!isCorrect && (
+                      <>
+                        <button
+                          type="button"
+                          className={styles.whyButton}
+                          onClick={() => setShowWhy(show => !show)}
+                          aria-expanded={showWhy}
+                        >
+                          {showWhy ? 'Hide explanation' : 'Why?'}
+                        </button>
+
+                        {showWhy && (
+                          <div className={styles.whyPanel}>
+                            <div className={styles.whyTitle}>Your answer: {selected}</div>
+                            {badItem ? (
+                              <div className={styles.whyDetail}>
+                                {badItem.kanji && (
+                                  <div className={styles.whyKanji}>{badItem.kanji}</div>
+                                )}
+                                <div className={styles.whyHiragana}>
+                                  {badItem.hiragana || badItem.katakana} ({badItem.romaji})
+                                </div>
+                                <div className={styles.whyMeaning}>Meaning: {badItem.meaning}</div>
+                                <div className={styles.whyType}>Type: {badItem.type}</div>
+                                <div className={styles.whyExplanation}>
+                                  {question.studyMode === 'kanji'
+                                    ? badItem.kanji
+                                      ? `"${selected}" is the reading for ${badItem.kanji} (${badItem.hiragana || badItem.katakana}, "${badItem.meaning}"), not ${question.item.kanji}.`
+                                      : `"${selected}" (${badItem.hiragana || badItem.katakana}) means "${badItem.meaning}", not "${question.item.meaning}".`
+                                    : `"${selected}" is the meaning of ${badItem.hiragana || badItem.katakana}${badItem.kanji ? ` (${badItem.kanji})` : ''}.`}
+                                </div>
+                              </div>
+                            ) : (
+                              <div className={styles.whyDetail}>
+                                &quot;{selected}&quot; is not the correct answer for this word.
+                              </div>
+                            )}
+                          </div>
+                        )}
+                      </>
+                    )}
+
+                    <div>
+                      <button
+                        type="button"
+                        className={styles.nextButton}
+                        onClick={() => newQuestion(question.item.id)}
+                      >
+                        Next
+                      </button>
+                    </div>
                   </div>
                 )}
               </div>

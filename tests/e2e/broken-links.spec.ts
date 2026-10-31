@@ -45,7 +45,9 @@ test('crawls and verifies all app links automatically', async ({ page }) => {
               queue.push(target.href);
             }
           }
-        } catch {}
+        } catch {
+          // Ignore invalid or unparseable URLs
+        }
       }
     } catch (err: any) {
       errors.push(`From "${fromPage}" -> Failed to load "${route}": ${err.message}`);

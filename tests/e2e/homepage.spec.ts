@@ -48,28 +48,28 @@ test.describe('Homepage', () => {
       expect(cardCount).toBe(4);
     });
 
-    test('should display Conjugation card', async ({ page }) => {
-      const conjugationCard = page.locator('a[class*="featureCard"]').filter({ hasText: /conjugation/i }).first();
-      await expect(conjugationCard).toBeVisible();
-      await expect(conjugationCard).toContainText(/verb forms/i);
+    test('should display Lessons card', async ({ page }) => {
+      const lessonsCard = page.locator('a[class*="featureCard"]').filter({ hasText: /lessons/i }).first();
+      await expect(lessonsCard).toBeVisible();
+      await expect(lessonsCard).toContainText(/structured lessons & guides/i);
     });
 
-    test('should display Grammar card', async ({ page }) => {
-      const grammarCard = page.locator('a[class*="featureCard"]').filter({ hasText: /grammar/i }).first();
-      await expect(grammarCard).toBeVisible();
-      await expect(grammarCard).toContainText(/grammar rules/i);
+    test('should display Dictionary card', async ({ page }) => {
+      const dictionaryCard = page.locator('a[class*="featureCard"]').filter({ hasText: /dictionary/i }).first();
+      await expect(dictionaryCard).toBeVisible();
+      await expect(dictionaryCard).toContainText(/search words & jlpt levels/i);
     });
 
-    test('should display Vocabulary card', async ({ page }) => {
-      const vocabularyCard = page.locator('a[class*="featureCard"]').filter({ hasText: /vocabulary/i }).first();
-      await expect(vocabularyCard).toBeVisible();
-      await expect(vocabularyCard).toContainText(/word lists/i);
+    test('should display Study card', async ({ page }) => {
+      const studyCard = page.locator('a[class*="featureCard"]').filter({ hasText: /study/i }).first();
+      await expect(studyCard).toBeVisible();
+      await expect(studyCard).toContainText(/practice flashcards & kanji/i);
     });
 
-    test('should display References card', async ({ page }) => {
-      const referencesCard = page.locator('a[class*="featureCard"]').filter({ hasText: /references/i }).first();
-      await expect(referencesCard).toBeVisible();
-      await expect(referencesCard).toContainText(/quick lookup tools/i);
+    test('should display Reference card', async ({ page }) => {
+      const referenceCard = page.locator('a[class*="featureCard"]').filter({ hasText: /reference/i }).first();
+      await expect(referenceCard).toBeVisible();
+      await expect(referenceCard).toContainText(/kana charts & cheat sheets/i);
     });
 
     test('should navigate when clicking feature cards', async ({ page }) => {

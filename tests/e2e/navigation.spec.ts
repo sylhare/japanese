@@ -49,8 +49,8 @@ test.describe('Site Navigation', () => {
       const dictionaryLink = header.locator('a.navbar__link').filter({ hasText: /^Dictionary$/i });
       await expect(dictionaryLink).toBeVisible();
 
-      const kanaLink = header.locator('a').filter({ hasText: /kana/i }).first();
-      await expect(kanaLink).toBeVisible();
+      const referenceLink = header.locator('a').filter({ hasText: /reference/i }).first();
+      await expect(referenceLink).toBeVisible();
     });
   });
 

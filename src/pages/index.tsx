@@ -5,61 +5,61 @@ import Layout from '@theme/Layout';
 import type {ReactNode} from 'react';
 import styles from './index.module.css';
 
-function IconGrammar() {
+function IconLessons() {
   return (
     <svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor">
-      <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+      <path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm-1 14c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v12z" />
     </svg>
   );
 }
 
-function IconConjugation() {
+function IconDictionary() {
   return (
     <svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor">
-      <path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z" />
+      <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
     </svg>
   );
 }
 
-function IconReferences() {
+function IconStudy() {
   return (
     <svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor">
-      <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z" />
+      <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z" />
     </svg>
   );
 }
 
-function IconVocabulary() {
+function IconReference() {
   return (
     <svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor">
-      <path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z" />
+      <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z" />
     </svg>
   );
 }
 
 const mainFeatures = [
   {
-    title: 'Grammar',
-    Icon: IconGrammar,
-    description: 'Grammar rules & structure',
-    link: '/docs/lessons/grammar',
+    title: 'Lessons',
+    Icon: IconLessons,
+    description: 'Structured lessons & guides',
+    link: '/docs/intro',
   },
   {
-    title: 'Conjugation',
-    Icon: IconConjugation,
-    description: 'Verb forms & endings',
-    link: '/docs/lessons/conjugation',
+    title: 'Dictionary',
+    Icon: IconDictionary,
+    description: 'Search words & JLPT levels',
+    link: '/dictionary',
   },
   {
-    title: 'Vocabulary',
-    Icon: IconVocabulary,
-    description: 'Word lists & practice',
-    link: '/docs/lessons/vocabulary',
+    title: 'Study',
+    Icon: IconStudy,
+    description: 'Practice flashcards & kanji',
+    link: '/study',
   },
   {
-    title: 'References',
-    Icon: IconReferences,
-    description: 'Quick lookup tools',
+    title: 'Reference',
+    Icon: IconReference,
+    description: 'Kana charts & cheat sheets',
     link: '/docs/reference',
   },
 ];
