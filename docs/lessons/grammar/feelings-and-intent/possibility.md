@@ -1,5 +1,4 @@
 ---
-sidebar_position: 5
 title: Expressing Possibility - かもしれない / でしょう
 description: Learn how to express possibility and probability using かもしれない (might) and でしょう (probably)
 tags: [grammar, possibility, probability, guessing]
@@ -36,7 +35,7 @@ Both express a guess, but they sit at different levels of confidence.
 
 ### Formation
 
-| Type | Formation |
+| Usecase | Formation |
 |------|-----------|
 | Verb | [verb plain form] + かもしれない |
 | い-Adjective | [い-adjective] + かもしれない |
@@ -83,7 +82,7 @@ The feminine equivalent is **かしら**. Add **な** for a stronger "I really h
 
 ### Formation
 
-| Type | Formation |
+| Usecase | Formation |
 |------|-----------|
 | Verb | [verb plain form] + でしょう |
 | い-Adjective | [い-adjective] + でしょう |

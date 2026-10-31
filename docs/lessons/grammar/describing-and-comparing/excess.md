@@ -1,5 +1,4 @@
 ---
-sidebar_position: 3
 title: Too Much - すぎる
 description: Learn how to express excess using すぎる (too much, too many)
 tags: [grammar, adjectives, verbs, excess, describing]
@@ -7,91 +6,112 @@ tags: [grammar, adjectives, verbs, excess, describing]
 
 # Too Much: すぎる
 
-Learn how to express that something is **too much** or **excessive** using **すぎる**.
+Learn how to express that an action or quality is **too much**, **excessive**, or **overdone** using **すぎる**.
 
 ## Key Expressions
 
 | Hiragana | Romaji | English | Type |
 |----------|--------|---------|------|
-| [verb stem] + すぎる | [verb stem] sugiru | do too much | expression |
-| [い-adj without い] + すぎる | [i-adj stem] sugiru | too [adj] | expression |
-| [な-adj] + すぎる | [na-adj] sugiru | too [adj] | expression |
+| [verb stem] + すぎる | [verb stem] sugiru | do too much / overdo | expression |
+| [い-adj stem] + すぎる | [stem] sugiru | too ... (excessive quality) | expression |
+| [な-adj stem] + すぎる | [stem] sugiru | too ... (excessive quality) | expression |
 
-## Pattern: [verb/adjective] + すぎる
+## Pattern: 〜すぎる
 
-The **すぎる** pattern expresses excess - something is "too much" or "overdone."
+**[stem] + すぎる**
 
-:::tip すぎる Conjugation
-**すぎる** conjugates like a regular る-verb:
-- Present: すぎる / すぎます
-- Past: すぎた / すぎました (e.g. たべすぎました — I ate too much)
+**Meaning:** "Too much", "too ...", "over-"
+
+Attach **すぎる** directly to the verb stem (the form before ます) or the adjective base:
+
+| Usecase | Formation |
+|------|-----------|
+| Verb | [verb ますstem] + すぎる |
+| い-Adj | [い-adjective without い] + すぎる |
+| な-Adj | [な-adjective stem] + すぎる |
+
+:::tip すぎる conjugates as an Ichidan (る) verb
+Once formed, **〜すぎる** behaves as a regular Ichidan verb:
+- Present polite: **〜すぎます**
+- Past casual: **〜すぎた**
+- Past polite: **〜すぎました**
+- Te-form: **〜すぎて**
 :::
 
-## With Verbs
+### Verb Examples
 
-**[verb stem] + すぎる/すぎます**
+Drop **ます** from the polite present verb form:
+- たべる (たべます) → たべすぎる (eat too much)
+- のむ (のみます) → のみすぎる (drink too much)
+- はたらく (はたらきます) → はたらきすぎる (overwork)
 
-Attach **すぎる** to the verb's **stem** (the same stem used for ます): る-verbs drop る (たべる → たべ), and う-verbs change the final ‑u sound to the ‑i sound (のむ → のみ).
-
-### Examples
-
-- たべる → たべすぎます — Overeat / eat too much.
-  - *tabesugimasu*
-- のむ → のみすぎます — Drink too much.
-  - *nomisugimasu*
-- する → しすぎます — Do too much.
-  - *shisugimasu*
-
-### In Sentences
-
+Sentences:
 - きのう の よる、たべすぎました。 — I ate too much last night.
   - *kinou no yoru, tabesugimashita.*
-- ゲーム を しすぎます。 — Play too much (games).
-  - *geemu o shisugimasu.*
-- はたらきすぎます。 — Work too much.
-  - *hatarakisugimasu.*
+- おさけ を のみすぎないで ください。 — Please don't drink too much alcohol.
+  - *osake o nomisuginaide kudasai.*
+- ゲーム を しすぎて、め が いたいです。 — I played too many games and my eyes hurt.
+  - *geemu o shisugite, me ga itai desu.*
+- さいきん はたらきすぎて います。 — I have been working too much recently.
+  - *saikin hatarakisugite imasu.*
+- コーヒー を のみすぎると、ねられません。 — If you drink too much coffee, you can't sleep.
+  - *koohii o nomisugiru to, neraremasen.*
 
-## With い-Adjectives
+### い-Adjective Examples
 
-**[い-adjective without い] + すぎる**
+Drop the final **い** from the adjective:
+- たかい → たかすぎる (too expensive)
+- さむい → さむすぎる (too cold)
+- はやい → はやすぎる (too fast / too early)
 
-Remove the final **い** and add **すぎる**.
-
-### Examples
-
-- さむい → さむすぎます — Too cold.
-  - *samusugimasu*
-- たかい → たかすぎます — Too expensive.
-  - *takasugimasu*
-- はやい → はやすぎます — Too fast.
-  - *hayasugimasu*
-
-### In Sentences
-
-- さむすぎます。 — Too cold.
-  - *samusugimasu.*
+Sentences:
 - この くるま は たかすぎます。 — This car is too expensive.
   - *kono kuruma wa takasugimasu.*
+- きょう は さむすぎて、そと に でたくない です。 — Today is too cold, so I don't want to go outside.
+  - *kyou wa samusugite, soto ni detakunai desu.*
+- あさ はやすぎて、だれ も いません でした。 — It was too early in the morning and no one was there.
+  - *asa hayasugite, dare mo imasen deshita.*
+- この シャツ は わたし には おおきすぎます。 — This shirt is too big for me.
+  - *kono shatsu wa watashi ni wa ookisugimasu.*
 
-## With な-Adjectives
+:::caution Irregular adjectives: いい and ない
+Two common adjectives require special handling with すぎる:
+- **いい / よい** (good) changes to **よすぎる** (too good), never ~~いすぎる~~:
+  - つごう が **よすぎる**。 — It's too convenient / too good to be true.
+- **ない** (not / absent) inserts **さ** before すぎる → **なさすぎる** (too nonexistent / severely lacking):
+  - じかん が **なさすぎます**。 — There is far too little time.
+:::
 
-**[な-adjective] + すぎる**
+### な-Adjective Examples
 
-Simply add **すぎる** directly to the adjective stem (without な).
+Drop the **な** from the adjective:
+- しずか(な) → しずかすぎる (too quiet)
+- きれい(な) → きれいすぎる (too clean / too pretty)
+- べんり(な) → べんりすぎる (too convenient)
 
-### Examples
+Sentences:
+- この へや は しずかすぎて、ちょっと こわい です。 — This room is too quiet and a little creepy.
+  - *kono heya wa shizukasugite, chotto kowai desu.*
+- この まち は べんりすぎて、ひっこしたくない です。 — This town is too convenient, so I don't want to move away.
+  - *kono machi wa benrisugite, hikkoshitakunai desu.*
+- この レストラン は きれいすぎます。 — This restaurant is too fancy / too clean.
+  - *kono resutoran wa kireisugimasu.*
 
-- しずか(な) → しずかすぎます — Too quiet.
-  - *shizukasugimasu*
-- きれい(な) → きれいすぎます — Too beautiful/clean.
-  - *kireisugimasu*
-- べんり(な) → べんりすぎます — Too convenient.
-  - *benrisugimasu*
+## Symmetrical Coverage: Negative and Past Forms
 
-### In Sentences
+To express that something is **not too excessive**, or to describe past excess:
 
-- この まち は よる に なると しずかすぎます。 — This town is too quiet at night.
-  - *kono machi wa yoru ni naru to shizukasugimasu.*
-- この へや は きれいすぎます。 — This room is too clean.
-  - *kono heya wa kireisugimasu.*
+| Usecase | Verb (たべる) | い-Adj (たかい) | な-Adj (しずか) |
+|------|---------------|-----------------|-----------------|
+| Present Affirmative | たべすぎる | たかすぎる | しずかすぎる |
+| Present Negative | たべすぎない | たかすぎない | しずかすぎない |
+| Past Affirmative | たべすぎた | たかすぎた | しずかすぎた |
+| Past Negative | たべすぎなかった | たかすぎなかった | しずかすぎなかった |
 
+Sentences:
+- たかすぎない ホテル を さがして います。 — I am looking for a hotel that isn't too expensive.
+  - *takasuginai hoteru o sagashite imasu.*
+- からすぎないので、こども も たべられます。 — It's not too spicy, so even children can eat it.
+  - *karasuginai node, kodomo mo taberaremasu.*
+- ぜんぜん たべすぎなかった です。 — I didn't overeat at all.
+  - *zenzen tabesuginakatta desu.*

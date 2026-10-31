@@ -1,5 +1,4 @@
 ---
-sidebar_position: 4
 title: 🧑‍🧑‍🧒‍🧒 Family and Relationships
 description: Learn Japanese family vocabulary and relationship terms
 tags: [vocabulary, family, relationships, basic, nouns]

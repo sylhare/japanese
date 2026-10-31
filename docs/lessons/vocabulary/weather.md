@@ -1,5 +1,4 @@
 ---
-sidebar_position: 8
 title: 🌤️ Weather
 description: Learn Japanese vocabulary for weather conditions, temperature, and seasonal activities
 tags: [vocabulary, weather, seasons, temperature, nature]

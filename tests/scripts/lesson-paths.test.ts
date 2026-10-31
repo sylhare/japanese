@@ -8,10 +8,6 @@ import {
   lessonDocPath,
 } from '../e2e/helpers/lessonData';
 
-/**
- * Guards that the e2e lesson data and the generated manifest
- * (src/data/lesson-paths.json) stay in sync — both encode lesson locations.
- */
 describe('lessonData and lesson-paths.json consistency', () => {
   const sections = [...GRAMMAR_SECTIONS, ...VOCABULARY_SECTIONS, ...CONJUGATION_SECTIONS];
 

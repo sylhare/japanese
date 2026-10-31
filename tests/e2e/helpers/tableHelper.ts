@@ -1,8 +1,5 @@
 import { Locator, Page, expect } from '@playwright/test';
 
-/**
- * Helper: Wait for tables to load on a page
- */
 export async function waitForTables(page: Page) {
   await page.waitForLoadState('networkidle', { timeout: 30000 });
   await page.waitForSelector('article', { timeout: 10000 });
@@ -12,9 +9,6 @@ export async function waitForTables(page: Page) {
   return tables;
 }
 
-/**
- * Helper: Find the index of the "Type" column in a table (returns -1 if not found)
- */
 export async function findTypeColumnIndex(table: Locator): Promise<number> {
   const headers = table.locator('thead tr th, tr:first-child th');
   const headerCount = await headers.count();
@@ -31,9 +25,6 @@ export async function findTypeColumnIndex(table: Locator): Promise<number> {
   return -1;
 }
 
-/**
- * Helper: Find all tables that have a "Type" column
- */
 export async function findTablesWithTypeColumn(tables: Locator): Promise<number[]> {
   const tableCount = await tables.count();
   const tablesWithType: number[] = [];
@@ -50,9 +41,6 @@ export async function findTablesWithTypeColumn(tables: Locator): Promise<number[
   return tablesWithType;
 }
 
-/**
- * Helper: Verify that a specific column is hidden in a table (header + all cells)
- */
 export async function verifyColumnIsHidden(table: Locator, columnIndex: number) {
   const headers = table.locator('thead tr th, tr:first-child th');
   const typeHeader = headers.nth(columnIndex);

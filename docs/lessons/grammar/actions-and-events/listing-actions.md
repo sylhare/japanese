@@ -1,5 +1,4 @@
 ---
-sidebar_position: 5
 title: Listing Actions - たり
 description: Learn how to list representative actions and express alternating states using たり〜たり
 tags: [grammar, ta-form, listing, actions]

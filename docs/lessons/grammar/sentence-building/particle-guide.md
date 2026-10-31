@@ -1,289 +1,249 @@
 ---
-sidebar_position: 1
 title: Particle Guide
 description: Complete guide to Japanese particles and their usage
 tags: [grammar, particles, reference]
 ---
 
+import NextSteps from '@site/src/components/NextSteps';
+
 # Japanese Particle Guide
 
 Particles (助詞 - *joshi*) are small postpositional words that mark grammatical relationships between words in a sentence — indicating the topic, subject, direct object, destination, or means.
 
-## Basic Particles
+## Key Expressions
 
-| Hiragana | Romaji | English         | Type     |
-|----------|--------|-----------------|----------|
-| は        | wa     | topic marker    | particle |
-| が        | ga     | subject marker  | particle |
-| を        | wo     | object marker   | particle |
-| に        | ni     | to, at, in      | particle |
-| で        | de     | at, by, with    | particle |
-| の        | no     | 's (possession) | particle |
+| Hiragana | Romaji | English | Type |
+|----------|--------|---------|------|
+| は | wa | topic marker | particle |
+| が | ga | subject marker | particle |
+| を | wo | object marker | particle |
+| に | ni | destination, time, target | particle |
+| で | de | location of action, means | particle |
+| の | no | possession, noun modifier | particle |
+| へ | e | direction (toward) | particle |
+| から | kara | from, since | particle |
+| まで | made | until, to | particle |
+| と | to | and (exhaustive), with | particle |
+| も | mo | also, too | particle |
+| か | ka | question marker | particle |
+| ね | ne | confirmation (right?) | particle |
+| よ | yo | assertion (you know) | particle |
 
-### は (wa) - Topic Marker
-
-**Function**: Indicates the topic of the sentence
-**Usage**: Marks what the sentence is about
-
-#### Examples:
-- わたし**は**がくせいです。 (Watashi wa gakusei desu.) - I am a student.
-- これ**は**ほんです。 (Kore wa hon desu.) - This is a book.
-- きょう**は**あついです。 (Kyou wa atsui desu.) - Today is hot.
-
-#### Key Points:
-- Pronounced "wa" but written は
-- Can replace other particles (が, を) when emphasizing the topic
-- Often omitted in casual conversation
-
-### が (ga) - Subject Marker
-
-**Function**: Indicates the subject of the sentence
-**Usage**: Marks who or what performs the action
-
-#### Examples:
-- わたし**が**がくせいです。 (Watashi ga gakusei desu.) - I am the student (emphasizing "I")
-- あめ**が**ふっています。 (Ame ga futte imasu.) - It is raining.
-- だれ**が**きましたか？ (Dare ga kimashita ka?) - Who came?
-
-#### Key Points:
-- Used for new information or emphasis
-- Required for questions with interrogative words
-- Used with potential verbs and adjectives
-
-### を (o) - Object Marker
-
-**Function**: Indicates the direct object of the verb
-**Usage**: Marks what receives the action
-
-#### Examples:
-- ほん**を**よみます。 (Hon o yomimasu.) - I read a book.
-- コーヒー**を**のみます。 (Koohii o nomimasu.) - I drink coffee.
-- にほんご**を**べんきょうします。 (Nihongo o benkyou shimasu.) - I study Japanese.
-
-#### Key Points:
-- Always used with transitive verbs
-- Can be omitted in casual conversation
-- Never used with intransitive verbs
-
-:::info "wo" vs "o"
-As a particle, **を** is pronounced exactly like **お** — the old "w" sound is silent in modern Japanese. So in example sentences this site romanizes it **"o"** (matching the pronunciation); when naming the particle itself, like in the table above, we write **"wo"** to match its kana. Both refer to the same particle.
+:::tip Particle Romanization
+- **は** as a particle is pronounced and romanized **wa** (not *ha*).
+- **へ** as a direction particle is pronounced and romanized **e** (not *he*).
+- **を** is pronounced identically to **お**. When romanizing example sentences, we use **o** (*hon o yomimasu*); when naming the particle itself, we write **wo** to match its kana representation.
 :::
 
-### に (ni) - Direction/Time Marker
+## Basic Particles
 
-**Function**: Indicates direction, time, or indirect object
-**Usage**: Multiple functions depending on context
+### は (wa) — Topic Marker
 
-#### Examples:
-- がっこう**に**いきます。 (Gakkou ni ikimasu.) - I go to school.
-- さんじ**に**あいます。 (Sanji ni aimasu.) - I will meet at 3 o'clock.
-- ともだち**に**てがみをかきます。 (Tomodachi ni tegami o kakimasu.) - I write a letter to my friend.
+**Function:** Marks what the sentence is about (the overall topic or theme).
 
-#### Key Points:
-- Used with time expressions
-- Indicates destination with movement verbs
-- Marks indirect object with giving/receiving verbs
+- わたし は がくせい です。 — I am a student.
+  - *watashi wa gakusei desu.*
+- これ は ほん です。 — This is a book.
+  - *kore wa hon desu.*
+- きょう は あつい です。 — Today is hot.
+  - *kyou wa atsui desu.*
 
-### で (de) - Location/Means Marker
+:::tip は vs が (Topic vs. Subject)
+- **は (Topic)**: Sets the frame — *"As for X, ... (here is new information about it)"*.
+- **が (Subject)**: Identifies the specific actor or answers *who/which one* — *"It is X that does it"*.
+  - わたし **は** がくせい です。 (*As for me, I am a student.*)
+  - わたし **が** がくせい です。 (*I am the one who is a student.*)
+:::
 
-**Function**: Indicates location of action or means/method
-**Usage**: Shows where an action takes place or how it's done
+### が (ga) — Subject Marker
 
-#### Examples:
-- としょかん**で**べんきょうします。 (Toshokan de benkyou shimasu.) - I study at the library.
-- でんしゃ**で**いきます。 (Densha de ikimasu.) - I go by train.
-- にほんご**で**はなします。 (Nihongo de hanashimasu.) - I speak in Japanese.
+**Function:** Marks the grammatical subject who performs the action, introduces new information, or indicates the object of desire/ability.
 
-#### Key Points:
-- Used for location of action (not destination)
-- Indicates means or method
-- Used with languages and tools
+- わたし が がくせい です。 — I am the student (it is I who is the student).
+  - *watashi ga gakusei desu.*
+- あめ が ふって います。 — It is raining.
+  - *ame ga futte imasu.*
+- だれ が きました か？ — Who came?
+  - *dare ga kimashita ka?*
 
-### の (no) - Possession/Modification Marker
+:::caution Interrogatives take が
+When the subject is a question word (だれ, なに, どこ), always use **が**, never **は**:
+- ✓ **だれ が** きました か？ (*Who came?*)
+- ✗ だれ は きました か？ (Incorrect)
+:::
 
-**Function**: Indicates possession or modifies nouns
-**Usage**: Shows ownership or describes nouns
+### を (o) — Object Marker
 
-#### Examples:
-- わたし**の**ほんです。 (Watashi no hon desu.) - It's my book.
-- にほん**の**くるまです。 (Nihon no kuruma desu.) - It's a Japanese car.
-- おおきい**の**をかいました。 (Ookii no o kaimashita.) - I bought a big one.
+**Function:** Marks the direct object receiving the action of a transitive verb.
 
-#### Key Points:
-- Used for possession
-- Modifies nouns with adjectives
-- Can replace nouns (の = "one")
+- ほん を よみます。 — I read a book.
+  - *hon o yomimasu.*
+- コーヒー を のみます。 — I drink coffee.
+  - *koohii o nomimasu.*
+- にほんご を べんきょうします。 — I study Japanese.
+  - *nihongo o benkyoushimasu.*
 
-## Direction and Location Particles
+### に (ni) — Direction, Time, and Target Marker
 
-| Hiragana | Romaji | English      | Type     |
-|----------|--------|--------------|----------|
-| へ        | e      | to, toward   | particle |
-| から       | kara   | from, since  | particle |
-| まで       | made   | until, up to | particle |
+**Function:** Indicates destination, a specific point in time, or an indirect object (recipient).
 
-### へ (e) - Direction Marker
+- がっこう に いきます。 — I go to school.
+  - *gakkou ni ikimasu.*
+- さんじ に あいましょう。 — Let's meet at 3 o'clock.
+  - *sanji ni aimashou.*
+- ともだち に てがみ を かきます。 — I write a letter to my friend.
+  - *tomodachi ni tegami o kakimasu.*
 
-**Function**: Indicates direction of movement
-**Usage**: Shows where someone is going
+:::tip に vs で (Destination vs. Action Location)
+- **に**: Points to a destination or static existence (どこ に いく / どこ に ある).
+- **で**: Points to the dynamic arena where an activity happens (どこ で べんきょうする).
+:::
 
-#### Examples:
-- とうきょう**へ**いきます。 (Toukyou e ikimasu.) - I go to Tokyo.
-- いえ**へ**かえります。 (Ie e kaerimasu.) - I return home.
+### で (de) — Location of Action and Means
 
-#### Key Points:
-- Used only with movement verbs
-- Can be replaced by に in most cases
-- Emphasizes direction over destination
+**Function:** Marks where an action takes place, or the tool/means used to do it.
 
-### から (kara) - From Marker
+- としょかん で べんきょうします。 — I study at the library.
+  - *toshokan de benkyoushimasu.*
+- でんしゃ で いきます。 — I go by train.
+  - *densha de ikimasu.*
+- にほんご で はなします。 — I speak in Japanese.
+  - *nihongo de hanashimasu.*
 
-**Function**: Indicates starting point
-**Usage**: Shows where something starts or comes from
+### の (no) — Possession and Noun Modification
 
-#### Examples:
-- にほん**から**きました。 (Nihon kara kimashita.) - I came from Japan.
-- くじ**から**はじまります。 (Kuji kara hajimarimasu.) - It starts from 9 o'clock.
+**Function:** Connects two nouns, showing possession, origin, or categorization ("noun A's noun B").
 
-### まで (made) - Until Marker
+- わたし の ほん です。 — It is my book.
+  - *watashi no hon desu.*
+- にほん の くるま です。 — It is a Japanese car.
+  - *nihon no kuruma desu.*
+- おおきい の を かいました。 — I bought a big one (の acting as pronoun).
+  - *ookii no o kaimashita.*
 
-**Function**: Indicates ending point
-**Usage**: Shows where something ends or goes until
+## Direction and Boundary Particles
 
-#### Examples:
-- ごじ**まで**はたらきます。 (Goji made hatarakimasu.) - I work until 5 o'clock.
-- えき**まで**あるきます。 (Eki made arukimasu.) - I walk to the station.
+| Hiragana | Romaji | English | Type |
+|----------|--------|---------|------|
+| へ | e | to, toward (direction) | particle |
+| から | kara | from, since | particle |
+| まで | made | until, up to | particle |
 
-## Time Particles
+### へ (e) — Direction Marker
 
-| Hiragana | Romaji      | English         | Type     |
-|----------|-------------|-----------------|----------|
-| に        | ni          | at, on (time)   | particle |
-| から...まで  | kara...made | from...until    | particle |
+**Function:** Emphasizes the direction or heading of movement.
 
-### に (ni) - Specific Time
+- とうきょう へ いきます。 — I head toward Tokyo.
+  - *toukyou e ikimasu.*
+- いえ へ かえります。 — I head home.
+  - *ie e kaerimasu.*
 
-**Function**: Indicates specific time
-**Usage**: Used with specific time expressions
+### から (kara) and まで (made) — Range Boundaries
 
-#### Examples:
-- さんじ**に**あいます。 (Sanji ni aimasu.) - I will meet at 3 o'clock.
-- げつようび**に**きます。 (Getsuyoubi ni kimasu.) - I will come on Monday.
+**Function:** **から** marks the starting point (from/since), while **まで** marks the ending point (until/up to).
 
-### から...まで (kara...made) - Time Range
+- にほん から きました。 — I came from Japan.
+  - *nihon kara kimashita.*
+- くじ から はじまります。 — It starts from 9 o'clock.
+  - *kuji kara hajimarimasu.*
+- ごじ まで はたらきます。 — I work until 5 o'clock.
+  - *goji made hatarakimasu.*
+- えき まで あるきます。 — I walk to the station.
+  - *eki made arukimasu.*
+- げつようび から きんようび まで がっこう に いきます。 — I go to school from Monday to Friday.
+  - *getsuyoubi kara kinyoubi made gakkou ni ikimasu.*
 
-**Function**: Indicates time range
-**Usage**: Shows duration from start to end
+## Grouping and Inclusivity Particles
 
-#### Examples:
-- くじ**から**ごじ**まで**はたらきます。 (Kuji kara goji made hatarakimasu.) - I work from 9 to 5.
-- げつようび**から**きんようび**まで**がっこうにいきます。 (Getsuyoubi kara kinyoubi made gakkou ni ikimasu.) - I go to school from Monday to Friday.
+| Hiragana | Romaji | English | Type |
+|----------|--------|---------|------|
+| と | to | and (exhaustive), with | particle |
+| や | ya | and (non-exhaustive examples) | particle |
+| も | mo | also, too, even | particle |
 
-## Comparison and Contrast Particles
+### と (to) — Exhaustive "And" / Accompaniment
 
-| Hiragana | Romaji | English    | Type     |
-|----------|--------|------------|----------|
-| と        | to     | and, with  | particle |
-| や        | ya     | and so on  | particle |
-| も        | mo     | also, even | particle |
+**Function:** Exhaustively lists items, or indicates accompaniment ("with someone").
 
-### と (to) - And/With Marker
+- ほん と ペン が あります。 — There are books and pens (and nothing else).
+  - *hon to pen ga arimasu.*
+- ともだち と えいが を みます。 — I watch movies with a friend.
+  - *tomodachi to eiga o mimasu.*
 
-**Function**: Indicates "and" or "with"
-**Usage**: Connects nouns or shows accompaniment
+### や (ya) — Non-Exhaustive "And So On"
 
-#### Examples:
-- ほん**と**ペンがあります。 (Hon to pen ga arimasu.) - There are books and pens.
-- ともだち**と**えいがをみます。 (Tomodachi to eiga o mimasu.) - I watch movies with friends.
+**Function:** Lists illustrative examples, implying there are other unmentioned items.
 
-### や (ya) - And So On Marker
+- りんご や バナナ を かいました。 — I bought things like apples and bananas.
+  - *ringo ya banana o kaimashita.*
+- にほんご や えいご を べんきょうします。 — I study languages like Japanese and English.
+  - *nihongo ya eigo o benkyoushimasu.*
 
-**Function**: Indicates "and so on" or "such as"
-**Usage**: Gives examples without being exhaustive
+### も (mo) — Inclusivity ("Also / Too")
 
-#### Examples:
-- りんご**や**バナナをかいました。 (Ringo ya banana o kaimashita.) - I bought apples, bananas, and so on.
-- にほんご**や**えいごをべんきょうします。 (Nihongo ya eigo o benkyou shimasu.) - I study Japanese, English, and so on.
+**Function:** Replaces は, が, or を to mean "also", "too", or "neither".
 
-### も (mo) - Also/Even Marker
+- わたし も がくせい です。 — I am also a student.
+  - *watashi mo gakusei desu.*
+- きょう も あめ です。 — It is raining today as well.
+  - *kyou mo ame desu.*
 
-**Function**: Indicates "also" or "even"
-**Usage**: Adds emphasis or shows inclusion
+## Sentence-Ending Particles
 
-#### Examples:
-- わたし**も**がくせいです。 (Watashi mo gakusei desu.) - I am also a student.
-- きょう**も**あめです。 (Kyou mo ame desu.) - It's raining today too.
+| Hiragana | Romaji | English | Type |
+|----------|--------|---------|------|
+| か | ka | ? (question marker) | particle |
+| ね | ne | right? (confirmation) | particle |
+| よ | yo | you know (assertion / new info) | particle |
 
-## Question Particles
+### か (ka) — Question
 
-| Hiragana | Romaji | English          | Type     |
-|----------|--------|------------------|----------|
-| か        | ka     | ? (question)     | particle |
-| ね        | ne     | isn't it?        | particle |
-| よ        | yo     | you know         | particle |
+- これ は ほん です か？ — Is this a book?
+  - *kore wa hon desu ka?*
+- なんじ です か？ — What time is it?
+  - *nanji desu ka?*
 
-### か (ka) - Question Marker
+### ね (ne) — Agreement / Softening
 
-**Function**: Indicates a question
-**Usage**: Turns a statement into a question
+- きょう は あつい です ね。 — It's hot today, isn't it?
+  - *kyou wa atsui desu ne.*
+- いい てんき です ね。 — Nice weather, isn't it?
+  - *ii tenki desu ne.*
 
-#### Examples:
-- これはほんです**か**？ (Kore wa hon desu ka?) - Is this a book?
-- なんじです**か**？ (Nanji desu ka?) - What time is it?
+### よ (yo) — Assertion / Informative
 
-### ね (ne) - Confirmation Particle
+- これ は おいしい です よ。 — This is really delicious, you know!
+  - *kore wa oishii desu yo.*
+- はやく いきましょう よ。 — Come on, let's go quickly.
+  - *hayaku ikimashou yo.*
 
-**Function**: Seeks confirmation or agreement
-**Usage**: Softens statements and seeks agreement
+## Compound Particles: には and では
 
-#### Examples:
-- きょうはあついです**ね**。 (Kyou wa atsui desu ne.) - It's hot today, isn't it?
-- いいてんきです**ね**。 (Ii tenki desu ne.) - It's nice weather, isn't it?
+Combining basic particles with the topic marker **は** highlights context or adds contrast:
 
-### よ (yo) - Emphasis Particle
+### には (ni wa) — "For / In regard to"
 
-**Function**: Adds emphasis or assertion
-**Usage**: Emphasizes information or gives advice
+- これ は こども には むずかしい です。 — This is difficult for children.
+  - *kore wa kodomo ni wa muzukashii desu.*
+- べんきょう には じかん が ひつよう です。 — Time is necessary for studying.
+  - *benkyou ni wa jikan ga hitsuyou desu.*
 
-#### Examples:
-- これはほんです**よ**。 (Kore wa hon desu yo.) - This is a book (I'm telling you).
-- はやくいきましょう**よ**。 (Hayaku ikimashou yo.) - Let's go quickly.
+### では (de wa) — "As for in / at"
 
-## Particle Combinations
+- にほん では にほんご を はなします。 — In Japan (as for in Japan), people speak Japanese.
+  - *nihon de wa nihongo o hanashimasu.*
+- この へや では たばこ は すえません。 — You cannot smoke in this room.
+  - *kono heya de wa tabako wa suemasen.*
 
-| Hiragana | Romaji | English              | Type        |
-|----------|--------|----------------------|-------------|
-| には       | ni wa  | for, regarding       | expression |
-| では       | de wa  | in/at, as for (で + は) | expression |
-
-### には (ni wa) - For/Regarding (に + topic は)
-
-**Function**: Indicates purpose or target
-**Usage**: Shows what something is for
-
-#### Examples:
-- これはこども**には**むずかしいです。 (Kore wa kodomo ni wa muzukashii desu.) - This is difficult for children.
-- べんきょう**には**じかんがひつようです。 (Benkyou ni wa jikan ga hitsuyou desu.) - Time is necessary for studying.
-
-### では (de wa) - In/At (で + topic は)
-
-**Function**: Marks a location or means (で) as the topic, often with contrast (は)
-**Usage**: "as for in/at..." — highlights or contrasts the circumstance
-
-#### Examples:
-- にほん**では**にほんごをはなします。 (Nihon de wa nihongo o hanashimasu.) - In Japan, (people) speak Japanese.
-- この へや**では**たばこ は すえません。 (Kono heya de wa tabako wa suemasen.) - You can't smoke in this room.
-
-## Common Particle Mistakes
-
-### は vs が
-- **は**: Topic (what the sentence is about)
-- **が**: Subject (who performs the action)
-
-### に vs で
-- **に**: Destination (where you're going)
-- **で**: Location (where action takes place)
-
-### を vs が
-- **を**: Direct object (what receives action)
-- **が**: Subject (who performs action)
+<NextSteps items={[
+  {
+    title: 'Question Words',
+    description: 'Learn question words like who, what, when, and where',
+    to: './question-words',
+  },
+  {
+    title: 'Listing Items - と / や',
+    description: 'Deep dive into listing items exhaustively vs giving examples',
+    to: './listing-items',
+  },
+]} />

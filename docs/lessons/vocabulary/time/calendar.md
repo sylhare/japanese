@@ -1,5 +1,4 @@
 ---
-sidebar_position: 2
 title: 📆 Calendar and Dates
 description: Learn how to express days, months, and dates with important exceptions
 tags: [vocabulary, time, numbers, dates, calendar, months, days]

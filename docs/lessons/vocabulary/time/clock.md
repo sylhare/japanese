@@ -1,5 +1,4 @@
 ---
-sidebar_position: 5
 title: 🕐 Telling Time
 description: Learn how to tell time in Japanese with hours, minutes, and AM/PM
 tags: [vocabulary, time, counters, numbers]

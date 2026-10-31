@@ -30,9 +30,10 @@ function LessonCard({title, description, to}: LessonItem) {
 }
 
 export default function LessonList({items}: LessonListProps): ReactNode {
+  const sorted = [...items].sort((a, b) => a.title.localeCompare(b.title));
   return (
     <div className={styles.lessonGrid}>
-      {items.map((item, idx) => (
+      {sorted.map((item, idx) => (
         <LessonCard key={idx} {...item} />
       ))}
     </div>

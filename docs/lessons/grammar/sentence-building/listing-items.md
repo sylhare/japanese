@@ -1,5 +1,4 @@
 ---
-sidebar_position: 3
 title: Listing Items - と / や
 description: Learn the difference between と (and) and や (or more) for listing items
 tags: [grammar, particles, conjunctions, lists]

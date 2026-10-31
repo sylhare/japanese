@@ -1,5 +1,4 @@
 ---
-sidebar_position: 1
 title: 📅 Days and Weeks
 description: Learn days of the week and relative time expressions
 tags: [vocabulary, time, days, weeks, basic, nouns]

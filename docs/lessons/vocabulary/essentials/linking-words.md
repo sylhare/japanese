@@ -1,5 +1,4 @@
 ---
-sidebar_position: 2
 title: 🔗 Linking Words
 description: Learn Japanese linking words and connectors like because, however, only, and more
 tags: [vocabulary, conjunctions, particles, connectors, linking-words]

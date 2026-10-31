@@ -1,5 +1,4 @@
 ---
-sidebar_position: 13
 title: 🏖️ Beach and Holidays
 description: Learn Japanese vocabulary for the beach, summer holidays, seaside activities, food, and staying safe in the sun
 tags: [vocabulary, beach, holidays, summer, activities, nouns, verbs]

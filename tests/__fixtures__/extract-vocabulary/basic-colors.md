@@ -19,5 +19,5 @@ tags: [vocabulary, colors, basic, adjectives]
 
 | Hiragana | Kanji | Romaji | English | Type        |
 |----------|-------|--------|---------|-------------|
-| みどり      | 緑     | midori | green   | の-adjective |
+| みどり      | 緑     | midori | green   | な-adjective |
 | しろ       | 白     | shiro  | white   | い-adjective |

@@ -1,5 +1,4 @@
 ---
-sidebar_position: 10
 title: 🎪 Events and Festivals
 description: Learn Japanese vocabulary for festivals, events, performances, and volunteering
 tags: [vocabulary, events, festivals, matsuri, culture, nouns, verbs]

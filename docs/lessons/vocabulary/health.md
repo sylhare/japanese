@@ -1,5 +1,4 @@
 ---
-sidebar_position: 9
 title: 🏥 Health & Medical
 description: Learn Japanese vocabulary for health, illness, symptoms, medicine, and hospital visits
 tags: [vocabulary, health, medical, hospital, illness]

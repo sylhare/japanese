@@ -1,6 +1,3 @@
-/**
- * Shared test utilities for vocabulary extraction tests
- */
 import fs from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';
@@ -9,7 +6,6 @@ import type { VocabularyData, VocabularyItem } from '../src/data/vocabulary-type
 
 export type { VocabularyData, VocabularyItem };
 
-/** Load and parse the real vocabulary.yaml from disk. */
 export function loadVocabularyData(): VocabularyData {
   const file = path.join(__dirname, '../src/data/vocabulary.yaml');
   return yaml.load(fs.readFileSync(file, 'utf8')) as VocabularyData;

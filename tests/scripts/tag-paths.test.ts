@@ -1,11 +1,3 @@
-/**
- * Guards the dictionary page tag links against stale paths.
- *
- * Every tag rendered on the /dictionary page is a link to `getTagPath(tag)`,
- * which resolves via the auto-generated `src/data/lesson-paths.json`. These
- * tests fail if a tag points at a lesson page that no longer exists, or if the
- * committed path map has drifted from the lesson files on disk.
- */
 import fs from 'fs';
 import path from 'path';
 import { describe, expect, it } from 'vitest';
@@ -16,13 +8,11 @@ import { loadVocabularyData } from '../test-utils';
 
 const REPO_ROOT = path.join(__dirname, '../..');
 
-/** Resolve a `docs/...` path (without extension) to an existing .md/.mdx file. */
 function docExists(relPathNoExt: string): boolean {
   const full = path.join(REPO_ROOT, relPathNoExt);
   return fs.existsSync(`${full}.md`) || fs.existsSync(`${full}.mdx`);
 }
 
-/** Every tag the dictionary can render, including the dynamically added JLPT tags. */
 function collectDictionaryTags(): string[] {
   const tags = new Set<string>();
   for (const item of loadVocabularyData().vocabulary) {

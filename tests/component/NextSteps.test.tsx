@@ -143,7 +143,6 @@ describe('NextSteps Component', () => {
       const readingNumbersTitle = screen.getByText('Reading Numbers');
       const readingNumbersDesc = screen.getByText('Learn how to pronounce any number with sound changes and special cases');
 
-      // Both should be within the same link
       const link = readingNumbersTitle.closest('a');
       expect(link).toContainElement(readingNumbersDesc);
     });
@@ -200,7 +199,6 @@ describe('NextSteps Component', () => {
     it('renders semantic HTML structure', () => {
       const { container } = render(<NextSteps items={mockItems} />);
 
-      // Check for proper heading hierarchy
       const h2 = container.querySelector('h2');
       const h4s = container.querySelectorAll('h4');
 
@@ -214,7 +212,6 @@ describe('NextSteps Component', () => {
       const links = screen.getAllByRole('link');
       expect(links).toHaveLength(2);
 
-      // Each link should contain visible text
       links.forEach(link => {
         expect(link).toHaveTextContent(/./);
       });
